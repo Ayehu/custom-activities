@@ -1,0 +1,93 @@
+{
+  "data": {
+    "name": "AD Add to Group",
+    "description": "Active Directory add to group.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "User",
+          "key": "AccountType",
+          "label": "Account Type",
+          "labelKey": "AD_ADD_TO_GROUP_ACCOUNT_TYPE",
+          "baseType": "control",
+          "controlType": "radiobutton",
+          "valueChangesActions": {
+            "User": {
+              "setValue": {
+                "AccountType": "User"
+              }
+            },
+            "Computer": {
+              "setValue": {
+                "AccountType": "Computer"
+              }
+            }
+          },
+          "controlOptions": [
+            {
+              "label": "User",
+              "value": "User"
+            },
+            {
+              "label": "Computer",
+              "value": "Computer"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ADUserName",
+          "label": "Name",
+          "labelKey": "AD_ADD_TO_GROUP_NAME",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "key": "hostGroup1",
+          "label": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ADGroupName",
+          "label": "Group Name",
+          "labelKey": "AD_ADD_TO_GROUP_GROUP_NAME",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "389",
+          "required": false,
+          "key": "SecurePort",
+          "disabled": false,
+          "label": "Port",
+          "styleClass": "",
+          "labelKey": "AD_LIST_OU_SECUREPORT",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "389",
+              "value": "389"
+            },
+            {
+              "key": "636",
+              "value": "636"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
