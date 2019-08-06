@@ -11,7 +11,7 @@
           "value": "",
           "key": "TheValue",
           "label": "String",
-          "labelKey": "ADD_SPACES",
+          "labelKey": "ADD_SPACES_STRING",
           "baseType": "control",
           "controlType": "textbox"
         }
