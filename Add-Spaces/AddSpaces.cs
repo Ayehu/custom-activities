@@ -8,11 +8,11 @@ namespace Ayehu.Sdk.ActivityCreation
 {
     public class customActivity : IActivity
     {
-        public string ValueToUse;
+        public string TheValue;
         public ICustomActivityResult Execute()
         {
 
-            if (string.IsNullOrEmpty(ValueToUse.Trim()))
+            if (string.IsNullOrEmpty(TheValue.Trim()))
             {
                 throw new Exception("Value is missing or empty");
             }
@@ -23,9 +23,9 @@ namespace Ayehu.Sdk.ActivityCreation
 
             int i;
             string result = string.Empty;
-            for (i = 0; i < ValueToUse.Length; i++)
+            for (i = 0; i < TheValue.Length; i++)
             {
-                result = result + ValueToUse[i] + ' ';
+                result = result + TheValue[i] + ' ';
             }
 
             dt.Rows.Add(result.Trim());
