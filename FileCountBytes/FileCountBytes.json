@@ -1,0 +1,29 @@
+{  
+   "innerCode":200,
+   "data":{  
+      "name":"Count bytes",
+      "description":"Count bytes",
+      "Timeout":null,
+      "class":[  
+
+      ],
+      "rootSettings":{  
+         "isCollapse":false,
+         "activitySettings":[  
+            {  
+               "value":"",
+               "required":true,
+               "key":"sourcePath",
+               "label":"source Path",
+               "labelKey":"Count bytes",
+               "baseType":"control",
+               "controlType":"textbox"
+            }
+         ],
+         "index":"1",
+         "label":"main",
+         "labelKey":null
+      }
+   },
+   "message":"SUCCESS"
+}
