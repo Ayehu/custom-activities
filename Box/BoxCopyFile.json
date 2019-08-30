@@ -1,0 +1,139 @@
+{
+  "data": {
+    "name": "Copy File",
+    "description": "[Box.com] Copy File to another folder.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "FolderID",
+          "label": "Folder ID",
+          "labelKey": "FolderID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "FileID",
+          "label": "File ID",
+          "labelKey": "FileID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Version",
+          "label": "Version",
+          "labelKey": "Version",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+
+        {
+          "value": "",
+          "required": false,
+          "key": "Name",
+          "label": "Name",
+          "labelKey": "Name",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "USER_ID",
+          "label": "USER ID",
+          "labelKey": "USER_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "CLIENT_SECRET",
+          "label": "CLIENT SECRET",
+          "labelKey": "CLIENT_SECRET",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ENTERPRISE_ID",
+          "label": "ENTERPRISE ID",
+          "labelKey": "ENTERPRISE_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "JWT_PRIVATE_KEY_PASSWORD",
+          "label": "JWT PRIVATE KEY PASSWORD",
+          "labelKey": "JWT_PRIVATE_KEY_PASSWORD",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "JWT_PUBLIC_KEY_ID",
+          "label": "JWT PUBLIC KEY ID",
+          "labelKey": "JWT_PUBLIC_KEY_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PRIVATE_KEY",
+          "label": "PRIVATE KEY",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea",
+          "disabled": false,
+          "styleClass": "xm-textarea",
+          "controlOptions": []
+        }
+
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}
