@@ -12,7 +12,7 @@ Secret
 
 These fields should be sent when calling the API.
 
-##### Mandatory fields when creating a user:
+### Mandatory fields when creating a user:
 **UserPrincipalName** - The user principal name (UPN) of the user.
                         The UPN is an Internet-style login name for the user based on the Internet standard
                         RFC 822. By convention, this should map to the user's email name. The general
@@ -28,7 +28,8 @@ These fields should be sent when calling the API.
                         This is usually the combination of the user's first name, middle initial and last name
                     
 **MailNickname** -      The mail alias for the user
-**AccountEnabled** 
+
+**AccountEnabled** -    Creates an Enabled/Disabled account
 
 **PasswordProfile** -   Specifies the password profile for the user. The profile contains the user’s password.
                         The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property
