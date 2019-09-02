@@ -30,11 +30,11 @@ namespace ayehu.BoxUpLoadFile
             }
             catch (AmazonS3Exception e)
             {
-                message = "Error encountered on server. Message:'{0}' when writing an object"+ e.Message;
+                message = "Failure";
             }
             catch (Exception e)
             {
-                message = "Unknown encountered on server. Message:'{0}' when writing an object"+ e.Message;
+                message = "Failure";
             }
 
             return this.GenerateActivityResult(message);
