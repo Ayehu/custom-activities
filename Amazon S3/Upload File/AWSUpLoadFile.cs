@@ -26,7 +26,7 @@ namespace ayehu.BoxUpLoadFile
 
                 // Upload a file. The file name is used as the object key name.
                 fileTransferUtility.Upload(File_Path, Bucket);
-                message = "Upload completed";
+                message = "Success";
             }
             catch (AmazonS3Exception e)
             {
