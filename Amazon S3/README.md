@@ -1,4 +1,4 @@
-﻿UPLOAD FILE ACTIVITIES
+## Amazon S3 Activities
 
 UPLOADS A FILE TO AMAZON S3.
 
