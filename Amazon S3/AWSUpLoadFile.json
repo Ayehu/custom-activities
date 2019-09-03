@@ -1,0 +1,61 @@
+{
+  "data": {
+    "name": "Upload File",
+    "description": "[AWS] Upload file to S3.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollappse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "AccessKey",
+          "label": "Access Key",
+          "label key": "AccessKey",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SecretKey",
+          "label": "Secret Key",
+          "label key": "SecretKey",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Bucket",
+          "label": "Bucket",
+          "label key": "Bucket",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "File_Path",
+          "label": "File Path",
+          "label key": "File_Path",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}
