@@ -1,6 +1,11 @@
 ## Amazon S3 Activities
 
+UPLOAD FILE ACTIVITIES
+
 UPLOADS A FILE TO AMAZON S3.
+
+This Activities requires AWSSDK.Core.dll, AWSSDK.S3.dll.
+https://aws.amazon.com/sdk-for-net/?nc1=h_ls
 
 Output Success/Failure
 
@@ -26,5 +31,3 @@ To find your Access Key and Secret Access Key:
 3. Click on the Security Credentials link from the drop-down menu.
 4. Find the Access Credentials section, and copy the latest Access Key ID.
 5. Click on the Show link in the same row, and copy the Secret Access Key.
-
-
