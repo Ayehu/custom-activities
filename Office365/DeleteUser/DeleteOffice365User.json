@@ -9,22 +9,34 @@
       ],
       "rootSettings":{  
          "isCollapse":false,
-         "activitySettings":[  
-            {  
+         "activitySettings":[
+			{
                "value":"",
-               "required":false,
-               "key":"userId",
-               "label":"User Id",
-               "labelKey":"USER_ID_VALUE",
+               "required":true,
+               "key":"userUID",
+               "disabled":false,
+               "styleClass":"",
+               "label":"Id type",
+               "labelKey":"USER_UID_VALUE",
                "baseType":"control",
-               "controlType":"textbox"
-            },
+               "controlType":"autocomplete",
+               "controlOptions":[
+                  {
+                     "key":"userId",
+                     "value":"User Id"
+                  },
+                  {
+                     "key":"userPrincipal",
+                     "value":"User Principal"
+                  }
+               ]
+            },		 
             {  
                "value":"",
-               "required":false,
-               "key":"userPrincipalName",
-               "label":"User Principal",
-               "labelKey":"USER_PRINCIPAL_NAME_VALUE",
+               "required":true,
+               "key":"userId",
+               "label":"",
+               "labelKey":"USER_ID_VALUE",
                "baseType":"control",
                "controlType":"textbox"
             },

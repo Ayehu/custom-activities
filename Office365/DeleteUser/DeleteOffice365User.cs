@@ -33,15 +33,9 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// GUID that identifies the current user.
+        /// GUID that identifies the current user or can be the UserPrincipal Name.
         /// </summary>
         public string userId;
-
-        /// <summary>
-        /// The general format is alias@domain, where domain must be present in the tenant’s collection
-        /// of verified domains. This property is required when a user is created.
-        /// </summary>
-        public string userPrincipalName;
 
         public ICustomActivityResult Execute()
         {
@@ -53,22 +47,20 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 IUserRequest user = null;
                 GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
+                user = client.Users[userId].Request();
 
-                string id = !string.IsNullOrEmpty(userId) ? userId : userPrincipalName;
-                user = client.Users[id].Request();
-
-                if (user != null)
+                if (user.GetAsync().Result.UserPrincipalName != null)
                 {
                     // Delete the user.
                     user.DeleteAsync();
-                    dt.Rows.Add("SUCCESS");
+                    dt.Rows.Add("Success");
                 }
                 else
-                    throw new Exception();
+                    throw new Exception("User not found");
             }
-            catch
+            catch(Exception ex)
             {
-                dt.Rows.Add("FAIL");
+                dt.Rows.Add("Fail - " +  ex.Message);
             }
 
             return this.GenerateActivityResult(dt);

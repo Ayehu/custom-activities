@@ -95,7 +95,7 @@ namespace Ayehu.Sdk.ActivityCreation
                     }
                 }).Result;
 
-                dt.Rows.Add("SUCCESS");
+                dt.Rows.Add("Success");
             }
             catch (Exception ex)
             {

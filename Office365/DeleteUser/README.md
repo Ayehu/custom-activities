@@ -1,6 +1,4 @@
-## Office365 Activities
-
-DeleteOffice365User - Activity to delete a user in Azure AD for Office365.
+## DeleteOffice365User - Activity to delete a user in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
