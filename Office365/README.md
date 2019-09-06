@@ -4,6 +4,17 @@ CreateOffice365User - Activity to create a new user in Azure AD for Office365.
 Remark - The portal needs to be configured first. https://portal.azure.com
 Under 'Azure Active Directory' add a new organization. Follow the steps to register the application.
 
+##### DLL's to reference
+Microsoft.Graph.dll
+Microsoft.Graph.Auth.dll
+Microsoft.Graph.Core.dll
+Microsoft.Identity.Client.dll
+
+##### Libraries to import
+using Microsoft.Graph;
+using Microsoft.Identity.Client;
+using Microsoft.Graph.Auth;
+
 You'd need to store the API specific information from the portal.
 
 ApplicationId
