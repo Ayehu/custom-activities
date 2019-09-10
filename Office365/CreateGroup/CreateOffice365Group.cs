@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
@@ -8,10 +8,7 @@ using Microsoft.Graph.Auth;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    /// <summary>
-    /// Deletes an user in Azure Active Directory
-    /// </summary>
-    public class DeleteOffice365User : IActivity
+    public class CreateOffice365Group : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -31,30 +28,38 @@ namespace Ayehu.Sdk.ActivityCreation
         /// Also can be referred to as application password.
         /// </remarks>
         public string secret;
-
         /// <summary>
-        /// GUID that identifies the current user or can be the UserPrincipal Name.
+        /// Display name of the group
         /// </summary>
-        public string userId;
+        public string groupName;
+        
+        /// <summary>
+        /// An optional description
+        /// </summary>
+        public string groupDescription;
+        /// <summary>
+        /// The mail alias for the group. Must be unique in the organization
+        /// </summary>
+        public string groupMailNikName;
 
         public ICustomActivityResult Execute()
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
 
-            IUserRequest user = null;
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            user = client.Users[userId].Request();
-			
-            if (user.GetAsync().Result.UserPrincipalName != null)
+            var group = client.Groups.Request().AddAsync(new Group
             {
-                // Delete the user.
-                user.DeleteAsync();
-                dt.Rows.Add("Success");
-            }
-            else
-                throw new Exception("User not found");
-            
+                GroupTypes = new System.Collections.Generic.List<string> { "Unified" },
+                DisplayName = groupName,
+                Description = groupDescription,
+                MailNickname = groupMailNikName,                
+                MailEnabled = true,
+                SecurityEnabled = false
+            }).Result;
+
+            dt.Rows.Add("Success");
+
             return this.GenerateActivityResult(dt);
         }
 

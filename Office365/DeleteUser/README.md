@@ -27,4 +27,4 @@ These fields should be sent when calling the API.
                         of verified domains. This property is required when a user is created. The verified
                         domains for the tenant can be accessed from the verifiedDomains property of organization.
 
-**UserId**			  - GUID that identifies the a user. (unique id) 	                    
+**UserId**			  - GUID that identifies a user. (unique id) 	                    

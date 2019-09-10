@@ -74,34 +74,27 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
-            DataRow dr = dt.NewRow();
 
-            try
+            
+            GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
+
+            var user = client.Users.Request().AddAsync(new User
             {
-                GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-
-                var user = client.Users.Request().AddAsync(new User
+                AccountEnabled = isAccountEnabled,
+                DisplayName = givenName + " " + surname,
+                Surname = surname,
+                GivenName = givenName,
+                MailNickname = givenName + surname,
+                UserPrincipalName = userPrincipalName,
+                PasswordProfile = new PasswordProfile
                 {
-                    AccountEnabled = isAccountEnabled,
-                    DisplayName = givenName + " " + surname,
-                    Surname = surname,
-                    GivenName = givenName,
-                    MailNickname = givenName + surname,
-                    UserPrincipalName = userPrincipalName,
-                    PasswordProfile = new PasswordProfile
-                    {
-                        ForceChangePasswordNextSignIn = forcePwdChange,
-                        Password = password
-                    }
-                }).Result;
+                    ForceChangePasswordNextSignIn = forcePwdChange,
+                    Password = password
+                }
+            }).Result;
 
-                dt.Rows.Add("Success");
-            }
-            catch (Exception ex)
-            {
-                dt.Rows.Add(ex.Message);
-            }
-
+            dt.Rows.Add("Success");
+            
             return this.GenerateActivityResult(dt);
         }
 
