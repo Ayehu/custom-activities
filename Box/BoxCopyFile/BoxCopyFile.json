@@ -1,0 +1,151 @@
+{
+  "data": {
+    "name": "Copy File",
+    "description": "[Box.com] Copy File to another folder.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "FolderID",
+          "label": "Folder ID",
+          "labelKey": "FolderID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "FileID",
+          "label": "File ID",
+          "labelKey": "FileID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Version",
+          "label": "Version",
+          "labelKey": "Version",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+
+        {
+          "value": "",
+          "required": false,
+          "key": "Name",
+          "label": "Name",
+          "labelKey": "Name",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "USER_ID",
+          "label": "User ID",
+          "labelKey": "USER_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "CLIENT_ID",
+          "label": "Client ID",
+          "labelKey": "CLIENT_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "CLIENT_SECRET",
+          "label": "Client Secret",
+          "labelKey": "CLIENT_SECRET",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ENTERPRISE_ID",
+          "label": "Enterprise ID",
+          "labelKey": "ENTERPRISE_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "JWT_PRIVATE_KEY_PASSWORD",
+          "label": "JWT Password Key",
+          "labelKey": "JWT_PRIVATE_KEY_PASSWORD",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "JWT_PUBLIC_KEY_ID",
+          "label": "JWT Public Key ID",
+          "labelKey": "JWT_PUBLIC_KEY_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": [],
+          "disabled": false,
+          "styleClass": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PRIVATE_KEY",
+          "label": "Private Key",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea",
+          "disabled": false,
+          "styleClass": "xm-textarea",
+          "controlOptions": []
+        }
+
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}
