@@ -7,13 +7,13 @@ https://aws.amazon.com/sdk-for-net/?nc1=h_ls
 
 Output Success/Failure
 
-MANDATORY FIELDS WHEN CREATING A USER:
+MANDATORY FIELDS WHEN DOWNLOAD A FILE:
 
 a. Access Key: How to get: Bellow
 b. Secrey Key: How to get: Bellow
 c. Bucket: Bucket is the directory that you want to get the file when download.
 d. File Path: File Path is the address of the file to download on your device.
-e. Key: Name of file in Bucket
+e. Key: Name of file in Bucket.
 
 -------------------------------------------
 
@@ -30,5 +30,3 @@ To find your Access Key and Secret Access Key:
 3. Click on the Security Credentials link from the drop-down menu.
 4. Find the Access Credentials section, and copy the latest Access Key ID.
 5. Click on the Show link in the same row, and copy the Secret Access Key.
-
-
