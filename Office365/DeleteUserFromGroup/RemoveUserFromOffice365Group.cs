@@ -48,7 +48,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
             if (user.UserPrincipalName != null)
             {
-                client.Groups[groupId].Members[user.Id].Reference.Request().DeleteAsync();
+                client.Groups[groupId].Members[user.Id].Reference.Request().DeleteAsync().Wait();
                 dt.Rows.Add("Success");
             }
             else
