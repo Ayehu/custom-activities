@@ -1,0 +1,74 @@
+{  
+   "innerCode":200,
+   "data":{  
+      "name":"Update a user",
+      "description":"Updates a user in Office365",
+      "Timeout":null,
+      "class":[  
+
+      ],
+      "rootSettings":{  
+         "isCollapse":false,
+         "activitySettings":[
+            {  
+               "value":"",
+               "required":true,
+               "key":"userId",
+               "label":"",
+               "labelKey":"USER_ID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+			{  
+               "value":"",
+               "required":true,
+               "key":"firstName",
+               "label":"",
+               "labelKey":"FIRST_NAME_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+			{  
+               "value":"",
+               "required":true,
+               "key":"lastName",
+               "label":"",
+               "labelKey":"LAST_NAME_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"appId",
+               "label":"Application Id",
+               "labelKey":"APPID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"tenantId",
+               "label":"Tenant Id",
+               "labelKey":"TENANTID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"secret",
+               "label":"Secret",
+               "labelKey":"SECRET_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            }
+         ],
+         "index":"1",
+         "label":"main",
+         "labelKey":null
+      }
+   },
+   "message":"SUCCESS"
+}
