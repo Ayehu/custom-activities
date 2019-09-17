@@ -47,26 +47,35 @@
           "controlType": "textarea"
         },
 		{
-               "value":"",
-               "required":true,
-               "key":"action",
-               "disabled":false,
-               "styleClass":"",
-               "label":"Action",
-               "labelKey":"USER_UID_VALUE",
-               "baseType":"control",
-               "controlType":"autocomplete",
-               "controlOptions":[
-                  {
-                     "key":"forwardAction",
-                     "value":"Forward"
-                  },
-                  {
-                     "key":"deleteAction",
-                     "value":"Delete"
-                  }
-               ]
-            },		
+          "value":"",
+          "required":true,
+          "key":"action",
+          "disabled":false,
+          "styleClass":"",
+          "label":"Action",
+          "labelKey":"USER_UID_VALUE",
+          "baseType":"control",
+          "controlType":"autocomplete",
+          "controlOptions":[
+            {
+               "key":"forwardAction",
+               "value":"Forward"
+            },
+            {
+               "key":"deleteAction",
+               "value":"Delete"
+            }
+          ]
+        },
+		{  
+          "value":"",
+          "required":true,
+          "key":"userId",
+          "label":"User Id",
+          "labelKey":"USER_ID_VALUE",
+          "baseType":"control",
+          "controlType":"textbox"
+        },
         {
           "value": "",
           "required": true,

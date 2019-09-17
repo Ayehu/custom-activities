@@ -79,11 +79,11 @@ namespace Ayehu.Sdk.ActivityCreation
 
             MessageRulePredicates condition = new MessageRulePredicates();
             MessageRuleActions actions = new MessageRuleActions();
+
             var messageRule = new MessageRule
             {
                 DisplayName = ruleDisplayName,
-                Sequence = 1,
-                IsEnabled = true,
+                IsEnabled = true
             };
 
             if (!string.IsNullOrEmpty(senderContains))
@@ -117,14 +117,34 @@ namespace Ayehu.Sdk.ActivityCreation
                 actions.Delete = true;
             }
 
+            if (string.IsNullOrEmpty(user.Request().GetAsync().Result.UsageLocation))
+            {
+                this.UpdateUser(user);
+            }
+
+            int rules = user.MailFolders["inbox"].MessageRules.Request().GetAsync().Result.Count;
+
             messageRule.Conditions = condition;
             messageRule.Actions = actions;
+            messageRule.Actions.StopProcessingRules =
             messageRule.IsEnabled = true;
-            messageRule.Sequence = 1;
-
-            user.MailFolders["Inbox"].MessageRules.Request().AddAsync(messageRule);
+            messageRule.Sequence = rules + 1;
+            
+            user.MailFolders["Inbox"].MessageRules.Request().AddAsync(messageRule).Wait();
 
             return this.GenerateActivityResult(dt);
+        }
+
+        /// <summary>
+        /// Set UsageLocation field. It's required when adding maibox rule.
+        /// </summary>
+        /// <param name="user">Current instance of user</param>
+        private void UpdateUser(IUserRequestBuilder user)
+        {
+            user.Request().UpdateAsync(new User
+            {
+                UsageLocation = "US"
+            }).Wait();
         }
 
         private ClientCredentialProvider GetProvider()

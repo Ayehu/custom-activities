@@ -86,6 +86,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 GivenName = givenName,
                 MailNickname = givenName + surname,
                 UserPrincipalName = userPrincipalName,
+				UsageLocation = "US",
                 PasswordProfile = new PasswordProfile
                 {
                     ForceChangePasswordNextSignIn = forcePwdChange,

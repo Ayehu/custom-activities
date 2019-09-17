@@ -1,17 +1,15 @@
-using System;
+﻿using System;
 using System.Data;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using Microsoft.Graph.Auth;
+using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace ActivityCreator.Users
 {
-    /// <summary>
-    /// Deletes an user in Azure Active Directory
-    /// </summary>
-    public class DeleteOffice365User : IActivity
+    public class AssignOffice365UserLicense : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -37,25 +35,29 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userId;
 
-        public ICustomActivityResult Execute()
+        ICustomActivityResult IActivity.Execute()
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
+            dt.Rows.Add("Success");
 
-            IUserRequest user = null;
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            user = client.Users[userId].Request();
-			
-            if (user.GetAsync().Result.UserPrincipalName != null)
+            var user = client.Users[userId];
+            Guid? skuId = GetLicense(client).SkuId;
+
+            user.AssignLicense(new List<AssignedLicense>
             {
-                // Delete the user.
-                user.DeleteAsync().Wait();
-                dt.Rows.Add("Success");
-            }
-            else
-                throw new Exception("User not found");
-            
+                new AssignedLicense { SkuId = skuId }
+            },
+               new List<Guid>()).Request().PostAsync().Wait();
+
             return this.GenerateActivityResult(dt);
+        }
+
+        private SubscribedSku GetLicense(GraphServiceClient client)
+        {
+            var skuResult = client.SubscribedSkus.Request().GetAsync().Result;
+            return skuResult[0];
         }
 
         private ClientCredentialProvider GetProvider()
