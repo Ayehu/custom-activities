@@ -1,4 +1,4 @@
-## AddUserToGroup - Activity to create a Office365 mail group.
+## OfficeAddUserToGroup - Activity to create a Office365 mail group.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
