@@ -8,7 +8,7 @@ using Microsoft.Graph.Auth;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class CreateOffice365Group : IActivity
+    public class OfficeRemoveUserFromGroup : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -28,19 +28,15 @@ namespace Ayehu.Sdk.ActivityCreation
         /// Also can be referred to as application password.
         /// </remarks>
         public string secret;
+
         /// <summary>
-        /// Display name of the group
+        /// GUID that identifies the current user or can be the UserPrincipal Name.
         /// </summary>
-        public string groupName;
-        
+        public string userId;
         /// <summary>
-        /// An optional description
+        /// Group GUID
         /// </summary>
-        public string groupDescription;
-        /// <summary>
-        /// The mail alias for the group. Must be unique in the organization
-        /// </summary>
-        public string groupMailNikName;
+        public string groupId;
 
         public ICustomActivityResult Execute()
         {
@@ -48,17 +44,15 @@ namespace Ayehu.Sdk.ActivityCreation
             dt.Columns.Add("Result");
 
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var group = client.Groups.Request().AddAsync(new Group
-            {
-                GroupTypes = new System.Collections.Generic.List<string> { "Unified" },
-                DisplayName = groupName,
-                Description = groupDescription,
-                MailNickname = groupMailNikName,                
-                MailEnabled = true,
-                SecurityEnabled = false
-            }).Result;
+            User user = client.Users[userId].Request().GetAsync().Result;
 
-            dt.Rows.Add("Success");
+            if (user.UserPrincipalName != null)
+            {
+                client.Groups[groupId].Members[user.Id].Reference.Request().DeleteAsync().Wait();
+                dt.Rows.Add("Success");
+            }
+            else
+                throw new Exception("User not found");
 
             return this.GenerateActivityResult(dt);
         }

@@ -12,7 +12,7 @@ namespace Ayehu.Sdk.ActivityCreation
     /// <summary>
     /// Class to create emailbox rules 
     /// </summary>
-    public class CreateOffice365MailRule : IActivity
+    public class OfficeCreateMailRule : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID

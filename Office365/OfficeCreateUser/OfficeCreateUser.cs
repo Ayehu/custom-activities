@@ -11,7 +11,7 @@ namespace Ayehu.Sdk.ActivityCreation
     /// <summary>
     /// Creates an user in Azure Active Directory
     /// </summary>
-    public class CreateOffice365User : IActivity
+    public class OfficeCreateUser : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
@@ -8,7 +8,10 @@ using Microsoft.Graph.Auth;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class RemoveUserFromOffice365Group : IActivity
+    /// <summary>
+    /// Deletes an user in Azure Active Directory
+    /// </summary>
+    public class OfficeDeleteUser : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -33,27 +36,25 @@ namespace Ayehu.Sdk.ActivityCreation
         /// GUID that identifies the current user or can be the UserPrincipal Name.
         /// </summary>
         public string userId;
-        /// <summary>
-        /// Group GUID
-        /// </summary>
-        public string groupId;
 
         public ICustomActivityResult Execute()
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
 
+            IUserRequest user = null;
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            User user = client.Users[userId].Request().GetAsync().Result;
-
-            if (user.UserPrincipalName != null)
+            user = client.Users[userId].Request();
+			
+            if (user.GetAsync().Result.UserPrincipalName != null)
             {
-                client.Groups[groupId].Members[user.Id].Reference.Request().DeleteAsync().Wait();
+                // Delete the user.
+                user.DeleteAsync().Wait();
                 dt.Rows.Add("Success");
             }
             else
                 throw new Exception("User not found");
-
+            
             return this.GenerateActivityResult(dt);
         }
 

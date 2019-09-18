@@ -14,7 +14,7 @@
                "value":"",
                "required":true,
                "key":"userId",
-               "label":"",
+               "label":"User Id",
                "labelKey":"USER_ID_VALUE",
                "baseType":"control",
                "controlType":"textbox"
@@ -23,7 +23,7 @@
                "value":"",
                "required":true,
                "key":"firstName",
-               "label":"",
+               "label":"First Name",
                "labelKey":"FIRST_NAME_VALUE",
                "baseType":"control",
                "controlType":"textbox"
@@ -32,7 +32,7 @@
                "value":"",
                "required":true,
                "key":"lastName",
-               "label":"",
+               "label":"Last Name",
                "labelKey":"LAST_NAME_VALUE",
                "baseType":"control",
                "controlType":"textbox"

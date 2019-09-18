@@ -1,14 +1,15 @@
-using System;
+﻿using System;
 using System.Data;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using Microsoft.Graph.Auth;
+using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace ActivityCreator.Users
 {
-    public class UpdateOffice365User : IActivity
+    public class OfficeAssignUserLicense : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -34,32 +35,29 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userId;
 
-        public string firstName;
-        public string lastName;
-
         ICustomActivityResult IActivity.Execute()
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
+            dt.Rows.Add("Success");
 
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            User user = client.Users[userId].Request().GetAsync().Result;
+            var user = client.Users[userId];
+            Guid? skuId = GetLicense(client).SkuId;
 
-            if (user.UserPrincipalName != null)
+            user.AssignLicense(new List<AssignedLicense>
             {
-                client.Users[userId].Request().UpdateAsync(new User
-                {
-                    GivenName = firstName,
-                    Surname = lastName,
-                    DisplayName = firstName + " " + lastName
-                });
-
-                dt.Rows.Add("Success");
-            }
-            else
-                throw new Exception("User not found");
+                new AssignedLicense { SkuId = skuId }
+            },
+               new List<Guid>()).Request().PostAsync().Wait();
 
             return this.GenerateActivityResult(dt);
+        }
+
+        private SubscribedSku GetLicense(GraphServiceClient client)
+        {
+            var skuResult = client.SubscribedSkus.Request().GetAsync().Result;
+            return skuResult[0];
         }
 
         private ClientCredentialProvider GetProvider()

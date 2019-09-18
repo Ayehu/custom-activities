@@ -8,7 +8,7 @@ using Microsoft.Graph.Auth;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AddUserToOffice365Group : IActivity
+    public class OfficeCreateGroup: IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -28,25 +28,37 @@ namespace Ayehu.Sdk.ActivityCreation
         /// Also can be referred to as application password.
         /// </remarks>
         public string secret;
-
-        public string groupId;
-        public string userId;
+        /// <summary>
+        /// Display name of the group
+        /// </summary>
+        public string groupName;
+        
+        /// <summary>
+        /// An optional description
+        /// </summary>
+        public string groupDescription;
+        /// <summary>
+        /// The mail alias for the group. Must be unique in the organization
+        /// </summary>
+        public string groupMailNikName;
 
         public ICustomActivityResult Execute()
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
-            dt.Rows.Add("Success");
 
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            User user = client.Users[userId].Request().GetAsync().Result;
-
-            if (user.UserPrincipalName != null)
+            var group = client.Groups.Request().AddAsync(new Group
             {
-                client.Groups[groupId].Members.References.Request().AddAsync(user).Wait();
-            }
-            else
-                throw new Exception("User not found");
+                GroupTypes = new System.Collections.Generic.List<string> { "Unified" },
+                DisplayName = groupName,
+                Description = groupDescription,
+                MailNickname = groupMailNikName,                
+                MailEnabled = true,
+                SecurityEnabled = false
+            }).Result;
+
+            dt.Rows.Add("Success");
 
             return this.GenerateActivityResult(dt);
         }
