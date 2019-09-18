@@ -1,4 +1,4 @@
-## DeleteUserToGroup - Activity to remove a user from Office365 mail group.
+## OfficeRemoveUserFromGroup - Activity to remove a user from Office365 mail group.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
