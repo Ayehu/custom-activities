@@ -1,4 +1,4 @@
-## CreateOffice365User - Activity to create a new user in Azure AD for Office365.
+## OfficeCreateUser - Activity to create a new user in Azure AD for Office365.
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 Under 'Azure Active Directory' add a new organization. Follow the steps to register the application.
