@@ -1,4 +1,4 @@
-## UdpdateOffice365User - Activity to update a user in Azure AD for Office365.
+## OfficeUdpdateUser - Activity to update a user in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
