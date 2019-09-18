@@ -1,4 +1,4 @@
-## CreateOffice365Rule - Activity to create a new mailbox rule in Azure AD for Office365.
+## OfficeCreateMailRule - Activity to create a new mailbox rule in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
