@@ -1,4 +1,4 @@
-## DeleteOffice365User - Activity to Assign Exchange Online license to a user in Azure AD for Office365.
+## OfficeDeleteUser - Activity to Assign Exchange Online license to a user in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
