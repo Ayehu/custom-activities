@@ -1,0 +1,141 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Create AzureVM",
+    "description": "Create new Azure Virtual Machine",
+    "Timeout": null,
+    "class": [
+
+    ],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "Subscription Id",
+          "labelKey": "subscription_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "vmName",
+          "label": "VM Name",
+          "labelKey": "VM_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "vmGroupName",
+          "label": "VM Group Name",
+          "labelKey": "VMGROUP_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+		{
+          "value": "",
+          "required": true,
+          "key": "vmUserName",
+          "label": "VM User Name",
+          "labelKey": "VMUSER_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+		{
+          "value": "",
+          "required": true,
+          "key": "vmPassword",
+          "label": "VM Password",
+          "labelKey": "VMPASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+		{
+          "value":"",
+          "required":true,
+          "key":"vmTypeId",
+          "disabled":false,
+          "styleClass":"",
+          "label":"OS Type",
+          "labelKey":"VMTYPE_ID_VALUE",
+          "baseType":"control",
+          "controlType":"autocomplete",
+          "controlOptions":[
+            {
+               "key":"1",
+               "value":"WindowsServer 10 Pro"
+            },
+            {
+               "key":"2",
+               "value":"WindowsServer 2019"
+            },
+			{
+               "key":"3",
+               "value":"WindowsServer 2016"
+            },
+			{
+               "key":"4",
+               "value":"WindowsServer 2012"
+            },
+			{
+               "key":"5",
+               "value":"UbuntuServer"
+            },
+			{
+               "key":"6",
+               "value":"RedHatEnterprise"
+            },
+			{
+               "key":"7",
+               "value":"SuseLinuxEnterprise"
+            },
+			{
+               "key":"8",
+               "value":"CentOS"
+            },
+			{
+               "key":"9",
+               "value":"Debian9"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "appId",
+          "label": "Application Id",
+          "labelKey": "APPID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant Id",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secret",
+          "label": "Secret",
+          "labelKey": "SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
