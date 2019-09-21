@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Create AzureVM",
+    "name": "Azure Create VM",
     "description": "Create new Azure Virtual Machine",
     "Timeout": null,
     "class": [
