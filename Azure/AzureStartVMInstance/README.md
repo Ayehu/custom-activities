@@ -1,4 +1,4 @@
-## StartVMInstance - Activity to start an Azure Virtual Machine.
+## AzureStartVMInstance - Activity to start an Azure Virtual Machine.
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 

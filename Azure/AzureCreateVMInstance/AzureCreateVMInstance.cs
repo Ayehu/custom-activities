@@ -2,12 +2,10 @@ using System;
 using System.Data;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using Microsoft.Azure.Management.Compute.Fluent;
 using Microsoft.Azure.Management.Compute.Fluent.Models;
 using Microsoft.Azure.Management.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
-using Microsoft.Azure.Management.Network.Fluent;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
@@ -30,7 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
     /// <summary>
     /// Creates a new Azure VM
     /// </summary>
-    public class CreateVMInstance : IActivity
+    public class AzureCreateVMInstance : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -71,9 +69,13 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string vmPassword;
         /// <summary>
+        /// The name of the OS
+        /// </summary>
+        public string vmTypeId;
+        /// <summary>
         /// Id of the OS to install
         /// </summary>
-        public int vmTypeId;
+        public int typeId;
 
         private string publisher;
         private string offer;
@@ -84,13 +86,7 @@ namespace Ayehu.Sdk.ActivityCreation
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
 
-            IAvailabilitySet availabilitySet = null;
-            IPublicIPAddress publicIPAddress = null;
-            INetworkInterface networkInterface = null;
-            INetwork network = null;
-            //IDisk managedDisk = null;
             IResourceGroup resourceGroup = null;
-
             var azure = this.GetAzure();
 
             try
@@ -103,26 +99,26 @@ namespace Ayehu.Sdk.ActivityCreation
                     .WithRegion(Region.USEast)
                     .Create();
 
-                availabilitySet = azure.AvailabilitySets.Define("AVSet")
-                   .WithRegion(location)
-                   .WithExistingResourceGroup(vmGroupName)
-                   .WithSku(AvailabilitySetSkuTypes.Aligned)
-                   .Create();
+                var availabilitySet = azure.AvailabilitySets.Define("AVSet")
+                     .WithRegion(location)
+                     .WithExistingResourceGroup(vmGroupName)
+                     .WithSku(AvailabilitySetSkuTypes.Aligned)
+                     .Create();
 
-                publicIPAddress = azure.PublicIPAddresses.Define("PublicIP")
+                var publicIPAddress = azure.PublicIPAddresses.Define("PublicIP")
                     .WithRegion(location)
                     .WithExistingResourceGroup(vmGroupName)
                     .WithDynamicIP()
                     .Create();
 
-                network = azure.Networks.Define("VNet")
+                var network = azure.Networks.Define("VNet")
                     .WithRegion(location)
                     .WithExistingResourceGroup(vmGroupName)
                     .WithAddressSpace("10.0.0.0/16")
                     .WithSubnet("Subnet", "10.0.0.0/24")
                     .Create();
 
-                networkInterface = azure.NetworkInterfaces.Define("NIC")
+                var networkInterface = azure.NetworkInterfaces.Define("NIC")
                     .WithRegion(location)
                     .WithExistingResourceGroup(vmGroupName)
                     .WithExistingPrimaryNetwork(network)
@@ -131,10 +127,10 @@ namespace Ayehu.Sdk.ActivityCreation
                     .WithExistingPrimaryPublicIPAddress(publicIPAddress)
                     .Create();
 
-                if (vmTypeId == (int)VMType.WindowsServer10Pro ||
-                    vmTypeId == (int)VMType.WindowsServer2012 ||
-                    vmTypeId == (int)VMType.WindowsServer2016 ||
-                    vmTypeId == (int)VMType.WindowsServer2019)
+                if (typeId == (int)VMType.WindowsServer10Pro ||
+                    typeId == (int)VMType.WindowsServer2012 ||
+                    typeId == (int)VMType.WindowsServer2016 ||
+                    typeId == (int)VMType.WindowsServer2019)
                 {
                     azure.VirtualMachines.Define(vmName).
                        WithRegion(location)
@@ -167,37 +163,16 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             catch (Exception ex)
             {
-                /*if (availabilitySet != null)
-                {
-                    azure.AvailabilitySets.DeleteById(availabilitySet.Id);
-                }
-
-                if (publicIPAddress != null)
-                {
-                    azure.PublicIPAddresses.DeleteById(publicIPAddress.Id);
-                }
-
-                if (network != null)
-                {
-                    azure.Networks.DeleteById(network.Id);
-                }
-
-                if (networkInterface != null)
-                {
-                    azure.NetworkInterfaces.DeleteById(networkInterface.Id);
-                }
-
-                if (managedDisk != null)
-                {
-                    azure.Disks.DeleteById(managedDisk.Id);
-                }*/
-
                 if (resourceGroup != null)
                 {
                     azure.ResourceGroups.DeleteByName(resourceGroup.Name);
                 }
 
-                throw new Exception(ex.Message);
+                string innerMessage = (ex.InnerException != null)
+                      ? ex.InnerException.Message
+                      : "";
+
+                throw new Exception(ex.Message + ": " + innerMessage + ": " + ex.StackTrace + " vmTypeId: " + typeId);
             }
 
             return this.GenerateActivityResult(dt);
@@ -205,7 +180,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private void InitImageVersion()
         {
-            switch (vmTypeId)
+            switch (typeId)
             {
                 case (int)VMType.CentOS:
                     {

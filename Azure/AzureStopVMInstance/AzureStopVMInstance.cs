@@ -1,18 +1,17 @@
 using System;
-using System.Data;
 using System.Linq;
+using System.Data;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using Microsoft.Azure.Management.Compute.Fluent;
 using Microsoft.Azure.Management.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
+using Microsoft.Azure.Management.Compute.Fluent;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class StartVMInstance : IActivity
+    public class AzureStopVMInstance : IActivity
     {
-        /// <summary>
         /// APPLICATION (CLIENT) ID
         /// </summary>
         public string appId;
@@ -31,7 +30,14 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </remarks>
         public string secret;
 
+        /// <summary>
+        /// Account subscription ID
+        /// </summary>
         public string subscriptionId;
+		
+		/// <summary>
+        /// Virtual Machine name
+        /// </summary>
         public string vmName;
 
         ICustomActivityResult IActivity.Execute()
@@ -43,9 +49,9 @@ namespace Ayehu.Sdk.ActivityCreation
             var subscription = azure.GetCurrentSubscription();
             var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
 
-            if (vm.PowerState == PowerState.Deallocated || vm.PowerState == PowerState.Stopped)
+            if (vm.PowerState == PowerState.Running)
             {
-                vm.Start();
+                vm.PowerOff();
             }
 
             dt.Rows.Add("Success");
@@ -60,7 +66,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 .WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
                 .Authenticate(credentials)
                 .WithSubscription(subscriptionId);
-            
+
             return azure;
         }
     }
