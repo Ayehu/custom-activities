@@ -3,7 +3,6 @@ CREATE SNAPSHOT ACTIVITIES
 CREATE A SNAPSHOT ON AZURE.
 
 This Activities requires Microsoft.IdentityModel.Clients.ActiveDirectory.dll, System.Net.Http.dll
-https://aws.amazon.com/sdk-for-net/?nc1=h_ls
 
 OUTPUT Success/Failure
 
