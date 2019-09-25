@@ -81,7 +81,7 @@
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": true
+          "required": false
         },
         {
           "key": "AllowedVlanIdList",
