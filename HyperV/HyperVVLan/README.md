@@ -20,21 +20,21 @@ System.Data;
 
 **Host Name** - Specifies the Url or Ip address of Hyper-V server.
 
-User Name - Specifies the username of windows account on Hyper-V server with permission to run powershell command.
+**User Name** - Specifies the username of windows account on Hyper-V server with permission to run powershell command.
 
-Password - Specifies the password of windows account.
+**Password** - Specifies the password of windows account.
 
-VM Name - Specifies the name of virtual machine which contains the target virtual network adapter.
+**VM Name** - Specifies the name of virtual machine which contains the target virtual network adapter.
 
-VLanMode - Specifies the traffic mode of virtual network adapter: Access, Trunk, Private VLAN (isolated, community, or promiscuous), and untagged. 
+**VLanMode** - Specifies the traffic mode of virtual network adapter: Access, Trunk, Private VLAN (isolated, community, or promiscuous), and untagged. 
 
-Primary VlanId - Specifies the primary virtual LAN identifier for a virtual network adapter in Community, Isolated, or Promiscuous mode.
+**Primary VlanId** - Specifies the primary virtual LAN identifier for a virtual network adapter in Community, Isolated, or Promiscuous mode.
 
-Vlan Id List - Specifies a list of virtual LANs allowed on a virtual machine network adapter.
+**Vlan Id List** - Specifies a list of virtual LANs allowed on a virtual machine network adapter.
 
-VlanId 2 - Specifies the secondary virtual LAN identifier for a virtual network adapter in Community or Isolated mode.
+**VlanId 2** - Specifies the secondary virtual LAN identifier for a virtual network adapter in Community or Isolated mode.
 
-Vlan IdList 2- Specifies a list of private virtual LAN secondary virtual LANs on a virtual machine network adapter
+**Vlan IdList 2**- Specifies a list of private virtual LAN secondary virtual LANs on a virtual machine network adapter
 
 ### Powershell command document reference.
 
