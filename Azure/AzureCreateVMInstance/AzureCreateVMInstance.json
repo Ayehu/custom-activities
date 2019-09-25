@@ -62,7 +62,7 @@
           "label": "OS Type",
           "labelKey": "VMTYPE_ID_VALUE",
           "baseType": "control",
-          "controlType": "dropdown",
+          "controlType": "autocomplete",
           "idFieldName": "typeId",
           "controlOptions": [
             {
