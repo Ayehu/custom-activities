@@ -1,0 +1,142 @@
+﻿{
+  "data": {
+    "name": "SetVMNetworkAdapterVlan",
+    "description": "Configures the virtual LAN settings for the traffic through a virtual network adapter.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "VMName",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "VMNetworkAdapterName",
+          "label": "Adapter Name",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "VLanMode",
+          "label": "VLanMode",
+          "baseType": "control",
+          "labelKey": "VLanMode",
+          "controlType": "autocomplete",
+          "value": "Access",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "Access",
+              "value": "Access"
+            },
+            {
+              "key": "Trunk",
+              "value": "Trunk"
+            },
+            {
+              "key": "Isolated",
+              "value": "Isolated"
+            },
+            {
+              "key": "Untagged",
+              "value": "Untagged"
+            },
+            {
+              "key": "Community",
+              "value": "Community"
+            },
+            {
+              "key": "Promiscuous",
+              "value": "Promiscuous"
+            }
+          ]
+        },
+        {
+          "key": "VlanId",
+          "label": "Vlan Id",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "AllowedVlanIdList",
+          "label": "Vlan Id List",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "NativeVlanId",
+          "label": "Native VlanId",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "PrimaryVlanId",
+          "label": "Primary VlanId",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "SecondaryVlanId",
+          "label": "VlanId 2",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "SecondaryVlanIdList",
+          "label": "Vlan IdList 2",
+          "baseType": "control",
+          "labelKey": "",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
