@@ -11,11 +11,17 @@ DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/get
 MANDATORY FIELDS WHEN GET A SNAPSHOT:
 
 a. TenantID: How to get: Bellow
+
 b. ClientID: How to get: Bellow
+
 c. ClientSecret: How to get: Bellow
+
 d. Resource Group Name: Name of item Resource Group in FAVORITES
+
 e. SubscriptionID: How to get: Bellow
+
 f. Image Name: Name of snapshot optional.
+
 g. File Path: Place that contains file information on your device.
 
 -------------------------------------------
