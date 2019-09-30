@@ -11,10 +11,15 @@ DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorup
 MANDATORY FIELDS WHEN GET INFORMATION OF SNAPSHOT:
 
 a. TenantID: How to get: Bellow
+
 b. ClientID: How to get: Bellow
+
 c. ClientSecret: How to get: Bellow
+
 d. Resource Group Name: Name of item Resource Group in FAVORITES
+
 e. SubscriptionID: How to get: Bellow
+
 f. Snapshot Name: Name of snapshot optional.
 
 -------------------------------------------
