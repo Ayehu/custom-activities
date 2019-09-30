@@ -11,11 +11,17 @@ DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/createorupdat
 MANDATORY FIELDS WHEN CREATE A SNAPSHOT:
 
 a. TenantID: How to get: Bellow
+
 b. ClientID: How to get: Bellow
+
 c. ClientSecret: How to get: Bellow
+
 d. Body: Examples in DOCUMENT
+
 e. Resource Group Name: Name of item Resource Group in FAVORITES
+
 f. SubscriptionID: How to get: Bellow
+
 g. Image Name: Name of snapshot optional.
 
 -------------------------------------------
