@@ -2,18 +2,20 @@
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System;
+using System.IO;
 using System.Net;
 
-namespace AzureDeleteSnapshot
+namespace AzureGetImage
 {
-    class AzureDeleteSnapshot : IActivity
+    class AzureGetImage : IActivity
     {
         public string tenantId;
         public string clientId;
         public string clientSecret;
         public string subscriptionId;
         public string resourceGroupName;
-        public string snapshotName;
+        public string imageName;
+        public string File_Path;
         public ICustomActivityResult Execute()
         {
             string Message = string.Empty;
@@ -27,19 +29,32 @@ namespace AzureDeleteSnapshot
                 return this.GenerateActivityResult(Message);
             }
             string token = result.AccessToken;
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("https://management.azure.com/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroupName + "/providers/Microsoft.Compute/snapshots/" + snapshotName + "?api-version=2018-06-01");
-            request.Method = "DELETE";
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("https://management.azure.com/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroupName + "/providers/Microsoft.Compute/images/" + imageName + "?api-version=2019-03-01");
+            request.Method = "GET";
             request.Headers["Authorization"] = "Bearer " + token;
             request.ContentType = "application/json";
             try
             {
-                request.GetRequestStream();
-                var httpResponse = (HttpWebResponse)request.GetResponse();
-                httpResponse.GetResponseStream();
+                var response = (HttpWebResponse)request.GetResponse();
+                FileStream fs = null;
+                try
+                {
+                    fs = new FileStream(File_Path + "\\" + imageName + ".txt", FileMode.Append);
+                    using (StreamWriter writer = new StreamWriter(fs))
+                    {
+                        StreamReader sr = new StreamReader(response.GetResponseStream());
+                        writer.Write(sr.ReadToEnd());
+                    }
+                }
+                finally
+                {
+                    if (fs != null)
+                        fs.Dispose();
+                }
             }
             catch (Exception ex)
             {
-                 Message = ex.Message;
+                Message = ex.Message;
                 return this.GenerateActivityResult(Message);
             }
             Message = "Success";

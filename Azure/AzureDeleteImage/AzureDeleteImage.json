@@ -1,7 +1,7 @@
 {
   "data": {
-    "name": "Azure create snapshot",
-    "description": "Create a snapshot on azure.",
+    "name": "Azure delete images",
+    "description": "Delete a image on azure",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -43,18 +43,6 @@
         {
           "value": "",
           "required": true,
-          "key": "body",
-          "label": "Body",
-          "labelKey": "body",
-          "baseType": "control",
-          "controlType": "textarea",
-          "disabled": false,
-          "styleClass": "xm-textarea",
-          "controlOptions": []
-        },
-        {
-          "value": "",
-          "required": true,
           "key": "subscriptionId",
           "label": "SubscriptionID",
           "label key": "subscriptionId",
@@ -77,9 +65,9 @@
         {
           "value": "",
           "required": true,
-          "key": "snapshotName",
-          "label": "Snapshot Name",
-          "label key": "snapshotName",
+          "key": "imageName",
+          "label": "Image Name",
+          "label key": "imageName",
           "baseType": "control",
           "controlType": "textbox",
           "disabled": false,

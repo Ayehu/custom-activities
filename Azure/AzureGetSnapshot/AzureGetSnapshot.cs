@@ -54,7 +54,7 @@ namespace AzureGetSnapshot
             }
             catch (Exception ex)
             {
-                Message = "Failure: " + ex.Message;
+                Message = ex.Message;
                 return this.GenerateActivityResult(Message);
             }
             Message = "Success";

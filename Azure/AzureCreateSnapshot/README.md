@@ -8,14 +8,20 @@ OUTPUT Success/Failure
 
 DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate#code-try-0
 
-MANDATORY FIELDS WHEN DOWNLOAD A FILE:
+MANDATORY FIELDS WHEN CREATE A FILE:
 
 a. TenantID: How to get: Bellow
+
 b. ClientID: How to get: Bellow
+
 c. ClientSecret: How to get: Bellow
+
 d. Body: Read this document part Requests Body.
+
 f. Resource Group Name: Name of item Resource Group in FAVORITES
+
 e. SubscriptionID: How to get: Bellow
+
 g. Snapshot Name: Name of snapshot optional.
 
 -------------------------------------------

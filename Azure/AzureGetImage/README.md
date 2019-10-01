@@ -1,14 +1,14 @@
-GET SNAPSHOT ACTIVITIES
+GET IMAGE ACTIVITIES
 
-GET INFORMATION OF SNAPSHOT ON AZURE.
+GET INFORMATION OF IMAGE ON AZURE.
 
 This Activities requires Microsoft.IdentityModel.Clients.ActiveDirectory.dll, System.Net.Http.dll
 
-OUTPUT Success/Failure
+OUTPUT Success/Failure	
 
-DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate#code-try-0
+DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/get
 
-MANDATORY FIELDS WHEN GET INFORMATION OF SNAPSHOT:
+MANDATORY FIELDS WHEN GET A SNAPSHOT:
 
 a. TenantID: How to get: Bellow
 
@@ -20,11 +20,13 @@ d. Resource Group Name: Name of item Resource Group in FAVORITES
 
 e. SubscriptionID: How to get: Bellow
 
-f. Snapshot Name: Name of snapshot optional.
+f. Image Name: Name of snapshot optional.
+
+g. File Path: Place that contains file information on your device.
 
 -------------------------------------------
 
-How to find information of required fields to GET INFORMATION OF Snapshot on Azure?
+How to find information of required fields to GET Snapshot on Azure?
 
 -- Answer:
  

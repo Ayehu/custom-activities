@@ -1,14 +1,14 @@
-GET SNAPSHOT ACTIVITIES
+DELETE IMAGE ACTIVITIES
 
-GET INFORMATION OF SNAPSHOT ON AZURE.
+DELETE A IMAGE ON AZURE.
 
 This Activities requires Microsoft.IdentityModel.Clients.ActiveDirectory.dll, System.Net.Http.dll
 
 OUTPUT Success/Failure
 
-DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate#code-try-0
+DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/delete
 
-MANDATORY FIELDS WHEN GET INFORMATION OF SNAPSHOT:
+MANDATORY FIELDS WHEN DELETE A SNAPSHOT:
 
 a. TenantID: How to get: Bellow
 
@@ -20,11 +20,11 @@ d. Resource Group Name: Name of item Resource Group in FAVORITES
 
 e. SubscriptionID: How to get: Bellow
 
-f. Snapshot Name: Name of snapshot optional.
+f. Image Name: Name of snapshot optional.
 
 -------------------------------------------
 
-How to find information of required fields to GET INFORMATION OF Snapshot on Azure?
+How to find information of required fields to CREATE Snapshot on Azure?
 
 -- Answer:
  

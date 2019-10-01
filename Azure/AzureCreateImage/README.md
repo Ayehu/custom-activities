@@ -1,14 +1,14 @@
-GET SNAPSHOT ACTIVITIES
+CREATE IMAGE ACTIVITIES
 
-GET INFORMATION OF SNAPSHOT ON AZURE.
+CREATE A IMAGE ON AZURE.
 
 This Activities requires Microsoft.IdentityModel.Clients.ActiveDirectory.dll, System.Net.Http.dll
 
 OUTPUT Success/Failure
 
-DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate#code-try-0
+DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/createorupdate
 
-MANDATORY FIELDS WHEN GET INFORMATION OF SNAPSHOT:
+MANDATORY FIELDS WHEN CREATE A SNAPSHOT:
 
 a. TenantID: How to get: Bellow
 
@@ -16,15 +16,17 @@ b. ClientID: How to get: Bellow
 
 c. ClientSecret: How to get: Bellow
 
-d. Resource Group Name: Name of item Resource Group in FAVORITES
+d. Body: Examples in DOCUMENT
 
-e. SubscriptionID: How to get: Bellow
+e. Resource Group Name: Name of item Resource Group in FAVORITES
 
-f. Snapshot Name: Name of snapshot optional.
+f. SubscriptionID: How to get: Bellow
+
+g. Image Name: Name of snapshot optional.
 
 -------------------------------------------
 
-How to find information of required fields to GET INFORMATION OF Snapshot on Azure?
+How to find information of required fields to CREATE Snapshot on Azure?
 
 -- Answer:
  
