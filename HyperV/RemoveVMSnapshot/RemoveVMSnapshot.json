@@ -1,0 +1,85 @@
+﻿{
+  "data": {
+    "name": "RemoveVMSnapshot",
+    "description": "Deletes a virtual machine checkpoint.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+		{
+          "key": "VMName",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "VMName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Name",
+          "label": "Checkpoint Name",
+          "baseType": "control",
+          "labelKey": "Name",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "IncludeAllChildSnapshots",
+          "label": "Include Child",
+          "baseType": "control",
+          "labelKey": "IncludeAllChildSnapshots",
+          "controlType": "autocomplete",
+          "value": "false",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "true"
+            },
+            {
+              "key": "False",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "key": "AsJob",
+          "label": "As Job",
+          "baseType": "control",
+          "labelKey": "AsJob",
+          "controlType": "autocomplete",
+          "value": "false",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "true"
+            },
+            {
+              "key": "False",
+              "value": "false"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
