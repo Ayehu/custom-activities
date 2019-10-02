@@ -24,7 +24,7 @@ f. Image Name: Name of snapshot optional.
 
 -------------------------------------------
 
-How to find information of required fields to CREATE Snapshot on Azure?
+How to find information of required fields to CREATE a Image on Azure?
 
 -- Answer:
  
