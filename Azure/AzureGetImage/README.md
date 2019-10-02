@@ -8,7 +8,7 @@ OUTPUT Success/Failure
 
 DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/get
 
-MANDATORY FIELDS WHEN GET A SNAPSHOT:
+MANDATORY FIELDS WHEN GET A IMAGE:
 
 a. TenantID: How to get: Bellow
 
