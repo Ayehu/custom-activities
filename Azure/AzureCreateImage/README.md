@@ -8,7 +8,7 @@ OUTPUT Success/Failure
 
 DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/createorupdate
 
-MANDATORY FIELDS WHEN CREATE A SNAPSHOT:
+MANDATORY FIELDS WHEN CREATE A IMAGE:
 
 a. TenantID: How to get: Bellow
 
