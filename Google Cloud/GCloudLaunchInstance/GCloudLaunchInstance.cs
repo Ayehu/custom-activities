@@ -78,7 +78,7 @@ namespace ActivitiesAyehu
                     errorStr.AppendLine(error.Code + " - " + error.Message);
                 return errorStr.ToString();
             }
-            else return "SUCCESS";
+            else return "Success";
         }
     }
 }
