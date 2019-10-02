@@ -31,6 +31,6 @@ using System.Text;
 **Region**				- Region which the instance will be hosted (e.g., us-central1-a)  
 **Zone**				- Zone inside the instance, usually a letter  
 **MachineType**			- Type of the machine you want to launch (e.g., f1-micro)  
-**ServiceAccountEmail**	- Service Account E-mail. You can create one following [this tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
+**ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
 **PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  
 **DiskSourceImage**		- Choose the OS image you want to run. You can check the public images [here](https://cloud.google.com/compute/docs/images). (e.g., projects/debian-cloud/global/images/family/debian-9 or family/debian-9)  
