@@ -6,7 +6,7 @@ This Activities requires Microsoft.IdentityModel.Clients.ActiveDirectory.dll, Sy
 
 OUTPUT Success/Failure
 
-DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate#code-try-0
+DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/delete
 
 MANDATORY FIELDS WHEN DELETE A SNAPSHOT:
 
