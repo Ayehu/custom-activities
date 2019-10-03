@@ -1,4 +1,4 @@
-## GCloudLaunchInstance - Launch a new instance in Google Cloud.
+## GCloudStopInstance - Stop an instance in Google Cloud.
 
 Remark - To stop an instance in Google Cloud you need to set-up a new Service Account at https://cloud.google.com. Check this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html).  
 
@@ -27,7 +27,7 @@ using System.Text;
 
 ### Mandatory fields when creating a VM:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
-**InstanceName**		- Choose a name for the instance  
+**InstanceName**		- Instance name to be stopped  
 **Region**				- Region which the instance will be hosted (e.g., us-central1-a)  
 **Zone**				- Zone inside the instance, usually a letter  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
