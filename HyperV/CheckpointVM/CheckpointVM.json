@@ -1,6 +1,6 @@
 ﻿{
   "data": {
-    "name": "CheckpointVM",
+    "name": "HyperVActivityCheckpointVM",
     "description": "Creates a checkpoint of a virtual machine. ",
     "Timeout": "00:01:00",
     "class": [],
@@ -40,7 +40,7 @@
         },
         {
           "key": "AsJob",
-          "label": "As Job",
+          "label": "Run As Job",
           "baseType": "control",
           "labelKey": "AsJob",
           "controlType": "autocomplete",
@@ -49,11 +49,11 @@
           "controlOptions": [
             {
               "key": "True",
-              "value": "true"
+              "value": "Yes"
             },
             {
               "key": "False",
-              "value": "false"
+              "value": "No"
             }
           ]
         }

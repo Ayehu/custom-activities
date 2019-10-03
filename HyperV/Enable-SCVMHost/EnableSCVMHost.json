@@ -1,6 +1,6 @@
 ﻿{
   "data": {
-    "name": "EnableSCVMHost",
+    "name": "HyperVActivityEnableSCVMHost",
     "description": "Restores a virtual machine host in maintenance mode to full service.",
     "Timeout": "00:01:00",
     "class": [],
@@ -49,10 +49,10 @@
           "controlOptions": [
             {
               "key": "True",
-              "value": "true"
+              "value": "Yes"
             },
             {
-              "key": "False",
+              "key": "No",
               "value": "false"
             }
           ]

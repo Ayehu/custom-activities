@@ -1,6 +1,6 @@
 ﻿{
   "data": {
-    "name": "RemoveVMSnapshot",
+    "name": "HyperVActivityRemoveVMSnapshot",
     "description": "Deletes a virtual machine checkpoint.",
     "Timeout": "00:01:00",
     "class": [],
@@ -49,17 +49,17 @@
           "controlOptions": [
             {
               "key": "True",
-              "value": "true"
+              "value": "Yes"
             },
             {
               "key": "False",
-              "value": "false"
+              "value": "No"
             }
           ]
         },
         {
           "key": "AsJob",
-          "label": "As Job",
+          "label": "Run As Job",
           "baseType": "control",
           "labelKey": "AsJob",
           "controlType": "autocomplete",
@@ -68,11 +68,11 @@
           "controlOptions": [
             {
               "key": "True",
-              "value": "true"
+              "value": "Yes"
             },
             {
               "key": "False",
-              "value": "false"
+              "value": "No"
             }
           ]
         }
