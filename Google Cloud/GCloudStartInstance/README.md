@@ -25,7 +25,7 @@ using Google.Apis.Compute.v1.Data;
 using System.Threading.Tasks;  
 using System.Text;  
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when starting an instance:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **InstanceName**		- Instance name to be started  
 **Region**				- Region which the instance will be hosted (e.g., us-central1-a)  
