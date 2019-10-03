@@ -8,7 +8,7 @@ OUTPUT Success/Failure
 
 DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/createorupdate
 
-MANDATORY FIELDS WHEN CREATE A SNAPSHOT:
+MANDATORY FIELDS WHEN CREATE A IMAGE:
 
 a. TenantID: How to get: Bellow
 
@@ -26,7 +26,7 @@ g. Image Name: Name of snapshot optional.
 
 -------------------------------------------
 
-How to find information of required fields to CREATE Snapshot on Azure?
+How to find information of required fields to CREATE a Image on Azure?
 
 -- Answer:
  

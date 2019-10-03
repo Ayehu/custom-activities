@@ -1,4 +1,4 @@
-## AzureStartVMInstance - Activity to create and attach a disk to Azure Virtual Machine.
+## AzureDetachVMDisk - Activity to detach Data Disk from a Virtual Machine.
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
@@ -28,6 +28,5 @@ Secret
 
 ### Mandatory fields when creating a VM:
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
-**vmName**				- Virtual Machine name
-**diskName**			- The name of the new diskName
-**sizeGB**				- Size in GB for the new disk
+**vmName**				- Virtual Machine name where to detach the disk.
+**diskName**			- The name of the disk to detach

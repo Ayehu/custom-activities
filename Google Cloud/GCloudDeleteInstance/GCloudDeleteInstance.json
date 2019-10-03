@@ -1,0 +1,181 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Google Delete Instance",
+    "description": "Delete an instance in the Google Cloud",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Project",
+          "label": "Project Name",
+          "labelKey": "PROJECT",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "InstanceName",
+          "label": "Instance Name",
+          "labelKey": "INSTANCE_NAME",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Region",
+          "label": "Region",
+          "labelKey": "REGION",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "asia-east1",
+              "value": "asia-east1"
+            },
+            {
+              "key": "asia-east2",
+              "value": "asia-east2"
+            },
+            {
+              "key": "asia-northeast1",
+              "value": "asia-northeast2"
+            },
+            {
+              "key": "asia-south1",
+              "value": "asia-south1"
+            },
+            {
+              "key": "asia-southeast1",
+              "value": "asia-southeast1"
+            },
+            {
+              "key": "australia-southeast1",
+              "value": "australia-southeast1"
+            },
+            {
+              "key": "europe-north1",
+              "value": "europe-north1"
+            },
+            {
+              "key": "europe-west1",
+              "value": "europe-west1"
+            },
+            {
+              "key": "europe-west1",
+              "value": "europe-west1"
+            },
+            {
+              "key": "europe-west2",
+              "value": "europe-west2"
+            },
+            {
+              "key": "europe-west3",
+              "value": "europe-west3"
+            },
+            {
+              "key": "europe-west4",
+              "value": "europe-west4"
+            },
+            {
+              "key": "europe-west5",
+              "value": "europe-west5"
+            },
+            {
+              "key": "europe-west6",
+              "value": "europe-west6"
+            },
+            {
+              "key": "northamerica-northeast1",
+              "value": "northamerica-northeast1"
+            },
+            {
+              "key": "southamerica-east1",
+              "value": "southamerica-east1"
+            },
+            {
+              "key": "us-central1",
+              "value": "us-central1"
+            },
+            {
+              "key": "us-east1",
+              "value": "us-east1"
+            },
+            {
+              "key": "us-east4",
+              "value": "us-east4"
+            },
+            {
+              "key": "us-west1",
+              "value": "us-west1"
+            },
+            {
+              "key": "us-west2",
+              "value": "us-west2"
+            }
+
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Zone",
+          "label": "Zone",
+          "labelKey": "ZONE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "a",
+              "value": "a"
+            },
+            {
+              "key": "b",
+              "value": "b"
+            },
+            {
+              "key": "c",
+              "value": "c"
+            },
+            {
+              "key": "d",
+              "value": "d"
+            },
+            {
+              "key": "f",
+              "value": "f"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PrivateKey",
+          "label": "Private Key",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ServiceAccountEmail",
+          "label": "Serv. Accnt E-mail",
+          "labelKey": "SERVICE_ACCOUNT_EMAIL",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

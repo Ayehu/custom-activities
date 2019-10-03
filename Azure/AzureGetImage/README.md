@@ -8,7 +8,7 @@ OUTPUT Success/Failure
 
 DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/get
 
-MANDATORY FIELDS WHEN GET A SNAPSHOT:
+MANDATORY FIELDS WHEN GET A IMAGE:
 
 a. TenantID: How to get: Bellow
 
@@ -26,7 +26,7 @@ g. File Path: Place that contains file information on your device.
 
 -------------------------------------------
 
-How to find information of required fields to GET Snapshot on Azure?
+How to find information of required fields to GET INFORMATION of Image on Azure?
 
 -- Answer:
  

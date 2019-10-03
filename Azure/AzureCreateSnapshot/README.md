@@ -6,9 +6,9 @@ This Activities requires Microsoft.IdentityModel.Clients.ActiveDirectory.dll, Sy
 
 OUTPUT Success/Failure
 
-DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate#code-try-0
+DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/snapshots/createorupdate
 
-MANDATORY FIELDS WHEN CREATE A FILE:
+MANDATORY FIELDS WHEN CREATE A SNAPSHOT:
 
 a. TenantID: How to get: Bellow
 
@@ -26,7 +26,7 @@ g. Snapshot Name: Name of snapshot optional.
 
 -------------------------------------------
 
-How to find information of required fields to create Snapshot on Azure?
+How to find information of required fields to CREATE a Snapshot on Azure?
 
 -- Answer:
  

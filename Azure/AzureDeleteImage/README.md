@@ -8,7 +8,7 @@ OUTPUT Success/Failure
 
 DOCUMENT: https://docs.microsoft.com/en-us/rest/api/compute/images/delete
 
-MANDATORY FIELDS WHEN DELETE A SNAPSHOT:
+MANDATORY FIELDS WHEN DELETE A IMAGE:
 
 a. TenantID: How to get: Bellow
 
@@ -24,7 +24,7 @@ f. Image Name: Name of snapshot optional.
 
 -------------------------------------------
 
-How to find information of required fields to CREATE Snapshot on Azure?
+How to find information of required fields to DELETE a Image on Azure?
 
 -- Answer:
  

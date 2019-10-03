@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureAddVMDisk",
-    "description": "Create and Attach a Data Disk to VM",
+    "name": "AzureAttachVMDisk",
+    "description": "Azure Attach a Data Disk to a Virtual Machine",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -23,15 +23,6 @@
           "key": "diskName",
           "label": "Disk Name",
           "labelKey": "DISK_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "sizeGB",
-          "label": "Size(GB)",
-          "labelKey": "SIZE_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },

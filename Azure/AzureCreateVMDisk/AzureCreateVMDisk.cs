@@ -1,6 +1,5 @@
 using System;
 using System.Data;
-using System.Linq;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Azure.Management.Compute.Fluent.Models;
@@ -10,7 +9,7 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureAddVMDisk : IActivity
+    public class AzureCreateVMDisk : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -41,41 +40,34 @@ namespace Ayehu.Sdk.ActivityCreation
         public string sizeGB;
 
         /// <summary>
-        /// Virtual Machine name
+        /// Resource Group where to create the disk. 
+        /// So this disk can be attached to a VM inside the same group.
         /// </summary>
-        public string vmName;
+        public string resourceGroupName;
 
         /// <summary>
         /// The new disk name
         /// </summary>
         public string diskName;
 
-         public ICustomActivityResult Execute()
+        public ICustomActivityResult Execute()
         {
             var azure = GetAzure();
-            var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
             int size = int.Parse(sizeGB);
-
-            if (vm == null)
-                throw new Exception(string.Format("The virtual machine {0} was not found", vmName));
 
             if (string.IsNullOrEmpty(diskName.Trim()))
                 throw new Exception("The disk name can't be empty");
 
             if (size == 0)
                 throw new Exception("Disk size must be greater than zero");
-
-            var disk = new DataDisk(
-                vm.StorageProfile.DataDisks.Count + 1,
-                DiskCreateOptionTypes.Empty,
-                diskName);
-
-            disk.DiskSizeGB = size;
-            disk.Validate();
-
-            vm.StorageProfile.DataDisks.Add(disk);
-            vm.StorageProfile.Validate();
-            vm.Update().Apply();
+            
+            azure.Disks.Define(diskName)
+                .WithRegion(Region.USEast)
+                .WithExistingResourceGroup(resourceGroupName)
+                .WithData()
+                .WithSizeInGB(10)
+                .WithSku(DiskSkuTypes.PremiumLRS)
+                .Create().Update().Apply();
 
             return this.GenerateActivityResult(GetActivityResult);
         }
