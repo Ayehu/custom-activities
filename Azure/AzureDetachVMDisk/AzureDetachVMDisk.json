@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "AzureDetachVMDisk",
-    "description": "Detach a Data Disk from a Virtual Machine",
+    "description": "Azure Detach a Data Disk from a Virtual Machine",
     "Timeout": null,
     "class": [],
     "rootSettings": {

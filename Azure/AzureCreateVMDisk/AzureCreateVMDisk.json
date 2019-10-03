@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "AzureCreateVMDisk",
-    "description": "Create a Data Disk",
+    "description": "Azure Create a Data Disk",
     "Timeout": null,
     "class": [],
     "rootSettings": {

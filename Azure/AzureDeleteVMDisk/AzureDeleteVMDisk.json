@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "AzureDeleteVMDisk",
-    "description": "Delete a Data Disk",
+    "description": "Azure Delete a Data Disk",
     "Timeout": null,
     "class": [],
     "rootSettings": {
