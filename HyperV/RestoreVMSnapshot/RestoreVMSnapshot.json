@@ -1,6 +1,6 @@
 ﻿{
   "data": {
-    "name": "HyperVActivityRestoreVMSnapshot",
+    "name": "HyperVRestoreVMSnapshot",
     "description": "Restores a virtual machine checkpoint.",
     "Timeout": "00:01:00",
     "class": [],

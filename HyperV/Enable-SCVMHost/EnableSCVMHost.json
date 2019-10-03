@@ -1,6 +1,6 @@
 ﻿{
   "data": {
-    "name": "HyperVActivityEnableSCVMHost",
+    "name": "HyperVEnableSCVMHost",
     "description": "Restores a virtual machine host in maintenance mode to full service.",
     "Timeout": "00:01:00",
     "class": [],
