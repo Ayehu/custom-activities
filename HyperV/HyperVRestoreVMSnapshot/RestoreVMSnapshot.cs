@@ -28,7 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
             parameters.Add("VMName", VMName);
             parameters.Add("Name", Snapshot);
             parameters.Add("Confirm", false);
-            if (AsJob == "true")
+            if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
             return parameters;
         }

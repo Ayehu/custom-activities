@@ -30,9 +30,9 @@ namespace Ayehu.Sdk.ActivityCreation
                 parameters.Add("JobVariable", JobVariable);
             if (!string.IsNullOrEmpty(PROTipID))
                 parameters.Add("PROTipID", PROTipID);
-            if (MoveWithinCluster == "true")
+            if (MoveWithinCluster == "Yes")
                 parameters.Add("MoveWithinCluster", null);
-            if (RunAsynchronously == "true")
+            if (RunAsynchronously == "Yes")
                 parameters.Add("RunAsynchronously", null);
             return parameters;
         }

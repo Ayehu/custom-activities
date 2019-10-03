@@ -29,7 +29,7 @@ namespace Ayehu.Sdk.ActivityCreation
             parameters.Add("Name", Name);
             if (!string.IsNullOrEmpty(SnapshotName))
                 parameters.Add("SnapshotName", SnapshotName);
-            if (AsJob == "true")
+            if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
             return parameters;
         }

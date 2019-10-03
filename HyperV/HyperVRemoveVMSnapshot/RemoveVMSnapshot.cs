@@ -29,9 +29,9 @@ namespace Ayehu.Sdk.ActivityCreation
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("Name", Name);
             parameters.Add("VMName", VMName);
-            if (AsJob == "true")
+            if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
-            if (IncludeAllChildSnapshots == "true")
+            if (IncludeAllChildSnapshots == "Yes")
                 parameters.Add("IncludeAllChildSnapshots", null);
             return parameters;
         }

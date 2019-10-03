@@ -30,7 +30,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 parameters.Add("JobVariable", JobVariable);
             if (!string.IsNullOrEmpty(PROTipID))
                 parameters.Add("PROTipID", PROTipID);
-            if (RunAsynchronously == "true")
+            if (RunAsynchronously == "Yes")
                 parameters.Add("RunAsynchronously", null);
             return parameters;
         }

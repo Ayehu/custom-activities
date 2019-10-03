@@ -44,15 +44,15 @@
           "baseType": "control",
           "labelKey": "IncludeAllChildSnapshots",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
+              "key": "Yes",
               "value": "Yes"
             },
             {
-              "key": "False",
+              "key": "Yes",
               "value": "No"
             }
           ]
@@ -63,15 +63,15 @@
           "baseType": "control",
           "labelKey": "AsJob",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
+              "key": "Yes",
               "value": "Yes"
             },
             {
-              "key": "False",
+              "key": "Yes",
               "value": "No"
             }
           ]
