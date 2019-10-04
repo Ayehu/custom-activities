@@ -28,7 +28,7 @@ using System.Text;
 ### Mandatory fields when creating a disk:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **DiskName**			- Chosen disk name  
-**Region**				- Region which the disk will be hosted (e.g., us-central1-a)  
+**Region**				- Region which the disk will be hosted (e.g., us-central1)  
 **Zone**				- Zone inside the region, usually a letter  
 **SourceImage**			- Image which the disk will come from (e.g., global/images/image-test)  
 **Type**				- Disk type (e.g.: projects/peak-equator/zones/us-central1-a/diskTypes/pd-standard)
