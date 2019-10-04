@@ -25,7 +25,7 @@ using Google.Apis.Compute.v1.Data;
 using System.Threading.Tasks;  
 using System.Text;  
 
-### Mandatory fields when deleting an instance:
+### Mandatory fields when deleting an image:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **ImageName**			- Image name to be deleted  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  

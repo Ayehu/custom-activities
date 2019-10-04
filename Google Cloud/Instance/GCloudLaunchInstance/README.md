@@ -29,7 +29,7 @@ using System.Text;
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **InstanceName**		- Choose a name for the instance  
 **Region**				- Region which the instance will be hosted (e.g., us-central1-a)  
-**Zone**				- Zone inside the instance, usually a letter  
+**Zone**				- Zone inside the region, usually a letter  
 **MachineType**			- Type of the machine you want to launch (e.g., f1-micro)  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
 **PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  
