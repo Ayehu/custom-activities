@@ -1,4 +1,4 @@
-## GCloudCreateDisk - Create an image in Google Cloud.
+## GCloudCreateDisk - Create a disk in Google Cloud.
 
 Remark - To create a disk in Google Cloud you need to set-up a new Service Account at https://cloud.google.com. Check this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html).  
 
