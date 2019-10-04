@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "RemoveVMSnapshot",
-    "description": "Deletes a virtual machine checkpoint.",
+    "name": "HyperVRestoreVMSnapshot",
+    "description": "Restores a virtual machine checkpoint.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -29,50 +29,31 @@
           "required": true
         },
         {
-          "key": "Name",
-          "label": "Checkpoint Name",
+          "key": "Snapshot",
+          "label": "Snapshot Name",
           "baseType": "control",
-          "labelKey": "Name",
+          "labelKey": "Snapshot",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
           "required": true
         },
         {
-          "key": "IncludeAllChildSnapshots",
-          "label": "Include Child",
-          "baseType": "control",
-          "labelKey": "IncludeAllChildSnapshots",
-          "controlType": "autocomplete",
-          "value": "false",
-          "required": true,
-          "controlOptions": [
-            {
-              "key": "True",
-              "value": "true"
-            },
-            {
-              "key": "False",
-              "value": "false"
-            }
-          ]
-        },
-        {
           "key": "AsJob",
-          "label": "As Job",
+          "label": "Run As Job",
           "baseType": "control",
           "labelKey": "AsJob",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
-              "value": "true"
+              "key": "Yes",
+              "value": "Yes"
             },
             {
-              "key": "False",
-              "value": "false"
+              "key": "No",
+              "value": "No"
             }
           ]
         }

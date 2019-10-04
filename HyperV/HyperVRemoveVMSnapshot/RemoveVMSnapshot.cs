@@ -17,24 +17,27 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Password = null;
 
 
+        public string Name = null;
         public string VMName = null;
-        public string Snapshot = null;
+
         public string AsJob = null;
+        public string IncludeAllChildSnapshots = null;
 
 
-        private Dictionary<string, object> CreateParameters()
+        private Dictionary<string, string> CreateParameters()
         {
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("Name", Name);
             parameters.Add("VMName", VMName);
-            parameters.Add("Name", Snapshot);
-            parameters.Add("Confirm", false);
-            if (AsJob == "true")
+            if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
+            if (IncludeAllChildSnapshots == "Yes")
+                parameters.Add("IncludeAllChildSnapshots", null);
             return parameters;
         }
         public ICustomActivityResult Execute()
         {
-            string command = "Restore-VMSnapshot";
+            string command = "Remove-VMSnapshot";
             using (RemotePowershell rp = new RemotePowershell(UserName, Password, HostName))
             {
                 PowerShell ps = rp.powerShell;

@@ -17,25 +17,24 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Password = null;
 
 
-        public string Name = null;
-        public string SnapshotName = null;
-
+        public string VMName = null;
+        public string Snapshot = null;
         public string AsJob = null;
 
 
-        private Dictionary<string, string> CreateParameters()
+        private Dictionary<string, object> CreateParameters()
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("Name", Name);
-            if (!string.IsNullOrEmpty(SnapshotName))
-                parameters.Add("SnapshotName", SnapshotName);
-            if (AsJob == "true")
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("VMName", VMName);
+            parameters.Add("Name", Snapshot);
+            parameters.Add("Confirm", false);
+            if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
             return parameters;
         }
         public ICustomActivityResult Execute()
         {
-            string command = "Checkpoint-VM";
+            string command = "Restore-VMSnapshot";
             using (RemotePowershell rp = new RemotePowershell(UserName, Password, HostName))
             {
                 PowerShell ps = rp.powerShell;

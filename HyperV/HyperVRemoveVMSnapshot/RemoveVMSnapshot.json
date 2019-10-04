@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "DisableSCVMHost",
-    "description": "Places a virtual machine host into maintenance mode.",
+    "name": "HyperVRemoveVMSnapshot",
+    "description": "Deletes a virtual machine checkpoint.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -18,61 +18,61 @@
           "required": false,
           "controOptions": []
         },
-        {
-          "key": "JobVariable",
-          "label": "Job Variable",
+		{
+          "key": "VMName",
+          "label": "VM Name",
           "baseType": "control",
-          "labelKey": "PROTipID",
+          "labelKey": "VMName",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         },
         {
-          "key": "PROTipID",
-          "label": "PRO Tip ID",
+          "key": "Name",
+          "label": "Checkpoint Name",
           "baseType": "control",
-          "labelKey": "PROTipID",
+          "labelKey": "Name",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         },
         {
-          "key": "MoveWithinCluster",
-          "label": "Within Cluster",
+          "key": "IncludeAllChildSnapshots",
+          "label": "Include Child",
           "baseType": "control",
-          "labelKey": "MoveWithinCluster",
+          "labelKey": "IncludeAllChildSnapshots",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
-              "value": "true"
+              "key": "Yes",
+              "value": "Yes"
             },
             {
-              "key": "False",
-              "value": "false"
+              "key": "Yes",
+              "value": "No"
             }
           ]
         },
         {
-          "key": "RunAsynchronously",
-          "label": "Run Async",
+          "key": "AsJob",
+          "label": "Run As Job",
           "baseType": "control",
-          "labelKey": "RunAsynchronously",
+          "labelKey": "AsJob",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
-              "value": "true"
+              "key": "Yes",
+              "value": "Yes"
             },
             {
-              "key": "False",
-              "value": "false"
+              "key": "Yes",
+              "value": "No"
             }
           ]
         }

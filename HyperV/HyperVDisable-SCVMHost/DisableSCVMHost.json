@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "EnableSCVMHost",
-    "description": "Restores a virtual machine host in maintenance mode to full service.",
+    "name": "HyperVDisableSCVMHost",
+    "description": "Places a virtual machine host into maintenance mode.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -39,21 +39,40 @@
           "required": false
         },
         {
+          "key": "MoveWithinCluster",
+          "label": "Within Cluster",
+          "baseType": "control",
+          "labelKey": "MoveWithinCluster",
+          "controlType": "autocomplete",
+          "value": "No",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "Yes",
+              "value": "Yes"
+            },
+            {
+              "key": "No",
+              "value": "No"
+            }
+          ]
+        },
+        {
           "key": "RunAsynchronously",
           "label": "Run Async",
           "baseType": "control",
           "labelKey": "RunAsynchronously",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
-              "value": "true"
+              "key": "Yes",
+              "value": "Yes"
             },
             {
-              "key": "False",
-              "value": "false"
+              "key": "No",
+              "value": "No"
             }
           ]
         }

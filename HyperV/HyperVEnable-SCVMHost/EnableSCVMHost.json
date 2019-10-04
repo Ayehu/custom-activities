@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "CheckpointVM",
-    "description": "Creates a checkpoint of a virtual machine. ",
+    "name": "HyperVEnableSCVMHost",
+    "description": "Restores a virtual machine host in maintenance mode to full service.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -19,41 +19,41 @@
           "controOptions": []
         },
         {
-          "key": "Name",
-          "label": "VM Name",
+          "key": "JobVariable",
+          "label": "Job Variable",
           "baseType": "control",
-          "labelKey": "Name",
-          "controlType": "textbox",
-          "value": "",
-          "styleClass": null,
-          "required": true
-        },
-        {
-          "key": "SnapshotName",
-          "label": "Snapshot Name",
-          "baseType": "control",
-          "labelKey": "SnapshotName",
+          "labelKey": "PROTipID",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
           "required": false
         },
         {
-          "key": "AsJob",
-          "label": "As Job",
+          "key": "PROTipID",
+          "label": "PRO Tip ID",
           "baseType": "control",
-          "labelKey": "AsJob",
+          "labelKey": "PROTipID",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "RunAsynchronously",
+          "label": "Run Async",
+          "baseType": "control",
+          "labelKey": "RunAsynchronously",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
-              "value": "true"
+              "key": "Yes",
+              "value": "Yes"
             },
             {
-              "key": "False",
-              "value": "false"
+              "key": "No",
+              "value": "No"
             }
           ]
         }

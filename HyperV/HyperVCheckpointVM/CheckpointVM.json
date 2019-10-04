@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "RestoreVMSnapshot",
-    "description": "Restores a virtual machine checkpoint.",
+    "name": "HyperVCheckpointVM",
+    "description": "Creates a checkpoint of a virtual machine. ",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -18,42 +18,42 @@
           "required": false,
           "controOptions": []
         },
-		{
-          "key": "VMName",
+        {
+          "key": "Name",
           "label": "VM Name",
           "baseType": "control",
-          "labelKey": "VMName",
+          "labelKey": "Name",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
           "required": true
         },
         {
-          "key": "Snapshot",
+          "key": "SnapshotName",
           "label": "Snapshot Name",
           "baseType": "control",
-          "labelKey": "Snapshot",
+          "labelKey": "SnapshotName",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": true
+          "required": false
         },
         {
           "key": "AsJob",
-          "label": "As Job",
+          "label": "Run As Job",
           "baseType": "control",
           "labelKey": "AsJob",
           "controlType": "autocomplete",
-          "value": "false",
+          "value": "No",
           "required": true,
           "controlOptions": [
             {
-              "key": "True",
-              "value": "true"
+              "key": "Yes",
+              "value": "Yes"
             },
             {
-              "key": "False",
-              "value": "false"
+              "key": "No",
+              "value": "No"
             }
           ]
         }
