@@ -1,6 +1,6 @@
-## GCloudListImages - List all images in Google Cloud.
+## GCloudResizeDisk - Resize a disk in Google Cloud.
 
-Remark - To list all images in Google Cloud you need to set-up a new Service Account at https://cloud.google.com. Check this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html).  
+Remark - To resize a disk in Google Cloud you need to set-up a new Service Account at https://cloud.google.com. Check this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html).  
 
 ##### DLL's to reference
 Google.Apis.Auth.dll  
@@ -27,5 +27,9 @@ using System.Text;
 
 ### Mandatory fields when listing images:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
+**DiskName**			- Disk name to be resized  
+**NewSize**				- New disk size  
+**Region**				- Region which the disk is hosted (e.g., us-central1-a)  
+**Zone**				- Zone inside the region, usually a letter  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
 **PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  

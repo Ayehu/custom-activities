@@ -28,8 +28,8 @@ using System.Text;
 ### Mandatory fields when creating a snapshot:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **SnapshotName**		- Chosen snapshot name  
-**SourceDisk**			- Disk which the image will come from (e.g., zones/zone/disks/disk)  
+**SourceDisk**			- Disk name which the snapshot will come from  
 **Region**				- Region which the snapshot will be hosted (e.g., us-central1-a)  
 **Zone**				- Zone inside the region, usually a letter  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
-**PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  
+**PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen Service Account  
