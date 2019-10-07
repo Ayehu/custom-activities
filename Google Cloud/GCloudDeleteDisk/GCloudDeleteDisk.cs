@@ -1,44 +1,31 @@
 ﻿using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using System;
-using System.Collections.Generic;
 using Google.Apis.Services;
 using Google.Apis.Compute.v1;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Compute.v1.Data;
 using System.Threading.Tasks;
 using System.Text;
-using System.Data;
 
 namespace ActivitiesAyehu
 {
-    public class GCloudListImages : IActivity
+    public class GCloudDeleteDisk : IActivity
     {
         public string Project;
+        public string DiskName;
+        public string Region;
+        public string Zone;
         public string PrivateKey;
         public string ServiceAccountEmail;
 
 
         public ICustomActivityResult Execute()
         {
-            var result = ListImages();
+            var result = DeleteDisk();
 
-            var dataTable = new DataTable("Image List", "ImageList");
-            dataTable.Columns.Add("Id");
-            dataTable.Columns.Add("Name");
-            dataTable.Columns.Add("Disk size (Gb)");
-            dataTable.Columns.Add("Kind");
-            dataTable.Columns.Add("Description");
-            dataTable.Columns.Add("Family");
-            dataTable.Columns.Add("Status");
-            foreach (var img in result.Result)
-                dataTable.Rows.Add(img.Id, img.Name, img.DiskSizeGb, img.Kind,
-                    img.Description, img.Family, img.Status);
-
-            return this.GenerateActivityResult(dataTable);
+            return this.GenerateActivityResult(result.Result);
         }
 
-        private async Task<IList<Image>> ListImages()
+        private async Task<string> DeleteDisk()
         {
             ServiceAccountCredential credential = new ServiceAccountCredential(
                new ServiceAccountCredential.Initializer(ServiceAccountEmail)
@@ -49,16 +36,23 @@ namespace ActivitiesAyehu
             var cs = new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
-                ApplicationName = "GCloud Delete Instance"
+                ApplicationName = "GCloud Delete Disk"
             };
 
             var t = new ComputeService(cs);
 
-            var request = t.Images.List(Project);
+            var request = t.Disks.Delete(Project, Region + "-" + Zone, DiskName);
 
             var response = request.Execute();
 
-            return response.Items;
+            if (response.HttpErrorStatusCode != null)
+            {
+                var errorStr = new StringBuilder();
+                foreach (var error in response.Error.Errors)
+                    errorStr.AppendLine(error.Code + " - " + error.Message);
+                return errorStr.ToString();
+            }
+            else return "Success";
         }
     }
 }
