@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "Google List all Images",
-    "description": "List images in the Google Cloud",
+    "description": "Resize disk in the Google Cloud",
     "Timeout": null,
     "class": [],
     "rootSettings": {
