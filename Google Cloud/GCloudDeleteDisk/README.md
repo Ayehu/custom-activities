@@ -25,7 +25,7 @@ using Google.Apis.Compute.v1.Data;
 using System.Threading.Tasks;  
 using System.Text;  
 
-### Mandatory fields when deleting an image:
+### Mandatory fields when deleting a disk:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **DiskName**			- Disk name to be deleted  
 **Region**				- Region which the disk is hosted (e.g., us-central1-a)  
