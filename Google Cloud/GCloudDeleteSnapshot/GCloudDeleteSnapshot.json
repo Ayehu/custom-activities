@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Google Delete Snapshot",
+    "description": "Delete a Snapshot in the Google Cloud",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Project",
+          "label": "Project Name",
+          "labelKey": "PROJECT",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SnapshotName",
+          "label": "Snapshot Name",
+          "labelKey": "SNAPSHOT_NAME",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PrivateKey",
+          "label": "Private Key",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ServiceAccountEmail",
+          "label": "Serv. Accnt E-mail",
+          "labelKey": "SERVICE_ACCOUNT_EMAIL",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

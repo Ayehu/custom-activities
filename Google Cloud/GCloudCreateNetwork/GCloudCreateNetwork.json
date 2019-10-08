@@ -1,0 +1,73 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Google Create Network",
+    "description": "Create network in the Google Cloud",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Project",
+          "label": "Project Name",
+          "labelKey": "PROJECT",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "NetworkName",
+          "label": "Network Name",
+          "labelKey": "NETWORK_NAME",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "RoutingMode",
+          "label": "Routing Mode",
+          "labelKey": "NEW_SIZE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "REGIONAL",
+              "value": "REGIONAL"
+            },
+            {
+              "key": "GLOBAL",
+              "value": "GLOBAL"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PrivateKey",
+          "label": "Private Key",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ServiceAccountEmail",
+          "label": "Serv. Accnt E-mail",
+          "labelKey": "SERVICE_ACCOUNT_EMAIL",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
