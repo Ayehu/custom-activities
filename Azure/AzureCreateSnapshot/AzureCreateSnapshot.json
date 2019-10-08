@@ -1,7 +1,7 @@
 {
   "data": {
     "name": "Azure create snapshot",
-    "description": "[Azure] Create a snapshot on azure.",
+    "description": "Create a snapshot on azure.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {

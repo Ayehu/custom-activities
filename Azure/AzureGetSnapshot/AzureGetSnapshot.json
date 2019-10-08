@@ -1,7 +1,7 @@
 {
   "data": {
-    "name": "Azure delete snapshot",
-    "description": "[Azure] Delete a item snapshot on azure.",
+    "name": "Azure get snapshot",
+    "description": "Get information of item snapshot on azure.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {

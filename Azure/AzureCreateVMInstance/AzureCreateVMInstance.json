@@ -3,7 +3,7 @@
   "data": {
     "name": "Azure Create VM",
     "description": "Create new Azure Virtual Machine",
-    "Timeout": "00:59:00",
+    "Timeout": "00:15:00",
     "class": [],
     "rootSettings": {
       "isCollapse": false,

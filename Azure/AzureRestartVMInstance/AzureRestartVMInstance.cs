@@ -48,7 +48,10 @@ namespace Ayehu.Sdk.ActivityCreation
             var azure = this.GetAzure();
             var subscription = azure.GetCurrentSubscription();
             var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
-
+			
+			if (vm == null)
+                throw new Exception(string.Format("The virtual machine {0} was not found", vmName));
+			
             vm.Restart();
 
             dt.Rows.Add("Success");

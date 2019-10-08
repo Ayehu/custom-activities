@@ -96,7 +96,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 var location = Region.USEast;
                 resourceGroup = azure.ResourceGroups
                     .Define(vmGroupName)
-                    .WithRegion(Region.USEast)
+                    .WithRegion(location)
                     .Create();
 
                 var availabilitySet = azure.AvailabilitySets.Define("AVSet")
