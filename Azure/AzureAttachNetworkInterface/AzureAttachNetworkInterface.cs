@@ -9,7 +9,7 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureDetachNetworkInterface : IActivity
+    public class AzureAttachNetworkInterface : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -48,15 +48,14 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             var azure = GetAzure();
             var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
-            string networkId = azure.NetworkInterfaces.List().Where(n => n.Name.ToLower() == networkName.ToLower()).FirstOrDefault().Id;
+            var network = azure.NetworkInterfaces.List().Where(n => n.Name.ToLower() == networkName.ToLower()).FirstOrDefault();
 
             if (vm == null)
                 throw new Exception(string.Format("The virtual machine {0} was not found", vmName));
 
             vm.Deallocate();
-            vm.Update().WithoutNetworkInterface(networkId).Apply();
+            vm.Update().WithExistingSecondaryNetworkInterface(network).Apply();
             vm.Start();
-
             return this.GenerateActivityResult(GetActivityResult);
         }
 

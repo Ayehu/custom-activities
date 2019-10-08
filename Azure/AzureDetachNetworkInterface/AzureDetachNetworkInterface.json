@@ -3,7 +3,7 @@
   "data": {
     "name": "AzureDetachNetworkInterface",
     "description": "Azure Detach a secondary Network Interface from a Virtual Machine",
-    "Timeout": "00:59:00",
+    "Timeout": "00:15:00",
     "class": [],
     "rootSettings": {
       "isCollapse": false,

@@ -55,7 +55,7 @@ namespace Ayehu.Sdk.ActivityCreation
             if (string.IsNullOrEmpty(diskName.Trim()))
                 throw new Exception("The disk name can't be empty");
 
-            var disk = vm.StorageProfile.DataDisks.Where(d => d.Name.ToLower() == diskName).FirstOrDefault();
+            var disk = vm.StorageProfile.DataDisks.Where(d => d.Name.ToLower() == diskName.ToLower()).FirstOrDefault();
 
             if (disk == null)
                 throw new Exception(string.Format("Disk '{0}' was not found.", diskName));

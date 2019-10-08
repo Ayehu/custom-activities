@@ -3,7 +3,7 @@
   "data": {
     "name": "AzureAttachNetworkInterface",
     "description": "Azure Attach a secondary Network Interface to a Virtual Machine",
-    "Timeout": "00:59:00",
+    "Timeout": "00:15:00",
     "class": [],
     "rootSettings": {
       "isCollapse": false,
