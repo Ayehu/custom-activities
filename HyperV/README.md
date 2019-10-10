@@ -13,3 +13,4 @@
 
 **RemoveVMSnapshot** - Activity to Deletes a virtual machine checkpoint. 
 
+**HyperVRemoveVM** - Activity to Deletes a virtual machine.
