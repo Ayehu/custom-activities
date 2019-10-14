@@ -18,3 +18,5 @@
 **HyperVModifyCPU** - Activity to configures settings for the virtual processors of a virtual machine. 
 
 **HyperVMountISO** - Activity to Configures a virtual DVD drive.
+
+**HyperVMigrateStorage** - Moves the storage of a virtual machine.
