@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "HyperVRemoveVM",
-    "description": "Deletes a virtual machine ",
+    "name": "HyperVRemoveDisk",
+    "description": "Deletes a hard disk drive from a virtual machine.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {

@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "HyperVRemoveVM",
-    "description": "Deletes a virtual machine ",
+    "name": "HyperVMountISO",
+    "description": "Activity to Configures a virtual DVD drive.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
