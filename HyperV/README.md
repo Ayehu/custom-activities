@@ -20,3 +20,6 @@
 **HyperVMountISO** - Activity to Configures a virtual DVD drive.
 
 **HyperVMigrateStorage** - Moves the storage of a virtual machine.
+
+**HyperVRemoveDisk** -Deletes a hard disk drive from a virtual machine.
+
