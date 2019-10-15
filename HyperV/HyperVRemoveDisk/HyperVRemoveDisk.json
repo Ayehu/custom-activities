@@ -29,16 +29,6 @@
           "required": true
         },
         {
-          "key": "VMHardDiskDrive",
-          "label": "HD Drive",
-          "baseType": "control",
-          "labelKey": "VMHardDiskDrive",
-          "controlType": "textbox",
-          "value": "",
-          "styleClass": null,
-          "required": true
-        },
-        {
           "key": "ControllerLocation",
           "label": "Controller Location",
           "baseType": "control",
@@ -46,7 +36,7 @@
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         }
         ,
         {
@@ -57,7 +47,7 @@
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         }
         ,
         {
@@ -67,11 +57,11 @@
           "labelKey": "ControllerType",
           "controlType": "autocomplete",
           "value": "",
-          "required": false,
+          "required": true,
           "controlOptions": [
             {
               "key": "IDE",
-              "value": "IED"
+              "value": "IDE"
             },
             {
               "key": "SCSI",

@@ -18,7 +18,6 @@ namespace Ayehu.Sdk.ActivityCreation
 
 
         public string VMName = null;
-        public string VMHardDiskDrive    = null;
         public string ControllerLocation     = null;
         public string ControllerNumber     = null;
         public string ControllerType     = null;
@@ -29,13 +28,12 @@ namespace Ayehu.Sdk.ActivityCreation
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("VMName", VMName);
             parameters.Add("Confirm", false);
-            parameters.Add("VMHardDiskDrive", VMHardDiskDrive);
-            if(!string.IsNullOrWhiteSpace("ControllerLocation"))
-                parameters.Add("ControllerLocation",ControllerLocation);
-            if(!string.IsNullOrWhiteSpace("ControllerNumber "))
-                parameters.Add("ControllerNumber",ControllerNumber);
-            if(!string.IsNullOrWhiteSpace("ControllerType"))
-                parameters.Add("ControllerType",ControllerType);
+            parameters.Add("ControllerLocation",ControllerLocation);
+            parameters.Add("ControllerNumber",ControllerNumber);
+
+            var type = (ControllerType == "IDE" ? Microsoft.HyperV.PowerShell.ControllerType.IDE : Microsoft.HyperV.PowerShell.ControllerType.SCSI);
+
+            parameters.Add("ControllerType",type);
            
             return parameters;
         }
