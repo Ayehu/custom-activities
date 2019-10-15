@@ -2,7 +2,7 @@
   "data": {
     "name": "HyperVMigrateStorage",
     "description": "Moves the storage of a virtual machine.",
-    "Timeout": "00:01:00",
+    "Timeout": "00:10:00",
     "class": [],
     "rootSettings": {
       "isCollapse": false,

@@ -17,18 +17,18 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Password = null;
 
 
-        public string VMName = null;
+        public string Name = null;
 
         public string AsJob = null;
         public string IncludeAllChildSnapshots = null;
 
 
-        private Dictionary<string, string> CreateParameters()
+        private Dictionary<string, object> CreateParameters()
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("Name", VMName);
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("Name", Name);
             parameters.Add("Confirm", false);
-            parameters.Add("Force", false);
+            parameters.Add("Force", true);
             if (AsJob == "Yes")
                 parameters.Add("AsJob", true);
             return parameters;

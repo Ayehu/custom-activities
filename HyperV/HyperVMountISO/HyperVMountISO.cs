@@ -23,9 +23,9 @@ namespace Ayehu.Sdk.ActivityCreation
         public string ControllerLocation  = null;
 
 
-        private Dictionary<string, string> CreateParameters()
+        private Dictionary<string, object> CreateParameters()
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("VMName", VMName);
 
             parameters.Add("Path", Path);
