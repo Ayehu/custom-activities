@@ -5,6 +5,8 @@
 
 #### Please Copy System.Management.Automation.dll to the following folder: c:\Libs\. The dll is located on "C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll"
  
+#### Please Copy Microsoft.HyperV.Powershell.dll to the following folder: c:\Libs\. The dll is located on "C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.HyperV.PowerShell\v4.0_10.0.0.0__31bf3856ad364e35\"
+
 **HyperVVLan** - Activity to configure the virtual LAN settings for Virtual Machine on Hyper-V.
 
 **CheckpointVM** - Activity to Creates a checkpoint of a virtual machine.
