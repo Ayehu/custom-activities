@@ -1,5 +1,5 @@
 ﻿
-### RestoreVMSnapshot - Activity to Restores a virtual machine checkpoint.
+### RestoreVMSnapshot - Activity to restore a virtual machine checkpoint.
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**

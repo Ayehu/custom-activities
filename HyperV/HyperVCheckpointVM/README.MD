@@ -1,5 +1,5 @@
 ﻿
-### CheckpointVM - Activity to Creates a checkpoint of a virtual machine.
+### CheckpointVM - Activity to create a checkpoint of a virtual machine.
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**
