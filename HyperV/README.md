@@ -9,17 +9,17 @@
 
 **HyperVVLan** - Activity to configure the virtual LAN settings for Virtual Machine on Hyper-V.
 
-**CheckpointVM** - Activity to Creates a checkpoint of a virtual machine.
+**CheckpointVM** - Activity to create a checkpoint of a virtual machine.
 
-**RestoreVMSnapshot** - Activity to Restores a virtual machine checkpoint.
+**RestoreVMSnapshot** - Activity to restore a virtual machine checkpoint.
 
-**RemoveVMSnapshot** - Activity to Deletes a virtual machine checkpoint. 
+**RemoveVMSnapshot** - Activity to delete a virtual machine checkpoint. 
 
-**HyperVRemoveVM** - Activity to Deletes a virtual machine.
+**HyperVRemoveVM** - Activity to delete a virtual machine.
 
 **HyperVModifyCPU** - Activity to configures settings for the virtual processors of a virtual machine. 
 
-**HyperVMountISO** - Activity to Configures a virtual DVD drive.
+**HyperVMountISO** - Activity to configure a virtual DVD drive.
 
 **HyperVMigrateStorage** - Moves the storage of a virtual machine.
 

@@ -1,5 +1,5 @@
 ﻿
-### RemoveVMSnapshot - Activity to Deletes a virtual machine checkpoint. 
+### RemoveVMSnapshot - Activity to delete a virtual machine checkpoint. 
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**
