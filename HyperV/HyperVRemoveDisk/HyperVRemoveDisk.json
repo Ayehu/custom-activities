@@ -1,0 +1,88 @@
+﻿{
+  "data": {
+    "name": "HyperVRemoveDisk",
+    "description": "Deletes a hard disk drive from a virtual machine.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "VMName",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "VMName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "VMHardDiskDrive",
+          "label": "HD Drive",
+          "baseType": "control",
+          "labelKey": "VMHardDiskDrive",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "ControllerLocation",
+          "label": "Controller Location",
+          "baseType": "control",
+          "labelKey": "ControllerLocation",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        }
+        ,
+        {
+          "key": "ControllerNumber",
+          "label": "Controller Number",
+          "baseType": "control",
+          "labelKey": "ControllerNumber",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        }
+        ,
+        {
+          "key": "ControllerType",
+          "label": "ControllerType",
+          "baseType": "control",
+          "labelKey": "ControllerType",
+          "controlType": "autocomplete",
+          "value": "",
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "IDE",
+              "value": "IED"
+            },
+            {
+              "key": "SCSI",
+              "value": "SCSI"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
