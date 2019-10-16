@@ -4,6 +4,6 @@ If you have a custom Activity to share, feel free to send us a Pull Request and 
 
 For information on importing and exporting custom activities, please refer to the [Activity Designer Overview](https://support.ayehu.com/hc/en-us/articles/360036178974-Activity-Designer-Overview).
 
-For information on the front-end and back-end code of the custom activities, please refer to the [Activity Designer Technical Documentation](https://support.ayehu.com/hc/en-us/articles/360036188734-Activity-Designer-Technical-Documentation).
+For information on how to write code for the custom activities, please refer to the [Activity Designer Technical Documentation](https://support.ayehu.com/hc/en-us/articles/360036188734-Activity-Designer-Technical-Documentation).
 
 For information on how to become an Ayehu Certified IT Automation Developer, please refer to the [Ayehu Automation Academy](https://ayehu.com/resources/ayehu-automation-academy%20-/).
