@@ -23,4 +23,4 @@ System.Data;
 **ControllerLocation** - Specifies the IDE controller location of the DVD drives to be configured. If not specified, DVD drives in all controller locations are configured.
 ### Powershell command document reference.
 
-[Set-VMDvdDrive]https://www.notion.so/insk/VM-Mount-ISO-dd26ad818da242968a7859c8590c95ba#e3fa9318f26c4ce0964bc6b04a383644)
+[Set-VMDvdDrive](https://www.notion.so/insk/VM-Mount-ISO-dd26ad818da242968a7859c8590c95ba#e3fa9318f26c4ce0964bc6b04a383644)
