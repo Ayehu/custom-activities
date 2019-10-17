@@ -1,0 +1,56 @@
+﻿{
+  "data": {
+    "name": "HyperVShutdownVM",
+    "description": "Shuts down a virtual machine.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "Name",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "Name",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "AsJob",
+          "label": "Run As Job",
+          "baseType": "control",
+          "labelKey": "AsJob",
+          "controlType": "autocomplete",
+          "value": "No",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "Yes",
+              "value": "Yes"
+            },
+            {
+              "key": "No",
+              "value": "No"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
