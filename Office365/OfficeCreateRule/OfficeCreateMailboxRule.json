@@ -4,9 +4,7 @@
     "name": "Create rule",
     "description": "Create Office365 mailbox rule for a specific user",
     "Timeout": null,
-    "class": [
-
-    ],
+    "class": [],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
@@ -28,7 +26,7 @@
           "baseType": "control",
           "controlType": "textbox"
         },
-		{
+        {
           "value": "",
           "required": true,
           "key": "forwardEmail",
@@ -46,35 +44,35 @@
           "baseType": "control",
           "controlType": "textarea"
         },
-		{
-          "value":"",
-          "required":true,
-          "key":"action",
-          "disabled":false,
-          "styleClass":"",
-          "label":"Action",
-          "labelKey":"USER_UID_VALUE",
-          "baseType":"control",
-          "controlType":"autocomplete",
-          "controlOptions":[
+        {
+          "value": "",
+          "required": true,
+          "key": "action",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Action",
+          "labelKey": "USER_UID_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
             {
-               "key":"forwardAction",
-               "value":"Forward"
+              "key": "forwardAction",
+              "value": "Forward"
             },
             {
-               "key":"deleteAction",
-               "value":"Delete"
+              "key": "deleteAction",
+              "value": "Delete"
             }
           ]
         },
-		{  
-          "value":"",
-          "required":true,
-          "key":"userId",
-          "label":"User Id",
-          "labelKey":"USER_ID_VALUE",
-          "baseType":"control",
-          "controlType":"textbox"
+        {
+          "value": "",
+          "required": true,
+          "key": "userEmail",
+          "label": "User Email",
+          "labelKey": "USER_EMAIL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
         },
         {
           "value": "",

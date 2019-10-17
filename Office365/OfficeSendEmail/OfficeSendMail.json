@@ -1,0 +1,81 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "OfficeSendMail",
+    "description": "Send an email on behalf of a Office365 user",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "subject",
+          "label": "Subject",
+          "labelKey": "SUBJECT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "fromEmail",
+          "label": "From Email",
+          "labelKey": "FROM_EMAIL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "toEmail",
+          "label": "To Email",
+          "labelKey": "TO_EMAIL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "messageBody",
+          "label": "Message",
+          "labelKey": "MESSAGE_BODY_VALUE",
+          "baseType": "control",
+          "controlType": "textarea"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "appId",
+          "label": "Application Id",
+          "labelKey": "APPID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant Id",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secret",
+          "label": "Secret",
+          "labelKey": "SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
