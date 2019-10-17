@@ -25,3 +25,8 @@
 
 **HyperVRemoveDisk** -Deletes a hard disk drive from a virtual machine.
 
+**HyperVVMPowerState** - Activity to get the power state of a virtual machine from one Hyper-V hosts.
+
+**HyperVShutdownVM** - Activity to shut down a virtual machine.
+
+**HyperVRenameVM** - Activity to rename a virtual machine.

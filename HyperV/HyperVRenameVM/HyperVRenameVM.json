@@ -1,0 +1,47 @@
+﻿{
+  "data": {
+    "name": "HyperVRenameVM",
+    "description": "Activity to rename a virtual machine",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "Name",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "Name",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "NewName",
+          "label": "New Name",
+          "baseType": "control",
+          "labelKey": "NewName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}

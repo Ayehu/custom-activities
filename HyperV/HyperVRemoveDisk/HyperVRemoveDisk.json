@@ -30,7 +30,7 @@
         },
         {
           "key": "ControllerLocation",
-          "label": "Controller Location",
+          "label": "C Location",
           "baseType": "control",
           "labelKey": "ControllerLocation",
           "controlType": "textbox",
@@ -41,7 +41,7 @@
         ,
         {
           "key": "ControllerNumber",
-          "label": "Controller Number",
+          "label": "C Number",
           "baseType": "control",
           "labelKey": "ControllerNumber",
           "controlType": "textbox",
