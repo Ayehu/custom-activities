@@ -1,0 +1,37 @@
+﻿{
+  "data": {
+    "name": "HyperVVMPowerState",
+    "description": "Gets the power state of a virtual machine from one Hyper-V hosts.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "VMName",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "VMName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
