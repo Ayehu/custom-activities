@@ -19,8 +19,8 @@ System.Data;
 **User Name** - Specifies the username of windows account on Hyper-V server with permission to run powershell command.
 **VM Name** - Specifies the name of the target virtual machine.
 **VMHardDiskDrive** - Specifies the virtual hard disk drive to be deleted.
-**ControllerLocation** - Specifies the number of the location on the controller at which the virtual hard disk drive is to be deleted. If not specified, the number of the first available location on the controller is used.
-**ControllerNumber** - Specifies the number of the controller from which the virtual hard disk drive is to be deleted. If not specified, the first controller on which the specified ControllerLocation is available is used.
+**ControllerLocation(C Location)** - Specifies the number of the location on the controller at which the virtual hard disk drive is to be deleted. If not specified, the number of the first available location on the controller is used.
+**ControllerNumber(C Number)** - Specifies the number of the controller from which the virtual hard disk drive is to be deleted. If not specified, the first controller on which the specified ControllerLocation is available is used.
 ### Powershell command document reference.
 **ControllerType** - Specifies the type of the controller where the virtual hard disk is to be deleted. Allowed values are IDE and SCSI.
 
