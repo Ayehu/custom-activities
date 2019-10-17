@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Linq;
 using System.Collections.Generic;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
@@ -12,7 +13,7 @@ namespace Ayehu.Sdk.ActivityCreation
     /// <summary>
     /// Class to create emailbox rules 
     /// </summary>
-    public class OfficeCreateMailRule : IActivity
+    public class OfficeCreateMailboxRule : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -34,9 +35,9 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// GUID that identifies the current user or can be the UserPrincipal Name.
+        /// User's email to create the rule
         /// </summary>
-        public string userId;
+        public string userEmail;
 
         /// <summary>
         /// Rule name
@@ -75,7 +76,7 @@ namespace Ayehu.Sdk.ActivityCreation
             dt.Rows.Add("Success");
 
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var user = client.Users[userId];
+            var user = client.Users[GetUserId(client)];
 
             MessageRulePredicates condition = new MessageRulePredicates();
             MessageRuleActions actions = new MessageRuleActions();
@@ -145,6 +146,21 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 UsageLocation = "US"
             }).Wait();
+        }
+
+        private string GetUserId(GraphServiceClient client)
+        {
+            var users = client.Users.Request().GetAsync().Result.ToList();
+
+            foreach (var user in users)
+            {
+                if (user.Mail != null && user.Mail.ToLower() == userEmail.ToLower())
+                {
+                    return user.Id;
+                }
+            }
+
+            return string.Empty;
         }
 
         private ClientCredentialProvider GetProvider()

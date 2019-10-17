@@ -1,0 +1,67 @@
+﻿{
+  "data": {
+    "name": "HyperVMountISO",
+    "description": "Activity to Configures a virtual DVD drive.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "VMName",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "VMName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Path",
+          "label": "Path",
+          "baseType": "control",
+          "labelKey": "Path",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "ControllerNumber",
+          "label": "Controller Number ",
+          "baseType": "control",
+          "labelKey": "ControllerNumber",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "ControllerLocation",
+          "label": "Controller Location",
+          "baseType": "control",
+          "labelKey": "ControllerLocation",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}

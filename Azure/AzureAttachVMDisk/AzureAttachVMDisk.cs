@@ -44,7 +44,7 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string diskName;
 
-        ICustomActivityResult IActivity.Execute()
+        public ICustomActivityResult Execute()
         {
             var azure = GetAzure();
             var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
@@ -55,14 +55,12 @@ namespace Ayehu.Sdk.ActivityCreation
             if (string.IsNullOrEmpty(diskName.Trim()))
                 throw new Exception("The disk name can't be empty");
 
-            var disk = vm.StorageProfile.DataDisks.Where(d => d.Name.ToLower() == diskName.ToLower()).FirstOrDefault();
+            var disk = azure.Disks.List().Where(d => d.Name.ToLower() == diskName.ToLower()).FirstOrDefault();
 
             if (disk == null)
                 throw new Exception(string.Format("Disk '{0}' was not found.", diskName));
 
-            vm.StorageProfile.DataDisks.Add(disk);
-            vm.StorageProfile.Validate();
-            vm.Update().Apply();
+            vm.Update().WithExistingDataDisk(disk).Apply();
             return this.GenerateActivityResult(GetActivityResult);
         }
 

@@ -1,37 +1,21 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureAttachVMDisk",
-    "description": "Azure Attach a Data Disk to a Virtual Machine",
-    "Timeout": "00:03:00",
-    "class": [],
+    "name": "OfficeRemoveGroup",
+    "description": "Delete Office365 mail group",
+    "Timeout": null,
+    "class": [
+
+    ],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
         {
           "value": "",
           "required": true,
-          "key": "vmName",
-          "label": "VM Name",
-          "labelKey": "VM_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "diskName",
-          "label": "Disk Name",
-          "labelKey": "DISK_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "subscriptionId",
-          "label": "Subscription Id",
-          "labelKey": "subscription_ID_VALUE",
+          "key": "groupName",
+          "label": "Group Name",
+          "labelKey": "GROUP_NAME_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },

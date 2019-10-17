@@ -94,31 +94,37 @@ namespace Ayehu.Sdk.ActivityCreation
                 InitImageVersion();
 
                 var location = Region.USEast;
-                resourceGroup = azure.ResourceGroups
-                    .Define(vmGroupName)
-                    .WithRegion(location)
-                    .Create();
 
-                var availabilitySet = azure.AvailabilitySets.Define("AVSet")
+                resourceGroup = azure.ResourceGroups.GetByName(vmGroupName);
+
+                if (resourceGroup == null)
+                {
+                    resourceGroup = azure.ResourceGroups
+                        .Define(vmGroupName)
+                        .WithRegion(location)
+                        .Create();
+                }
+
+                var availabilitySet = azure.AvailabilitySets.Define("AVSet-" + vmName)
                      .WithRegion(location)
                      .WithExistingResourceGroup(vmGroupName)
                      .WithSku(AvailabilitySetSkuTypes.Aligned)
                      .Create();
 
-                var publicIPAddress = azure.PublicIPAddresses.Define("PublicIP")
+                var publicIPAddress = azure.PublicIPAddresses.Define("PublicIP-" + vmName)
                     .WithRegion(location)
                     .WithExistingResourceGroup(vmGroupName)
                     .WithDynamicIP()
                     .Create();
 
-                var network = azure.Networks.Define("VNet")
+                var network = azure.Networks.Define("VNet-" + vmName)
                     .WithRegion(location)
                     .WithExistingResourceGroup(vmGroupName)
                     .WithAddressSpace("10.0.0.0/16")
                     .WithSubnet("Subnet", "10.0.0.0/24")
                     .Create();
 
-                var networkInterface = azure.NetworkInterfaces.Define("NIC")
+                var networkInterface = azure.NetworkInterfaces.Define("NIC-" + vmName)
                     .WithRegion(location)
                     .WithExistingResourceGroup(vmGroupName)
                     .WithExistingPrimaryNetwork(network)

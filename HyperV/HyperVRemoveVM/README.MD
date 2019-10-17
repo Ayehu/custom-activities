@@ -1,5 +1,6 @@
 ﻿
-### RestoreVMSnapshot - Activity to restore a virtual machine checkpoint.
+### HyperVRemoveVM - Activity to Deletes a virtual machine.
+
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**
@@ -18,9 +19,8 @@ System.Data;
 **User Name** - Specifies the username of windows account on Hyper-V server with permission to run powershell command.
 **Password** - Specifies the password of windows account.
 **VM Name** - Specifies the name of the target virtual machine.
-**Checkpoint Name** - Specifies the name of the checkpoint to be restored.
 **As Job** - Specifies to run the cmdlet as a background job.
 
 ### Powershell command document reference.
 
-[Restore-VMSnapshot](https://docs.microsoft.com/en-us/powershell/module/hyper-v/Restore-VMSnapshot?view=win10-ps)
+[Remove-VM](https://www.notion.so/insk/VM-Delete-HyperVRemoveVM-c572c070ffbd403a8167663f55565b1b#32286e7ac48b46beabc5475a7355c982)

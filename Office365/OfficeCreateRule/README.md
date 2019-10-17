@@ -1,4 +1,4 @@
-## OfficeCreateMailRule - Activity to create a new mailbox rule in Azure AD for Office365.
+## OfficeCreateMailboxRule - Activity to create a new mailbox rule in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
@@ -21,7 +21,7 @@ These fields should be sent when calling the API.
 
 ### Mandatory fields when creating a user:
 
-**userId**			  - GUID that identifies a user. (unique id) 
+**userEmail**		  - User's email to create the rule
 
 **ruleDisplayName**   - The rule name
 

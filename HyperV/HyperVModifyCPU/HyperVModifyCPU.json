@@ -1,0 +1,87 @@
+﻿{
+  "data": {
+    "name": "HyperVModifyCPU",
+    "description": "Configures settings for the virtual processors of a virtual machine. Settings are applied uniformly to all virtual processors belonging to the virtual machine.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "VMName",
+          "label": "VM Name",
+          "baseType": "control",
+          "labelKey": "VMName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Count",
+          "label": "Count",
+          "baseType": "control",
+          "labelKey": "Count",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Maximum",
+          "label": "Maximum",
+          "baseType": "control",
+          "labelKey": "Maximum",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "Reserve",
+          "label": "Reserve",
+          "baseType": "control",
+          "labelKey": "Reserve",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "RelativeWeight",
+          "label": "Relative Weight ",
+          "baseType": "control",
+          "labelKey": "RelativeWeight",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "ResourcePoolName",
+          "label": "Resource Pool",
+          "baseType": "control",
+          "labelKey": "ResourcePoolName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}

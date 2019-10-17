@@ -1,9 +1,9 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureAttachVMDisk",
-    "description": "Azure Attach a Data Disk to a Virtual Machine",
-    "Timeout": "00:03:00",
+    "name": "OfficeSendMail",
+    "description": "Send an email on behalf of a Office365 user",
+    "Timeout": null,
     "class": [],
     "rootSettings": {
       "isCollapse": false,
@@ -11,29 +11,38 @@
         {
           "value": "",
           "required": true,
-          "key": "vmName",
-          "label": "VM Name",
-          "labelKey": "VM_NAME_VALUE",
+          "key": "subject",
+          "label": "Subject",
+          "labelKey": "SUBJECT_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
           "required": true,
-          "key": "diskName",
-          "label": "Disk Name",
-          "labelKey": "DISK_NAME_VALUE",
+          "key": "fromEmail",
+          "label": "From Email",
+          "labelKey": "FROM_EMAIL_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
           "required": true,
-          "key": "subscriptionId",
-          "label": "Subscription Id",
-          "labelKey": "subscription_ID_VALUE",
+          "key": "toEmail",
+          "label": "To Email",
+          "labelKey": "TO_EMAIL_VALUE",
           "baseType": "control",
           "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "messageBody",
+          "label": "Message",
+          "labelKey": "MESSAGE_BODY_VALUE",
+          "baseType": "control",
+          "controlType": "textarea"
         },
         {
           "value": "",

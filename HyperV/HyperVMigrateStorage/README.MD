@@ -1,5 +1,6 @@
 ﻿
-### RestoreVMSnapshot - Activity to restore a virtual machine checkpoint.
+### HyperVMigrateStorage - Moves the storage of a virtual machine.
+
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**
@@ -16,11 +17,9 @@ System.Data;
 ### Mandatory fields when creating a checkpoint.
 **Host Name** - Specifies the Url or Ip address of Hyper-V server.
 **User Name** - Specifies the username of windows account on Hyper-V server with permission to run powershell command.
-**Password** - Specifies the password of windows account.
 **VM Name** - Specifies the name of the target virtual machine.
-**Checkpoint Name** - Specifies the name of the checkpoint to be restored.
-**As Job** - Specifies to run the cmdlet as a background job.
+**DestinationStoragePath** - Specifies a destination storage path to which all virtual machine storage is to be moved.
 
 ### Powershell command document reference.
 
-[Restore-VMSnapshot](https://docs.microsoft.com/en-us/powershell/module/hyper-v/Restore-VMSnapshot?view=win10-ps)
+[Move-VMStorage]https://www.notion.so/insk/Migrate-Storage-0ecb21379dc84234aa132fb942e22b4f#94b779c136d949d281eef6f0d323ca00
