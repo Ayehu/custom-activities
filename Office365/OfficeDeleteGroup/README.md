@@ -1,4 +1,4 @@
-## OfficeCreateGroup - Activity to delete a Office365 mail group.
+## OfficeDeleteGroup - Activity to delete a Office365 mail group.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
@@ -20,4 +20,4 @@ Secret
 These fields should be sent when calling the API.
 
 ### One of the below fields needs to be provided to delete a user:
-**groupName**           - The name of the mail group to delete
+**groupName**           - The name of the mail group to delete. It's case INSENSITIVE.

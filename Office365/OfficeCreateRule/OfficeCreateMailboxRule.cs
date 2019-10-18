@@ -75,11 +75,15 @@ namespace Ayehu.Sdk.ActivityCreation
             dt.Columns.Add("Result");
             dt.Rows.Add("Success");
 
-            GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var user = client.Users[GetUserId(client)];
-
             MessageRulePredicates condition = new MessageRulePredicates();
             MessageRuleActions actions = new MessageRuleActions();
+
+            GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
+            var user = client.Users[GetUserId(client)];
+            var rules = user.MailFolders["Inbox"].MessageRules.Request().GetAsync().Result;
+
+            if (rules.Where(r => r.DisplayName.ToLower() == ruleDisplayName.ToLower()).FirstOrDefault() != null)
+                throw new Exception(string.Format("Rule with name '{0}' already exist", ruleDisplayName));
 
             var messageRule = new MessageRule
             {
@@ -123,13 +127,11 @@ namespace Ayehu.Sdk.ActivityCreation
                 this.UpdateUser(user);
             }
 
-            int rules = user.MailFolders["inbox"].MessageRules.Request().GetAsync().Result.Count;
-
             messageRule.Conditions = condition;
             messageRule.Actions = actions;
             messageRule.Actions.StopProcessingRules =
             messageRule.IsEnabled = true;
-            messageRule.Sequence = rules + 1;
+            messageRule.Sequence = rules.Count + 1;
             
             user.MailFolders["Inbox"].MessageRules.Request().AddAsync(messageRule).Wait();
 

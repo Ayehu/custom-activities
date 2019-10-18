@@ -56,7 +56,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 }
                 else
                 {
-                    throw new Exception(string.Format("Mail rule with name '{0}' not found", ruleName));
+                    throw new Exception(string.Format("Mailbox rule with name '{0}' not found", ruleName));
                 }
             }
             else

@@ -23,4 +23,4 @@ These fields should be sent when calling the API.
 
 **userEmail**		  - User's email to create the rule 
 
-**ruleName**   		  - The rule name
+**ruleName**   		  - The rule name. It's case INSENSITIVE.

@@ -9,7 +9,7 @@ using Microsoft.Graph.Auth;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class OfficeRemoveGroup : IActivity
+    public class OfficeDeleteGroup : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -38,15 +38,18 @@ namespace Ayehu.Sdk.ActivityCreation
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            client.Groups.Request().GetAsync().Result.ToList().ForEach(g =>
+            var groups = client.Groups.Request().GetAsync().Result.ToList();
+            
+            foreach(var g in groups)
             {
                 if (g.DisplayName.ToLower() == groupName.ToLower()) 
                 {                    
                     client.Groups[g.Id].Request().DeleteAsync().Wait();
+                    return this.GenerateActivityResult(GetActivityResult);
                 }
-            });
+            };
 
-            return this.GenerateActivityResult(GetActivityResult);
+            throw new Exception(string.Format("Group with name '{0}' not found", groupName));
         }
 
         private ClientCredentialProvider GetProvider()
