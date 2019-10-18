@@ -29,18 +29,9 @@
         {
           "value": "",
           "required": true,
-          "key": "DockerUserName",
+          "key": "DockerUsername",
           "label": "Docker Username",
           "labelKey": "DOCKER_USERNAME",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "Tag",
-          "label": "Tag",
-          "labelKey": "TAG",
           "baseType": "control",
           "controlType": "textbox"
         },

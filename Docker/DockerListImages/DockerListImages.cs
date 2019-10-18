@@ -2,12 +2,6 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using System;
 using System.Collections.Generic;
-using Google.Apis.Services;
-using Google.Apis.Compute.v1;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Compute.v1.Data;
-using System.Threading.Tasks;
-using System.Text;
 using System.Data;
 using Docker.DotNet;
 using Docker.DotNet.Models;
@@ -29,8 +23,11 @@ namespace ActivitiesAyehu
             dataTable.Columns.Add("Size");
             dataTable.Columns.Add("Parent ID");
             foreach (var img in result)
-                dataTable.Rows.Add(img.ID, img.RepoTags[0], img.SharedSize, img.Size,
+                foreach (var tag in img.RepoTags)
+                {
+                    dataTable.Rows.Add(img.ID, tag, img.SharedSize, img.Size,
                     img.ParentID);
+                }
 
             return this.GenerateActivityResult(dataTable);
         }
@@ -42,7 +39,7 @@ namespace ActivitiesAyehu
                  .CreateClient();
 
             var response = client.Images.ListImagesAsync(
-                new Docker.DotNet.Models.ImagesListParameters());
+                new ImagesListParameters());
 
             response.Wait();
 

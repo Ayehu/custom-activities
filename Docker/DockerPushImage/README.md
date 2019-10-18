@@ -25,6 +25,5 @@ using Docker.DotNet.BasicAuth;
 ### Mandatory fields when pushing a Docker image:
 **RemoteDockerURI**		- URL from the machine that is running Docker application (e.g. http://54.164.40.64:4243)  
 **ImageName**			- Image name to be pushed  
-**DockerUserName**		- Docker hub username  
+**DockerUsername**		- Docker hub username  
 **DockerPassword**		- Docker hub password  
-**Tag**					- Tag name  

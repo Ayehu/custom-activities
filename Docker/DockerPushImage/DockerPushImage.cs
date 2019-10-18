@@ -1,10 +1,9 @@
 ﻿using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using System;
-using Docker.DotNet;
-using System.IO;
-using Docker.DotNet.BasicAuth;
-using Docker.DotNet.Models;
+using System.Net.Http;
+using System.Text;
+using System.Web;
 
 namespace ActivitiesAyehu
 {
@@ -12,39 +11,33 @@ namespace ActivitiesAyehu
     {
         public string RemoteDockerURI;
         public string ImageName;
-        public string DockerUserName;
+        public string DockerUsername;
         public string DockerPassword;
-        public string Tag;
 
         public ICustomActivityResult Execute()
         {
-            var result = PushImage();
+            var result = PushImageHttp();
 
             return this.GenerateActivityResult(result);
         }
 
-        private string PushImage()
+        private string PushImageHttp()
         {
-            var credentials = new BasicAuthCredentials(DockerUserName, DockerPassword);
-            DockerClient client = new DockerClientConfiguration(
-                new Uri(RemoteDockerURI), credentials)
-                 .CreateClient();
+            var authJson = "{\n  \"username\": \""+DockerUsername+"\",\n  \"password\": \""+DockerPassword+"\"\n}";
 
-            var stream = new MemoryStream();
+            var authBase64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(authJson));
 
-            var prog = new Progress<JSONMessage>();
-            var response = client.Images.PushImageAsync(ImageName,
-                new ImagePushParameters()
-                {
-                    Tag = Tag
-                }, new AuthConfig
-                {
-                    Username = DockerUserName,
-                    Password = DockerPassword,
-                    ServerAddress  = RemoteDockerURI
-                }, prog);
+            var uri_imageName = HttpUtility.UrlEncode(ImageName);
+
+            var httpClient = new HttpClient();
+            var content = new StringContent("", Encoding.UTF8);
+            httpClient.DefaultRequestHeaders.Add("X-Registry-Auth", authBase64);
+            var response = httpClient.PostAsync(RemoteDockerURI + string.Format("/images/{0}/push", uri_imageName), content);
 
             response.Wait();
+
+            var respStr = response.Result.Content.ReadAsStringAsync();
+            respStr.Wait();
 
             return "Success";
         }
