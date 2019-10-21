@@ -28,3 +28,5 @@
 **HyperVShutdownVM** - Activity to shut down a virtual machine.
 
 **HyperVRenameVM** - Activity to rename a virtual machine.
+
+**HyperVExportVM** - Activity to export a virtual machine to disk.
