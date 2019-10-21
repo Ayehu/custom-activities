@@ -30,7 +30,7 @@ namespace Ayehu.Sdk.ActivityCreation
             parameters.Add("Name", Name);
             parameters.Add("SourcePath ", SourcePath );
             parameters.Add("DestinationPath", DestinationPath);
-            if(CreateFullPath=="NO")
+            if(CreateFullPath=="No")
                 parameters.Add("CreateFullPath", false);
 
             if (AsJob == "Yes")

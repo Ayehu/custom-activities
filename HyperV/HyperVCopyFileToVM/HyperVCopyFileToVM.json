@@ -54,7 +54,7 @@
           "baseType": "control",
           "labelKey": "CreateFullPath ",
           "controlType": "autocomplete",
-          "value": "No",
+          "value": "Yes",
           "required": true,
           "controlOptions": [
             {
