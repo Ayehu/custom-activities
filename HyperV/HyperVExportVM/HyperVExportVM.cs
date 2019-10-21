@@ -27,8 +27,7 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("Name", Name);
-            if (!string.IsNullOrEmpty(Path))
-                parameters.Add("Path", Path);
+            parameters.Add("Path", Path);
             if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
             return parameters;

@@ -23,4 +23,4 @@ System.Data;
 
 ### Powershell command document reference.
 
-[Checkpoint-VM](https://docs.microsoft.com/en-us/powershell/module/hyper-v/Checkpoint-VM?view=win10-ps)
+[Export-VM](https://docs.microsoft.com/en-us/powershell/module/hyper-v/export-vm?view=win10-ps)
