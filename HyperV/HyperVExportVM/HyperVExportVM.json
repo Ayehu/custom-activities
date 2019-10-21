@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "HyperVCheckpointVM",
-    "description": "Creates a checkpoint of a virtual machine. ",
+    "name": "HyperVExportVM",
+    "description": "Exports a virtual machine to disk.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -29,10 +29,10 @@
           "required": true
         },
         {
-          "key": "SnapshotName",
-          "label": "Snapshot Name",
+          "key": "Path",
+          "label": "Path",
           "baseType": "control",
-          "labelKey": "SnapshotName",
+          "labelKey": "Path",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,

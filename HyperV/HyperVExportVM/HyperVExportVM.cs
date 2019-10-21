@@ -18,7 +18,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 
         public string Name = null;
-        public string SnapshotName = null;
+        public string Path = null;
 
         public string AsJob = null;
 
@@ -27,15 +27,15 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("Name", Name);
-            if (!string.IsNullOrEmpty(SnapshotName))
-                parameters.Add("SnapshotName", SnapshotName);
+            if (!string.IsNullOrEmpty(Path))
+                parameters.Add("Path", Path);
             if (AsJob == "Yes")
                 parameters.Add("AsJob", null);
             return parameters;
         }
         public ICustomActivityResult Execute()
         {
-            string command = "Checkpoint-VM";
+            string command = "Export-VM";
             using (RemotePowershell rp = new RemotePowershell(UserName, Password, HostName))
             {
                 PowerShell ps = rp.powerShell;
