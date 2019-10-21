@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Docker Delete Container",
+    "description": "Delete a stopped container.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "RemoteDockerURI",
+          "label": "Remote Docker URI",
+          "labelKey": "REMOTE_DOCKER_URI",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ContainerId",
+          "label": "Container ID",
+          "labelKey": "CONTAINER_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
