@@ -1,0 +1,56 @@
+﻿{
+  "data": {
+    "name": "HyperVGetVMMemory",
+    "description": "Gets the memory of a virtual machine or snapshot.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "hostGroup",
+          "label": "",
+          "baseType": "hostGroup",
+          "labelKey": "",
+          "controlType": "",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controOptions": []
+        },
+        {
+          "key": "Name",
+          "label": "Name",
+          "baseType": "control",
+          "labelKey": "Name",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "IsSnapshot",
+          "label": "Is Snapshot",
+          "baseType": "control",
+          "labelKey": "IsSnapshot",
+          "controlType": "autocomplete",
+          "value": "No",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "Yes",
+              "value": "Yes"
+            },
+            {
+              "key": "No",
+              "value": "No"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
