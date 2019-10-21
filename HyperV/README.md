@@ -30,3 +30,5 @@
 **HyperVRenameVM** - Activity to rename a virtual machine.
 
 **HyperVExportVM** - Activity to export a virtual machine to disk.
+
+**HyperVExportVMSnapshot** - Activity to cxport a virtual machine checkpoint to disk.
