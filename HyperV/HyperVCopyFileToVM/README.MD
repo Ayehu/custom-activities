@@ -12,6 +12,7 @@ System.Security;
 System.Collections.Generic;
 System.IO;
 System.Data;
+Microsoft.HyperV.Powershell;
 
 ### Mandatory fields when creating a checkpoint.
 **Host Name** - Specifies the Url or Ip address of Hyper-V server.

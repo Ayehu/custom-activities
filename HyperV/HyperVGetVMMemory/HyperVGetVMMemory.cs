@@ -45,18 +45,32 @@ namespace Ayehu.Sdk.ActivityCreation
                     throw new Exception(rp.ErrorMessage);
                 }
                 if(results.Count!=1)
-                    throw new Exception("Can't get virtual machine information");
-                string state = results[0].Properties["state"].Value.ToString();
-                return this.GenerateActivityResult(SuccessResult(state));
+                    throw new Exception("Can't get virtual machine memory information");
+                return this.GenerateActivityResult(SuccessResult(results[0]));
             }
 
         }
+        private DataTable CreateTableFromPSObject(PSObject result)
+        {
+            DataTable dt = new DataTable("result");
+            
+            List<Object> values = new List<object>();
+            foreach(PSPropertyInfo property in result.Properties)
+            {
+                dt.Columns.Add(property.Name, typeof(object));
+                values.Add(property.Value);
+            }
+            DataRow row = dt.NewRow();
+            row.ItemArray = values.ToArray();
+            dt.Rows.Add(row);
+            return dt;
 
-        private DataTable SuccessResult(string state)
+        }
+        private DataTable SuccessResult(PSObject result)
         {
             DataTable dt = new DataTable("resultSet");
-            dt.Columns.Add("Result", typeof(string));
-            dt.Rows.Add(state);
+            dt.Columns.Add("Result", typeof(DataTable));
+            dt.Rows.Add(CreateTableFromPSObject(result));
             return dt;
         }
 

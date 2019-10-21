@@ -2,7 +2,7 @@
   "data": {
     "name": "HyperVExportVMSnapshot",
     "description": "Exports a virtual machine checkpoint to disk.",
-    "Timeout": "00:01:00",
+    "Timeout": "00:10:00",
     "class": [],
     "rootSettings": {
       "isCollapse": false,
@@ -46,7 +46,7 @@
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         },
         {
           "key": "AsJob",
