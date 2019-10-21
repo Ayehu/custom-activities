@@ -32,3 +32,5 @@
 **HyperVExportVM** - Activity to export a virtual machine to disk.
 
 **HyperVExportVMSnapshot** - Activity to cxport a virtual machine checkpoint to disk.
+
+**HyperVCopyFileToVM** - Activity to copiy a file to a virtual machine.
