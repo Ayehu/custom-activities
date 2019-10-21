@@ -29,30 +29,30 @@
           "required": true
         },
         {
-          "key": "SourcePath ",
-          "label": "Source Path ",
+          "key": "SourcePath",
+          "label": "Source Path",
           "baseType": "control",
-          "labelKey": "SourcePath ",
+          "labelKey": "SourcePath",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         },
         {
-          "key": "DestinationPath ",
-          "label": "Destination Path ",
+          "key": "DestinationPath",
+          "label": "Destination Path",
           "baseType": "control",
-          "labelKey": "DestinationPath ",
+          "labelKey": "DestinationPath",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": false
+          "required": true
         },
         {
-          "key": "CreateFullPath ",
-          "label": "Create Path ",
+          "key": "CreateFullPath",
+          "label": "Create Path",
           "baseType": "control",
-          "labelKey": "CreateFullPath ",
+          "labelKey": "CreateFullPath",
           "controlType": "autocomplete",
           "value": "Yes",
           "required": true,

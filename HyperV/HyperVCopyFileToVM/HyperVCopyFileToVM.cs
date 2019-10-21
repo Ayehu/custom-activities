@@ -24,12 +24,13 @@ namespace Ayehu.Sdk.ActivityCreation
         public string AsJob = null;
 
 
-        private Dictionary<string, string> CreateParameters()
+        private Dictionary<string, object> CreateParameters()
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("Name", Name);
-            parameters.Add("SourcePath ", SourcePath );
+            parameters.Add("SourcePath", SourcePath );
             parameters.Add("DestinationPath", DestinationPath);
+            parameters.Add("FileSource",Microsoft.HyperV.PowerShell.CopyFileSourceType.Host);
             if(CreateFullPath=="No")
                 parameters.Add("CreateFullPath", false);
 
