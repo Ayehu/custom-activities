@@ -1,5 +1,5 @@
 ﻿
-### HyperVExportVMSnapshot - Activity to cxport a virtual machine checkpoint to disk.
+### HyperVExportVMSnapshot - Activity to export a virtual machine checkpoint to disk.
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**

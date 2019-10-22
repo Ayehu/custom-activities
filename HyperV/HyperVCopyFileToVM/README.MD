@@ -1,5 +1,5 @@
 ﻿
-### HyperVCopyFileToVM - Activity to copiy a file to a virtual machine.
+### HyperVCopyFileToVM - Activity to copy a file to a virtual machine.
 **DLL's to reference**
 Microsoft.Management.Automation.dll
 **Libraries to import**
