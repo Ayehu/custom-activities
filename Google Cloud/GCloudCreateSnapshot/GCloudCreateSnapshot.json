@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Google Crate Snapshot",
+    "name": "Google Create Snapshot",
     "description": "Create an snapshot in the Google Cloud",
     "Timeout": null,
     "class": [],

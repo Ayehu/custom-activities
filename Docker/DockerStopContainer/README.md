@@ -23,4 +23,4 @@ using System.IO;
 
 ### Mandatory fields when stopping a container:
 **RemoteDockerURI**		- URL from the machine that is running Docker application (e.g. http://54.164.40.64:4243)  
-**ContainerId**			- Container ID to be stopped  
+**ContainerId**			- Container ID (or container name) to be stopped  

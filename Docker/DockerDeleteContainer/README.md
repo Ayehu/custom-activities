@@ -1,6 +1,6 @@
 ## DockerDeleteContainer - Delete a stopped container.
 
-Remark - To be able to access remotely your docker server, folow this [tutorial](https://success.docker.com/article/how-do-i-enable-the-remote-api-for-dockerd) to setup.  
+Remark - To be able to access remotely your docker server, follow this [tutorial](https://success.docker.com/article/how-do-i-enable-the-remote-api-for-dockerd) to setup.  
 ### ATTENTION!!
 This configuration must open up your docker app to anyone.
 So, ensure that you setup the remote machine firewall to allow only ayehu client to have access.  
@@ -23,4 +23,4 @@ using System.IO;
 
 ### Mandatory fields when delete a Docker container:
 **RemoteDockerURI**		- URL from the machine that is running Docker application (e.g. http://54.164.40.64:4243)  
-**ContainerId**			- Container ID that must be deleted  
+**ContainerId**			- Container ID (or container name) that must be deleted  
