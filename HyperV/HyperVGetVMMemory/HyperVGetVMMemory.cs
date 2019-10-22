@@ -52,7 +52,7 @@ namespace Ayehu.Sdk.ActivityCreation
         }
         private DataTable CreateTableFromPSObject(PSObject result)
         {
-            DataTable dt = new DataTable("result");
+            DataTable dt = new DataTable("MemoryInfo");
             
             List<Object> values = new List<object>();
             foreach(PSPropertyInfo property in result.Properties)
@@ -68,9 +68,8 @@ namespace Ayehu.Sdk.ActivityCreation
         }
         private DataTable SuccessResult(PSObject result)
         {
-            DataTable dt = new DataTable("resultSet");
-            dt.Columns.Add("Result", typeof(DataTable));
-            dt.Rows.Add(CreateTableFromPSObject(result));
+            
+            var dt=CreateTableFromPSObject(result);
             return dt;
         }
 
