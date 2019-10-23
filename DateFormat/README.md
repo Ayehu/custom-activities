@@ -1,4 +1,4 @@
-## DateConvertToTimezone - Activity to convert date from one timezone to another.
+## ConvertTimeZone - Activity to convert date from one timezone to another.
 
 ##### Namespaces to import
 using System;
@@ -17,4 +17,4 @@ using Ayehu.Sdk.ActivityCreation.Extension;
 
 **toTimeZone**		  - Convert input time to this timezone
 
-**outDateFormat**     - Converted time format
+**outDateFormat**   - Converted time format
