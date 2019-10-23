@@ -26,7 +26,10 @@ ApplicationId
 TenantId
 Secret
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when detaching a data disk from VM:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **vmName**				- Virtual Machine name where to detach the disk.
+
 **diskName**			- The name of the disk to detach
