@@ -26,8 +26,12 @@ ApplicationId
 TenantId
 Secret
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when creating a VM disk:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **resourceGroupName**	- Resource Group where to create the disk. So this disk can be attached to a VM inside the same group.
+
 **diskName**			- The name of the new diskName
+
 **sizeGB**				- Size in GB for the new disk
