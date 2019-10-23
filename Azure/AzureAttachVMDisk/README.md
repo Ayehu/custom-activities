@@ -26,7 +26,10 @@ ApplicationId
 TenantId
 Secret
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when attaching a disk to VM:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **vmName**				- Virtual Machine name where to attach the disk.
+
 **diskName**			- The name of the disk to attach
