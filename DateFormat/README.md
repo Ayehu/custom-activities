@@ -7,14 +7,14 @@ using System.Linq;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 
-### One of the below fields needs to be provided to convert time:
+### Below fields needs to be provided to convert time:
 
-**currentTime**		  - The current reference time 	                    
+**Input Time**		      - The current reference time 	                    
 
-**dateFormat**		  - Format of the input time
+**Source Format**		    - Format of the input time (dd/MM/yyyy)
 
-**fromTimeZone**	  - Current time timeZone
+**Source Time Zone**	  - Current time timeZone
 
-**toTimeZone**		  - Convert input time to this timezone
+**Target Time Zone**		- Convert input time to this timezone
 
-**outDateFormat**   - Converted time format
+**Target Format**       - Converted time format (dd/MM/yyyy)
