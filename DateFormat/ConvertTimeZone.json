@@ -123,7 +123,7 @@
           "required": true,
           "disabled": false,
           "styleClass": "",
-          "label": "source Time Zone",
+          "label": "Source Time Zone",
           "labelKey": "FROM_TIMEZONE_VALUE",
           "baseType": "control",
           "controlType": "autocomplete",
