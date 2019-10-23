@@ -24,9 +24,15 @@ TenantId
 Secret
 
 ### Mandatory fields when creating a VM:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **vmName**				- Virtual Machine name
+
 **vmGroupName**			- Virtual Machine Group Name
+
 **vmUserName**			- Virtual Machine User Name
+
 **vmPassword**			- Virtual Machine  password
+
 **vmTypeId**			- Id of the OS to install
