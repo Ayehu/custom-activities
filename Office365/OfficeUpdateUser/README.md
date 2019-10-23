@@ -19,7 +19,7 @@ Secret
 
 These fields should be sent when calling the API.
 
-### One of the below fields needs to be provided to update a user:
+### The below fields needs to be provided to update a user:
 
 **userId**			  - GUID that identifies a user. (unique id) 	                    
 
