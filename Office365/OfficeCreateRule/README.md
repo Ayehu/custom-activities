@@ -19,7 +19,7 @@ Secret
 
 These fields should be sent when calling the API.
 
-### Mandatory fields when creating a user:
+### Mandatory fields when creating a mailbox rule:
 
 **userEmail**		  - User's email to create the rule
 
