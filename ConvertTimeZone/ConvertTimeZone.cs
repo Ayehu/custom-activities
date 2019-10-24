@@ -6,7 +6,7 @@ using Ayehu.Sdk.ActivityCreation.Extension;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class DateConvertToTimezone : IActivity
+    public class ConvertTimeZone : IActivity
     {
         /// <summary>
         /// The current reference time

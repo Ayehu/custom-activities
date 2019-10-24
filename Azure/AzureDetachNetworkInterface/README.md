@@ -26,7 +26,10 @@ ApplicationId
 TenantId
 Secret
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when detaching a secondary Network Interace from a VM:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **vmName**				- Virtual Machine name where the network is attached.
+
 **networkName**			- Network Interface name.

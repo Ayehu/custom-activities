@@ -19,7 +19,7 @@ Secret
 
 These fields should be sent when calling the API.
 
-### One of the below fields needs to be provided to remove a user from group:
+### The below fields needs to be provided to remove a user from group:
 **groupId**           - GUID that identifies a group.
 
 **userId**			  - GUID that identifies a user. (unique id) 	                    

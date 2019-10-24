@@ -1,4 +1,4 @@
-## AzureRestartVMInstance - Activity to restart an Azure Virtual Machine.
+## AzureDeleteVMInstance - Activity to delete an Azure Virtual Machine.
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
@@ -21,6 +21,8 @@ ApplicationId
 TenantId
 Secret
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when deleting a VM:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **vmName**				- Virtual Machine name

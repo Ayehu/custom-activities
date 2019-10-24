@@ -26,6 +26,8 @@ ApplicationId
 TenantId
 Secret
 
-### Mandatory fields when creating a VM:
+### Mandatory fields when deleting a VM disk:
+
 **subscriptionId**		- The azure portal subscription Id (Free Trial/Premium)
+
 **diskName**			- The name of the disk to delete
