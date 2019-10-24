@@ -19,10 +19,10 @@ Secret
 
 These fields should be sent when calling the API.
 
-### One of the below fields needs to be provided to update a user:
+**userEmail**	   - User's email to create the rule (Required) 	                    
 
-**userId**			  - GUID that identifies a user. (unique id) 	                    
+**firstName**		- User FirstName to update (Not required)
 
-**firstName**		  - User FirstName to update
+**lastName**		- User LastName to update (Not required)
 
-**lastName**		  - User LastName to update
+**password**		- New password. (Not required). It must be a strong password.  At least 8 to 64 characters. It requires 3 out of 4 of lowercase, uppercase, numbers, or symbols.

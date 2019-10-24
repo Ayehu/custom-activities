@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Linq;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Graph;
@@ -30,36 +31,42 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// GUID that identifies the current user or can be the UserPrincipal Name.
+        /// User's email to create the rule
         /// </summary>
-        public string userId;
+        public string userEmail;
 
         public string firstName;
         public string lastName;
+        public string password;
 
-        ICustomActivityResult IActivity.Execute()
+        public ICustomActivityResult Execute()
         {
-            DataTable dt = new DataTable("resultSet");
-            dt.Columns.Add("Result");
-
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
+            string userId = GetUserId(client);
             User user = client.Users[userId].Request().GetAsync().Result;
 
             if (user.UserPrincipalName != null)
             {
-                client.Users[userId].Request().UpdateAsync(new User
-                {
-                    GivenName = firstName,
-                    Surname = lastName,
-                    DisplayName = firstName + " " + lastName
-                });
+                var updateduser = new User();
 
-                dt.Rows.Add("Success");
+                if (!string.IsNullOrEmpty(firstName))
+                    updateduser.GivenName = firstName;
+
+                if (!string.IsNullOrEmpty(lastName))
+                    updateduser.Surname = lastName;
+
+                if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
+                    updateduser.DisplayName = firstName + " " + lastName;
+
+                if (!string.IsNullOrEmpty(password))
+                    updateduser.PasswordProfile = new PasswordProfile { Password = password, ForceChangePasswordNextSignIn = false };
+
+                client.Users[userId].Request().UpdateAsync(updateduser).Wait();
             }
             else
                 throw new Exception("User not found");
 
-            return this.GenerateActivityResult(dt);
+            return this.GenerateActivityResult(GetActivityResult);
         }
 
         private ClientCredentialProvider GetProvider()
@@ -71,6 +78,33 @@ namespace Ayehu.Sdk.ActivityCreation
                 .Build();
 
             return new ClientCredentialProvider(confidentialClientApplication);
+        }
+
+        private string GetUserId(GraphServiceClient client)
+        {
+            var users = client.Users.Request().GetAsync().Result.ToList();
+
+            foreach (var user in users)
+            {
+                if (user.Mail != null && user.Mail.ToLower() == userEmail.ToLower())
+                {
+                    return user.Id;
+                }
+            }
+
+            return string.Empty;
+        }
+
+        private DataTable GetActivityResult
+        {
+            get
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Result");
+                dt.Rows.Add("Success");
+
+                return dt;
+            }
         }
     }
 }
