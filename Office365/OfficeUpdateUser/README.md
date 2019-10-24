@@ -1,4 +1,4 @@
-## OfficeUdpdateUser - Activity to update a user in Azure AD for Office365.
+## OfficeUpdateUser - Activity to update a user in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
@@ -19,10 +19,12 @@ Secret
 
 These fields should be sent when calling the API.
 
-**userEmail**	   - User's email to create the rule (Required) 	                    
+**userEmail**	    - User email to create the rule (Required) 	                    
 
 **firstName**		- User FirstName to update (Not required)
 
 **lastName**		- User LastName to update (Not required)
 
 **password**		- New password. (Not required). It must be a strong password.  At least 8 to 64 characters. It requires 3 out of 4 of lowercase, uppercase, numbers, or symbols.
+
+**Important!** - To be able to change the password, the AzureAD application needs to be part of the group 'Password administrators' under Azure Active Directory -> Roles and administrators.
