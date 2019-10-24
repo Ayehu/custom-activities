@@ -1,4 +1,4 @@
-## OfficeDeleteMailboxRule - Activity to delete a mailbox rule in Azure AD for Office365.
+## OfficeRemoveUserLicense - Activity to remove Exchange Online license from a user in Azure AD for Office365.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
@@ -19,8 +19,5 @@ Secret
 
 These fields should be sent when calling the API.
 
-### Mandatory fields when deleting a mailbox rule:
-
-**userEmail**		  - User's email to delete the rule 
-
-**ruleName**   		  - The rule name. It's case INSENSITIVE.
+### Thhe below field needs to be provided to remove license:
+**userEmail**			  - User email to remove the license

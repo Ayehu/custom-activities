@@ -7,7 +7,7 @@ using Microsoft.Identity.Client;
 using Microsoft.Graph.Auth;
 using System.Collections.Generic;
 
-namespace ActivityCreator.Users
+namespace Ayehu.Sdk.ActivityCreation
 {
     public class OfficeAssignUserLicense : IActivity
     {

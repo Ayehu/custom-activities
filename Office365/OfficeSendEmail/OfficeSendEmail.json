@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "OfficeSendMail",
+    "name": "OfficeSendEmail",
     "description": "Send an email on behalf of a Office365 user",
     "Timeout": null,
     "class": [],

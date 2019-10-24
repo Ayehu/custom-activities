@@ -31,7 +31,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// User's email to create the rule
+        /// User email that identifies the account
         /// </summary>
         public string userEmail;
 

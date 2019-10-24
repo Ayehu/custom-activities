@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Update a user",
+    "name": "OfficeUpdateUser",
     "description": "Updates a user in Office365",
     "Timeout": null,
     "class": [],

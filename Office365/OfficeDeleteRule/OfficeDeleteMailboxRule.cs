@@ -31,7 +31,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// User's email to create the rule
+        /// User's email to delete the rule
         /// </summary>
         public string userEmail;
 

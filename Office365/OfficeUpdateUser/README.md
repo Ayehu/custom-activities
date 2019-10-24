@@ -19,7 +19,7 @@ Secret
 
 These fields should be sent when calling the API.
 
-**userEmail**	    - User email to create the rule (Required) 	                    
+**userEmail**	    - User email that identifies the account (Required) 	                    
 
 **firstName**		- User FirstName to update (Not required)
 

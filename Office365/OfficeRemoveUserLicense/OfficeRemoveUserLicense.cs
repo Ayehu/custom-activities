@@ -1,16 +1,16 @@
 using System;
 using System.Data;
 using System.Linq;
-using System.Collections.Generic;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using Microsoft.Graph.Auth;
+using System.Collections.Generic;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class OfficeSendEmail : IActivity
+    public class OfficeRemoveUserLicense : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -32,50 +32,31 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// Email subject
+        /// User's email to create the rule
         /// </summary>
-        public string subject;
-
-        /// <summary>
-        /// The text of the message to be sent 
-        /// </summary>
-        public string messageBody;
-
-        /// <summary>
-        /// The sender's email
-        /// </summary>
-        public string fromEmail;
-
-        /// <summary>
-        /// The recipient of the email.
-        /// </summary>
-        public string toEmail;
+        public string userEmail;
 
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            string userId = GetUserId(client);
+            var user = client.Users[GetUserId(client)];
+            Guid? skuId = GetLicense(client).SkuId;
 
-            Message msg = new Message();
-            msg.Subject = subject;
-            msg.Body = new ItemBody
+            if (user.Request().GetAsync().Result.UserPrincipalName != null)
             {
-                ContentType = BodyType.Text,
-                Content = messageBody
-            };
-            msg.ToRecipients = new List<Recipient>() 
-            { 
-                new Recipient 
-                { 
-                    EmailAddress = new EmailAddress { Address = toEmail } 
-                } 
-            };
-
-            client.Users[userId].SendMail(msg, true).Request().WithMaxRetry(3).PostAsync().Wait();
+                var license = user.LicenseDetails.Request().GetAsync().Result.Where(l => l.SkuId == skuId).FirstOrDefault();
+                
+                if (license != null)
+                    user.AssignLicense(new List<AssignedLicense>(), new List<Guid> { license.SkuId.Value }).Request().PostAsync().Wait();
+            }
 
             return this.GenerateActivityResult(GetActivityResult);
         }
 
+        /// <summary>
+        /// Get the authentication provider to be used for API calls
+        /// </summary>
+        /// <returns><code>ClientCredentialProvider</code></returns>
         private ClientCredentialProvider GetProvider()
         {
             IConfidentialClientApplication confidentialClientApplication = ConfidentialClientApplicationBuilder
@@ -87,13 +68,19 @@ namespace Ayehu.Sdk.ActivityCreation
             return new ClientCredentialProvider(confidentialClientApplication);
         }
 
+        private SubscribedSku GetLicense(GraphServiceClient client)
+        {
+            var skuResult = client.SubscribedSkus.Request().GetAsync().Result;
+            return skuResult[0];
+        }
+
         private string GetUserId(GraphServiceClient client)
         {
             var users = client.Users.Request().GetAsync().Result.ToList();
 
             foreach (var user in users)
             {
-                if (user.Mail != null && user.Mail.ToLower() == fromEmail.ToLower())
+                if (user.Mail != null && user.Mail.ToLower() == userEmail.ToLower())
                 {
                     return user.Id;
                 }
