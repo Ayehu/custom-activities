@@ -1,12 +1,12 @@
 using System;
 using System.Data;
 using System.Linq;
+using System.Collections.Generic;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using Microsoft.Graph.Auth;
-using System.Collections.Generic;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
@@ -45,9 +45,11 @@ namespace Ayehu.Sdk.ActivityCreation
             if (user.Request().GetAsync().Result.UserPrincipalName != null)
             {
                 var license = user.LicenseDetails.Request().GetAsync().Result.Where(l => l.SkuId == skuId).FirstOrDefault();
-                
+
                 if (license != null)
                     user.AssignLicense(new List<AssignedLicense>(), new List<Guid> { license.SkuId.Value }).Request().PostAsync().Wait();
+                else
+                    throw new Exception("User doesn't have any license assigned");
             }
 
             return this.GenerateActivityResult(GetActivityResult);
