@@ -1,0 +1,56 @@
+{  
+   "innerCode":200,
+   "data":{  
+      "name":"AzureADGetUserInfo",
+      "description":"Remove Exchange Online license from a user",
+      "Timeout":null,
+      "class":[  
+
+      ],
+      "rootSettings":{  
+         "isCollapse":false,
+         "activitySettings":[
+            {  
+               "value":"",
+               "required":true,
+               "key":"userEmail",
+               "label":"User Email",
+               "labelKey":"USER_ID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"appId",
+               "label":"Application Id",
+               "labelKey":"APPID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"tenantId",
+               "label":"Tenant Id",
+               "labelKey":"TENANTID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"secret",
+               "label":"Secret",
+               "labelKey":"SECRET_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            }
+         ],
+         "index":"1",
+         "label":"main",
+         "labelKey":null
+      }
+   },
+   "message":"SUCCESS"
+}
