@@ -1,8 +1,8 @@
 {  
    "innerCode":200,
    "data":{  
-      "name":"Remove Exchange Online license from a user",
-      "description":"remove Exchange Online license from a user",
+      "name":"OfficeRemoveUserLicense",
+      "description":"Remove Exchange Online license from a user",
       "Timeout":null,
       "class":[  
 

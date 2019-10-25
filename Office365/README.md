@@ -5,12 +5,13 @@ Activities repository to manage Office365 users.
 
 Go to https://portal.azure.com
 
--> Azure Active Directory ![Azure AD](https://github.com/Ayehu/custom-activities/tree/master/images/AD.png)
+-> Azure Active Directory
 
--> App registration ![App reg](https://github.com/Ayehu/custom-activities/tree/master/images/AppReg.png)
+-> App registration
 
 -> Click on your application
 
--> On the right you'll find the API credentials ![credentials](https://github.com/Ayehu/custom-activities/tree/master/images/credentials.png)
+-> On the right you'll find the API credentials
 
-The app secret can be found under "Certificates & secrets" but it's hidden and not accessible. However, you can create a new one if you forgot/lost the previous.
+The app secret can be found under "Certificates & secrets" but it's hidden and not accessible. 
+However, you can create a new one if you forgot/lost the previous.

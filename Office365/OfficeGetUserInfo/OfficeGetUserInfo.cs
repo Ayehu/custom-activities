@@ -1,16 +1,15 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Linq;
-using System.Collections.Generic;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using Microsoft.Graph.Auth;
 
-namespace ActivityCreator.Users
+namespace Ayehu.Sdk.ActivityCreation
 {
-    public class OfficeAssignUserLicense : IActivity
+    public class OfficeGetUserInfo : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -32,35 +31,41 @@ namespace ActivityCreator.Users
         public string secret;
 
         /// <summary>
-        /// User's email to assign the license
+        /// User's email to retrieve the information
         /// </summary>
         public string userEmail;
 
-        ICustomActivityResult IActivity.Execute()
+        public ICustomActivityResult Execute()
         {
+            GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
+            var user = client.Users[GetUserId(client)].Request().GetAsync().Result;
+
+            var userFields = new 
+            {
+                user.Id,
+                user.Mail,
+                user.UserPrincipalName,
+                user.Surname,
+                user.GivenName,
+                user.UserType,
+                user.MobilePhone,
+                user.OfficeLocation,
+                user.LicenseDetails,
+                user.Settings,
+                user.AccountEnabled
+            };
+
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
-            dt.Rows.Add("Success");
-
-            GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var user = client.Users[GetUserId(client)];
-            Guid? skuId = GetLicense(client).SkuId;
-
-            user.AssignLicense(new List<AssignedLicense>
-            {
-                new AssignedLicense { SkuId = skuId }
-            },
-               new List<Guid>()).Request().PostAsync().Wait();
+            dt.Rows.Add(userFields);
 
             return this.GenerateActivityResult(dt);
         }
 
-        private SubscribedSku GetLicense(GraphServiceClient client)
-        {
-            var skuResult = client.SubscribedSkus.Request().GetAsync().Result;
-            return skuResult[0];
-        }
-
+        /// <summary>
+        /// Get the authentication provider to be used for API calls
+        /// </summary>
+        /// <returns><code>ClientCredentialProvider</code></returns>
         private ClientCredentialProvider GetProvider()
         {
             IConfidentialClientApplication confidentialClientApplication = ConfidentialClientApplicationBuilder
@@ -70,6 +75,12 @@ namespace ActivityCreator.Users
                 .Build();
 
             return new ClientCredentialProvider(confidentialClientApplication);
+        }
+
+        private SubscribedSku GetLicense(GraphServiceClient client)
+        {
+            var skuResult = client.SubscribedSkus.Request().GetAsync().Result;
+            return skuResult[0];
         }
 
         private string GetUserId(GraphServiceClient client)

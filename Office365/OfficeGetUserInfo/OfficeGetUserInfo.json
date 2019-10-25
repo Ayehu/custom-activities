@@ -1,8 +1,8 @@
 {  
    "innerCode":200,
    "data":{  
-      "name":"OfficeAssignUserLicense",
-      "description":"Assign Exchange Online license to a user",
+      "name":"OfficeGetUserInfo",
+      "description":"Get user infromation from Azure Active DIrectory.",
       "Timeout":null,
       "class":[  
 
