@@ -35,26 +35,53 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userEmail;
 
+        public void Exec()
+        {
+            userEmail = "vadimaus@cromatix.onmicrosoft.com";
+            appId = "71942d30-bb85-4781-819c-bbe74fda593f";
+            tenantId = "3a403274-e3d2-451a-aa5e-a4219eacc1f6";
+            secret = "YONXbnPKi4-F:jkB?Q-4Ez7hqH0=Lxry";
+
+            this.Execute();
+        }
+
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
             var user = client.Users[GetUserId(client)].Request().GetAsync().Result;
 
-            DataTable dt = new DataTable("resultSet");
-            dt.Columns.Add("Result");
-            dt.Rows.Add("Id - " + user.Id);
-            dt.Rows.Add("Mail - " + user.Mail);
-            dt.Rows.Add("UserPrincipalName - " + user.UserPrincipalName);
-            dt.Rows.Add("Surname - " + user.Surname);
-            dt.Rows.Add("GivenName - " + user.GivenName);
-            dt.Rows.Add("UserType - " + user.UserType);
-            dt.Rows.Add("MobilePhone - " + user.MobilePhone);
-            dt.Rows.Add("OfficeLocation - " + user.OfficeLocation);
-            dt.Rows.Add("LicenseDetails - " + user.LicenseDetails);
-            dt.Rows.Add("Settings - " + user.Settings);
-            dt.Rows.Add("AccountEnabled - " + user.AccountEnabled);
+            if (!string.IsNullOrEmpty(user.UserPrincipalName))
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Id");
+                dt.Columns.Add("Mail");
+                dt.Columns.Add("UserPrincipalName");
+                dt.Columns.Add("Surname");
+                dt.Columns.Add("GivenName");
+                dt.Columns.Add("UserType");
+                dt.Columns.Add("MobilePhone");
+                dt.Columns.Add("OfficeLocation");
+                dt.Columns.Add("LicenseDetails");
+                dt.Columns.Add("Settings");
+                dt.Columns.Add("AccountEnabled");
 
-            return this.GenerateActivityResult(dt);
+                dt.Rows.Add(
+                    user.Id,
+                    user.Mail,
+                    user.UserPrincipalName,
+                    user.Surname,
+                    user.GivenName,
+                    user.UserType,
+                    user.MobilePhone,
+                    user.OfficeLocation,
+                    user.LicenseDetails,
+                    user.Settings,
+                    user.AccountEnabled);
+
+                return this.GenerateActivityResult(dt);
+            }
+            else
+                throw new Exception("User not found");
         }
 
         /// <summary>
