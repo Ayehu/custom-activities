@@ -40,24 +40,19 @@ namespace Ayehu.Sdk.ActivityCreation
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
             var user = client.Users[GetUserId(client)].Request().GetAsync().Result;
 
-            var userFields = new 
-            {
-                user.Id,
-                user.Mail,
-                user.UserPrincipalName,
-                user.Surname,
-                user.GivenName,
-                user.UserType,
-                user.MobilePhone,
-                user.OfficeLocation,
-                user.LicenseDetails,
-                user.Settings,
-                user.AccountEnabled
-            };
-
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
-            dt.Rows.Add(userFields);
+            dt.Rows.Add("Id - " + user.Id);
+            dt.Rows.Add("Mail - " + user.Mail);
+            dt.Rows.Add("UserPrincipalName - " + user.UserPrincipalName);
+            dt.Rows.Add("Surname - " + user.Surname);
+            dt.Rows.Add("GivenName - " + user.GivenName);
+            dt.Rows.Add("UserType - " + user.UserType);
+            dt.Rows.Add("MobilePhone - " + user.MobilePhone);
+            dt.Rows.Add("OfficeLocation - " + user.OfficeLocation);
+            dt.Rows.Add("LicenseDetails - " + user.LicenseDetails);
+            dt.Rows.Add("Settings - " + user.Settings);
+            dt.Rows.Add("AccountEnabled - " + user.AccountEnabled);
 
             return this.GenerateActivityResult(dt);
         }
