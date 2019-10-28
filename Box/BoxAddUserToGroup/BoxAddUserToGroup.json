@@ -1,0 +1,99 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Box Add User to Group",
+    "description": "Add a user to a group in a Box account.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "GroupId",
+          "label": "Group ID",
+          "labelKey": "GROUP_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserIdToBeAdded",
+          "label": "User ID to be Added",
+          "labelKey": "ADD_USER_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserId",
+          "label": "User ID to impersonate",
+          "labelKey": "USER_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ClientId",
+          "label": "Client ID",
+          "labelKey": "CLIENT_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ClientSecret",
+          "label": "Client Secret",
+          "labelKey": "CLIENT_SECRET",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "EnterpriseId",
+          "label": "Enterpise ID",
+          "labelKey": "ENTERPRISE_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Passphrase",
+          "label": "Passphrase",
+          "labelKey": "PASSPHRASE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "JwtPublicKey",
+          "label": "Public Key",
+          "labelKey": "P_K",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PrivateKey",
+          "label": "Private Key",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
