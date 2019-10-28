@@ -35,16 +35,6 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userEmail;
 
-        public void Exec()
-        {
-            userEmail = "vadimaus@cromatix.onmicrosoft.com";
-            appId = "71942d30-bb85-4781-819c-bbe74fda593f";
-            tenantId = "3a403274-e3d2-451a-aa5e-a4219eacc1f6";
-            secret = "YONXbnPKi4-F:jkB?Q-4Ez7hqH0=Lxry";
-
-            this.Execute();
-        }
-
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
