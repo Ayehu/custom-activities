@@ -1,4 +1,4 @@
-## AzureADResetUserPassword - Activity to reset user password in Azure AD for Office365.
+## AzureADResetUserPassword - Activity to reset user password in Azure AD.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
