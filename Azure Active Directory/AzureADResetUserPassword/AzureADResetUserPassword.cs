@@ -31,6 +31,11 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
+        /// New password
+        /// </summary>
+        public string password;
+        
+        /// <summary>
         /// User email that identifies the account
         /// </summary>
         public string userEmail;
