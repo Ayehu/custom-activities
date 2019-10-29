@@ -8,17 +8,15 @@ using Ayehu.Sdk.ActivityCreation.Extension;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class IncidentCreation : IActivity
+    public class IncidentUpdate : IActivity
     {
         #region Private readonly properties
 
-        private readonly string API_REQUEST_URL = "https://api.pagerduty.com/incidents";
+        private readonly string API_REQUEST_URL = "https://api.pagerduty.com/incidents/{0}";
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/vnd.pagerduty+json;version=2";
-        private readonly string METHOD = "POST";
-		private readonly string TYPE = "incident";
-        private readonly string SERVICE_TYPE = "service_reference";
-        
+        private readonly string METHOD = "PUT";
+
         #endregion
 
         #region Incoming properties 
@@ -26,10 +24,9 @@ namespace Ayehu.Sdk.ActivityCreation
         public string AuthorizationToken;
         public string From;
 
-        public string Title;
-        public string ServiceID;
-        public string Urgency;
-        public string Details;
+        public string IncidentID;
+        public string Type;
+        public string Status;
 
         #endregion
 
@@ -37,12 +34,12 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-        
-       	    if (!IsValid(From))
+
+            if (!IsValid(From))
             {
                 throw new Exception("Email not valid.");
             }
-        
+
             var httpWebRequest = HttpRequest();
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -52,19 +49,12 @@ namespace Ayehu.Sdk.ActivityCreation
                 streamWriter.Close();
 
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                if (httpResponse.StatusCode == HttpStatusCode.Created)
+                if (httpResponse.StatusCode == HttpStatusCode.OK)
                 {
-                
                     using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                     {
                         var responseString = streamReader.ReadLine();
-                        var search_string = "\"incident_number\":";
-                        var cutIndex = responseString.IndexOf(search_string);
-                        var comma_index = responseString.IndexOf(',');
-                        var cut_index = cutIndex + search_string.Length;
-                        var result = responseString.Substring(cut_index, comma_index - cut_index);
-            
-                   		return this.GenerateActivityResult(result);
+                        return this.GenerateActivityResult("Success");
                     }
                 }
                 else
@@ -72,7 +62,7 @@ namespace Ayehu.Sdk.ActivityCreation
                     throw new Exception("Error");
                 }
             }
-        } 
+        }
 
         #endregion
 
@@ -81,7 +71,7 @@ namespace Ayehu.Sdk.ActivityCreation
         private WebRequest HttpRequest()
         {
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(API_REQUEST_URL);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, IncidentID));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
             httpWebRequest.Headers.Add("Authorization", string.Format("Token token={0}", AuthorizationToken));
@@ -94,24 +84,16 @@ namespace Ayehu.Sdk.ActivityCreation
         private string IncidentJsonBuilder()
         {
             StringBuilder incidentJson = new StringBuilder();
-            
+
             incidentJson.Append("{\"incident\": { \"type\": \"");
-            incidentJson.Append(TYPE);
-            incidentJson.Append("\",\"title\": \"");
-            incidentJson.Append(Title);
-            incidentJson.Append("\",\"service\": {\"id\": \"");
-            incidentJson.Append(ServiceID);
-            incidentJson.Append("\",\"type\": \"");
-            incidentJson.Append(SERVICE_TYPE);
-            incidentJson.Append("\"},\"urgency\": \"");
-            incidentJson.Append(Urgency);
-            incidentJson.Append("\",\"body\": {\"type\": \"incident_body\",\"details\": \"");
-            incidentJson.Append(Details);
+            incidentJson.Append(Type);
+            incidentJson.Append("\",\"status\": \"");
+            incidentJson.Append(Status);
             incidentJson.Append("\"}}}");
 
             return incidentJson.ToString();
         }
-        
+
         private bool IsValid(string emailaddress)
         {
             try
