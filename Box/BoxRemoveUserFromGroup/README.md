@@ -18,7 +18,7 @@ using Box.V2.Config;
 using Box.V2.JWTAuth;  
 using Box.V2.Models.Request;  
 
-### Mandatory fields when adding a user to a group:
+### Mandatory fields when removing a user to a group:
 **UserId**			- User e-mail to impersonate  
 **ClientId**		- Data contained in config.json file.  
 **ClientSecret**	- Data contained in config.json file.  
