@@ -51,6 +51,10 @@ namespace ActivitiesAyehu
 
                     memberResult.Wait();
 
+                    memberResult.Wait();
+                    if (memberResult.Exception != null)
+                        return memberResult.Exception.Message;
+
                     return "Success";
                 }
             }

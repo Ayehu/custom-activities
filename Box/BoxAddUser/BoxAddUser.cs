@@ -44,6 +44,9 @@ namespace ActivitiesAyehu
 
             userRes.Wait();
 
+            if (userRes.Exception != null)
+                return userRes.Exception.Message;
+
             return "Success";
         }
     }

@@ -37,15 +37,19 @@ namespace ActivitiesAyehu
 
             membersResult.Wait();
 
-            string memberToRemove = null;
             foreach (var member in membersResult.Result.Entries)
                 if (member.User.Login == UserIdToBeRemoved)
-                    memberToRemove = member.Id;
+                {
+                    var res = client.GroupsManager.DeleteGroupMembershipAsync(member.User.Id);
 
-            if (memberToRemove != null)
-                client.GroupsManager.DeleteGroupMembershipAsync(memberToRemove);
+                    res.Wait();
+                    if (res.Exception != null)
+                        return res.Exception.Message;
 
-            return "Success";
+                    return "Success";
+                }
+
+            return "User Not Found";
         }
     }
 }

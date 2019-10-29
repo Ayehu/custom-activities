@@ -1,9 +1,5 @@
 ﻿using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using System;
-using Docker.DotNet;
-using System.Collections.Generic;
-using System.IO;
 using Box.V2.Config;
 using Box.V2.JWTAuth;
 
@@ -19,7 +15,7 @@ namespace ActivitiesAyehu
         public string JwtPublicKey;
         public string PrivateKey;
 
-        public string GroudId;
+        public string GroupId;
 
         public ICustomActivityResult Execute()
         {
@@ -37,7 +33,11 @@ namespace ActivitiesAyehu
             var adminToken = boxJWT.UserToken(UserId);
             var client = boxJWT.AdminClient(adminToken);
 
-            client.GroupsManager.DeleteAsync(GroudId);
+            var res = client.GroupsManager.DeleteAsync(GroupId);
+
+            res.Wait();
+            if (res.Exception != null)
+                return res.Exception.Message;
 
             return "Success";
         }

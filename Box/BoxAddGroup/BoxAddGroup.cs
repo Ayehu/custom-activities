@@ -34,10 +34,14 @@ namespace ActivitiesAyehu
             var adminToken = boxJWT.UserToken(UserId);
             var client = boxJWT.AdminClient(adminToken);
 
-            client.GroupsManager.CreateAsync(new BoxGroupRequest()
+            var res = client.GroupsManager.CreateAsync(new BoxGroupRequest()
             {
                 Name = GroupName
             });
+
+            res.Wait();
+            if (res.Exception != null)
+                return res.Exception.Message;
 
             return "Success";
         }
