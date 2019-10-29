@@ -1,4 +1,4 @@
-## BoxAddUserToGroup - Add an user to a group from a Box account.
+## BoxAddUserToGroup - Add a user to a group from a Box account.
 
 Remark - To be able to access remotely your Box account, follow this [tutorial](https://developer.box.com/docs/setting-up-a-jwt-app) to setup.  
 
