@@ -10,7 +10,7 @@ MANDATORY FIELDS WHEN DELETE A BUCKET:
 
 a. Access Key: How to get: Bellow 
 
-b. Secrey Key: How to get: Bellow 
+b. Secret Key: How to get: Bellow 
 
 c. Bucket Name: The name of bucket that you want to delete.
 
