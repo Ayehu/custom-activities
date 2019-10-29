@@ -10,7 +10,7 @@ MANDATORY FIELDS WHEN CREATE A BUCKET:
 
 a. Access Key: How to get: Bellow 
 
-b. Secrey Key: How to get: Bellow 
+b. Secret Key: How to get: Bellow 
 
 c. Bucket Name: Arbitrary naming.
 
