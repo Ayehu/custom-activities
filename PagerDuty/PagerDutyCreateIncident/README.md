@@ -1,4 +1,4 @@
-﻿Incident Creation - Activity to create a new incident in PagerDuty platform.
+﻿# Incident Creation - Activity to create a new incident in PagerDuty platform.
 
 Remark:
 1. Create an account in PagerDuty.
