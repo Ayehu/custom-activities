@@ -10,7 +10,7 @@ MANDATORY FIELDS WHEN GET LIST BUCKETS:
 
 a. Access Key: How to get: Bellow 
 
-b. Secrey Key: How to get: Bellow.
+b. Secret Key: How to get: Bellow.
 
 How to find AWS Access Key and Secret Access Key?
 
