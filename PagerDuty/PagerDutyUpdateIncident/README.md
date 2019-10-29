@@ -1,4 +1,4 @@
-﻿#Incident Update - Activity to update a incident in PagerDuty platform.
+﻿# Incident Update - Activity to update a incident in PagerDuty platform.
 
 Remark:
 
