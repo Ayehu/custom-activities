@@ -8,9 +8,9 @@ Output Success/Error
 
 MANDATORY FIELDS WHEN CREATE A BUCKET:
 
-a. Access Key: How to get: Bellow 
+a. Access Key: How to get: Bellow
 
-b. Secret Key: How to get: Bellow 
+b. Secret Key: How to get: Bellow
 
 c. Bucket Name: Arbitrary naming.
 
@@ -22,8 +22,4 @@ In order for MigrationWiz to access your Amazon Web Services (AWS) account autom
 
 To find your Access Key and Secret Access Key:
 
-Log in to your AWS Management Console.
-Click on your user name at the top right of the page.
-Click on the Security Credentials link from the drop-down menu.
-Find the Access Credentials section, and copy the latest Access Key ID.
-Click on the Show link in the same row, and copy the Secret Access Key.
+Log in to your AWS Management Console. Click on your user name at the top right of the page. Click on the Security Credentials link from the drop-down menu. Find the Access Credentials section, and copy the latest Access Key ID. Click on the Show link in the same row, and copy the Secret Access Key.

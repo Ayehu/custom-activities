@@ -1,16 +1,18 @@
-GET LIST BUCKET ACTIVITIES
+DELETE BUCKET ACTIVITIES
 
-GET LIST BUCKET ON AMAZON S3.
+DELETE A BUCKET ON AMAZON S3.
 
 This Activities requires AWSSDK.Core.dll, AWSSDK.S3.dll. https://aws.amazon.com/sdk-for-net/?nc1=h_ls
 
-Output List Buckets/Error
+Output Success/Error
 
-MANDATORY FIELDS WHEN GET LIST BUCKETS:
+MANDATORY FIELDS WHEN DELETE A BUCKET:
 
-a. Access Key: How to get: Bellow 
+a. Access Key: How to get: Bellow
 
-b. Secret Key: How to get: Bellow.
+b. Secret Key: How to get: Bellow
+
+c. Bucket Name: The name of bucket that you want to delete.
 
 How to find AWS Access Key and Secret Access Key?
 
@@ -20,8 +22,4 @@ In order for MigrationWiz to access your Amazon Web Services (AWS) account autom
 
 To find your Access Key and Secret Access Key:
 
-Log in to your AWS Management Console.
-Click on your user name at the top right of the page.
-Click on the Security Credentials link from the drop-down menu.
-Find the Access Credentials section, and copy the latest Access Key ID.
-Click on the Show link in the same row, and copy the Secret Access Key.
+Log in to your AWS Management Console. Click on your user name at the top right of the page. Click on the Security Credentials link from the drop-down menu. Find the Access Credentials section, and copy the latest Access Key ID. Click on the Show link in the same row, and copy the Secret Access Key.
