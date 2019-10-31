@@ -2,7 +2,7 @@
    "innerCode":200,
    "data":{
       "name":"Creates a user",
-      "description":"Creates a new user in Office365",
+      "description":"Creates a new user in Azure AD",
       "Timeout":null,
       "class":[
 
