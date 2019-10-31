@@ -1,4 +1,4 @@
-## AzureADUpdateUser - Activity to update a user in Azure AD for Office365.
+## AzureADUpdateUser - Activity to update a user in Azure AD.
 
 ##### DLL's to reference
 Microsoft.Graph.dll
