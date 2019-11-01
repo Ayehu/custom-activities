@@ -46,7 +46,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                     var dt = GetDataTable(res as Dictionary<string, string>);
 
-                    return this.GenerateActivityResult(response);
+                    return this.GenerateActivityResult(dt);
                 }
             }
             else
@@ -82,7 +82,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                 if (jToken.Type == JTokenType.Object)
                 {
-                    var nested_result = ExposeJson(jToken as JObject, jProperty.Name + "_");
+                    var nested_result = ExposeJson(jToken as JObject, append + jProperty.Name + "_");
                     result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
                 }
                 else if (jToken.Type != JTokenType.Array)
