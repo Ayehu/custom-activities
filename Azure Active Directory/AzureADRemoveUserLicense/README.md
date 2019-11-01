@@ -1,4 +1,4 @@
-## AzureADGetUserInfo - Activity to remove Exchange Online license from a user in Azure AD for Office365.
+## AzureADRemoveUserLicense - Activity to remove Exchange Online license from a user in Azure AD.
 
 ##### DLL's to reference
 Microsoft.Graph.dll

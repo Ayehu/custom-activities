@@ -1,48 +1,23 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureADUpdateUser",
-    "description": "Updates a user in Azure AD",
+    "name": "Create security Group",
+    "description": "Create Active Directory security group",
     "Timeout": null,
-    "class": [],
+    "class": [
+
+    ],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
         {
           "value": "",
           "required": true,
-          "key": "userEmail",
-          "label": "User Email",
-          "labelKey": "USER_EMAIL_VALUE",
+          "key": "groupName",
+          "label": "Group Name",
+          "labelKey": "GROUP_NAME_VALUE",
           "baseType": "control",
           "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": false,
-          "key": "firstName",
-          "label": "First Name",
-          "labelKey": "FIRST_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": false,
-          "key": "lastName",
-          "label": "Last Name",
-          "labelKey": "LAST_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": false,
-          "key": "password",
-          "label": "Password",
-          "labelKey": "PASSWORD_VALUE",
-          "baseType": "control",
-          "controlType": "password"
         },
         {
           "value": "",

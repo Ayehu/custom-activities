@@ -1,4 +1,4 @@
-## AzureADDeleteUser - Activity to delete a user in Azure AD for Office365.
+## AzureADDeleteUser - Activity to delete a user in Azure AD.
 
 ##### DLL's to reference
 Microsoft.Graph.dll

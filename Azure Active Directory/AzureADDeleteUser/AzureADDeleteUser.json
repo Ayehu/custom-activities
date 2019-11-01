@@ -2,7 +2,7 @@
    "innerCode":200,
    "data":{  
       "name":"Delete a user",
-      "description":"Deletes a user in Office365",
+      "description":"Deletes a user in Azure AD",
       "Timeout":null,
       "class":[  
 
