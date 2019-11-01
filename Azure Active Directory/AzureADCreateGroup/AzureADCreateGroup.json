@@ -1,0 +1,56 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Create security Group",
+    "description": "Create Active Directory security group",
+    "Timeout": null,
+    "class": [
+
+    ],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "groupName",
+          "label": "Group Name",
+          "labelKey": "GROUP_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "appId",
+          "label": "Application Id",
+          "labelKey": "APPID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant Id",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secret",
+          "label": "Secret",
+          "labelKey": "SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
