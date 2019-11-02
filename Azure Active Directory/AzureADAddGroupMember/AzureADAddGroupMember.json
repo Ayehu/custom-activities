@@ -1,0 +1,494 @@
+{  
+   "innerCode":200,
+   "data":{  
+      "name":"AzureADAddGroupMember",
+      "description":"Add a member to Azure Active Directory security group.",
+      "Timeout":null,
+      "class":[  
+      ],
+      "rootSettings":{  
+         "isCollapse":false,
+         "activitySettings":[
+            {  
+               "value":"",
+               "required":true,
+               "key":"groupName",
+               "label":"Group Name",
+               "labelKey":"GROUP_Name_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+			{
+               "value":"",
+               "required":true,
+               "key":"memberType",
+			   "idFieldName": "memberType",
+               "disabled":false,
+               "styleClass":"",
+               "label":"Member Type",
+               "labelKey":"MEMBER_TYPE_VALUE",
+               "baseType":"control",
+               "controlType":"autocomplete",
+               "controlOptions":[
+                  {
+                     "key":"user",
+                     "value":"User Email"
+                  },
+                  {
+                     "key":"role",
+                     "value":"Role"
+                  }
+               ]
+            },
+			{  
+               "value":"",
+               "required":false,
+               "key":"userEmail",
+               "label":"User Email",
+               "labelKey":"USER_EMAIL_VALUE",
+               "baseType":"control",
+               "controlType":"textbox",
+            },
+			{  
+			   "value":"",
+               "required":false,
+               "key":"roleId",
+			   "idFieldName": "roleId",
+               "label":"Role",
+               "labelKey":"ROLE_VALUE",
+               "baseType":"control",
+               "controlType":"autocomplete",
+			   "controlOptions": [
+				{
+				   "key": "01399c10-b17e-4d13-a039-9ba79adb7a4e",
+				   "value": "Microsoft password reset service"
+				},
+				{
+				   "key": "02cdad7a-3f2f-4310-8656-105bf7744a88",
+				   "value": "AzureSupportCenter"
+				},
+				{
+				   "key": "03557e41-aeb5-4cec-8162-d40fe8e20dea",
+				   "value": "Azure Media Service"
+				},
+				{
+				   "key": "04a3b7ec-448f-42c1-a980-e009d8b3bb4a",
+				   "value": "Microsoft Teams Mailhook"
+				},
+				{
+				   "key": "050a3d53-59d6-444a-b171-208e68542c0c",
+				   "value": "Automated Call Distribution"
+				},
+				{
+				   "key": "056adc80-7d74-430b-814d-8bed6d9b9281",
+				   "value": "PowerAppsService"
+				},
+				{
+				   "key": "06b86811-2b35-4e3a-bd6e-85a189f4ecb4",
+				   "value": "Office365 Zoom"
+				},
+				{
+				   "key": "0710af67-dc74-4475-a2d4-9800d1915bb4",
+				   "value": "Microsoft Activity Feed Service"
+				},
+				{
+				   "key": "07bc226d-3b81-4e17-8f95-164ec8ac88d3",
+				   "value": "Azure Windows VM Sign-In"
+				},
+				{
+				   "key": "07d8c25d-a6d4-4d35-a2da-8697eae567a0",
+				   "value": "Microsoft Intune Enrollment"
+				},
+				{
+				   "key": "08676b5d-36e8-4649-aaa9-ff661a89e0e2",
+				   "value": "OCPS Checkin Service"
+				},
+				{
+				   "key": "08a5cf5e-2a2e-4e81-b0ce-98c9adafb77e",
+				   "value": "Microsoft Azure Linux Virtual Machine Sign-In"
+				},
+				{
+				   "key": "0a05a0a8-30d3-4b94-b828-76628403d6ea",
+				   "value": "Substrate Instant Revocation Pipeline"
+				},
+				{
+				   "key": "0d4b1a66-83a6-4955-b038-3ee0e54e3a17",
+				   "value": "Cortana at Work Service"
+				},
+				{
+				   "key": "0ddb5432-55f9-4a03-bd2c-7f87f2151b2f",
+				   "value": "IPSubstrate"
+				},
+				{
+				   "key": "0f1aad42-ab44-4de1-9359-f883b1850106",
+				   "value": "Azure Multi-Factor Auth Client"
+				},
+				{
+				   "key": "10a44ed7-ffaa-49fb-bf98-09f9f868761f",
+				   "value": "Kaizala Sync Service"
+				},
+				{
+				   "key": "11b42ed0-0062-49fa-ae5c-9d1e8302d589",
+				   "value": "CPIM Service"
+				},
+				{
+				   "key": "11ef565a-f408-4bae-b7e1-9f56d7594811",
+				   "value": "Office 365 Configure"
+				},
+				{
+				   "key": "1245da53-2a64-4321-b04a-1ddac707715c",
+				   "value": "Power BI Premium"
+				},
+				{
+				   "key": "1390d91e-9f58-4f92-b02a-223c8dc981e1",
+				   "value": "Skype Presence Service"
+				},
+				{
+				   "key": "14e69453-0d3b-45d1-8663-cefc6ffda1ba",
+				   "value": "Microsoft Exact Data Match Upload Agent"
+				},
+				{
+				   "key": "161f9550-a423-46d6-ad3a-4b42985467db",
+				   "value": "Azure AD Application Proxy"
+				},
+				{
+				   "key": "169f337d-20f8-40c0-a694-c9845e5ffa99",
+				   "value": "Microsoft Teams Task Service"
+				},
+				{
+				   "key": "16bf961c-e5f8-4fbe-aaff-e87bbaaea82e",
+				   "value": "Microsoft Kaizala"
+				},
+				{
+				   "key": "19f39247-332b-4119-bf95-210a52b4e326",
+				   "value": "OCaaS Client Interaction Service"
+				},
+				{
+				   "key": "1a51e1b2-0ea7-487d-84b8-27210bb08fe2",
+				   "value": "IAMTenantCrawler"
+				},
+				{
+				   "key": "1b932b16-aecc-42f4-acca-86d3a0a738d7",
+				   "value": "Azure AD Identity Governance - Entitlement Management"
+				},
+				{
+				   "key": "1cd0af91-e9a8-414a-9741-66b6af24142c",
+				   "value": "Microsoft.OfficeModernCalendar"
+				},
+				{
+				   "key": "23fa3088-0096-4f45-b2a3-f9dfe5b02434",
+				   "value": "Azure Multi-Factor Auth Connector"
+				},
+				{
+				   "key": "24bf5b24-bf2a-4437-a877-b6ce8bf1b0cb",
+				   "value": "O365Account"
+				},
+				{
+				   "key": "2759be25-e75f-41e6-9895-2fc2143d9465",
+				   "value": "Azure Cost Management XCloud"
+				},
+				{
+				   "key": "2815ea59-e69d-4887-bd64-9d84880b42a3",
+				   "value": "Microsoft Exact Data Match Service"
+				},
+				{
+				   "key": "2d1a4bce-c0b4-4e9d-856b-ec11199e3479",
+				   "value": "KaizalaActionsPlatform"
+				},
+				{
+				   "key": "2d48dbcd-0097-400a-82a4-3306b98098ff",
+				   "value": "DeploymentScheduler"
+				},
+				{
+				   "key": "2dba2ddc-7a05-42ab-9045-3818ead22110",
+				   "value": "Azure Support - Network Watcher"
+				},
+				{
+				   "key": "2ec9b62f-adf0-4a20-b092-8c8dca63d316",
+				   "value": "Microsoft Intune AndroidSync"
+				},
+				{
+				   "key": "2f21892b-ab3a-45e8-a85b-f3a1322a680c",
+				   "value": "Microsoft Teams AadSync"
+				},
+				{
+				   "key": "2f26cc2d-0ccc-45d3-b288-226cbc041123",
+				   "value": "Cortana at Work Bing Services"
+				},
+				{
+				   "key": "30d98681-57b4-4290-9d51-013024f78fc5",
+				   "value": "Microsoft Intune Advanced Threat Protection Integration"
+				},
+				{
+				   "key": "31484f8e-0b00-4e08-8da2-de3a95f887d2",
+				   "value": "Azure Information Protection"
+				},
+				{
+				   "key": "31750404-863f-49ae-88e5-7e7614142dab",
+				   "value": "Microsoft Teams Chat Aggregator"
+				},
+				{
+				   "key": "3364ef78-a19c-436b-b87c-5cdcc125a1bb",
+				   "value": "Microsoft Command Service"
+				},
+				{
+				   "key": "34dc61d8-c41e-4c73-8b17-390b9d3f1311",
+				   "value": "Intune DeviceActionService"
+				},
+				{
+				   "key": "3510e2c9-2c1e-44ba-9868-18aaccd25d73",
+				   "value": "Azure Traffic Manager and DNS"
+				},
+				{
+				   "key": "36fb578f-dda4-4917-996e-c115196df05d",
+				   "value": "Compute Usage Provider"
+				},
+				{
+				   "key": "3774bdf5-b41e-4c05-ad11-fc356675ccf6",
+				   "value": "Microsoft Azure AD Identity Protection"
+				},
+				{
+				   "key": "3989936d-a009-4285-8462-5fa25bb1ca70",
+				   "value": "ComplianceWorkbenchApp"
+				},
+				{
+				   "key": "39e524bf-10f0-4f75-9c31-8a999cf4ce4c",
+				   "value": "Microsoft Device Directory Service"
+				},
+				{
+				   "key": "3a9cee45-3f94-4662-a1d7-261e2308dbef",
+				   "value": "Azure Analysis Services"
+				},
+				{
+				   "key": "3abe55cd-dcba-4e6f-a13f-ed29175cf986",
+				   "value": "Office 365 Exchange Online"
+				},
+				{
+				   "key": "3b0e1d78-008e-488d-a66e-d9d39c77d201",
+				   "value": "GatewayRP"
+				},
+				{
+				   "key": "3b5e91e2-f2b5-4371-af65-93d0eda1ca3e",
+				   "value": "Microsoft Teams UIS"
+				},
+				{
+				   "key": "3d9943bc-8c6a-4b0e-8084-cadf428e757f",
+				   "value": "ProjectWorkManagement"
+				},
+				{
+				   "key": "3daeb6ae-4d60-446c-825d-40f28bb849f2",
+				   "value": "Microsoft.Azure.ActiveDirectoryIUX"
+				},
+				{
+				   "key": "4036d569-6b71-4d45-8491-9f81ba61ecdc",
+				   "value": "Office 365 Client Admin"
+				},
+				{
+				   "key": "406ef666-35ed-47e2-8686-7909a538f7a4",
+				   "value": "Microsoft Teams Graph Service"
+				},
+				{
+				   "key": "41d2434f-2cd3-403e-a1bf-58a96885f075",
+				   "value": "Microsoft Whiteboard Services"
+				},
+				{
+				   "key": "4223ddc4-92c1-4429-b145-c889ecc15a0d",
+				   "value": "Microsoft Teams Web Client"
+				},
+				{
+				   "key": "42ac7ea7-946f-44be-983e-318f56b13a74",
+				   "value": "MS-PIM"
+				},
+				{
+				   "key": "42c0ccf0-17a2-41d5-8ec7-499040bf4c5d",
+				   "value": "Microsoft Approval Management"
+				},
+				{
+				   "key": "433cbabd-d117-4cd8-a07c-9573fec8a398",
+				   "value": "Microsoft Fluid Framework Preview"
+				},
+				{
+				   "key": "43ed08f0-6f72-4681-8dea-fbdb19b6c022",
+				   "value": "Azure Regional Service Manager"
+				},
+				{
+				   "key": "44b43c0c-1443-4bc6-9af0-fe988229f68b",
+				   "value": "Microsoft App Access Panel"
+				},
+				{
+				   "key": "4632d068-0ae6-41e5-a420-5ac73b39a45a",
+				   "value": "Microsoft Cloud App Security"
+				},
+				{
+				   "key": "466fa543-450a-4c3c-9eb2-a8da81d43b8d",
+				   "value": "Windows Azure Service Management API"
+				},
+				{
+				   "key": "47a00b9a-8837-49f2-844e-a253aa0a9f8a",
+				   "value": "Media Analysis and Transformation Service"
+				},
+				{
+				   "key": "47c20bb1-3a8b-4377-9d3c-049f1402b79f",
+				   "value": "Skype Teams Firehose"
+				},
+				{
+				   "key": "4920cc7c-5a2b-4c84-9c3f-c104500a3711",
+				   "value": "Microsoft Intune Checkin"
+				},
+				{
+				   "key": "494e17cc-90fc-4e6e-93b6-03bfad266e25",
+				   "value": "IAM Supportability"
+				},
+				{
+				   "key": "49618d68-d062-493c-baf6-14652909de32",
+				   "value": "Office 365 Reports"
+				},
+				{
+				   "key": "4a2e6eda-e088-4d66-945b-b8156f8ef3ce",
+				   "value": "Azure AD Notification"
+				},
+				{
+				   "key": "4c9fe662-49da-4566-98e4-8a7134c7fad7",
+				   "value": "Microsoft Teams - Device Admin Agent"
+				},
+				{
+				   "key": "4e0dc744-03ca-421c-947e-b7e3bc9bde33",
+				   "value": "Microsoft Rights Management Services"
+				},
+				{
+				   "key": "4e612255-30bc-4b04-abf5-088ec1ac7b3c",
+				   "value": "Azure DNS"
+				},
+				{
+				   "key": "4f1a1e15-ca94-4491-892b-37d56d61d755",
+				   "value": "Outlook Online Add-in App"
+				},
+				{
+				   "key": "4fe3cd7b-c271-4b75-898c-7e3f2f3f10be",
+				   "value": "Skype for Business Management Reporting and Analytics - Legacy"
+				},
+				{
+				   "key": "50a815c7-5f9b-4c2b-9f7f-9497f89e2ced",
+				   "value": "Microsoft Information Protection Sync Service"
+				},
+				{
+				   "key": "52012822-a3bf-493f-b8c4-10c26f0b3177",
+				   "value": "BenefitsFD"
+				},
+				{
+				   "key": "534da122-90b8-4566-8235-1da9fa084070",
+				   "value": "Skype Business Voice Directory"
+				},
+				{
+				   "key": "53803c56-dcfd-44de-8993-ab0acab8b11f",
+				   "value": "Microsoft Flow Portal"
+				},
+				{
+				   "key": "55342365-4b1e-4dcf-b2da-c93981ab2e93",
+				   "value": "Marketplace Caps API"
+				},
+				{
+				   "key": "55aefc2d-93eb-4070-928e-41066b42a0eb",
+				   "value": "Azure Storage"
+				},
+				{
+				   "key": "55d21a03-257f-4afe-819a-f3ec0a5311d3",
+				   "value": "Azure AD Identity Governance"
+				},
+				{
+				   "key": "5897827b-b97f-4024-8a94-ff59b56be9ca",
+				   "value": "Windows Azure Active Directory"
+				},
+				{
+				   "key": "5899a71b-1d18-460b-a7b5-fb016278a38b",
+				   "value": "Call Recorder"
+				},
+				{
+				   "key": "58bb2654-0f72-43c3-9bbc-afef06325407",
+				   "value": "Office 365 Yammer"
+				},
+				{
+				   "key": "59c66152-e617-4095-b3ab-bbb740da4ce9",
+				   "value": "AADPremiumService"
+				},
+				{
+				   "key": "5fac39e9-1cb6-4ec8-bd9d-226e3a48424d",
+				   "value": "Microsoft Teams Bots"
+				},
+				{
+				   "key": "5fbd30fd-150f-46fe-870b-57d2b705f393",
+				   "value": "AIGraphClient"
+				},
+				{
+				   "key": "5fc5b918-d5c3-4a47-8bf9-87ce729a257a",
+				   "value": "Microsoft Teams Retail Service"
+				},
+				{
+				   "key": "633ad13e-e291-4d6a-b898-7fffa136df03",
+				   "value": "Microsoft.MileIQ.Dashboard"
+				},
+				{
+				   "key": "64852cdd-e51e-447e-8ba3-5180c698f837",
+				   "value": "Microsoft.Azure.SyncFabric"
+				},
+				{
+				   "key": "6491fcb0-8830-4967-b6b3-3a4d43b3b54e",
+				   "value": "Service Encryption"
+				},
+				{
+				   "key": "665ab4a0-2537-4381-b438-5523cd29544e",
+				   "value": "Microsoft Teams Wiki Images Migration"
+				},
+				{
+				   "key": "66aa8d65-c645-41c0-99df-dfecd3c5071c",
+				   "value": "IC3 Long Running Operations Service"
+				},
+				{
+				   "key": "683ee82c-598f-43fe-a6c8-2e678e07de4c",
+				   "value": "SharePoint Notification Service"
+				},
+				{
+				   "key": "68472a71-82c5-46c7-bdfa-ebf685bfca3b",
+				   "value": "Exchange Office Graph Client for AAD - Noninteractive"
+				},
+				{
+				   "key": "6a307e22-4973-469b-9a88-4aad809c41e4",
+				   "value": "Microsoft Teams Partner Tenant Administration"
+				},
+			   ]
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"appId",
+               "label":"Application Id",
+               "labelKey":"APPID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"tenantId",
+               "label":"Tenant Id",
+               "labelKey":"TENANTID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"secret",
+               "label":"Secret",
+               "labelKey":"SECRET_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            }
+         ],
+         "index":"1",
+         "label":"main",
+         "labelKey":null
+      }
+   },
+   "message":"SUCCESS"
+}

@@ -39,10 +39,10 @@ namespace Ayehu.Sdk.ActivityCreation
             var auth = GetAuthenticated();
             var adGroup = auth.ActiveDirectoryGroups.List().ToList().Where(x => x.Name.ToLower() == groupName.ToLower()).FirstOrDefault();
 
-            if (adGroup == null)
-            {
+            if (adGroup != null)
                 auth.ActiveDirectoryGroups.DeleteById(adGroup.Id);
-            }
+            else
+                throw new Exception(string.Format("Group with name '{0}' not found", groupName));
 
             return this.GenerateActivityResult(GetActivityResult);
         }

@@ -30,7 +30,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// Group name to containing member
+        /// Group name containing member
         /// </summary>
         public string groupName;
 
@@ -48,7 +48,17 @@ namespace Ayehu.Sdk.ActivityCreation
                 throw new Exception(string.Format("Group with name '{0} not found'", groupName));
 
             var adGroupMembers = adGroup.ListMembers();
-            var member = adGroupMembers.Where(m => m.Id == memberId).FirstOrDefault();
+            Microsoft.Azure.Management.Graph.RBAC.Fluent.IActiveDirectoryObject member = null;
+
+            if (memberId.Contains("@"))
+            {
+                var user = auth.ActiveDirectoryUsers.List().Where(x => x.UserPrincipalName.ToLower() == memberId.ToLower()).FirstOrDefault();
+
+                if (user != null)
+                    memberId = user.Id;
+            }
+
+            member = adGroupMembers.Where(m => m.Id == memberId).FirstOrDefault();
 
             if (member != null)
                 adGroup.Update().WithoutMember(member.Id).Apply();

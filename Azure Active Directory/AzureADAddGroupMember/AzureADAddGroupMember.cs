@@ -41,10 +41,17 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userEmail;
 
+        public string role;
         /// <summary>
         /// Role id to add to the group
         /// </summary>
         public string roleId;
+
+        public string memberType;
+        /// <summary>
+        /// Type of the member added to the group (User or Role)
+        /// </summary>
+        public string memberTypeId;
 
         public ICustomActivityResult Execute()
         {
@@ -54,7 +61,7 @@ namespace Ayehu.Sdk.ActivityCreation
             if (adGroup == null)
                 throw new Exception(string.Format("Group with name '{0} not found'", groupName));
 
-            if (!string.IsNullOrEmpty(userEmail))
+            if (memberTypeId == "user" && !string.IsNullOrEmpty(userEmail))
             {
                 var users = auth.ActiveDirectoryUsers.List();
                 var user = auth.ActiveDirectoryUsers.List().Where(u => u.UserPrincipalName.ToLower() == userEmail.ToLower()).FirstOrDefault();
@@ -64,7 +71,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 else
                     throw new Exception(string.Format("User with email '{0}' not found", userEmail));
             }
-            else if (!string.IsNullOrEmpty(roleId))
+            else if (memberTypeId == "role" && !string.IsNullOrEmpty(roleId))
             {
                 var sp = auth.ServicePrincipals.List().Where(r => r.Id == roleId).FirstOrDefault();
 

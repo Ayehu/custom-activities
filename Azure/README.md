@@ -1,2 +1,2 @@
 ## Azure Activities
-Activities repository to Azure Virtual Machine.
+Activities repository to manage Azure Virtual Machine.
