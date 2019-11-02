@@ -5,6 +5,9 @@ using System.Text;
 using System.Net.Mail;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
@@ -16,9 +19,9 @@ namespace Ayehu.Sdk.ActivityCreation
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/vnd.pagerduty+json;version=2";
         private readonly string METHOD = "POST";
-		private readonly string TYPE = "incident";
+        private readonly string TYPE = "incident";
         private readonly string SERVICE_TYPE = "service_reference";
-        
+
         #endregion
 
         #region Incoming properties 
@@ -37,12 +40,12 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-        
-       	    if (!IsValid(From))
+
+            if (!IsValid(From))
             {
                 throw new Exception("Email not valid.");
             }
-        
+
             var httpWebRequest = HttpRequest();
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -54,17 +57,12 @@ namespace Ayehu.Sdk.ActivityCreation
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 if (httpResponse.StatusCode == HttpStatusCode.Created)
                 {
-                
+
                     using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                     {
                         var responseString = streamReader.ReadLine();
-                        var search_string = "\"incident_number\":";
-                        var cutIndex = responseString.IndexOf(search_string);
-                        var comma_index = responseString.IndexOf(',');
-                        var cut_index = cutIndex + search_string.Length;
-                        var result = responseString.Substring(cut_index, comma_index - cut_index);
-            
-                   		return this.GenerateActivityResult(result);
+                        var id = ExposeJson(JObject.Parse(responseString));
+                        return this.GenerateActivityResult(id);
                     }
                 }
                 else
@@ -72,7 +70,32 @@ namespace Ayehu.Sdk.ActivityCreation
                     throw new Exception("Error");
                 }
             }
-        } 
+        }
+
+        private string ExposeJson(JObject jObject, string append = "")
+        {
+            foreach (var jProperty in jObject.Properties())
+            {
+                var jToken = jProperty.Value;
+
+                if (jToken.Type == JTokenType.Object)
+                {
+                    var res = ExposeJson(jToken as JObject, append + jProperty.Name + "_");
+                    if (!string.IsNullOrEmpty(res))
+                    {
+                        return res;
+                    }
+                }
+                else if (jToken.Type != JTokenType.Array)
+                {
+                    if (append + jProperty.Name == "incident_id")
+                    {
+                        return jProperty.Value.ToString();
+                    }
+                }
+            }
+            return null;
+        }
 
         #endregion
 
@@ -94,7 +117,7 @@ namespace Ayehu.Sdk.ActivityCreation
         private string IncidentJsonBuilder()
         {
             StringBuilder incidentJson = new StringBuilder();
-            
+
             incidentJson.Append("{\"incident\": { \"type\": \"");
             incidentJson.Append(TYPE);
             incidentJson.Append("\",\"title\": \"");
@@ -111,7 +134,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
             return incidentJson.ToString();
         }
-        
+
         private bool IsValid(string emailaddress)
         {
             try
