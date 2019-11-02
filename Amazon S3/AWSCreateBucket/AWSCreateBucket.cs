@@ -14,7 +14,7 @@ namespace Ayehu.Sdk.AWSS3
         public string AccessKey;
         public string SecretKey;
         public static S3CannedACL cannedACL = S3CannedACL.Private;
-        public ICustomActivityResult Execute()
+        private ICustomActivityResult Execute()
         {
             var message = string.Empty;
             try
