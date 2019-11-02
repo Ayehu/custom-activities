@@ -41,9 +41,12 @@ namespace Ayehu.Sdk.ActivityCreation
                 {
                     if (!filter.Contains(f.Name))
                     {
-                        f.GetValue(o, null);
-                        dt.Columns.Add(f.Name, f.PropertyType);
-                        dt.Rows[0][f.Name] = f.GetValue(o, null);
+                        var value=f.GetValue(o, null);
+                        if (value != null)
+                        {
+                            dt.Columns.Add(f.Name, f.PropertyType);
+                            dt.Rows[0][f.Name] = f.GetValue(o, null);
+                        }
                     }
                 }
                 catch { }
