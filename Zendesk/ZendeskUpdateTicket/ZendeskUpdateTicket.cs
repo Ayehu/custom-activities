@@ -15,7 +15,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Username = null;
         public string ApiToken = null;
 
-
+        public string TicketId = null;
         public string Comment = null;
         public string Subject = null;
         public string Type = null;
@@ -30,6 +30,7 @@ namespace Ayehu.Sdk.ActivityCreation
         | SecurityProtocolType.Ssl3;
             var api = new ZendeskApi(Domain, Username, ApiToken,"");
             var ticket = new Ticket();
+            ticket.Id = long.Parse(TicketId);
             Comment comment = null;
             if(!string.IsNullOrEmpty(Comment))
             {

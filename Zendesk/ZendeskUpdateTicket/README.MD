@@ -1,5 +1,5 @@
 ﻿
-### ZendeskUpdateTicket - Activity to update a new ticket.
+### ZendeskUpdateTicket - Activity to update a ticket.
 
 **DLL's to reference**
 ZendeskApi_v2;

@@ -1,8 +1,8 @@
 ﻿{
   "data": {
     "name": "ZendiskGetTicket",
-    "description": "Returns a number of ticket properties though not the ticket comments",
-    "Timeout": "00:01:00",
+    "description": "Get ticket properties",
+    "Timeout": "00:00:30",
     "class": [],
     "rootSettings": {
       "isCollapse": false,
@@ -43,7 +43,7 @@
           "label": "TicketId",
           "baseType": "control",
           "labelKey": "TicketId",
-          "controlType": "textarea",
+          "controlType": "textbox",
           "value": "",
           "styleClass": null,
           "required": true

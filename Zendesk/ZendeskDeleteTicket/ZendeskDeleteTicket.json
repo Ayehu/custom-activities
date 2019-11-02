@@ -43,7 +43,7 @@
           "label": "TicketId",
           "baseType": "control",
           "labelKey": "TicketId",
-          "controlType": "textarea",
+          "controlType": "textbox",
           "value": "",
           "styleClass": null,
           "required": true
