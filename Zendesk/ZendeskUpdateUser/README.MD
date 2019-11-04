@@ -32,6 +32,8 @@ ZendeskApi_v2.Models.Users;
 
 **Verified** - Specifies the verification status of the updating user.
 
+**Suspended** - Specifies the suspension status of the updating user.
+
 ### Zendesk API Reference.
 
 [Update User](https://developer.zendesk.com/rest_api/docs/support/users#update-user)
