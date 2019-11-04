@@ -24,17 +24,17 @@ namespace Ayehu.Sdk.ActivityCreation
         | SecurityProtocolType.Ssl3;
             var api = new ZendeskApi(Domain, Username, ApiToken, "");
 
-            api.Users.SetUsersPassword(long.Parse(UserId), NewPassword);
-
-            return this.GenerateActivityResult(SuccessResult());
+            var success=api.Users.SetUsersPassword(long.Parse(UserId), NewPassword);
+            var result=success?"Success":"Fail";
+            return this.GenerateActivityResult(SuccessResult(result));
 
         }
       
-        static DataTable SuccessResult()
+        static DataTable SuccessResult(string result)
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result", typeof(string));
-            dt.Rows.Add("Success");
+            dt.Rows.Add(result);
             return dt;
         }
 

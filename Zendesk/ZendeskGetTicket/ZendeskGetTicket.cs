@@ -27,7 +27,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         }
 
-       
+
         private DataTable SuccessResult(object o)
         {
             DataTable dt = new DataTable("resultSet");
@@ -41,12 +41,16 @@ namespace Ayehu.Sdk.ActivityCreation
                 {
                     if (!filter.Contains(f.Name))
                     {
-                        var value=f.GetValue(o, null);
-                        if (value != null)
+                        var value = f.GetValue(o, null);
+                        var type = f.PropertyType;
+                        if (value == null)
                         {
-                            dt.Columns.Add(f.Name, f.PropertyType);
-                            dt.Rows[0][f.Name] = f.GetValue(o, null);
+                            value = "";
+                            type = typeof(string);
                         }
+
+                        dt.Columns.Add(f.Name, type);
+                        dt.Rows[0][f.Name] = value;
                     }
                 }
                 catch { }

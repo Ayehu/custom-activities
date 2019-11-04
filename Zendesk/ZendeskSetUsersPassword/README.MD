@@ -12,9 +12,13 @@ ZendeskApi_v2;
 
 ### Mandatory fields.
 **Username** - Specifies the username of the Zendesk account.
+
 **ApiToken** - Specifies the api token of the Zendesk account.
+
 **Domain** - Specifies the sub domain of the Zendesk account.
+
 **UserId** - Specifies the user id.
+
 **NewPassword** - Specifies the new password.
 
 ### Zendesk API Reference.
