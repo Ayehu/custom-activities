@@ -1,22 +1,22 @@
 ## AzureADRemoveGroupMember - Activity to remove a member from Azure AD security group.
 
 ##### DLL's to reference
-Microsoft.Azure.Management.Fluent.dll
-Microsoft.Azure.Management.ResourceManager.Fluent.dll
-Microsoft.Azure.Management.Graph.RBAC.Fluent.dll
-Microsoft.Rest.ClientRuntime.dll
-System.Net.Http.dll
+Microsoft.Azure.Management.Fluent.dll<br/>
+Microsoft.Azure.Management.ResourceManager.Fluent.dll<br/>
+Microsoft.Azure.Management.Graph.RBAC.Fluent.dll<br/>
+Microsoft.Rest.ClientRuntime.dll<br/>
+System.Net.Http.dll<br/>
 Newtonsoft.Json.dll
 
 ##### Libraries to import
-using Microsoft.Azure.Management.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
+using Microsoft.Azure.Management.Fluent;<br/>
+using Microsoft.Azure.Management.ResourceManager.Fluent;<br/>
+using Microsoft.Azure.Management.ResourceManager.Fluent.Core;<br/>
 
-You'd need to store the API specific information from the portal.
-ApplicationId
-TenantId
-Secret
+You'd need to store the API specific information from the portal.<br/>
+ApplicationId<br/>
+TenantId<br/>
+Secret<br/>
 
 These fields should be sent when calling the API.
 
