@@ -1,5 +1,5 @@
 ﻿
-### ZendeskSetUsersPassword - Activity to set users password by admin.
+### ZendeskPasswordReset - Activity to set users password by admin.
 
 **DLL's to reference**
 ZendeskApi_v2;

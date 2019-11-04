@@ -26,11 +26,9 @@ ZendeskApi_v2.Models.Users;
 
 **Role** - Specifies the role of the new user.
 
-**Active** - Specifies the active status of the new user.
-
 **Verified** - Specifies the verification status of the new user.
 
-
+When creating a user, if the property Verified is set to Yes, the user will not need to confirm via the activation link in the email.
 ### Zendesk API Reference.
 
 [Create User](https://developer.zendesk.com/rest_api/docs/support/users#create-user)
