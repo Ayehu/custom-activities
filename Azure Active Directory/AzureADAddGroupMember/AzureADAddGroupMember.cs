@@ -41,13 +41,21 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userEmail;
 
+        /// <summary>
+        /// The key of the UI field. not used in the code.
+        /// </summary>
         public string role;
+        
         /// <summary>
         /// Role id to add to the group
         /// </summary>
         public string roleId;
 
+        /// <summary>
+        /// The key of the UI field. not used in the code.
+        /// </summary>
         public string memberType;
+        
         /// <summary>
         /// Type of the member added to the group (User or Role)
         /// </summary>
