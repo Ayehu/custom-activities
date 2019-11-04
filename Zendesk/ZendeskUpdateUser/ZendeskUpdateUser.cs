@@ -17,7 +17,6 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public string UserId = null;
         public string Email = null;
-        public string Active = null;
         public string Name = null;
         public string Phone = null;
         public string Role = null;
@@ -41,9 +40,7 @@ namespace Ayehu.Sdk.ActivityCreation
             if (!string.IsNullOrEmpty(Role))
                 user.Role = Role;
             if (!string.IsNullOrEmpty(Verified))
-                user.Verified = bool.Parse(Verified);
-            if (!string.IsNullOrEmpty(Active))
-                user.Active = bool.Parse((Active));
+                user.Verified = Verified == "Yes";
 
             var res = api.Users.UpdateUser(user);
             return this.GenerateActivityResult(SuccessResult());

@@ -40,7 +40,7 @@
         },
 	      {
 		      "key": "UserId",
-		      "label": "UserId",
+		      "label": "User Id",
 		      "baseType": "control",
 		      "labelKey": "UserId",
 		      "controlType": "textarea",
@@ -114,34 +114,14 @@
           "controlOptions": [
             {
               "key": "Yes",
-              "value": "true"
+              "value": "Yes"
             },
             {
               "key": "No",
-              "value": "false"
+              "value": "No"
             }
           ]
-        },
-	      
-	      {
-		      "key": "Active",
-		      "label": "Active",
-		      "baseType": "control",
-		      "labelKey": "Active",
-		      "controlType": "autocomplete",
-		      "value": "",
-		      "required": false,
-		      "controlOptions": [
-			      {
-				      "key": "Yes",
-				      "value": "true"
-			      },
-			      {
-				      "key": "No",
-				      "value": "false"
-			      }
-		      ]
-	      }
+        }
       ],
       "index": "1",
       "label": "main",
