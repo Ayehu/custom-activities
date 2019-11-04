@@ -21,7 +21,7 @@ Secret
 These fields should be sent when calling the API.
 
 ### The below fields needs to be provided to add a group member: 
-**groupName**           - Display Name to add the member (Case insensitive)
+**groupName**           - The name of the group to add the member (Case insensitive)
 
 **userEmail**			- User's email to add to the group (Case insensitive)
 
