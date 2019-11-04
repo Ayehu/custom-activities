@@ -20,7 +20,7 @@ namespace Ayehu.Sdk.AWSS3
             try
             {
                 var credentials = new BasicAWSCredentials(AccessKey, SecretKey);
-                ListBucketsResponse response = new AmazonS3Client(credentials, RegionEndpoint.USEast1).ListBuckets();
+                ListBucketsResponse response = new AmazonS3Client(credentials, RegionEndpoint.USWest2).ListBuckets();
                 foreach (var item in response.Buckets)
                 {
                     if (item.BucketName == bucketName)
