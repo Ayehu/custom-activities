@@ -13,8 +13,11 @@ ZendeskApi_v2.Models.Users;
 
 ### Mandatory fields.
 **Username** - Specifies the username of the Zendesk account.
+
 **ApiToken** - Specifies the api token of the Zendesk account.
+
 **Domain** - Specifies the sub domain of the Zendesk account.
+
 **UserType** -- Specifies the type of users, value can be "admin", "agent" and "end-user".
 ### Zendesk API Reference.
 
