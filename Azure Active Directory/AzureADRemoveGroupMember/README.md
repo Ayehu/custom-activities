@@ -21,8 +21,6 @@ Secret
 These fields should be sent when calling the API.
 
 ### The below fields needs to be provided to remove a member from group:
-**groupName**           - The Group Name to remove the member (Case insensitive)
+**groupName**       - The Group Name to remove the member (Case insensitive)
 
-**userEmail**			- User's email to remove from the group (Case insensitive)
-
-**roleId**				- Role id to remove from the group (It's either userEmail or roleId. Can't be both at the same time)
+**memberId**				- Member to remove from the group (It's either User Email or Role Id) (Case insensitive)
