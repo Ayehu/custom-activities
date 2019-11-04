@@ -21,6 +21,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Phone = null;
         public string Role = null;
         public string Verified = null;
+        public string Suspended = null;
 
         public ICustomActivityResult Execute()
         {
@@ -41,7 +42,8 @@ namespace Ayehu.Sdk.ActivityCreation
                 user.Role = Role;
             if (!string.IsNullOrEmpty(Verified))
                 user.Verified = Verified == "Yes";
-
+            if (!string.IsNullOrEmpty(Suspended))
+                user.Verified = Suspended == "Yes";
             var res = api.Users.UpdateUser(user);
             return this.GenerateActivityResult(SuccessResult());
 

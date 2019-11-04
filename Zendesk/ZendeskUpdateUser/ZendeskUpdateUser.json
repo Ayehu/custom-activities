@@ -121,6 +121,25 @@
               "value": "No"
             }
           ]
+        },
+        {
+          "key": "Suspended",
+          "label": "Suspended",
+          "baseType": "control",
+          "labelKey": "Suspended",
+          "controlType": "autocomplete",
+          "value": "",
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "Yes",
+              "value": "Yes"
+            },
+            {
+              "key": "No",
+              "value": "No"
+            }
+          ]
         }
       ],
       "index": "1",
