@@ -10,7 +10,7 @@ System.Net;
 ZendeskApi_v2;
 ZendeskApi_v2.Models.Tickets;
 
-### Mandatory fields when creating a checkpoint.
+### Mandatory fields.
 **Username** - Specifies the username of the Zendesk account.
 **ApiToken** - Specifies the api token of the Zendesk account.
 **Domain** - Specifies the sub domain of the Zendesk account.
