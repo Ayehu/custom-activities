@@ -15,7 +15,7 @@ namespace ayehu.Sdk.AWSS3
         {
             var message = string.Empty;
             var credentials = new BasicAWSCredentials(AccessKey, SecretKey);
-            using (var result = new AmazonS3Client(credentials, RegionEndpoint.USEast1))
+            using (var result = new AmazonS3Client(credentials, RegionEndpoint.USWest2))
             {
                 result.DeleteBucket(bucketName);
                 message = "Success";
