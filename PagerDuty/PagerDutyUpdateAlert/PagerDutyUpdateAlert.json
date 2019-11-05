@@ -49,14 +49,54 @@
           "required": true
         },
         {
-          "key": "Status",
-          "label": "Status",
+          "key": "Triggered",
+          "label": "Triggered",
           "baseType": "control",
-          "labelKey": "Status",
-          "controlType": "textbox",
-          "value": "resolved",
+          "labelKey": "Triggered",
+          "controlType": "autocomplete",
+          "value": "yes",
           "styleClass": null,
-          "required": true
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "yes",
+              "value": "yes"
+            },
+            {
+              "key": "no",
+              "value": "no"
+            }
+          ]
+        },
+        {
+          "key": "Resolved",
+          "label": "Resolved",
+          "baseType": "control",
+          "labelKey": "Resolved",
+          "controlType": "autocomplete",
+          "value": "yes",
+          "styleClass": null,
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "yes",
+              "value": "yes"
+            },
+            {
+              "key": "no",
+              "value": "no"
+            }
+          ]
+        },
+        {
+          "key": "AssosiatedIncidentId",
+          "label": "Assosiated Inc. Id",
+          "baseType": "control",
+          "labelKey": "AssosiatedIncidentId",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
         }
       ]
     }

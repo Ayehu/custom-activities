@@ -9,7 +9,7 @@ Remark:
 4. Create a service.
 5. Create an API User Token.
 
-Mandatory fields when creating an incident :<br />
+Mandatory fields when creating a new user :<br />
 AuthorizationToken(string) - Use your existing user token or you can create the User Token with following steps | User -> My Profile -> User Settings -> Create API User Token<br />
 From(string) - The email address of a valid user associated with the account making the request.<br />
 
@@ -25,6 +25,7 @@ Role(string) - New user's role. Can be one of those values <br />
 7. read_only_limited_user
 8. user
 
+Optional fields : <br />
 Job Title(string) - New user's job title.<br />
 Description(string) - New user's description.<br />
  

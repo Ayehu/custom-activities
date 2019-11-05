@@ -99,7 +99,7 @@
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": true
+          "required": false
         },
         {
           "key": "Description",
@@ -109,7 +109,7 @@
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
-          "required": true
+          "required": false
         }
       ]
     }

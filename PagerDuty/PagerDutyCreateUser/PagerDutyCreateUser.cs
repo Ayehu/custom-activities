@@ -109,8 +109,9 @@ namespace Ayehu.Sdk.ActivityCreation
                 email = Email,
                 COLOR,
                 role = Role,
-                job_title = Job_Title,
-                description = Description,
+                job_title = string.IsNullOrWhiteSpace(Job_Title) ? " " : Job_Title,
+                description = string.IsNullOrWhiteSpace(Description) ? " " : Description,
+                
             };
 
             return JsonConvert.SerializeObject(body);

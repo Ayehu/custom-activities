@@ -1,11 +1,11 @@
 ﻿using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
@@ -17,6 +17,8 @@ namespace Ayehu.Sdk.ActivityCreation
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/vnd.pagerduty+json;version=2";
         private readonly string METHOD = "PUT";
+        private readonly string INCIDENT_TYPE = "incident_reference";
+        private readonly string ALERT_TYPE = "alert";
 
         #endregion
 
@@ -26,7 +28,9 @@ namespace Ayehu.Sdk.ActivityCreation
         public string From;
         public string IncidentId;
         public string AlertId;
-        public string Status;
+        public string Triggered;
+        public string Resolved;
+        public string AssosiatedIncidentId;
 
         #endregion
 
@@ -54,19 +58,15 @@ namespace Ayehu.Sdk.ActivityCreation
                 }
                 catch (WebException ex)
                 {
-                    if (httpResponse == null)
-                        throw new Exception("Status can't be changed from resolved.");
-                    if (httpResponse.StatusCode == HttpStatusCode.BadRequest)
+                    using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
                     {
-                        using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
+                        var responseString = streamReader.ReadToEnd();
+                        var error_msg = ExposeJson(JObject.Parse(responseString), "error_errors");
+                        if (string.IsNullOrWhiteSpace(error_msg))
                         {
-                            var responseString = streamReader.ReadToEnd();
-                            return this.GenerateActivityResult(ExposeJson(JObject.Parse(responseString)));
+                            error_msg = ExposeJson(JObject.Parse(responseString), "error_message");
                         }
-                    }
-                    else
-                    {
-                        throw ex;
+                        throw new Exception(error_msg);
                     }
                 }
                 if (httpResponse.StatusCode == HttpStatusCode.OK)
@@ -86,7 +86,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
-            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, IncidentId, AlertId));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
@@ -99,18 +99,24 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private string IncidentJsonBuilder()
         {
-            StringBuilder incidentJson = new StringBuilder();
+            var body = new
+            {
+                alert = new
+                {
+                    type = ALERT_TYPE,
+                    status = Resolved == "yes" ? "resolved" : null,
+                    incident = !string.IsNullOrWhiteSpace(AssosiatedIncidentId) ? new
+                    {
+                        id = AssosiatedIncidentId,
+                        type = INCIDENT_TYPE
+                    } : (object)null,
+                }
+            };
 
-            incidentJson.Append("{\"alert\": " +
-                "{ " +
-                "\"status\": \"");
-            incidentJson.Append(Status);
-            incidentJson.Append("\"}}");
-
-            return incidentJson.ToString();
+            return JsonConvert.SerializeObject(body);
         }
 
-        private string ExposeJson(JObject jObject, string append = "")
+        private string ExposeJson(JObject jObject, string searchString, string append = "")
         {
             foreach (var jProperty in jObject.Properties())
             {
@@ -118,15 +124,15 @@ namespace Ayehu.Sdk.ActivityCreation
 
                 if (jToken.Type == JTokenType.Object)
                 {
-                    var res = ExposeJson(jToken as JObject, append + jProperty.Name + "_");
+                    var res = ExposeJson(jToken as JObject, searchString, append + jProperty.Name + "_");
                     if (!string.IsNullOrEmpty(res))
                     {
                         return res;
                     }
                 }
-                else if (jToken.Type == JTokenType.Array)
+                else
                 {
-                    if (append + jProperty.Name == "alert_errors")
+                    if (append + jProperty.Name == searchString)
                     {
                         return jProperty.Value.ToString();
                     }
