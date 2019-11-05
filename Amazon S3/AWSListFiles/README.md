@@ -8,11 +8,13 @@ Output: List Files / Error
 
 MANDATORY FIELDS WHEN GET LIST Files:
 
-a. Access Key: How to get: Bellow
+a. Access Key: How to get: Bellow 
 
 b. Secrey Key: How to get: Bellow.
 
 c. Bucket Name: The bucket's name contains the files.
+
+d. Region: The region of bucket.
 
 How to find AWS Access Key and Secret Access Key?
 
@@ -22,4 +24,8 @@ In order for MigrationWiz to access your Amazon Web Services (AWS) account autom
 
 To find your Access Key and Secret Access Key:
 
-Log in to your AWS Management Console. Click on your user name at the top right of the page. Click on the Security Credentials link from the drop-down menu. Find the Access Credentials section, and copy the latest Access Key ID. Click on the Show link in the same row, and copy the Secret Access Key.
+Log in to your AWS Management Console.
+Click on your user name at the top right of the page.
+Click on the Security Credentials link from the drop-down menu.
+Find the Access Credentials section, and copy the latest Access Key ID.
+Click on the Show link in the same row, and copy the Secret Access Key.
