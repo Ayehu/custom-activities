@@ -28,9 +28,8 @@ namespace Ayehu.Sdk.ActivityCreation
         public string From;
         public string IncidentId;
         public string AlertId;
-        public string Triggered;
-        public string Resolved;
-        public string AssosiatedIncidentId;
+        public string Resolve;
+        public string AssociatedIncidentId;
 
         #endregion
 
@@ -104,10 +103,10 @@ namespace Ayehu.Sdk.ActivityCreation
                 alert = new
                 {
                     type = ALERT_TYPE,
-                    status = Resolved == "yes" ? "resolved" : null,
-                    incident = !string.IsNullOrWhiteSpace(AssosiatedIncidentId) ? new
+                    status = Resolve == "yes" ? "resolved" : null,
+                    incident = !string.IsNullOrWhiteSpace(AssociatedIncidentId) ? new
                     {
-                        id = AssosiatedIncidentId,
+                        id = AssociatedIncidentId,
                         type = INCIDENT_TYPE
                     } : (object)null,
                 }

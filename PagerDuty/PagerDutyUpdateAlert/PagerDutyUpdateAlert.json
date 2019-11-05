@@ -49,10 +49,10 @@
           "required": true
         },
         {
-          "key": "Triggered",
-          "label": "Triggered",
+          "key": "Resolve",
+          "label": "Resolve",
           "baseType": "control",
-          "labelKey": "Triggered",
+          "labelKey": "Resolve",
           "controlType": "autocomplete",
           "value": "yes",
           "styleClass": null,
@@ -69,30 +69,10 @@
           ]
         },
         {
-          "key": "Resolved",
-          "label": "Resolved",
+          "key": "AssociatedIncidentId",
+          "label": "Associate ID",
           "baseType": "control",
-          "labelKey": "Resolved",
-          "controlType": "autocomplete",
-          "value": "yes",
-          "styleClass": null,
-          "required": true,
-          "controlOptions": [
-            {
-              "key": "yes",
-              "value": "yes"
-            },
-            {
-              "key": "no",
-              "value": "no"
-            }
-          ]
-        },
-        {
-          "key": "AssosiatedIncidentId",
-          "label": "Assosiated Inc. Id",
-          "baseType": "control",
-          "labelKey": "AssosiatedIncidentId",
+          "labelKey": "AssociatedIncidentId",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,
