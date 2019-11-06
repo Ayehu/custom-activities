@@ -1,5 +1,5 @@
 ﻿
-### ZendeskListUsers - Activity to get a list of all users.
+### ZendeskListTickets - Activity to get a list of all tickets.
 
 **DLL's to reference**
 ZendeskApi_v2;
@@ -9,8 +9,10 @@ Newtonsoft.Json;
 System.Data;
 System.Linq;
 System.Net;
+Newtonsoft.Json;
+Newtonsoft.Json.Linq;
 ZendeskApi_v2;
-ZendeskApi_v2.Models.Users;
+ZendeskApi_v2.Models.Tickets;
 
 ### Mandatory fields.
 **Username** - Specifies the username of the Zendesk account.
@@ -19,7 +21,8 @@ ZendeskApi_v2.Models.Users;
 
 **Domain** - Specifies the sub domain of the Zendesk account.
 
-**UserType** -- Specifies the type of users, value can be "admin", "agent" and "end-user".
+**This activity can retrive up to 1000 tickets**
+
 ### Zendesk API Reference.
 
 [List Users](https://developer.zendesk.com/rest_api/docs/support/users#list-users)

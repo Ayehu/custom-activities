@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
+using ZendeskApi_v2;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ZendeskApi_v2;
-using ZendeskApi_v2.Models.Users;
+using ZendeskApi_v2.Models.Tickets;
 namespace Ayehu.Sdk.ActivityCreation
 {
     public class ActivityClass : IActivity
@@ -16,35 +16,29 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Username = null;
         public string ApiToken = null;
 
-        public string UserType = null;
 
         public ICustomActivityResult Execute()
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
-        | SecurityProtocolType.Tls11
-        | SecurityProtocolType.Tls12
-        | SecurityProtocolType.Ssl3;
+                                                   | SecurityProtocolType.Tls11
+                                                   | SecurityProtocolType.Tls12
+                                                   | SecurityProtocolType.Ssl3;
             var api = new ZendeskApi(Domain, Username, ApiToken, "");
-            var users = new List<User>();
+            var tickets = new List<Ticket>();
             long totalPage = 1;
-            GroupUserResponse res = null;
             for (int currentPage = 1; currentPage <= 10; currentPage++)
             {
-                if (UserType == "admin")
-                    res = api.Users.GetAllAdmins(100, currentPage);
-                else if (UserType == "agent")
-                    res = api.Users.GetAllAgents(100, currentPage);
-                else
-                    res = api.Users.GetAllUsers(100, currentPage);
+                IList<Ticket> pageTickets = null;
+                var res = api.Tickets.GetAllTickets(100,currentPage);
+                pageTickets = res.Tickets;
+                tickets.AddRange(pageTickets);
                 totalPage = res.TotalPages;
-                users.AddRange(res.Users);
                 if (currentPage == totalPage)
                     break;
             }
-            var dt = ItemsToDatatable(users);
-            return this.GenerateActivityResult(dt);
-            
 
+            var dt = ItemsToDatatable(tickets);
+            return this.GenerateActivityResult(dt);
         }
         private DataTable ItemsToDatatable(IEnumerable<object> items)
         {
@@ -72,7 +66,6 @@ namespace Ayehu.Sdk.ActivityCreation
 
             return mergedTable;
         }
-        
     }
 
 
