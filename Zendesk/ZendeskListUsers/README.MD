@@ -20,6 +20,9 @@ ZendeskApi_v2.Models.Users;
 **Domain** - Specifies the sub domain of the Zendesk account.
 
 **UserType** -- Specifies the type of users, value can be "admin", "agent" and "end-user".
+
+**This activity can retrive up to 1000 users**
+
 ### Zendesk API Reference.
 
 [List Users](https://developer.zendesk.com/rest_api/docs/support/users#list-users)
