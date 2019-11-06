@@ -25,7 +25,7 @@ using System.IO;
 using System.Web;  
 using System.Collections.Generic;  
 
-### Mandatory fields when adding a group:
+### Mandatory fields:
 
 **FileId**				- File ID to remove permission  
 **PermissionId**	- E-mail of the permission to be removed  
