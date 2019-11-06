@@ -1,8 +1,8 @@
 # Zendesk Activities
 
-#### Please Copy ZendeskApi_v2.dll to the following folder: c:\Libs\. The dll comes from NuGet package "Newtonsoft.json", version 11.0.2
+#### Please Copy ZendeskApi_v2.dll to the server. Dll link:  [Newtonsoft.json] (https://www.nuget.org/packages/Newtonsoft.Json/)
  
-#### Please Copy Newtonsoft.Json.dll to the following folder: c:\Libs\. The dll comes from NuGet package "ZendeskApi_v2", version 3.10.4
+#### Please Copy Newtonsoft.Json.dll to the server: Dll link:  [ZendeskApi_V2] (https://www.nuget.org/packages/ZendeskApi_v2/)
 
 **ZendeskCreateTicket** - Activity to create a new ticket.
 
