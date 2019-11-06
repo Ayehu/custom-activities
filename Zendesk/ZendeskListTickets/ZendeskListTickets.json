@@ -1,7 +1,7 @@
 ﻿{
   "data": {
-    "name": "ZendeskListUsers",
-    "description": "List all users",
+    "name": "ZendeskListTickets",
+    "description": "List all tickets",
     "Timeout": "00:00:30",
     "class": [],
     "rootSettings": {
@@ -37,31 +37,8 @@
           "value": "",
           "styleClass": null,
           "required": true
-        },
-	      {
-		      "key": "UserType",
-		      "label": "UserType",
-		      "baseType": "control",
-		      "labelKey": "UserType",
-		      "controlType": "autocomplete",
-		      "value": "all",
-		      "required": true,
-		      "controlOptions": [
-			      {
-				      "key": "all",
-				      "value": "all"
-			      },
-			      {
-				      "key": "agent",
-				      "value": "agent"
-			      }
-			      ,
-			      {
-				      "key": "admin",
-				      "value": "admin"
-			      }
-		      ]
-	      }
+        }
+	      
       ],
       "index": "1",
       "label": "main",
