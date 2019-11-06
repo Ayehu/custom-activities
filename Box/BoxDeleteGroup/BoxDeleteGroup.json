@@ -11,9 +11,9 @@
         {
           "value": "",
           "required": true,
-          "key": "GroupId",
-          "label": "Group ID to Delete",
-          "labelKey": "GROUP_ID",
+          "key": "GroupName",
+          "label": "Group Name",
+          "labelKey": "GROUP_NAME",
           "baseType": "control",
           "controlType": "textbox"
         },

@@ -5,6 +5,7 @@ using Box.V2.JWTAuth;
 using Box.V2.Models.Request;
 using Box.V2.Models;
 using System;
+using Box.V2;
 
 namespace ActivitiesAyehu
 {
@@ -18,13 +19,27 @@ namespace ActivitiesAyehu
         public string JwtPublicKey;
         public string PrivateKey;
 
-        public string UserIdToBeAdded, GroupId;
+        public string UserIdToBeAdded, GroupName;
 
         public ICustomActivityResult Execute()
         {
             var result = AddUserToGroup();
 
             return this.GenerateActivityResult(result);
+        }
+
+        private string GetGroupIdByGroupName(BoxClient client, string groupName)
+        {
+            var groupsRes = client.GroupsManager.GetAllGroupsAsync();
+
+            groupsRes.Wait();
+
+            foreach (var g in groupsRes.Result.Entries)
+            {
+                if (g.Name == groupName)
+                    return g.Id;
+            }
+            return null;
         }
 
         private string AddUserToGroup()
@@ -36,6 +51,11 @@ namespace ActivitiesAyehu
             var adminToken = boxJWT.UserToken(UserId);
             var client = boxJWT.AdminClient(adminToken);
 
+            var groupId = GetGroupIdByGroupName(client, GroupName);
+
+            if (groupId == null)
+                return "Group not found.";
+
             var usersRes = client.UsersManager.GetEnterpriseUsersAsync();
             usersRes.Wait();
 
@@ -46,7 +66,7 @@ namespace ActivitiesAyehu
                     var memberResult = client.GroupsManager.AddMemberToGroupAsync(new BoxGroupMembershipRequest
                     {
                         User = new BoxRequestEntity { Id = user.Id },
-                        Group = new BoxGroupRequest { Id = GroupId }
+                        Group = new BoxGroupRequest { Id = groupId }
                     });
 
                     memberResult.Wait();

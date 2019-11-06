@@ -11,9 +11,9 @@
         {
           "value": "",
           "required": true,
-          "key": "GroupId",
-          "label": "Group ID",
-          "labelKey": "GROUP_ID",
+          "key": "GroupName",
+          "label": "Group Name",
+          "labelKey": "GROUP_NAME",
           "baseType": "control",
           "controlType": "textbox"
         },
@@ -21,7 +21,7 @@
           "value": "",
           "required": true,
           "key": "UserIdToBeAdded",
-          "label": "User ID to be Added",
+          "label": "User ID",
           "labelKey": "ADD_USER_ID",
           "baseType": "control",
           "controlType": "textbox"
@@ -30,7 +30,7 @@
           "value": "",
           "required": true,
           "key": "UserId",
-          "label": "User ID to impersonate",
+          "label": "User ID (impers.)",
           "labelKey": "USER_ID",
           "baseType": "control",
           "controlType": "textbox"

@@ -12,7 +12,7 @@
           "value": "",
           "required": true,
           "key": "UserIdToDelete",
-          "label": "User ID to Delete",
+          "label": "User ID",
           "labelKey": "USER_TO_DELETE",
           "baseType": "control",
           "controlType": "textbox"
@@ -21,7 +21,7 @@
           "value": "",
           "required": true,
           "key": "UserId",
-          "label": "User ID",
+          "label": "User ID (impers.)",
           "labelKey": "USER_ID",
           "baseType": "control",
           "controlType": "textbox"

@@ -27,4 +27,4 @@ using Box.V2.Models.Request;
 **JwtPublicKey**	- Data contained in config.json file.  
 **PrivateKey**		- Data contained in config.json file.  
 **UserIdToBeAdded**	- User e-mail to be removed.  
-**GroupId**			- ID of the group to remove the user.
+**GroupName**		- Name of the group to remove the user.

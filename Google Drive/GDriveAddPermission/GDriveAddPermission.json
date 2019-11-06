@@ -1,0 +1,72 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Google Drive Add Permission",
+    "description": "Add permission to a user or group access Google Drive resource.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "FileId",
+          "label": "File ID",
+          "labelKey": "FILE_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Role",
+          "label": "Role",
+          "labelKey": "ROLE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "EmailToAllow",
+          "label": "E-mail to Allow",
+          "labelKey": "EMAIL_ALLOW",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserId",
+          "label": "User ID",
+          "labelKey": "USER_ID",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "PrivateKey",
+          "label": "Private Key",
+          "labelKey": "PRIVATE_KEY",
+          "baseType": "control",
+          "controlType": "textarea"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ServiceAccountEmail",
+          "label": "Serv. Accnt E-mail",
+          "labelKey": "SERVICE_ACCOUNT_EMAIL",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

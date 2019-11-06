@@ -26,4 +26,4 @@ using Box.V2.Models.Request;
 **Passphrase**			- Data contained in config.json file.  
 **JwtPublicKey**		- Data contained in config.json file.  
 **PrivateKey**			- Data contained in config.json file.  
-**GroupId**				- Groud Id  to be deleted.  
+**GroupName**			- Groud name  to be deleted.  
