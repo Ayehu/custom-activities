@@ -1,0 +1,43 @@
+{
+    "data": {
+      "name": "PagerDuty Get and Alert",
+      "description": "Get an alert of a PagerDuty API.",
+      "Timeout": "00:01:00",
+      "class": [],
+      "rootSettings": {
+        "isCollapse": false,
+        "activitySettings": [
+          {
+            "key": "AuthorizationToken",
+            "label": "Auth. Token",
+            "baseType": "control",
+            "labelKey": "AuthorizationToken",
+            "controlType": "textbox",
+            "value": "",
+            "styleClass": null,
+            "required": true
+          },
+          {
+            "key": "Id",
+            "label": "Incident Id",
+            "baseType": "control",
+            "labelKey": "Id",
+            "controlType": "textbox",
+            "value": "",
+            "styleClass": null,
+            "required": true
+          },
+          {
+            "key": "AlertId",
+            "label": "Alert Id",
+            "baseType": "control",
+            "labelKey": "AlertId",
+            "controlType": "textbox",
+            "value": "",
+            "styleClass": null,
+            "required": true
+          }
+        ]
+      }
+    }
+  }

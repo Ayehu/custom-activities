@@ -1,0 +1,117 @@
+{
+  "data": {
+    "name": "PagerDuty Create User",
+    "description": "Creates a user of a PagerDuty API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "From",
+          "label": "From email",
+          "baseType": "control",
+          "labelKey": "From",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Name",
+          "label": "Name",
+          "baseType": "control",
+          "labelKey": "Name",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Email",
+          "label": "Email",
+          "baseType": "control",
+          "labelKey": "Email",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Role",
+          "label": "Role",
+          "baseType": "control",
+          "labelKey": "Role",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "admin",
+              "value": "admin"
+            },
+            {
+              "key": "limited_user",
+              "value": "limited_user"
+            },
+            {
+              "key": "observer",
+              "value": "observer"
+            },
+            {
+              "key": "owner",
+              "value": "owner"
+            },
+            {
+              "key": "read_only_user",
+              "value": "read_only_user"
+            },
+            {
+              "key": "restricted_access",
+              "value": "restricted_access"
+            },
+            {
+              "key": "read_only_limited_user ",
+              "value": "read_only_limited_user "
+            },
+            {
+              "key": "user",
+              "value": "user"
+            }
+          ]
+        },
+        {
+          "key": "Job_Title",
+          "label": "Job Title",
+          "baseType": "control",
+          "labelKey": "Job_Title",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "Description",
+          "label": "Description",
+          "baseType": "control",
+          "labelKey": "Description",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        }
+      ]
+    }
+  }
+}

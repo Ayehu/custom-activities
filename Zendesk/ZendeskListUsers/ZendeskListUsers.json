@@ -1,0 +1,71 @@
+﻿{
+  "data": {
+    "name": "ZendiskListUsers",
+    "description": "List all users",
+    "Timeout": "00:00:30",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        
+        {
+          "key": "Domain",
+          "label": "Domain",
+          "baseType": "control",
+          "labelKey": "Domain",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Username",
+          "label": "Username",
+          "baseType": "control",
+          "labelKey": "Username",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "ApiToken",
+          "label": "Api Token",
+          "baseType": "control",
+          "labelKey": "ApiToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+	      {
+		      "key": "UserType",
+		      "label": "UserType",
+		      "baseType": "control",
+		      "labelKey": "UserType",
+		      "controlType": "autocomplete",
+		      "value": "all",
+		      "required": true,
+		      "controlOptions": [
+			      {
+				      "key": "all",
+				      "value": "all"
+			      },
+			      {
+				      "key": "agent",
+				      "value": "agent"
+			      }
+			      ,
+			      {
+				      "key": "admin",
+				      "value": "admin"
+			      }
+		      ]
+	      }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}

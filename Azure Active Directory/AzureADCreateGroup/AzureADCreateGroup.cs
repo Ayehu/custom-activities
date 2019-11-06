@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Data;
+using System.Linq;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using Microsoft.Graph;
-using Microsoft.Identity.Client;
-using Microsoft.Graph.Auth;
+using Microsoft.Azure.Management.Fluent;
+using Microsoft.Azure.Management.ResourceManager.Fluent;
+using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureADCreateGroup: IActivity
+    public class AzureADCreateGroup : IActivity
     {
-        /// <summary>
         /// APPLICATION (CLIENT) ID
         /// </summary>
         public string appId;
@@ -28,50 +28,50 @@ namespace Ayehu.Sdk.ActivityCreation
         /// Also can be referred to as application password.
         /// </remarks>
         public string secret;
+
         /// <summary>
         /// Display name of the group
         /// </summary>
         public string groupName;
-        
-        /// <summary>
-        /// An optional description
-        /// </summary>
-        public string groupDescription;
-        /// <summary>
-        /// The mail alias for the group. Must be unique in the organization
-        /// </summary>
-        public string groupMailNikName;
 
         public ICustomActivityResult Execute()
         {
-            DataTable dt = new DataTable("resultSet");
-            dt.Columns.Add("Result");
+            var auth = GetAuthenticated();
+            var existingGroup = auth.ActiveDirectoryGroups.List().ToList().Where(x => x.Name.ToLower() == groupName.ToLower()).FirstOrDefault();
 
-            GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var group = client.Groups.Request().AddAsync(new Group
+            if (existingGroup == null)
             {
-                GroupTypes = new System.Collections.Generic.List<string> { "Unified" },
-                DisplayName = groupName,
-                Description = groupDescription,
-                MailNickname = groupMailNikName,                
-                MailEnabled = true,
-                SecurityEnabled = false
-            }).Result;
+                auth.ActiveDirectoryGroups.
+                    Define(groupName).
+                    WithEmailAlias(groupName).Create();
+            }
+            else
+                throw new Exception(string.Format("Group with name '{0}' already exist.", groupName));
 
-            dt.Rows.Add("Success");
-
-            return this.GenerateActivityResult(dt);
+            return this.GenerateActivityResult(GetActivityResult);
         }
 
-        private ClientCredentialProvider GetProvider()
+        private Azure.IAuthenticated GetAuthenticated()
         {
-            IConfidentialClientApplication confidentialClientApplication = ConfidentialClientApplicationBuilder
-                .Create(appId)
-                .WithTenantId(tenantId)
-                .WithClientSecret(secret)
-                .Build();
+            var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal(appId, secret, tenantId, AzureEnvironment.AzureGlobalCloud);
+            var azure = Azure
+                   .Configure()
+                   .WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
+                   .Authenticate(credentials);
 
-            return new ClientCredentialProvider(confidentialClientApplication);
+            return azure;
+        }
+
+        private DataTable GetActivityResult
+        {
+            get
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Result");
+                dt.Rows.Add("Success");
+
+                return dt;
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-## AzureADAssignUserLicense - Activity to Assign Exchange Online license to a user in Azure AD for Office365.
+## AzureADAssignUserLicense - Activity to Assign Exchange Online license to a user in Azure AD.
 
 ##### DLL's to reference
 Microsoft.Graph.dll

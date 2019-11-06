@@ -1,0 +1,85 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PagerDuty Update Incident",
+    "description": "Update an incident of a PagerDuty API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "From",
+          "label": "From email",
+          "baseType": "control",
+          "labelKey": "From",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "IncidentID",
+          "label": "Incident ID",
+          "baseType": "control",
+          "labelKey": "IncidentID",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Type",
+          "label": "Type",
+          "baseType": "control",
+          "labelKey": "Type",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "incident",
+              "value": "incident"
+            },
+            {
+              "key": "incident_reference",
+              "value": "incident_reference"
+            }
+          ]
+        },
+        {
+          "key": "Status",
+          "label": "Status",
+          "baseType": "control",
+          "labelKey": "Status",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "resolved",
+              "value": "resolved"
+            },
+            {
+              "key": "acknowledged",
+              "value": "acknowledged"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "message": "SUCCESS"
+}

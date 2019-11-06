@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Create Group",
-    "description": "Create Office365 mail group",
+    "name": "Create security Group",
+    "description": "Create Active Directory security group",
     "Timeout": null,
     "class": [
 
@@ -18,24 +18,6 @@
           "labelKey": "GROUP_NAME_VALUE",
           "baseType": "control",
           "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "groupMailNikName",
-          "label": "Group NickName",
-          "labelKey": "GROUP_NICKNAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": false,
-          "key": "groupDescription",
-          "label": "Group Description",
-          "labelKey": "GROUP_DESCRIPTION_VALUE",
-          "baseType": "control",
-          "controlType": "textarea"
         },
         {
           "value": "",

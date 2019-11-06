@@ -1,4 +1,4 @@
-## AzureADGetUserInfo - Get user infromation from Azure Active DIrectory.
+## AzureADGetUserInfo - Get user infromation from Azure Active Directory.
 
 ##### DLL's to reference
 Microsoft.Graph.dll

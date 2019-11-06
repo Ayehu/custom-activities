@@ -2,7 +2,7 @@
    "innerCode":200,
    "data":{  
       "name":"AzureADGetUserInfo",
-      "description":"Get user infromation from Azure Active DIrectory.",
+      "description":"Get user infromation from Azure Active Directory.",
       "Timeout":null,
       "class":[  
 
