@@ -24,7 +24,33 @@
           "label": "Role",
           "labelKey": "ROLE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "owner",
+              "value": "Owner"
+            },
+            {
+              "key": "organizer",
+              "value": "Organizer"
+            },
+            {
+              "key": "fileOrganizer",
+              "value": "File Organizer"
+            },
+            {
+              "key": "commenter",
+              "value": "Commenter"
+            },
+            {
+              "key": "reader",
+              "value": "Reader"
+            },
+            {
+              "key": "writer",
+              "value": "Writer"
+            }
+          ]
         },
         {
           "value": "",
