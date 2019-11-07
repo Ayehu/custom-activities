@@ -1,0 +1,1 @@
+The activity will search in duckduckgo and will return the top 10 results
