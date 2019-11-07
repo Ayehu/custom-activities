@@ -70,7 +70,7 @@
         },
         {
           "key": "AssociatedIncidentId",
-          "label": "Associate ID",
+          "label": "Associate Inc. Id",
           "baseType": "control",
           "labelKey": "AssociatedIncidentId",
           "controlType": "textbox",
