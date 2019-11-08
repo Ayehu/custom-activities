@@ -1,0 +1,99 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"BambooAddEmployee",
+    "description": "Add a new employee in BambooHR",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"firstName",
+          "label": "First Name",
+          "labelKey": "FIRST_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"lastName",
+          "label": "Last Name",
+          "labelKey": "LAST_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"workEmail",
+          "label": "Work Email",
+          "labelKey": "WORK_EMAIL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key":"jobTitle",
+          "label": "Job Title",
+          "labelKey": "JOB_TITLE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key":"workPhone",
+          "label": "Work Phone",
+          "labelKey": "WORK_PHONE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key":"mobilePhone",
+          "label": "Mobile Phone",
+          "labelKey": "MOBILE_PHONE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key":"department",
+          "label": "Department",
+          "labelKey": "DEPARTMENT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"apiKey",
+          "label": "API Key",
+          "labelKey": "API_KEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"companyName",
+          "label": "Company Name",
+          "labelKey": "COMPANY_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
