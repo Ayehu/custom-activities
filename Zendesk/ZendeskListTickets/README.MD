@@ -35,4 +35,4 @@ ZendeskApi_v2.Models.Tickets;
 
 ### Zendesk API Reference.
 
-[List Users](https://developer.zendesk.com/rest_api/docs/support/users#list-users)
+[List Tickets](https://developer.zendesk.com/rest_api/docs/support/tickets#list-tickets)
