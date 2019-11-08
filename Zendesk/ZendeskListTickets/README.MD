@@ -21,7 +21,7 @@ ZendeskApi_v2.Models.Tickets;
 
 **Domain** - Specifies the sub domain of the Zendesk account.
 
-**This activity can retrive up to 1000 tickets**
+**This activity can retrive 1000 tickets per page**
 
 ### Zendesk API Reference.
 
