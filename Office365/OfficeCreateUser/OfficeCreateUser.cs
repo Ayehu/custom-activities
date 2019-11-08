@@ -75,10 +75,9 @@ namespace Ayehu.Sdk.ActivityCreation
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
 
-            
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
 
-            var user = client.Users.Request().AddAsync(new User
+            var newUser = client.Users.Request().AddAsync(new User
             {
                 AccountEnabled = isAccountEnabled,
                 DisplayName = givenName + " " + surname,
@@ -86,7 +85,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 GivenName = givenName,
                 MailNickname = givenName + surname,
                 UserPrincipalName = userPrincipalName,
-				UsageLocation = "US",
+                UsageLocation = "US",
                 PasswordProfile = new PasswordProfile
                 {
                     ForceChangePasswordNextSignIn = forcePwdChange,
@@ -94,7 +93,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 }
             }).Result;
 
-            dt.Rows.Add("Success");
+            dt.Rows.Add(newUser.UserPrincipalName);
             
             return this.GenerateActivityResult(dt);
         }
