@@ -23,6 +23,8 @@ ZendeskApi_v2.Models.Tickets;
 
 **Page** - Specifies the page number.
 
+### Optional fields.
+
 **Type** - Specifies the type of the tickets.
 
 **Priority** -Specifies the priority of the tickets.
