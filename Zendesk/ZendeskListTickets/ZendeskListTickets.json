@@ -37,6 +37,101 @@
           "value": "",
           "styleClass": null,
           "required": true
+        },
+        {
+	        "key": "Page",
+	        "label": "Page",
+	        "baseType": "control",
+	        "labelKey": "Page",
+	        "controlType": "textbox",
+	        "value": "",
+	        "styleClass": null,
+	        "required": false
+        },
+        {
+          "key": "Type",
+          "label": "Type",
+          "baseType": "control",
+          "labelKey": "Type",
+          "controlType": "autocomplete",
+          "value": "",
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "task",
+              "value": "task"
+            },
+            {
+              "key": "incident",
+              "value": "incident"
+            },
+            {
+              "key": "problem",
+              "value": "problem"
+            },
+            {
+              "key": "question",
+              "value": "question"
+            }
+          ]
+        },
+        {
+          "key": "Priority",
+          "label": "Priority",
+          "baseType": "control",
+          "labelKey": "Priority",
+          "controlType": "autocomplete",
+          "value": "",
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "urgent",
+              "value": "urgent"
+            },
+            {
+              "key": "high",
+              "value": "high"
+            },
+            {
+              "key": "normal",
+              "value": "normal"
+            },
+            {
+              "key": "low",
+              "value": "low"
+            }
+          ]
+        },
+        {
+          "key": "Status",
+          "label": "Status",
+          "baseType": "control",
+          "labelKey": "Status",
+          "controlType": "autocomplete",
+          "value": "",
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "open",
+              "value": "open"
+            },
+            {
+              "key": "pending",
+              "value": "pending"
+            },
+            {
+              "key": "hold",
+              "value": "hold"
+            },
+            {
+              "key": "solved",
+              "value": "solved"
+            },
+            {
+              "key": "closed",
+              "value": "closed"
+            }
+          ]
         }
 	      
       ],
