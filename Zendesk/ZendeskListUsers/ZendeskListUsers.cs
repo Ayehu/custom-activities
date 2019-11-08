@@ -34,6 +34,8 @@ namespace Ayehu.Sdk.ActivityCreation
                     res = api.Users.GetAllAdmins(100, currentPage);
                 else if (UserType == "agent")
                     res = api.Users.GetAllAgents(100, currentPage);
+                else if (UserType == "enduser")
+                    res = api.Users.GetAllEndUsers(100, currentPage);
                 else
                     res = api.Users.GetAllUsers(100, currentPage);
                 totalPage = res.TotalPages;

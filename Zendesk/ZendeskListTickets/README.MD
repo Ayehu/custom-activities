@@ -21,6 +21,14 @@ ZendeskApi_v2.Models.Tickets;
 
 **Domain** - Specifies the sub domain of the Zendesk account.
 
+**Page** - Specifies the page number.
+
+**Type** - Specifies the type of the tickets.
+
+**Priority** -Specifies the priority of the tickets.
+
+**Status** - Specifies the status of the tickets.
+
 **This activity can retrive 1000 tickets per page**
 
 ### Zendesk API Reference.

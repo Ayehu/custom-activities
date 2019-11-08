@@ -59,6 +59,10 @@
 			      {
 				      "key": "admin",
 				      "value": "admin"
+			      },
+			      {
+				      "key": "enduser",
+				      "value": "enduser"
 			      }
 		      ]
 	      }
