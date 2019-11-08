@@ -15,7 +15,13 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Domain = null;
         public string Username = null;
         public string ApiToken = null;
-
+        public string Page = null;
+        public string Type = null;
+        public string Priority = null;
+        public string Status = null;
+        private ZendeskApi api = null;
+        private string Term = null;
+        private long TotalPage = 1;
 
         public ICustomActivityResult Execute()
         {
@@ -23,22 +29,33 @@ namespace Ayehu.Sdk.ActivityCreation
                                                    | SecurityProtocolType.Tls11
                                                    | SecurityProtocolType.Tls12
                                                    | SecurityProtocolType.Ssl3;
-            var api = new ZendeskApi(Domain, Username, ApiToken, "");
+            api = new ZendeskApi(Domain, Username, ApiToken, "");
+
+            var termType = string.IsNullOrEmpty(Type) ? "" : "ticket_type:" + Type + " ";
+            var termPriority = string.IsNullOrEmpty(Priority) ? "" : "priority:" + Priority + " ";
+            var termStatus = string.IsNullOrEmpty(Status) ? "" : "status:" + Status + " ";
+            Term = (termStatus + termPriority + termType).Trim();
+            
+            var pageRes = api.Search.SearchFor<Ticket>(Term);
+            TotalPage = pageRes.TotalPages;
+
+            var res = api.Search.SearchFor<Ticket>(Term, page: 10);
+            var tickets = GetTickets();
+            return this.GenerateActivityResult(ItemsToDatatable(tickets));
+        }
+        private List<Ticket> GetTickets()
+        {
+            var page = int.Parse(string.IsNullOrEmpty(Page) ? "1" : Page);
             var tickets = new List<Ticket>();
-            long totalPage = 1;
-            for (int currentPage = 1; currentPage <= 10; currentPage++)
+            for (var i = (page - 1) * 10 + 1; i <= page * 10; i++)
             {
-                IList<Ticket> pageTickets = null;
-                var res = api.Tickets.GetAllTickets(100,currentPage);
-                pageTickets = res.Tickets;
-                tickets.AddRange(pageTickets);
-                totalPage = res.TotalPages;
-                if (currentPage == totalPage)
+                if (i > TotalPage)
                     break;
+                var res = api.Search.SearchFor<Ticket>(Term, page: i);
+                tickets.AddRange(res.Results);
             }
 
-            var dt = ItemsToDatatable(tickets);
-            return this.GenerateActivityResult(dt);
+            return tickets;
         }
         private DataTable ItemsToDatatable(IEnumerable<object> items)
         {
@@ -63,7 +80,12 @@ namespace Ayehu.Sdk.ActivityCreation
                     mergedTable.Merge(dt, true, MissingSchemaAction.Add);
                 }
             }
-
+            if (mergedTable == null)
+            {
+                mergedTable = new DataTable("resultSet");
+                mergedTable.Columns.Add("Result", typeof(string));
+                mergedTable.Rows.Add("0");
+            }
             return mergedTable;
         }
     }

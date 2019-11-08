@@ -21,7 +21,7 @@ ZendeskApi_v2.Models.Users;
 
 **UserType** -- Specifies the type of users, value can be "admin", "agent" and "end-user".
 
-**This activity can retrive up to 1000 users**
+**This activity can retrive 1000 users per page**
 
 ### Zendesk API Reference.
 
