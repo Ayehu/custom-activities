@@ -21,7 +21,7 @@ ZendeskApi_v2.Models.Tickets;
 
 **Domain** - Specifies the sub domain of the Zendesk account.
 
-**Page** - Specifies the page number.
+**Page** - Specifies the page number, each page can retrieve 1000 tickets.
 
 ### Optional fields.
 
