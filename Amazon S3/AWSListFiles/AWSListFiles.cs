@@ -1,4 +1,4 @@
-﻿using Amazon.S3;
+using Amazon.S3;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Amazon.S3.Model;
