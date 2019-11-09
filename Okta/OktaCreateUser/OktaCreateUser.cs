@@ -6,6 +6,8 @@ using System.Net;
 using System.Text;
 using System.Net.Mail;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
@@ -21,13 +23,15 @@ namespace Ayehu.Sdk.ActivityCreation
         #endregion
 
         #region Incoming properties 
-        
+
         public string AuthorizationToken;
         public string Domain;
 
         public string FirstName;
         public string LastName;
         public string Email;
+        public string Login;
+        public string MobilePhone;
 
         public string Password;
 
@@ -37,7 +41,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            if (!IsValid(Email))
+            if (!IsValid(Email) || !IsValid(Login))
             {
                 throw new Exception("Email not valid.");
             }
@@ -49,15 +53,38 @@ namespace Ayehu.Sdk.ActivityCreation
                 streamWriter.Write(IncidentJsonBuilder());
                 streamWriter.Flush();
                 streamWriter.Close();
-    
-                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
- 
+                HttpWebResponse httpResponse = null;
+                try
+                {
+                    httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                }
+                catch (WebException ex)
+                {
+                    using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        var responseString = streamReader.ReadLine();
+                        var errors = ExposeJson(JObject.Parse(responseString), "errorCauses");
+                        if (errors != "[]")
+                        {
+                            List<string> errorsResponse = new List<string>();
+                            foreach (var error in JArray.Parse(errors))
+                            {
+                                errorsResponse.Add(ExposeJson(error.ToObject<JObject>(), "errorSummary"));
+                            }
+                            throw new Exception(JsonConvert.SerializeObject(errorsResponse));
+                        }
+                        else
+                        {
+                            throw new Exception(ExposeJson(JObject.Parse(responseString), "errorSummary"));
+                        }
+                    }
+                }
                 if (httpResponse.StatusCode == HttpStatusCode.OK)
                 {
                     using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                     {
                         var responseString = streamReader.ReadLine();
-                        var id = ExposeJson(responseString, "id");
+                        var id = ExposeJson(JObject.Parse(responseString), "id");
                         return this.GenerateActivityResult(id);
                     }
                 }
@@ -94,7 +121,12 @@ namespace Ayehu.Sdk.ActivityCreation
             incidentJson.Append("\",\"email\": \"");
             incidentJson.Append(Email);
             incidentJson.Append("\",\"login\": \"");
-            incidentJson.Append(Email);
+            incidentJson.Append(Login);
+            if (!string.IsNullOrWhiteSpace(MobilePhone))
+            {
+                incidentJson.Append("\",\"mobilePhone\": \"");
+                incidentJson.Append(MobilePhone);
+            }
             incidentJson.Append("\"},\"credentials\": {\"password\": {\"value\": \"");
             incidentJson.Append(Password);
             incidentJson.Append("\"}}}");
@@ -102,10 +134,30 @@ namespace Ayehu.Sdk.ActivityCreation
             return incidentJson.ToString();
         }
 
-        private string ExposeJson(string json, string key)
+        private string ExposeJson(JObject jObject, string searchString, string append = "")
         {
-            var _jID = JObject.Parse(json)[key];
-            return _jID.Value<string>(); 
+            foreach (var jProperty in jObject.Properties())
+            {
+                var jToken = jProperty.Value;
+
+                if (jToken.Type == JTokenType.Object)
+                {
+                    var res = ExposeJson(jToken as JObject, searchString, append + jProperty.Name + "_");
+                    if (!string.IsNullOrEmpty(res))
+                    {
+                        return res;
+                    }
+                }
+                else if (jToken.Type == JTokenType.Array || jToken.Type == JTokenType.String)
+                {
+                    if (append + jProperty.Name == searchString)
+                    {
+                        return jProperty.Value.ToString();
+                    }
+                }
+
+            }
+            return null;
         }
 
         private bool IsValid(string emailaddress)

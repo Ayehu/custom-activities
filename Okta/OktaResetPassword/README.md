@@ -4,6 +4,7 @@ Remark:
 1. Create an account in Okta.
 2. Create a API token. You can create the User Token with following steps   API | Tokens | Create Token.
    URL - https://{{DOMAIN}}/admin/access/api/tokens (You can't see it later. Save at that time.).
+3. Sending password recovery email to user's email address.
 
 Mandatory fields when resetting user password:<br />
 AuthorizationToken(string) - Use your existing API token which you get on step 2. Or create new one.<br />

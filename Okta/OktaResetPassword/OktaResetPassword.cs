@@ -1,7 +1,12 @@
 ﻿using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using System;
+using System.IO;
 using System.Net;
+using System.Data;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
@@ -31,7 +36,20 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             var httpWebRequest = HttpRequest();
 
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            HttpWebResponse httpResponse = null;
+            try
+            {
+                httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
+                {
+                    var responseString = streamReader.ReadToEnd();
+                    var error_messageerrorSummary = ExposeJson(JObject.Parse(responseString), "error_message")["errorSummary"];
+                    throw new Exception(error_messageerrorSummary);
+                }
+            }
             if (httpResponse.StatusCode == HttpStatusCode.OK)
             {
                 return this.GenerateActivityResult("The email has been sent.");
@@ -55,6 +73,38 @@ namespace Ayehu.Sdk.ActivityCreation
             httpWebRequest.Method = METHOD;
 
             return httpWebRequest;
+        }
+
+        private IDictionary<string, string> ExposeJson(JObject jObject, string search_till, string append = "")
+        {
+            var result = new Dictionary<string, string>();
+
+            foreach (var jProperty in jObject.Properties())
+            {
+                if (append + jProperty.Name == search_till)
+                {
+                    continue;
+                }
+
+                var jToken = jProperty.Value;
+
+                if (jToken.Type == JTokenType.Object)
+                {
+                    var nested_result = ExposeJson(jToken as JObject, search_till, append + jProperty.Name + "_");
+
+                    if (nested_result == null)
+                    {
+                        return result;
+                    }
+                    result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
+                }
+                else if (jToken.Type != JTokenType.Array)
+                {
+                    result.Add(append + jProperty.Name, jProperty.Value.ToString());
+                }
+            }
+
+            return result;
         }
 
         #endregion

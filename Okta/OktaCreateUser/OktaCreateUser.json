@@ -59,11 +59,31 @@
           "required": true
         },
         {
+          "key": "Login",
+          "label": "Login",
+          "baseType": "control",
+          "labelKey": "Login",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "MobilePhone",
+          "label": "Phone",
+          "baseType": "control",
+          "labelKey": "MobilePhone",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
           "key": "Password",
           "label": "Password",
           "baseType": "control",
           "labelKey": "Password",
-          "controlType": "textbox",
+          "controlType": "password",
           "value": "",
           "styleClass": null,
           "required": true

@@ -36,16 +36,31 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             var httpWebRequest = HttpRequest();
 
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+            HttpWebResponse httpResponse = null;
+            try
+            {
+                httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
+                {
+                    var responseString = streamReader.ReadToEnd();
+                    var error_messageerrorSummary = ExposeJson(JObject.Parse(responseString), "error_message")["errorSummary"];
+                    throw new Exception(error_messageerrorSummary);
+                }
+            }
             if (httpResponse.StatusCode == HttpStatusCode.OK)
             {
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var response = streamReader.ReadToEnd();
-                    List<string> userDataKeys = new List<string>() { "id", "profile_firstName", "profile_lastName", "profile_email" };
-                    var res = ExposeJson(JObject.Parse(response));
-                    var data = res.Where(r => userDataKeys.Any(u => u == r.Key))
-                                  .ToDictionary(x => x.Key, x => x.Value); 
+                    List<string> userDataKeys = new List<string>();
+                    var res = ExposeJson(JObject.Parse(response), "_links");
+
+
+                    var data = res.ToDictionary(x => x.Key, x => x.Value); 
                     var dt = GetDataTable(data as Dictionary<string, string>);
 
                     return this.GenerateActivityResult(dt);
@@ -72,17 +87,27 @@ namespace Ayehu.Sdk.ActivityCreation
             return httpWebRequest;
         }
 
-        private IDictionary<string, string> ExposeJson(JObject jObject, string append = "")
+        private IDictionary<string, string> ExposeJson(JObject jObject, string search_till, string append = "")
         {
             var result = new Dictionary<string, string>();
 
             foreach (var jProperty in jObject.Properties())
             {
+                if (append + jProperty.Name == search_till)
+                {
+                    continue;
+                }
+
                 var jToken = jProperty.Value;
 
                 if (jToken.Type == JTokenType.Object)
                 {
-                    var nested_result = ExposeJson(jToken as JObject, append + jProperty.Name + "_");
+                    var nested_result = ExposeJson(jToken as JObject, search_till, append + jProperty.Name + "_");
+
+                    if (nested_result == null)
+                    {
+                        return result;
+                    }
                     result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
                 }
                 else if (jToken.Type != JTokenType.Array)

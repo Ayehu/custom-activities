@@ -14,10 +14,12 @@ namespace Ayehu.Sdk.ActivityCreation
     {
         #region Private readonly properties
 
-        private readonly string API_REQUEST_URL = "{0}/api/v1/users?limit={1}";
+        private readonly string API_REQUEST_URL = "{0}/api/v1/users?filter=status+eq+\"{1}\"&limit={2}";
+        private readonly string NO_FILTER_API_REQUEST_URL = "{0}/api/v1/users?limit={1}";
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/json";
         private readonly string METHOD = "GET";
+        public readonly int LIMIT = 200;
 
         #endregion
 
@@ -26,7 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string AuthorizationToken;
         public string Domain;
 
-        public string Limit;
+        public string Filter;
 
         #endregion
 
@@ -36,22 +38,45 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             var httpWebRequest = HttpRequest();
 
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            HttpWebResponse httpResponse = null;
+            try
+            {
+                httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            }
+            catch (WebException ex)
+            {
+                using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
+                {
+                    var responseString = streamReader.ReadToEnd();
+                    var error_messageerrorSummary = ExposeJson(JObject.Parse(responseString), "error_message")["errorSummary"];
+                    throw new Exception(error_messageerrorSummary);
+                }
+            }
             if (httpResponse.StatusCode == HttpStatusCode.OK)
             {
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var response = streamReader.ReadToEnd();
-                    List<string> userDataKeys = new List<string>() { "id", "profile_firstName", "profile_lastName", "profile_email" };
+
+                    List<string> userDataKeys = new List<string>();
                     var jArray = JArray.Parse(response);
+
+                    if (jArray.Children().Count() == 0)
+                    {
+                        return this.GenerateActivityResult("No data returned");
+                    }
 
                     var userList = new List<IReadOnlyDictionary<string, string>>();
 
                     foreach (var jToken in jArray)
                     {
-                        var res = ExposeJson(jToken.ToObject<JObject>());
-                        var data = res.Where(r => userDataKeys.Any(u => u == r.Key))
-                                      .ToDictionary(x => x.Key, x => x.Value);
+                        var res = ExposeJson(jToken.ToObject<JObject>(), "_links");
+                        if (userDataKeys.Count == 0)
+                        {
+                            userDataKeys.AddRange(res.Keys);
+                        }
+
+                        var data = res.ToDictionary(x => x.Key, x => x.Value);
                         userList.Add(data as IReadOnlyDictionary<string, string>);
                     }
 
@@ -72,7 +97,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, Domain, Limit));
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.IsNullOrWhiteSpace(Filter) ? string.Format(NO_FILTER_API_REQUEST_URL, Domain, LIMIT) : string.Format(API_REQUEST_URL, Domain, Filter, LIMIT));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
             httpWebRequest.Headers.Add("Authorization", string.Format("SSWS {0}", AuthorizationToken));
@@ -81,17 +106,27 @@ namespace Ayehu.Sdk.ActivityCreation
             return httpWebRequest;
         }
 
-        private IDictionary<string, string> ExposeJson(JObject jObject, string append = "")
+        private IDictionary<string, string> ExposeJson(JObject jObject, string search_till, string append = "")
         {
             var result = new Dictionary<string, string>();
 
             foreach (var jProperty in jObject.Properties())
             {
+                if (append + jProperty.Name == search_till)
+                {
+                    continue;
+                }
+
                 var jToken = jProperty.Value;
 
                 if (jToken.Type == JTokenType.Object)
                 {
-                    var nested_result = ExposeJson(jToken as JObject, append + jProperty.Name + "_");
+                    var nested_result = ExposeJson(jToken as JObject, search_till, append + jProperty.Name + "_");
+
+                    if (nested_result == null)
+                    {
+                        return result;
+                    }
                     result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
                 }
                 else if (jToken.Type != JTokenType.Array)
