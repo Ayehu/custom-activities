@@ -1,4 +1,4 @@
-﻿#Reset user  password- Activity to reset user password on Okta platform.
+﻿# Reset user password- Activity to reset user password on Okta platform.
 
 Remark:
 1. Create an account in Okta.

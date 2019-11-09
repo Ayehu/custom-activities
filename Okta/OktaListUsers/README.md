@@ -1,4 +1,4 @@
-﻿#Get users - Activity for getting users from Okta platform.
+﻿# List users - Activity for getting users from Okta platform.
 
 Dependencies:
 1. Newtonsoft.Json

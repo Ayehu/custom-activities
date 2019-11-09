@@ -1,4 +1,4 @@
-﻿#Create user - Activity to create user in Okta platform.
+﻿# Create user - Activity to create user in Okta platform.
 
 Dependencies:
 1. Newtonsoft.Json
