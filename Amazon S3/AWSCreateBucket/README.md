@@ -17,7 +17,6 @@ c. Bucket: Bucket is the directory that you want to include the file when upload
 
 d. File Path: File Path is the address of the file to upload on your device.
 
-e. Region: The region of bucket
 
 -------------------------------------------
 
