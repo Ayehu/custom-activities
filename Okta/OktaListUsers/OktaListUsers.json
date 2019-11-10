@@ -29,10 +29,10 @@
           "required": true
         },
         {
-          "key": "Filter",
-          "label": "Filter",
+          "key": "Status",
+          "label": "Status",
           "baseType": "control",
-          "labelKey": "Filter",
+          "labelKey": "Status",
           "controlType": "autocomplete",
           "value": "",
           "styleClass": null,
@@ -65,10 +65,6 @@
             {
               "key": "PASSWORD_EXPIRED",
               "value": "PASSWORD_EXPIRED"
-            },
-            {
-              "key": "RECOVERY",
-              "value": "RECOVERY"
             }
           ]
         }

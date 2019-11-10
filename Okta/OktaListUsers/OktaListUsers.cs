@@ -19,7 +19,7 @@ namespace Ayehu.Sdk.ActivityCreation
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/json";
         private readonly string METHOD = "GET";
-        public readonly int LIMIT = 200;
+        private readonly int LIMIT = 200;
 
         #endregion
 
@@ -28,7 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string AuthorizationToken;
         public string Domain;
 
-        public string Filter;
+        public string Status;
 
         #endregion
 
@@ -97,7 +97,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.IsNullOrWhiteSpace(Filter) ? string.Format(NO_FILTER_API_REQUEST_URL, Domain, LIMIT) : string.Format(API_REQUEST_URL, Domain, Filter, LIMIT));
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.IsNullOrWhiteSpace(Status) ? string.Format(NO_FILTER_API_REQUEST_URL, Domain, LIMIT) : string.Format(API_REQUEST_URL, Domain, Status, LIMIT));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
             httpWebRequest.Headers.Add("Authorization", string.Format("SSWS {0}", AuthorizationToken));

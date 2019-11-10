@@ -52,7 +52,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             if (httpResponse.StatusCode == HttpStatusCode.OK)
             {
-                return this.GenerateActivityResult("The email has been sent.");
+                return this.GenerateActivityResult("Reset password email has been sent to the user");
             }
             else
             {

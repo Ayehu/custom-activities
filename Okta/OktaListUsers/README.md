@@ -13,4 +13,11 @@ AuthorizationToken(string) - Use your existing API token which you get on step 2
 
 Domain(string) - https://{{DOMAIN}}/dev/console. It will appear on any page when you are logged in.<br />
 
-Limit(string) - Expected users count. <br />
+Optional fields:
+Status(string) - Fitleres users by their status. Could be one of <br />
+1. ACTIVE <br /> 
+2. PROVISIONED <br />
+3. STAGED <br />
+4. RECOVERY <br />
+5. DEPROVISIONED <br />
+6. PASSWORD_EXPIRED <br />
