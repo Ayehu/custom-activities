@@ -1,7 +1,7 @@
 # Okta 
-** Okta is the identity standard. **
+**Okta is the identity standard.**
 
-[Okta website](https://www.okta.com/)
+[Okta website](https://www.okta.com/) <br/>
 [Official documentation](https://developer.okta.com/docs/)
 
 # Okta Activities
