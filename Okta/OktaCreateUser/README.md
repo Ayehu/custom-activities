@@ -15,8 +15,7 @@ Domain(string) - https://{{DOMAIN}}/dev/console. It will appear on any page when
 
 FirstName(string) - New user's first name.<br />
 LastName(string) - New user's last name.<br />
-Email(string) - New user's email address.<br />
-Login(string) - New user's login.<br />
+Email(string) - New user's email address/login.<br />
 Password(string) - New user's password.<br />
 
 Optional Fields: <br />

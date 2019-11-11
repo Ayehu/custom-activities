@@ -59,16 +59,6 @@
           "required": true
         },
         {
-          "key": "Login",
-          "label": "Login",
-          "baseType": "control",
-          "labelKey": "Login",
-          "controlType": "textbox",
-          "value": "",
-          "styleClass": null,
-          "required": true
-        },
-        {
           "key": "MobilePhone",
           "label": "Phone",
           "baseType": "control",

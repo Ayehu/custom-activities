@@ -30,7 +30,6 @@ namespace Ayehu.Sdk.ActivityCreation
         public string FirstName;
         public string LastName;
         public string Email;
-        public string Login;
         public string MobilePhone;
 
         public string Password;
@@ -41,7 +40,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            if (!IsValid(Email) || !IsValid(Login))
+            if (!IsValid(Email))
             {
                 throw new Exception("Email not valid.");
             }
@@ -121,7 +120,7 @@ namespace Ayehu.Sdk.ActivityCreation
             incidentJson.Append("\",\"email\": \"");
             incidentJson.Append(Email);
             incidentJson.Append("\",\"login\": \"");
-            incidentJson.Append(Login);
+            incidentJson.Append(Email);
             if (!string.IsNullOrWhiteSpace(MobilePhone))
             {
                 incidentJson.Append("\",\"mobilePhone\": \"");
