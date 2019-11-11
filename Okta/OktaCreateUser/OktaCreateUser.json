@@ -77,6 +77,26 @@
           "value": "",
           "styleClass": null,
           "required": true
+        },
+        {
+          "key": "Activate",
+          "label": "Activate",
+          "baseType": "control",
+          "labelKey": "Activate",
+          "controlType": "autocomplete",
+          "value": "yes",
+          "styleClass": null,
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "yes",
+              "value": "yes"
+            },
+            {
+              "key": "no",
+              "value": "no"
+            }
+          ]
         }
       ]
     }

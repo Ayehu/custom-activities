@@ -17,6 +17,7 @@ FirstName(string) - New user's first name.<br />
 LastName(string) - New user's last name.<br />
 Email(string) - New user's email address/login.<br />
 Password(string) - New user's password.<br />
+Activate(boolean) - Should it create activated user or not? Can be "yes" or "no". <br />
 
 Optional Fields: <br />
 MobilePhone - New user's phone number.

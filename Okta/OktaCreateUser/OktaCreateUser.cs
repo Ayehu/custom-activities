@@ -15,7 +15,7 @@ namespace Ayehu.Sdk.ActivityCreation
     {
         #region Private readonly properties
 
-        private readonly string API_REQUEST_URL = "{0}/api/v1/users?activate=true";
+        private readonly string API_REQUEST_URL = "{0}/api/v1/users?activate={1}";
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/json";
         private readonly string METHOD = "POST";
@@ -31,7 +31,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string LastName;
         public string Email;
         public string MobilePhone;
-
+        public string Activate;
         public string Password;
 
         #endregion
@@ -100,7 +100,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, Domain));
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, Domain, Activate == "yes" ? true.ToString() : false.ToString()));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
             httpWebRequest.Headers.Add("Authorization", string.Format("SSWS {0}", AuthorizationToken));
