@@ -11,17 +11,8 @@
         {
           "value": "",
           "required": true,
-          "key": "Title",
-          "label": "Title",
-          "labelKey": "DISPLAY_VALUE_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "Destination",
-          "label": "Destination",
+          "key": "Path",
+          "label": "Path",
           "labelKey": "DISPLAY_VALUE_VALUE",
           "baseType": "control",
           "controlType": "textbox"
