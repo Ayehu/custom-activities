@@ -1,0 +1,45 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Display Value",
+    "description": "Display a value to the log",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Title",
+          "label": "Title",
+          "labelKey": "DISPLAY_VALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Destination",
+          "label": "Destination",
+          "labelKey": "DISPLAY_VALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "AccessToken",
+          "label": "Access Token",
+          "labelKey": "DISPLAY_VALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
