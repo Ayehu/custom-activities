@@ -1,5 +1,8 @@
 # Activate user - Activity to activate a user of Okta platform.
 
+## Note
+**Use OktaSetPassword activity immidiatly after in order to complete user activation.**
+
 Dependencies:
 1. Newtonsoft.Json
 

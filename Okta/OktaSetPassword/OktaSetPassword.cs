@@ -71,18 +71,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 }
                 if (httpResponse.StatusCode == HttpStatusCode.OK)
                 {
-                    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                    {
-                        var response = streamReader.ReadToEnd();
-                        List<string> userDataKeys = new List<string>();
-                        var res = ExposeJson(JObject.Parse(response), "_links");
-
-
-                        var data = res.ToDictionary(x => x.Key, x => x.Value);
-                        var dt = GetDataTable(data as Dictionary<string, string>);
-
-                        return this.GenerateActivityResult(dt);
-                    }
+                    return this.GenerateActivityResult("Success");
                 }
                 else
                 {

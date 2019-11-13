@@ -49,7 +49,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             if (httpResponse.StatusCode == HttpStatusCode.OK)
             {
-                return this.GenerateActivityResult("Account successfully deactivated.");
+                return this.GenerateActivityResult("Success");
             }
             else
             {

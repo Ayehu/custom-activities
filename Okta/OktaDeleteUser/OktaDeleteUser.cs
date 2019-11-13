@@ -49,7 +49,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             if (httpResponse.StatusCode == HttpStatusCode.NoContent)
             {
-                return this.GenerateActivityResult("Account successfully deleted.");
+                return this.GenerateActivityResult("Success");
             }
             else
             {
