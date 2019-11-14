@@ -49,7 +49,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             if (httpResponse.StatusCode == HttpStatusCode.OK)
             {
-                return this.GenerateActivityResult("Activation email has been sent to the user");
+                return this.GenerateActivityResult("Success");
             }
             else
             {

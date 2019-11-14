@@ -1,7 +1,8 @@
 # Activate user - Activity to activate a user of Okta platform.
 
 ## Note
-**Use OktaSetPassword activity immidiatly after in order to complete user activation.**
+**Use [OktaSetPassword](https://github.com/Ayehu/custom-activities/tree/master/Okta/OktaSetPassword) activity immidiatly after in order to complete user activation.**<br />
+**[Official documentation of activate user flow.](https://developer.okta.com/docs/reference/api/users/#activate-user)**
 
 Dependencies:
 1. Newtonsoft.Json
