@@ -1,7 +1,7 @@
 # Set password - Activity to set a password of Okta platform user.
 
 ## Note
-**It allows an admin to reset user's password immediately, without sending user an email (as opposed to Reset Password activity)**<br />
+**Set password activity allows an admin to reset user's password immediately, without sending password recovery email (as opposed to Reset Password activity)**<br />
 
 Dependencies:
 1. Newtonsoft.Json
