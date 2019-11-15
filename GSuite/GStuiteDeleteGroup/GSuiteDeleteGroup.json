@@ -20,7 +20,7 @@
         {
           "value": "",
           "required": true,
-          "key": "UserId",
+          "key": "AdminUser",
           "label": "Admin Email",
           "labelKey": "USER_ID",
           "baseType": "control",

@@ -8,37 +8,40 @@ using System.Collections.Generic;
 
 namespace ActivitiesAyehu
 {
-    public class GSuiteDeleteUser : IActivity
+    public class GSuiteResetPassword : IActivity
     {
         public string ServiceAccountEmail, PrivateKey, AdminUser;
 
-        public string UserEmail;
+        public string UserEmail, NewPassword;
 
         public ICustomActivityResult Execute()
         {
-            var result = DeleteUser();
+            var result = ResetPassword();
 
             return this.GenerateActivityResult(result);
         }
 
-        private string DeleteUser()
+        private string ResetPassword()
         {
             ServiceAccountCredential credential = new ServiceAccountCredential(
                new ServiceAccountCredential.Initializer(ServiceAccountEmail)
                {
-                   User = AdminUser,
+                   User = UserId,
                    Scopes = new[] { DirectoryService.Scope.AdminDirectoryUser, DirectoryService.Scope.AdminDirectoryGroup }
                }.FromPrivateKey(PrivateKey));
 
             var cs = new BaseClientService.Initializer()
             {
                 HttpClientInitializer = credential,
-                ApplicationName = "GSuiteDeleteUser"
+                ApplicationName = "GSuiteUpdatePassword"
             };
 
             var t = new DirectoryService(cs);
 
-            var request = t.Users.Delete(UserEmail);
+            var request = t.Users.Update(new User
+            {
+                Password = NewPassword
+            }, Email);
 
             request.Execute();
 

@@ -10,9 +10,9 @@ namespace ActivitiesAyehu
 {
     public class GSuiteAddUser : IActivity
     {
-        public string ServiceAccountEmail, PrivateKey, UserId;
+        public string ServiceAccountEmail, PrivateKey, AdminUser;
 
-        public string GivenName, FamilyName, PrimaryEmail, SecondaryEmail, Password;
+        public string GivenName, FamilyName, UserEmail, SecondaryEmail, Password;
 
         public ICustomActivityResult Execute()
         {
@@ -26,7 +26,7 @@ namespace ActivitiesAyehu
             ServiceAccountCredential credential = new ServiceAccountCredential(
                new ServiceAccountCredential.Initializer(ServiceAccountEmail)
                {
-                   User = UserId,
+                   User = AdminUser,
                    Scopes = new[] { DirectoryService.Scope.AdminDirectoryUser, DirectoryService.Scope.AdminDirectoryGroup }
                }.FromPrivateKey(PrivateKey));
 
@@ -40,7 +40,7 @@ namespace ActivitiesAyehu
 
             var request = t.Users.Insert(new User
             {
-                PrimaryEmail = PrimaryEmail,
+                PrimaryEmail = UserEmail,
                 Password = Password,
                 Name = new UserName { GivenName = GivenName, FamilyName = FamilyName },
                 Emails = new List<UserEmail> { new UserEmail { Primary = true, Address = SecondaryEmail } }

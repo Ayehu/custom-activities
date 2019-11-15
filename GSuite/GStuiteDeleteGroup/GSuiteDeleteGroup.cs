@@ -10,7 +10,7 @@ namespace ActivitiesAyehu
 {
     public class GSuiteDeleteGroup : IActivity
     {
-        public string ServiceAccountEmail, PrivateKey, UserId;
+        public string ServiceAccountEmail, PrivateKey, AdminUser;
 
         public string GroupEmail;
 
@@ -26,7 +26,7 @@ namespace ActivitiesAyehu
             ServiceAccountCredential credential = new ServiceAccountCredential(
                new ServiceAccountCredential.Initializer(ServiceAccountEmail)
                {
-                   User = UserId,
+                   User = AdminUser,
                    Scopes = new[] { DirectoryService.Scope.AdminDirectoryUser, DirectoryService.Scope.AdminDirectoryGroup }
                }.FromPrivateKey(PrivateKey));
 

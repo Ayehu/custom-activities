@@ -1,4 +1,4 @@
-## GDriveAddUser - Add a group in Google Directory.
+## GDriveUpdatePassword - Update user's password in Google Directory.
 
 Remark - To run this activity you need to:  
 1. Set-up a new Service Account following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html);  
@@ -26,12 +26,8 @@ using System.Collections.Generic;
 
 ### Mandatory fields:
 
-**GroupName**			- Group's name  
-**GroupEmail**			- E-mail to access new Google Account  
+**Email**				- User's E-mail to change password  
+**NewPassword**			- New Password for the new account. A password can contain any combination of ASCII characters. A minimum of 8 characters is required.  
 **AdminUser**			- User e-mail to impersonate  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
 **PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  
-
-### Output
-
-**Group ID**				- ID of the created Group  
