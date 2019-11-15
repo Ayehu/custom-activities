@@ -44,9 +44,9 @@ namespace ActivitiesAyehu
                 Name = GroupName
             });
 
-            request.Execute();
+            var group = request.Execute();
 
-            return "Success";
+            return group.Id;
         }
     }
 }

@@ -46,9 +46,9 @@ namespace ActivitiesAyehu
                 Emails = new List<UserEmail> { new UserEmail { Primary = true, Address = SecondaryEmail } }
             });
 
-            request.Execute();
+            var user = request.Execute();
 
-            return "Success";
+            return user.Id;
         }
     }
 }
