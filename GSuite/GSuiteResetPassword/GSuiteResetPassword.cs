@@ -26,7 +26,7 @@ namespace ActivitiesAyehu
             ServiceAccountCredential credential = new ServiceAccountCredential(
                new ServiceAccountCredential.Initializer(ServiceAccountEmail)
                {
-                   User = UserId,
+                   User = AdminUser,
                    Scopes = new[] { DirectoryService.Scope.AdminDirectoryUser, DirectoryService.Scope.AdminDirectoryGroup }
                }.FromPrivateKey(PrivateKey));
 
@@ -41,7 +41,7 @@ namespace ActivitiesAyehu
             var request = t.Users.Update(new User
             {
                 Password = NewPassword
-            }, Email);
+            }, UserEmail);
 
             request.Execute();
 

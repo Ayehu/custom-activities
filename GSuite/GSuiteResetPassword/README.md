@@ -1,4 +1,4 @@
-## GDriveUpdatePassword - Update user's password in Google Directory.
+## GSuiteUpdatePassword - Update user's password in Google Directory.
 
 Remark - To run this activity you need to:  
 1. Set-up a new Service Account following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html);  

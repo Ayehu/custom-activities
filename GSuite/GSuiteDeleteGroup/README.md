@@ -1,4 +1,4 @@
-## GDriveDeleteGroup - Delete a group in Google Directory.
+## GSuiteDeleteGroup - Delete a group in Google Directory.
 
 Remark - To run this activity you need to:  
 1. Set-up a new Service Account following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html);  
@@ -26,7 +26,7 @@ using System.Collections.Generic;
 
 ### Mandatory fields:
 
-**PrimaryEmail**		- Group's E-mail or ID to be deleted  
+**UserEmail**			- Group's E-mail or ID to be deleted  
 **AdminUser**			- User e-mail to impersonate  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
 **PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  
