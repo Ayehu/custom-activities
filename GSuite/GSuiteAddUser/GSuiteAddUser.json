@@ -30,7 +30,7 @@
           "value": "",
           "required": true,
           "key": "PrimaryEmail",
-          "label": "Primary Email",
+          "label": "User Email",
           "labelKey": "PRIMARY_EMAIL",
           "baseType": "control",
           "controlType": "textbox"
@@ -39,7 +39,7 @@
           "value": "",
           "required": true,
           "key": "SecondaryEmail",
-          "label": "Secondary Email",
+          "label": "User Alternate Email",
           "labelKey": "SECONDARY_EMAIL",
           "baseType": "control",
           "controlType": "textbox"
@@ -57,7 +57,7 @@
           "value": "",
           "required": true,
           "key": "UserId",
-          "label": "User ID",
+          "label": "Admin Email",
           "labelKey": "USER_ID",
           "baseType": "control",
           "controlType": "textbox"

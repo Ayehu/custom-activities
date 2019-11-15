@@ -30,8 +30,11 @@ using System.Collections.Generic;
 **FamilyName**			- User's last name  
 **PrimaryEmail**		- E-mail to access new Google Account  
 **SecondaryEmail**		- User's existing e-mail  
-**Password**			- Password for the new account
+**Password**			- Password for the new account.  A password can contain any combination of ASCII characters. A minimum of 8 characters is required.
 **UserId**				- User e-mail to impersonate  
-**ParentID**			- Parent folder where file is going to be uploaded  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  
 **PrivateKey**			- When creating a service account, you will be able to donwload a JSON file. Inside the file you can get the private key for the chosen service Account  
+
+### Output
+
+**User ID**				- ID of the created User Account  

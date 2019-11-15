@@ -30,7 +30,7 @@
           "value": "",
           "required": true,
           "key": "UserId",
-          "label": "User ID",
+          "label": "Admin Email",
           "labelKey": "USER_ID",
           "baseType": "control",
           "controlType": "textbox"
