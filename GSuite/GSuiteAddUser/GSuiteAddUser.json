@@ -39,7 +39,7 @@
           "value": "",
           "required": true,
           "key": "SecondaryEmail",
-          "label": "User Backup Email",
+          "label": "Secondary Email",
           "labelKey": "SECONDARY_EMAIL",
           "baseType": "control",
           "controlType": "textbox"
