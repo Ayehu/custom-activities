@@ -58,7 +58,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 SecurityEnabled = false
             }).Result;
 
-            dt.Rows.Add("Success");
+            dt.Rows.Add(group.Id);
 
             return this.GenerateActivityResult(dt);
         }

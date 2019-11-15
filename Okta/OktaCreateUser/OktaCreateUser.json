@@ -1,0 +1,105 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Okta create user",
+    "description": "Create user Okta API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Domain",
+          "label": "Domain",
+          "baseType": "control",
+          "labelKey": "Domain",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "FirstName",
+          "label": "First Name",
+          "baseType": "control",
+          "labelKey": "FirstName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "LastName",
+          "label": "Last Name",
+          "baseType": "control",
+          "labelKey": "LastName",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Email",
+          "label": "Email",
+          "baseType": "control",
+          "labelKey": "Email",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "MobilePhone",
+          "label": "Phone",
+          "baseType": "control",
+          "labelKey": "MobilePhone",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
+        },
+        {
+          "key": "Password",
+          "label": "Password",
+          "baseType": "control",
+          "labelKey": "Password",
+          "controlType": "password",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Activate",
+          "label": "Activate",
+          "baseType": "control",
+          "labelKey": "Activate",
+          "controlType": "autocomplete",
+          "value": "yes",
+          "styleClass": null,
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "yes",
+              "value": "yes"
+            },
+            {
+              "key": "no",
+              "value": "no"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "message": "SUCCESS"
+}

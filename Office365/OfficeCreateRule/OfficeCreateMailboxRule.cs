@@ -73,7 +73,6 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
-            dt.Rows.Add("Success");
 
             MessageRulePredicates condition = new MessageRulePredicates();
             MessageRuleActions actions = new MessageRuleActions();
@@ -135,6 +134,7 @@ namespace Ayehu.Sdk.ActivityCreation
             
             user.MailFolders["Inbox"].MessageRules.Request().AddAsync(messageRule).Wait();
 
+			dt.Rows.Add(messageRule.Id);
             return this.GenerateActivityResult(dt);
         }
 

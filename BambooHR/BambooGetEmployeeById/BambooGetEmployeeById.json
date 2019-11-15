@@ -1,0 +1,45 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"BambooGetEmployeeById",
+    "description": "Get a bamboo employee by id",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+      {
+          "value": "",
+          "required": true,
+          "key":"employeeId",
+          "label": "Employee Id",
+          "labelKey": "EMP_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"apiKey",
+          "label": "API Key",
+          "labelKey": "API_KEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"companyName",
+          "label": "Company Name",
+          "labelKey": "COMPANY_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

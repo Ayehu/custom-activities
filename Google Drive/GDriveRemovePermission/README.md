@@ -25,10 +25,10 @@ using System.IO;
 using System.Web;  
 using System.Collections.Generic;  
 
-### Mandatory fields when adding a group:
+### Mandatory fields:
 
 **FileId**				- File ID to remove permission  
-**PermissionId**		- Permission ID to be removed  
+**PermissionId**	- E-mail of the permission to be removed  
 **UserId**				- User e-mail to impersonate  
 **ParentID**			- Parent folder where file is going to be uploaded  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  

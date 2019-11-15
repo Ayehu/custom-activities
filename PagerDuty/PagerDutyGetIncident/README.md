@@ -5,9 +5,9 @@ Dependencies:
 
 Remark:
 1. Create an account in PagerDuty.
-3. Create a team and add users there which will receive notifications.
-4. Create a service.
-5. Add an incident.
+2. Create a team and add users there which will receive notifications.
+3. Create a service.
+4. Add an incident.
 5. Create an API User Token.
 
 Mandatory fields when creating an incident :<br />

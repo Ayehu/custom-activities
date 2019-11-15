@@ -94,7 +94,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 }
             }).Result;
 
-            dt.Rows.Add("Success");
+            dt.Rows.Add(user.UserPrincipalName);
             
             return this.GenerateActivityResult(dt);
         }

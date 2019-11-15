@@ -1,4 +1,4 @@
-﻿using Amazon.S3;
+using Amazon.S3;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Amazon.S3.Model;
@@ -103,12 +103,16 @@ namespace Ayehu.Sdk.AWSS3
                     response = client.ListObjectsV2(request);
                     dataTable.Columns.Add("Id");
                     dataTable.Columns.Add("FileName");
+                    dataTable.Columns.Add("BucketName");
                     dataTable.Columns.Add("Size");
+                    dataTable.Columns.Add("ETag");
+                    dataTable.Columns.Add("LastModified");
+                    dataTable.Columns.Add("Owner");
                     int id = 0;
                     foreach (var item in response.S3Objects)
                     {
                         id++;
-                        dataTable.Rows.Add(id, item.Key, item.Size);
+                        dataTable.Rows.Add(id, item.Key, item.BucketName, item.Size,item.ETag,item.LastModified,item.Owner);
                     }
                     // Process the response.
                     request.ContinuationToken = response.NextContinuationToken;

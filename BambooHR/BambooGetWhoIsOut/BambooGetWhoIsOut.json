@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"BambooGetWhoIsOut",
+    "description": "This will return a list, sorted by date, of employees who will be out, and company holidays.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"apiKey",
+          "label": "API Key",
+          "labelKey": "API_KEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"companyName",
+          "label": "Company Name",
+          "labelKey": "COMPANY_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

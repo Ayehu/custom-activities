@@ -10,9 +10,14 @@ Output Success/Failure
 MANDATORY FIELDS WHEN UPLOAD A FILE:
 
 a. Access Key: How to get: Bellow
+
 b. Secrey Key: How to get: Bellow
+
 c. Bucket: Bucket is the directory that you want to include the file when uploading.
+
 d. File Path: File Path is the address of the file to upload on your device.
+
+e. Region: The region of the bucket
 
 -------------------------------------------
 

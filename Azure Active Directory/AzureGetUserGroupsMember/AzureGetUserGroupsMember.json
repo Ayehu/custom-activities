@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"AzureGetUserGroupsMember",
+    "description": "Get groups where a specific user is member of",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+      {
+          "value": "",
+          "required": true,
+          "key": "userId",
+          "label": "User Id",
+          "labelKey": "USER_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "appId",
+          "label": "Application Id",
+          "labelKey": "APPID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant Id",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secret",
+          "label": "Secret",
+          "labelKey": "SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -10,10 +10,16 @@ Output Success/Failure
 MANDATORY FIELDS WHEN DOWNLOAD A FILE:
 
 a. Access Key: How to get: Bellow
+
 b. Secrey Key: How to get: Bellow
+
 c. Bucket: Bucket is the directory that you want to get the file when download.
+
 d. File Path: File Path is the address of the file to download on your device.
+
 e. Key: Name of file in Bucket.
+
+f. Region: The region of the bucket
 
 -------------------------------------------
 

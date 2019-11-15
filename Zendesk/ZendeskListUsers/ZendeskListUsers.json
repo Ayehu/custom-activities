@@ -1,6 +1,6 @@
 ﻿{
   "data": {
-    "name": "ZendiskListUsers",
+    "name": "ZendeskListUsers",
     "description": "List all users",
     "Timeout": "00:00:30",
     "class": [],
@@ -40,7 +40,7 @@
         },
 	      {
 		      "key": "UserType",
-		      "label": "UserType",
+		      "label": "User Type",
 		      "baseType": "control",
 		      "labelKey": "UserType",
 		      "controlType": "autocomplete",
@@ -59,6 +59,10 @@
 			      {
 				      "key": "admin",
 				      "value": "admin"
+			      },
+			      {
+				      "key": "enduser",
+				      "value": "enduser"
 			      }
 		      ]
 	      }

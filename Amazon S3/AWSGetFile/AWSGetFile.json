@@ -61,6 +61,106 @@
           "controlType": "textbox",
           "disabled": false,
           "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "keyRegion",
+          "label": "Region",
+          "label key": "keyRegion",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "disabled": false,
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "US East (Ohio)"
+            },
+            {
+              "key": "2",
+              "value": "US East (N. Virginia)"
+            },
+            {
+              "key": "3",
+              "value": "US West (N. California)"
+            },
+            {
+              "key": "4",
+              "value": "US West (Oregon)"
+            },
+            {
+              "key": "5",
+              "value": "Asia Pacific (Hong Kong)"
+            },
+            {
+              "key": "6",
+              "value": "Asia Pacific (Mumbai)"
+            },
+            {
+              "key": "7",
+              "value": "Asia Pacific (Seoul)"
+            },
+            {
+              "key": "8",
+              "value": "Asia Pacific (Singapore)"
+            },
+            {
+              "key": "9",
+              "value": "Asia Pacific (Sydney)"
+            },
+            {
+              "key": "10",
+              "value": "Asia Pacific (Tokyo)"
+            },
+            {
+              "key": "11",
+              "value": "Canada (Central)"
+            },
+            {
+              "key": "12",
+              "value": "China (Beijing)"
+            },
+            {
+              "key": "13",
+              "value": "China (Ningxia)"
+            },
+            {
+              "key": "14",
+              "value": "EU (Frankfurt)"
+            },
+            {
+              "key": "15",
+              "value": "EU (Ireland)"
+            },
+            {
+              "key": "16",
+              "value": "EU (London)"
+            },
+            {
+              "key": "17",
+              "value": "EU (Paris)"
+            },
+            {
+              "key": "18",
+              "value": "EU (Stockholm)"
+            },
+            {
+              "key": "19",
+              "value": "Middle East (Bahrain)"
+            },
+            {
+              "key": "20",
+              "value": "South America (Sao Paulo)"
+            },
+            {
+              "key": "21",
+              "value": "AWS GovCloud (US-East)"
+            },
+            {
+              "key": "22",
+              "value": "AWS GovCloud (US-West)"
+            }
+          ]
         }
       ],
       "index": "1",

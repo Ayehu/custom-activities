@@ -1,4 +1,4 @@
-﻿{
+{
   "data": {
     "name": "List Files",
     "description": "[AWS] Lists Files S3",
@@ -47,7 +47,7 @@
           "label": "Region",
           "label key": "keyRegion",
           "baseType": "control",
-          "controlType": "dropdown",
+          "controlType": "autocomplete",
           "disabled": false,
           "controlOptions": [
             {

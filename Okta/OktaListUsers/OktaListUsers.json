@@ -1,0 +1,75 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Okta get users list",
+    "description": "Get users list Okta API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Domain",
+          "label": "Domain",
+          "baseType": "control",
+          "labelKey": "Domain",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Status",
+          "label": "Status",
+          "baseType": "control",
+          "labelKey": "Status",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "",
+              "value": ""
+            },
+            {
+              "key": "ACTIVE",
+              "value": "ACTIVE"
+            },
+            {
+              "key": "PROVISIONED",
+              "value": "PROVISIONED"
+            },
+            {
+              "key": "STAGED",
+              "value": "STAGED"
+            },
+            {
+              "key": "RECOVERY",
+              "value": "RECOVERY"
+            },
+            {
+              "key": "DEPROVISIONED",
+              "value": "DEPROVISIONED"
+            },
+            {
+              "key": "PASSWORD_EXPIRED",
+              "value": "PASSWORD_EXPIRED"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ZendeskApi_v2;
 using ZendeskApi_v2.Models.Users;
 namespace Ayehu.Sdk.ActivityCreation
@@ -14,7 +16,6 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Username = null;
         public string ApiToken = null;
 
-
         public string UserType = null;
 
         public ICustomActivityResult Execute()
@@ -24,18 +25,45 @@ namespace Ayehu.Sdk.ActivityCreation
         | SecurityProtocolType.Tls12
         | SecurityProtocolType.Ssl3;
             var api = new ZendeskApi(Domain, Username, ApiToken, "");
-            IList<User> users = null;
-            if (UserType == "admin")
-                users = api.Users.GetAllAdmins().Users;
-            else if (UserType == "agent")
-                users = api.Users.GetAllAgents().Users;
-            else
-                users = api.Users.GetAllUsers().Users;
-
-            DataTable mergedTable = null;
-            foreach (var user in users)
+            var users = new List<User>();
+            long totalPage = 1;
+            GroupUserResponse res = null;
+            for (int currentPage = 1; currentPage <= 10; currentPage++)
             {
-                var dt = SuccessResult(user);
+                if (UserType == "admin")
+                    res = api.Users.GetAllAdmins(100, currentPage);
+                else if (UserType == "agent")
+                    res = api.Users.GetAllAgents(100, currentPage);
+                else if (UserType == "enduser")
+                    res = api.Users.GetAllEndUsers(100, currentPage);
+                else
+                    res = api.Users.GetAllUsers(100, currentPage);
+                totalPage = res.TotalPages;
+                users.AddRange(res.Users);
+                if (currentPage == totalPage)
+                    break;
+            }
+            var dt = ItemsToDatatable(users);
+            return this.GenerateActivityResult(dt);
+            
+
+        }
+        private DataTable ItemsToDatatable(IEnumerable<object> items)
+        {
+            DataTable mergedTable = null;
+
+            foreach (var item in items)
+            {
+                var json = JsonConvert.SerializeObject(item);
+                var jObject = JObject.Parse(json);
+                var dt = new DataTable("resultSet");
+                var row = dt.NewRow();
+                dt.Rows.Add(row);
+                foreach (var pair in jObject)
+                {
+                    dt.Columns.Add(pair.Key);
+                    dt.Rows[0][pair.Key] = pair.Value.ToString();
+                }
                 if (mergedTable == null)
                     mergedTable = dt;
                 else
@@ -43,40 +71,10 @@ namespace Ayehu.Sdk.ActivityCreation
                     mergedTable.Merge(dt, true, MissingSchemaAction.Add);
                 }
             }
-            return this.GenerateActivityResult(mergedTable);
 
+            return mergedTable;
         }
-        static DataTable SuccessResult(User o)
-        {
-            DataTable dt = new DataTable("resultSet");
-
-            DataRow dr = dt.NewRow();
-            dt.Rows.Add(dr);
-            dt.Columns.Add("Id");
-            dt.Rows[0]["Id"] = o.Id.Value;
-            var filter = new string[] { "Abilities", "CustomFields", "Photo", "Tags" };
-            o.GetType().GetProperties().ToList().ForEach(f =>
-            {
-                try
-                {
-                    if (!filter.Contains(f.Name))
-                    {
-                        var value = f.GetValue(o, null);
-                        var type = f.PropertyType;
-                        if (value == null)
-                        {
-                            value = "";
-                            type = typeof(string);
-                        }
-
-                        dt.Columns.Add(f.Name, type);
-                        dt.Rows[0][f.Name] = value;
-                    }
-                }
-                catch { }
-            });
-            return dt;
-        }
+        
     }
 
 

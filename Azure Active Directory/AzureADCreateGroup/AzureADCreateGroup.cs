@@ -34,21 +34,22 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string groupName;
 
-        public ICustomActivityResult Execute()
+       public ICustomActivityResult Execute()
         {
             var auth = GetAuthenticated();
             var existingGroup = auth.ActiveDirectoryGroups.List().ToList().Where(x => x.Name.ToLower() == groupName.ToLower()).FirstOrDefault();
+            Microsoft.Azure.Management.Graph.RBAC.Fluent.IActiveDirectoryGroup newGroup;
 
             if (existingGroup == null)
             {
-                auth.ActiveDirectoryGroups.
+                newGroup = auth.ActiveDirectoryGroups.
                     Define(groupName).
                     WithEmailAlias(groupName).Create();
             }
             else
                 throw new Exception(string.Format("Group with name '{0}' already exist.", groupName));
 
-            return this.GenerateActivityResult(GetActivityResult);
+            return this.GenerateActivityResult(GetActivityResult(newGroup.Id));
         }
 
         private Azure.IAuthenticated GetAuthenticated()
@@ -62,16 +63,13 @@ namespace Ayehu.Sdk.ActivityCreation
             return azure;
         }
 
-        private DataTable GetActivityResult
+        private DataTable GetActivityResult(string groupId)
         {
-            get
-            {
-                DataTable dt = new DataTable("resultSet");
-                dt.Columns.Add("Result");
-                dt.Rows.Add("Success");
+            DataTable dt = new DataTable("resultSet");
+            dt.Columns.Add("Result");
+            dt.Rows.Add(groupId);
 
-                return dt;
-            }
+            return dt;
         }
     }
 }

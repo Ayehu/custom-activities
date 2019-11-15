@@ -50,6 +50,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 streamWriter.Write(IncidentJsonBuilder());
                 streamWriter.Flush();
                 streamWriter.Close();
+
                 HttpWebResponse httpResponse = null;
                 try
                 {
@@ -98,21 +99,8 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private string IncidentJsonBuilder()
         {
-            var body = new
-            {
-                alert = new
-                {
-                    type = ALERT_TYPE,
-                    status = Resolve == "yes" ? "resolved" : null,
-                    incident = !string.IsNullOrWhiteSpace(AssociatedIncidentId) ? new
-                    {
-                        id = AssociatedIncidentId,
-                        type = INCIDENT_TYPE
-                    } : (object)null,
-                }
-            };
-
-            return JsonConvert.SerializeObject(body);
+            var body = "{\"alert\": {\"type\": \"" + ALERT_TYPE+ "\""+ (Resolve == "yes" ? ",\"status\": \"resolved\"" : "")  + (!string.IsNullOrWhiteSpace(AssociatedIncidentId) ? ",\"incident\": {\"id\":\""+AssociatedIncidentId+"\",\"type\":\""+ INCIDENT_TYPE+"\"}}}":"}}");
+              return body;
         }
 
         private string ExposeJson(JObject jObject, string searchString, string append = "")
