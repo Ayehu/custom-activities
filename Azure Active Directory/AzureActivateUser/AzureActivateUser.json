@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name":"AzureActivateDeactivateUser",
-    "description": "Activate or Deactivate an ActiveDirectory user",
+    "name":"AzureActivateUser",
+    "description": "Activate an ActiveDirectory user",
     "Timeout": null,
     "class":[],
     "rootSettings": {
@@ -16,28 +16,6 @@
           "labelKey": "USER_ID_VALUE",
           "baseType": "control",
           "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "acctState",
-          "idFieldName": "isEnabled",
-          "disabled": false,
-          "styleClass": "",
-          "label": "Account State",
-          "labelKey": "ACCOUNT_STATE_VALUE",
-          "baseType": "control",
-          "controlType": "autocomplete",
-          "controlOptions": [
-            {
-              "key": "1",
-              "value": "Active"
-            },
-            {
-              "key": "0",
-              "value": "Disabled"
-            }
-          ]
         },
         {
           "value": "",

@@ -9,9 +9,9 @@ using Microsoft.Azure.Management.ResourceManager.Fluent;
 namespace Ayehu.Sdk.ActivityCreation
 {
     /// <summary>
-    /// Activate or Deactivate an ActiveDirectory user
+    /// Activate an ActiveDirectory user
     /// </summary>
-    public class AzureActivateDeactivateUser : IActivity
+    public class AzureActivateUser : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -32,9 +32,6 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </remarks>
         public string secret;
 
-        public string acctState;
-        public string isEnabled;
-
         /// <summary>
         /// The user id or email
         /// </summary>
@@ -50,7 +47,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
             if (user != null && user.UserPrincipalName != "")
             {
-                user.Update().WithAccountEnabled(Convert.ToBoolean(Convert.ToInt32(isEnabled))).Apply();
+                user.Update().WithAccountEnabled(true).Apply();
             }
             else
                 throw new Exception(string.Format("User with id='{0}' not found", userId));

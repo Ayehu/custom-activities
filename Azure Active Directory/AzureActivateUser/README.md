@@ -1,4 +1,4 @@
-## AzureActivateDeactivateUser - Activate or Deactivate an ActiveDirectory user
+## AzureActivateUser - Activate an ActiveDirectory user
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>
@@ -23,4 +23,3 @@ These fields should be sent when calling the API.
 
 ### The below fields needs to be provided to change the user's state
 **User Id**           - User Id or Email
-**Account State**     - Set the account to Activate or Inactive state
