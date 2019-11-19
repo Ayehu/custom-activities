@@ -1,4 +1,4 @@
-## AzureIsGroupExist - Checks if a group exist by id
+## AzureADIsGroupExist - Checks if a group exist by id
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>

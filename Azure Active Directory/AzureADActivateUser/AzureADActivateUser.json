@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name":"AzureActivateUser",
+    "name":"AzureADActivateUser",
     "description": "Activate an ActiveDirectory user",
     "Timeout": null,
     "class":[],

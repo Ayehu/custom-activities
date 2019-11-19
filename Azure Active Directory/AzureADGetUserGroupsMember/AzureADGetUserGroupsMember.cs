@@ -9,7 +9,7 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureIsGroupExist : IActivity
+    public class AzureADGetUserGroupsMember : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -31,23 +31,36 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// Group to check
+        /// User's email/userId to get information
         /// </summary>
-        public string groupId;
+        public string userId;
+
 
         public ICustomActivityResult Execute()
         {
             var auth = GetAuthenticated();
-            var group = auth.ActiveDirectoryGroups.List().Where(x => x.Id == groupId).FirstOrDefault();
-            DataTable dt = new DataTable("resultSet");
-            dt.Columns.Add("Result");
+            var user = auth.ActiveDirectoryUsers.List().Where(u => u.Id == userId || u.UserPrincipalName.ToLower() == userId.Trim().ToLower()).FirstOrDefault();
 
-            if (group != null)
-                dt.Rows.Add(true);
+            if (user != null)
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Id");
+                dt.Columns.Add("Group Name");
+
+                auth.ActiveDirectoryGroups.List().ToList().ForEach(g =>
+                {
+                    bool found = g.ListMembers().Where(m => m.Id == user.Id).FirstOrDefault() != null;
+
+                    if (found)
+                    {
+                        dt.Rows.Add(g.Id, g.Name);
+                    }
+                });
+
+                return this.GenerateActivityResult(dt);
+            }
             else
-                dt.Rows.Add(false);
-
-            return this.GenerateActivityResult(dt);
+                throw new Exception(string.Format("User with id='{0}' not found", userId));
         }
 
         private Azure.IAuthenticated GetAuthenticated()

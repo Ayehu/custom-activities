@@ -9,7 +9,7 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureGetGroupMembers : IActivity
+    public class AzureADGetGroupMembers : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID

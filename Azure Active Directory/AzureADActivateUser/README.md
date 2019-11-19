@@ -1,4 +1,4 @@
-## AzureActivateUser - Activate an ActiveDirectory user
+## AzureADActivateUser - Activate an ActiveDirectory user
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>

@@ -1,14 +1,14 @@
 {
   "innerCode": 200,
   "data": {
-    "name":"AzureDeactivateUser",
-    "description": "Deactivate an ActiveDirectory user",
+    "name":"AzureADGetUserGroupsMember",
+    "description": "Get groups where a specific user is member of",
     "Timeout": null,
     "class":[],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
-        {
+      {
           "value": "",
           "required": true,
           "key": "userId",

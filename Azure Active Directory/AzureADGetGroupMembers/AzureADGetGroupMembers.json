@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name":"AzureGetGroupMembers",
+    "name":"AzureADGetGroupMembers",
     "description": "Get group members by group Id",
     "Timeout": null,
     "class":[],

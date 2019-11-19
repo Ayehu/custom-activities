@@ -1,17 +1,15 @@
 using System;
 using System.Data;
-using Ayehu.Sdk.ActivityCreation.Interfaces;
+using System.Linq;
 using Ayehu.Sdk.ActivityCreation.Extension;
+using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Microsoft.Azure.Management.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
+using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    /// <summary>
-    /// Activate an ActiveDirectory user
-    /// </summary>
-    public class AzureActivateUser : IActivity
+    public class AzureADIsGroupExist : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -33,26 +31,23 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// The user id or email
+        /// Group to check
         /// </summary>
-        public string userId;
+        public string groupId;
 
         public ICustomActivityResult Execute()
         {
+            var auth = GetAuthenticated();
+            var group = auth.ActiveDirectoryGroups.List().Where(x => x.Id == groupId).FirstOrDefault();
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
 
-            var auth = GetAuthenticated();
-            var user = auth.ActiveDirectoryUsers.GetById(userId);
-
-            if (user != null && user.UserPrincipalName != "")
-            {
-                user.Update().WithAccountEnabled(true).Apply();
-            }
+            if (group != null)
+                dt.Rows.Add(true);
             else
-                throw new Exception(string.Format("User with id='{0}' not found", userId));
+                dt.Rows.Add(false);
 
-            return this.GenerateActivityResult(GetActivityResult);
+            return this.GenerateActivityResult(dt);
         }
 
         private Azure.IAuthenticated GetAuthenticated()
@@ -64,18 +59,6 @@ namespace Ayehu.Sdk.ActivityCreation
                    .Authenticate(credentials);
 
             return azure;
-        }
-
-        private DataTable GetActivityResult
-        {
-            get
-            {
-                DataTable dt = new DataTable("resultSet");
-                dt.Columns.Add("Result");
-                dt.Rows.Add("Success");
-
-                return dt;
-            }
         }
     }
 }

@@ -1,4 +1,4 @@
-## AzureGetGroupMembers - Get group members by group Id
+## AzureADGetGroupMembers - Get group members by group Id
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>

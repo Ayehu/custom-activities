@@ -1,4 +1,4 @@
-## AzureDeactivateUser - Deactivate an ActiveDirectory user
+## AzureADDeactivateUser - Deactivate an ActiveDirectory user
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>

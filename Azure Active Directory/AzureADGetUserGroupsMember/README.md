@@ -1,4 +1,4 @@
-## AzureGetUserGroupsMember - Get groups where a specific user is member of
+## AzureADGetUserGroupsMember - Get groups where a specific user is member of
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>
