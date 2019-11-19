@@ -22,4 +22,4 @@ Secret </br>
 These fields should be sent when calling the API.
 
 ### The below fields needs to be provided to get group members
-**groupId**           - The id of the group to get the information
+**groupId**           - The id of the group to get the information. Also accepts group name.

@@ -38,7 +38,17 @@ namespace Ayehu.Sdk.ActivityCreation
         public ICustomActivityResult Execute()
         {
             var auth = GetAuthenticated();
-            var group = auth.ActiveDirectoryGroups.List().Where(x => x.Id == groupId).FirstOrDefault();
+            Microsoft.Azure.Management.Graph.RBAC.Fluent.IActiveDirectoryGroup group = null;
+            Guid _groupId = Guid.Empty;
+
+            if (Guid.TryParse(groupId, out _groupId))
+            {
+                group = auth.ActiveDirectoryGroups.List().Where(x => x.Id == _groupId.ToString()).FirstOrDefault();
+            }
+            else
+            {
+                group = auth.ActiveDirectoryGroups.List().Where(x => x.Name.ToLower() == groupId.ToLower()).FirstOrDefault();
+            }
 
             if (group != null)
             {
