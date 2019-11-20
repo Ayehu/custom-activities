@@ -26,6 +26,34 @@
           "value": "",
           "styleClass": null,
           "required": true
+        },
+        {
+          "key": "Type",
+          "label": "Type",
+          "baseType": "control",
+          "labelKey": "Type",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "",
+              "value": ""
+            },
+            {
+              "key": "Planned",
+              "value": "Planned"
+            },
+            {
+              "key": "Unknown",
+              "value": "Unknown"
+            },
+            {
+              "key": "Unplanned",
+              "value": "Unplanned"
+            }
+          ]
         }
       ]
     }

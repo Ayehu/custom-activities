@@ -1,7 +1,7 @@
 {
   "data": {
-    "name": "Dyantrace Get Logs",
-    "description": "Get logs of Dyantrace platform.",
+    "name": "Dynatrace Get Logs",
+    "description": "Get logs of Dynatrace platform.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -28,10 +28,10 @@
           "required": true
         },
         {
-          "key": "HostId",
+          "key": "ServerId",
           "label": "Host Id",
           "baseType": "control",
-          "labelKey": "HostId",
+          "labelKey": "ServerId",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,

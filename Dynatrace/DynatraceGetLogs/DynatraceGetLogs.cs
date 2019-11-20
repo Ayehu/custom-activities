@@ -25,7 +25,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public string AuthorizationToken;
         public string EnvironmentId;
-        public string HostId;
+        public string ServerId;
 
         #endregion
 
@@ -93,7 +93,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, EnvironmentId, HostId));
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, EnvironmentId, ServerId));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
             httpWebRequest.Headers.Add("Authorization", string.Format("Api-Token {0}", AuthorizationToken));

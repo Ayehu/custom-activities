@@ -1,7 +1,7 @@
 {
   "data": {
-    "name": "Dyantrace Get Logs",
-    "description": "Get logs of Dyantrace platform.",
+    "name": "Dynatrace Get Thresholds",
+    "description": "Get thresholds of Dynatrace platform.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
@@ -22,16 +22,6 @@
           "label": "Environment Id",
           "baseType": "control",
           "labelKey": "EnvironmentId",
-          "controlType": "textbox",
-          "value": "",
-          "styleClass": null,
-          "required": true
-        },
-        {
-          "key": "HostId",
-          "label": "Host Id",
-          "baseType": "control",
-          "labelKey": "HostId",
           "controlType": "textbox",
           "value": "",
           "styleClass": null,

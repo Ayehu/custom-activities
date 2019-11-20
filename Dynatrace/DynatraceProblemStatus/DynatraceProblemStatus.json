@@ -1,7 +1,7 @@
 {
   "data": {
-    "name": "Dyantrace Problem Status",
-    "description": "Get problem status of Dyantrace platform.",
+    "name": "Dynatrace Problem Status",
+    "description": "Get problem status of Dynatrace platform.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {

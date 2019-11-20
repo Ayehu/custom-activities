@@ -14,7 +14,7 @@ namespace Ayehu.Sdk.ActivityCreation
     {
         #region Private readonly properties
 
-        private readonly string API_REQUEST_URL = "https://{0}.live.dynatrace.com/api/v1/maintenance";
+        private readonly string API_REQUEST_URL = "https://{0}.live.dynatrace.com/api/v1/maintenance?type={1}";
         private readonly string CONTENT_TYPE = "application/json";
         private readonly string ACCEPT = "application/json";
         private readonly string METHOD = "GET";
@@ -25,6 +25,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public string AuthorizationToken;
         public string EnvironmentId;
+        public string Type;
 
         #endregion
 
@@ -67,21 +68,21 @@ namespace Ayehu.Sdk.ActivityCreation
                                                                      "schedule_maintenanceEnd"};
                     var _maintenances = JToken.Parse(response);
 
-                    var maintenancList = new List<Dictionary<string, string>>();
+                    var maintenanceList = new List<Dictionary<string, string>>();
 
-                    foreach (var maintenanc in maintenances)
+                    foreach (var _maintenance in _maintenances)
                     {
-                        var res = ExposeJson(_maintenanc.ToObject<JObject>(), "");
+                        var res = ExposeJson(_maintenance.ToObject<JObject>(), "");
                         if (listMaintenance.Count == 0)
                         {
                             listMaintenance.AddRange(res.Keys);
                         }
 
                         var data = res.ToDictionary(x => x.Key, x => x.Value);
-                        maintenancList.Add(data as Dictionary<string, string>);
+                        maintenanceList.Add(data as Dictionary<string, string>);
                     }
 
-                    using (var dt = GetDataTable(maintenancList.AsEnumerable(), listMaintenance))
+                    using (var dt = GetDataTable(maintenanceList.AsEnumerable(), listMaintenance))
                     {
                         return this.GenerateActivityResult(dt);
                     }
@@ -99,7 +100,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, EnvironmentId));
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, EnvironmentId, string.IsNullOrWhiteSpace(Type) ? "" : Type));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
             httpWebRequest.Headers.Add("Authorization", string.Format("Api-Token {0}", AuthorizationToken));
