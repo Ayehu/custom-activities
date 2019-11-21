@@ -1,4 +1,4 @@
-## GSuiteUpdatePassword - Update user's password in Google Directory.
+## GSuiteResetPassword - Reset user's password in Google Directory.
 
 Remark - To run this activity you need to:  
 1. Set-up a new Service Account following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html);  
@@ -26,7 +26,7 @@ using System.Collections.Generic;
 
 ### Mandatory fields:
 
-**Email**				- User's E-mail to change password  
+**UserEmail**			- User's E-mail to change password  
 **NewPassword**			- New Password for the new account. A password can contain any combination of ASCII characters. A minimum of 8 characters is required.  
 **AdminUser**			- User e-mail to impersonate  
 **ServiceAccountEmail**	- Service Account E-mail. You can create one following this [tutorial](https://docs.bmc.com/docs/PATROL4GoogleCloudPlatform/10/creating-a-service-account-key-in-the-google-cloud-platform-project-799095477.html)  

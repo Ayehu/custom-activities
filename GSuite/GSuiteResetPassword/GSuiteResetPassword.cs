@@ -43,7 +43,7 @@ namespace ActivitiesAyehu
                 Password = NewPassword
             }, UserEmail);
 
-            request.Execute();
+            var res  = request.Execute();
 
             return "Success";
         }

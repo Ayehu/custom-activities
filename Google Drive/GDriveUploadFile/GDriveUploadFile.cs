@@ -59,9 +59,8 @@ namespace ActivitiesAyehu
                 {
                     return prog.Exception.Message;
                 }
+                return request.ResponseBody.Id;
             }
-
-            return "Success";
         }
 
         private static IDictionary<string, string> _mappings = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase) {
