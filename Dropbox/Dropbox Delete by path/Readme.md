@@ -1,3 +1,3 @@
-## Dropbox - Create folder
+## Dropbox - Delete by path
 
 Delete by path

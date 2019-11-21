@@ -1,0 +1,43 @@
+{
+  "data": {
+    "name": "Dynatrace Get Logs",
+    "description": "Get logs of Dynatrace platform.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "EnvironmentId",
+          "label": "Environment Id",
+          "baseType": "control",
+          "labelKey": "EnvironmentId",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "ServerId",
+          "label": "Host Id",
+          "baseType": "control",
+          "labelKey": "ServerId",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ]
+    }
+  }
+}

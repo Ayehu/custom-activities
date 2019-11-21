@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name":"AzureIsGroupExist",
+    "name":"AzureADIsGroupExist",
     "description": "Checks if a group exist by id",
     "Timeout": null,
     "class":[],

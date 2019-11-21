@@ -1,0 +1,433 @@
+{
+  "data": {
+    "name": "Dynatrace Get Events",
+    "description": "Get events of Dynatrace platform.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "EnvironmentId",
+          "label": "Environment Id",
+          "baseType": "control",
+          "labelKey": "EnvironmentId",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "EventType",
+          "label": "Event Type",
+          "baseType": "control",
+          "labelKey": "EventType",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "",
+              "value": ""
+            },
+            {
+              "key": "APPLICATION_JS_FRAMEWORK_DETECTED",
+              "value": "APPLICATION_JS_FRAMEWORK_DETECTED"
+            },
+            {
+              "key": "AVAILABILITY_EVENT",
+              "value": "AVAILABILITY_EVENT"
+            },
+            {
+              "key": "CONNECTION_LOST",
+              "value": "CONNECTION_LOST"
+            },
+            {
+              "key": "CPU_SATURATED",
+              "value": "CPU_SATURATED"
+            },
+            {
+              "key": "CUSTOM_ALERT",
+              "value": "CUSTOM_ALERT"
+            },
+            {
+              "key": "CUSTOM_ANNOTATION",
+              "value": "CUSTOM_ANNOTATION"
+            },
+            {
+              "key": "CUSTOM_APP_CRASH_RATE_INCREASED",
+              "value": "CUSTOM_APP_CRASH_RATE_INCREASED"
+            },
+            {
+              "key": "CUSTOM_CONFIGURATION",
+              "value": "CUSTOM_CONFIGURATION"
+            },
+            {
+              "key": "CUSTOM_DEPLOYMENT",
+              "value": "CUSTOM_DEPLOYMENT"
+            },
+            {
+              "key": "CUSTOM_INFO",
+              "value": "CUSTOM_INFO"
+            },
+            {
+              "key": "DATABASE_CONNECTION_FAILURE",
+              "value": "DATABASE_CONNECTION_FAILURE"
+            },
+            {
+              "key": "DOCKER_MEMORY_SATURATION",
+              "value": "DOCKER_MEMORY_SATURATION"
+            },
+            {
+              "key": "EBS_VOLUME_HIGH_LATENCY",
+              "value": "EBS_VOLUME_HIGH_LATENCY"
+            },
+            {
+              "key": "ELASTIC_LOAD_BALANCER_HIGH_BACKEND_FAILURE_RATE",
+              "value": "ELASTIC_LOAD_BALANCER_HIGH_BACKEND_FAILURE_RATE"
+            },
+            {
+              "key": "ELASTIC_LOAD_BALANCER_HIGH_FAILURE_RATE",
+              "value": "ELASTIC_LOAD_BALANCER_HIGH_FAILURE_RATE"
+            },
+            {
+              "key": "ELASTIC_LOAD_BALANCER_HIGH_UNHEALTHY_HOST_RATE",
+              "value": "ELASTIC_LOAD_BALANCER_HIGH_UNHEALTHY_HOST_RATE"
+            },
+            {
+              "key": "ERROR_EVENT",
+              "value": "ERROR_EVENT"
+            },
+            {
+              "key": "ESXI_START",
+              "value": "ESXI_START"
+            },
+            {
+              "key": "FAILURE_RATE_INCREASED",
+              "value": "FAILURE_RATE_INCREASED"
+            },
+            {
+              "key": "HIGH_CONNECTIVITY_FAILURES",
+              "value": "HIGH_CONNECTIVITY_FAILURES"
+            },
+            {
+              "key": "HIGH_DROPPED_PACKETS_RATE",
+              "value": "HIGH_DROPPED_PACKETS_RATE"
+            },
+            {
+              "key": "HIGH_GC_ACTIVITY",
+              "value": "HIGH_GC_ACTIVITY"
+            },
+            {
+              "key": "HIGH_LATENCY",
+              "value": "HIGH_LATENCY"
+            },
+            {
+              "key": "HIGH_NETWORK_ERROR_RATE",
+              "value": "HIGH_NETWORK_ERROR_RATE"
+            },
+            {
+              "key": "HIGH_NETWORK_LOSS_RATE",
+              "value": "HIGH_NETWORK_LOSS_RATE"
+            },
+            {
+              "key": "HIGH_NETWORK_UTILIZATION",
+              "value": "HIGH_NETWORK_UTILIZATION"
+            },
+            {
+              "key": "HOST_CONNECTION_FAILED",
+              "value": "HOST_CONNECTION_FAILED"
+            },
+            {
+              "key": "HOST_CONNECTION_LOST",
+              "value": "HOST_CONNECTION_LOST"
+            },
+            {
+              "key": "HOST_DATASTORE_LOW_DISK_SPACE",
+              "value": "HOST_DATASTORE_LOW_DISK_SPACE"
+            },
+            {
+              "key": "HOST_DISK_LOW_INODES",
+              "value": "HOST_DISK_LOW_INODES"
+            },
+            {
+              "key": "HOST_GRACEFULLY_SHUTDOWN",
+              "value": "HOST_GRACEFULLY_SHUTDOWN"
+            },
+            {
+              "key": "HOST_LOG_AVAILABILITY",
+              "value": "HOST_LOG_AVAILABILITY"
+            },
+            {
+              "key": "HOST_LOG_ERROR",
+              "value": "HOST_LOG_ERROR"
+            },
+            {
+              "key": "HOST_LOG_MATCHED",
+              "value": "HOST_LOG_MATCHED"
+            },
+            {
+              "key": "HOST_LOG_PERFORMANCE",
+              "value": "HOST_LOG_PERFORMANCE"
+            },
+            {
+              "key": "HOST_MAINTENANCE",
+              "value": "HOST_MAINTENANCE"
+            },
+            {
+              "key": "HOST_NO_CONNECTION",
+              "value": "HOST_NO_CONNECTION"
+            },
+            {
+              "key": "HOST_OF_SERVICE_UNAVAILABLE",
+              "value": "HOST_OF_SERVICE_UNAVAILABLE"
+            },
+            {
+              "key": "HOST_SHUTDOWN",
+              "value": "HOST_SHUTDOWN"
+            },
+            {
+              "key": "HOST_TIMEOUT",
+              "value": "HOST_TIMEOUT"
+            },
+            {
+              "key": "HTTP_CHECK_GLOBAL_OUTAGE",
+              "value": "HTTP_CHECK_GLOBAL_OUTAGE"
+            },
+            {
+              "key": "HTTP_CHECK_LOCAL_OUTAGE",
+              "value": "HTTP_CHECK_LOCAL_OUTAGE"
+            },
+            {
+              "key": "HTTP_CHECK_TEST_LOCATION_SLOWDOWN",
+              "value": "HTTP_CHECK_TEST_LOCATION_SLOWDOWN"
+            },
+            {
+              "key": "INSUFFICIENT_DISK_QUEUE_DEPTH",
+              "value": "INSUFFICIENT_DISK_QUEUE_DEPTH"
+            },
+            {
+              "key": "JAVASCRIPT_ERROR_RATE_INCREASED",
+              "value": "JAVASCRIPT_ERROR_RATE_INCREASED"
+            },
+            {
+              "key": "LAMBDA_FUNCTION_HIGH_ERROR_RATE",
+              "value": "LAMBDA_FUNCTION_HIGH_ERROR_RATE"
+            },
+            {
+              "key": "LOG_AVAILABILITY",
+              "value": "LOG_AVAILABILITY"
+            },
+            {
+              "key": "LOG_ERROR",
+              "value": "LOG_ERROR"
+            },
+            {
+              "key": "LOG_MATCHED",
+              "value": "LOG_MATCHED"
+            },
+            {
+              "key": "LOG_PERFORMANCE",
+              "value": "LOG_PERFORMANCE"
+            },
+            {
+              "key": "LOW_DISK_SPACE",
+              "value": "LOW_DISK_SPACE"
+            },
+            {
+              "key": "LOW_STORAGE_SPACE",
+              "value": "LOW_STORAGE_SPACE"
+            },
+            {
+              "key": "MARKED_FOR_TERMINATION",
+              "value": "MARKED_FOR_TERMINATION"
+            },
+            {
+              "key": "MEMORY_RESOURCES_EXHAUSTED",
+              "value": "MEMORY_RESOURCES_EXHAUSTED"
+            },
+            {
+              "key": "MEMORY_SATURATED",
+              "value": "MEMORY_SATURATED"
+            },
+            {
+              "key": "MOBILE_APP_CRASH_RATE_INCREASED",
+              "value": "MOBILE_APP_CRASH_RATE_INCREASED"
+            },
+            {
+              "key": "MONITORING_UNAVAILABLE",
+              "value": "MONITORING_UNAVAILABLE"
+            },
+            {
+              "key": "OPENSTACK_KEYSTONE_SLOW",
+              "value": "OPENSTACK_KEYSTONE_SLOW"
+            },
+            {
+              "key": "OPENSTACK_KEYSTONE_UNHEALTHY",
+              "value": "OPENSTACK_KEYSTONE_UNHEALTHY"
+            },
+            {
+              "key": "OSI_DOCKER_DEVICEMAPPER_LOW_DATA_SPACE",
+              "value": "OSI_DOCKER_DEVICEMAPPER_LOW_DATA_SPACE"
+            },
+            {
+              "key": "OSI_DOCKER_DEVICEMAPPER_LOW_METADATA_SPACE",
+              "value": "OSI_DOCKER_DEVICEMAPPER_LOW_METADATA_SPACE"
+            },
+            {
+              "key": "OVERLOADED_STORAGE",
+              "value": "OVERLOADED_STORAGE"
+            },
+            {
+              "key": "PERFORMANCE_EVENT",
+              "value": "PERFORMANCE_EVENT"
+            },
+            {
+              "key": "PGI_HAPROXY_QUEUED_REQUESTS_HIGH",
+              "value": "PGI_HAPROXY_QUEUED_REQUESTS_HIGH"
+            },
+            {
+              "key": "PGI_HAPROXY_SESSION_USAGE_HIGH",
+              "value": "PGI_HAPROXY_SESSION_USAGE_HIGH"
+            },
+            {
+              "key": "PGI_MYSQL_SLOW_QUERIES_RATE_HIGH",
+              "value": "PGI_MYSQL_SLOW_QUERIES_RATE_HIGH"
+            },
+            {
+              "key": "PGI_OF_SERVICE_UNAVAILABLE",
+              "value": "PGI_OF_SERVICE_UNAVAILABLE"
+            },
+            {
+              "key": "PGI_RMQ_HIGH_FILE_DESC_USAGE",
+              "value": "PGI_RMQ_HIGH_FILE_DESC_USAGE"
+            },
+            {
+              "key": "PGI_RMQ_HIGH_MEM_USAGE",
+              "value": "PGI_RMQ_HIGH_MEM_USAGE"
+            },
+            {
+              "key": "PGI_RMQ_HIGH_PROCESS_USAGE",
+              "value": "PGI_RMQ_HIGH_PROCESS_USAGE"
+            },
+            {
+              "key": "PGI_RMQ_HIGH_SOCKETS_USAGE",
+              "value": "PGI_RMQ_HIGH_SOCKETS_USAGE"
+            },
+            {
+              "key": "PGI_RMQ_LOW_DISK_SPACE",
+              "value": "PGI_RMQ_LOW_DISK_SPACE"
+            },
+            {
+              "key": "PROCESS_CRASHED",
+              "value": "PROCESS_CRASHED"
+            },
+            {
+              "key": "PROCESS_CUSTOM_AVAILABILITY",
+              "value": "PROCESS_CUSTOM_AVAILABILITY"
+            },
+            {
+              "key": "PROCESS_CUSTOM_ERROR",
+              "value": "PROCESS_CUSTOM_ERROR"
+            },
+            {
+              "key": "PROCESS_CUSTOM_PERFORMANCE",
+              "value": "PROCESS_CUSTOM_PERFORMANCE"
+            },
+            {
+              "key": "PROCESS_GROUP_LOW_INSTANCE_COUNT",
+              "value": "PROCESS_GROUP_LOW_INSTANCE_COUNT"
+            },
+            {
+              "key": "PROCESS_LOG_AVAILABILITY",
+              "value": "PROCESS_LOG_AVAILABILITY"
+            },
+            {
+              "key": "PROCESS_LOG_ERROR",
+              "value": "PROCESS_LOG_ERROR"
+            },
+            {
+              "key": "PROCESS_LOG_PERFORMANCE",
+              "value": "PROCESS_LOG_PERFORMANCE"
+            },
+            {
+              "key": "PROCESS_RESTART",
+              "value": "PROCESS_RESTART"
+            },
+            {
+              "key": "PROCESS_UNAVAILABLE",
+              "value": "PROCESS_UNAVAILABLE"
+            },
+            {
+              "key": "RDS_OF_SERVICE_UNAVAILABLE",
+              "value": "RDS_OF_SERVICE_UNAVAILABLE"
+            },
+            {
+              "key": "RDS_RESTART_SEQUENCE",
+              "value": "RDS_RESTART_SEQUENCE"
+            },
+            {
+              "key": "RESOURCE_CONTENTION",
+              "value": "RESOURCE_CONTENTION"
+            },
+            {
+              "key": "SERVICE_RESPONSE_TIME_DEGRADED",
+              "value": "SERVICE_RESPONSE_TIME_DEGRADED"
+            },
+            {
+              "key": "SLOW_DISK",
+              "value": "SLOW_DISK"
+            },
+            {
+              "key": "SYNTHETIC_AVAILABILITY",
+              "value": "SYNTHETIC_AVAILABILITY"
+            },
+            {
+              "key": "SYNTHETIC_SLOWDOWN",
+              "value": "SYNTHETIC_SLOWDOWN"
+            },
+            {
+              "key": "THREADS_RESOURCES_EXHAUSTED",
+              "value": "THREADS_RESOURCES_EXHAUSTED"
+            },
+            {
+              "key": "UNEXPECTED_HIGH_LOAD",
+              "value": "UNEXPECTED_HIGH_LOAD"
+            },
+            {
+              "key": "UNEXPECTED_LOW_LOAD",
+              "value": "UNEXPECTED_LOW_LOAD"
+            },
+            {
+              "key": "USER_ACTION_DURATION_DEGRADATION",
+              "value": "USER_ACTION_DURATION_DEGRADATION"
+            },
+            {
+              "key": "VIRTUAL_MACHINE_SHUTDOWN",
+              "value": "VIRTUAL_MACHINE_SHUTDOWN"
+            },
+            {
+              "key": "WEB_CHECK_GLOBAL_OUTAGE",
+              "value": "WEB_CHECK_GLOBAL_OUTAGE"
+            },
+            {
+              "key": "WEB_CHECK_LOCAL_OUTAGE",
+              "value": "WEB_CHECK_LOCAL_OUTAGE"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

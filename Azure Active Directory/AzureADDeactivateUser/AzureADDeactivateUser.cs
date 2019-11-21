@@ -1,15 +1,17 @@
 using System;
 using System.Data;
-using System.Linq;
-using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Ayehu.Sdk.ActivityCreation.Extension;
 using Microsoft.Azure.Management.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
+using Microsoft.Azure.Management.ResourceManager.Fluent;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureGetUserGroupsMember : IActivity
+    /// <summary>
+    /// Deactivate an ActiveDirectory user
+    /// </summary>
+    public class AzureADDeactivateUser : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -31,36 +33,26 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// User's email/userId to get information
+        /// The user id or email
         /// </summary>
         public string userId;
 
-
         public ICustomActivityResult Execute()
         {
+            DataTable dt = new DataTable("resultSet");
+            dt.Columns.Add("Result");
+
             var auth = GetAuthenticated();
-            var user = auth.ActiveDirectoryUsers.List().Where(u => u.Id == userId || u.UserPrincipalName.ToLower() == userId.Trim().ToLower()).FirstOrDefault();
+            var user = auth.ActiveDirectoryUsers.GetById(userId);
 
-            if (user != null)
+            if (user != null && user.UserPrincipalName != "")
             {
-                DataTable dt = new DataTable("resultSet");
-                dt.Columns.Add("Id");
-                dt.Columns.Add("Group Name");
-
-                auth.ActiveDirectoryGroups.List().ToList().ForEach(g =>
-                {
-                    bool found = g.ListMembers().Where(m => m.Id == user.Id).FirstOrDefault() != null;
-
-                    if (found)
-                    {
-                        dt.Rows.Add(g.Id, g.Name);
-                    }
-                });
-
-                return this.GenerateActivityResult(dt);
+                user.Update().WithAccountEnabled(false).Apply();
             }
             else
                 throw new Exception(string.Format("User with id='{0}' not found", userId));
+
+            return this.GenerateActivityResult(GetActivityResult);
         }
 
         private Azure.IAuthenticated GetAuthenticated()
@@ -72,6 +64,18 @@ namespace Ayehu.Sdk.ActivityCreation
                    .Authenticate(credentials);
 
             return azure;
+        }
+
+        private DataTable GetActivityResult
+        {
+            get
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Result");
+                dt.Rows.Add("Success");
+
+                return dt;
+            }
         }
     }
 }

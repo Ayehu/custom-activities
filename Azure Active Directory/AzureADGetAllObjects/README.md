@@ -1,4 +1,4 @@
-## AzureIsGroupExist - Checks if a group exist by id
+## AzureADGetAllObjects - Get all users, groups and VM's
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>
@@ -21,5 +21,5 @@ Secret </br>
 
 These fields should be sent when calling the API.
 
-### The below fields needs to be provided to check the group
-**groupId**           - The id of the group to get the information
+### The below fields needs to be provided to get objects
+**typeId**           - The id of the object to filter

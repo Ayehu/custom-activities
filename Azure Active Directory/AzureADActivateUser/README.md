@@ -1,4 +1,4 @@
-## AzureGetUserGroupsMember - Get groups where a specific user is member of
+## AzureADActivateUser - Activate an ActiveDirectory user
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>
@@ -21,5 +21,5 @@ Secret </br>
 
 These fields should be sent when calling the API.
 
-### The below fields needs to be provided to get groups:
-**userId**           - The user Id or the user email
+### The below fields needs to be provided to change the user's state
+**User Id**           - User Id or Email

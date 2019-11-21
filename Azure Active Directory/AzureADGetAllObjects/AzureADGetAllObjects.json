@@ -1,0 +1,71 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"AzureADGetAllObjects",
+    "description": "Get all users, groups and VM's",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+           "key": "objTypeId",
+           "value": "",
+           "required": false,
+           "disabled": false,
+           "styleClass": "",
+           "label": "Object Type",
+           "labelKey": "OBJ_TYPEID_VALUE",
+           "baseType": "control",
+           "controlType": "autocomplete",
+           "idFieldName": "typeId",
+           "controlOptions": [
+           	{
+              "key": "user",
+              "value": "User"
+            },
+            {
+              "key": "group",
+              "value": "Group"
+            },
+            {
+              "key": "vm",
+              "value": "Virtual Machine"
+            },
+           ]
+        },
+        {  
+               "value":"",
+               "required":true,
+               "key":"appId",
+               "label":"Application Id",
+               "labelKey":"APPID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"tenantId",
+               "label":"Tenant Id",
+               "labelKey":"TENANTID_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            },
+            {  
+               "value":"",
+               "required":true,
+               "key":"secret",
+               "label":"Secret",
+               "labelKey":"SECRET_VALUE",
+               "baseType":"control",
+               "controlType":"textbox"
+            }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

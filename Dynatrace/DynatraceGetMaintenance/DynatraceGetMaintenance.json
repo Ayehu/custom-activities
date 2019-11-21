@@ -1,0 +1,61 @@
+{
+  "data": {
+    "name": "Dynatrace Get Maintenance",
+    "description": "Get a maintenance list of a Dynatrace API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "EnvironmentId",
+          "label": "Environment Id",
+          "baseType": "control",
+          "labelKey": "EnvironmentId",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Type",
+          "label": "Type",
+          "baseType": "control",
+          "labelKey": "Type",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "",
+              "value": ""
+            },
+            {
+              "key": "Planned",
+              "value": "Planned"
+            },
+            {
+              "key": "Unknown",
+              "value": "Unknown"
+            },
+            {
+              "key": "Unplanned",
+              "value": "Unplanned"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

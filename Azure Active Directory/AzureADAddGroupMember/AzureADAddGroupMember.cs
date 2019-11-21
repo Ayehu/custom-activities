@@ -64,8 +64,18 @@ namespace Ayehu.Sdk.ActivityCreation
         public ICustomActivityResult Execute()
         {
             var auth = GetAuthenticated();
-            var adGroup = auth.ActiveDirectoryGroups.List().Where(x => x.Name.ToLower() == groupName.ToLower()).FirstOrDefault();
+            IActiveDirectoryGroup adGroup = null;
+            Guid groupId = Guid.Empty;
 
+            if (Guid.TryParse(groupName, out groupId))
+            {
+                adGroup = auth.ActiveDirectoryGroups.List().Where(x => x.Id == groupName).FirstOrDefault();
+            }
+            else
+            {
+                adGroup = auth.ActiveDirectoryGroups.List().Where(x => x.Name.ToLower() == groupName.ToLower()).FirstOrDefault();
+            }
+			
             if (adGroup == null)
                 throw new Exception(string.Format("Group with name '{0} not found'", groupName));
 

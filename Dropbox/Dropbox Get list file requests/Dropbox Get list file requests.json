@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Display Value",
-    "description": "Display a value to the log",
+    "name": "Get list file requests",
+    "description": "Get list file requests",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -13,7 +13,7 @@
           "required": true,
           "key": "AccessToken",
           "label": "Access Token",
-          "labelKey": "DISPLAY_VALUE_VALUE",
+          "labelKey": "ACCESS_TOKEN",
           "baseType": "control",
           "controlType": "textbox"
         }

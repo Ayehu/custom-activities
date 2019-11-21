@@ -9,7 +9,7 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureGetGroupMembers : IActivity
+    public class AzureADIsGroupExist : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -31,7 +31,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string secret;
 
         /// <summary>
-        /// Group to get information
+        /// Group to check
         /// </summary>
         public string groupId;
 
@@ -39,25 +39,15 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             var auth = GetAuthenticated();
             var group = auth.ActiveDirectoryGroups.List().Where(x => x.Id == groupId).FirstOrDefault();
+            DataTable dt = new DataTable("resultSet");
+            dt.Columns.Add("Result");
 
             if (group != null)
-            {
-                DataTable dt = new DataTable("resultSet");
-                dt.Columns.Add("Id");
-                dt.Columns.Add("Type");
-                dt.Columns.Add("Member Name");
-                dt.Columns.Add("Member Details");
-                var members = group.ListMembers().ToList();
+                dt.Rows.Add(true);
+            else
+                dt.Rows.Add(false);
 
-                members.ForEach(m =>
-                {
-                    var user = auth.ActiveDirectoryUsers.List().Where(u => u.Id == m.Id).FirstOrDefault();
-                    dt.Rows.Add(m.Id, user != null ? "User" : "Role", m.Name, user != null ? user.UserPrincipalName : "");
-                });                
-
-                return this.GenerateActivityResult(dt);
-            }
-            else throw new Exception(string.Format("Group with Id={0} not found", groupId));
+            return this.GenerateActivityResult(dt);
         }
 
         private Azure.IAuthenticated GetAuthenticated()

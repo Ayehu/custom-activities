@@ -41,7 +41,7 @@ namespace ayehu.BoxUploadFile
                     Parent = new BoxRequestEntity() { Id = FolderID }
                 };
                 BoxFile file = await adminClient.FilesManager.UploadAsync(requestParams, fileStream);
-                Message = "Success";
+                Message = file.Id;
             }
             return this.GenerateActivityResult(Message);
         }
