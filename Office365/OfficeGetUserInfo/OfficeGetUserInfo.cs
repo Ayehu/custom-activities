@@ -38,7 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var user = client.Users[GetUserId(client)].Request().GetAsync().Result;
+            var user = client.Users[userEmail].Request().GetAsync().Result;
 
             if (!string.IsNullOrEmpty(user.UserPrincipalName))
             {
@@ -93,21 +93,6 @@ namespace Ayehu.Sdk.ActivityCreation
         {
             var skuResult = client.SubscribedSkus.Request().GetAsync().Result;
             return skuResult[0];
-        }
-
-        private string GetUserId(GraphServiceClient client)
-        {
-            var users = client.Users.Request().GetAsync().Result.ToList();
-
-            foreach (var user in users)
-            {
-                if (user.Mail != null && user.Mail.ToLower() == userEmail.ToLower())
-                {
-                    return user.Id;
-                }
-            }
-
-            return string.Empty;
         }
     }
 }
