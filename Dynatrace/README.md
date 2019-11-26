@@ -1,4 +1,5 @@
-# Dynatrace **Use the Dynatrace API to automate your monitoring tasks and export different types of data into your third-party reporting and analysis tools.**
+# Dynatrace 
+**Use the Dynatrace API to automate your monitoring tasks and export different types of data into your third-party reporting and analysis tools.**
 
 [Dynatrace website](https://www.dynatrace.com/support/help/get-started/what-is-dynatrace/) <br/>
 [Official documentation](https://www.dynatrace.com/support/help/extend-dynatrace/dynatrace-api/environment-api/)
@@ -14,5 +15,5 @@
 3. Create a token in | https://{your-environment-id}.live.dynatrace.com -> Settings -> Integration -> Dynatrace API -> Generate Token.
 
 ## Mandatory fields for using api :<br />
-AuthorizationToken(string) - Use your existing user token or you can create the User Token with following steps | https://{your-environment-id}.live.dynatrace.com -> Settings -> Integration -> Dynatrace API -> Generate Token<br />
-EnvironmentId(string) - Get environment id from URI | https://{your-environment-id}.live.dynatrace.com. <br />
+1. AuthorizationToken(string) - Use your existing user token or you can create the User Token with following steps | https://{your-environment-id}.live.dynatrace.com -> Settings -> Integration -> Dynatrace API -> Generate Token<br />
+2. EnvironmentId(string) - Get environment id from URI | https://{your-environment-id}.live.dynatrace.com. <br />
