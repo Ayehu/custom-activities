@@ -11,7 +11,7 @@ namespace Ayehu.Sdk.ActivityCreation
     /// <summary>
     /// Creates an user in Azure Active Directory
     /// </summary>
-    public class AzureADCreateUser : IActivity
+    public class OfficeCreateUser : IActivity
     {
         /// <summary>
         /// APPLICATION (CLIENT) ID
@@ -59,42 +59,41 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         /// <see cref="PasswordPolicies"/>
         public string password;
-
+		
         /// <summary>
         /// Create an user account Enabled if the value is set to True
         /// </summary>
-        public bool isAccountEnabled;
+        public string isAccountEnabled;
 
         /// <summary>
         /// User must change password at next login if value is set to True
         /// </summary>
-        public bool forcePwdChange;
+        public string forcePwdChange;
 
         ICustomActivityResult IActivity.Execute()
         {
             DataTable dt = new DataTable("resultSet");
             dt.Columns.Add("Result");
 
-            
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
 
-            var user = client.Users.Request().AddAsync(new User
+            var newUser = client.Users.Request().AddAsync(new User
             {
-                AccountEnabled = isAccountEnabled,
+                AccountEnabled = Convert.ToBoolean(isAccountEnabled),
                 DisplayName = givenName + " " + surname,
                 Surname = surname,
                 GivenName = givenName,
                 MailNickname = givenName + surname,
                 UserPrincipalName = userPrincipalName,
-				UsageLocation = "US",
+                UsageLocation = "US",
                 PasswordProfile = new PasswordProfile
                 {
-                    ForceChangePasswordNextSignIn = forcePwdChange,
+                    ForceChangePasswordNextSignIn = Convert.ToBoolean(forcePwdChange),
                     Password = password
                 }
             }).Result;
 
-            dt.Rows.Add(user.UserPrincipalName);
+            dt.Rows.Add(newUser.UserPrincipalName);
             
             return this.GenerateActivityResult(dt);
         }

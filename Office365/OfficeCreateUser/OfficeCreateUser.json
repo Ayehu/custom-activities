@@ -1,134 +1,134 @@
 {
-   "innerCode":200,
-   "data":{
-      "name":"Creates a user",
-      "description":"Creates a new user in Office365",
-      "Timeout":null,
-      "class":[
-
-      ],
-      "rootSettings":{
-         "isCollapse":false,
-         "activitySettings":[
+  "innerCode": 200,
+  "data": {
+    "name": "Creates a user",
+    "description": "Creates a new user in Office365",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "surname",
+          "label": "Surname",
+          "labelKey": "SURNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "givenName",
+          "label": "Given Name",
+          "labelKey": "GIVENNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "displayName",
+          "label": "Display Name",
+          "labelKey": "DISPLAYNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "userPrincipalName",
+          "label": "User Principal",
+          "labelKey": "USER_PRINCIPAL_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "Pa$$word01",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "appId",
+          "label": "Application Id",
+          "labelKey": "APPID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant Id",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secret",
+          "label": "Secret",
+          "labelKey": "SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "accountEnabled",
+		  "idFieldName": "isAccountEnabled",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Is Acct Enabled",
+          "labelKey": "ACCT_ENABLED_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
             {
-               "value":"",
-               "required":true,
-               "key":"surname",
-               "label":"Surname",
-               "labelKey":"SURNAME_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
+              "key": "True",
+              "value": "Yes"
             },
             {
-               "value":"",
-               "required":true,
-               "key":"givenName",
-               "label":"Given Name",
-               "labelKey":"GIVENNAME_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"displayName",
-               "label":"Display Name",
-               "labelKey":"DISPLAYNAME_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"userPrincipalName",
-               "label":"User Principal",
-               "labelKey":"USER_PRINCIPAL_NAME_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
-            },
-            {
-               "value":"Pa$$word01",
-               "required":true,
-               "key":"password",
-               "label":"Password",
-               "labelKey":"PASSWORD_VALUE",
-               "baseType":"control",
-               "controlType":"password"
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"appId",
-               "label":"Application Id",
-               "labelKey":"APPID_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"tenantId",
-               "label":"Tenant Id",
-               "labelKey":"TENANTID_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"secret",
-               "label":"Secret",
-               "labelKey":"SECRET_VALUE",
-               "baseType":"control",
-               "controlType":"textbox"
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"isAccountEnabled",
-               "disabled":false,
-               "styleClass":"",
-               "label":"Is Acct Enabled",
-               "labelKey":"ACCT_ENABLED_VALUE",
-               "baseType":"control",
-               "controlType":"autocomplete",
-               "controlOptions":[
-                  {
-                     "key":"True",
-                     "value":"Yes"
-                  },
-                  {
-                     "key":"False",
-                     "value":"No"
-                  }
-               ]
-            },
-            {
-               "value":"",
-               "required":true,
-               "key":"forcePwdChange",
-               "disabled":false,
-               "styleClass":"",
-               "label":"Force Pwd Change",
-               "labelKey":"FORCE_PWDCHANGE_VALUE",
-               "baseType":"control",
-               "controlType":"autocomplete",
-               "controlOptions":[
-                  {
-                     "key":"True",
-                     "value":"Yes"
-                  },
-                  {
-                     "key":"False",
-                     "value":"No"
-                  }
-               ]
+              "key": "False",
+              "value": "No"
             }
-         ],
-         "index":"1",
-         "label":"main",
-         "labelKey":null
-      }
-   },
-   "message":"SUCCESS"
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "pwdChange",
+		   "idFieldName": "forcePwdChange",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Force Pwd Change",
+          "labelKey": "FORCE_PWDCHANGE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "Yes"
+            },
+            {
+              "key": "False",
+              "value": "No"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
 }

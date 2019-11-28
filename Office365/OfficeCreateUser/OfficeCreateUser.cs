@@ -63,12 +63,12 @@ namespace Ayehu.Sdk.ActivityCreation
         /// <summary>
         /// Create an user account Enabled if the value is set to True
         /// </summary>
-        public bool isAccountEnabled;
+        public string isAccountEnabled;
 
         /// <summary>
         /// User must change password at next login if value is set to True
         /// </summary>
-        public bool forcePwdChange;
+        public string forcePwdChange;
 
         ICustomActivityResult IActivity.Execute()
         {
@@ -79,7 +79,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
             var newUser = client.Users.Request().AddAsync(new User
             {
-                AccountEnabled = isAccountEnabled,
+                AccountEnabled = Convert.ToBoolean(isAccountEnabled),
                 DisplayName = givenName + " " + surname,
                 Surname = surname,
                 GivenName = givenName,
@@ -88,13 +88,13 @@ namespace Ayehu.Sdk.ActivityCreation
                 UsageLocation = "US",
                 PasswordProfile = new PasswordProfile
                 {
-                    ForceChangePasswordNextSignIn = forcePwdChange,
+                    ForceChangePasswordNextSignIn = Convert.ToBoolean(forcePwdChange),
                     Password = password
                 }
             }).Result;
 
             dt.Rows.Add(newUser.UserPrincipalName);
-            
+
             return this.GenerateActivityResult(dt);
         }
 
