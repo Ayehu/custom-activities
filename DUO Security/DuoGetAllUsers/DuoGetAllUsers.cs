@@ -14,73 +14,33 @@ using System.Web.Script.Serialization;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class DuoCreateUser : IActivity
+    public class DuoGetAllUsers : IActivity
     {
         public string integrationKey;
         public string secretKey;
         public string apiHost;
 
-        public string userName;
-        public string realName;
-        public string firstName;
-        public string lastName;
-        public string email;
-        public string statusId;
-        public string status;
-
         public ICustomActivityResult Execute()
         {
-            var parameters = new Dictionary<string, string>();
-            parameters.Add("username", userName);
-            
-            if (!string.IsNullOrEmpty(realName))
-                parameters.Add("realname", realName);
+            DataTable dt = new DataTable("resultSet");
+            dt.Columns.Add("User Id");
+            dt.Columns.Add("User Name");
+            dt.Columns.Add("First Name");
+            dt.Columns.Add("Last Name");
+            dt.Columns.Add("Real Name");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Status");
 
-            if (!string.IsNullOrEmpty(email))
-                parameters.Add("email", email);
+            var users = new DuoApi(integrationKey, secretKey, apiHost, "https")
+              .JSONApiCall<System.Collections.ArrayList>("GET", "/admin/v1/users",
+              new Dictionary<string, string>());
 
-            if (!string.IsNullOrEmpty(status))
-                parameters.Add("status", status);
-
-            if (!string.IsNullOrEmpty(firstName))
-                parameters.Add("firstname", firstName);
-
-            if (!string.IsNullOrEmpty(lastName))
-                parameters.Add("lastname", lastName);
-
-            var existingUser = new DuoApi(integrationKey, secretKey, apiHost, "https")
-                .JSONApiCall<System.Collections.ArrayList>("GET", "/admin/v1/users",
-                new Dictionary<string, string>() { { "username", userName } });
-
-            if (existingUser.Count == 0)
+            foreach (Dictionary<string, object> user in users)
             {
-                HttpStatusCode code = HttpStatusCode.BadRequest;
-                new DuoApi(integrationKey, secretKey, apiHost, "https").
-                    ApiCall("POST", "/admin/v1/users", parameters, 0, DateTime.UtcNow, out code);
-
-                if (code != HttpStatusCode.OK)
-                {
-                    throw new Exception("Error creating DUO user");
-                }
-
-                return this.GenerateActivityResult(GetActivityResult);
+                dt.Rows.Add(user["user_id"], user["username"], user["firstname"], user["lastname"], user["realname"], user["email"], user["status"]);
             }
-            else
-            {
-                throw new Exception(string.Format("User '{0}' already exist", userName));
-            }
-        }
 
-        private DataTable GetActivityResult
-        {
-            get
-            {
-                DataTable dt = new DataTable("resultSet");
-                dt.Columns.Add("Result");
-                dt.Rows.Add("Success");
-
-                return dt;
-            }
+            return this.GenerateActivityResult(dt);
         }
 
         public class DuoApi

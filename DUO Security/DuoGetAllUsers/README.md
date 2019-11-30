@@ -1,4 +1,4 @@
-## DuoCreateUser - Create a new user in DUO security portal.
+## DuoGetAllUsers - Get all users from Duo Security portal.
 
 ##### DLL's to reference
 
@@ -20,13 +20,3 @@ You'd need to store the API specific information from the portal.
 IntegrationKey </br>
 SecretKey </br>
 ApiHost
-
-These fields should be sent when calling the API.
-
-### Mandatory fields when creating a user:
-**UserName**	- The name of the user to create.
-**RealName**	- The real name (or full name) of this user.
-**FirsName**	- The user’s given name.
-**LastName**	- The user’s surname.
-**Email**		- The email address of this user.
-**Status**		- active, bypass, disabled	

@@ -1,4 +1,4 @@
-## DuoCreateUser - Create a new user in DUO security portal.
+## DuoDeleteUser - Delete DUO security portal user.
 
 ##### DLL's to reference
 
@@ -23,10 +23,5 @@ ApiHost
 
 These fields should be sent when calling the API.
 
-### Mandatory fields when creating a user:
+### Mandatory fields when deleting a user:
 **UserName**	- The name of the user to create.
-**RealName**	- The real name (or full name) of this user.
-**FirsName**	- The user’s given name.
-**LastName**	- The user’s surname.
-**Email**		- The email address of this user.
-**Status**		- active, bypass, disabled	

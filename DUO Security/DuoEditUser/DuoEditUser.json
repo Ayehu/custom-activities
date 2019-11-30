@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "DuoCreateUser",
-    "description": "Create a new user in DUO security portal",
+    "name": "DuoEditUser",
+    "description": "Edit a Duo portal user",
     "Timeout": null,
     "class": [],
     "rootSettings": {

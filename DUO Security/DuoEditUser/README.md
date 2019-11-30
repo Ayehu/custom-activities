@@ -1,4 +1,4 @@
-## DuoCreateUser - Create a new user in DUO security portal.
+## DuoEditUser - Update DUO security portal user.
 
 ##### DLL's to reference
 
@@ -23,7 +23,7 @@ ApiHost
 
 These fields should be sent when calling the API.
 
-### Mandatory fields when creating a user:
+### Mandatory fields when editing a user:
 **UserName**	- The name of the user to create.
 **RealName**	- The real name (or full name) of this user.
 **FirsName**	- The user’s given name.

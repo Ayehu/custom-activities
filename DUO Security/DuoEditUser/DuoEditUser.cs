@@ -14,7 +14,7 @@ using System.Web.Script.Serialization;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class DuoCreateUser : IActivity
+    public class DuoEditUser : IActivity
     {
         public string integrationKey;
         public string secretKey;
@@ -25,14 +25,13 @@ namespace Ayehu.Sdk.ActivityCreation
         public string firstName;
         public string lastName;
         public string email;
-        public string statusId;
         public string status;
 
         public ICustomActivityResult Execute()
         {
             var parameters = new Dictionary<string, string>();
             parameters.Add("username", userName);
-            
+
             if (!string.IsNullOrEmpty(realName))
                 parameters.Add("realname", realName);
 
@@ -52,23 +51,24 @@ namespace Ayehu.Sdk.ActivityCreation
                 .JSONApiCall<System.Collections.ArrayList>("GET", "/admin/v1/users",
                 new Dictionary<string, string>() { { "username", userName } });
 
-            if (existingUser.Count == 0)
+            if (existingUser.Count == 1)
             {
+                string user_id = (existingUser[0] as Dictionary<string, object>)["user_id"].ToString();
                 HttpStatusCode code = HttpStatusCode.BadRequest;
                 new DuoApi(integrationKey, secretKey, apiHost, "https").
-                    ApiCall("POST", "/admin/v1/users", parameters, 0, DateTime.UtcNow, out code);
+                     ApiCall("POST", "/admin/v1/users/" + user_id, parameters, 0, DateTime.UtcNow, out code);
 
                 if (code != HttpStatusCode.OK)
                 {
-                    throw new Exception("Error creating DUO user");
+                    throw new Exception("Error updating DUO user");
                 }
 
                 return this.GenerateActivityResult(GetActivityResult);
             }
             else
             {
-                throw new Exception(string.Format("User '{0}' already exist", userName));
-            }
+                throw new Exception(string.Format("User '{0}' does not exist", userName));
+            } 
         }
 
         private DataTable GetActivityResult
