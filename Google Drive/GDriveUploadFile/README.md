@@ -6,12 +6,13 @@ Remark - To run this activity you need to:
 3. And allow your gSuite account to give access to your Service Account access the users' data. Follow the same tutorial from item 2. The necessary scope is: https://www.googleapis.com/auth/drive.  
 
 ##### DLL's to reference
-Google.Apis.Auth.dll  
-Google.Apis.Auth.PlatformServices.dll  
-Google.Apis.Drive.v3.dll  
-Google.Apis.Core.dll  
-Google.Apis.dll  
-Google.Apis.PlatformServices.dll  
+C:\libs\Google.Apis.Auth.dll  
+C:\libs\Google.Apis.Auth.PlatformServices.dll  
+C:\libs\Google.Apis.Drive.v3.dll  
+C:\libs\Google.Apis.Core.dll  
+C:\libs\Google.Apis.dll  
+C:\libs\Google.Apis.PlatformServices.dll  
+C:\libs\Newtonsoft.Json.dll
 
 You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Drive.v3/).  
 
