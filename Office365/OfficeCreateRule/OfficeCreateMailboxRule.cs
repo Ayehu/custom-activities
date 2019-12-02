@@ -78,7 +78,7 @@ namespace Ayehu.Sdk.ActivityCreation
             MessageRuleActions actions = new MessageRuleActions();
 
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var user = client.Users[GetUserId(client)];
+            var user = client.Users[userEmail];
             var rules = user.MailFolders["Inbox"].MessageRules.Request().GetAsync().Result;
 
             if (rules.Where(r => r.DisplayName.ToLower() == ruleDisplayName.ToLower()).FirstOrDefault() != null)
@@ -148,21 +148,6 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 UsageLocation = "US"
             }).Wait();
-        }
-
-        private string GetUserId(GraphServiceClient client)
-        {
-            var users = client.Users.Request().GetAsync().Result.ToList();
-
-            foreach (var user in users)
-            {
-                if (user.Mail != null && user.Mail.ToLower() == userEmail.ToLower())
-                {
-                    return user.Id;
-                }
-            }
-
-            return string.Empty;
         }
 
         private ClientCredentialProvider GetProvider()

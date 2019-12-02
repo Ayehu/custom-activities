@@ -1,0 +1,45 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "DuoGetAllUsers",
+    "description": "Get all users from Duo Security portal.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "integrationKey",
+          "label": "Integration Key",
+          "labelKey": "INTEGRATIONKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secretKey",
+          "label": "Secret Key",
+          "labelKey": "SECRETKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "apiHost",
+          "label": "API Hostname",
+          "labelKey": "HOSTNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

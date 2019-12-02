@@ -1,1 +1,33 @@
-{  "data": {    "name": "Dynatrace Get Metrics",    "description": "Get a Metrics list of a Dynatrace API.",    "Timeout": "00:01:00",    "class": [],    "rootSettings": {      "isCollapse": false,      "activitySettings": [        {          "key": "AuthorizationToken",          "label": "Auth. Token",          "baseType": "control",          "labelKey": "AuthorizationToken",          "controlType": "textbox",          "value": "",          "styleClass": null,          "required": true        },        {          "key": "EnvironmentId",          "label": "Environment Id",          "baseType": "control",          "labelKey": "EnvironmentId",          "controlType": "textbox",          "value": "",          "styleClass": null,          "required": true        }      ]    }  }}
+{
+  "data": {
+    "name": "Dynatrace Get Metrics",
+    "description": "Get a metrics of a Dynatrace API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "EnvironmentId",
+          "label": "Environment Id",
+          "baseType": "control",
+          "labelKey": "EnvironmentId",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "DuoEditUser",
+    "description": "Edit a Duo portal user",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "integrationKey",
+          "label": "Integration Key",
+          "labelKey": "INTEGRATIONKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secretKey",
+          "label": "Secret Key",
+          "labelKey": "SECRETKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "apiHost",
+          "label": "API Hostname",
+          "labelKey": "HOSTNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "userName",
+          "label": "User Name",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "realName",
+          "label": "Real Name",
+          "labelKey": "REALNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "firstName",
+          "label": "First Name",
+          "labelKey": "FIRST_VALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "lastName",
+          "label": "Last Name",
+          "labelKey": "LAST_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "email",
+          "label": "Email",
+          "labelKey": "EMAIL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "key": "statusId",
+          "value": "",
+          "required": true,
+          "styleClass": "",
+          "label": "Status",
+          "labelKey": "STATUS_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "idFieldName": "status",
+          "controlOptions": [
+            {
+              "key": "active",
+              "value": "Active"
+            },
+            {
+              "key": "bypass",
+              "value": "Bypass"
+            },
+            {
+              "key": "disabled",
+              "value": "Disabled"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

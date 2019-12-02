@@ -54,8 +54,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            string userId = GetUserId(client);
-
+            
             Message msg = new Message();
             msg.Subject = subject;
             msg.Body = new ItemBody
@@ -71,7 +70,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 } 
             };
 
-            client.Users[userId].SendMail(msg, true).Request().WithMaxRetry(3).PostAsync().Wait();
+            client.Users[fromEmail].SendMail(msg, true).Request().WithMaxRetry(3).PostAsync().Wait();
 
             return this.GenerateActivityResult(GetActivityResult);
         }
@@ -85,21 +84,6 @@ namespace Ayehu.Sdk.ActivityCreation
                 .Build();
 
             return new ClientCredentialProvider(confidentialClientApplication);
-        }
-
-        private string GetUserId(GraphServiceClient client)
-        {
-            var users = client.Users.Request().GetAsync().Result.ToList();
-
-            foreach (var user in users)
-            {
-                if (user.Mail != null && user.Mail.ToLower() == fromEmail.ToLower())
-                {
-                    return user.Id;
-                }
-            }
-
-            return string.Empty;
         }
 
         private DataTable GetActivityResult

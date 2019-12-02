@@ -68,6 +68,15 @@ namespace Ayehu.Sdk.ActivityCreation
 
                         break;
                     }
+				case "vm":
+                    {
+                        virtualMachines.ForEach(vm =>
+                        {
+                            dt.Rows.Add(vm.Id, "Virtual Machine", vm.Name, vm.OSType);
+                        });
+
+                        break;
+                    }
                 default:
                     {
                         users.ToList().ForEach(u =>

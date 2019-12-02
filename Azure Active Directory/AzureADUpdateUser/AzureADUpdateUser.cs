@@ -42,8 +42,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public ICustomActivityResult Execute()
         {
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            string userId = GetUserId(client);
-            User user = client.Users[userId].Request().GetAsync().Result;
+            User user = client.Users[userEmail].Request().GetAsync().Result;
 
             if (user.UserPrincipalName != null)
             {
@@ -61,7 +60,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (!string.IsNullOrEmpty(password))
                     updateduser.PasswordProfile = new PasswordProfile { Password = password, ForceChangePasswordNextSignIn = false };
 
-                client.Users[userId].Request().UpdateAsync(updateduser).Wait();
+                client.Users[userEmail].Request().UpdateAsync(updateduser).Wait();
             }
             else
                 throw new Exception("User not found");
@@ -78,21 +77,6 @@ namespace Ayehu.Sdk.ActivityCreation
                 .Build();
 
             return new ClientCredentialProvider(confidentialClientApplication);
-        }
-
-        private string GetUserId(GraphServiceClient client)
-        {
-            var users = client.Users.Request().GetAsync().Result.ToList();
-
-            foreach (var user in users)
-            {
-                if (user.Mail != null && user.Mail.ToLower() == userEmail.ToLower())
-                {
-                    return user.Id;
-                }
-            }
-
-            return string.Empty;
         }
 
         private DataTable GetActivityResult

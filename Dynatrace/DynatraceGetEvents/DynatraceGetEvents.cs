@@ -42,6 +42,10 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             catch (WebException ex)
             {
+                if (ex.Response == null)
+                {
+                    throw ex;
+                }
                 using (var streamReader = new StreamReader(ex.Response.GetResponseStream()))
                 {
                     var responseString = streamReader.ReadToEnd();
@@ -107,6 +111,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private WebRequest HttpRequest()
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(string.Format(API_REQUEST_URL, EnvironmentId, string.IsNullOrWhiteSpace(EventType) ? "" : EventType));
             httpWebRequest.ContentType = CONTENT_TYPE;
             httpWebRequest.Accept = ACCEPT;
