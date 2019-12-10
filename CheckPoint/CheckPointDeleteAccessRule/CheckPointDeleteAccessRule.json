@@ -1,0 +1,58 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Delete Access Rule",
+    "description": "Activity for deleting access rule of check point server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "MgmtServer",
+          "label": "Mgmt Server",
+          "baseType": "control",
+          "labelKey": "MgmtServer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Layer",
+          "label": "Layer",
+          "baseType": "control",
+          "labelKey": "Layer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Uid",
+          "label": "Uid",
+          "baseType": "control",
+          "labelKey": "Uid",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

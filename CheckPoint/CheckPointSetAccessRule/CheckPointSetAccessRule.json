@@ -1,0 +1,102 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Set Access Rule",
+    "description": "Activity to set access rule of Check Point server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "MgmtServer",
+          "label": "Mgmt Server",
+          "baseType": "control",
+          "labelKey": "MgmtServer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Layer",
+          "label": "Layer",
+          "baseType": "control",
+          "labelKey": "Layer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Uid",
+          "label": "Uid",
+          "baseType": "control",
+          "labelKey": "Uid",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Action",
+          "label": "Action",
+          "baseType": "control",
+          "labelKey": "Action",
+          "controlType": "autocomplete",
+          "value": "",
+          "styleClass": null,
+          "required": false,
+          "controlOptions": [
+            {
+              "key": "Accept",
+              "value": "Accept"
+            },
+            {
+              "key": "Drop",
+              "value": "Drop"
+            },
+            {
+              "key": "Ask",
+              "value": "Ask"
+            },
+            {
+              "key": "Inform",
+              "value": "Inform"
+            },
+            {
+              "key": "Reject",
+              "value": "Reject"
+            },
+            {
+              "key": "User Auth",
+              "value": "User Auth"
+            },
+            {
+              "key": "Client Auth",
+              "value": "Client Auth"
+            },
+            {
+              "key": "Apply Layer",
+              "value": "Apply Layer"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
