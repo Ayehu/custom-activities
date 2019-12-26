@@ -1,8 +1,6 @@
 ![Ayehu Logo](AyehuLogo.png)
 
 # Custom Activities Repository
-Public activities repository for Ayehu users to share their content.
-
 In response to growing user requests to add greater flexibility to the Ayehu NG automation platform, Ayehu has released NG v1.5. This release significantly expands the scope of what you can automate in your enviorment, all from a single pane of glass, making it a real game-changer in the IT orcestration and automation market.
 
 The Activity Designer provides a fliexble and accessible solution to customers who wish to create certain activites to fit their specific needs.
