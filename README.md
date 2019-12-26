@@ -11,5 +11,8 @@ In this way, you can be completely self-sufficient, without the need for Ayehu d
 
 We invite you to use the custom activites, modify them to suit your needs, get involved in the community, and then contribute back whatever new activities you develop so that others can enjoy and learn from your hard work and build upon it to enhance it even further.
 
+## What are Activities?
+Activities are operative or logical actions that make up the workflow process. Activities may be simple or complex, and they can vary greatly in nature and purpose. Examples of activities are copying a file, sending an email, creating a new user, or reseting a user's password.
+
 ## Contributing
 Contributions are welcome and appreciated! For instructions about adding/modifying activities please see our [Custom Activities Contribution Guide](CONTRIBUTING.md).
