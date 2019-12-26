@@ -7,7 +7,7 @@ Welcome to the Ayehu Custom Activites Repository! Contributions are welcome and 
 ## How to contribute
 Please read the following guidelines, which will maximize the chances for a fast, easy and effective review process for everyone involved.
 
-1. Become an Ayehu Certified IT Automation Developer! While it's fine if you skip this step, we do recommend you to become certified developer. For more information please refer to the [Ayehu Automation Academy](https://ayehu.com/resources/ayehu-automation-academy%20-/).
+1. Become an Ayehu Certified IT Automation Developer! While it is not necessary to complete this step, we do recommend you to become a certified developer. For more information please refer to the [Ayehu Automation Academy](https://ayehu.com/resources/ayehu-automation-academy%20-/).
 
 2. Write code for the custom activities! For information on how to write code please refer to the [Activity Designer Technical Documentation](https://support.ayehu.com/hc/en-us/articles/360036188734-Activity-Designer-Technical-Documentation).
 
