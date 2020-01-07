@@ -1,4 +1,4 @@
-## xMatterDeletePerson- Delete A Person.
+## xMatterGetAnEve- Get An Event
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
