@@ -1,0 +1,98 @@
+{
+  "data": {
+    "name": "(x)Matters Modify A Person",
+    "description": "Modify A Person",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollappse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "emailAddress",
+          "label": "Email Address",
+          "label key": "emailAddress",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "passX",
+          "label": "Password",
+          "label key": "passX",
+          "baseType": "control",
+          "controlType": "password",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "domainxmatters",
+          "label": "Domain",
+          "label key": "domainxmatters",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "priority",
+          "label": "Priority",
+          "label key": "priority",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "disabled": false,
+          "controlOptions": [
+            {
+              "key": "HIGH",
+              "value": "HIGH"
+            },
+            {
+              "key": "MEDIUM",
+              "value": "MEDIUM"
+            },
+            {
+              "key": "LOW",
+              "value": "LOW"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "label key": "status",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "disabled": false,
+          "controlOptions": [
+            {
+              "key": "ACTIVE",
+              "value": "ACTIVE"
+            },
+            {
+              "key": "SUSPENDED",
+              "value": "SUSPENDED"
+            },
+            {
+              "key": "TERMINATED",
+              "value": "TERMINATED"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}
