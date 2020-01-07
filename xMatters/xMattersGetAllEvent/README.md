@@ -17,7 +17,7 @@ You'd need to store the API specific information from the portal.
 NO
 
 ### Mandatory fields when Modify A Person:
-**Email Address**               -The email Address of Person
-**Password**			-The password of Person
-**Domain**			-The domain of Person
+**Email Address**               -The email Address Get event
+**Password**			-The password Get event
+**Domain**			-The domain Get event
 
