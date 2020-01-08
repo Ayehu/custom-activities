@@ -1,6 +1,6 @@
 ## xMatterModifyPerson- Modify A Person.
 
-Remark - The portal needs to be configured first. https://portal.azure.com
+
 
 ##### DLL's to reference
 System.XML.dll
