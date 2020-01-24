@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"Display Value",
+    "description": "Display a value to the log",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"Intent",
+          "label": "Intent",
+          "labelKey": "Intent",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"phrase",
+          "label": "phrase",
+          "labelKey": "phrase",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
