@@ -1,9 +1,5 @@
 ﻿using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using Google.Apis.Auth.OAuth2;
-using Google.Apis.Services;
-using Google.Apis.Admin.Directory.directory_v1;
-using Google.Apis.Admin.Directory.directory_v1.Data;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.IdentityModel.Tokens.Jwt;
