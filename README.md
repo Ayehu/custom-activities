@@ -1,9 +1,18 @@
-# Custom Activities
-Public activities repository for Ayehu users to share their content.
-If you have a custom Activity to share, feel free to send us a Pull Request and you will be added as a collaborator.
+![Ayehu Logo](AyehuLogo.png)
 
-For information on importing and exporting custom activities, please refer to the [Activity Designer Overview](https://support.ayehu.com/hc/en-us/articles/360036178974-Activity-Designer-Overview).
+# Custom Activities Repository
+In response to growing user requests to add greater flexibility to the Ayehu NG automation platform, Ayehu has released NG v1.5. This release significantly expands the scope of what you can automate in your enviorment, all from a single pane of glass, making it a real game-changer in the IT orcestration and automation market.
 
-For information on how to write code for the custom activities, please refer to the [Activity Designer Technical Documentation](https://support.ayehu.com/hc/en-us/articles/360036188734-Activity-Designer-Technical-Documentation).
+The Activity Designer provides a fliexble and accessible solution to customers who wish to create certain activites to fit their specific needs.
 
-For information on how to become an Ayehu Certified IT Automation Developer, please refer to the [Ayehu Automation Academy](https://ayehu.com/resources/ayehu-automation-academy%20-/).
+If our library of 500+ activites does not give you the exact solution you're looking for, then you can use the Activity Designer to create activites to perform dozens of actions. Start from our provided activties and modify the code of the activity to suit your needs.
+
+In this way, you can be completely self-sufficient, without the need for Ayehu development to be involved. Your needs, your timeline, your custom activity!
+
+We invite you to use the custom activites, modify them to suit your needs, get involved in the community, and then contribute back whatever new activities you develop so that others can enjoy and learn from your hard work and build upon it to enhance it even further.
+
+## What are Activities?
+Activities are operative or logical actions that make up the workflow process. Activities may be simple or complex, and they can vary greatly in nature and purpose. Examples of activities are copying a file, sending an email, creating a new user, or resetting a user's password.
+
+## Contributing
+Contributions are welcome and appreciated! For instructions about adding/modifying activities please see our [Custom Activities Contribution Guide](CONTRIBUTING.md).

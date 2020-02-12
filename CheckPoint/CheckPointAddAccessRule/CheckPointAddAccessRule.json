@@ -1,0 +1,68 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Add Access Rule",
+    "description": "Activity for adding access rule for check point server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "MgmtServer",
+          "label": "Mgmt Server",
+          "baseType": "control",
+          "labelKey": "MgmtServer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Layer",
+          "label": "Layer",
+          "baseType": "control",
+          "labelKey": "Layer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Position",
+          "label": "Position",
+          "baseType": "control",
+          "labelKey": "Position",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Name",
+          "label": "Name",
+          "baseType": "control",
+          "labelKey": "Name",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

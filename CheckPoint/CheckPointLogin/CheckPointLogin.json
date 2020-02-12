@@ -1,0 +1,48 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Check Point Login",
+    "description": "Activity for login in Check Point server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "MgmtServer",
+          "label": "Mgmt Server",
+          "baseType": "control",
+          "labelKey": "MgmtServer",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "User",
+          "label": "User",
+          "baseType": "control",
+          "labelKey": "User",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "Password",
+          "label": "Password",
+          "baseType": "control",
+          "labelKey": "Password",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

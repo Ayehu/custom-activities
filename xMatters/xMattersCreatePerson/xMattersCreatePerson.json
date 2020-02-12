@@ -1,0 +1,122 @@
+{
+  "data": {
+    "name": "(x)Matters Create a Person",
+    "description": "Create A Person",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollappse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "emailAddress",
+          "label": "Email Address",
+          "label key": "emailAddress",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "label key": "password",
+          "baseType": "control",
+          "controlType": "password",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "domainxmatters",
+          "label": "Domain",
+          "label key": "domainxmatters",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "targetName",
+          "label": "Target Name",
+          "label key": "targetName",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "firstName",
+          "label": "First Name",
+          "label key": "firstName",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "lastName",
+          "label": "Last Name",
+          "label key": "lastName",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "phoneLogin",
+          "label": "Phone Login",
+          "label key": "phoneLogin",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "roleKey",
+          "label": "Role",
+          "label key": "roleKey",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "disabled": false,
+          "controlOptions": [
+            {
+              "key": "Company Supervisor",
+              "value": "Company Supervisor"
+            },
+            {
+              "key": "Full Access User",
+              "value": "Full Access User"
+            },
+            {
+              "key": "Mobile-Only Standard User",
+              "value": "Mobile-Only Standard User"
+            },
+            {
+              "key": "Standard User",
+              "value": "Standard User"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}
