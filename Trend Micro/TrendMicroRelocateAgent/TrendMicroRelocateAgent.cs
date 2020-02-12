@@ -26,7 +26,7 @@ namespace ActivitiesAyehu
         {
             var res = RelocateProductAgent();
 
-            return this.GenerateActivityResult(res ? "Sucess" : "Fail");
+            return this.GenerateActivityResult(res ? "Success" : "Fail");
         }
 
         private bool RelocateProductAgent()
@@ -42,19 +42,19 @@ namespace ActivitiesAyehu
             body["allow_multiple_match"] = allow_multiple_match;
             body["relocate_to_server_id"] = relocate_to_server_id;
             body["relocate_to_folder_path"] = relocate_to_folder_path;
-            if (entity_id != "")
+            if (entity_id != "" && entity_id != null)
                 body["entity_id"] = entity_id;
-            if (ip_address != "")
+            if (ip_address != "" && ip_address != null)
                 body["ip_address"] = ip_address;
-            if (mac_address != "")
+            if (mac_address != "" && mac_address != null)
                 body["mac_address"] = mac_address;
-            if (host_name != "")
+            if (host_name != "" && host_name != null)
                 body["host_name"] = host_name;
 
             TMCMAPIHelper useHelper = new TMCMAPIHelper(APIBaseAddress: use_url_base, applicationID: use_application_id,
-                apiKey: use_api_key, signingSecurityAlgorithm: SecurityAlgorithms.HmacSha512);
-            var task = useHelper.AsyncSendRequest("AgentResource/ProductAgents", HttpMethod.Post.Method,
-                customHeaders: null, queryStrings: myQueryStrings, postBody: body.ToString());
+                apiKey: use_api_key);
+            var task = useHelper.AsyncSendRequest("/AgentResource/ProductAgents", HttpMethod.Post.Method,
+                customHeaders: null, queryStrings: myQueryStrings, postBody: body);
             task.Wait();
             TMCMAPIHelper.APIResponse response = task.Result;
 
@@ -155,7 +155,7 @@ namespace ActivitiesAyehu
         /// <param name="apiKey">APIKey used to calculate JWT token checksum</param>
         /// <param name="signingSecurityAlgorithm">The signing security algorithm that will be used to calculate the JWT token checksum, such as "HS256", "HS512", etc...</param>
         public TMCMAPIHelper(string APIBaseAddress, string applicationID, string apiKey,
-            string signingSecurityAlgorithm = Microsoft.IdentityModel.Tokens.SecurityAlgorithms.HmacSha512)
+            string signingSecurityAlgorithm = SecurityAlgorithms.HmacSha512)
         {
             this.APIBaseAddress = APIBaseAddress;
             this.ApplicationID = applicationID;
@@ -233,8 +233,8 @@ namespace ActivitiesAyehu
         private string GenJWTTokenV1(string requestCheckSum)
         {
             // The security key of this token is the API Key.
-            var securityKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key: Encoding.UTF8.GetBytes(this.APIKey));
-            var signingCredentials = new Microsoft.IdentityModel.Tokens.SigningCredentials(key: securityKey, algorithm: this.SigningSecurityAlgorithm);
+            var securityKey = new SymmetricSecurityKey(key: Encoding.UTF8.GetBytes(this.APIKey));
+            var signingCredentials = new SigningCredentials(key: securityKey, algorithm: this.SigningSecurityAlgorithm);
 
             // Prepare the JWT header
             var header = new JwtHeader(signingCredentials: signingCredentials);
@@ -267,7 +267,7 @@ namespace ActivitiesAyehu
         /// <param name="postBody">The object used for the post body of this API call.</param>
         /// <returns>The APIResponse response of this API call.</returns>
         public async Task<APIResponse> AsyncSendRequest(string resourcePath, string usingHttpMethod,
-            List<KeyValuePair<string, string>> customHeaders = null, List<KeyValuePair<string, string>> queryStrings = null, object postBody = null)
+            List<KeyValuePair<string, string>> customHeaders = null, List<KeyValuePair<string, string>> queryStrings = null, JObject postBody = null)
         {
             // Only the http methods "GET", "POST", "PUT", "PATCH" should be used.
             if (string.Compare(usingHttpMethod, HttpMethod.Get.Method, true) != 0 &&
