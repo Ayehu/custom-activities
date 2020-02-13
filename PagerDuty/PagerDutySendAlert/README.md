@@ -1,4 +1,4 @@
-﻿# Send Alert - Activity to send an alert in PagerDuty platform.
+﻿# Send Alert - Activity to send an alert to PagerDuty platform.
 
 Dependencies:
 1. Newtonsoft.Json
