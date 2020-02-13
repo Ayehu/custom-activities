@@ -1,7 +1,7 @@
 {
   "data": {
-    "name": "PagerDuty Get Incident",
-    "description": "Get an incident of a PagerDuty API.",
+    "name": "PagerDuty Send Alert",
+    "description": "Send an alert to a PagerDuty API.",
     "Timeout": "00:01:00",
     "class": [],
     "rootSettings": {
