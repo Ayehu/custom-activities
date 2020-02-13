@@ -1,0 +1,53 @@
+{
+  "data": {
+    "name": "PagerDuty Get Incident",
+    "description": "Get an incident of a PagerDuty API.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "AuthorizationToken",
+          "label": "Auth. Token",
+          "baseType": "control",
+          "labelKey": "AuthorizationToken",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "IncidentID",
+          "label": "Incident Id",
+          "baseType": "control",
+          "labelKey": "Id",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "From",
+          "label": "From",
+          "baseType": "control",
+          "labelKey": "From",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "note",
+          "label": "Note",
+          "baseType": "control",
+          "labelKey": "note",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ]
+    }
+  }
+}
