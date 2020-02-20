@@ -21,26 +21,26 @@
 
 ## Activity Settings:<br />
 
-URL <br />
-o Required – String <br />
-o Example: Https://192.170.160.187 <br />
-o URL of BeyondTrust instance <br />
+• URL <br />
+ o Required – String <br />
+ o Example: Https://192.170.160.187 <br />
+ o URL of BeyondTrust instance <br />
 
-API Key <br />
+• API Key <br />
 o Required – String <br />
 o Example: e7c23e73e85f3349b40a5953476dc6234234234232325346576568789878789fgh3450117dfasdfasdfasdf9 <br />
 o The API Key configured in BeyondInsight for your application <br />
 
-Runas <br />
+• Runas <br />
 o Required – String <br />
 o Example: ayehu <br />
 o The username of a BeyondInsight user that has been granted permission to use the API Key.<br />
 
-Password <br />
+• Password <br />
 o Optional – Masked String <br />
 o The RunAs user password; required only if the User Password is required on the Application API Registration).<br />
 
-Account Name <br />
+• Account Name <br />
 o Required – String <br />
 o Example: admin.local <br />
 o Name of the Managed Account<br />
