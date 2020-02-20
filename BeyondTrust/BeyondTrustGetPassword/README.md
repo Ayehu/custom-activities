@@ -92,11 +92,14 @@ o Options: <br />
  renew - Cancel any existing approved requests for the same user/system/account and create a new request using the request body details.<br />
 
 • Ticket System ID <br />
-o Optional – Integer o ID of the ticket system. If omitted, then default ticket system will be used.<br />
+o Optional – Integer <br />
+o ID of the ticket system. If omitted, then default ticket system will be used.<br />
 
 • Ticket Number <br />
-o Optional – String o Number of associated ticket. Can be required if ticket system is marked as required in the global options.<br />
+o Optional – String <br />
+o Number of associated ticket. Can be required if ticket system is marked as required in the global options.<br />
 
 • Rotate On Checkin <br />
 o Optional – Boolean <br />
-o Default: True o True to rotate the credentials on check-in/expiry, otherwise false. This property can only be used if the Access Policy (either auto-selected or given in AccessPolicyScheduleID) supports it. See the ‘Allow API Rotation Override’ Access Policy setting under ‘View’ access. If the Managed Account given in AccountID does not rotate the credentials after check-in/expiry, this setting is ignored.<br />
+o Default: True <br />
+o True to rotate the credentials on check-in/expiry, otherwise false. This property can only be used if the Access Policy (either auto-selected or given in AccessPolicyScheduleID) supports it. See the ‘Allow API Rotation Override’ Access Policy setting under ‘View’ access. If the Managed Account given in AccountID does not rotate the credentials after check-in/expiry, this setting is ignored.<br />
