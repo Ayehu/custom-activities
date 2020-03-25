@@ -28,7 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
             var users = new List<User>();
             long totalPage = 1;
             GroupUserResponse res = null;
-            for (int currentPage = 1; currentPage <= 10; currentPage++)
+            for (int currentPage = 1; currentPage <= 1000; currentPage++)
             {
                 if (UserType == "admin")
                     res = api.Users.GetAllAdmins(100, currentPage);
