@@ -43,7 +43,7 @@ o The RunAs user password; required only if the User Password is required on the
 • Account Name <br />
 o Required – String <br />
 o Example: admin.local <br />
-o Name of the Managed Account<br />
+o Name of the Managed Account. Note: Requires exact match including full domain for lookup by Account Name. (ayehu.com\admin.local)<br />
 
 • System Name <br />
 o Optional – String <br />
