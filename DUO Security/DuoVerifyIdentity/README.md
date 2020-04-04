@@ -21,22 +21,19 @@ using System.Web.Script.Serialization; </br>
 using Newtonsoft.Json; </br>
 using Newtonsoft.Json.Linq; </br>
  </br>
-You'd need to store the API specific information from the portal.
 
-IntegrationKey </br>
-SecretKey </br>
-ApiHost
-
-These fields should be sent when calling the API.
-
-### Mandatory fields when verifying user identity:
+### Mandatory Activity Fields:
+**Integration Key** - Integration key from "Auth API" settings.
+<br>
+**Secret Key** - Secret key from "Auth API" settings.
+<br>
+**API Hostname** - Full Duo API hostname URL (e.g. api-12345678.duosecurity.com)
+<br>
 **Duo Username**	- The Duo username to which the identity verification request will be sent
 <br><br><br>
 ### Notes:
 This Custom Activity requires the "Auth API" (https://duo.com/docs/authapi) to be enabled on your Duo account.
 <br><br>
--Sign up for an account with Duo (https://signup.duo.com/).
-<br>
--Login to the Duo Admin Panel (https://admin.duosecurity.com/) and navigate to the Applications section.
-<br>
--Click Protect an Application and locate Auth API in the applications list.  Click Protect this Application to get your integration key, secret key, and API hostname (see Getting Started for help).
+1. Sign up for an account with Duo (https://signup.duo.com/).
+2. Login to the Duo Admin Panel (https://admin.duosecurity.com/) and navigate to the Applications section.
+3. Click Protect an Application and locate Auth API in the applications list.  Click Protect this Application to get your integration key, secret key, and API hostname (see Getting Started for help).
