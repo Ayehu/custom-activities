@@ -34,6 +34,7 @@ using Newtonsoft.Json.Linq; </br>
 <br><br>
 ---
 <br>
+
 ### Notes:
 This Custom Activity requires the "Auth API" (https://duo.com/docs/authapi) to be enabled on your Duo account.
 <br>
