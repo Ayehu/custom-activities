@@ -43,6 +43,6 @@ This Custom Activity requires the "Auth API" (https://duo.com/docs/authapi) to b
 ### Possible Output:
 When a Duo user successfully verifies their identity, this activity will return "allow".  When they refuse it or otherwise do not successfully verify the request, this activity will return "deny".
 
-<br><Br>
+<br><br>
 ### Example Usage:
 A workflow is designed to automatically facilitate password reset requests.  Your organization keeps a record of the Duo username that corresponds to each account in the system (e.g. Active Directory).  Before initiating the password reset, the Duo username can be queried from those records and then an identity verification request can be pushed to that user's mobile device.  Upon a successful verification, the password reset can proceed safely.
