@@ -5,7 +5,7 @@
 System.Web.dll </br>
 System.Web.Extensions.dll </br>
 ##### DLLs to Reference (Assembly Path)
-Newtonsoft.Json.dll </br>
+Newtonsoft.Json.dll (.dll available here)</br>
 ##### Libraries to Import
 using System.Globalization; </br>
 using System.IO; </br>
