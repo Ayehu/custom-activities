@@ -1,15 +1,14 @@
 ## DuoVerifyIdentity - Send an identity verification request to a Duo user.
 
-##### DLL's to reference (Global Assembly)
-
+### DLL/Library Configuration
+##### DLLs to Reference (Global Assembly)
 System.Web.dll </br>
 System.Web.Extensions.dll </br>
 
-##### DLL's to reference (Assembly Path)
-
+##### DLLs to Reference (Assembly Path)
 Newtonsoft.Json.dll </br>
 
-##### Libraries to import
+##### Libraries to Import
 using System.Globalization; </br>
 using System.IO; </br>
 using System.Net; </br>
