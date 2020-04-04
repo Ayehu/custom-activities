@@ -37,4 +37,4 @@ This Custom Activity requires the "Auth API" (https://duo.com/docs/authapi) to b
 <br>
 1. Sign up for an account with Duo (https://signup.duo.com/).
 2. Login to the Duo Admin Panel (https://admin.duosecurity.com/) and navigate to the Applications section.
-3. Click Protect an Application and locate "Auth API" in the applications list.  Click "Protect this Application" to get your integration key, secret key, and API hostname (see <a href="https://duo.com/docs/getting-started">Getting Started</a> for help).
+3. Click "Protect an Application" and locate "Auth API" in the applications list.  Click "Protect this Application" to get your integration key, secret key, and API hostname (see <a href="https://duo.com/docs/getting-started">Getting Started</a> for help).
