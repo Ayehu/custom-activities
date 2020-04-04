@@ -38,3 +38,11 @@ This Custom Activity requires the "Auth API" (https://duo.com/docs/authapi) to b
 1. Sign up for an account with Duo (https://signup.duo.com/).
 2. Login to the Duo Admin Panel (https://admin.duosecurity.com/) and navigate to the Applications section.
 3. Click "Protect an Application" and locate "Auth API" in the applications list.  Click "Protect this Application" to get your integration key, secret key, and API hostname (see <a href="https://duo.com/docs/getting-started">Getting Started</a> for help).
+
+<br><br>
+### Possible Output:
+When a Duo user successfully verifies their identity, this activity will return "allow".  When they refuse it or otherwise do not successfully verify the request, this activity will return "deny".
+
+<br><Br>
+### Example Usage:
+A workflow is designed to automatically facilitate password reset requests.  Your organization keeps a record of the Duo username that corresponds to each account in the system (e.g. Active Directory).  Before initiating the password reset, the Duo username can be queried from those records and then an identity verification request can be pushed to that user's mobile device.  Upon a successful verification, the password reset can proceed safely.
