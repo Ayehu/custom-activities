@@ -19,7 +19,9 @@ using System.Web; </br>
 using System.Web.Script.Serialization; </br>
 using Newtonsoft.Json; </br>
 using Newtonsoft.Json.Linq; </br>
- </br><br><br>
+ </br><br>
+ ---
+ <br>
 
 ### Mandatory Activity Fields:
 **Integration Key** - Integration key from "Auth API" settings.
@@ -29,7 +31,9 @@ using Newtonsoft.Json.Linq; </br>
 **API Hostname** - Full Duo API hostname URL (e.g. api-12345678.duosecurity.com)
 <br>
 **Duo Username**	- The Duo username to which the identity verification request will be sent
-<br><br><br>
+<br><br>
+---
+<br>
 ### Notes:
 This Custom Activity requires the "Auth API" (https://duo.com/docs/authapi) to be enabled on your Duo account.
 <br>
