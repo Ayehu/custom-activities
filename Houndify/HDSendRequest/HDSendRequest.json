@@ -1,0 +1,53 @@
+{
+  "data": {
+    "name": "HD Send Request",
+    "description": "Send request to houndify",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "key": "client_id",
+          "label": "Client id",
+          "baseType": "control",
+          "labelKey": "client_id",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "client_key",
+          "label": "Client key",
+          "baseType": "control",
+          "labelKey": "client_key",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "user_id",
+          "label": "User id",
+          "baseType": "control",
+          "labelKey": "user_id",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        },
+        {
+          "key": "request_text",
+          "label": "Request text",
+          "baseType": "control",
+          "labelKey": "request_text",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": true
+        }
+      ]
+    }
+  }
+}
