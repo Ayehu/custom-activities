@@ -3,12 +3,13 @@ using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Microsoft.SharePoint.Client;
 using System;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Security;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class SharePointListSiteOwner : IActivity
+    public class SharepointUploadFile : IActivity
     {
         /// <summary>
         /// The Sharepoint base URL
@@ -16,10 +17,15 @@ namespace Ayehu.Sdk.ActivityCreation
         public string InstanceURL;
 
         /// <summary>
-        /// Sharepoint Site to get the owner information.
+        /// Sharepoint Site to upload the file.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
+
+        /// <summary>
+        /// Full path to the file
+        /// </summary>
+        public string FilePath;
 
         /// <summary>
         /// Username used to login in admin panel of Sharepoint instance
@@ -44,21 +50,45 @@ namespace Ayehu.Sdk.ActivityCreation
                     clientContext.AuthenticationMode = ClientAuthenticationMode.Default;
                     clientContext.Credentials = new SharePointOnlineCredentials(UserName, secureString);
 
-                    User siteOwner = clientContext.Site.Owner;
-                    clientContext.Load(siteOwner);
+                    var list = clientContext.Web.Lists.GetByTitle("Documents");
+                    clientContext.Load(list);
+                    clientContext.Load(list.RootFolder);
                     clientContext.ExecuteQuery();
 
-                    DataTable dt = new DataTable("resultSet");
-                    dt.Columns.Add("Name");
-                    dt.Columns.Add("Email");
+                    if (System.IO.File.Exists(FilePath))
+                    {
+                        if (clientContext.HasPendingRequest)
+                            clientContext.ExecuteQuery();
 
-                    dt.Rows.Add(siteOwner.Title, siteOwner.Email);
-                    return this.GenerateActivityResult(dt);
+                        FileInfo fi = new FileInfo(FilePath);
+                        using (FileStream fs = fi.OpenRead())
+                        {
+                            fs.Seek(0, SeekOrigin.Begin);
+                            string serverFile = list.RootFolder.ServerRelativeUrl.ToString() + "/" + fi.Name;
+                            Microsoft.SharePoint.Client.File.SaveBinaryDirect(clientContext, serverFile, fs, true);
+                        }
+                    }
+                    else
+                        throw new Exception(string.Format("File '{0}' not found.", FilePath));
                 }
+
+                return this.GenerateActivityResult(GetActivityResult);
             }
             catch (Exception e)
             {
-                throw new Exception("Error retrieving Owner information. " + e.Message);
+                throw new Exception(string.Format("Error uploading file '{0}'. Message: {1}", FilePath, e.Message));
+            }
+        }
+
+        private DataTable GetActivityResult
+        {
+            get
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Result");
+                dt.Rows.Add("Success");
+
+                return dt;
             }
         }
 

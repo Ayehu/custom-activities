@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "SharepointDeleteSite",
+    "description": "Deletes a site by name",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "InstanceAdminURL",
+          "label": "Instance Admin URL",
+          "labelKey": "INSTANCE_ADMIN_URL_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Site",
+          "label": "Site",
+          "labelKey": "SITE_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "UserName",
+          "labelKey": "USERNAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

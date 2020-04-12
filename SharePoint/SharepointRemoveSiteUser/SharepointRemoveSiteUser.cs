@@ -8,7 +8,7 @@ using System.Security;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class SharepointUpdateSiteOwner : IActivity
+    public class SharepointRemoveSiteUser : IActivity
     {
         /// <summary>
         /// The Sharepoint base URL
@@ -16,7 +16,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string InstanceURL;
 
         /// <summary>
-        /// Sharepoint Site to set the new owner.
+        /// Sharepoint Site to remove user from.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
@@ -32,7 +32,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Password;
 
         /// <summary>
-        /// User full login name as defined in the Domain or Azure Active Directory
+        /// User full login name as defined in the Domain or Azure
         /// </summary>
         public string UserLogonName;
 
@@ -46,32 +46,32 @@ namespace Ayehu.Sdk.ActivityCreation
                 Password.ToList().ForEach(secureString.AppendChar);
                 clientContext.AuthenticationMode = ClientAuthenticationMode.Default;
                 clientContext.Credentials = new SharePointOnlineCredentials(UserName, secureString);
+
                 var user = clientContext.Web.EnsureUser(UserLogonName);
                 clientContext.Load(user);
                 clientContext.ExecuteQuery();
 
                 if (user != null)
                 {
-                    clientContext.Site.Owner = user;
-                    clientContext.Site.Owner.Update();
-
-                    var groups = clientContext.Web.SiteGroups;
-                    clientContext.Load(groups);
+                    clientContext.Site.RootWeb.SiteUsers.Remove(user);
                     clientContext.ExecuteQuery();
 
-                    foreach (var group in groups)
-                    {
-                        group.Owner = user;
-                        group.Update();
-                    }
-
-                    DataTable dt = new DataTable("resultSet");
-                    dt.Columns.Add("Result");
-                    dt.Rows.Add("Success");
-                    return this.GenerateActivityResult(dt);
+                    return this.GenerateActivityResult(GetActivityResult);
                 }
 
                 throw new Exception(string.Format("User '{0}' not found.", UserLogonName));
+            }
+        }
+
+        private DataTable GetActivityResult
+        {
+            get
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Result");
+                dt.Rows.Add("Success");
+
+                return dt;
             }
         }
 

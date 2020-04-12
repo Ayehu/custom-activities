@@ -4,6 +4,8 @@
 Microsoft.SharePoint.Client.dll
 Microsoft.SharePoint.Client.Runtime.dll
 
+**Important** - To add user to site, the UserName provided for authentication has to be already admin on that site.
+
 Fields to be set in the activity.
 
 **InstanceURL** 	- The Sharepoint base URL

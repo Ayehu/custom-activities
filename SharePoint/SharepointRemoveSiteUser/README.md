@@ -1,4 +1,4 @@
-## SharepointUpdateSiteOwner - Updates the owner of Sharepoint site.
+## SharepointRemoveSiteUser - Removes a site user by login name.
 
 ##### DLL's to reference
 Microsoft.SharePoint.Client.dll
@@ -8,7 +8,7 @@ Fields to be set in the activity.
 
 **InstanceURL** 	- The Sharepoint base URL
 
-**Site**			- Sharepoint Site to set the new owner. If it's the root website, then leave it empty.
+**Site**			- Sharepoint Site to remove user from. If it's the root website, then leave it empty.
 
 **UserName**		- Username used to login in admin panel of Sharepoint instance.
 

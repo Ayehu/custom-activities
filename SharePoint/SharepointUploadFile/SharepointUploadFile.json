@@ -1,0 +1,63 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "SharepointUploadFile",
+    "description": "Uploads a file from server to Site.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "InstanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCE_URL_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Site",
+          "label": "Site",
+          "labelKey": "SITE_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "FilePath",
+          "label": "File Path",
+          "labelKey": "FILE_PATH_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "UserName",
+          "labelKey": "USERNAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

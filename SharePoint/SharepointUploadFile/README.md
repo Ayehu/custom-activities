@@ -1,4 +1,4 @@
-## SharePointListSiteOwner - Retrieves the Owner of a Sharepoint site.
+## SharepointUploadFile - Uploads a file from server to Site.
 
 ##### DLL's to reference
 Microsoft.SharePoint.Client.dll
@@ -8,7 +8,9 @@ Fields to be set in the activity.
 
 **InstanceURL** 	- The Sharepoint base URL
 
-**Site**			- SSharepoint Site to get the owner information. If it's the root website, then leave it empty.
+**Site**			- Sharepoint Site to upload the file.
+
+**FilePath**		- Full path to the file.
 
 **UserName**		- Username used to login in admin panel of Sharepoint instance.
 

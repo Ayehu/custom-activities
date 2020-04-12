@@ -1,4 +1,4 @@
-## SharePointListSiteOwner - Retrieves the Owner of a Sharepoint site.
+## SharepointDownloadFile - Download a file from Sharepoint site.
 
 ##### DLL's to reference
 Microsoft.SharePoint.Client.dll
@@ -8,7 +8,11 @@ Fields to be set in the activity.
 
 **InstanceURL** 	- The Sharepoint base URL
 
-**Site**			- SSharepoint Site to get the owner information. If it's the root website, then leave it empty.
+**Site**			- Sharepoint Site to download the file from.
+
+**FileName**		- File Name to download
+
+**DestinationFolder** - Folder to copy file from server. (The file copied will have the same name as on the server)
 
 **UserName**		- Username used to login in admin panel of Sharepoint instance.
 

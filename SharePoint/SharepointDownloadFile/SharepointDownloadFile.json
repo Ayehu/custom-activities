@@ -1,0 +1,72 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "SharepointDownloadFile",
+    "description": "Download a file from Sharepoint site.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "InstanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCE_URL_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Site",
+          "label": "Site",
+          "labelKey": "SITE_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "FileName",
+          "label": "File Name",
+          "labelKey": "FILE_NAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "DestinationFolder",
+          "label": "Destination Folder",
+          "labelKey": "DESTINATION_FOLDER_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "UserName",
+          "labelKey": "USERNAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

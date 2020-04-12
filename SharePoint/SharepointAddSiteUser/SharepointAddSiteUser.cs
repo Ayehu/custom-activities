@@ -38,11 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-
-            if (!InstanceURL.EndsWith("/"))
-                InstanceURL = InstanceURL + "/" + Site;
-            else
-                InstanceURL = InstanceURL + Site;
+            NormalizeURL();
 
             using (ClientContext clientContext = new ClientContext(InstanceURL))
             {
@@ -61,14 +57,34 @@ namespace Ayehu.Sdk.ActivityCreation
                     clientContext.Site.RootWeb.SiteUsers.AddUser(user);
                     clientContext.ExecuteQuery();
 
-                    DataTable dt = new DataTable("resultSet");
-                    dt.Columns.Add("Result");
-                    dt.Rows.Add("Success");
-                    return this.GenerateActivityResult(dt);
+                    return this.GenerateActivityResult(GetActivityResult);
                 }
 
                 throw new Exception(string.Format("User '{0}' not found.", UserLogonName));
             }
+        }
+		
+		private DataTable GetActivityResult
+        {
+            get
+            {
+                DataTable dt = new DataTable("resultSet");
+                dt.Columns.Add("Result");
+                dt.Rows.Add("Success");
+
+                return dt;
+            }
+        }
+
+        private void NormalizeURL()
+        {
+            if (!Site.StartsWith("sites") && !Site.StartsWith("/sites"))
+                Site = "sites/" + Site;
+
+            if (InstanceURL.EndsWith("/"))
+                InstanceURL = InstanceURL + Site;
+            else
+                InstanceURL = InstanceURL + "/" + Site;
         }
     }
 }
