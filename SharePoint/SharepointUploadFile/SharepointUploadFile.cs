@@ -9,15 +9,15 @@ using System.Security;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class SharepointUploadFile : IActivity
+    public class SharePointUploadFile : IActivity
     {
         /// <summary>
-        /// The Sharepoint base URL
+        /// The SharePoint base URL
         /// </summary>
         public string InstanceURL;
 
         /// <summary>
-        /// Sharepoint Site to upload the file.
+        /// SharePoint Site to upload the file.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
@@ -28,12 +28,12 @@ namespace Ayehu.Sdk.ActivityCreation
         public string FilePath;
 
         /// <summary>
-        /// Username used to login in admin panel of Sharepoint instance
+        /// Username used to login in admin panel of SharePoint instance
         /// </summary>
         public string UserName;
 
         /// <summary>
-        /// Password used to login in admin panel of Sharepoint instance
+        /// Password used to login in admin panel of SharePoint instance
         /// </summary>
         public string Password;
 

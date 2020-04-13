@@ -1,7 +1,7 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
-using Microsoft.Online.SharePoint.TenantAdministration;
 using Microsoft.SharePoint.Client;
+using OfficeDevPnP.Core.Sites;
 using System;
 using System.Data;
 using System.Linq;
@@ -9,10 +9,10 @@ using System.Security;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class SharepointCreateSite : IActivity
+    public class SharePointCreateSite : IActivity
     {
         /// <summary>
-        /// The Sharepoint ADMIN base URL
+        /// The SharePoint ADMIN base URL
         /// </summary>
         public string InstanceAdminURL;
 
@@ -37,12 +37,12 @@ namespace Ayehu.Sdk.ActivityCreation
         public string SiteTemplate;
 
         /// <summary>
-        /// Username used to login in admin panel of Sharepoint instance
+        /// Username used to login in admin panel of SharePoint instance
         /// </summary>
         public string UserName;
 
         /// <summary>
-        /// Password used to login in admin panel of Sharepoint instance
+        /// Password used to login in admin panel of SharePoint instance
         /// </summary>
         public string Password;
 
@@ -57,17 +57,36 @@ namespace Ayehu.Sdk.ActivityCreation
                     Password.ToList().ForEach(secureString.AppendChar);
                     clientContext.AuthenticationMode = ClientAuthenticationMode.Default;
                     clientContext.Credentials = new SharePointOnlineCredentials(UserName, secureString);
-                    var tenant = new Tenant(clientContext);
 
                     NormalizeURL();
                     string instanceUrl = InstanceAdminURL.Replace("-admin", "");
-                    var scp = new SiteCreationProperties();
-                    scp.Url = instanceUrl;
-                    scp.Title = SiteTitle;
-                    scp.Owner = SiteOwnerLogin;
-                    scp.Template = SiteTemplate;
 
-                    tenant.CreateSite(scp);
+                    if (SiteTemplate.Contains("SITEPAGEPUBLISHING"))
+                    {
+                        CommunicationSiteCollectionCreationInformation communicationSiteInfo = new CommunicationSiteCollectionCreationInformation
+                        {
+                            Title = SiteTitle,
+                            Url = instanceUrl,
+                            SiteDesign = CommunicationSiteDesign.Blank,
+                            Owner = SiteOwnerLogin
+                        };
+
+                        var createCommSite = clientContext.CreateSiteAsync(communicationSiteInfo).Result;
+                    }
+                    else
+                    {
+                        var teamSite = new TeamSiteCollectionCreationInformation
+                        {
+                            Description = SiteTitle,
+                            DisplayName = SiteName,
+                            Alias = SiteName,
+                            Owners = new string[] { SiteOwnerLogin },
+                            IsPublic = true
+                        };
+
+                        var createModernSite = clientContext.CreateSiteAsync(teamSite).Result;
+                    }
+
                     clientContext.ExecuteQuery();
                 }
 

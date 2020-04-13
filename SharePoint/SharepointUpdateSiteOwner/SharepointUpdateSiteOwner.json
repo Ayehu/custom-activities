@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "SharepointUpdateSiteOwner",
-    "description": "Update the owner of a Sharepoint site.",
+    "name": "SharePointUpdateSiteOwner",
+    "description": "Update the owner of a SharePoint site.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -19,7 +19,7 @@
         },
         {
           "value": "",
-          "required": false,
+          "required": true,
           "key": "Site",
           "label": "Site",
           "labelKey": "SITE_KEY",

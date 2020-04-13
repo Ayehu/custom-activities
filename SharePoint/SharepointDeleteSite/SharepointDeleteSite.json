@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "SharepointDeleteSite",
+    "name": "SharePointDeleteSite",
     "description": "Deletes a site by name",
     "Timeout": null,
     "class": [],
@@ -12,14 +12,14 @@
           "value": "",
           "required": true,
           "key": "InstanceAdminURL",
-          "label": "Instance Admin URL",
+          "label": "Admin URL",
           "labelKey": "INSTANCE_ADMIN_URL_KEY",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
+          "required": true,
           "key": "Site",
           "label": "Site",
           "labelKey": "SITE_KEY",

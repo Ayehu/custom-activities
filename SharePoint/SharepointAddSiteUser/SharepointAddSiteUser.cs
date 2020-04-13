@@ -8,26 +8,26 @@ using System.Security;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class SharepointAddSiteUser : IActivity
+    public class SharePointAddSiteUser : IActivity
     {
         /// <summary>
-        /// The Sharepoint base URL
+        /// The SharePoint base URL
         /// </summary>
         public string InstanceURL;
 
         /// <summary>
-        /// Sharepoint Site to add user to.
+        /// SharePoint Site to add user to.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
 
         /// <summary>
-        /// Username used to login in admin panel of Sharepoint instance
+        /// Username used to login in admin panel of SharePoint instance
         /// </summary>
         public string UserName;
 
         /// <summary>
-        /// Password used to login in admin panel of Sharepoint instance
+        /// Password used to login in admin panel of SharePoint instance
         /// </summary>
         public string Password;
 

@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "SharepointCreateSite",
+    "name": "SharePointCreateSite",
     "description": "Create a new site from template.",
     "Timeout": null,
     "class": [],
@@ -12,7 +12,7 @@
           "value": "",
           "required": true,
           "key": "InstanceAdminURL",
-          "label": "Instance Admin URL",
+          "label": "Admin URL",
           "labelKey": "INSTANCE_URL_KEY",
           "baseType": "control",
           "controlType": "textbox"
@@ -54,29 +54,13 @@
           "controlType": "autocomplete",
           "idFieldName": "SiteTemplate",
           "controlOptions": [
-		    {
-			  "key": "SITEPAGEPUBLISHING",
-              "value": "Publishing"
+            {
+              "key": "SITEPAGEPUBLISHING#0",
+              "value": "Communication"
             },
             {
-              "key": "GROUP",
+              "key": "GROUP#0",
               "value": "Team"
-            },
-            {
-              "key": "BLOG#0",
-              "value": "Blog"
-            },
-            {
-              "key": "PROJECTSITE#0",
-              "value": "Project"
-            },
-            {
-              "key": "SPSCOMMU#0",
-              "value": "Community"
-            },
-			{
-              "key": "STS#1",
-              "value": "Blank Site"
             }
           ]
         },

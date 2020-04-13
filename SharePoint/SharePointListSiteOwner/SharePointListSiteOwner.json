@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "SharePointListSiteOwner",
-    "description": "Retrieves the Owner of a Sharepoint site.",
+    "description": "Retrieves the Owner of a SharePoint site.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -19,7 +19,7 @@
         },
         {
           "value": "",
-          "required": false,
+          "required": true,
           "key": "Site",
           "label": "Site",
           "labelKey": "SITE_KEY",

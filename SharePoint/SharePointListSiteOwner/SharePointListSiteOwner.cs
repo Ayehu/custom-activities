@@ -11,23 +11,23 @@ namespace Ayehu.Sdk.ActivityCreation
     public class SharePointListSiteOwner : IActivity
     {
         /// <summary>
-        /// The Sharepoint base URL
+        /// The SharePoint base URL
         /// </summary>
         public string InstanceURL;
 
         /// <summary>
-        /// Sharepoint Site to get the owner information.
+        /// SharePoint Site to get the owner information.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
 
         /// <summary>
-        /// Username used to login in admin panel of Sharepoint instance
+        /// Username used to login in admin panel of SharePoint instance
         /// </summary>
         public string UserName;
 
         /// <summary>
-        /// Password used to login in admin panel of Sharepoint instance
+        /// Password used to login in admin panel of SharePoint instance
         /// </summary>
         public string Password;
 

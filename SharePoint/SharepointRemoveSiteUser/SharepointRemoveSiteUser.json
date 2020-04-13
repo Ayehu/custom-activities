@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "SharepointRemoveSiteUser",
+    "name": "SharePointRemoveSiteUser",
     "description": "Removes a site user by login name.",
     "Timeout": null,
     "class": [],
@@ -19,7 +19,7 @@
         },
         {
           "value": "",
-          "required": false,
+          "required": true,
           "key": "Site",
           "label": "Site",
           "labelKey": "SITE_KEY",

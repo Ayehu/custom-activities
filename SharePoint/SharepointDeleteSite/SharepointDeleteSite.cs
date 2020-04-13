@@ -9,20 +9,20 @@ using System.Security;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class SharepointDeleteSite : IActivity
+    public class SharePointDeleteSite : IActivity
     {
         /// <summary>
-        /// The Sharepoint admin base URL
+        /// The SharePoint admin base URL
         /// </summary>
         public string InstanceAdminURL;
 
         /// <summary>
-        /// Username used to login in admin panel of Sharepoint instance
+        /// Username used to login in admin panel of SharePoint instance
         /// </summary>
         public string UserName;
 
         /// <summary>
-        /// Password used to login in admin panel of Sharepoint instance
+        /// Password used to login in admin panel of SharePoint instance
         /// </summary>
         public string Password;
 

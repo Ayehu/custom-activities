@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "SharepointDownloadFile",
-    "description": "Download a file from Sharepoint site.",
+    "name": "SharePointDownloadFile",
+    "description": "Download a file from SharePoint site.",
     "Timeout": null,
     "class": [],
     "rootSettings": {

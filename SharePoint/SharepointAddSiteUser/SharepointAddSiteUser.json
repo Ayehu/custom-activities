@@ -1,7 +1,7 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "SharepointAddSiteUser",
+    "name": "SharePointAddSiteUser",
     "description": "Add site user and with SiteAdmin role.",
     "Timeout": null,
     "class": [],
@@ -19,7 +19,7 @@
         },
         {
           "value": "",
-          "required": false,
+          "required": true,
           "key": "Site",
           "label": "Site",
           "labelKey": "SITE_KEY",
