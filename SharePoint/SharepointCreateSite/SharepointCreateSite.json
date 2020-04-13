@@ -33,7 +33,7 @@
           "label": "Password",
           "labelKey": "Password_KEY",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         },
         {
           "value": "",

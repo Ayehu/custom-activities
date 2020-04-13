@@ -3,7 +3,7 @@
 ##### DLL's to reference
 Microsoft.SharePoint.Client.dll
 Microsoft.SharePoint.Client.Runtime.dll
-Microsoft.IdentityModel.Tokens.dll
+System.IdentityModel.Tokens.dll
 
 Fields to be set in the activity.
 

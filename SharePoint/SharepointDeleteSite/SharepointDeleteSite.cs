@@ -46,6 +46,7 @@ namespace Ayehu.Sdk.ActivityCreation
                     var tenant = new Tenant(clientContext);
                     string instanceUrl = InstanceAdminURL.Replace("-admin", "");
                     tenant.RemoveSite(instanceUrl);
+					tenant.RemoveDeletedSite(instanceUrl);
                     clientContext.ExecuteQuery();
                 }
 
