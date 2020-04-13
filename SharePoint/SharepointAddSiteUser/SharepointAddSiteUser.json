@@ -17,16 +17,7 @@
           "baseType": "control",
           "controlType": "textbox"
         },
-        {
-          "value": "",
-          "required": true,
-          "key": "Site",
-          "label": "Site",
-          "labelKey": "SITE_KEY",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
+		{
           "value": "",
           "required": true,
           "key": "UserName",
@@ -41,6 +32,15 @@
           "key": "Password",
           "label": "Password",
           "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Site",
+          "label": "Site",
+          "labelKey": "SITE_KEY",
           "baseType": "control",
           "controlType": "textbox"
         },

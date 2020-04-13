@@ -17,6 +17,24 @@
           "baseType": "control",
           "controlType": "textbox"
         },
+		{
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "UserName",
+          "labelKey": "USERNAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
         {
           "value": "",
           "required": true,
@@ -32,24 +50,6 @@
           "key": "FilePath",
           "label": "File Path",
           "labelKey": "FILE_PATH_KEY",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "UserName",
-          "label": "UserName",
-          "labelKey": "USERNAME_KEY",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "Password",
-          "label": "Password",
-          "labelKey": "Password_KEY",
           "baseType": "control",
           "controlType": "textbox"
         }

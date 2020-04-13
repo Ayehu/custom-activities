@@ -17,6 +17,24 @@
           "baseType": "control",
           "controlType": "textbox"
         },
+		{
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "UserName",
+          "labelKey": "USERNAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
         {
           "value": "",
           "required": true,
@@ -41,24 +59,6 @@
           "key": "DestinationFolder",
           "label": "Destination Folder",
           "labelKey": "DESTINATION_FOLDER_KEY",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "UserName",
-          "label": "UserName",
-          "labelKey": "USERNAME_KEY",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "Password",
-          "label": "Password",
-          "labelKey": "Password_KEY",
           "baseType": "control",
           "controlType": "textbox"
         }
