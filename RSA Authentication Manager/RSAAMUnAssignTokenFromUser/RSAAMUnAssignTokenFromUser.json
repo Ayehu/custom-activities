@@ -1,0 +1,44 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "RSA AM UnAssigned Token From User",
+    "description": "RSA AM UnAssigned Token From User",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "key": "hostGroup1",
+          "label": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": ""
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SecurityDomain",
+          "label": "Security Domain",
+          "labelKey": "SecurityDomain",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "AccountName",
+          "label": "Account Name",
+          "labelKey": "AccountName",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

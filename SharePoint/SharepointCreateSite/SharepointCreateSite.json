@@ -1,0 +1,92 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "SharePointCreateSite",
+    "description": "Create a new site from template.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "InstanceAdminURL",
+          "label": "Admin URL",
+          "labelKey": "INSTANCE_URL_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+		{
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "UserName",
+          "labelKey": "USERNAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "Password_KEY",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "SiteTitle",
+          "label": "SiteTitle",
+          "labelKey": "SITE_TITLE_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SiteName",
+          "label": "Site Name",
+          "labelKey": "SITE_NAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SiteOwnerLogin",
+          "label": "Site Owner",
+          "labelKey": "SITE_OWNER_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SiteTemplateKey",
+          "label": "Site Template",
+          "labelKey": "SITE_TEMPLATE_KEY",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "idFieldName": "SiteTemplate",
+          "controlOptions": [
+            {
+              "key": "SITEPAGEPUBLISHING#0",
+              "value": "Communication"
+            },
+            {
+              "key": "GROUP#0",
+              "value": "Team"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
