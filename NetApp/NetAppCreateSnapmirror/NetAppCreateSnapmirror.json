@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Trend Micro Relocate Agent",
-    "description": "Relocate an agent to a new server and/or directory.",
+    "name": "NetApp Create Snapmirror",
+    "description": "Create a Snapmirror in NetApp.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -11,17 +11,8 @@
         {
           "value": "",
           "required": true,
-          "key": "use_url_base",
-          "label": "Base URL",
-          "labelKey": "use_url_base",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "use_application_id",
-          "label": "Application ID",
+          "key": "IP",
+          "label": "IP Address",
           "labelKey": "LBL_1",
           "baseType": "control",
           "controlType": "textbox"
@@ -29,8 +20,8 @@
         {
           "value": "",
           "required": true,
-          "key": "use_api_key",
-          "label": "API Key",
+          "key": "Username",
+          "label": "Username",
           "labelKey": "LBL_2",
           "baseType": "control",
           "controlType": "textbox"
@@ -38,65 +29,56 @@
         {
           "value": "",
           "required": true,
-          "key": "relocate_to_server_id",
-          "label": "Dest. Server ID",
+          "key": "Password",
+          "label": "Password",
           "labelKey": "LBL_3",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         },
         {
           "value": "",
           "required": true,
-          "key": "relocate_to_folder_path",
-          "label": "Dest. Folder Path",
+          "key": "SourceVserver",
+          "label": "Source Vserver",
           "labelKey": "LBL_4",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "entity_id",
-          "label": "Entity ID",
+          "required": true,
+          "key": "SourceVolume",
+          "label": "Source Volume",
           "labelKey": "LBL_5",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "ip_address",
-          "label": "IP Address",
+          "required": true,
+          "key": "SourceCluster",
+          "label": "Source Cluster",
           "labelKey": "LBL_6",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "mac_address",
-          "label": "MAC Address",
+          "required": true,
+          "key": "DestinationVServer",
+          "label": "Dest. VServer",
           "labelKey": "LBL_7",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "host_name",
-          "label": "IP Address",
+          "required": true,
+          "key": "DestinationVolume",
+          "label": "Dest. Volume",
           "labelKey": "LBL_8",
           "baseType": "control",
           "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": false,
-          "key": "allow_multiple_match",
-          "label": "Allow Multi-match",
-          "labelKey": "LBL_8",
-          "baseType": "control",
-          "controlType": "checkbox"
         }
       ],
       "index": "1",
