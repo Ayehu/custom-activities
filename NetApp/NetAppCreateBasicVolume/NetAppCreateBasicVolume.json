@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "Trend Micro Relocate Agent",
-    "description": "Relocate an agent to a new server and/or directory.",
+    "name": "NetApp Create Basic Volume",
+    "description": "Create a basic volume in NetApp.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -11,17 +11,8 @@
         {
           "value": "",
           "required": true,
-          "key": "use_url_base",
-          "label": "Base URL",
-          "labelKey": "use_url_base",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "use_application_id",
-          "label": "Application ID",
+          "key": "IP",
+          "label": "IP Address",
           "labelKey": "LBL_1",
           "baseType": "control",
           "controlType": "textbox"
@@ -29,8 +20,8 @@
         {
           "value": "",
           "required": true,
-          "key": "use_api_key",
-          "label": "API Key",
+          "key": "Username",
+          "label": "Username",
           "labelKey": "LBL_2",
           "baseType": "control",
           "controlType": "textbox"
@@ -38,65 +29,75 @@
         {
           "value": "",
           "required": true,
-          "key": "relocate_to_server_id",
-          "label": "Dest. Server ID",
+          "key": "Password",
+          "label": "Password",
           "labelKey": "LBL_3",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         },
         {
           "value": "",
           "required": true,
-          "key": "relocate_to_folder_path",
-          "label": "Dest. Folder Path",
+          "key": "Vserver",
+          "label": "Vserver",
           "labelKey": "LBL_4",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "entity_id",
-          "label": "Entity ID",
+          "required": true,
+          "key": "Volume",
+          "label": "Volume",
           "labelKey": "LBL_5",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "ip_address",
-          "label": "IP Address",
+          "required": true,
+          "key": "SizeMb",
+          "label": "Size (Mb)",
           "labelKey": "LBL_6",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "mac_address",
-          "label": "MAC Address",
+          "required": true,
+          "key": "VolumeType",
+          "label": "Volume Type",
           "labelKey": "LBL_7",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "DP",
+              "value": "data-protection"
+            },
+            {
+              "key": "RW",
+              "value": "read-write"
+            }
+          ]
         },
         {
           "value": "",
-          "required": false,
-          "key": "host_name",
-          "label": "IP Address",
+          "required": true,
+          "key": "Aggregate",
+          "label": "Aggregate",
           "labelKey": "LBL_8",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
-          "required": false,
-          "key": "allow_multiple_match",
-          "label": "Allow Multi-match",
-          "labelKey": "LBL_8",
+          "required": true,
+          "key": "ExportPolicy",
+          "label": "Export Policy",
+          "labelKey": "LBL_9",
           "baseType": "control",
-          "controlType": "checkbox"
+          "controlType": "textbox"
         }
       ],
       "index": "1",

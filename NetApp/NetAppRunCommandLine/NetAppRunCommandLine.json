@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "NetApp Run Command Line",
+    "description": "Run command line in NetApp cli.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "IP",
+          "label": "IP Address",
+          "labelKey": "LBL_1",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "LBL_2",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "LBL_3",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Command",
+          "label": "Command",
+          "labelKey": "LBL_4",
+          "baseType": "control",
+          "controlType": "textarea"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
