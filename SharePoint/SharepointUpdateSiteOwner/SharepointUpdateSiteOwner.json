@@ -8,16 +8,16 @@
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
-         {
+        {
           "value": "",
           "required": true,
           "key": "InstanceURL",
-          "label": "Instance URL",
+          "label": "Admin URL",
           "labelKey": "INSTANCE_URL_KEY",
           "baseType": "control",
           "controlType": "textbox"
         },
-		{
+        {
           "value": "",
           "required": true,
           "key": "UserName",

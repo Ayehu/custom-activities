@@ -1,5 +1,6 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Microsoft.Online.SharePoint.TenantAdministration;
 using Microsoft.SharePoint.Client;
 using System;
 using System.Data;
@@ -16,7 +17,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string InstanceURL;
 
         /// <summary>
-        /// SharePoint Site to set the new owner.
+        /// SharePoint Site to add user to.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
@@ -38,40 +39,68 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            NormalizeURL();
+            bool removeSiteAdmin = false;
 
-            using (ClientContext clientContext = new ClientContext(InstanceURL))
+            using (ClientContext adminContext = new ClientContext(InstanceURL))
             {
-                SecureString secureString = new SecureString();
-                Password.ToList().ForEach(secureString.AppendChar);
-                clientContext.AuthenticationMode = ClientAuthenticationMode.Default;
-                clientContext.Credentials = new SharePointOnlineCredentials(UserName, secureString);
-                var user = clientContext.Web.EnsureUser(UserLogonName);
-                clientContext.Load(user);
-                clientContext.ExecuteQuery();
-
-                if (user != null)
+                SetCredentials(adminContext);
+                var tenant = new Tenant(adminContext);
+                NormalizeURL();
+                string instanceUrl = InstanceURL.Replace("-admin", "");
+               
+                using (ClientContext clientContext = new ClientContext(instanceUrl))
                 {
-                    clientContext.Site.Owner = user;
-                    clientContext.Site.Owner.Update();
+                    SetCredentials(clientContext);
 
-                    var groups = clientContext.Web.SiteGroups;
-                    clientContext.Load(groups);
-                    clientContext.ExecuteQuery();
-
-                    foreach (var group in groups)
+                    try
                     {
-                        group.Owner = user;
-                        group.Update();
+                        var currentUser = clientContext.Web.CurrentUser;
+                        clientContext.Load(currentUser);
+                        clientContext.ExecuteQuery();
+                    }
+                    catch (System.Net.WebException)
+                    {
+                        // add current user as site admin so it have enough rights to upload a file
+                        tenant.SetSiteAdmin(instanceUrl, UserName, true);
+                        adminContext.ExecuteQuery();
+                        removeSiteAdmin = true;
                     }
 
-                    DataTable dt = new DataTable("resultSet");
-                    dt.Columns.Add("Result");
-                    dt.Rows.Add("Success");
-                    return this.GenerateActivityResult(dt);
-                }
+                    var user = clientContext.Web.EnsureUser(UserLogonName);
+                    clientContext.Load(user);
+                    clientContext.ExecuteQuery();
 
-                throw new Exception(string.Format("User '{0}' not found.", UserLogonName));
+                    if (user != null)
+                    {
+                        clientContext.Site.Owner = user;
+                        clientContext.Site.Owner.Update();
+                        clientContext.ExecuteQuery();
+
+                        var groups = clientContext.Web.SiteGroups;
+                        clientContext.Load(groups);
+                        clientContext.ExecuteQuery();
+
+                        foreach (var group in groups)
+                        {
+                            group.Owner = user;
+                            group.Update();
+                        }
+
+                        if (removeSiteAdmin)
+                        {
+                            // reset the site admin
+                            tenant.SetSiteAdmin(instanceUrl, UserName, false);
+                            adminContext.ExecuteQuery();
+                        }
+
+                        DataTable dt = new DataTable("resultSet");
+                        dt.Columns.Add("Result");
+                        dt.Rows.Add("Success");
+                        return this.GenerateActivityResult(dt);
+                    }
+
+                    throw new Exception(string.Format("User '{0}' not found.", UserLogonName));
+                }
             }
         }
 
@@ -84,6 +113,14 @@ namespace Ayehu.Sdk.ActivityCreation
                 InstanceURL = InstanceURL + Site;
             else
                 InstanceURL = InstanceURL + "/" + Site;
+        }
+
+        private void SetCredentials(ClientContext ctx)
+        {
+            SecureString secureString = new SecureString();
+            Password.ToList().ForEach(secureString.AppendChar);
+            ctx.AuthenticationMode = ClientAuthenticationMode.Default;
+            ctx.Credentials = new SharePointOnlineCredentials(UserName, secureString);
         }
     }
 }

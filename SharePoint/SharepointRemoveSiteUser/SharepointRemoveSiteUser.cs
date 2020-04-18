@@ -1,5 +1,6 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Microsoft.Online.SharePoint.TenantAdministration;
 using Microsoft.SharePoint.Client;
 using System;
 using System.Data;
@@ -11,12 +12,12 @@ namespace Ayehu.Sdk.ActivityCreation
     public class SharePointRemoveSiteUser : IActivity
     {
         /// <summary>
-        /// The SharePoint base URL
+        /// The SharePoint Admin base URL
         /// </summary>
         public string InstanceURL;
 
         /// <summary>
-        /// SharePoint Site to remove user from.
+        /// SharePoint Site to add user to.
         /// </summary>
         /// <remarks>If it's the root website, then leave it empty.</remarks>
         public string Site;
@@ -38,28 +39,16 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            NormalizeURL();
-
-            using (ClientContext clientContext = new ClientContext(InstanceURL))
+            using (ClientContext adminContext = new ClientContext(InstanceURL))
             {
-                SecureString secureString = new SecureString();
-                Password.ToList().ForEach(secureString.AppendChar);
-                clientContext.AuthenticationMode = ClientAuthenticationMode.Default;
-                clientContext.Credentials = new SharePointOnlineCredentials(UserName, secureString);
+                SetCredentials(adminContext);
+                var tenant = new Tenant(adminContext);
 
-                var user = clientContext.Web.EnsureUser(UserLogonName);
-                clientContext.Load(user);
-                clientContext.ExecuteQuery();
-
-                if (user != null)
-                {
-                    clientContext.Site.RootWeb.SiteUsers.Remove(user);
-                    clientContext.ExecuteQuery();
-
-                    return this.GenerateActivityResult(GetActivityResult);
-                }
-
-                throw new Exception(string.Format("User '{0}' not found.", UserLogonName));
+                NormalizeURL();
+                string instanceUrl = InstanceURL.Replace("-admin", "");
+                tenant.SetSiteAdmin(instanceUrl, UserLogonName, false);
+                adminContext.ExecuteQuery();
+                return this.GenerateActivityResult(GetActivityResult);
             }
         }
 
@@ -84,6 +73,14 @@ namespace Ayehu.Sdk.ActivityCreation
                 InstanceURL = InstanceURL + Site;
             else
                 InstanceURL = InstanceURL + "/" + Site;
+        }
+
+        private void SetCredentials(ClientContext ctx)
+        {
+            SecureString secureString = new SecureString();
+            Password.ToList().ForEach(secureString.AppendChar);
+            ctx.AuthenticationMode = ClientAuthenticationMode.Default;
+            ctx.Credentials = new SharePointOnlineCredentials(UserName, secureString);
         }
     }
 }

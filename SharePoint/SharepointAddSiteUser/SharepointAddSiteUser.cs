@@ -1,5 +1,6 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Microsoft.Online.SharePoint.TenantAdministration;
 using Microsoft.SharePoint.Client;
 using System;
 using System.Data;
@@ -11,7 +12,7 @@ namespace Ayehu.Sdk.ActivityCreation
     public class SharePointAddSiteUser : IActivity
     {
         /// <summary>
-        /// The SharePoint base URL
+        /// The SharePoint Admin base URL
         /// </summary>
         public string InstanceURL;
 
@@ -38,33 +39,27 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            NormalizeURL();
-
-            using (ClientContext clientContext = new ClientContext(InstanceURL))
+            try
             {
-                SecureString secureString = new SecureString();
-                Password.ToList().ForEach(secureString.AppendChar);
-                clientContext.AuthenticationMode = ClientAuthenticationMode.Default;
-                clientContext.Credentials = new SharePointOnlineCredentials(UserName, secureString);
-                var user = clientContext.Web.EnsureUser(UserLogonName);
-                clientContext.Load(user);
-                clientContext.ExecuteQuery();
-
-                if (user != null)
+                using (ClientContext adminContext = new ClientContext(InstanceURL))
                 {
-                    user.IsSiteAdmin = true;
-                    user.Update();
-                    clientContext.Site.RootWeb.SiteUsers.AddUser(user);
-                    clientContext.ExecuteQuery();
+                    SetCredentials(adminContext);
+                    var tenant = new Tenant(adminContext);
 
+                    NormalizeURL();
+                    string instanceUrl = InstanceURL.Replace("-admin", "");
+                    tenant.SetSiteAdmin(instanceUrl, UserLogonName, true);
+                    adminContext.ExecuteQuery();
                     return this.GenerateActivityResult(GetActivityResult);
                 }
-
-                throw new Exception(string.Format("User '{0}' not found.", UserLogonName));
+            }
+            catch (Exception e)
+            {
+                throw new Exception(string.Format("Cannont add user '{0}' as administrator. Message: {1}", UserLogonName, e.Message));
             }
         }
-		
-		private DataTable GetActivityResult
+
+        private DataTable GetActivityResult
         {
             get
             {
@@ -74,6 +69,14 @@ namespace Ayehu.Sdk.ActivityCreation
 
                 return dt;
             }
+        }
+
+        private void SetCredentials(ClientContext ctx)
+        {
+            SecureString secureString = new SecureString();
+            Password.ToList().ForEach(secureString.AppendChar);
+            ctx.AuthenticationMode = ClientAuthenticationMode.Default;
+            ctx.Credentials = new SharePointOnlineCredentials(UserName, secureString);
         }
 
         private void NormalizeURL()
