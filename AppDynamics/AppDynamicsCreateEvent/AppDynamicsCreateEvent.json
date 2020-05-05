@@ -1,0 +1,96 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AppDynamicsCreateEvent",
+    "description": "Creates an AppDynamics event",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "BaseURL",
+          "label": "Base URL",
+          "labelKey": "BASEURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "UserName",
+          "label": "User Name",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ApplicationName",
+          "label": "Application Name",
+          "labelKey": "APPNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "SeverityKey",
+          "label": "Severity",
+          "labelKey": "SEVERITY_KEY",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "idFieldName": "Severity",
+          "controlOptions": [
+            {
+              "key": "INFO",
+              "value": "INFO"
+            },
+            {
+              "key": "WARN",
+              "value": "WARN"
+            },
+            {
+              "key": "ERROR",
+              "value": "ERROR"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Comment",
+          "label": "Comment",
+          "labelKey": "COMMENT_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Summary",
+          "label": "Summary",
+          "labelKey": "SUMMARY_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
