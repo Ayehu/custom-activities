@@ -1,0 +1,117 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Update Options",
+    "description": "Update a Sub Account's options under the Master Account",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "accountId",
+    "label": "accountId",
+    "labelKey": "accountId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "share_rc",
+    "label": "share_rc",
+    "labelKey": "share_rc",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "room_connectors",
+    "label": "room_connectors",
+    "labelKey": "room_connectors",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "share_mc",
+    "label": "share_mc",
+    "labelKey": "share_mc",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "meeting_connectors",
+    "label": "meeting_connectors",
+    "labelKey": "meeting_connectors",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "pay_mode",
+    "label": "pay_mode",
+    "labelKey": "pay_mode",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "master",
+        "value": "master"
+      },
+      {
+        "key": "sub",
+        "value": "sub"
+      }
+    ]
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

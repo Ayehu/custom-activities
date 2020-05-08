@@ -1,0 +1,121 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Update an IM Directory Group",
+    "description": "Update an [IM directory group](https://support",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "groupId",
+    "label": "groupId",
+    "labelKey": "groupId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "name1",
+    "label": "name",
+    "labelKey": "name1",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "type",
+    "label": "type",
+    "labelKey": "type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "normal",
+        "value": "normal"
+      },
+      {
+        "key": "shared",
+        "value": "shared"
+      },
+      {
+        "key": "restricted",
+        "value": "restricted"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "search_by_domain",
+    "label": "search_by_domain",
+    "labelKey": "search_by_domain",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "search_by_account",
+    "label": "search_by_account",
+    "labelKey": "search_by_account",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "search_by_ma_account",
+    "label": "search_by_ma_account",
+    "labelKey": "search_by_ma_account",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
