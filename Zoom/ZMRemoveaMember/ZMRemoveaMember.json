@@ -1,0 +1,64 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Remove a Member",
+    "description": " A [channel](https://support",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "channelId",
+    "label": "channelId",
+    "labelKey": "channelId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "memberId",
+    "label": "memberId",
+    "labelKey": "memberId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
