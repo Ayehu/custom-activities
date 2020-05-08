@@ -1,0 +1,147 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "List Phone Numbers",
+    "description": "A Zoom account owner or admin can purchase phone numbers and assign them to Zoom phone users",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "next_page_token",
+    "label": "next_page_token",
+    "labelKey": "next_page_token",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "type",
+    "label": "type",
+    "labelKey": "type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "assigned",
+        "value": "assigned"
+      },
+      {
+        "key": "unassigned",
+        "value": "unassigned"
+      },
+      {
+        "key": "all",
+        "value": "all"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "extension_type",
+    "label": "extension_type",
+    "labelKey": "extension_type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "user",
+        "value": "user"
+      },
+      {
+        "key": "callQueue",
+        "value": "callQueue"
+      },
+      {
+        "key": "autoReceptionist",
+        "value": "autoReceptionist"
+      },
+      {
+        "key": "commonAreaPhone",
+        "value": "commonAreaPhone"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "page_size",
+    "label": "page_size",
+    "labelKey": "page_size",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "number_type",
+    "label": "number_type",
+    "labelKey": "number_type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "toll",
+        "value": "toll"
+      },
+      {
+        "key": "tollfree",
+        "value": "tollfree"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "pending_numbers",
+    "label": "pending_numbers",
+    "labelKey": "pending_numbers",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
