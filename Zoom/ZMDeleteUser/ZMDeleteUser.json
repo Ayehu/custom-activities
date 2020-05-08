@@ -1,0 +1,117 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Delete User",
+    "description": "Deleting a user permanently removes them and their data from Zoom",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "userId",
+    "label": "userId",
+    "labelKey": "userId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "action",
+    "label": "action",
+    "labelKey": "action",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "disassociate",
+        "value": "disassociate"
+      },
+      {
+        "key": "delete",
+        "value": "delete"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "transfer_email",
+    "label": "transfer_email",
+    "labelKey": "transfer_email",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "transfer_meeting",
+    "label": "transfer_meeting",
+    "labelKey": "transfer_meeting",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "transfer_webinar",
+    "label": "transfer_webinar",
+    "labelKey": "transfer_webinar",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "transfer_recording",
+    "label": "transfer_recording",
+    "labelKey": "transfer_recording",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
