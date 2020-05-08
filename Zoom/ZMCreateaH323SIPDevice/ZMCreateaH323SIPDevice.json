@@ -1,0 +1,108 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Create a H.323/SIP Device",
+    "description": "A H",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "name1",
+    "label": "name",
+    "labelKey": "name1",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "protocol",
+    "label": "protocol",
+    "labelKey": "protocol",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "H.323",
+        "value": "H.323"
+      },
+      {
+        "key": "SIP",
+        "value": "SIP"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "ip",
+    "label": "ip",
+    "labelKey": "ip",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "encryption",
+    "label": "encryption",
+    "labelKey": "encryption",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "auto",
+        "value": "auto"
+      },
+      {
+        "key": "yes",
+        "value": "yes"
+      },
+      {
+        "key": "no",
+        "value": "no"
+      }
+    ]
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

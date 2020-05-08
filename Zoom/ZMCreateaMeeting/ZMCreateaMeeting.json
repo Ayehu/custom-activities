@@ -1,0 +1,637 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Create a Meeting",
+    "description": "[Create a meeting](https://support",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "userId",
+    "label": "userId",
+    "labelKey": "userId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "topic",
+    "label": "topic",
+    "labelKey": "topic",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "type",
+    "label": "type",
+    "labelKey": "type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      },
+      {
+        "key": "3",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "start_time",
+    "label": "start_time",
+    "labelKey": "start_time",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "duration",
+    "label": "duration",
+    "labelKey": "duration",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "timezone",
+    "label": "timezone",
+    "labelKey": "timezone",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "password",
+    "label": "password",
+    "labelKey": "password",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "agenda",
+    "label": "agenda",
+    "labelKey": "agenda",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "field",
+    "label": "field",
+    "labelKey": "field",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "value",
+    "label": "value",
+    "labelKey": "value",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "repeat_interval",
+    "label": "repeat_interval",
+    "labelKey": "repeat_interval",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "weekly_days",
+    "label": "weekly_days",
+    "labelKey": "weekly_days",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      },
+      {
+        "key": "3",
+        "value": "3"
+      },
+      {
+        "key": "4",
+        "value": "4"
+      },
+      {
+        "key": "5",
+        "value": "5"
+      },
+      {
+        "key": "6",
+        "value": "6"
+      },
+      {
+        "key": "7",
+        "value": "7"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "monthly_day",
+    "label": "monthly_day",
+    "labelKey": "monthly_day",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "monthly_week",
+    "label": "monthly_week",
+    "labelKey": "monthly_week",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "-1",
+        "value": "-1"
+      },
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      },
+      {
+        "key": "3",
+        "value": "3"
+      },
+      {
+        "key": "4",
+        "value": "4"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "monthly_week_day",
+    "label": "monthly_week_day",
+    "labelKey": "monthly_week_day",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      },
+      {
+        "key": "3",
+        "value": "3"
+      },
+      {
+        "key": "4",
+        "value": "4"
+      },
+      {
+        "key": "5",
+        "value": "5"
+      },
+      {
+        "key": "6",
+        "value": "6"
+      },
+      {
+        "key": "7",
+        "value": "7"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "end_times",
+    "label": "end_times",
+    "labelKey": "end_times",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "end_date_time",
+    "label": "end_date_time",
+    "labelKey": "end_date_time",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "host_video",
+    "label": "host_video",
+    "labelKey": "host_video",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "participant_video",
+    "label": "participant_video",
+    "labelKey": "participant_video",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "cn_meeting",
+    "label": "cn_meeting",
+    "labelKey": "cn_meeting",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "in_meeting",
+    "label": "in_meeting",
+    "labelKey": "in_meeting",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "join_before_host",
+    "label": "join_before_host",
+    "labelKey": "join_before_host",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "mute_upon_entry",
+    "label": "mute_upon_entry",
+    "labelKey": "mute_upon_entry",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "watermark",
+    "label": "watermark",
+    "labelKey": "watermark",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "use_pmi",
+    "label": "use_pmi",
+    "labelKey": "use_pmi",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "approval_type",
+    "label": "approval_type",
+    "labelKey": "approval_type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "0",
+        "value": "0"
+      },
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "registration_type",
+    "label": "registration_type",
+    "labelKey": "registration_type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      },
+      {
+        "key": "3",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "audio",
+    "label": "audio",
+    "labelKey": "audio",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "both",
+        "value": "both"
+      },
+      {
+        "key": "telephony",
+        "value": "telephony"
+      },
+      {
+        "key": "voip",
+        "value": "voip"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "auto_recording",
+    "label": "auto_recording",
+    "labelKey": "auto_recording",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "local",
+        "value": "local"
+      },
+      {
+        "key": "cloud",
+        "value": "cloud"
+      },
+      {
+        "key": "none",
+        "value": "none"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "enforce_login",
+    "label": "enforce_login",
+    "labelKey": "enforce_login",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "enforce_login_domains",
+    "label": "enforce_login_domains",
+    "labelKey": "enforce_login_domains",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "alternative_hosts",
+    "label": "alternative_hosts",
+    "labelKey": "alternative_hosts",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "close_registration",
+    "label": "close_registration",
+    "labelKey": "close_registration",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "waiting_room",
+    "label": "waiting_room",
+    "labelKey": "waiting_room",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "items",
+    "label": "items",
+    "labelKey": "items",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "contact_name",
+    "label": "contact_name",
+    "labelKey": "contact_name",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "contact_email",
+    "label": "contact_email",
+    "labelKey": "contact_email",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "registrants_email_notification",
+    "label": "registrants_email_notification",
+    "labelKey": "registrants_email_notification",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "meeting_authentication",
+    "label": "meeting_authentication",
+    "labelKey": "meeting_authentication",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "authentication_option",
+    "label": "authentication_option",
+    "labelKey": "authentication_option",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "authentication_domains",
+    "label": "authentication_domains",
+    "labelKey": "authentication_domains",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
