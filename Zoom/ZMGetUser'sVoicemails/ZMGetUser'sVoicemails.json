@@ -1,0 +1,99 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Get User's Voicemails",
+    "description": "Retrieve a user's Zoom Phone voicemails",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "userId",
+    "label": "userId",
+    "labelKey": "userId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "page_size",
+    "label": "page_size",
+    "labelKey": "page_size",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "page_number",
+    "label": "page_number",
+    "labelKey": "page_number",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "status",
+    "label": "status",
+    "labelKey": "status",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "all",
+        "value": "all"
+      },
+      {
+        "key": "read",
+        "value": "read"
+      },
+      {
+        "key": "unread",
+        "value": "unread"
+      }
+    ]
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

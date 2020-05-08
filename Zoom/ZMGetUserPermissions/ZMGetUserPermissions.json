@@ -1,0 +1,53 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Get User Permissions",
+    "description": "Users can be assigned a set of permissions that allows them to access only the pages/information that a user needs to view or edit",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "userId",
+    "label": "userId",
+    "labelKey": "userId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
