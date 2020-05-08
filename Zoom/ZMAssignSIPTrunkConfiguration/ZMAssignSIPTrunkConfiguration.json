@@ -1,0 +1,64 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Assign SIP Trunk Configuration",
+    "description": "With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customerâ€™s network and the Zoom cloud",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "accountId",
+    "label": "accountId",
+    "labelKey": "accountId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "enable",
+    "label": "enable",
+    "labelKey": "enable",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
