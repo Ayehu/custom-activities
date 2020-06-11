@@ -6,19 +6,19 @@ using System;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class  CustomActivity: IActivity
-    {
-    	public string dateToConvert;
-        
-        public ICustomActivityResult Execute()
-        {
-        	var parsedDate = DateTime.Parse(dateToConvert);
-            
-            long dateFileTime = parsedDate.ToFileTime();
-            
-            var result = dateFileTime.ToString();
-            
-            return this.GenerateActivityResult(result);
-        }
-    }
+	public class  CustomActivity: IActivity
+	{
+		public string dateToConvert;
+
+		public ICustomActivityResult Execute()
+		{
+			var parsedDate = DateTime.Parse(dateToConvert);
+
+			long dateFileTime = parsedDate.ToFileTime();
+
+			var result = dateFileTime.ToString();
+
+			return this.GenerateActivityResult(result);
+		}
+	}
 }
