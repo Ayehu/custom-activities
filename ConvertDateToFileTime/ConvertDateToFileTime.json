@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ConvertDateToFileTime",
+    "description": "Convert a datetime formatted date to filetime format for use with Active Directory and other applications.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "YYYY-MM-DD HH:MM:SS",
+          "required": true,
+          "key": "dateToConvert",
+          "label": "Date",
+          "labelKey": "DATETOCONVERT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
