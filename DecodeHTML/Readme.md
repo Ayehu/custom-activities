@@ -1,5 +1,6 @@
 This activity will take a string containing HTML-encoded characters and return its plaintext equivalent.
 <br><br>
-<b>Example Input:</b> This is a &quot;test&quot; &amp; we will see how it works!
+<b>Example Input:</b>
+<pre>This is a &quot;test&quot; &amp; we will see how it works!</pre>
 <br>
-<b>Example Output:</b> This is a "test" & we will see how it works!
+<b>Example Output:</b>This is a "test" & we will see how it works!
