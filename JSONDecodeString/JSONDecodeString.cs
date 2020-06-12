@@ -13,9 +13,9 @@ namespace Ayehu.Sdk.ActivityCreation
 
           public ICustomActivityResult Execute()
           {
-               var decoded = Regex.Unescape(jsonString);
+               var result = Regex.Unescape(jsonString);
 
-               return this.GenerateActivityResult(decoded);
+               return this.GenerateActivityResult(result);
           }
      }
 }
