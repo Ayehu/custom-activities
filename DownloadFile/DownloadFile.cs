@@ -1,6 +1,5 @@
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
-using System.Text.RegularExpressions;
 using System.Net;
 using System;
 
