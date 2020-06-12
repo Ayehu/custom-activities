@@ -46,7 +46,7 @@ namespace Ayehu.Sdk.ActivityCreation
 					}
 					else
 					{
-					return this.GenerateActivityResult("Failure");
+					return this.GenerateActivityResult("Failure: " + jsonResults["result"].ToString());
 					}
 				}
 			}
