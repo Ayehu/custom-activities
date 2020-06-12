@@ -21,7 +21,7 @@
 					"value": "",
 					"required": true,
 					"key":"savePath",
-					"label": "Path",
+					"label": "Save Path",
 					"labelKey": "SAVEPATH_VALUE",
 					"baseType": "control",
 					"controlType": "textbox"
