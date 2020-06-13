@@ -14,13 +14,15 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string apiKey;
 		public string userName;
 		public string teamName;
+		public string userRole;
 
 		public ICustomActivityResult Execute()
 		{
-			string apiURL = "https://api.opsgenie.com/v2/teams/" + teamName + "/members/" + userName + "?teamIdentifierType=name";
+			string apiURL = "https://api.opsgenie.com/v2/teams/" + teamName + "/members?teamIdentifierType=name";
 			string contentType = "application/json";
 			string accept = "application/json";
-			string method = "DELETE";
+			string method = "POST";
+			string jsonBody = "{\"user\":{\"username\":\"" + userName + "\"},\"role\": \"" + userRole + "\"}";
 
 			try
 			{
@@ -32,23 +34,30 @@ namespace Ayehu.Sdk.ActivityCreation
 				httpWebRequest.Headers.Add("Authorization", "GenieKey " + apiKey);
 				httpWebRequest.Method = method;
 
-				var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-
-				using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+				using(var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
 				{
-					var responseString = streamReader.ReadToEnd();
+					streamWriter.Write(jsonBody);
+					streamWriter.Flush();
+					streamWriter.Close();
 
-					JObject jsonResults = JObject.Parse(responseString);
-					
-					string result = jsonResults["result"].ToString();
+					var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
-					if(result == "Removed")
+					using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
 					{
-						return this.GenerateActivityResult("Success");
-					}
-					else
-					{
-						return this.GenerateActivityResult("Failure (" + result + ")");
+						var responseString = streamReader.ReadToEnd();
+
+						JObject jsonResults = JObject.Parse(responseString);
+						
+						string result = jsonResults["result"].ToString();
+
+						if(result == "Added")
+						{
+							return this.GenerateActivityResult("Success");
+						}
+						else
+						{
+							return this.GenerateActivityResult("Failure (" + result + ")");
+						}
 					}
 				}
 			}
