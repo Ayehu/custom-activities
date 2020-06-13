@@ -41,8 +41,6 @@ namespace Ayehu.Sdk.ActivityCreation
 					
 					JArray schedules = (JArray)jsonResults["data"];
 
-					int scheduleCount = schedules.Count;
-
 					if(schedules.Count > 0)
 					{
 						return this.GenerateActivityResult("True");
