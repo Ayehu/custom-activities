@@ -20,15 +20,6 @@
         {
           "value": "",
           "required": true,
-          "key": "teamName",
-          "label": "Team Name",
-          "labelKey": "TEAM_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
           "key": "userName",
           "label": "Username",
           "labelKey": "USER_VALUE",
