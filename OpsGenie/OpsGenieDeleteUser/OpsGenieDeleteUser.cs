@@ -16,7 +16,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 		public ICustomActivityResult Execute()
 		{
-			string apiURL = "https://api.opsgenie.com/v2/users/" + userName + "?teamIdentifierType=name";
+			string apiURL = "https://api.opsgenie.com/v2/users/" + userName + "?identifierType=name";
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "DELETE";
