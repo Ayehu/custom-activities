@@ -39,20 +39,22 @@ namespace Ayehu.Sdk.ActivityCreation
 					var responseString = streamReader.ReadToEnd();
 
 					JObject jsonResults = JObject.Parse(responseString);
+					
+					string result = jsonResults["result"].ToString();
 
-					if(jsonResults["result"].ToString() == "Removed")
+					if(result == "Removed")
 					{
 						return this.GenerateActivityResult("Success");
 					}
 					else
 					{
-					return this.GenerateActivityResult("Failure: " + jsonResults["result"].ToString());
+						return this.GenerateActivityResult("Failure (" + result + ")");
 					}
 				}
 			}
 			catch(WebException e)
 			{
-				return this.GenerateActivityResult("Error: " + e.Message);
+				return this.GenerateActivityResult("Error (" + e.Message + ")");
 			}
 		}
 	}
