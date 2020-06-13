@@ -14,7 +14,6 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string apiKey;
 		public string userName;
-		public string teamName;
 
 		public ICustomActivityResult Execute()
 		{
@@ -54,7 +53,7 @@ namespace Ayehu.Sdk.ActivityCreation
 						DataTable dt = new DataTable("resultSet");
 
 						dt.Rows.Add(dt.NewRow());
-						
+
 						dt.Columns.Add("id");
 						dt.Columns.Add("name");
 						dt.Columns.Add("enabled");
