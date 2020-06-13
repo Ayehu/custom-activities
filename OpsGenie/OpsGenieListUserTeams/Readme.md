@@ -2,4 +2,4 @@
 <br>
 <b>Possible Output:</b> Empty
 <br>
-<b>Possible Output:</b>Error (Error details)
+<b>Possible Output:</b> Error (Error details)
