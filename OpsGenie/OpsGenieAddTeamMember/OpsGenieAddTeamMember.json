@@ -1,0 +1,65 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "OpsGenieAddTeamMember",
+    "description": "Add a user to an OpsGenie team.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "apiKey",
+          "label": "API Key",
+          "labelKey": "APIKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "teamName",
+          "label": "Team Name",
+          "labelKey": "TEAM_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "userName",
+          "label": "Username",
+          "labelKey": "USER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "userRole",
+          "label": "Role",
+          "labelKey": "USER_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions":
+          [
+            {
+              "key": "1",
+              "value": "user"
+            },
+            {
+              "key": "2",
+              "value": "admin"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
