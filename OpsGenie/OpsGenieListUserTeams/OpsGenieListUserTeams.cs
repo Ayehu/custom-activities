@@ -14,7 +14,6 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string apiKey;
 		public string userName;
-		public string teamName;
 
 		public ICustomActivityResult Execute()
 		{
