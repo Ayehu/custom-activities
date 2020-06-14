@@ -38,15 +38,6 @@
         {
           "value": "",
           "required": true,
-          "key": "skypeUsername",
-          "label": "Skype Username",
-          "labelKey": "SKYPEUSERNAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
           "key": "userRole",
           "label": "Role",
           "labelKey": "USER_VALUE",
@@ -65,7 +56,16 @@
         },
         {
           "value": "",
-          "required": true,
+          "required": false,
+          "key": "skypeUsername",
+          "label": "Skype Username",
+          "labelKey": "SKYPEUSERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
           "key": "timeZone",
           "label": "Time Zone",
           "labelKey": "TIMEZONE_VALUE",
@@ -2540,7 +2540,7 @@
         },
         {
           "value": "",
-          "required": true,
+          "required": false,
           "key": "locale",
           "label": "Locale",
           "labelKey": "LOCALE_VALUE",
@@ -2995,7 +2995,7 @@
         },
         {
           "value": "",
-          "required": true,
+          "required": false,
           "key": "address",
           "label": "Address",
           "labelKey": "ADDRESS_VALUE",
@@ -3004,7 +3004,7 @@
         },
         {
           "value": "",
-          "required": true,
+          "required": false,
           "key": "addressCity",
           "label": "City",
           "labelKey": "CITY_VALUE",
@@ -3013,7 +3013,7 @@
         },
         {
           "value": "",
-          "required": true,
+          "required": false,
           "key": "addressState",
           "label": "State",
           "labelKey": "STATE_VALUE",
@@ -3022,7 +3022,7 @@
         },
         {
           "value": "",
-          "required": true,
+          "required": false,
           "key": "addressZipCode",
           "label": "Zip Code",
           "labelKey": "ZIPCODE_VALUE",
