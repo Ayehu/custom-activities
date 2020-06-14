@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "OpsGenieUncknowledgeAlert",
-    "description": "Uncknowledge an OpsGenie alert.",
+    "name": "OpsGenieUnacknowledgeAlert",
+    "description": "Unacknowledge an OpsGenie alert.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
