@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "OpsGenieAddAlertTag",
-    "description": "Add a tag to an OpsGenie alert",
+    "description": "Add a tag to an OpsGenie alert.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
