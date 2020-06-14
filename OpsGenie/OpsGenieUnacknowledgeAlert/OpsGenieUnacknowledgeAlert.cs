@@ -23,7 +23,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "POST";
-			string jsonBody = "{\"user\":\"" + user + "\"},\"source\": \"" + source + "\",\"note\": \"" + note + "\"}";
+			string jsonBody = "{\"user\":\"" + user + "\",\"source\": \"" + source + "\",\"note\": \"" + note + "\"}";
 
 			try
 			{
