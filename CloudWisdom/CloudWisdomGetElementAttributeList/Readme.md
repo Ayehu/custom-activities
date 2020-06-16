@@ -4,7 +4,7 @@ The attribute names returned by this activity can be passed individually to the 
 <br><br>
 <b>Example Output:</b> Result-Set Table
 <br>
-<table border="1" with="20">
+<table border="1">
 <tr>
 <td>Attribute</td>
 <td>Value</td>
