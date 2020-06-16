@@ -27,7 +27,7 @@
           "controlType": "password"
         },
         {
-          "key": "IsNowSelected",
+          "key": "reportTypeSelected",
           "label": "Filter for specific report type.",
           "baseType": "control",
           "labelKey": "FILTER_FOR_SPECIFIC_REPORT_TYPE",
@@ -45,10 +45,7 @@
             "true": {
               "enable": [
                 "reportType"
-              ],
-              "setValue": {
-                "reportType": ""
-              }
+              ]
             }
           }
         },

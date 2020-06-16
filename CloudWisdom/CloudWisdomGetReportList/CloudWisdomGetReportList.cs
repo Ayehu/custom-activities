@@ -15,6 +15,7 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string username;
 		public string password;
 		public string reportType;
+		public int reportTypeSelected;
 
 		public ICustomActivityResult Execute()
 		{
@@ -58,7 +59,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 						for(int i = 0; i < reportCount; i ++)
 						{
-							if(reportType == "" || (reportType != "" && jsonResults["reports"][i]["type"].ToString() == reportType))
+							if(reportTypeSelected == 0 || (reportTypeSelected == 1 && reportType != "" && jsonResults["reports"][i]["type"].ToString() == reportType))
 							{
 								dt.Rows.Add(dt.NewRow());
 
