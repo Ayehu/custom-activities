@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "OpsGenieListAlerts",
-    "description": "Retrieve a list of OpsGenie alerts by search criteria.",
+    "name": "CloudWisdomGetReportList",
+    "description": "Retrieve a list of reports from CloudWisdom.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
