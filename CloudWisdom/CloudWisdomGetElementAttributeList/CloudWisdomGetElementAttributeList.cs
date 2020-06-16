@@ -14,7 +14,6 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string username;
 		public string password;
-		public string reportID;
 		public string elementID;
 
 		public ICustomActivityResult Execute()
