@@ -25,6 +25,41 @@
           "labelKey": "PASSWORD_VALUE",
           "baseType": "control",
           "controlType": "password"
+        },
+        {
+          "key": "IsNowSelected",
+          "label": "Filter for specific report type.",
+          "baseType": "control",
+          "labelKey": "FILTER_FOR_SPECIFIC_REPORT_TYPE",
+          "controlType": "checkbox",
+          "value": "",
+          "checked": false,
+          "styleClass": "",
+          "convertBoolTo": "number",
+          "valueChangesActions": {
+            "false": {
+              "disable": [
+                "reportType"
+              ]
+            },
+            "true": {
+              "enable": [
+                "reportType"
+              ],
+              "setValue": {
+                "reportType": ""
+              }
+            }
+          }
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "reportType",
+          "label": "Report Type",
+          "labelKey": "REPORTTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
         }
       ],
       "index": "1",
