@@ -14,6 +14,7 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string username;
 		public string password;
+		public string reportType;
 
 		public ICustomActivityResult Execute()
 		{
@@ -53,20 +54,27 @@ namespace Ayehu.Sdk.ActivityCreation
 					{
 						DataTable dt = new DataTable("resultSet");
 
+						int rowCount = 0;
+
 						for(int i = 0; i < reportCount; i ++)
 						{
-							dt.Rows.Add(dt.NewRow());
-
-							JObject reportDetails = JObject.Parse(jsonResults["reports"][i].ToString());
-
-							foreach(JProperty property in reportDetails.Properties())
+							if(reportType == "" || (reportType != "" && jsonResults["reports"][i]["type"].ToString() == reportType))
 							{
-								if(!dt.Columns.Contains(property.Name))
+								dt.Rows.Add(dt.NewRow());
+
+								JObject reportDetails = JObject.Parse(jsonResults["reports"][i].ToString());
+
+								foreach(JProperty property in reportDetails.Properties())
 								{
-									dt.Columns.Add(property.Name);
+									if(!dt.Columns.Contains(property.Name))
+									{
+										dt.Columns.Add(property.Name);
+									}
+
+									dt.Rows[rowCount][property.Name] = property.Value;
 								}
 
-								dt.Rows[i][property.Name] = property.Value;
+								rowCount ++;
 							}
 						}
 
