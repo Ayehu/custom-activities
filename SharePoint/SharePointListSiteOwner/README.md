@@ -3,6 +3,7 @@
 ##### DLL's to reference
 Microsoft.SharePoint.Client.dll
 Microsoft.SharePoint.Client.Runtime.dll
+Microsoft.Online.SharePoint.Client.Tenant.dll
 
 ## The UserName have to be part of site admins to get owner information.
 

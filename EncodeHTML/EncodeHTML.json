@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"EncodeHTML",
+    "description": "Encode a plaintext string to HTML format.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"plaintextString",
+          "label": "Plaintext String",
+          "labelKey": "PLAINTEXTSTRING_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

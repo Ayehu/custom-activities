@@ -88,9 +88,6 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private void NormalizeURL()
         {
-            if (!Site.StartsWith("sites") && !Site.StartsWith("/sites"))
-                Site = "sites/" + Site;
-
             if (InstanceURL.EndsWith("/"))
                 InstanceURL = InstanceURL + Site;
             else

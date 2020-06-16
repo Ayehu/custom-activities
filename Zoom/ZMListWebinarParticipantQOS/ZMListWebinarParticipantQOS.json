@@ -1,0 +1,95 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "List Webinar Participant QOS",
+    "description": "Retrieve a list of participants from live or past webinars and the quality of service they received",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "webinarId",
+    "label": "webinarId",
+    "labelKey": "webinarId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "type",
+    "label": "type",
+    "labelKey": "type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "past",
+        "value": "past"
+      },
+      {
+        "key": "live",
+        "value": "live"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "page_size",
+    "label": "page_size",
+    "labelKey": "page_size",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "next_page_token",
+    "label": "next_page_token",
+    "labelKey": "next_page_token",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

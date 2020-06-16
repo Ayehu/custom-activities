@@ -1,0 +1,152 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Add a User's TSP Account",
+    "description": "Add a user's TSP account",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "userId",
+    "label": "userId",
+    "labelKey": "userId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "conference_code",
+    "label": "conference_code",
+    "labelKey": "conference_code",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "leader_pin",
+    "label": "leader_pin",
+    "labelKey": "leader_pin",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "code",
+    "label": "code",
+    "labelKey": "code",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "number",
+    "label": "number",
+    "labelKey": "number",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "type",
+    "label": "type",
+    "labelKey": "type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "toll",
+        "value": "toll"
+      },
+      {
+        "key": "tollfree",
+        "value": "tollfree"
+      },
+      {
+        "key": "media_link",
+        "value": "media_link"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "country_label",
+    "label": "country_label",
+    "labelKey": "country_label",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "tsp_bridge",
+    "label": "tsp_bridge",
+    "labelKey": "tsp_bridge",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "US_TSP_TB",
+        "value": "US_TSP_TB"
+      },
+      {
+        "key": "EU_TSP_TB",
+        "value": "EU_TSP_TB"
+      }
+    ]
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

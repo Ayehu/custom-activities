@@ -1,4 +1,4 @@
-# Custom Activites Contribution Guide
+# Custom Activities Contribution Guide
 
 ![Ayehu Logo](AyehuLogo.png)
 

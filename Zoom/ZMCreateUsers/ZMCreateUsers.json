@@ -1,0 +1,138 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Create Users",
+    "description": "A Zoom account can have one or more users",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "action",
+    "label": "action",
+    "labelKey": "action",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "create",
+        "value": "create"
+      },
+      {
+        "key": "autoCreate",
+        "value": "autoCreate"
+      },
+      {
+        "key": "custCreate",
+        "value": "custCreate"
+      },
+      {
+        "key": "ssoCreate",
+        "value": "ssoCreate"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "email",
+    "label": "email",
+    "labelKey": "email",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "type",
+    "label": "type",
+    "labelKey": "type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      },
+      {
+        "key": "3",
+        "value": "3"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "first_name",
+    "label": "first_name",
+    "labelKey": "first_name",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "last_name",
+    "label": "last_name",
+    "labelKey": "last_name",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "password",
+    "label": "password",
+    "labelKey": "password",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,189 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Update Meeting Recording Settings",
+    "description": "Update settings applied to a meeting's [Cloud Recording](https://support",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": 
+        [
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiKey",
+    "label": "ApiKey",
+    "labelKey": "ApiKey",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "ApiSecret",
+    "label": "ApiSecret",
+    "labelKey": "ApiSecret",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": true,
+    "key": "meetingId",
+    "label": "meetingId",
+    "labelKey": "meetingId",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "share_recording",
+    "label": "share_recording",
+    "labelKey": "share_recording",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "publicly",
+        "value": "publicly"
+      },
+      {
+        "key": "internally",
+        "value": "internally"
+      },
+      {
+        "key": "none",
+        "value": "none"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "recording_authentication",
+    "label": "recording_authentication",
+    "labelKey": "recording_authentication",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "authentication_option",
+    "label": "authentication_option",
+    "labelKey": "authentication_option",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "authentication_domains",
+    "label": "authentication_domains",
+    "labelKey": "authentication_domains",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "viewer_download",
+    "label": "viewer_download",
+    "labelKey": "viewer_download",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "password",
+    "label": "password",
+    "labelKey": "password",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "on_demand",
+    "label": "on_demand",
+    "labelKey": "on_demand",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "approval_type",
+    "label": "approval_type",
+    "labelKey": "approval_type",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "autocomplete",
+    "controlOptions": [
+      {
+        "key": "0",
+        "value": "0"
+      },
+      {
+        "key": "1",
+        "value": "1"
+      },
+      {
+        "key": "2",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "send_email_to_host",
+    "label": "send_email_to_host",
+    "labelKey": "send_email_to_host",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  },
+  {
+    "value": "",
+    "required": false,
+    "key": "show_social_share_buttons",
+    "label": "show_social_share_buttons",
+    "labelKey": "show_social_share_buttons",
+    "styleClass": "",
+    "baseType": "control",
+    "controlType": "textbox",
+    "controlOptions": null
+  }
+]                
+      ,
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

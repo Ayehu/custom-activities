@@ -1,0 +1,1 @@
+These activities require an API key from OpsGenie.  This key can be found by logging in as an administrator and navigating to "Settings" -> "Configured Integrations".  From there, open the "Default API" and then copy the "API Key" field.
