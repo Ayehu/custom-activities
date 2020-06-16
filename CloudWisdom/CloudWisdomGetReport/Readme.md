@@ -4,6 +4,6 @@ The available values for the "Report Type" field can be found in the results fro
 <br><br>
 <b>Example Output:</b> Result-Set Table containing report data
 <br>
-<b>Example Output:</b> Empty (indicating no value was found matching that attribute name)
+<b>Example Output:</b> Empty (indicating no report data found)
 <br>
 <b>Example Output:</b> Error (error message)
