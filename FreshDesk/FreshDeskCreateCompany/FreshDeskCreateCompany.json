@@ -1,0 +1,356 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "FreshDesk Create Company",
+    "description": "Create a Company in FreshDesk",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "fdDomain",
+          "label": "Sub-domain name",
+          "labelKey": "LBL_1",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "apiKey",
+          "label": "API Key",
+          "labelKey": "LBL_2",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "companyName",
+          "label": "Name",
+          "labelKey": "LBL_3",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "industry",
+          "label": "Industry",
+          "labelKey": "LBL_4",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "Automotive",
+              "value": "Automotive"
+            },
+            {
+              "key": "Consumer Durables and Apparel",
+              "value": "Consumer Durables and Apparel"
+            },
+            {
+              "key": "Diversified Consumer Services",
+              "value": "Diversified Consumer Services"
+            },
+            {
+              "key": "Hotels, Restaurants and Leisure",
+              "value": "Hotels, Restaurants and Leisure"
+            },
+            {
+              "key": "Consumer Goods",
+              "value": "Consumer Goods"
+            },
+            {
+              "key": "Household Durables",
+              "value": "Household Durables"
+            },
+            {
+              "key": "Leisure Products",
+              "value": "Leisure Products"
+            },
+            {
+              "key": "Textiles, Apparel and Luxury Goods",
+              "value": "Textiles, Apparel and Luxury Goods"
+            },
+            {
+              "key": "Education Services",
+              "value": "Education Services"
+            },
+            {
+              "key": "Family Services",
+              "value": "Family Services"
+            },
+            {
+              "key": "Specialized Consumer Services",
+              "value": "Specialized Consumer Services"
+            },
+            {
+              "key": "Media",
+              "value": "Media"
+            },
+            {
+              "key": "Distributors",
+              "value": "Distributors"
+            },
+            {
+              "key": "Specialty Retail",
+              "value": "Specialty Retail"
+            },
+            {
+              "key": "Beverages",
+              "value": "Beverages"
+            },
+            {
+              "key": "Food Products",
+              "value": "Food Products"
+            },
+            {
+              "key": "Food and Staples Retailing",
+              "value": "Food and Staples Retailing"
+            },
+            {
+              "key": "Personal Products",
+              "value": "Personal Products"
+            },
+            {
+              "key": "Tobacco",
+              "value": "Tobacco"
+            },
+            {
+              "key": "Gas Utilities",
+              "value": "Gas Utilities"
+            },
+            {
+              "key": "Banks",
+              "value": "Banks"
+            },
+            {
+              "key": "Capital Markets",
+              "value": "Capital Markets"
+            },
+            {
+              "key": "Diversified Financial Services",
+              "value": "Diversified Financial Services"
+            },
+            {
+              "key": "Insurance",
+              "value": "Insurance"
+            },
+            {
+              "key": "Real Estate",
+              "value": "Real Estate"
+            },
+            {
+              "key": "Health Care Equipment and Supplies",
+              "value": "Health Care Equipment and Supplies"
+            },
+            {
+              "key": "Health Care Providers and Services",
+              "value": "Health Care Providers and Services"
+            },
+            {
+              "key": "Biotechnology",
+              "value": "Biotechnology"
+            },
+            {
+              "key": "Pharmaceuticals",
+              "value": "Pharmaceuticals"
+            },
+            {
+              "key": "Professional Services",
+              "value": "Professional Services"
+            },
+            {
+              "key": "Aerospace and Defense",
+              "value": "Aerospace and Defense"
+            },
+            {
+              "key": "Air Freight and Logistics",
+              "value": "Air Freight and Logistics"
+            },
+            {
+              "key": "Airlines",
+              "value": "Airlines"
+            },
+            {
+              "key": "Commercial Services and Supplies",
+              "value": "Commercial Services and Supplies"
+            },
+            {
+              "key": "Construction and Engineering",
+              "value": "Construction and Engineering"
+            },
+            {
+              "key": "Electrical Equipment",
+              "value": "Electrical Equipment"
+            },
+            {
+              "key": "Industrial Conglomerates",
+              "value": "Industrial Conglomerates"
+            },
+            {
+              "key": "Machinery",
+              "value": "Machinery"
+            },
+            {
+              "key": "Marine",
+              "value": "Marine"
+            },
+            {
+              "key": "Road and Rail",
+              "value": "Road and Rail"
+            },
+            {
+              "key": "Trading Companies and Distributors",
+              "value": "Trading Companies and Distributors"
+            },
+            {
+              "key": "Transportation",
+              "value": "Transportation"
+            },
+            {
+              "key": "Internet Software and Services",
+              "value": "Internet Software and Services"
+            },
+            {
+              "key": "IT Services",
+              "value": "IT Services"
+            },
+            {
+              "key": "Software",
+              "value": "Software"
+            },
+            {
+              "key": "Communications Equipment",
+              "value": "Communications Equipment"
+            },
+            {
+              "key": "Electronic Equipment, Instruments and Components",
+              "value": "Electronic Equipment, Instruments and Components"
+            },
+            {
+              "key": "Technology Hardware, Storage and Peripherals",
+              "value": "Technology Hardware, Storage and Peripherals"
+            },
+            {
+              "key": "Building Materials",
+              "value": "Building Materials"
+            },
+            {
+              "key": "Chemicals",
+              "value": "Chemicals"
+            },
+            {
+              "key": "Containers and Packaging",
+              "value": "Containers and Packaging"
+            },
+            {
+              "key": "Metals and Mining",
+              "value": "Metals and Mining"
+            },
+            {
+              "key": "Paper and Forest Products",
+              "value": "Paper and Forest Products"
+            },
+            {
+              "key": "Diversified Telecommunication Services",
+              "value": "Diversified Telecommunication Services"
+            },
+            {
+              "key": "Wireless Telecommunication Services",
+              "value": "Wireless Telecommunication Services"
+            },
+            {
+              "key": "Renewable Electricity",
+              "value": "Renewable Electricity"
+            },
+            {
+              "key": "Electric Utilities",
+              "value": "Electric Utilities"
+            },
+            {
+              "key": "Utilities",
+              "value": "Utilities"
+            },
+            {
+              "key": "Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "domains",
+          "label": "Domains",
+          "labelKey": "LBL_5",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "LBL_6",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "health_score",
+          "label": "Health Score",
+          "labelKey": "LBL_8",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "At risk",
+              "value": "At risk"
+            },
+            {
+              "key": "Doing okay",
+              "value": "Doing okay"
+            },
+            {
+              "key": "Happy",
+              "value": "Happy"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "account_tier",
+          "label": "Account Tier",
+          "labelKey": "LBL_9",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "Basic",
+              "value": "Basic"
+            },
+            {
+              "key": "Premium",
+              "value": "Premium"
+            },
+            {
+              "key": "Enterprise",
+              "value": "Enterprise"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
