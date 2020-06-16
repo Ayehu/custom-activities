@@ -59,22 +59,18 @@ namespace Ayehu.Sdk.ActivityCreation
 						DataTable dt = new DataTable("resultSet");
 
 						dt.Rows.Add(dt.NewRow());
-
-						dt.Columns.Add("Attribute");
-						dt.Columns.Add("Value");
 						
 						for(int i = 0; i < attributeCount; i ++)
 						{
 							attributeName = jsonResults["element"]["attributes"][i]["name"].ToString();
 							attributeValue = jsonResults["element"]["attributes"][i]["value"].ToString();
 
-							dt.Rows[i]["Attribute"] = attributeName;
-							dt.Rows[i]["Value"] = attributeValue;
-
-							if(i < attributeCount -1)
+							if(!dt.Columns.Contains(attributeName))
 							{
-								dt.Rows.Add(dt.NewRow());
+								dt.Columns.Add(attributeName);
 							}
+
+							dt.Rows[0][attributeName] = attributeValue;
 						}
 
 						return this.GenerateActivityResult(dt);
