@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "CloudWisdomGetReportList",
-    "description": "Retrieve a list of reports from CloudWisdom.",
+    "name": "CloudWisdomGetReport",
+    "description": "Retrieve an individual report from CloudWisdom.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
