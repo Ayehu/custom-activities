@@ -1,0 +1,1 @@
+These activities are for use with Virtana's CloudWisdom service (https://cloudwisdom.virtana.com).  These activities authenticate with the CloudWisdom APIs via "HTTP Basic" authentication (username/password combination).
