@@ -1,0 +1,395 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AWS Instance Resize",
+    "description": "Resize an AWS EC2 instance.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "accessKey",
+          "label": "Access Key",
+          "labelKey": "ACCESSKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secretKey",
+          "label": "Secret Key",
+          "labelKey": "SECRETKEY_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "region",
+          "label": "Region",
+          "labelKey": "REGION_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "us-east-2"
+            },
+            {
+              "key": "2",
+              "value": "us-east-1"
+            },
+            {
+              "key": "3",
+              "value": "us-west-1"
+            },
+            {
+              "key": "4",
+              "value": "us-west-2"
+            },
+            {
+              "key": "5",
+              "value": "af-south-1"
+            },
+            {
+              "key": "6",
+              "value": "ap-east-1"
+            },
+            {
+              "key": "7",
+              "value": "ap-south-1"
+            },
+            {
+              "key": "8",
+              "value": "ap-northeast-3"
+            },
+            {
+              "key": "9",
+              "value": "ap-northeast-2"
+            },
+            {
+              "key": "10",
+              "value": "ap-southeast-1"
+            },
+            {
+              "key": "11",
+              "value": "ap-southeast-2"
+            },
+            {
+              "key": "12",
+              "value": "ap-northeast-1"
+            },
+            {
+              "key": "13",
+              "value": "ca-central-1"
+            },
+            {
+              "key": "14",
+              "value": "cn-north-1"
+            },
+            {
+              "key": "15",
+              "value": "cn-northwest-1"
+            },
+            {
+              "key": "16",
+              "value": "eu-central-1"
+            },
+            {
+              "key": "17",
+              "value": "eu-west-1"
+            },
+            {
+              "key": "18",
+              "value": "eu-west-2"
+            },
+            {
+              "key": "19",
+              "value": "eu-south-1"
+            },
+            {
+              "key": "20",
+              "value": "eu-west-3"
+            },
+            {
+              "key": "21",
+              "value": "eu-north-1"
+            },
+            {
+              "key": "22",
+              "value": "me-south-1"
+            },
+            {
+              "key": "23",
+              "value": "sa-east-1"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "instanceID",
+          "label": "Instance ID",
+          "labelKey": "INSTANCEID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "instanceType",
+          "label": "Instance Type",
+          "labelKey": "INSTANCETYPE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "t1.micro"
+            },
+            {
+              "key": "2",
+              "value": "t2.nano"
+            },
+            {
+              "key": "3",
+              "value": "t2.micro"
+            },
+            {
+              "key": "4",
+              "value": "t2.small"
+            },
+            {
+              "key": "5",
+              "value": "t2.medium"
+            },
+            {
+              "key": "6",
+              "value": "t2.large"
+            },
+            {
+              "key": "7",
+              "value": "m1.small"
+            },
+            {
+              "key": "8",
+              "value": "m1.medium"
+            },
+            {
+              "key": "9",
+              "value": "m1.large"
+            },
+            {
+              "key": "10",
+              "value": "m1.xlarge"
+            },
+            {
+              "key": "11",
+              "value": "m3.medium"
+            },
+            {
+              "key": "12",
+              "value": "m3.large"
+            },
+            {
+              "key": "13",
+              "value": "m3.xlarge"
+            },
+            {
+              "key": "14",
+              "value": "m3.2xlarge"
+            },
+            {
+              "key": "15",
+              "value": "m4.large"
+            },
+            {
+              "key": "16",
+              "value": "m4.xlarge"
+            },
+            {
+              "key": "17",
+              "value": "m4.2xlarge"
+            },
+            {
+              "key": "18",
+              "value": "m4.4xlarge"
+            },
+            {
+              "key": "19",
+              "value": "m4.10xlarge"
+            },
+            {
+              "key": "20",
+              "value": "m2.xlarge"
+            },
+            {
+              "key": "21",
+              "value": "m2.2xlarge"
+            },
+            {
+              "key": "22",
+              "value": "m2.4xlarge"
+            },
+            {
+              "key": "23",
+              "value": "cr1.8xlarge"
+            },
+            {
+              "key": "24",
+              "value": "r3.large"
+            },
+            {
+              "key": "25",
+              "value": "r3.xlarge"
+            },
+            {
+              "key": "26",
+              "value": "r3.2xlarge"
+            },
+            {
+              "key": "27",
+              "value": "r3.4xlarge"
+            },
+            {
+              "key": "28",
+              "value": "r3.8xlarge"
+            },
+            {
+              "key": "29",
+              "value": "x1.4xlarge"
+            },
+            {
+              "key": "30",
+              "value": "x1.8xlarge"
+            },
+            {
+              "key": "31",
+              "value": "x1.16xlarge"
+            },
+            {
+              "key": "32",
+              "value": "x1.32xlarge"
+            },
+            {
+              "key": "33",
+              "value": "i2.xlarge"
+            },
+            {
+              "key": "34",
+              "value": "i2.2xlarge"
+            },
+            {
+              "key": "35",
+              "value": "i2.4xlarge"
+            },
+            {
+              "key": "36",
+              "value": "i2.8xlarge"
+            },
+            {
+              "key": "37",
+              "value": "hi1.4xlarge"
+            },
+            {
+              "key": "38",
+              "value": "hs1.8xlarge"
+            },
+            {
+              "key": "39",
+              "value": "c1.medium"
+            },
+            {
+              "key": "40",
+              "value": "c1.xlarge"
+            },
+            {
+              "key": "41",
+              "value": "c3.large"
+            },
+            {
+              "key": "42",
+              "value": "c3.xlarge"
+            },
+            {
+              "key": "43",
+              "value": "c3.2xlarge"
+            },
+            {
+              "key": "44",
+              "value": "c3.4xlarge"
+            },
+            {
+              "key": "45",
+              "value": "c3.8xlarge"
+            },
+            {
+              "key": "46",
+              "value": "c4.large"
+            },
+            {
+              "key": "47",
+              "value": "c4.xlarge"
+            },
+            {
+              "key": "48",
+              "value": "c4.2xlarge"
+            },
+            {
+              "key": "49",
+              "value": "c4.4xlarge"
+            },
+            {
+              "key": "50",
+              "value": "c4.8xlarge"
+            },
+            {
+              "key": "51",
+              "value": "cc1.4xlarge"
+            },
+            {
+              "key": "52",
+              "value": "cc2.8xlarge"
+            },
+            {
+              "key": "53",
+              "value": "g2.2xlarge"
+            },
+            {
+              "key": "54",
+              "value": "g2.8xlarge"
+            },
+            {
+              "key": "55",
+              "value": "cg1.4xlarge"
+            },
+            {
+              "key": "56",
+              "value": "d2.xlarge"
+            },
+            {
+              "key": "57",
+              "value": "d2.2xlarge"
+            },
+            {
+              "key": "58",
+              "value": "d2.4xlarge"
+            },
+            {
+              "key": "59",
+              "value": "d2.8xlarge"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
