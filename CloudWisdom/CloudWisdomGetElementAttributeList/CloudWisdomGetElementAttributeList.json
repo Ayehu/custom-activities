@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "CloudWisdomGetReportList",
-    "description": "Retrieve a list of reports from CloudWisdom.",
+    "name": "CloudWisdomGetElementAttributeList",
+    "description": "Retrieve a list of attributes and their values for a CloudWisdom element.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -27,34 +27,11 @@
           "controlType": "password"
         },
         {
-          "key": "reportTypeSelected",
-          "label": "Filter for specific report type.",
-          "baseType": "control",
-          "labelKey": "FILTER_FOR_SPECIFIC_REPORT_TYPE",
-          "controlType": "checkbox",
-          "value": "",
-          "checked": false,
-          "styleClass": "",
-          "convertBoolTo": "number",
-          "valueChangesActions": {
-            "false": {
-              "disable": [
-                "reportType"
-              ]
-            },
-            "true": {
-              "enable": [
-                "reportType"
-              ]
-            }
-          }
-        },
-        {
           "value": "",
           "required": true,
-          "key": "reportType",
-          "label": "Report Type",
-          "labelKey": "REPORTTYPE_VALUE",
+          "key": "elementID",
+          "label": "Element ID",
+          "labelKey": "ELEMENTID_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         }

@@ -2,8 +2,8 @@ using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using System.Data;
 using System.Text;
+using System.Data;
 using System.IO;
 using System.Net;
 using System;
@@ -14,13 +14,12 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string username;
 		public string password;
-		public string reportType;
-		public int reportTypeSelected;
+		public string elementID;
 
 		public ICustomActivityResult Execute()
 		{
 			string encodedCredentials = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
-			string apiURL = "https://us.cloudwisdom.virtana.com/reports";
+			string apiURL = "https://app.metricly.com/elements/" + elementID;
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "GET";
@@ -42,41 +41,35 @@ namespace Ayehu.Sdk.ActivityCreation
 					var responseString = streamReader.ReadToEnd();
 
 					JObject jsonResults = JObject.Parse(responseString);
+					
+					JArray attributes = (JArray)jsonResults["element"]["attributes"];
 
-					JArray reports = (JArray)jsonResults["reports"];
+					int attributeCount = attributes.Count;
 
-					int reportCount = reports.Count;
-
-					if(reportCount == 0)
+					if(attributeCount == 0)
 					{
 						return this.GenerateActivityResult("Empty");
 					}
 					else
 					{
+						string attributeName = "";
+						string attributeValue = "";
+
 						DataTable dt = new DataTable("resultSet");
 
-						int rowCount = 0;
-
-						for(int i = 0; i < reportCount; i ++)
+						dt.Rows.Add(dt.NewRow());
+						
+						for(int i = 0; i < attributeCount; i ++)
 						{
-							if(reportTypeSelected == 0 || (reportTypeSelected == 1 && reportType != "" && jsonResults["reports"][i]["type"].ToString() == reportType))
+							attributeName = jsonResults["element"]["attributes"][i]["name"].ToString();
+							attributeValue = jsonResults["element"]["attributes"][i]["value"].ToString();
+
+							if(!dt.Columns.Contains(attributeName))
 							{
-								dt.Rows.Add(dt.NewRow());
-
-								JObject reportDetails = JObject.Parse(jsonResults["reports"][i].ToString());
-
-								foreach(JProperty property in reportDetails.Properties())
-								{
-									if(!dt.Columns.Contains(property.Name))
-									{
-										dt.Columns.Add(property.Name);
-									}
-
-									dt.Rows[rowCount][property.Name] = property.Value;
-								}
-
-								rowCount ++;
+								dt.Columns.Add(attributeName);
 							}
+
+							dt.Rows[0][attributeName] = attributeValue;
 						}
 
 						return this.GenerateActivityResult(dt);
