@@ -66,7 +66,7 @@ namespace Ayehu.Sdk.ActivityCreation
 							{
 								DataTable dt = new DataTable("resultSet");
 
-								if(reportType == "Simple")
+								if(reportType == "Simple (EC2)")
 								{
 									dt.Rows.Add(dt.NewRow());
 
