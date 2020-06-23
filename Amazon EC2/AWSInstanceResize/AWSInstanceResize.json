@@ -33,7 +33,7 @@
           "label": "Region",
           "labelKey": "REGION_VALUE",
           "baseType": "control",
-          "controlType": "dropdown",
+          "controlType": "autocomplete",
           "controlOptions": [
             {
               "key": "1",
@@ -145,7 +145,7 @@
           "label": "Instance Type",
           "labelKey": "INSTANCETYPE_VALUE",
           "baseType": "control",
-          "controlType": "dropdown",
+          "controlType": "autocomplete",
           "controlOptions": [
             {
               "key": "1",
