@@ -1,0 +1,1 @@
+This DLL can also be referenced ("Assembly Path") at "C:\Program Files\Ayehu\eyeShare Websites\EyeShareDalMaster\bin\Microsoft.IdentityModel.Logging.dll".
