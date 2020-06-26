@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MSTeamsSendMessageToChannel",
+    "description": "Send a message to a Microsoft Teams channel.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "webhookURL",
+          "label": "Webhook URL",
+          "labelKey": "WEBHOOKURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "messageText",
+          "label": "Message",
+          "labelKey": "MESSAGETEXT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
