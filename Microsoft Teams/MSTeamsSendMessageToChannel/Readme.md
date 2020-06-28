@@ -1,0 +1,1 @@
+Follow the short and simple guide in the <b>Readme.pdf</b> file to generate a Webhook URL for your target Microsoft Teams channel.  Then, use that URL for the "Webhook URL" field in the MSTeamsSendMessageToChannel activity's configuration.
