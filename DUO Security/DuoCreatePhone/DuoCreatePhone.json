@@ -1,0 +1,214 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "DuoCreatePhone",
+    "description": "Create a new phone in Duo.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "integrationKey",
+          "label": "Integration Key",
+          "labelKey": "INTEGRATIONKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secretKey",
+          "label": "Secret Key",
+          "labelKey": "SECRETKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "apiHost",
+          "label": "API Hostname",
+          "labelKey": "HOSTNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phoneNumber",
+          "label": "Phone Number",
+          "labelKey": "PHONENUMBER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phoneName",
+          "label": "Phone Name",
+          "labelKey": "PHONENAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phoneExtension",
+          "label": "Phone Extension",
+          "labelKey": "PHONEEXTENSION_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phoneType",
+          "label": "Phone Type",
+          "labelKey": "PHONETYPE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "unknown"
+            },
+            {
+              "key": "2",
+              "value": "mobile"
+            },
+            {
+              "key": "2",
+              "value": "landline"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phonePlatform",
+          "label": "Phone Platform",
+          "labelKey": "PHONEPLATFORM_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "unknown"
+            },
+            {
+              "key": "2",
+              "value": "google android"
+            },
+            {
+              "key": "3",
+              "value": "apple ios"
+            },
+            {
+              "key": "4",
+              "value": "windows phone"
+            },
+            {
+              "key": "5",
+              "value": "windows phone 7"
+            },
+            {
+              "key": "6",
+              "value": "rim blackberry"
+            },
+            {
+              "key": "7",
+              "value": "java j2me"
+            },
+            {
+              "key": "8",
+              "value": "palm webos"
+            },
+            {
+              "key": "9",
+              "value": "symbian os"
+            },
+            {
+              "key": "10",
+              "value": "windows mobile"
+            },
+            {
+              "key": "11",
+              "value": "generic smartphone"
+            }
+          ]
+        },
+        {
+          "key": "enablePhonePredelay",
+          "label": "Pause for a specified number of seconds after the number picks up before dialing the extension.",
+          "baseType": "control",
+          "labelKey": "ENABLEPHONEPREDELAY_VALUE",
+          "controlType": "checkbox",
+          "value": "",
+          "checked": false,
+          "styleClass": "",
+          "convertBoolTo": "number",
+          "valueChangesActions": {
+            "false": {
+              "disable": [
+                "phonePredelay"
+              ]
+            },
+            "true": {
+              "enable": [
+                "phonePredelay"
+              ]
+            }
+          }
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phonePredelay",
+          "label": "Pre-Delay (Sec.)",
+          "labelKey": "PHONEPREDELAY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "key": "enablePhonePostdelay",
+          "label": "Pause for a specified number of seconds after the extension is dialed before the speaking prompt.",
+          "baseType": "control",
+          "labelKey": "ENABLEPHONEPOSTDELAY_VALUE",
+          "controlType": "checkbox",
+          "value": "",
+          "checked": false,
+          "styleClass": "",
+          "convertBoolTo": "number",
+          "valueChangesActions": {
+            "false": {
+              "disable": [
+                "phonePostdelay"
+              ]
+            },
+            "true": {
+              "enable": [
+                "phonePostdelay"
+              ]
+            }
+          }
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "phonePostdelay",
+          "label": "Post-Delay (Sec.)",
+          "labelKey": "PHONEPOSTDELAY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
