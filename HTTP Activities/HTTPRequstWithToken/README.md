@@ -15,4 +15,4 @@ Within the activity,
 
 Token Json Key – referred to the key name in the json which contains the value of the token.
 
-<</Token>> can then be used in the second post header 
+&#60;Token can then be used in the second post header 
