@@ -31,7 +31,7 @@ namespace Ayehu.Sdk.ActivityCreation
         /// A secret string that the application uses to prove its identity when requesting a token. 
         /// Also can be referred to as application password.
         /// </remarks>
-        public string secret;
+        public string secretpassword;
 
         /// <summary>
         /// The azure portal subscription Id (Free Trial/Premium)
@@ -67,7 +67,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private Azure.IAuthenticated GetAuthenticated()
         {
-            var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal(appId, secret, tenantId, AzureEnvironment.AzureGlobalCloud);
+            var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal(appId, secretpassword, tenantId, AzureEnvironment.AzureGlobalCloud);
             var azure = Azure
                    .Configure()
                    .WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)

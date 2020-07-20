@@ -1,22 +1,13 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureDeleteNetworkInterface",
-    "description": "Deletes an Azure Network Interface by name",
+    "name": "AzureQueryResources",
+    "description": "List all resources for a subscription.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
-        {
-          "value": "",
-          "required": true,
-          "key": "networkName",
-          "label": "Network Name",
-          "labelKey": "NETWORK_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
         {
           "value": "",
           "required": true,

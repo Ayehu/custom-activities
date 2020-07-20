@@ -47,7 +47,7 @@
         {
           "value": "",
           "required": true,
-          "key": "secret",
+          "key": "secretpassword",
           "label": "Secret",
           "labelKey": "SECRET_VALUE",
           "baseType": "control",
