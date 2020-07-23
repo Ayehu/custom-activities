@@ -1,0 +1,106 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "OpsGenieListUsers",
+    "description": "Retrieve a list of OpsGenie users.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "apiKey",
+          "label": "API Key",
+          "labelKey": "APIKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "100",
+          "required": true,
+          "key": "maxResults",
+          "label": "Max. Results",
+          "labelKey": "MAXRESULTS_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "100"
+            },
+            {
+              "key": "2",
+              "value": "90"
+            },
+            {
+              "key": "2",
+              "value": "80"
+            },
+            {
+              "key": "2",
+              "value": "70"
+            },
+            {
+              "key": "2",
+              "value": "60"
+            },
+            {
+              "key": "2",
+              "value": "50"
+            },
+            {
+              "key": "2",
+              "value": "40"
+            },
+            {
+              "key": "2",
+              "value": "30"
+            },
+            {
+              "key": "2",
+              "value": "20"
+            },
+            {
+              "key": "2",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "value": "1",
+          "required": true,
+          "key": "pageNumber",
+          "label": "Page Number",
+          "labelKey": "PAGENUMBER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "desc",
+          "required": true,
+          "key": "orderBy",
+          "label": "Order By",
+          "labelKey": "ORDERBY_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "desc"
+            },
+            {
+              "key": "2",
+              "value": "asc"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
