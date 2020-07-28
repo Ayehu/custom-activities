@@ -1,10 +1,8 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using System;
-using System.Collections.Generic;
 using System.Data;
 
 namespace Ayehu.Sdk.ActivityCreation
@@ -32,11 +30,11 @@ namespace Ayehu.Sdk.ActivityCreation
                 var database = client.GetDatabase(DBName);
                 var collection = database.GetCollection<BsonDocument>(CollectionName);
 
-                var query = BsonSerializer.Deserialize<BsonDocument>(MongoDBQuery);
-                var queryDoc = new QueryDocument(query);
+                var formattedJSON = FormatJSON(MongoDBQuery);
+                var command = new JsonCommand<BsonDocument>(MongoDBQuery);
+                var commandResult = database.RunCommand(command);
 
-                var dbResult = collection.Find(query).ToList();
-                var dt = ToDataTable(dbResult);
+                var dt = ToDataTable(commandResult);
 
                 return this.GenerateActivityResult(dt);
             }
@@ -46,28 +44,30 @@ namespace Ayehu.Sdk.ActivityCreation
             }
         }
 
-        public DataTable ToDataTable(List<BsonDocument> collection)
+        public string FormatJSON(string json)
         {
-            if (collection != null && collection.Count > 0)
+            return json.Replace('\'', '\"').Replace("\"", "\\\"");
+        }
+
+        public DataTable ToDataTable(BsonDocument doc)
+        {
+            if (doc != null)
             {
                 var dt = new DataTable("resultSet");
-                foreach (BsonDocument doc in collection)
+                foreach (BsonElement elm in doc.Elements)
                 {
-                    foreach (BsonElement elm in doc.Elements)
+                    if (!dt.Columns.Contains(elm.Name))
                     {
-                        if (!dt.Columns.Contains(elm.Name))
-                        {
-                            dt.Columns.Add(new DataColumn(elm.Name));
-                        }
+                        dt.Columns.Add(new DataColumn(elm.Name));
                     }
-
-                    var dr = dt.NewRow();
-                    foreach (BsonElement elm in doc.Elements)
-                    {
-                        dr[elm.Name] = elm.Value;
-                    }
-                    dt.Rows.Add(dr);
                 }
+
+                var dr = dt.NewRow();
+                foreach (BsonElement elm in doc.Elements)
+                {
+                    dr[elm.Name] = elm.Value;
+                }
+                dt.Rows.Add(dr);
 
                 return dt;
             }
