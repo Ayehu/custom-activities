@@ -1,17 +1,19 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
+using MongoDB.Bson.IO;
 using MongoDB.Driver;
+using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
     public class ActivityClass : IActivity
     {
         public string MongoServer = "";
+        public string UseDNSSeedList = "";
         public string Username = "";
         public string Password = "";
         public string DBName = "";
@@ -23,20 +25,27 @@ namespace Ayehu.Sdk.ActivityCreation
             try
             {
                 var userCredentials = string.Empty;
+                var mongoPrefix = "mongodb";
+                if (UseDNSSeedList == "Yes")
+                {
+                    mongoPrefix += "+srv";
+                }
                 if (!string.IsNullOrWhiteSpace(Username) && !string.IsNullOrWhiteSpace(Password))
                 {
                     userCredentials = string.Format("{0}:{1}@", Username, Password);
                 }
 
-                var client = new MongoClient(string.Format("mongodb+srv://{0}{1}/{2}?retryWrites=true&w=majority", userCredentials, MongoServer, DBName));
+                var client = new MongoClient(string.Format("{0}://{1}{2}/{3}?retryWrites=true&w=majority", mongoPrefix, userCredentials, MongoServer, DBName));
                 var database = client.GetDatabase(DBName);
                 var collection = database.GetCollection<BsonDocument>(CollectionName);
 
-                var query = BsonSerializer.Deserialize<BsonDocument>(MongoDBQuery);
-                var queryDoc = new QueryDocument(query);
+                var formattedJSON = FormatJSON(MongoDBQuery);
+                var command = new JsonCommand<BsonDocument>(MongoDBQuery);
+                var commandResult = database.RunCommand(command);
 
-                var dbResult = collection.Find(query).ToList();
-                var dt = ToDataTable(dbResult);
+                var jsonWriterSettings = new JsonWriterSettings { OutputMode = JsonOutputMode.Strict };
+                var cursorResult = commandResult.ToJson(jsonWriterSettings);
+                var dt = ToDataTable(cursorResult);
 
                 return this.GenerateActivityResult(dt);
             }
@@ -46,33 +55,40 @@ namespace Ayehu.Sdk.ActivityCreation
             }
         }
 
-        public DataTable ToDataTable(List<BsonDocument> collection)
+        public string FormatJSON(string json)
         {
-            if (collection != null && collection.Count > 0)
+            return json.Replace('\'', '\"').Replace("\"", "\\\"");
+        }
+
+        public DataTable ToDataTable(string mongoJSON)
+        {
+            var jsonResults = JObject.Parse(mongoJSON);
+            var mongoResult = jsonResults["cursor"].First.First; // First object with first batch
+            var dt = new DataTable("resultSet");
+
+            int itemsCount = mongoResult.Count();
+            int rowCount = 0;
+
+            for (int i = 0; i < itemsCount; i++)
             {
-                var dt = new DataTable("resultSet");
-                foreach (BsonDocument doc in collection)
+                dt.Rows.Add(dt.NewRow());
+
+                var mongoObj = JObject.Parse(mongoResult[i].ToString());
+
+                foreach (JProperty property in mongoObj.Properties())
                 {
-                    foreach (BsonElement elm in doc.Elements)
+                    if (!dt.Columns.Contains(property.Name))
                     {
-                        if (!dt.Columns.Contains(elm.Name))
-                        {
-                            dt.Columns.Add(new DataColumn(elm.Name));
-                        }
+                        dt.Columns.Add(property.Name);
                     }
 
-                    var dr = dt.NewRow();
-                    foreach (BsonElement elm in doc.Elements)
-                    {
-                        dr[elm.Name] = elm.Value;
-                    }
-                    dt.Rows.Add(dr);
+                    dt.Rows[rowCount][property.Name] = property.Value;
                 }
 
-                return dt;
+                rowCount++;
             }
 
-            return null;
+            return dt;
         }
     }
 }
