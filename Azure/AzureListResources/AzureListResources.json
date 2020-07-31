@@ -11,7 +11,7 @@
           "value": "",
           "required": true,
           "key": "tenantId",
-          "label": "TenantID",
+          "label": "Tenant ID",
           "label key": "tenantId",
           "baseType": "control",
           "controlType": "textbox"
@@ -20,7 +20,7 @@
           "value": "",
           "required": true,
           "key": "clientId",
-          "label": "ClientID",
+          "label": "Client ID",
           "label key": "clientId",
           "baseType": "control",
           "controlType": "textbox"
@@ -29,7 +29,7 @@
           "value": "",
           "required": true,
           "key": "clientSecret",
-          "label": "ClientSecret",
+          "label": "Client Secret",
           "label key": "clientSecret",
           "baseType": "control",
           "controlType": "password"
@@ -38,7 +38,7 @@
           "value": "",
           "required": true,
           "key": "subscriptionId",
-          "label": "SubscriptionID",
+          "label": "Subscription ID",
           "label key": "subscriptionId",
           "baseType": "control",
           "controlType": "textbox"
