@@ -34,6 +34,14 @@ namespace AzureGetResourceInfo
             {
                 resource = elements[7] + "/" + elements[9];
             }
+            else if(elements.Length == 13)
+            {
+                resource = elements[7] + "/" + elements[9] + "/" + elements[11];
+            }
+            else if(elements.Length == 15)
+            {
+                resource = elements[7] + "/" + elements[9] + "/" + elements[11] + "/" + elements[13];
+            }
             else
             {
                 resource = elements[7];
