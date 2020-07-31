@@ -20,9 +20,7 @@ namespace AzureListResources
         public string subscriptionId;
 
         public ICustomActivityResult Execute()
-        {
-            var table = new DataTable();
-            
+        {            
             string authContextURL = "https://login.windows.net/" + tenantId;
             var authenticationContext = new Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext(authContextURL);
             var credential = new ClientCredential(clientId, clientSecret);
