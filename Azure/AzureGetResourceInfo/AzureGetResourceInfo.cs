@@ -28,7 +28,16 @@ namespace AzureGetResourceInfo
 
             string provider = elements[6];
 
-            string resource = elements[7];
+            string resource = String.Empty;
+
+            if(elements.Length == 11)
+            {
+                resource = elements[7] + "/" + elements[9];
+            }
+            else
+            {
+                resource = elements[7];
+            }
             
             string authContextURL = "https://login.windows.net/" + tenantId;
             var authenticationContext = new Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext(authContextURL);
