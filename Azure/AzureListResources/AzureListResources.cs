@@ -10,9 +10,9 @@ using System.Data;
 using System.IO;
 using System.Net;
 
-namespace AzureGetListImage
+namespace AzureListResources
 {
-    class AzureGetListImage : IActivity
+    class AzureListResources : IActivity
     {
         public string tenantId;
         public string clientId;
