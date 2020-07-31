@@ -66,8 +66,6 @@ namespace AzureGetResourceInfo
                         if(jsonResults1["resourceTypes"][i]["resourceType"].ToString() == resource)
                         {
                             latestAPI = jsonResults1["resourceTypes"][i]["apiVersions"][0].ToString();
-
-                            return this.GenerateActivityResult(latestAPI);
                         }
                     }
                 }
