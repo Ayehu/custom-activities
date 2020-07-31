@@ -22,11 +22,13 @@ namespace AzureGetResourceInfo
 
         public ICustomActivityResult Execute()
         {
-            string latestAPI;
+            string latestAPI = String.Empty;
 
             string[] elements = resourceId.Split('/');
 
             string provider = elements[6];
+
+            string resource = elements[7];
             
             string authContextURL = "https://login.windows.net/" + tenantId;
             var authenticationContext = new Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContext(authContextURL);
@@ -55,7 +57,17 @@ namespace AzureGetResourceInfo
 
                     JObject jsonResults1 = JObject.Parse(responseString1);
 
-                    latestAPI = jsonResults1["resourceTypes"][0]["apiVersions"][0].ToString();
+                    JArray resourceTypes = (JArray)jsonResults1["resourceTypes"];
+
+                    int resourceTypeCount = resourceTypes.Count;
+
+                    for(int i = 0; i < resourceTypeCount; i ++)
+                    {
+                        if(jsonResults1["resourceTypes"][i]["resourceType"].ToString() == "servers")
+                        {
+                            latestAPI = jsonResults1["resourceTypes"][i]["apiVersions"][0].ToString();
+                        }
+                    }
                 }
             }
             catch(WebException e)
