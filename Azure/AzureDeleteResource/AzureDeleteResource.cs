@@ -1,8 +1,3 @@
-C:\libs\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
-C:\libs\System.Net.Http.dll
-C:\Program Files\Ayehu\eyeShare Executor Server\Newtonsoft.Json.dll
-
-
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
