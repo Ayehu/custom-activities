@@ -4,6 +4,8 @@ using System.Linq;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Microsoft.Azure.Management.Fluent;
+using Microsoft.Azure.Management.Compute.Fluent;
+using Microsoft.Azure.Management.Network.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 
