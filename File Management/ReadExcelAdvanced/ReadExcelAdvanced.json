@@ -1,0 +1,77 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ReadExcelNET",
+    "description": "Read excel files with plain .NET",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Path",
+          "label": "File Path",
+          "labelKey": "FILE_PATH_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Range",
+          "label": "Range",
+          "labelKey": "RANGE_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "SheetName",
+          "label": "Sheet Name",
+          "labelKey": "SHEET_NAME_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ignoreHeaderKey",
+          "label": "Ignore Header",
+          "labelKey": "IGNORE_HEADER_KEY",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "idFieldName": "IgnoreHeader",
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "Yes"
+            },
+            {
+              "key": "False",
+              "value": "No"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

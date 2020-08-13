@@ -19,6 +19,27 @@
           "controlOptions": []
         },
         {
+          "value": "No",
+          "required": false,
+          "key": "UseDNSSeedList",
+          "label": "Use DNS Seedlist",
+          "labelKey": "MONGO_DB_DNS_SEEDLIST",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "Yes"
+            },
+            {
+              "key": "2",
+              "value": "No"
+            }
+          ]
+        },
+        {
           "value": "",
           "required": false,
           "key": "Username",
@@ -49,18 +70,6 @@
           "key": "DBName",
           "label": "Database Name",
           "labelKey": "MONGO_DB_QUERY_DATABASE_NAME",
-          "baseType": "control",
-          "controlType": "textbox",
-          "disabled": false,
-          "styleClass": "",
-          "controlOptions": []
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "CollectionName",
-          "label": "Collection Name",
-          "labelKey": "MONGO_DB_QUERY_COLLECTION_NAME",
           "baseType": "control",
           "controlType": "textbox",
           "disabled": false,

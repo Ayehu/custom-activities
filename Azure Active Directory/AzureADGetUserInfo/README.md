@@ -5,6 +5,7 @@ Microsoft.Azure.Management.Fluent.dll </br>
 Microsoft.Azure.Management.ResourceManager.Fluent.dll </br>
 Microsoft.Azure.Management.Graph.RBAC.Fluent.dll </br>
 Microsoft.Rest.ClientRuntime.dll </br>
+Microsoft.Rest.ClientRuntime.Azure.dll </br>
 System.Net.Http.dll </br>
 Newtonsoft.Json.dll </br>
 Microsoft.Graph.dll </br>
