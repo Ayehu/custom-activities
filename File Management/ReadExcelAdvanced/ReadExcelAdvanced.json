@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "ReadExcelNET",
-    "description": "Read excel files with plain .NET",
+    "name": "ReadExcelAdvanced",
+    "description": "Read excel files",
     "Timeout": null,
     "class": [],
     "rootSettings": {
