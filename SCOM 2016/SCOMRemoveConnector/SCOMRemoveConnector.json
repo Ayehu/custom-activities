@@ -1,0 +1,81 @@
+{
+  "innerCode": 200,
+  "data": {
+    "size": "",
+    "name": "SCOM Remove Connector",
+    "type": "module-table",
+    "disableModuleSelection": true,
+    "description": "Remove SCOM Connector.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Server",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Server",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Domain",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Domain",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Username",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Username",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Password",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Password",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": []
+        },
+        {
+          "value": "Ayehu",
+          "required": true,
+          "key": "ConnectorName",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Connector Name",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "message": "SUCCESS"
+  }
+}
