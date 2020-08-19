@@ -20,8 +20,6 @@ Imports System.Net<br/>
 
 **Notes** - group info
 
-**Managed By** - the group is managed by
-
 **Scope** - Global or Universal group
 
 **Type** - Security or Distribution group

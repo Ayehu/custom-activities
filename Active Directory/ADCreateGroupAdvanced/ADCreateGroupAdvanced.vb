@@ -25,7 +25,6 @@ Namespace Ayehu.Sdk.ActivityCreation
         Public AdType As String = "Security"
         Public UserName As String
         Public Password As String
-        Public ManagedBy As String
         Public ADUserName As String
         Public Path As String
         Public SecurePort As String
@@ -106,30 +105,11 @@ Namespace Ayehu.Sdk.ActivityCreation
                     groupType = ADS_GROUP_TYPE_UNIVERSAL_GROUP
                 End If
 
-                Dim managedByUser as String
-                If Not String.IsNullOrEmpty(ManagedBy) Then
-                    Dim dsUser As DirectorySearcher = New DirectorySearcher(de)
-                    dsUser.Filter = "(&(objectClass=user) (sAMAccountName=" + ManagedBy + "))"
-                    dsUser.SearchScope = SearchScope.Subtree
-                    Dim userResults As SearchResult = ds.FindOne()
-                    If userResults IsNot Nothing Then
-                        Dim dey As DirectoryEntry = GetAdEntryByFullPath(userResults.Path, UserName, Password)
-                        managedByUser = (String)dey.Properties("distinguishedName").Value
-                    Else
-                        Throw New Exception("User " + ManagedBy + " does not exist")
-                    End If
-                End If
-
                 Dim group As DirectoryEntry = entry.Children.Add("CN=" + ADUserName, "group")
                 group.Properties("sAmAccountName").Value = ADUserName
                 group.Properties("groupType").Value = groupType
                 group.Properties("description").Value = Description
                 group.Properties("info").Value = Notes
-                
-                If Not String.IsNullOrEmpty(managedByUser) Then
-                    group.Properties("managedBy").Value = managedByUser
-                End If
-
                 group.CommitChanges()
                 group.Close()
                 dt.Rows.Add("Success")

@@ -44,18 +44,6 @@
             "controlOptions": []
           },
           {
-            "value": "",
-            "required": false,
-            "key": "ManagedBy",
-            "disabled": false,
-            "styleClass": "",
-            "label": "Managed By",
-            "labelKey": "AD_CREATE_GROUP_ADV_MANAGED_BY",
-            "baseType": "control",
-            "controlType": "textbox",
-            "controlOptions": []
-          },
-          {
             "value": "Global",
             "required": true,
             "key": "Scope",
