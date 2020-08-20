@@ -15,7 +15,7 @@ using System.IO;<br>
 
 ### Mandatory fields:
 
-**Instance URL**	- Your instance's base URL (e.g. mycompany.freshservice.com)  .
-**Username**			- Username with which to authenticate.
-**Password**      - Password with which to authenticate.
+**Instance URL**	- Your instance's base URL (e.g. mycompany.freshservice.com).<br>
+**Username**			- Username with which to authenticate.<br>
+**Password**      - Password with which to authenticate.<br>
 **Ticket ID**     - The display ID of the ticket.
