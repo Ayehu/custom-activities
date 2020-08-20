@@ -1,9 +1,9 @@
 ## FreshDeskGetTicket - Retrieve information on an individual FreshDesk ticket.
 
-#### DLLs to reference
+### DLLs to reference
 Newtonsoft.Json.dll
 
-#### Libraries to import
+### Libraries to import
 using Ayehu.Sdk.ActivityCreation.Interfaces;<br>
 using Ayehu.Sdk.ActivityCreation.Extension;<br>
 using System;<br>
