@@ -1,4 +1,4 @@
-## FreshDeskViewTickets - List all tickets in FreshDesk.
+## FreshDeskGetTicket - Retrieve information on an individual FreshDesk ticket.
 
 ##### DLL's to reference
 Newtonsoft.Json.dll  
