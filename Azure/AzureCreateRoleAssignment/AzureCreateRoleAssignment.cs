@@ -18,8 +18,7 @@ namespace AzureCreateRoleAssignment
         public string clientId;
         public string clientSecret;
         public string subscriptionId;
-        public string roleDefinitionID;
-        public string roleAssignmentName;
+        public string roleGUID;
         public string principalID;
         public string resourceId;
 
@@ -37,14 +36,14 @@ namespace AzureCreateRoleAssignment
 
             string token = result.AccessToken;
 
-            string apiURL = "https://management.azure.com" + resourceId + "/providers/Microsoft.Authorization/roleAssignments/" + roleAssignmentName + "?api-version=2015-07-01";
+            string apiURL = "https://management.azure.com" + resourceId + "/providers/Microsoft.Authorization/roleAssignments/" + roleGUID + "?api-version=2015-07-01";
 
             HttpWebRequest request1 = (HttpWebRequest)HttpWebRequest.Create(apiURL);
             request1.Method = "PUT";
             request1.Headers["Authorization"] = "Bearer " + token;
             request1.ContentType = "application/json";
 
-            string jsonBody = "{\"properties\":{\"roleDefinitionId\": \"/subscriptions/" + subscriptionId + "/providers/Microsoft.Authorization/roleDefinitions/" + roleDefinitionID + "\",\"principalId\": \"" + principalID + "\"}}";   
+            string jsonBody = "{\"properties\":{\"roleDefinitionId\": \"/subscriptions/" + subscriptionId + "/providers/Microsoft.Authorization/roleDefinitions/" + roleGUID + "\",\"principalId\": \"" + principalID + "\"}}";   
 
             try
             {

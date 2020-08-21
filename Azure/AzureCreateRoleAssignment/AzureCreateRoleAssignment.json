@@ -46,18 +46,9 @@
         {
           "value": "",
           "required": true,
-          "key": "roleDefinitionID",
-          "label": "Role Definition ID",
-          "label key": "ROLE_DEFINITION_ID",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "roleAssignmentName",
-          "label": "Role Assignment Name",
-          "label key": "ROLE_ASSIGNMENT_NAME_VALUE",
+          "key": "roleGUID",
+          "label": "Role GUID",
+          "label key": "ROLE_GUID_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },
