@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "FreshDeskGetTicket",
+    "description": "Retrieve an individual FreshDesk ticket.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "xxxx.freshservice.com",
+          "required": true,
+          "key": "instanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCE_URL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ticketID",
+          "label": "Ticket ID",
+          "labelKey": "TICKET_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

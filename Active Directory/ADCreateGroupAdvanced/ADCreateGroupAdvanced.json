@@ -22,11 +22,11 @@
           {
             "value": "",
             "required": false,
-            "key": "Description",
+            "key": "GroupDescription",
             "disabled": false,
             "styleClass": "",
             "label": "Description",
-            "labelKey": "AD_CREATE_GROUP_ADV_DESCRIPTION",
+            "labelKey": "AD_CREATE_GROUP_ADV_GROUP_DESCRIPTION",
             "baseType": "control",
             "controlType": "textbox",
             "controlOptions": []
@@ -41,18 +41,6 @@
             "labelKey": "AD_CREATE_GROUP_ADV_NOTES",
             "baseType": "control",
             "controlType": "textarea",
-            "controlOptions": []
-          },
-          {
-            "value": "",
-            "required": false,
-            "key": "ManagedBy",
-            "disabled": false,
-            "styleClass": "",
-            "label": "Managed By",
-            "labelKey": "AD_CREATE_GROUP_ADV_MANAGED_BY",
-            "baseType": "control",
-            "controlType": "textbox",
             "controlOptions": []
           },
           {

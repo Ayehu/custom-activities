@@ -1,0 +1,80 @@
+{
+  "data": {
+    "name": "AzureCreateRoleAssignment",
+    "description": "Create an Azure role assignment.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollappse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant ID",
+          "label key": "TENANT_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "clientId",
+          "label": "Client ID",
+          "label key": "CLIENT_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "clientSecret",
+          "label": "Client Secret",
+          "label key": "CLIENT_SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "Subscription ID",
+          "label key": "SUBSCRIPTION_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "roleGUID",
+          "label": "Role GUID",
+          "label key": "ROLE_GUID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "principalID",
+          "label": "Principal ID",
+          "label key": "PRINCIPAL_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "resourceId",
+          "label": "Resource ID",
+          "label key": "RESOURCE_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "message": "SUCCESS"
+  }
+}
