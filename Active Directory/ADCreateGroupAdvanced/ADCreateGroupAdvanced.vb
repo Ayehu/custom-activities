@@ -19,7 +19,7 @@ Namespace Ayehu.Sdk.ActivityCreation
         Private Const ADS_GROUP_TYPE_UNIVERSAL_GROUP = &H8
         Private Const ADS_GROUP_TYPE_SECURITY_ENABLED = &H80000000
         Public HostName As String
-        Public Description As String
+        Public GroupDescription As String
         Public Notes As String
         Public Scope As String = "Global"
         Public AdType As String = "Security"
@@ -108,7 +108,7 @@ Namespace Ayehu.Sdk.ActivityCreation
                 Dim group As DirectoryEntry = entry.Children.Add("CN=" + ADUserName, "group")
                 group.Properties("sAmAccountName").Value = ADUserName
                 group.Properties("groupType").Value = groupType
-                group.Properties("description").Value = Description
+                group.Properties("Description").Value = GroupDescription
                 group.Properties("info").Value = Notes
                 group.CommitChanges()
                 group.Close()

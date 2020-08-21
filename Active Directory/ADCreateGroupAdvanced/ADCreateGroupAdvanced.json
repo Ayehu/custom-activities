@@ -22,11 +22,11 @@
           {
             "value": "",
             "required": false,
-            "key": "Description",
+            "key": "GroupDescription",
             "disabled": false,
             "styleClass": "",
             "label": "Description",
-            "labelKey": "AD_CREATE_GROUP_ADV_DESCRIPTION",
+            "labelKey": "AD_CREATE_GROUP_ADV_GROUP_DESCRIPTION",
             "baseType": "control",
             "controlType": "textbox",
             "controlOptions": []
