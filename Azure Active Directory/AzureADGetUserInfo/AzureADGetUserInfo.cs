@@ -38,12 +38,13 @@ namespace Ayehu.Sdk.ActivityCreation
         /// </summary>
         public string userEmail;
 
-        public ICustomActivityResult Execute()
+       public ICustomActivityResult Execute()
         {
-            var auth = GetAuthenticated();
-            var user = auth.ActiveDirectoryUsers.GetById(userEmail);
             GraphServiceClient client = new GraphServiceClient("https://graph.microsoft.com/v1.0", GetProvider());
-            var officeUser = client.Users[userEmail].Request().GetAsync().Result;
+            //var auth = GetAuthenticated();
+            //var user = auth.ActiveDirectoryUsers.GetById(userEmail);
+            
+            var user = client.Users[userEmail].Request().GetAsync().Result;            
 
             if (!string.IsNullOrEmpty(user.UserPrincipalName))
             {
@@ -64,14 +65,14 @@ namespace Ayehu.Sdk.ActivityCreation
                     user.Id,
                     user.Mail,
                     user.UserPrincipalName,
-                    user.Inner.Surname,
-                    user.Inner.GivenName,
-                    user.Inner.UserType,
-                    officeUser.MobilePhone,
-                    officeUser.OfficeLocation,
-                    officeUser.LicenseDetails,
-                    officeUser.Settings,
-                    user.Inner.AccountEnabled);
+                    user.Surname,
+                    user.GivenName,
+                    user.UserType,
+                    user.MobilePhone,
+                    user.OfficeLocation,
+                    user.LicenseDetails,
+                    user.Settings,
+                    user.AccountEnabled);
 
                 return this.GenerateActivityResult(dt);
             }
@@ -79,7 +80,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 throw new Exception("User not found");
         }
 
-        private Azure.IAuthenticated GetAuthenticated()
+        /*private Azure.IAuthenticated GetAuthenticated()
         {
             var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal(appId, secret, tenantId, AzureEnvironment.AzureGlobalCloud);
             var azure = Azure
@@ -88,7 +89,7 @@ namespace Ayehu.Sdk.ActivityCreation
                    .Authenticate(credentials);
 
             return azure;
-        }
+        }*/
 
         private ClientCredentialProvider GetProvider()
         {
