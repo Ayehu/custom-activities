@@ -79,18 +79,7 @@ namespace Ayehu.Sdk.ActivityCreation
             else
                 throw new Exception("User not found");
         }
-
-        /*private Azure.IAuthenticated GetAuthenticated()
-        {
-            var credentials = SdkContext.AzureCredentialsFactory.FromServicePrincipal(appId, secret, tenantId, AzureEnvironment.AzureGlobalCloud);
-            var azure = Azure
-                   .Configure()
-                   .WithLogLevel(HttpLoggingDelegatingHandler.Level.Basic)
-                   .Authenticate(credentials);
-
-            return azure;
-        }*/
-
+        
         private ClientCredentialProvider GetProvider()
         {
             IConfidentialClientApplication confidentialClientApplication = ConfidentialClientApplicationBuilder
