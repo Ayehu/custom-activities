@@ -53,8 +53,8 @@ namespace ActivitiesAyehu
             var bodyStr = JsonConvert.SerializeObject(body);
 
             var ret = MakeHttpRequest(apiPath, "POST", bodyStr);
-
-            return this.GenerateActivityResult("Success");
+            var json = JsonConvert.DeserializeObject<JObject>(ret);
+            return this.GenerateActivityResult(ret["id"].ToString());
         }
 
         private string MakeHttpRequest(string apiPath, string method, string body = null)
