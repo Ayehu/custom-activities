@@ -17,6 +17,7 @@ using NetApp.My;
 **Password**			- Password to acces API  
 **ObjectRequestXml**	- XML containing filters types of search. Bellow you can see and example:  
 
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>  
 <ObjectName>Export Policies</ObjectName>  
 <FilterItems>  
@@ -33,3 +34,4 @@ using NetApp.My;
 		</Valueitems>  
 	</FilterItem>  
 </FilterItems>  
+```
