@@ -20,9 +20,9 @@ namespace ActivitiesAyehu
         {
             string apiPath = "/api/v2/tickets"; // API path
 
-            MultipartRequest(apiPath);
+            var json = MultipartRequest(apiPath);
 
-            return this.GenerateActivityResult("Success");
+            return this.GenerateActivityResult(json["id"].ToString());
         }
 
         private static void writeCRLF(Stream o)
@@ -150,6 +150,8 @@ namespace ActivitiesAyehu
                 var response = (HttpWebResponse)wr.GetResponse();
                 Stream resStream = response.GetResponseStream();
                 string Response = new StreamReader(resStream, Encoding.ASCII).ReadToEnd();
+                var json = JsonConvert.DeserializeObject<JObject>(Response);
+                return json;
             }
         }
 
