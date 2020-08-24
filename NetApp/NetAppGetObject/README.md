@@ -15,7 +15,7 @@ using NetApp.My;
 **IP**					- IP  
 **Username**			- Username to access API  
 **Password**			- Password to acces API  
-**ObjectRequestXml**	- XML containing filters types of search. Bellow you can see and example:  
+**ObjectRequestXml**	- XML containing filters types of search. Bellow you can see an example:  
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>  
