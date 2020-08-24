@@ -17,19 +17,19 @@ using NetApp.My;
 **Password**			- Password to acces API  
 **ObjectRequestXml**	- XML containing filters types of search. Bellow you can see and example:  
 
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>. 
-<ObjectName>Export Policies</ObjectName>. 
-<FilterItems>. 
-	<FilterItem>. 
-		<FilterName>name</FilterName>. 
-		<Valueitems>. 
-			<FilterValue>{PUT FILTER VALUE FOR `NAME` HERE}</FilterValue>. 
-		</Valueitems>. 
-	</FilterItem>. 
-	<FilterItem>. 
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>  
+<ObjectName>Export Policies</ObjectName>  
+<FilterItems>  
+	<FilterItem>  
+		<FilterName>name</FilterName>  
+		<Valueitems>  
+			<FilterValue>{PUT FILTER VALUE FOR `NAME` HERE}</FilterValue>  
+		</Valueitems>  
+	</FilterItem>  
+	<FilterItem>  
 		<FilterName>vserver</FilterName>  
-		<Valueitems>. 
-			<FilterValue>{PUT FILTER VALUE FOR `VSERVER` HERE}</FilterValue>. 
-		</Valueitems>. 
-	</FilterItem>. 
-</FilterItems>. 
+		<Valueitems>  
+			<FilterValue>{PUT FILTER VALUE FOR `VSERVER` HERE}</FilterValue>  
+		</Valueitems>  
+	</FilterItem>  
+</FilterItems>  
