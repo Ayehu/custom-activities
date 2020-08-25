@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Net;
@@ -19,6 +19,7 @@ namespace Ayehu.Sdk.ActivityCreation
         public string Type = null;
         public string Priority = null;
         public string Status = null;
+        public string Query = null;
         private ZendeskApi api = null;
         private string Term = null;
         private long TotalPage = 1;
@@ -31,10 +32,25 @@ namespace Ayehu.Sdk.ActivityCreation
                                                    | SecurityProtocolType.Ssl3;
             api = new ZendeskApi(Domain, Username, ApiToken, "");
 
+            if(Type == "all")
+            {
+                Type = null;
+            }
+
+            if(Priority == "all")
+            {
+                Priority = null;
+            }
+
+            if(Status == "all")
+            {
+                Status = null;
+            }
+
             var termType = string.IsNullOrEmpty(Type) ? "" : "ticket_type:" + Type + " ";
             var termPriority = string.IsNullOrEmpty(Priority) ? "" : "priority:" + Priority + " ";
             var termStatus = string.IsNullOrEmpty(Status) ? "" : "status:" + Status + " ";
-            Term = (termStatus + termPriority + termType).Trim();
+            Term = (Query + " " + termStatus + termPriority + termType).Trim();
             
             var pageRes = api.Search.SearchFor<Ticket>(Term);
             TotalPage = pageRes.TotalPages;

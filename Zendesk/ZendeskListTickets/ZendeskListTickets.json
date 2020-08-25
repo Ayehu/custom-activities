@@ -1,4 +1,4 @@
-﻿{
+{
   "data": {
     "name": "ZendeskListTickets",
     "description": "List all tickets",
@@ -7,7 +7,6 @@
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
-        
         {
           "key": "Domain",
           "label": "Domain",
@@ -38,57 +37,57 @@
           "styleClass": null,
           "required": true
         },
-	      {
-		      "key": "Page",
-		      "label": "Page",
-		      "baseType": "control",
-		      "labelKey": "Page",
-		      "controlType": "autocomplete",
-		      "value": "1",
-		      "required": true,
-		      "controlOptions": [
-			      {
-				      "key": "1",
-				      "value": "1"
-			      },
-			      {
-				      "key": "2",
-				      "value": "2"
-			      },
-			      {
-				      "key": "3",
-				      "value": "3"
-			      },
-			      {
-				      "key": "4",
-				      "value": "4"
-			      },
-			      {
-				      "key": "5",
-				      "value": "5"
-			      },
-		      {
-		      "key": "6",
-		      "value": "6"
-	      },
-	      {
-		      "key": "7",
-		      "value": "7"
-	      },
-	      {
-		      "key": "8",
-		      "value": "8"
-	      },
-	      {
-		      "key": "9",
-		      "value": "9"
-	      },
-	      {
-		      "key": "10",
-		      "value": "10"
-	      }
-		      ]
-	      },
+        {
+          "key": "Page",
+          "label": "Page",
+          "baseType": "control",
+          "labelKey": "Page",
+          "controlType": "autocomplete",
+          "value": "1",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "1"
+            },
+            {
+              "key": "2",
+              "value": "2"
+            },
+            {
+              "key": "3",
+              "value": "3"
+            },
+            {
+              "key": "4",
+              "value": "4"
+            },
+            {
+              "key": "5",
+              "value": "5"
+            },
+            {
+              "key": "6",
+              "value": "6"
+            },
+            {
+              "key": "7",
+              "value": "7"
+            },
+            {
+              "key": "8",
+              "value": "8"
+            },
+            {
+              "key": "9",
+              "value": "9"
+            },
+            {
+              "key": "10",
+              "value": "10"
+            }
+          ]
+        },
         {
           "key": "Type",
           "label": "Type",
@@ -98,6 +97,10 @@
           "value": "",
           "required": false,
           "controlOptions": [
+            {
+              "key": "all",
+              "value": "all"
+            },
             {
               "key": "task",
               "value": "task"
@@ -126,6 +129,10 @@
           "required": false,
           "controlOptions": [
             {
+              "key": "all",
+              "value": "all"
+            },
+            {
               "key": "urgent",
               "value": "urgent"
             },
@@ -153,6 +160,10 @@
           "required": false,
           "controlOptions": [
             {
+              "key": "all",
+              "value": "all"
+            },
+            {
               "key": "open",
               "value": "open"
             },
@@ -173,8 +184,17 @@
               "value": "closed"
             }
           ]
+        },
+        {
+          "key": "Query",
+          "label": "Search Query",
+          "baseType": "control",
+          "labelKey": "Query",
+          "controlType": "textbox",
+          "value": "",
+          "styleClass": null,
+          "required": false
         }
-	      
       ],
       "index": "1",
       "label": "main",
