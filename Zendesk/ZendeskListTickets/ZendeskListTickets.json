@@ -42,7 +42,7 @@
           "label": "Page",
           "baseType": "control",
           "labelKey": "Page",
-          "controlType": "autocomplete",
+          "controlType": "dropdown",
           "value": "1",
           "required": true,
           "controlOptions": [
@@ -93,9 +93,9 @@
           "label": "Type",
           "baseType": "control",
           "labelKey": "Type",
-          "controlType": "autocomplete",
-          "value": "",
-          "required": false,
+          "controlType": "dropdown",
+          "value": "all",
+          "required": true,
           "controlOptions": [
             {
               "key": "all",
@@ -124,9 +124,9 @@
           "label": "Priority",
           "baseType": "control",
           "labelKey": "Priority",
-          "controlType": "autocomplete",
-          "value": "",
-          "required": false,
+          "controlType": "dropdown",
+          "value": "all",
+          "required": true,
           "controlOptions": [
             {
               "key": "all",
@@ -155,9 +155,9 @@
           "label": "Status",
           "baseType": "control",
           "labelKey": "Status",
-          "controlType": "autocomplete",
-          "value": "",
-          "required": false,
+          "controlType": "dropdown",
+          "value": "all",
+          "required": true,
           "controlOptions": [
             {
               "key": "all",
@@ -182,6 +182,60 @@
             {
               "key": "closed",
               "value": "closed"
+            }
+          ]
+        },
+        {
+          "key": "SortBy",
+          "label": "Sort By",
+          "baseType": "control",
+          "labelKey": "SortBy",
+          "controlType": "dropdown",
+          "value": "relevance",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "relevance",
+              "value": "relevance"
+            },
+            {
+              "key": "updated_at",
+              "value": "updated_at"
+            },
+            {
+              "key": "created_at",
+              "value": "created_at"
+            },
+            {
+              "key": "priority",
+              "value": "priority"
+            },
+            {
+              "key": "status",
+              "value": "status"
+            },
+            {
+              "key": "ticket_type",
+              "value": "ticket_type"
+            }
+          ]
+        },
+        {
+          "key": "OrderBy",
+          "label": "Order By",
+          "baseType": "control",
+          "labelKey": "OrderBy",
+          "controlType": "dropdown",
+          "value": "desc",
+          "required": true,
+          "controlOptions": [
+            {
+              "key": "desc",
+              "value": "desc"
+            },
+            {
+              "key": "asc",
+              "value": "asc"
             }
           ]
         },
