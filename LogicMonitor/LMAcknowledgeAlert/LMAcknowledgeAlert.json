@@ -1,0 +1,77 @@
+{
+  "data": {
+    "name": "LMAcknowledgeAlert",
+    "description": "Acknowledge alert by id.",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "AccountName",
+          "label": "Account Name",
+          "labelKey": "LOGIC_MONITOR_ACK_ACC_NAME",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "AccessId",
+          "label": "Access Id",
+          "labelKey": "LOGIC_MONITOR_ACK_ACC_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "AccessKey",
+          "label": "Access Key",
+          "labelKey": "LOGIC_MONITOR_ACK_ACC_KEY",
+          "baseType": "control",
+          "controlType": "password",
+          "encrypt": false,
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "AlertId",
+          "label": "Alert Id",
+          "labelKey": "LOGIC_MONITOR_ACK_ALERT_ID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "AckComment",
+          "label": "Comment",
+          "labelKey": "LOGIC_MONITOR_ACK_ALERT_COMMENT",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}

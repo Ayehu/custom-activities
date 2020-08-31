@@ -1,8 +1,8 @@
 # Zendesk Activities
 
-#### Please Copy ZendeskApi_v2.dll to the server. Dll link:  [Newtonsoft.json](https://www.nuget.org/packages/Newtonsoft.Json/)
+#### Please Copy ZendeskApi_v2.dll to the server. Dll link:  [ZendeskApi_V2](https://www.nuget.org/packages/ZendeskApi_v2/)
  
-#### Please Copy Newtonsoft.Json.dll to the server: Dll link:  [ZendeskApi_V2](https://www.nuget.org/packages/ZendeskApi_v2/)
+#### Please Copy Newtonsoft.Json.dll to the server: Dll link:  [Newtonsoft.json](https://www.nuget.org/packages/Newtonsoft.Json/)
 
 **ZendeskCreateTicket** - Activity to create a new ticket.
 
