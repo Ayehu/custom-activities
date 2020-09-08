@@ -43,13 +43,13 @@ namespace Ayehu.Sdk.ActivityCreation
 
 					JObject jsonResults = JObject.Parse(responseString);
 
-					JObject alertData = JObject.Parse(jsonResults["data"].ToString());
+					JObject credentialInfo = JObject.Parse(jsonResults["data"].ToString());
 
 					DataTable dt = new DataTable("resultSet");
 
 					dt.Rows.Add(dt.NewRow());
 
-					foreach(JProperty property in alertData.Properties())
+					foreach(JProperty property in credentialInfo.Properties())
 					{
 						dt.Columns.Add(property.Name);
 
