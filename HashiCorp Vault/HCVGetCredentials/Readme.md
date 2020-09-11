@@ -20,4 +20,7 @@ Newtonsoft.JSON.dll<br>
 <b>Server Hostname:</b> The hostname, IP address, or FQDN of the HashiCorp Vault server (e.g. "35.166.33.91", "vault.mycompany.com", etc.)<br>
 <b>Protocol:</b> Option to use either HTTP or HTTPS depending on your certificate settings on your Vault server.<br>
 <b>Secret Name:</b> The name of your Vault secret.<br>
-<b>Item Name:</b> The name of your Vault item.
+<b>Item Name:</b> The name of your Vault item.<br>
+
+<h3>Output:</h3>
+A result-set table is returned containing the credential's key-value pair from your Vault item.
