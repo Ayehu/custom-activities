@@ -36,7 +36,9 @@ namespace AzureCreateRoleAssignment
 
             string token = result.AccessToken;
 
-            string apiURL = "https://management.azure.com" + resourceId + "/providers/Microsoft.Authorization/roleAssignments/" + roleGUID + "?api-version=2015-07-01";
+            Guid randomGUID = Guid.NewGuid();
+
+            string apiURL = "https://management.azure.com" + resourceId + "/providers/Microsoft.Authorization/roleAssignments/" + randomGUID + "?api-version=2015-07-01";
 
             HttpWebRequest request1 = (HttpWebRequest)HttpWebRequest.Create(apiURL);
             request1.Method = "PUT";
