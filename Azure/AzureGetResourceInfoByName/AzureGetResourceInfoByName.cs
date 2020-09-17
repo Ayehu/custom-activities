@@ -84,7 +84,14 @@ namespace AzureListResources
                             }
                         }
 
-                        return this.GenerateActivityResult(dt);
+                        if(resultCount > 0)
+                        {
+                            return this.GenerateActivityResult(dt);
+                        }
+                        else
+                        {
+                            return this.GenerateActivityResult("Empty");
+                        }
                     }
                 }
             }
