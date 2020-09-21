@@ -1,0 +1,63 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AzureADAddUserToGroup",
+    "description": "Add an Azure AD user to a group.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "groupName",
+          "label": "Group Name",
+          "labelKey": "GROUP_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "userEmail",
+          "label": "User Email",
+          "labelKey": "USER_EMAIL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "appId",
+          "label": "Application Id",
+          "labelKey": "APPID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantId",
+          "label": "Tenant Id",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "secret_password",
+          "label": "Secret",
+          "labelKey": "SECRET_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
