@@ -50,7 +50,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                     if(groupList.Count == 0)
                     {
-                        return this.GenerateActivityResult("Error: Group not found.");
+                        throw new Exception("Error: Group not found.");
                     }
                     
                     groupId = jsonResults["value"][0]["id"].ToString();
@@ -81,7 +81,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                     if(userList.Count == 0)
                     {
-                        return this.GenerateActivityResult("Error: User not found.");
+                        throw new Exception("Error: User not found.");
                     }
                     
                     userId = jsonResults1["value"][0]["id"].ToString();
@@ -116,7 +116,7 @@ namespace Ayehu.Sdk.ActivityCreation
                     }
                     else
                     {
-                        return this.GenerateActivityResult("Error (" + httpResponse.StatusCode.ToString() + ")");
+                        throw new Exception("Error (" + httpResponse.StatusCode.ToString() + ")");
                     }
                 }
             }
