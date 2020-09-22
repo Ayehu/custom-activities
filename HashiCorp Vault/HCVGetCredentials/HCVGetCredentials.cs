@@ -61,7 +61,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			}
 			catch(WebException e)
 			{
-				return this.GenerateActivityResult("Error (" + e.Message + ")");
+				throw new Exception(e.Message);
 			}
 		}
 	}
