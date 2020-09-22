@@ -47,13 +47,13 @@ namespace Ayehu.Sdk.ActivityCreation
 					}
 					else
 					{
-						return this.GenerateActivityResult("Error (" + httpResponse.StatusCode.ToString() + ")");
+						throw new Exception(httpResponse.StatusCode.ToString());
 					}
 				}
 			}
 			catch(WebException e)
 			{
-				return this.GenerateActivityResult("Error (" + e.Message + ")");
+				throw new Exception(e.Message);
 			}
 		}
 	}
