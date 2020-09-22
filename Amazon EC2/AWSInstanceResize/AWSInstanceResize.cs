@@ -53,7 +53,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			}
 			else
 			{
-				return this.GenerateActivityResult("Error (" + outputError + ")");
+				throw new Exception(outputError);
 			}
 		}
 	}
