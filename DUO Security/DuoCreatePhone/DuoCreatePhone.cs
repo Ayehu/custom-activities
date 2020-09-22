@@ -82,7 +82,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			}
 			else
 			{
-			   return this.GenerateActivityResult("Error: " + jsonResults["stat"].ToString());
+			   throw new Exception(jsonResults["stat"].ToString());
 			}
 		}
 
