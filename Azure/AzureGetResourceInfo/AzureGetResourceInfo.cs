@@ -52,9 +52,9 @@ namespace AzureGetResourceInfo
             var credential = new ClientCredential(clientId, clientSecret);
             var result = authenticationContext.AcquireTokenAsync(resource: "https://management.azure.com/", clientCredential: credential).Result;
 
-            if (result == null)
+            if(result == null)
             {
-                return this.GenerateActivityResult("Failed to obtain JWT token.");
+                throw new Exception("Failed to obtain JWT token.");
             }
 
             string token = result.AccessToken;
@@ -89,7 +89,7 @@ namespace AzureGetResourceInfo
             }
             catch(WebException e)
             {
-                return this.GenerateActivityResult("Error (" + e.Message + ")");
+                throw new Exception(e.Message);
             }
             
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("https://management.azure.com" + resourceId + "?api-version=" + latestAPI);
@@ -125,7 +125,7 @@ namespace AzureGetResourceInfo
             }
             catch(WebException e)
             {
-                return this.GenerateActivityResult("Error (" + e.Message + ")");
+                throw new Exception( e.Message);
             }
         }
     }
