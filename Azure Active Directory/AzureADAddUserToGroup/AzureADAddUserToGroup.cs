@@ -27,7 +27,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
             if(string.IsNullOrEmpty(token))
             {
-                throw new Exception("Error: Cannot get access token.");
+                throw new Exception("Unable to retrieve access token.");
             }
 
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("https://graph.microsoft.com/v1.0/groups?$filter=displayName eq '" + groupName + "'");
@@ -50,7 +50,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                     if(groupList.Count == 0)
                     {
-                        throw new Exception("Error: Group not found.");
+                        throw new Exception("Group not found.");
                     }
                     
                     groupId = jsonResults["value"][0]["id"].ToString();
@@ -58,7 +58,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             catch(WebException e)
             {
-                return this.GenerateActivityResult("Error (" + e.Message + ")");
+                throw new Exception(e.Message);
             }
 
             HttpWebRequest request1 = (HttpWebRequest)HttpWebRequest.Create("https://graph.microsoft.com/v1.0/users?$filter=userPrincipalName eq '" + userEmail + "'");
@@ -81,7 +81,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                     if(userList.Count == 0)
                     {
-                        throw new Exception("Error: User not found.");
+                        throw new Exception("User not found.");
                     }
                     
                     userId = jsonResults1["value"][0]["id"].ToString();
@@ -89,7 +89,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
             catch(WebException e)
             {
-                return this.GenerateActivityResult("Error (" + e.Message + ")");
+                throw new Exception(e.Message);
             }
 
             HttpWebRequest request2 = (HttpWebRequest)HttpWebRequest.Create("https://graph.microsoft.com/v1.0/groups/" + groupId + "/members/$ref");
@@ -116,13 +116,13 @@ namespace Ayehu.Sdk.ActivityCreation
                     }
                     else
                     {
-                        throw new Exception("Error (" + httpResponse.StatusCode.ToString() + ")");
+                        throw new Exception(httpResponse.StatusCode.ToString());
                     }
                 }
             }
             catch(WebException e2)
             {
-               return this.GenerateActivityResult("Error (" + e2.Message + ")");
+               throw new Exception(e2.Message);
             }
         }
 
