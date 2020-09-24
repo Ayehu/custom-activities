@@ -21,7 +21,7 @@
           },
           {
             "value": "",
-            "required": false,
+            "required": true,
             "key": "GroupDescription",
             "disabled": false,
             "styleClass": "",
@@ -33,7 +33,7 @@
           },
           {
             "value": "",
-            "required": false,
+            "required": true,
             "key": "Notes",
             "disabled": false,
             "styleClass": "xl-textarea",
