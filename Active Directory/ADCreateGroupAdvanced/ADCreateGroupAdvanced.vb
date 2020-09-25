@@ -26,6 +26,7 @@ Namespace Ayehu.Sdk.ActivityCreation
         Public UserName As String
         Public Password As String
         Public ADGroupName As String
+        Public EmailAddress As String
         Public ManagedByDN As String
         Public Path As String
         Public SecurePort As String
@@ -111,6 +112,7 @@ Namespace Ayehu.Sdk.ActivityCreation
                 group.Properties("groupType").Value = groupType
                 group.Properties("Description").Value = GroupDescription
                 group.Properties("info").Value = Notes
+                group.Properties("mail").Value = EmailAddress
                 group.Properties("managedBy").Value = ManagedByDN
                 group.CommitChanges()
                 group.Close()

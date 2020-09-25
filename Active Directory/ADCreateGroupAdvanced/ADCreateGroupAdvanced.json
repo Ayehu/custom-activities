@@ -100,6 +100,18 @@
           {
             "value": "",
             "required": true,
+            "key": "EmailAddress",
+            "disabled": false,
+            "label": "Email Address",
+            "styleClass": "",
+            "labelKey": "AD_CREATE_GROUP_ADV_EMAIL_ADDRESS",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": true,
             "key": "ManagedByDN",
             "disabled": false,
             "label": "Owner Dist. Name",
