@@ -88,11 +88,23 @@
           {
             "value": "",
             "required": true,
-            "key": "ADUserName",
+            "key": "ADGroupName",
             "disabled": false,
             "label": "Group Name",
             "styleClass": "",
             "labelKey": "AD_CREATE_GROUP_ADV_GROUP_NAME",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": true,
+            "key": "ManagedByDN",
+            "disabled": false,
+            "label": "Owner Dist. Name",
+            "styleClass": "",
+            "labelKey": "AD_CREATE_GROUP_ADV_MANAGED_BY",
             "baseType": "control",
             "controlType": "textbox",
             "controlOptions": []
@@ -134,6 +146,7 @@
         "index": "1",
         "label": "main",
         "labelKey": null
-      }
+      },
+      "size": "l-size"
     }
   }

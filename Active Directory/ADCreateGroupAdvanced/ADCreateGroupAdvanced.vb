@@ -25,7 +25,8 @@ Namespace Ayehu.Sdk.ActivityCreation
         Public AdType As String = "Security"
         Public UserName As String
         Public Password As String
-        Public ADUserName As String
+        Public ADGroupName As String
+        Public ManagedByDN As String
         Public Path As String
         Public SecurePort As String
 
@@ -76,7 +77,7 @@ Namespace Ayehu.Sdk.ActivityCreation
             End If
 
             Dim ds As DirectorySearcher = New DirectorySearcher(de)
-            ds.Filter = "(&(objectClass=group) (sAMAccountName=" + ADUserName + "))"
+            ds.Filter = "(&(objectClass=group) (sAMAccountName=" + ADGroupName + "))"
             ds.SearchScope = SearchScope.Subtree
             Dim results As SearchResult = ds.FindOne()
             If results Is Nothing Then
@@ -105,11 +106,12 @@ Namespace Ayehu.Sdk.ActivityCreation
                     groupType = ADS_GROUP_TYPE_UNIVERSAL_GROUP
                 End If
 
-                Dim group As DirectoryEntry = entry.Children.Add("CN=" + ADUserName, "group")
-                group.Properties("sAmAccountName").Value = ADUserName
+                Dim group As DirectoryEntry = entry.Children.Add("CN=" + ADGroupName, "group")
+                group.Properties("sAmAccountName").Value = ADGroupName
                 group.Properties("groupType").Value = groupType
                 group.Properties("Description").Value = GroupDescription
                 group.Properties("info").Value = Notes
+                group.Properties("managedBy").Value = ManagedByDN
                 group.CommitChanges()
                 group.Close()
                 dt.Rows.Add("Success")
