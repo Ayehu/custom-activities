@@ -14,7 +14,7 @@ using System.Text;<br/>
 
 **Account Name** - your account name. This is usually part of the URL, for example: `https://myaccount.logicmonitor.com` - in this case **myaccount** your account name.
 
-**Access Id** and **Access Key** - API tokens to be used for API calls. More details: https://www.logicmonitor.com/support/settings/users-and-roles/api-tokens
+**Access Id** and **Access Key** - API tokens to be used for API calls ("acksdtonly" role has suffiecnt permissions for the activity to function). More details: https://www.logicmonitor.com/support/settings/users-and-roles/api-tokens
 
 **Alert Id** - the alert id in LogicMonitor, which is needed to acknowledge.
 
