@@ -14,22 +14,24 @@ Imports System.Net<br/>
 
 ### To create a group, you must provide the fields below:
 
-**Path** - AD group path
+**Path** - AD group path (e.g. "\Users")
 
-**Description** - group description
+**Description** - Description of the group.
 
-**Notes** - group info
+**Notes** - Additional notes on the group.
 
-**Scope** - Global or Universal group
+**Scope** - Global or Universal group.
 
-**Type** - Security or Distribution group
+**Type** - Security or Distribution group.
 
-**Group Name** - group name
+**Group Name** - Name for new group.
 
-**Hostname** - AD host
+**Owner Dist. Name** - Distinguished name of group owner (e.g. "CN=John Smith,CN=Users,DC=mydomain,DC=com")
 
-**Username** - AD username
+**Hostname** - Domain controller hostname.
 
-**Password** - password for the username
+**Username** - AD username.
 
-**Port** - AD port
+**Password** - AD password.
+
+**Port** - AD LDAP port.
