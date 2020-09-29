@@ -2,9 +2,11 @@ using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System;
 
@@ -40,47 +42,69 @@ namespace Ayehu.Sdk.ActivityCreation
 
 				using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
 				{
-					var responseString = streamReader.ReadToEnd();
+					var response = streamReader.ReadToEnd();
 
-					JObject jsonResults = JObject.Parse(responseString);
+					JObject jsonResults = JObject.Parse(response);
 
 					JArray users = (JArray)jsonResults["data"];
 
 					int userCount = users.Count;
 
-					if(userCount == 0)
+					DataTable dt = new DataTable("resultSet");
+
+					for(int i = 0; i < userCount; i ++)
 					{
-						return this.GenerateActivityResult("Empty");
-					}
-					else
-					{
-						DataTable dt = new DataTable("resultSet");
+						var userData = jsonResults["data"][i].ToString();
 
-						for(int i = 0; i < userCount; i ++)
-						{
-							dt.Rows.Add(dt.NewRow());
+	                    var res = ExposeJson(JObject.Parse(userData))
+	                                .ToDictionary(q => q.Key, q => q.Value);
 
-							JObject userDetails = JObject.Parse(jsonResults["data"][i].ToString());
+	                    dt.Merge(GetDataTable(res));
+	                }
 
-							foreach(JProperty property in userDetails.Properties())
-							{
-								if(!dt.Columns.Contains(property.Name))
-								{
-									dt.Columns.Add(property.Name);
-								}
-
-								dt.Rows[i][property.Name] = property.Value;
-							}
-						}
-
-						return this.GenerateActivityResult(dt);
-					}
+                    return this.GenerateActivityResult(dt);
 				}
 			}
 			catch(WebException e)
 			{
-				return this.GenerateActivityResult("Error (" + e.Message + ")");
+				throw new Exception(e.Message);
 			}
 		}
+
+		private IDictionary<string, string> ExposeJson(JObject jObject, string append = "")
+        {
+            var result = new Dictionary<string, string>();
+
+            foreach (var jProperty in jObject.Properties())
+            {
+                var jToken = jProperty.Value;
+
+                if (jToken.Type == JTokenType.Object)
+                {
+                    var nested_result = ExposeJson(jToken as JObject, jProperty.Name + "_");
+                    result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
+                }
+                else if (jToken.Type != JTokenType.Array)
+                {
+                    result.Add(append + jProperty.Name, jProperty.Value.ToString());
+                }
+            }
+
+            return result;
+        }
+
+        private DataTable GetDataTable(IReadOnlyDictionary<string, string> columns)
+        {
+            DataTable dt = new DataTable("resultSet");
+            dt.Rows.Add(dt.NewRow());
+
+            foreach (var col in columns)
+            {
+                dt.Columns.Add(col.Key);
+                dt.Rows[0][col.Key] = col.Value;
+            }
+
+            return dt;
+        }
 	}
 }
