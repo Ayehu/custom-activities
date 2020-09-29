@@ -47,7 +47,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
                     var dt = GetDataTable(res);
 
-                    return this.GenerateActivityResult(response);
+                    return this.GenerateActivityResult(dt);
                 }
             }
             else
