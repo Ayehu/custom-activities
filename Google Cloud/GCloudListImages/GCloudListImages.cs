@@ -1,4 +1,4 @@
-﻿using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,8 @@ using Google.Apis.Compute.v1.Data;
 using System.Threading.Tasks;
 using System.Text;
 using System.Data;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace ActivitiesAyehu
 {
