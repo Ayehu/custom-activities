@@ -14,7 +14,7 @@ using Newtonsoft.Json;
 
 namespace ActivitiesAyehu
 {
-    public class GCloudStartInstance : IActivity
+    public class GCloudGetInstance : IActivity
     {
         public string Project;
         public string InstanceName;
