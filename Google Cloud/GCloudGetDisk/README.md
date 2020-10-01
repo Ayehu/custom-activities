@@ -28,7 +28,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
-### Mandatory fields when starting an instance:
+### Mandatory fields when retrieving disk information:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
 **DiskName**		- Disk name for which to retrieve details  
 **Region**				- Region which the instance will be hosted (e.g., us-central1-a)  
