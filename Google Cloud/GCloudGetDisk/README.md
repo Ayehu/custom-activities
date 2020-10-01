@@ -11,7 +11,7 @@ Google.Apis.dll
 Google.Apis.PlatformServices.dll  
 Newtonsoft.Json.dll  
 
-You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Compute.v1).
+You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Compute.v1) or in the root directory ([https://github.com/Ayehu/custom-activities/blob/master/Google%20Cloud/DLL.zip](https://github.com/Ayehu/custom-activities/blob/master/Google%20Cloud/DLL.zip)).
 
 ##### Libraries to import
 using Ayehu.Sdk.ActivityCreation.Interfaces;
