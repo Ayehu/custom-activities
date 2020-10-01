@@ -11,19 +11,22 @@ Google.Apis.dll
 Google.Apis.PlatformServices.dll  
 Newtonsoft.Json.dll  
 
-You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Compute.v1).
+You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Compute.v1) or in the root directory ([https://github.com/Ayehu/custom-activities/blob/master/Google%20Cloud/DLL.zip](https://github.com/Ayehu/custom-activities/blob/master/Google%20Cloud/DLL.zip)).
 
 ##### Libraries to import
-using Ayehu.Sdk.ActivityCreation.Interfaces;  
-using Ayehu.Sdk.ActivityCreation.Extension;  
-using System;  
-using System.Collections.Generic;  
-using Google.Apis.Services;  
-using Google.Apis.Compute.v1;  
-using Google.Apis.Auth.OAuth2;  
-using Google.Apis.Compute.v1.Data;  
-using System.Threading.Tasks;  
-using System.Text;  
+using Ayehu.Sdk.ActivityCreation.Interfaces;
+using Ayehu.Sdk.ActivityCreation.Extension;
+using Google.Apis.Services;
+using Google.Apis.Compute.v1;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Compute.v1.Data;
+using System;
+using System.Text;
+using System.Data;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 ### Mandatory fields when listing images:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  
