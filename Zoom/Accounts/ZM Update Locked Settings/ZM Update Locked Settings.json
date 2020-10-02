@@ -1,0 +1,585 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update Locked Settings",
+    "description": "[Account Locked Settings](https://support.zoom.us/hc/en-us/articles/115005269866) allow you turn settings on or off for all users in your account. No user except the account admin or account owner can change these settings. With lock settings, you force the settings on for all users. Use this API to update an account's locked settings.\n\n**Note:** This API can be used by Zoom Accounts that are on a Pro or a higher plan as well accounts that have Master and Sub Accounts options enabled. \n\n**Prerequisites:**\n* Pro or a higher paid account. \n**Scope:** `account:write:admin`\n ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "accountId",
+          "label": "AccountId",
+          "labelKey": "accountId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "host_video",
+          "label": "Host_video",
+          "labelKey": "host_video_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "participant_video",
+          "label": "Participant_video",
+          "labelKey": "participant_video_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "audio_type",
+          "label": "Audio_type",
+          "labelKey": "audio_type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "join_before_host",
+          "label": "Join_before_host",
+          "labelKey": "join_before_host_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enforce_login",
+          "label": "Enforce_login",
+          "labelKey": "enforce_login_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enforce_login_with_domains",
+          "label": "Enforce_login_with_domains",
+          "labelKey": "enforce_login_with_domains_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enforce_login_domains",
+          "label": "Enforce_login_domains",
+          "labelKey": "enforce_login_domains_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "not_store_meeting_topic",
+          "label": "Not_store_meeting_topic",
+          "labelKey": "not_store_meeting_topic_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "require_password_for_scheduling_new_meetings",
+          "label": "Require_password_for_scheduling_new_meetings",
+          "labelKey": "require_password_for_scheduling_new_meetings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "require_password_for_instant_meetings",
+          "label": "Require_password_for_instant_meetings",
+          "labelKey": "require_password_for_instant_meetings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "require_password_for_pmi_meetings",
+          "label": "Require_password_for_pmi_meetings",
+          "labelKey": "require_password_for_pmi_meetings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "meeting_authentication",
+          "label": "Meeting_authentication",
+          "labelKey": "meeting_authentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "e2e_encryption",
+          "label": "E2e_encryption",
+          "labelKey": "e2e_encryption_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "chat",
+          "label": "Chat",
+          "labelKey": "chat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "private_chat",
+          "label": "Private_chat",
+          "labelKey": "private_chat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "auto_saving_chat",
+          "label": "Auto_saving_chat",
+          "labelKey": "auto_saving_chat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entry_exit_chime",
+          "label": "Entry_exit_chime",
+          "labelKey": "entry_exit_chime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "feedback",
+          "label": "Feedback",
+          "labelKey": "feedback_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "post_meeting_feedback",
+          "label": "Post_meeting_feedback",
+          "labelKey": "post_meeting_feedback_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "co_host",
+          "label": "Co_host",
+          "labelKey": "co_host_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "polling",
+          "label": "Polling",
+          "labelKey": "polling_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "attendee_on_hold",
+          "label": "Attendee_on_hold",
+          "labelKey": "attendee_on_hold_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "show_meeting_control_toolbar",
+          "label": "Show_meeting_control_toolbar",
+          "labelKey": "show_meeting_control_toolbar_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "allow_show_zoom_windows",
+          "label": "Allow_show_zoom_windows",
+          "labelKey": "allow_show_zoom_windows_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "annotation",
+          "label": "Annotation",
+          "labelKey": "annotation_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "whiteboard",
+          "label": "Whiteboard",
+          "labelKey": "whiteboard_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "remote_control",
+          "label": "Remote_control",
+          "labelKey": "remote_control_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "webinar_question_answer",
+          "label": "Webinar_question_answer",
+          "labelKey": "webinar_question_answer_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "anonymous_question_answer",
+          "label": "Anonymous_question_answer",
+          "labelKey": "anonymous_question_answer_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "breakout_room",
+          "label": "Breakout_room",
+          "labelKey": "breakout_room_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "closed_caption",
+          "label": "Closed_caption",
+          "labelKey": "closed_caption_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "far_end_camera_control",
+          "label": "Far_end_camera_control",
+          "labelKey": "far_end_camera_control_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "group_hd",
+          "label": "Group_hd",
+          "labelKey": "group_hd_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "virtual_background",
+          "label": "Virtual_background",
+          "labelKey": "virtual_background_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "alert_guest_join",
+          "label": "Alert_guest_join",
+          "labelKey": "alert_guest_join_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "auto_answer",
+          "label": "Auto_answer",
+          "labelKey": "auto_answer_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sending_default_email_invites",
+          "label": "Sending_default_email_invites",
+          "labelKey": "sending_default_email_invites_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "use_html_format_email",
+          "label": "Use_html_format_email",
+          "labelKey": "use_html_format_email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dscp_marking",
+          "label": "Dscp_marking",
+          "labelKey": "dscp_marking_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "stereo_audio",
+          "label": "Stereo_audio",
+          "labelKey": "stereo_audio_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "original_audio",
+          "label": "Original_audio",
+          "labelKey": "original_audio_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "screen_sharing",
+          "label": "Screen_sharing",
+          "labelKey": "screen_sharing_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "cloud_recording_available_reminder",
+          "label": "Cloud_recording_available_reminder",
+          "labelKey": "cloud_recording_available_reminder_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "jbh_reminder",
+          "label": "Jbh_reminder",
+          "labelKey": "jbh_reminder_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "cancel_meeting_reminder",
+          "label": "Cancel_meeting_reminder",
+          "labelKey": "cancel_meeting_reminder_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "alternative_host_reminder",
+          "label": "Alternative_host_reminder",
+          "labelKey": "alternative_host_reminder_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "schedule_for_host_reminder",
+          "label": "Schedule_for_host_reminder",
+          "labelKey": "schedule_for_host_reminder_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "local_recording",
+          "label": "Local_recording",
+          "labelKey": "local_recording_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "cloud_recording",
+          "label": "Cloud_recording",
+          "labelKey": "cloud_recording_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "auto_recording",
+          "label": "Auto_recording",
+          "labelKey": "auto_recording_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "cloud_recording_download",
+          "label": "Cloud_recording_download",
+          "labelKey": "cloud_recording_download_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "account_user_access_recording",
+          "label": "Account_user_access_recording",
+          "labelKey": "account_user_access_recording_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "host_delete_cloud_recording",
+          "label": "Host_delete_cloud_recording",
+          "labelKey": "host_delete_cloud_recording_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "auto_delete_cmr",
+          "label": "Auto_delete_cmr",
+          "labelKey": "auto_delete_cmr_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "recording_authentication",
+          "label": "Recording_authentication",
+          "labelKey": "recording_authentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "third_party_audio",
+          "label": "Third_party_audio",
+          "labelKey": "third_party_audio_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "call_out",
+          "label": "Call_out",
+          "labelKey": "call_out_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "show_international_numbers_link",
+          "label": "Show_international_numbers_link",
+          "labelKey": "show_international_numbers_link_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "lock_settings",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,82 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update a Groups Settings",
+    "description": "Update settings for a [group](https://support.zoom.us/hc/en-us/articles/204519819-Group-Management-).Note: The `force_pmi_jbh_password` field under meeting settings is planned to be deprecated on September 22, 2019. This field will be replaced by another field that will provide the same functionality.\n**Prerequisite**: Pro, Business, or Education account \n**Scopes**: `group:write:admin`\n ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "groupId",
+          "label": "GroupId",
+          "labelKey": "groupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "option",
+          "label": "Option",
+          "labelKey": "option_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "meeting_authentication",
+              "value": "meeting_authentication"
+            },
+            {
+              "key": "recording_authentication",
+              "value": "recording_authentication"
+            }
+          ],
+          "value": "meeting_authentication"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "settings",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

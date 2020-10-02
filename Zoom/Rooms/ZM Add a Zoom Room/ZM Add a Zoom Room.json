@@ -1,0 +1,95 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Add a Zoom Room",
+    "description": "Use this API to [add a Zoom Room](https://support.zoom.us/hc/en-us/articles/202822279-Add-Zoom-Rooms-on-Web-Portal) to a Zoom account.\n**Prerequisites:**\n* Pro or a higher plan with [Zoom Room](https://zoom.us/zoomrooms) license.\n**Scopes**: `room:write:admin` ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "ZoomRoom",
+              "value": "ZoomRoom"
+            },
+            {
+              "key": "SchedulingDisplayOnly",
+              "value": "SchedulingDisplayOnly"
+            },
+            {
+              "key": "DigitalSignageOnly",
+              "value": "DigitalSignageOnly"
+            }
+          ],
+          "value": "ZoomRoom"
+        },
+        {
+          "required": false,
+          "key": "location_id",
+          "label": "Location_id",
+          "labelKey": "location_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "rooms",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

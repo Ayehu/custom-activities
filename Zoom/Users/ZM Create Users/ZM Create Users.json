@@ -1,0 +1,140 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Create Users",
+    "description": "A Zoom account can have one or more users. Use this API to add a new user to your account.\n**Scopes:** `user:write:admin` `user:write`\n ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "action",
+          "label": "Action",
+          "labelKey": "action_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "create",
+              "value": "create"
+            },
+            {
+              "key": "autoCreate",
+              "value": "autoCreate"
+            },
+            {
+              "key": "custCreate",
+              "value": "custCreate"
+            },
+            {
+              "key": "ssoCreate",
+              "value": "ssoCreate"
+            }
+          ],
+          "value": "create"
+        },
+        {
+          "required": true,
+          "key": "email",
+          "label": "Email",
+          "labelKey": "email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": 1,
+              "value": 1
+            },
+            {
+              "key": 2,
+              "value": 2
+            },
+            {
+              "key": 3,
+              "value": 3
+            }
+          ],
+          "value": "1"
+        },
+        {
+          "required": false,
+          "key": "first_name",
+          "label": "First_name",
+          "labelKey": "first_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "last_name",
+          "label": "Last_name",
+          "labelKey": "last_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "users",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

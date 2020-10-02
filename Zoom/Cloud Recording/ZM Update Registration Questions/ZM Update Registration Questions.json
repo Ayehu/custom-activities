@@ -1,0 +1,207 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update Registration Questions",
+    "description": "For [on-demand](https://support.zoom.us/hc/en-us/articles/360000488283-On-demand-Recordings) meeting recordings, you can include fields with questions that will be shown to registrants when they register to view the recording.\n\nUse this API to update registration questions that are to be answered by users while registering to view a recording.\n**Scopes:** `recording:write:admin`, `recording:write` \n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "meetingId",
+          "label": "MeetingId",
+          "labelKey": "meetingId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "questions____",
+          "label": "Questions[][]",
+          "labelKey": "questions_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "field_name",
+          "label": "Field_name",
+          "labelKey": "field_name_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "last_name",
+              "value": "last_name"
+            },
+            {
+              "key": "address",
+              "value": "address"
+            },
+            {
+              "key": "city",
+              "value": "city"
+            },
+            {
+              "key": "country",
+              "value": "country"
+            },
+            {
+              "key": "zip",
+              "value": "zip"
+            },
+            {
+              "key": "state",
+              "value": "state"
+            },
+            {
+              "key": "phone",
+              "value": "phone"
+            },
+            {
+              "key": "industry",
+              "value": "industry"
+            },
+            {
+              "key": "org",
+              "value": "org"
+            },
+            {
+              "key": "job_title",
+              "value": "job_title"
+            },
+            {
+              "key": "purchasing_time_frame",
+              "value": "purchasing_time_frame"
+            },
+            {
+              "key": "role_in_purchase_process",
+              "value": "role_in_purchase_process"
+            },
+            {
+              "key": "no_of_employees",
+              "value": "no_of_employees"
+            },
+            {
+              "key": "comments",
+              "value": "comments"
+            }
+          ],
+          "value": "last_name"
+        },
+        {
+          "required": false,
+          "key": "required",
+          "label": "Required",
+          "labelKey": "required_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "custom_questions____",
+          "label": "Custom_questions[][]",
+          "labelKey": "custom_questions_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "title",
+          "label": "Title",
+          "labelKey": "title_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "short",
+              "value": "short"
+            },
+            {
+              "key": "single",
+              "value": "single"
+            },
+            {
+              "key": "multiple",
+              "value": "multiple"
+            }
+          ],
+          "value": "short"
+        },
+        {
+          "required": false,
+          "key": "custom_questions_required",
+          "label": "Custom_questions_required",
+          "labelKey": "custom_questions_required_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "answers____",
+          "label": "Answers[][]",
+          "labelKey": "answers_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "questions",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

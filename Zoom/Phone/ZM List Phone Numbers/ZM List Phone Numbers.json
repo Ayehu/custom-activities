@@ -1,0 +1,150 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM List Phone Numbers",
+    "description": "A Zoom account owner or admin can purchase phone numbers and assign them to Zoom phone users. Use this API to list all Zoom Phone numbers in a Zoom account. You can filter the response based on your needs by using query parameters.\n\n**Prerequisites:**\n* Pro or higher plan with Zoom phone license\n**Scope:** `phone:read:admin` ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "next_page_token",
+          "label": "Next_page_token",
+          "labelKey": "next_page_token_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "assigned",
+              "value": "assigned"
+            },
+            {
+              "key": "unassigned",
+              "value": "unassigned"
+            },
+            {
+              "key": "all",
+              "value": "all"
+            }
+          ],
+          "value": "assigned"
+        },
+        {
+          "required": false,
+          "key": "extension_type",
+          "label": "Extension_type",
+          "labelKey": "extension_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "user",
+              "value": "user"
+            },
+            {
+              "key": "callQueue",
+              "value": "callQueue"
+            },
+            {
+              "key": "autoReceptionist",
+              "value": "autoReceptionist"
+            },
+            {
+              "key": "commonAreaPhone",
+              "value": "commonAreaPhone"
+            }
+          ],
+          "value": "user"
+        },
+        {
+          "required": false,
+          "key": "page_size",
+          "label": "Page_size",
+          "labelKey": "page_size_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "number_type",
+          "label": "Number_type",
+          "labelKey": "number_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "toll",
+              "value": "toll"
+            },
+            {
+              "key": "tollfree",
+              "value": "tollfree"
+            }
+          ],
+          "value": "toll"
+        },
+        {
+          "required": false,
+          "key": "pending_numbers",
+          "label": "Pending_numbers",
+          "labelKey": "pending_numbers_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "numbers",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,127 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update accounts TSP information",
+    "description": "Update information of the Telephony Service Provider set up on an account.\n**Prerequisites**:\nTSP account option should be enabled.\n**Scopes:** `tsp:write:admin` `tsp:write`\n \n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tsp_provider",
+          "label": "Tsp_provider",
+          "labelKey": "tsp_provider_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enable",
+          "label": "Enable",
+          "labelKey": "enable_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tsp_enabled",
+          "label": "Tsp_enabled",
+          "labelKey": "tsp_enabled_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "master_account_setting_extended",
+          "label": "Master_account_setting_extended",
+          "labelKey": "master_account_setting_extended_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "modify_credential_forbidden",
+          "label": "Modify_credential_forbidden",
+          "labelKey": "modify_credential_forbidden_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dial_in_number_unrestricted",
+          "label": "Dial_in_number_unrestricted",
+          "labelKey": "dial_in_number_unrestricted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tsp_bridge",
+          "label": "Tsp_bridge",
+          "labelKey": "tsp_bridge_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "US_TSP_TB",
+              "value": "US_TSP_TB"
+            },
+            {
+              "key": "EU_TSP_TB",
+              "value": "EU_TSP_TB"
+            }
+          ],
+          "value": "US_TSP_TB"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "tsp",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

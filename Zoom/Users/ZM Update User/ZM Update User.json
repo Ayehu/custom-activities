@@ -1,0 +1,252 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update User",
+    "description": "Update information on a user's Zoom [profile](https://support.zoom.us/hc/en-us/articles/201363203-My-Profile).\n**Scopes:** `user:write:admin` `user:write`\n \n\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "userId",
+          "label": "UserId",
+          "labelKey": "userId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "login_type",
+          "label": "Login_type",
+          "labelKey": "login_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "0",
+              "value": "0"
+            },
+            {
+              "key": "1",
+              "value": "1"
+            },
+            {
+              "key": "99",
+              "value": "99"
+            },
+            {
+              "key": "100",
+              "value": "100"
+            },
+            {
+              "key": "101",
+              "value": "101"
+            }
+          ],
+          "value": "0"
+        },
+        {
+          "required": false,
+          "key": "first_name",
+          "label": "First_name",
+          "labelKey": "first_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "last_name",
+          "label": "Last_name",
+          "labelKey": "last_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": 1,
+              "value": 1
+            },
+            {
+              "key": 2,
+              "value": 2
+            },
+            {
+              "key": 3,
+              "value": 3
+            }
+          ],
+          "value": "1"
+        },
+        {
+          "required": false,
+          "key": "pmi",
+          "label": "Pmi",
+          "labelKey": "pmi_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "use_pmi",
+          "label": "Use_pmi",
+          "labelKey": "use_pmi_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timezone",
+          "label": "Timezone",
+          "labelKey": "timezone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "language",
+          "label": "Language",
+          "labelKey": "language_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dept",
+          "label": "Dept",
+          "labelKey": "dept_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "vanity_name",
+          "label": "Vanity_name",
+          "labelKey": "vanity_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "host_key",
+          "label": "Host_key",
+          "labelKey": "host_key_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "cms_user_id",
+          "label": "Cms_user_id",
+          "labelKey": "cms_user_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "job_title",
+          "label": "Job_title",
+          "labelKey": "job_title_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "company",
+          "label": "Company",
+          "labelKey": "company_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "location",
+          "label": "Location",
+          "labelKey": "location_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "phone_number",
+          "label": "Phone_number",
+          "labelKey": "phone_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "phone_country",
+          "label": "Phone_country",
+          "labelKey": "phone_country_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

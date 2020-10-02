@@ -1,0 +1,145 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Create a Sub Account",
+    "description": "Create a Sub Account under the Master Account. Your account must be a Master Account in order to create Sub Accounts. Zoom only assigns this privilege to trusted partners and only approved partners can use this API. Contact the [**ISV team**](https://zoom.us/plan/api) for more details. Please note that the created account user will receive a confirmation email.\n**Prerequisites:**\n* Pro or a higher paid account with Master Account option enabled. \n**Scope**: `account:write:admin`\n ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "first_name",
+          "label": "First_name",
+          "labelKey": "first_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "last_name",
+          "label": "Last_name",
+          "labelKey": "last_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "email",
+          "label": "Email",
+          "labelKey": "email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "share_rc",
+          "label": "Share_rc",
+          "labelKey": "share_rc_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "room_connectors",
+          "label": "Room_connectors",
+          "labelKey": "room_connectors_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "share_mc",
+          "label": "Share_mc",
+          "labelKey": "share_mc_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "meeting_connectors",
+          "label": "Meeting_connectors",
+          "labelKey": "meeting_connectors_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "pay_mode",
+          "label": "Pay_mode",
+          "labelKey": "pay_mode_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "master",
+              "value": "master"
+            },
+            {
+              "key": "sub",
+              "value": "sub"
+            }
+          ],
+          "value": "master"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "accounts",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

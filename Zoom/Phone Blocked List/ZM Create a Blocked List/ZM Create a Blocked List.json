@@ -1,0 +1,129 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Create a Blocked List",
+    "description": "A Zoom account owner or a user with admin privilege can block phone numbers for phone users in an account. Blocked numbers can be inbound (numbers will be blocked from calling in) and outbound (phone users in your account won't be able to dial those numbers). Blocked callers will hear a generic message stating that the person they are calling is not available.Use this API to create a blocked list and add a number to that blocked list.\n**Prerequisites:**\n* Pro or higher account plan with Zoom phone license\n**Scope:** `phone:write:admin` \n\n\n\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "match_type",
+          "label": "Match_type",
+          "labelKey": "match_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "phoneNumber",
+              "value": "phoneNumber"
+            },
+            {
+              "key": "prefix",
+              "value": "prefix"
+            }
+          ],
+          "value": "phoneNumber"
+        },
+        {
+          "required": false,
+          "key": "phone_number",
+          "label": "Phone_number",
+          "labelKey": "phone_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "block_type",
+          "label": "Block_type",
+          "labelKey": "block_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "inbound",
+              "value": "inbound"
+            },
+            {
+              "key": "outbound",
+              "value": "outbound"
+            }
+          ],
+          "value": "inbound"
+        },
+        {
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "labelKey": "status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "active",
+              "value": "active"
+            },
+            {
+              "key": "inactive",
+              "value": "inactive"
+            }
+          ],
+          "value": "active"
+        },
+        {
+          "required": false,
+          "key": "comment",
+          "label": "Comment",
+          "labelKey": "comment_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "blocked_list",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
