@@ -23,4 +23,4 @@ Newtonsoft.JSON.dll<br>
 <b>Protocol:</b> Option to use either HTTP or HTTPS depending on your certificate settings on your Vault server.<br>
 
 <h3>Output:</h3>
-Returns Json output, if there are any errors it throws an expections
+Returns json output, if there are any errors it throws an expections
