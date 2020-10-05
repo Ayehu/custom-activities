@@ -14,14 +14,10 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string vaultServer;
 		public string protocolType;
-		
-		
-		
 		public ICustomActivityResult Execute()
 		{
 			string apiURL = protocolType + "://" + vaultServer + ":8200/v1/sys/seal-status";
 			string method = "GET";
-
 			try
 			{
 				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
@@ -34,15 +30,12 @@ namespace Ayehu.Sdk.ActivityCreation
 				using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
 				{
 					var responseString = streamReader.ReadToEnd();
-
-					
-					
 					return this.GenerateActivityResult(responseString);
 				}
 			}
 			catch(WebException e)
 			{
-				return this.GenerateActivityResult("Error (" + e.Message + ")");
+				throw new Exception(e.Message);
 			}
 		}
 	}
