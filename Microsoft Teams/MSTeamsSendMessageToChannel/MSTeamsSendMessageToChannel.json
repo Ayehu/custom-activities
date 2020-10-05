@@ -24,7 +24,7 @@
           "label": "Message",
           "labelKey": "MESSAGETEXT_VALUE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "textarea"
         }
       ],
       "index": "1",
