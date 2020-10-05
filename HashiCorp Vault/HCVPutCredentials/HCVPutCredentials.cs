@@ -31,9 +31,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "POST";
-			string jsonBody = "{\""+key1+"\":\""+value1+"\","+"\""+key2+"\":\""+value2+"\"}";
-			
-            
+			string jsonBody = "{\""+key1+"\":\""+ HttpUtility.JavaScriptStringEncode(value1) +"\","+"\""+key2+"\":\""+ HttpUtility.JavaScriptStringEncode(value2) +"\"}";
 			try
 			{
 				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
@@ -49,7 +47,6 @@ namespace Ayehu.Sdk.ActivityCreation
 					streamWriter.Write(jsonBody);
 					streamWriter.Flush();
 					streamWriter.Close();
-
 					var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                     
                     using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -64,15 +61,14 @@ namespace Ayehu.Sdk.ActivityCreation
 					     }
 					     else
 					     {
-                               return this.GenerateActivityResult("Success");
-						     
+                               return this.GenerateActivityResult("Success"); 
 					     }
 					}
 				}
 			}
 			catch(WebException e)
 			{
-				return this.GenerateActivityResult("Error (" + e.Message + ")");
+				throw new Exception(e.Message);
 			}
 		}
 	}
