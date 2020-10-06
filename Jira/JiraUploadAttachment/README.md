@@ -2,4 +2,4 @@ All input fields are either self-explanatory or explained in the root README fil
 <br><br>
 See below for an example of the activity's configuration:
 <br><br>
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/Jira/JiraUploadAttachment/Activity_Example_Screenshot.jpg">
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/Jira/JiraUploadAttachment/Activity_Example.jpg">
