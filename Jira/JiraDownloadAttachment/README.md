@@ -4,11 +4,11 @@ Below is an example of the JSON contained within that cell:
 <b>
 <pre>
 {
-  "self": "https://ayehu1.atlassian.net/rest/api/2/attachment/32209",
+  "self": "https://xxxx.atlassian.net/rest/api/2/attachment/32209",
   "id": "32209",
   "filename": "INSTALLATION_LOG.txt",
   "author": {
-    "self": "https://ayehu1.atlassian.net/rest/api/2/user?accountId=5d4c5392cca0cf0c56be398e",
+    "self": "https://xxxx.atlassian.net/rest/api/2/user?accountId=5d4c5392cca0cf0c56be398e",
     "accountId": "5d4c5392cca0cf0c56be398e",
     "avatarUrls": {
       "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d4c5392cca0cf0c56be398e/015dc3da-60eb-4ed1-a173-aad766501025/48",
@@ -24,7 +24,7 @@ Below is an example of the JSON contained within that cell:
   "created": "2020-07-20T16:14:53.596-04:00",
   "size": 846934,
   "mimeType": "text/plain",
-  "content": "https://ayehu1.atlassian.net/secure/attachment/32209/INSTALLATION_LOG.txt"
+  "content": "https://xxxx.atlassian.net/secure/attachment/32209/INSTALLATION_LOG.txt"
 }
 </pre>
 <br>
