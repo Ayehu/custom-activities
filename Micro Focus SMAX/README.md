@@ -1,4 +1,4 @@
-<h1>Micro Focus SMAX</h1>
+<h1>Micro Focus SMAX (Service Management Automation X)</h1>
 These activities are designed to be used with <a href="https://www.microfocus.com/en-us/products/service-management-automation-suite/overview">Micro Focus SMAX</a> (Service Management Automation X).
 <br><br>
 Authentication is done via username/password combination, which is used to retrieve an API token upon each separate activity execution.
