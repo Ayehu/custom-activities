@@ -148,8 +148,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 		private IDictionary < string, string > ExposeJson(JObject jObject, string append = "")
 		{
-			var result = new Dictionary < string,
-				string > ();
+			var result = new Dictionary < string, string > ();
 
 			foreach(var jProperty in jObject.Properties())
 			{
