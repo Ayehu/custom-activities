@@ -10,7 +10,7 @@ The various API endpoints used by these activities are:
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol">https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol</a></li>
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps">https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps</a></li>
 </ul>
-<br><br>
+<br>
 For information on filter syntax, visit <a href="https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol#Collection_filtering">https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol#Collection_filtering</a>.
 <br><br>
 Below is an example of the syntax for the "Fields" input:
