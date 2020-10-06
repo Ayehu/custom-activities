@@ -9,5 +9,5 @@ The various API endpoints used by these activities are:
 <ul>
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/CaseExchange">https://docs.microfocus.com/itom/SMAX:2020.05/CaseExchange</a></li>
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol">https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol</a></li>
-<li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps">https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps</a><li>
+<li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps">https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps</a></li>
 </ul>
