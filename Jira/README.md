@@ -4,6 +4,6 @@ These custom activities require a username/token combination for authentication.
 For the "Instance URL" field, the following are the default formats:
 <br>
 <ul>
-<li>On-premise instance - `http://ServerName:8080/rest/api/latest/`</li>
-<li>Cloud instance - `https://SiteName.atlassian.net/rest/api/latest/`</li>
+<li>On-premise instance - http://<SERVER_NAME>:8080/rest/api/latest/</li>
+<li>Cloud instance - https://<SITE_NAME>.atlassian.net/rest/api/latest/</li>
 </ul>
