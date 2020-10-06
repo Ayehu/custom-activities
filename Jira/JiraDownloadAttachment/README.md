@@ -31,3 +31,7 @@ Below is an example of the JSON contained within that cell:
 Here, we see a key named "id" which will serve as our "Attachment ID".  We also see a key named "filename" which will serve as our "Attachment Filename".
 <br><br>
 In the <b>JiraDownloadFile</b> activity configuration, use only the folder path for the "Save Folder" field (e.g. "C:\my\folder\").  By default, the same filename from the Jira ticket will be used when saving.  You can optionally select the "Save attachment with a custom filename" checkbox and then specify that custom filename in the field that becomes enabled.
+<br><br>
+See the example below:
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/Jira/JiraDownloadAttachment/Activity_Example_Screenshot.jpg">
