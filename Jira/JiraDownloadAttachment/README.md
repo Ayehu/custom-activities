@@ -1,7 +1,7 @@
 In order to retrieve the attachment ID and attachment filename needed to execute this activity, use the default out-of-the-box Jira integration within Ayehu NG.  This is achieved by using the <b>JiraGetIssue</b> activity and then extracting the contents of the "Attachment" column.
 <br><br>
 Below is an example of the JSON contained within that cell:
-<b>
+<br>
 <pre>
 {
   "self": "https://xxxx.atlassian.net/rest/api/2/attachment/32209",
