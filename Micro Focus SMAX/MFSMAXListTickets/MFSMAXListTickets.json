@@ -1,0 +1,172 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MFSMAXListTickets",
+    "description": "Retrieve tickets in Micro Focus SMAX.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://us1-smax.saas.microfocus.com",
+          "required": true,
+          "key": "instanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCEURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantID",
+          "label": "Tenant ID",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "Request",
+          "required": true,
+          "key": "recordType",
+          "label": "Record Type",
+          "labelKey": "RECORDTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "Request",
+              "value": "Request"
+            },
+            {
+              "key": "Incident",
+              "value": "Incident"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "fields",
+          "label": "Fields",
+          "labelKey": "FIELDS_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "filter",
+          "label": "Filter",
+          "labelKey": "FILTER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "4000",
+          "required": true,
+          "key": "maxResults",
+          "label": "Max. Results",
+          "labelKey": "MAXRESULTS_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "1",
+          "required": true,
+          "key": "pageNumber",
+          "label": "Page Number",
+          "labelKey": "PAGENUMBER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "key": "customSorting",
+          "label": "Sort tickets by specific field.",
+          "baseType": "control",
+          "labelKey": "CUSTOMSORTING_VALUE",
+          "controlType": "checkbox",
+          "value": "",
+          "checked": true,
+          "styleClass": "",
+          "convertBoolTo": "number",
+          "valueChangesActions": {
+            "false": {
+              "disable": [
+                "orderBy",
+                "orderByField"
+              ]
+            },
+            "true": {
+              "enable": [
+                "orderBy",
+                "orderByField"
+              ]
+            }
+          }
+        },
+        {
+          "value": "desc",
+          "required": true,
+          "key": "orderBy",
+          "label": "Order By",
+          "labelKey": "ORDERBY_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "desc"
+            },
+            {
+              "key": "2",
+              "value": "asc"
+            }
+          ]
+        },
+        {
+          "value": "Id",
+          "required": true,
+          "key": "orderByField",
+          "label": "Sort By",
+          "labelKey": "ORDERBYFIELD_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "Id",
+              "value": "Id"
+            },
+            {
+              "key": "LastUpdateTime",
+              "value": "LastUpdateTime"
+            }
+          ]
+        },
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
