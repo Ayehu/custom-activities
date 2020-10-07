@@ -1,0 +1,144 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Update the RDP proxy configuration",
+    "description": "Update the RDP proxy configuration",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "allowSiteSelectionForActiveDirectoryAccounts",
+          "label": "AllowSiteSelectionForActiveDirectoryAccounts",
+          "labelKey": "allowSiteSelectionForActiveDirectoryAccounts_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "daysToKeepOperationalLogs",
+          "label": "DaysToKeepOperationalLogs",
+          "labelKey": "daysToKeepOperationalLogs_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableRdpProxy",
+          "label": "EnableRdpProxy",
+          "labelKey": "enableRdpProxy_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableRemoteHostValidation",
+          "label": "EnableRemoteHostValidation",
+          "labelKey": "enableRemoteHostValidation_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isCloud",
+          "label": "IsCloud",
+          "labelKey": "isCloud_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "proxyNewSecretsByDefault",
+          "label": "ProxyNewSecretsByDefault",
+          "labelKey": "proxyNewSecretsByDefault_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "rdpProxyPort",
+          "label": "RdpProxyPort",
+          "labelKey": "rdpProxyPort_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "rdpServerCertificate",
+          "label": "RdpServerCertificate",
+          "labelKey": "rdpServerCertificate_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "rdpServerCertificateFileName",
+          "label": "RdpServerCertificateFileName",
+          "labelKey": "rdpServerCertificateFileName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "rdpServerCertificatePassword",
+          "label": "RdpServerCertificatePassword",
+          "labelKey": "rdpServerCertificatePassword_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "config",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

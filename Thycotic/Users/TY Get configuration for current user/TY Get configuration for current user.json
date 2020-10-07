@@ -1,0 +1,360 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Get configuration for current user",
+    "description": "Get configuration for current user",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dirty",
+          "label": "Dirty",
+          "labelKey": "dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "displayName_dirty",
+          "label": "DisplayName_dirty",
+          "labelKey": "displayName_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "displayName_value",
+          "label": "DisplayName_value",
+          "labelKey": "displayName_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "duoTwoFactor_dirty",
+          "label": "DuoTwoFactor_dirty",
+          "labelKey": "duoTwoFactor_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "duoTwoFactor_value",
+          "label": "DuoTwoFactor_value",
+          "labelKey": "duoTwoFactor_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "emailAddress_dirty",
+          "label": "EmailAddress_dirty",
+          "labelKey": "emailAddress_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "emailAddress_value",
+          "label": "EmailAddress_value",
+          "labelKey": "emailAddress_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enabled_dirty",
+          "label": "Enabled_dirty",
+          "labelKey": "enabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enabled_value",
+          "label": "Enabled_value",
+          "labelKey": "enabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fido2TwoFactor_dirty",
+          "label": "Fido2TwoFactor_dirty",
+          "labelKey": "fido2TwoFactor_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fido2TwoFactor_value",
+          "label": "Fido2TwoFactor_value",
+          "labelKey": "fido2TwoFactor_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "groupOwners____",
+          "label": "GroupOwners[][]",
+          "labelKey": "groupOwners_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "_id",
+          "label": "_id",
+          "labelKey": "_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isApplicationAccount_dirty",
+          "label": "IsApplicationAccount_dirty",
+          "labelKey": "isApplicationAccount_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isApplicationAccount_value",
+          "label": "IsApplicationAccount_value",
+          "labelKey": "isApplicationAccount_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isGroupOwnerUpdate",
+          "label": "IsGroupOwnerUpdate",
+          "labelKey": "isGroupOwnerUpdate_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isLockedOut_dirty",
+          "label": "IsLockedOut_dirty",
+          "labelKey": "isLockedOut_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isLockedOut_value",
+          "label": "IsLockedOut_value",
+          "labelKey": "isLockedOut_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "loginFailures_dirty",
+          "label": "LoginFailures_dirty",
+          "labelKey": "loginFailures_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "loginFailures_value",
+          "label": "LoginFailures_value",
+          "labelKey": "loginFailures_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "oathTwoFactor_dirty",
+          "label": "OathTwoFactor_dirty",
+          "labelKey": "oathTwoFactor_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "oathTwoFactor_value",
+          "label": "OathTwoFactor_value",
+          "labelKey": "oathTwoFactor_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password_dirty",
+          "label": "Password_dirty",
+          "labelKey": "password_dirty_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password_value",
+          "label": "Password_value",
+          "labelKey": "password_value_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "radiusTwoFactor_dirty",
+          "label": "RadiusTwoFactor_dirty",
+          "labelKey": "radiusTwoFactor_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "radiusTwoFactor_value",
+          "label": "RadiusTwoFactor_value",
+          "labelKey": "radiusTwoFactor_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "radiusUserName_dirty",
+          "label": "RadiusUserName_dirty",
+          "labelKey": "radiusUserName_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "radiusUserName_value",
+          "label": "RadiusUserName_value",
+          "labelKey": "radiusUserName_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timeOptionId_dirty",
+          "label": "TimeOptionId_dirty",
+          "labelKey": "timeOptionId_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timeOptionId_value",
+          "label": "TimeOptionId_value",
+          "labelKey": "timeOptionId_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "twoFactor_dirty",
+          "label": "TwoFactor_dirty",
+          "labelKey": "twoFactor_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "twoFactor_value",
+          "label": "TwoFactor_value",
+          "labelKey": "twoFactor_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

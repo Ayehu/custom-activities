@@ -1,0 +1,180 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Create User",
+    "description": "Create a new user",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "adGuid",
+          "label": "AdGuid",
+          "labelKey": "adGuid_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "displayName",
+          "label": "DisplayName",
+          "labelKey": "displayName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "domainId",
+          "label": "DomainId",
+          "labelKey": "domainId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "duoTwoFactor",
+          "label": "DuoTwoFactor",
+          "labelKey": "duoTwoFactor_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "emailAddress",
+          "label": "EmailAddress",
+          "labelKey": "emailAddress_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enabled",
+          "label": "Enabled",
+          "labelKey": "enabled_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fido2TwoFactor",
+          "label": "Fido2TwoFactor",
+          "labelKey": "fido2TwoFactor_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isApplicationAccount",
+          "label": "IsApplicationAccount",
+          "labelKey": "isApplicationAccount_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "oathTwoFactor",
+          "label": "OathTwoFactor",
+          "labelKey": "oathTwoFactor_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "radiusTwoFactor",
+          "label": "RadiusTwoFactor",
+          "labelKey": "radiusTwoFactor_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "radiusUserName",
+          "label": "RadiusUserName",
+          "labelKey": "radiusUserName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "twoFactor",
+          "label": "TwoFactor",
+          "labelKey": "twoFactor_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "userName",
+          "label": "UserName",
+          "labelKey": "userName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "users",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

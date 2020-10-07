@@ -1,0 +1,189 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Update the SSH proxy configuration",
+    "description": "Update the SSH proxy configuration",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "daysToKeepOperationalLogs",
+          "label": "DaysToKeepOperationalLogs",
+          "labelKey": "daysToKeepOperationalLogs_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableProxyInactivityTimeout",
+          "label": "EnableProxyInactivityTimeout",
+          "labelKey": "enableProxyInactivityTimeout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableSshProxy",
+          "label": "EnableSshProxy",
+          "labelKey": "enableSshProxy_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableSshTerminal",
+          "label": "EnableSshTerminal",
+          "labelKey": "enableSshTerminal_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableSshTunneling",
+          "label": "EnableSshTunneling",
+          "labelKey": "enableSshTunneling_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableTerminalInactivityTimeout",
+          "label": "EnableTerminalInactivityTimeout",
+          "labelKey": "enableTerminalInactivityTimeout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isCloud",
+          "label": "IsCloud",
+          "labelKey": "isCloud_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "proxyInactivityTimeoutSeconds",
+          "label": "ProxyInactivityTimeoutSeconds",
+          "labelKey": "proxyInactivityTimeoutSeconds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "proxyNewSecretsByDefault",
+          "label": "ProxyNewSecretsByDefault",
+          "labelKey": "proxyNewSecretsByDefault_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sshHostKey",
+          "label": "SshHostKey",
+          "labelKey": "sshHostKey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sshProxyBanner",
+          "label": "SshProxyBanner",
+          "labelKey": "sshProxyBanner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sshProxyHostFingerprint",
+          "label": "SshProxyHostFingerprint",
+          "labelKey": "sshProxyHostFingerprint_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sshProxyPort",
+          "label": "SshProxyPort",
+          "labelKey": "sshProxyPort_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sshTerminalBanner",
+          "label": "SshTerminalBanner",
+          "labelKey": "sshTerminalBanner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "terminalInactivityTimeoutSeconds",
+          "label": "TerminalInactivityTimeoutSeconds",
+          "labelKey": "terminalInactivityTimeoutSeconds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "config",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

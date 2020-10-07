@@ -1,0 +1,158 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Create Script",
+    "description": "Create a new Script",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "active",
+          "label": "Active",
+          "labelKey": "active_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "additionalData",
+          "label": "AdditionalData",
+          "labelKey": "additionalData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "odbcConnectionStringArgs____",
+          "label": "OdbcConnectionStringArgs[][]",
+          "labelKey": "odbcConnectionStringArgs_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "script",
+          "label": "Script",
+          "labelKey": "script_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "scriptCategoryId",
+          "label": "ScriptCategoryId",
+          "labelKey": "scriptCategoryId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "scriptCategoryName",
+          "label": "ScriptCategoryName",
+          "labelKey": "scriptCategoryName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "scriptType",
+          "label": "ScriptType",
+          "labelKey": "scriptType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "PowerShell",
+              "value": "PowerShell"
+            },
+            {
+              "key": "SQL",
+              "value": "SQL"
+            },
+            {
+              "key": "SSH",
+              "value": "SSH"
+            }
+          ],
+          "value": "PowerShell"
+        },
+        {
+          "required": false,
+          "key": "usageCount",
+          "label": "UsageCount",
+          "labelKey": "usageCount_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "userscripts",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

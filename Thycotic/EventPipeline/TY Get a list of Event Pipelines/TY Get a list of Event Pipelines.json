@@ -1,0 +1,135 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Get a list of Event Pipelines",
+    "description": "Returns a list of Event Pipelines that meet the paging/searching criterea",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_eventPipelineName",
+          "label": "Filter.eventPipelineName",
+          "labelKey": "filter_eventPipelineName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_eventPipelinePolicyId",
+          "label": "Filter.eventPipelinePolicyId",
+          "labelKey": "filter_eventPipelinePolicyId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_includeActive",
+          "label": "Filter.includeActive",
+          "labelKey": "filter_includeActive_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_includeInactive",
+          "label": "Filter.includeInactive",
+          "labelKey": "filter_includeInactive_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "skip",
+          "label": "Skip",
+          "labelKey": "skip_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__direction",
+          "label": "SortBy[0].direction",
+          "labelKey": "sortBy0_direction_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__name",
+          "label": "SortBy[0].name",
+          "labelKey": "sortBy0_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__priority",
+          "label": "SortBy[0].priority",
+          "labelKey": "sortBy0_priority_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "take",
+          "label": "Take",
+          "labelKey": "take_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "list",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

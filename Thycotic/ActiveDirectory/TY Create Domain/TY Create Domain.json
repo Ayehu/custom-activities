@@ -1,0 +1,189 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Create Domain",
+    "description": "Create a new Domain",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "active",
+          "label": "Active",
+          "labelKey": "active_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "discoverSpecificOUs",
+          "label": "DiscoverSpecificOUs",
+          "labelKey": "discoverSpecificOUs_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "domainName",
+          "label": "DomainName",
+          "labelKey": "domainName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableDiscovery",
+          "label": "EnableDiscovery",
+          "labelKey": "enableDiscovery_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableLogin",
+          "label": "EnableLogin",
+          "labelKey": "enableLogin_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "friendlyName",
+          "label": "FriendlyName",
+          "labelKey": "friendlyName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "requireDuoAuthentication",
+          "label": "RequireDuoAuthentication",
+          "labelKey": "requireDuoAuthentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "requireEmailAuthentication",
+          "label": "RequireEmailAuthentication",
+          "labelKey": "requireEmailAuthentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "requireFido2Authentication",
+          "label": "RequireFido2Authentication",
+          "labelKey": "requireFido2Authentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "requireOATHAuthentication",
+          "label": "RequireOATHAuthentication",
+          "labelKey": "requireOATHAuthentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "requireRadiusAuthentication",
+          "label": "RequireRadiusAuthentication",
+          "labelKey": "requireRadiusAuthentication_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "siteId",
+          "label": "SiteId",
+          "labelKey": "siteId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "syncSecretId",
+          "label": "SyncSecretId",
+          "labelKey": "syncSecretId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "useAES256",
+          "label": "UseAES256",
+          "labelKey": "useAES256_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "useSecureLDAP",
+          "label": "UseSecureLDAP",
+          "labelKey": "useSecureLDAP_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "domains",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

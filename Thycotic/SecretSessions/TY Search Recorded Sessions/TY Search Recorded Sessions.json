@@ -1,0 +1,261 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Search Recorded Sessions",
+    "description": "Search, filter, sort, and page recorded sessions",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_active",
+          "label": "Filter.active",
+          "labelKey": "filter_active_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_dateRange",
+          "label": "Filter.dateRange",
+          "labelKey": "filter_dateRange_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_endDate",
+          "label": "Filter.endDate",
+          "labelKey": "filter_endDate_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_endTime",
+          "label": "Filter.endTime",
+          "labelKey": "filter_endTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_folderId",
+          "label": "Filter.folderId",
+          "labelKey": "filter_folderId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_groupIds____",
+          "label": "Filter.groupIds[][]",
+          "labelKey": "filter_groupIds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_includeNonSecretServerSessions",
+          "label": "Filter.includeNonSecretServerSessions",
+          "labelKey": "filter_includeNonSecretServerSessions_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_includeOnlyLaunchedSuccessfully",
+          "label": "Filter.includeOnlyLaunchedSuccessfully",
+          "labelKey": "filter_includeOnlyLaunchedSuccessfully_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_includeRestricted",
+          "label": "Filter.includeRestricted",
+          "labelKey": "filter_includeRestricted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_includeSubFolders",
+          "label": "Filter.includeSubFolders",
+          "labelKey": "filter_includeSubFolders_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_launcherTypeId",
+          "label": "Filter.launcherTypeId",
+          "labelKey": "filter_launcherTypeId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_searchText",
+          "label": "Filter.searchText",
+          "labelKey": "filter_searchText_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_searchTypes____",
+          "label": "Filter.searchTypes[][]",
+          "labelKey": "filter_searchTypes_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_secretIds____",
+          "label": "Filter.secretIds[][]",
+          "labelKey": "filter_secretIds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_siteId",
+          "label": "Filter.siteId",
+          "labelKey": "filter_siteId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_startDate",
+          "label": "Filter.startDate",
+          "labelKey": "filter_startDate_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_startTime",
+          "label": "Filter.startTime",
+          "labelKey": "filter_startTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_userIds____",
+          "label": "Filter.userIds[][]",
+          "labelKey": "filter_userIds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "skip",
+          "label": "Skip",
+          "labelKey": "skip_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__direction",
+          "label": "SortBy[0].direction",
+          "labelKey": "sortBy0_direction_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__name",
+          "label": "SortBy[0].name",
+          "labelKey": "sortBy0_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__priority",
+          "label": "SortBy[0].priority",
+          "labelKey": "sortBy0_priority_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "take",
+          "label": "Take",
+          "labelKey": "take_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "recorded-sessions",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

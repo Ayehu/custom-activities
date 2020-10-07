@@ -1,0 +1,189 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Patch a Folder",
+    "description": "Patch a single secret folder by ID",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "allowedTemplates____",
+          "label": "AllowedTemplates[][]",
+          "labelKey": "allowedTemplates_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "allowRemoveOwner",
+          "label": "AllowRemoveOwner",
+          "labelKey": "allowRemoveOwner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dirty",
+          "label": "Dirty",
+          "labelKey": "dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableInheritSecretPolicy_dirty",
+          "label": "EnableInheritSecretPolicy_dirty",
+          "labelKey": "enableInheritSecretPolicy_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableInheritSecretPolicy_value",
+          "label": "EnableInheritSecretPolicy_value",
+          "labelKey": "enableInheritSecretPolicy_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "folderName_dirty",
+          "label": "FolderName_dirty",
+          "labelKey": "folderName_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "folderName_value",
+          "label": "FolderName_value",
+          "labelKey": "folderName_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "permissons____",
+          "label": "Permissons[][]",
+          "labelKey": "permissons_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "folderAccessRoleId",
+          "label": "FolderAccessRoleId",
+          "labelKey": "folderAccessRoleId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "groupId",
+          "label": "GroupId",
+          "labelKey": "groupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "secretAccessRoleId",
+          "label": "SecretAccessRoleId",
+          "labelKey": "secretAccessRoleId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "secretPolicy_dirty",
+          "label": "SecretPolicy_dirty",
+          "labelKey": "secretPolicy_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "secretPolicy_value",
+          "label": "SecretPolicy_value",
+          "labelKey": "secretPolicy_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
