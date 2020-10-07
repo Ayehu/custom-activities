@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<ActivityExportMetadata>
+  <ActivityMetadata>
+    <Name>ReadFileInBasesixtyFour</Name>
+    <Label>ReadFileInBasesixtyFour</Label>
+    <Color>#EF712F</Color>
+    <Description>Reads a local file and convert to base 64</Description>
+  </ActivityMetadata>
+  <ActivityGroupMetadata>
+    <Label>Custom Activities</Label>
+    <LabelKey>CUSTOM_ACTIVITY_DESIGNER</LabelKey>
+    <Icon>fa-wrench</Icon>
+    <Color>#EF712F</Color>
+    <Description>shows custom activities</Description>
+  </ActivityGroupMetadata>
+  <ActivitySourceMetadata>
+    <SourceCode>&lt;Activity&gt;
+  &lt;Name&gt;ReadFileInBasesixtyFour&lt;/Name&gt;
+  &lt;Version&gt;1.0.0.2&lt;/Version&gt;
+  &lt;Platform&gt;Windows&lt;/Platform&gt;
+  &lt;SourceType&gt;Executor&lt;/SourceType&gt;
+  &lt;SourceCodeType&gt;CSHARP&lt;/SourceCodeType&gt;
+  &lt;Enc&gt;False&lt;/Enc&gt;
+  &lt;Remark /&gt;
+  &lt;RequiresMap&gt;False&lt;/RequiresMap&gt;
+  &lt;GlobalMemoryRequests /&gt;
+  &lt;Assemblies&gt;
+    &lt;Assembly type="0"&gt;System.XML.dll&lt;/Assembly&gt;
+    &lt;Assembly type="0"&gt;System.Data.dll&lt;/Assembly&gt;
+    &lt;Assembly type="0"&gt;System.dll&lt;/Assembly&gt;
+  &lt;/Assemblies&gt;
+  &lt;SourceCode&gt;dXNpbmcgQXllaHUuU2RrLkFjdGl2aXR5Q3JlYXRpb24uSW50ZXJmYWNlczsKdXNpbmcgQXllaHUuU2RrLkFjdGl2aXR5Q3JlYXRpb24uRXh0ZW5zaW9uOwp1c2luZyBBeWVodS5TZGsuQWN0aXZpdHlDcmVhdGlvbi5IZWxwZXJzOwp1c2luZyBTeXN0ZW07CgpuYW1lc3BhY2UgQXllaHUuU2RrLkFjdGl2aXR5Q3JlYXRpb24KewoKICAgIHB1YmxpYyBjbGFzcyBSZWFkRmlsZSA6IElBY3Rpdml0eUFzeW5jCiAgICB7CgogICAgICAgIHB1YmxpYyBzdHJpbmcgcGF0aDsKCiAgICAgICAgcHVibGljIGFzeW5jIFN5c3RlbS5UaHJlYWRpbmcuVGFza3MuVGFzazxJQ3VzdG9tQWN0aXZpdHlSZXN1bHQ+IEV4ZWN1dGUoKQogICAgICAgIHsKICAgICAgICAgICAKICAgICAgICAgICAgaWYgKFN5c3RlbS5JTy5GaWxlLkV4aXN0cyhwYXRoKSA9PSBmYWxzZSkKICAgICAgICAgICAgICAgIHRocm93IG5ldyBFeGNlcHRpb24oIkZpbGUgbm90IGZvdW5kIik7CgogICAgICAgICAgICByZXR1cm4gdGhpcy5HZW5lcmF0ZUFjdGl2aXR5UmVzdWx0KENvbnZlcnQuVG9CYXNlNjRTdHJpbmcoU3lzdGVtLklPLkZpbGUuUmVhZEFsbEJ5dGVzKHBhdGgpKSk7CgogICAgICAgIH0KCiAgICB9Cn0K&lt;/SourceCode&gt;
+&lt;/Activity&gt;</SourceCode>
+  </ActivitySourceMetadata>
+</ActivityExportMetadata>
