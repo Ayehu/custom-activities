@@ -19,6 +19,15 @@
         },
         {
           "required": false,
+          "key": "ssoLoginModel",
+          "label": "SsoLoginModel",
+          "labelKey": "ssoLoginModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "requestData____",
           "label": "RequestData[][]",
           "labelKey": "requestData_l",

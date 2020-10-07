@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "duties",
+          "label": "Duties",
+          "labelKey": "duties_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

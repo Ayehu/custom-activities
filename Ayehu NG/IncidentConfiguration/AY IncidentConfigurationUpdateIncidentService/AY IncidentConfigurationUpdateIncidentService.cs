@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string incidentService = "";
+    
     public string id_p = "";
     
     public string name_p = "";

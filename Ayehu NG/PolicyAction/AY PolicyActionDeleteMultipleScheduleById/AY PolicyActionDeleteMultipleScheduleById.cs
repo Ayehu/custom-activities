@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string multipleId = "";
+    
     private bool omitJsonEmptyorNull = true;
     
     private string contentType = "application/json";
@@ -34,7 +36,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string postData {
         get {
-            return (char)34 + payloadjson + (char)34;
+            return string.Format("\"{0}\"",multipleId);
         }
     }
     

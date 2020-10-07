@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "response",
+          "label": "Response",
+          "labelKey": "response_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "entityType",
           "label": "EntityType",
           "labelKey": "entityType_l",

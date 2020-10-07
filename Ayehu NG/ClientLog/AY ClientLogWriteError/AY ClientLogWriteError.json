@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "model",
+          "label": "Model",
+          "labelKey": "model_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "required": true,
           "key": "error",
           "label": "Error",

@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "filter",
+          "label": "Filter",
+          "labelKey": "filter_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "users____",
           "label": "Users[][]",
           "labelKey": "users_l",

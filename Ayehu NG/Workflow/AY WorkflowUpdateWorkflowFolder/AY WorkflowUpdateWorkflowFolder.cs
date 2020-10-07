@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string workflowFolder = "";
+    
     public string workflowsAmount = "";
     
     public string foldersAmount = "";

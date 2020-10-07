@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "multipleId",
+          "label": "MultipleId",
+          "labelKey": "multipleId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

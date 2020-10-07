@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string req = "";
+    
     public string multipleId__ = "";
     
     public string bEnable = "";

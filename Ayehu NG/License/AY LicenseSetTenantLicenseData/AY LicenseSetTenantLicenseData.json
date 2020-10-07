@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "Document",
+          "label": "Document",
+          "labelKey": "Document_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

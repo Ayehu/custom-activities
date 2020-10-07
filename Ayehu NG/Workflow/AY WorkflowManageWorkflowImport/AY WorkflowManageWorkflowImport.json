@@ -66,6 +66,15 @@
           "value": "Uploading"
         },
         {
+          "required": false,
+          "key": "relatedData",
+          "label": "RelatedData",
+          "labelKey": "relatedData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

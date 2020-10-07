@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string model = "";
+    
     public string controls__ = "";
     
     public string key = "";

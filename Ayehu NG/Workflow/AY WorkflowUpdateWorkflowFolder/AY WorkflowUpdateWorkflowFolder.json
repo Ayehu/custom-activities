@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "workflowFolder",
+          "label": "WorkflowFolder",
+          "labelKey": "workflowFolder_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "workflowsAmount",
           "label": "WorkflowsAmount",
           "labelKey": "workflowsAmount_l",

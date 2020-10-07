@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "filterEntity",
+          "label": "FilterEntity",
+          "labelKey": "filterEntity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "stringToSearch",
           "label": "StringToSearch",
           "labelKey": "stringToSearch_l",

@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "activityIds",
+          "label": "ActivityIds",
+          "labelKey": "activityIds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

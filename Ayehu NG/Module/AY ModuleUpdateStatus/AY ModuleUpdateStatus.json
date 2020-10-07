@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "req",
+          "label": "Req",
+          "labelKey": "req_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "ids____",
           "label": "Ids[][]",
           "labelKey": "ids_l",

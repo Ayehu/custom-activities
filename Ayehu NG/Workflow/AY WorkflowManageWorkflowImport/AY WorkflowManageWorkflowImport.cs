@@ -22,6 +22,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string workflowImportStatus = "";
     
+    public string relatedData = "";
+    
     private bool omitJsonEmptyorNull = true;
     
     private string contentType = "application/json";
@@ -36,7 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string postData {
         get {
-            return "";
+            return string.Format("\"{0}\"",relatedData);
         }
     }
     

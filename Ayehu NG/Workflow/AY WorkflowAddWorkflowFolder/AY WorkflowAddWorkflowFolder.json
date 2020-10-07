@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "workflowGroup",
+          "label": "WorkflowGroup",
+          "labelKey": "workflowGroup_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "workflowsAmount",
           "label": "WorkflowsAmount",
           "labelKey": "workflowsAmount_l",

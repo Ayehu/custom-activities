@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "requestQueueEntity",
+          "label": "RequestQueueEntity",
+          "labelKey": "requestQueueEntity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "key",
           "label": "Key",
           "labelKey": "key_l",

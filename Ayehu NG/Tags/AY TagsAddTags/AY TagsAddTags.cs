@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string NewTagsModel = "";
+    
     public string tags__ = "";
     
     public string description = "";

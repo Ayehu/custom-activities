@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "duty",
+          "label": "Duty",
+          "labelKey": "duty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",

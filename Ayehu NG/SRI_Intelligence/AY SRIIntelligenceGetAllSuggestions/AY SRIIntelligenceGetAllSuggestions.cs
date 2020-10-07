@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string filterEntity = "";
+    
     public string stringToSearch = "";
     
     public string id_p = "";

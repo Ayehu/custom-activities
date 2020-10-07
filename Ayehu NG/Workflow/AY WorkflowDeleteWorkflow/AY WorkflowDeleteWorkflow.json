@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "model",
+          "label": "Model",
+          "labelKey": "model_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "workflowsIds____",
           "label": "WorkflowsIds[][]",
           "labelKey": "workflowsIds_l",

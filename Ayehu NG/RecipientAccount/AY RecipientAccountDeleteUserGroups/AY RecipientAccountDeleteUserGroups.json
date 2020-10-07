@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "userGroups",
+          "label": "UserGroups",
+          "labelKey": "userGroups_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "requestModel",
+          "label": "RequestModel",
+          "labelKey": "requestModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "eventId",
           "label": "EventId",
           "labelKey": "eventId_l",

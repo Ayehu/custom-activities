@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "workflowDesigner",
+          "label": "WorkflowDesigner",
+          "labelKey": "workflowDesigner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "workflowId",
           "label": "WorkflowId",
           "labelKey": "workflowId_l",

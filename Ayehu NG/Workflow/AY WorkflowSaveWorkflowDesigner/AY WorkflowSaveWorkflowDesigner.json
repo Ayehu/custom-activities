@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "workFlowData",
+          "label": "WorkFlowData",
+          "labelKey": "workFlowData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "workflowId",
           "label": "WorkflowId",
           "labelKey": "workflowId_l",

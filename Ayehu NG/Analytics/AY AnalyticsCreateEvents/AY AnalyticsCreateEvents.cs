@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string events = "";
+    
     public string eventId = "";
     
     private bool omitJsonEmptyorNull = true;

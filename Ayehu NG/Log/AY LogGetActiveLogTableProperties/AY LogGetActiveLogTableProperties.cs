@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string requestModel = "";
+    
     public string eventId = "";
     
     public string lastModifyTimeStamp = "";

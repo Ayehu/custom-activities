@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "filterModel",
+          "label": "FilterModel",
+          "labelKey": "filterModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "formName",
           "label": "FormName",
           "labelKey": "formName_l",

@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "NewTagsModel",
+          "label": "NewTagsModel",
+          "labelKey": "NewTagsModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "tags____",
           "label": "Tags[][]",
           "labelKey": "tags_l",

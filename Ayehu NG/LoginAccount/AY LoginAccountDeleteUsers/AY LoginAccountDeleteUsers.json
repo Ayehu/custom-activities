@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "users",
+          "label": "Users",
+          "labelKey": "users_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

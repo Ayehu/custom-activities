@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "ids",
+          "label": "Ids",
+          "labelKey": "ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

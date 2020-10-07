@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "filter",
+          "label": "Filter",
+          "labelKey": "filter_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "conditions____",
           "label": "Conditions[][]",
           "labelKey": "conditions_l",

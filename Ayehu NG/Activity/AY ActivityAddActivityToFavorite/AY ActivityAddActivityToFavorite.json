@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "activityToAdd",
+          "label": "ActivityToAdd",
+          "labelKey": "activityToAdd_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "name_p",
           "label": "Name",
           "labelKey": "name_l",

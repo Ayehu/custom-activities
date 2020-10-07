@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "workflowIds",
+          "label": "WorkflowIds",
+          "labelKey": "workflowIds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

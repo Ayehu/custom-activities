@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string accessRestrictionEntity = "";
+    
     public string id_p = "";
     
     public string name_p = "";

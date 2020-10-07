@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "parametres",
+          "label": "Parametres",
+          "labelKey": "parametres_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "queryString",
           "label": "QueryString",
           "labelKey": "queryString_l",

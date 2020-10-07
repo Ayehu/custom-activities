@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "brainInsightWorkflowCreateModel",
+          "label": "BrainInsightWorkflowCreateModel",
+          "labelKey": "brainInsightWorkflowCreateModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "brainInsightId",
           "label": "BrainInsightId",
           "labelKey": "brainInsightId_l",

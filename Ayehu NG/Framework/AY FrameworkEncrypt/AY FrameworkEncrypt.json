@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "field",
+          "label": "Field",
+          "labelKey": "field_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

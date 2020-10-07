@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "activityAsBase64",
+          "label": "ActivityAsBase64",
+          "labelKey": "activityAsBase64_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

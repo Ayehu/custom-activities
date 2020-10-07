@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "accountSettings",
+          "label": "AccountSettings",
+          "labelKey": "accountSettings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "userId",
           "label": "UserId",
           "labelKey": "userId_l",

@@ -20,7 +20,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
-    public string workflowIds = "";
+    public string model = "";
+    
+    public string workflowIds__ = "";
     
     private bool omitJsonEmptyorNull = true;
     
@@ -36,7 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string postData {
         get {
-            return "";
+            return string.Format("\"{0}\"",model);
         }
     }
     
@@ -48,7 +50,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {{"workflowIds[]",workflowIds}};
+            return new Dictionary<string, string>() {};
         }
     }
 

@@ -20,6 +20,8 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
+    public string form = "";
+    
     public string moduleId = "";
     
     public string moduleType = "";

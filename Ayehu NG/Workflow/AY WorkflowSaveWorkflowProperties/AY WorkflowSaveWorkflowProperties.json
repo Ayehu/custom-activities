@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "workflowToSave",
+          "label": "WorkflowToSave",
+          "labelKey": "workflowToSave_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "dateCreated",
           "label": "DateCreated",
           "labelKey": "dateCreated_l",

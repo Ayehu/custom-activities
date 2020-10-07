@@ -19,6 +19,15 @@
         },
         {
           "required": false,
+          "key": "userInfo",
+          "label": "UserInfo",
+          "labelKey": "userInfo_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "companyName",
           "label": "CompanyName",
           "labelKey": "companyName_l",

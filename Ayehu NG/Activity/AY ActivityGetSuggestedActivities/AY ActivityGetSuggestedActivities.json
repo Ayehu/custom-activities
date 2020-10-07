@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "activity",
+          "label": "Activity",
+          "labelKey": "activity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "name_p",
           "label": "Name",
           "labelKey": "name_l",

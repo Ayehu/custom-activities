@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "request",
+          "label": "Request",
+          "labelKey": "request_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "dateType",
           "label": "DateType",
           "labelKey": "dateType_l",

@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "NewTag",
+          "label": "NewTag",
+          "labelKey": "NewTag_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "description",
           "label": "Description",
           "labelKey": "description_l",

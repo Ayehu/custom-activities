@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "filter",
+          "label": "Filter",
+          "labelKey": "filter_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "Severities____",
           "label": "Severities[][]",
           "labelKey": "Severities_l",

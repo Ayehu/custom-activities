@@ -28,6 +28,15 @@
         },
         {
           "required": false,
+          "key": "form",
+          "label": "Form",
+          "labelKey": "form_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
           "key": "moduleId",
           "label": "ModuleId",
           "labelKey": "moduleId_l",
