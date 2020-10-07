@@ -1,0 +1,216 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "LM add device group",
+    "description": "LM add device group",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "accessid",
+          "label": "Accessid",
+          "labelKey": "accessid_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Accesskey",
+          "labelKey": "accesskey_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "appliesTo",
+          "label": "AppliesTo",
+          "labelKey": "appliesTo_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "detailLink",
+          "label": "DetailLink",
+          "labelKey": "detailLink_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "noPermissionServices____",
+          "label": "NoPermissionServices[][]",
+          "labelKey": "noPermissionServices_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nonPermissionErrors____",
+          "label": "NonPermissionErrors[][]",
+          "labelKey": "nonPermissionErrors_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "customProperties____",
+          "label": "CustomProperties[][]",
+          "labelKey": "customProperties_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "defaultCollectorId",
+          "label": "DefaultCollectorId",
+          "labelKey": "defaultCollectorId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "disableAlerting",
+          "label": "DisableAlerting",
+          "labelKey": "disableAlerting_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableNetflow",
+          "label": "EnableNetflow",
+          "labelKey": "enableNetflow_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "gcpTestResult_detailLink",
+          "label": "GcpTestResult_detailLink",
+          "labelKey": "gcpTestResult_detailLink_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "noPermissionServices____",
+          "label": "NoPermissionServices[][]",
+          "labelKey": "noPermissionServices_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nonPermissionErrors____",
+          "label": "NonPermissionErrors[][]",
+          "labelKey": "nonPermissionErrors_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "groupType",
+          "label": "GroupType",
+          "labelKey": "groupType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "_name",
+          "label": "_name",
+          "labelKey": "_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "parentId",
+          "label": "ParentId",
+          "labelKey": "parentId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "groups",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

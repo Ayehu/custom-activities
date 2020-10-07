@@ -1,0 +1,360 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "LM update collector",
+    "description": "LM update collector",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "accessid",
+          "label": "Accessid",
+          "labelKey": "accessid_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Accesskey",
+          "labelKey": "accesskey_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "forceUpdateFailedOverDevices",
+          "label": "ForceUpdateFailedOverDevices",
+          "labelKey": "forceUpdateFailedOverDevices_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "dayOfWeek",
+          "label": "DayOfWeek",
+          "labelKey": "dayOfWeek_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "hour",
+          "label": "Hour",
+          "labelKey": "hour_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "minute",
+          "label": "Minute",
+          "labelKey": "minute_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "occurrence",
+          "label": "Occurrence",
+          "labelKey": "occurrence_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timezone",
+          "label": "Timezone",
+          "labelKey": "timezone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "version",
+          "label": "Version",
+          "labelKey": "version_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "backupAgentId",
+          "label": "BackupAgentId",
+          "labelKey": "backupAgentId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "collectorGroupId",
+          "label": "CollectorGroupId",
+          "labelKey": "collectorGroupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "customProperties____",
+          "label": "CustomProperties[][]",
+          "labelKey": "customProperties_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "_description",
+          "label": "_description",
+          "labelKey": "_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableFailBack",
+          "label": "EnableFailBack",
+          "labelKey": "enableFailBack_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enableFailOverOnCollectorDevice",
+          "label": "EnableFailOverOnCollectorDevice",
+          "labelKey": "enableFailOverOnCollectorDevice_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalatingChainId",
+          "label": "EscalatingChainId",
+          "labelKey": "escalatingChainId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "needAutoCreateCollectorDevice",
+          "label": "NeedAutoCreateCollectorDevice",
+          "labelKey": "needAutoCreateCollectorDevice_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "numberOfInstances",
+          "label": "NumberOfInstances",
+          "labelKey": "numberOfInstances_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "onetimeDowngradeInfo_description",
+          "label": "OnetimeDowngradeInfo_description",
+          "labelKey": "onetimeDowngradeInfo_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "majorVersion",
+          "label": "MajorVersion",
+          "labelKey": "majorVersion_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "minorVersion",
+          "label": "MinorVersion",
+          "labelKey": "minorVersion_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "startEpoch",
+          "label": "StartEpoch",
+          "labelKey": "startEpoch_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "onetimeDowngradeInfo_timezone",
+          "label": "OnetimeDowngradeInfo_timezone",
+          "labelKey": "onetimeDowngradeInfo_timezone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "onetimeUpgradeInfo_description",
+          "label": "OnetimeUpgradeInfo_description",
+          "labelKey": "onetimeUpgradeInfo_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "onetimeUpgradeInfo_majorVersion",
+          "label": "OnetimeUpgradeInfo_majorVersion",
+          "labelKey": "onetimeUpgradeInfo_majorVersion_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "onetimeUpgradeInfo_minorVersion",
+          "label": "OnetimeUpgradeInfo_minorVersion",
+          "labelKey": "onetimeUpgradeInfo_minorVersion_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "onetimeUpgradeInfo_startEpoch",
+          "label": "OnetimeUpgradeInfo_startEpoch",
+          "labelKey": "onetimeUpgradeInfo_startEpoch_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "onetimeUpgradeInfo_timezone",
+          "label": "OnetimeUpgradeInfo_timezone",
+          "labelKey": "onetimeUpgradeInfo_timezone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "resendIval",
+          "label": "ResendIval",
+          "labelKey": "resendIval_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "specifiedCollectorDeviceGroupId",
+          "label": "SpecifiedCollectorDeviceGroupId",
+          "labelKey": "specifiedCollectorDeviceGroupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "suppressAlertClear",
+          "label": "SuppressAlertClear",
+          "labelKey": "suppressAlertClear_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
