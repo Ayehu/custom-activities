@@ -1,0 +1,204 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY GeneralCreateVariable",
+    "description": "AY GeneralCreateVariable",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "SetVariablesValueOnEveryIncidentUpdate",
+              "value": "SetVariablesValueOnEveryIncidentUpdate"
+            },
+            {
+              "key": "SetVariablesValueOnlyWhenIncidentIsCreated",
+              "value": "SetVariablesValueOnlyWhenIncidentIsCreated"
+            },
+            {
+              "key": "ReadOnlyMode",
+              "value": "ReadOnlyMode"
+            },
+            {
+              "key": "ReadWriteValue",
+              "value": "ReadWriteValue"
+            }
+          ],
+          "value": "SetVariablesValueOnEveryIncidentUpdate"
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tableHeaders____",
+          "label": "TableHeaders[][]",
+          "labelKey": "tableHeaders_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tableValues____",
+          "label": "TableValues[][]",
+          "labelKey": "tableValues_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "data____",
+          "label": "Data[][]",
+          "labelKey": "data_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "rowCount",
+          "label": "RowCount",
+          "labelKey": "rowCount_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "columnCount",
+          "label": "ColumnCount",
+          "labelKey": "columnCount_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "contentType",
+          "label": "ContentType",
+          "labelKey": "contentType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Text",
+              "value": "Text"
+            },
+            {
+              "key": "Table",
+              "value": "Table"
+            },
+            {
+              "key": "Masked",
+              "value": "Masked"
+            }
+          ],
+          "value": "Text"
+        },
+        {
+          "required": false,
+          "key": "layout",
+          "label": "Layout",
+          "labelKey": "layout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ownerType",
+          "label": "OwnerType",
+          "labelKey": "ownerType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Internal",
+              "value": "Internal"
+            },
+            {
+              "key": "User",
+              "value": "User"
+            }
+          ],
+          "value": "Internal"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "createVariable",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,1094 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY ModuleUpdateModule",
+    "description": "AY ModuleUpdateModule",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "params",
+          "label": "Params",
+          "labelKey": "params_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "mtypeId",
+          "label": "MtypeId",
+          "labelKey": "mtypeId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "desc",
+          "label": "Desc",
+          "labelKey": "desc_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "behavior",
+          "label": "Behavior",
+          "labelKey": "behavior_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "labelKey": "status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Draft",
+              "value": "Draft"
+            },
+            {
+              "key": "Down",
+              "value": "Down"
+            },
+            {
+              "key": "UP",
+              "value": "UP"
+            },
+            {
+              "key": "Initializing",
+              "value": "Initializing"
+            },
+            {
+              "key": "ConnectionError",
+              "value": "ConnectionError"
+            },
+            {
+              "key": "TechnicalError",
+              "value": "TechnicalError"
+            },
+            {
+              "key": "WaitingForInit",
+              "value": "WaitingForInit"
+            },
+            {
+              "key": "InvalidLicense",
+              "value": "InvalidLicense"
+            },
+            {
+              "key": "NoRemoteCommConnected",
+              "value": "NoRemoteCommConnected"
+            },
+            {
+              "key": "Silent",
+              "value": "Silent"
+            },
+            {
+              "key": "Disable",
+              "value": "Disable"
+            },
+            {
+              "key": "ShuttingDown",
+              "value": "ShuttingDown"
+            },
+            {
+              "key": "ReadyToShutDown",
+              "value": "ReadyToShutDown"
+            },
+            {
+              "key": "PoweredOff",
+              "value": "PoweredOff"
+            }
+          ],
+          "value": "Draft"
+        },
+        {
+          "required": false,
+          "key": "isMonitored",
+          "label": "IsMonitored",
+          "labelKey": "isMonitored_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isDeleted",
+          "label": "IsDeleted",
+          "labelKey": "isDeleted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "objectJson",
+          "label": "ObjectJson",
+          "labelKey": "objectJson_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduleTypeEntityName",
+          "label": "ModuleTypeEntityName",
+          "labelKey": "moduleTypeEntityName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduleTypeDescription",
+          "label": "ModuleTypeDescription",
+          "labelKey": "moduleTypeDescription_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduleTypeUISettings",
+          "label": "ModuleTypeUISettings",
+          "labelKey": "moduleTypeUISettings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "configurationType",
+          "label": "ConfigurationType",
+          "labelKey": "configurationType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Basic",
+              "value": "Basic"
+            },
+            {
+              "key": "BasicAndConfiguration",
+              "value": "BasicAndConfiguration"
+            },
+            {
+              "key": "FilterAndMapping",
+              "value": "FilterAndMapping"
+            },
+            {
+              "key": "All",
+              "value": "All"
+            }
+          ],
+          "value": "Basic"
+        },
+        {
+          "required": false,
+          "key": "instances____",
+          "label": "Instances[][]",
+          "labelKey": "instances_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "instances_id",
+          "label": "Instances_id",
+          "labelKey": "instances_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "deviceId",
+          "label": "DeviceId",
+          "labelKey": "deviceId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "deviceName",
+          "label": "DeviceName",
+          "labelKey": "deviceName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "port",
+          "label": "Port",
+          "labelKey": "port_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "instances_status",
+          "label": "Instances_status",
+          "labelKey": "instances_status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Draft",
+              "value": "Draft"
+            },
+            {
+              "key": "Down",
+              "value": "Down"
+            },
+            {
+              "key": "UP",
+              "value": "UP"
+            },
+            {
+              "key": "Initializing",
+              "value": "Initializing"
+            },
+            {
+              "key": "ConnectionError",
+              "value": "ConnectionError"
+            },
+            {
+              "key": "TechnicalError",
+              "value": "TechnicalError"
+            },
+            {
+              "key": "WaitingForInit",
+              "value": "WaitingForInit"
+            },
+            {
+              "key": "InvalidLicense",
+              "value": "InvalidLicense"
+            },
+            {
+              "key": "NoRemoteCommConnected",
+              "value": "NoRemoteCommConnected"
+            },
+            {
+              "key": "Silent",
+              "value": "Silent"
+            },
+            {
+              "key": "Disable",
+              "value": "Disable"
+            },
+            {
+              "key": "ShuttingDown",
+              "value": "ShuttingDown"
+            },
+            {
+              "key": "ReadyToShutDown",
+              "value": "ReadyToShutDown"
+            },
+            {
+              "key": "PoweredOff",
+              "value": "PoweredOff"
+            }
+          ],
+          "value": "Draft"
+        },
+        {
+          "required": false,
+          "key": "lastModifyInstance",
+          "label": "LastModifyInstance",
+          "labelKey": "lastModifyInstance_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Form____",
+          "label": "Form[][]",
+          "labelKey": "Form_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FormID",
+          "label": "FormID",
+          "labelKey": "FormID_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FormName",
+          "label": "FormName",
+          "labelKey": "FormName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Interval",
+          "label": "Interval",
+          "labelKey": "Interval_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Filter____",
+          "label": "Filter[][]",
+          "labelKey": "Filter_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FilterName",
+          "label": "FilterName",
+          "labelKey": "FilterName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FilterItem____",
+          "label": "FilterItem[][]",
+          "labelKey": "FilterItem_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FieldID",
+          "label": "FieldID",
+          "labelKey": "FieldID_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FieldName",
+          "label": "FieldName",
+          "labelKey": "FieldName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Operator",
+          "label": "Operator",
+          "labelKey": "Operator_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Value",
+          "label": "Value",
+          "labelKey": "Value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "IsDiscovered",
+          "label": "IsDiscovered",
+          "labelKey": "IsDiscovered_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "MappingType",
+          "label": "MappingType",
+          "labelKey": "MappingType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Map____",
+          "label": "Map[][]",
+          "labelKey": "Map_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Map_FormName",
+          "label": "Map_FormName",
+          "labelKey": "Map_FormName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "OptionalParams____",
+          "label": "OptionalParams[][]",
+          "labelKey": "OptionalParams_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "key",
+          "label": "Key",
+          "labelKey": "key_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "EyeShareIncidentInstance",
+          "label": "EyeShareIncidentInstance",
+          "labelKey": "EyeShareIncidentInstance_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ByPassIncident",
+          "label": "ByPassIncident",
+          "labelKey": "ByPassIncident_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "StaticState",
+          "label": "StaticState",
+          "labelKey": "StaticState_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "StaticSeverity",
+          "label": "StaticSeverity",
+          "labelKey": "StaticSeverity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "SeverityStr",
+          "label": "SeverityStr",
+          "labelKey": "SeverityStr_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "StateStr",
+          "label": "StateStr",
+          "labelKey": "StateStr_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Critical",
+          "label": "Critical",
+          "labelKey": "Critical_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Info",
+          "label": "Info",
+          "labelKey": "Info_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Major",
+          "label": "Major",
+          "labelKey": "Major_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Minor",
+          "label": "Minor",
+          "labelKey": "Minor_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Warning",
+          "label": "Warning",
+          "labelKey": "Warning_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Down",
+          "label": "Down",
+          "labelKey": "Down_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Up",
+          "label": "Up",
+          "labelKey": "Up_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "forms____",
+          "label": "Forms[][]",
+          "labelKey": "forms_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduleId",
+          "label": "ModuleId",
+          "labelKey": "moduleId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduleType",
+          "label": "ModuleType",
+          "labelKey": "moduleType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "formId",
+          "label": "FormId",
+          "labelKey": "formId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entityType",
+          "label": "EntityType",
+          "labelKey": "entityType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entityName",
+          "label": "EntityName",
+          "labelKey": "entityName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entityAlias",
+          "label": "EntityAlias",
+          "labelKey": "entityAlias_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fields____",
+          "label": "Fields[][]",
+          "labelKey": "fields_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entriesField____",
+          "label": "EntriesField[][]",
+          "labelKey": "entriesField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "idField",
+          "label": "IdField",
+          "labelKey": "idField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "labelField",
+          "label": "LabelField",
+          "labelKey": "labelField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "valueField",
+          "label": "ValueField",
+          "labelKey": "valueField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nameField",
+          "label": "NameField",
+          "labelKey": "nameField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fields_nameField",
+          "label": "Fields_nameField",
+          "labelKey": "fields_nameField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fields_idField",
+          "label": "Fields_idField",
+          "labelKey": "fields_idField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "typeField",
+          "label": "TypeField",
+          "labelKey": "typeField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isCreateField",
+          "label": "IsCreateField",
+          "labelKey": "isCreateField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isUpdateField",
+          "label": "IsUpdateField",
+          "labelKey": "isUpdateField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filterField",
+          "label": "FilterField",
+          "labelKey": "filterField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "mandatoryField",
+          "label": "MandatoryField",
+          "labelKey": "mandatoryField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isKeyField",
+          "label": "IsKeyField",
+          "labelKey": "isKeyField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "lengthField",
+          "label": "LengthField",
+          "labelKey": "lengthField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isSystemField",
+          "label": "IsSystemField",
+          "labelKey": "isSystemField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isHiddenField",
+          "label": "IsHiddenField",
+          "labelKey": "isHiddenField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entityIDField",
+          "label": "EntityIDField",
+          "labelKey": "entityIDField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "lastUpdateField",
+          "label": "LastUpdateField",
+          "labelKey": "lastUpdateField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "operationsField",
+          "label": "OperationsField",
+          "labelKey": "operationsField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isFilterableField",
+          "label": "IsFilterableField",
+          "labelKey": "isFilterableField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "operators____",
+          "label": "Operators[][]",
+          "labelKey": "operators_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entriesField____",
+          "label": "EntriesField[][]",
+          "labelKey": "entriesField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entriesField_idField",
+          "label": "EntriesField_idField",
+          "labelKey": "entriesField_idField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entriesField_labelField",
+          "label": "EntriesField_labelField",
+          "labelKey": "entriesField_labelField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entriesField_valueField",
+          "label": "EntriesField_valueField",
+          "labelKey": "entriesField_valueField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entriesField_nameField",
+          "label": "EntriesField_nameField",
+          "labelKey": "entriesField_nameField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "operators_typeField",
+          "label": "Operators_typeField",
+          "labelKey": "operators_typeField_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isFieldsDiscovered",
+          "label": "IsFieldsDiscovered",
+          "labelKey": "isFieldsDiscovered_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "confType",
+          "label": "ConfType",
+          "labelKey": "confType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "mode",
+          "label": "Mode",
+          "labelKey": "mode_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Local",
+              "value": "Local"
+            },
+            {
+              "key": "Remote",
+              "value": "Remote"
+            }
+          ],
+          "value": "Local"
+        },
+        {
+          "required": false,
+          "key": "defaultPort",
+          "label": "DefaultPort",
+          "labelKey": "defaultPort_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "logLevelDetails",
+          "label": "LogLevelDetails",
+          "labelKey": "logLevelDetails_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Level1",
+              "value": "Level1"
+            },
+            {
+              "key": "Level2",
+              "value": "Level2"
+            },
+            {
+              "key": "Level3",
+              "value": "Level3"
+            }
+          ],
+          "value": "Level1"
+        },
+        {
+          "required": false,
+          "key": "connectionParameters____",
+          "label": "ConnectionParameters[][]",
+          "labelKey": "connectionParameters_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "connectionParameters_key",
+          "label": "ConnectionParameters_key",
+          "labelKey": "connectionParameters_key_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "connectionParameters_value",
+          "label": "ConnectionParameters_value",
+          "labelKey": "connectionParameters_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "encrypted",
+          "label": "Encrypted",
+          "labelKey": "encrypted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "hasConfiguredHooper",
+          "label": "HasConfiguredHooper",
+          "labelKey": "hasConfiguredHooper_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "updateModuleData",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,117 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY AccountLoginResponse",
+    "description": "AY AccountLoginResponse",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": false,
+          "key": "companyName",
+          "label": "CompanyName",
+          "labelKey": "companyName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userName",
+          "label": "UserName",
+          "labelKey": "userName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "appId",
+          "label": "AppId",
+          "labelKey": "appId_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "EyeShare",
+              "value": "EyeShare"
+            },
+            {
+              "key": "EyeShareMaster",
+              "value": "EyeShareMaster"
+            },
+            {
+              "key": "SelfService",
+              "value": "SelfService"
+            },
+            {
+              "key": "UnitTests",
+              "value": "UnitTests"
+            }
+          ],
+          "value": "EyeShare"
+        },
+        {
+          "required": false,
+          "key": "domainName",
+          "label": "DomainName",
+          "labelKey": "domainName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sourceIP",
+          "label": "SourceIP",
+          "labelKey": "sourceIP_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "login",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

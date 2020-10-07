@@ -1,0 +1,149 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY ModuleUpdateStatus",
+    "description": "AY ModuleUpdateStatus",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ids____",
+          "label": "Ids[][]",
+          "labelKey": "ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "labelKey": "status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Draft",
+              "value": "Draft"
+            },
+            {
+              "key": "Down",
+              "value": "Down"
+            },
+            {
+              "key": "UP",
+              "value": "UP"
+            },
+            {
+              "key": "Initializing",
+              "value": "Initializing"
+            },
+            {
+              "key": "ConnectionError",
+              "value": "ConnectionError"
+            },
+            {
+              "key": "TechnicalError",
+              "value": "TechnicalError"
+            },
+            {
+              "key": "WaitingForInit",
+              "value": "WaitingForInit"
+            },
+            {
+              "key": "InvalidLicense",
+              "value": "InvalidLicense"
+            },
+            {
+              "key": "NoRemoteCommConnected",
+              "value": "NoRemoteCommConnected"
+            },
+            {
+              "key": "Silent",
+              "value": "Silent"
+            },
+            {
+              "key": "Disable",
+              "value": "Disable"
+            },
+            {
+              "key": "ShuttingDown",
+              "value": "ShuttingDown"
+            },
+            {
+              "key": "ReadyToShutDown",
+              "value": "ReadyToShutDown"
+            },
+            {
+              "key": "PoweredOff",
+              "value": "PoweredOff"
+            }
+          ],
+          "value": "Draft"
+        },
+        {
+          "required": false,
+          "key": "entityType",
+          "label": "EntityType",
+          "labelKey": "entityType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Module",
+              "value": "Module"
+            },
+            {
+              "key": "ModuleInstances",
+              "value": "ModuleInstances"
+            }
+          ],
+          "value": "Module"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "updateStatus",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

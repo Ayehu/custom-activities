@@ -1,0 +1,208 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY RecipientAccountUpdateDuty",
+    "description": "AY RecipientAccountUpdateDuty",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Ddescp",
+          "label": "Ddescp",
+          "labelKey": "Ddescp_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Site",
+          "label": "Site",
+          "labelKey": "Site_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "DutyTimeFramesNumber",
+          "label": "DutyTimeFramesNumber",
+          "labelKey": "DutyTimeFramesNumber_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "FollowTheSun",
+          "label": "FollowTheSun",
+          "labelKey": "FollowTheSun_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ObjectNumber",
+          "label": "ObjectNumber",
+          "labelKey": "ObjectNumber_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "UseWhenShiftMissing",
+          "label": "UseWhenShiftMissing",
+          "labelKey": "UseWhenShiftMissing_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "AlwaysUseThisContact",
+          "label": "AlwaysUseThisContact",
+          "labelKey": "AlwaysUseThisContact_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "DutySupervisors____",
+          "label": "DutySupervisors[][]",
+          "labelKey": "DutySupervisors_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "accountId",
+          "label": "AccountId",
+          "labelKey": "accountId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userName",
+          "label": "UserName",
+          "labelKey": "userName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activeDirectoryId",
+          "label": "ActiveDirectoryId",
+          "labelKey": "activeDirectoryId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "DefaultContactUserName",
+          "label": "DefaultContactUserName",
+          "labelKey": "DefaultContactUserName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "DefaultUserType",
+          "label": "DefaultUserType",
+          "labelKey": "DefaultUserType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "User",
+              "value": "User"
+            },
+            {
+              "key": "Group",
+              "value": "Group"
+            }
+          ],
+          "value": "User"
+        },
+        {
+          "required": false,
+          "key": "totalRecords",
+          "label": "TotalRecords",
+          "labelKey": "totalRecords_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "updateDuty",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

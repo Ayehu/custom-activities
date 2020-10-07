@@ -1,0 +1,3432 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY ModuleTypesCreateModuleType",
+    "description": "AY ModuleTypesCreateModuleType",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "typeName",
+          "label": "TypeName",
+          "labelKey": "typeName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entityName",
+          "label": "EntityName",
+          "labelKey": "entityName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "icon",
+          "label": "Icon",
+          "labelKey": "icon_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "desc",
+          "label": "Desc",
+          "labelKey": "desc_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "confType",
+          "label": "ConfType",
+          "labelKey": "confType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "settings",
+          "label": "Settings",
+          "labelKey": "settings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "behavior",
+          "label": "Behavior",
+          "labelKey": "behavior_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "defaultPort",
+          "label": "DefaultPort",
+          "labelKey": "defaultPort_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Popserver",
+          "label": "Popserver",
+          "labelKey": "Popserver_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Popuser",
+          "label": "Popuser",
+          "labelKey": "Popuser_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Poppass",
+          "label": "Poppass",
+          "labelKey": "Poppass_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Smtpserver",
+          "label": "Smtpserver",
+          "labelKey": "Smtpserver_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Smtpout",
+          "label": "Smtpout",
+          "labelKey": "Smtpout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Isavailable",
+          "label": "Isavailable",
+          "labelKey": "Isavailable_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Incom",
+          "label": "Incom",
+          "labelKey": "Incom_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Outcom",
+          "label": "Outcom",
+          "labelKey": "Outcom_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicerepeat",
+          "label": "Voicerepeat",
+          "labelKey": "Voicerepeat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicespeed",
+          "label": "Voicespeed",
+          "labelKey": "Voicespeed_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicetype",
+          "label": "Voicetype",
+          "labelKey": "Voicetype_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicetypes",
+          "label": "Voicetypes",
+          "labelKey": "Voicetypes_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicevolume",
+          "label": "Voicevolume",
+          "labelKey": "Voicevolume_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Smscom",
+          "label": "Smscom",
+          "labelKey": "Smscom_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Notactive",
+          "label": "Notactive",
+          "labelKey": "Notactive_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Lic1",
+          "label": "Lic1",
+          "labelKey": "Lic1_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Lic2",
+          "label": "Lic2",
+          "labelKey": "Lic2_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Keypress",
+          "label": "Keypress",
+          "labelKey": "Keypress_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Alerttype",
+          "label": "Alerttype",
+          "labelKey": "Alerttype_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduledevices",
+          "label": "Moduledevices",
+          "labelKey": "moduledevices_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "reporttf",
+          "label": "Reporttf",
+          "labelKey": "reporttf_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "PhoneLines",
+          "label": "PhoneLines",
+          "labelKey": "PhoneLines_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Exe_Path",
+          "label": "Exe_Path",
+          "labelKey": "Exe_Path_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "loglevel",
+          "label": "Loglevel",
+          "labelKey": "loglevel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "logsdirectory",
+          "label": "Logsdirectory",
+          "labelKey": "logsdirectory_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "lognumberofdaystopreserve",
+          "label": "Lognumberofdaystopreserve",
+          "labelKey": "lognumberofdaystopreserve_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dateformat",
+          "label": "Dateformat",
+          "labelKey": "dateformat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "files____",
+          "label": "Files[][]",
+          "labelKey": "files_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "files_id",
+          "label": "Files_id",
+          "labelKey": "files_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileId",
+          "label": "FileId",
+          "labelKey": "fileId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileName",
+          "label": "FileName",
+          "labelKey": "fileName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileType",
+          "label": "FileType",
+          "labelKey": "fileType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileData",
+          "label": "FileData",
+          "labelKey": "fileData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileDataType",
+          "label": "FileDataType",
+          "labelKey": "fileDataType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileMetaData",
+          "label": "FileMetaData",
+          "labelKey": "fileMetaData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dateCreated",
+          "label": "DateCreated",
+          "labelKey": "dateCreated_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userCreatedBy",
+          "label": "UserCreatedBy",
+          "labelKey": "userCreatedBy_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "code",
+          "label": "Code",
+          "labelKey": "code_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Common_GeneralError",
+              "value": "Common_GeneralError"
+            },
+            {
+              "key": "Common_MissingName",
+              "value": "Common_MissingName"
+            },
+            {
+              "key": "Common_Workflow_Not_Exist",
+              "value": "Common_Workflow_Not_Exist"
+            },
+            {
+              "key": "Common_Token_Not_Exist",
+              "value": "Common_Token_Not_Exist"
+            },
+            {
+              "key": "Common_LogOut_Failed",
+              "value": "Common_LogOut_Failed"
+            },
+            {
+              "key": "Common_Wrong_Password",
+              "value": "Common_Wrong_Password"
+            },
+            {
+              "key": "Common_LoginHasFailed",
+              "value": "Common_LoginHasFailed"
+            },
+            {
+              "key": "Common_CompanyNotExist",
+              "value": "Common_CompanyNotExist"
+            },
+            {
+              "key": "Common_Color_Not_Exist",
+              "value": "Common_Color_Not_Exist"
+            },
+            {
+              "key": "Common_UserNotHavePermissionsToUpdate",
+              "value": "Common_UserNotHavePermissionsToUpdate"
+            },
+            {
+              "key": "Common_NameAlreadyExist",
+              "value": "Common_NameAlreadyExist"
+            },
+            {
+              "key": "Common_MissingPlatform",
+              "value": "Common_MissingPlatform"
+            },
+            {
+              "key": "Common_WindowsMaximumPasswordLength",
+              "value": "Common_WindowsMaximumPasswordLength"
+            },
+            {
+              "key": "Common_MissingWorkflow",
+              "value": "Common_MissingWorkflow"
+            },
+            {
+              "key": "Common_TimeZoneIsMissing",
+              "value": "Common_TimeZoneIsMissing"
+            },
+            {
+              "key": "Common_DateIsMissing",
+              "value": "Common_DateIsMissing"
+            },
+            {
+              "key": "Common_TimeIsMissing",
+              "value": "Common_TimeIsMissing"
+            },
+            {
+              "key": "Common_EndDateIsBigger",
+              "value": "Common_EndDateIsBigger"
+            },
+            {
+              "key": "Common_EndTimeIsBigger",
+              "value": "Common_EndTimeIsBigger"
+            },
+            {
+              "key": "Common_EndDateInPast",
+              "value": "Common_EndDateInPast"
+            },
+            {
+              "key": "Common_EntityMissingName",
+              "value": "Common_EntityMissingName"
+            },
+            {
+              "key": "Common_EntityNameAlreadyExist",
+              "value": "Common_EntityNameAlreadyExist"
+            },
+            {
+              "key": "Common_EntityNotExist",
+              "value": "Common_EntityNotExist"
+            },
+            {
+              "key": "Common_Invalid_License",
+              "value": "Common_Invalid_License"
+            },
+            {
+              "key": "Connection_ToDal_Failed",
+              "value": "Connection_ToDal_Failed"
+            },
+            {
+              "key": "Value_Is_Missing",
+              "value": "Value_Is_Missing"
+            },
+            {
+              "key": "CommonJwtFailed",
+              "value": "CommonJwtFailed"
+            },
+            {
+              "key": "Common_DeleteFailed",
+              "value": "Common_DeleteFailed"
+            },
+            {
+              "key": "Common_LengthNotValid",
+              "value": "Common_LengthNotValid"
+            },
+            {
+              "key": "WorkflowFolderNotExistOrEmpty",
+              "value": "WorkflowFolderNotExistOrEmpty"
+            },
+            {
+              "key": "FolderContainsNotOnlyWorkflows",
+              "value": "FolderContainsNotOnlyWorkflows"
+            },
+            {
+              "key": "UserNotHavePermissionsReadWorkflow",
+              "value": "UserNotHavePermissionsReadWorkflow"
+            },
+            {
+              "key": "WorkflowNameAlreadyExist",
+              "value": "WorkflowNameAlreadyExist"
+            },
+            {
+              "key": "WorkflowNotExist",
+              "value": "WorkflowNotExist"
+            },
+            {
+              "key": "UserNotHavePermissionsRunWorkflow",
+              "value": "UserNotHavePermissionsRunWorkflow"
+            },
+            {
+              "key": "PlanRevisionNotExistForWorkflow",
+              "value": "PlanRevisionNotExistForWorkflow"
+            },
+            {
+              "key": "FailedGetWorkflowStracture",
+              "value": "FailedGetWorkflowStracture"
+            },
+            {
+              "key": "WorkflowNameIsMissing",
+              "value": "WorkflowNameIsMissing"
+            },
+            {
+              "key": "WorkflowCannotCreateRevisionIfNoStructure",
+              "value": "WorkflowCannotCreateRevisionIfNoStructure"
+            },
+            {
+              "key": "WorkflowStopFailed",
+              "value": "WorkflowStopFailed"
+            },
+            {
+              "key": "FailedToRunWorkflow",
+              "value": "FailedToRunWorkflow"
+            },
+            {
+              "key": "FolderNameTooLong",
+              "value": "FolderNameTooLong"
+            },
+            {
+              "key": "WorkflowFilterDateFromBiggerThenToDate",
+              "value": "WorkflowFilterDateFromBiggerThenToDate"
+            },
+            {
+              "key": "TemplateNameAlreadyExist",
+              "value": "TemplateNameAlreadyExist"
+            },
+            {
+              "key": "TagContainsLessThanThreeChars",
+              "value": "TagContainsLessThanThreeChars"
+            },
+            {
+              "key": "WorkflowNameContainsSpecialChars",
+              "value": "WorkflowNameContainsSpecialChars"
+            },
+            {
+              "key": "TagsAlreadyExist",
+              "value": "TagsAlreadyExist"
+            },
+            {
+              "key": "FailedToImportWorkflow",
+              "value": "FailedToImportWorkflow"
+            },
+            {
+              "key": "PolicyTrigerDeleteFailed",
+              "value": "PolicyTrigerDeleteFailed"
+            },
+            {
+              "key": "PolicyTrigerFirstIndex",
+              "value": "PolicyTrigerFirstIndex"
+            },
+            {
+              "key": "PolicyTrigerLastIndex",
+              "value": "PolicyTrigerLastIndex"
+            },
+            {
+              "key": "PolicyConditionDeleteFailed",
+              "value": "PolicyConditionDeleteFailed"
+            },
+            {
+              "key": "PolicyConditionCannotBeEmpty",
+              "value": "PolicyConditionCannotBeEmpty"
+            },
+            {
+              "key": "IncidentClassifactionNameIsEmpty",
+              "value": "IncidentClassifactionNameIsEmpty"
+            },
+            {
+              "key": "IncidentDeviceNotExist",
+              "value": "IncidentDeviceNotExist"
+            },
+            {
+              "key": "IncidentServiceNotExist",
+              "value": "IncidentServiceNotExist"
+            },
+            {
+              "key": "IncidentClassifNotExist",
+              "value": "IncidentClassifNotExist"
+            },
+            {
+              "key": "IncidentAlreadyExist",
+              "value": "IncidentAlreadyExist"
+            },
+            {
+              "key": "IncidentDeleteRefToObjects",
+              "value": "IncidentDeleteRefToObjects"
+            },
+            {
+              "key": "IncidentDeleteRefToWorkflows",
+              "value": "IncidentDeleteRefToWorkflows"
+            },
+            {
+              "key": "IncidentDeleteFailed",
+              "value": "IncidentDeleteFailed"
+            },
+            {
+              "key": "IPAddressNotValid",
+              "value": "IPAddressNotValid"
+            },
+            {
+              "key": "IncidentRankingsDuplicate",
+              "value": "IncidentRankingsDuplicate"
+            },
+            {
+              "key": "IncidentMappingFirstIndex",
+              "value": "IncidentMappingFirstIndex"
+            },
+            {
+              "key": "IncidentMappingLastIndex",
+              "value": "IncidentMappingLastIndex"
+            },
+            {
+              "key": "IncidentMappingTagCodeIsMissing",
+              "value": "IncidentMappingTagCodeIsMissing"
+            },
+            {
+              "key": "HostDeviceMacWrong",
+              "value": "HostDeviceMacWrong"
+            },
+            {
+              "key": "DeviceReferensedToObjects",
+              "value": "DeviceReferensedToObjects"
+            },
+            {
+              "key": "DeviceReferensedToWorkflows",
+              "value": "DeviceReferensedToWorkflows"
+            },
+            {
+              "key": "ServicesReferensedToObjects",
+              "value": "ServicesReferensedToObjects"
+            },
+            {
+              "key": "ClassificationReferensedToObjects",
+              "value": "ClassificationReferensedToObjects"
+            },
+            {
+              "key": "ClassificationNameExist",
+              "value": "ClassificationNameExist"
+            },
+            {
+              "key": "IncidentMappingCodeTestFailed",
+              "value": "IncidentMappingCodeTestFailed"
+            },
+            {
+              "key": "ESScheduleWorklowEmpty",
+              "value": "ESScheduleWorklowEmpty"
+            },
+            {
+              "key": "ESScheduleWeeklyEmptyDays",
+              "value": "ESScheduleWeeklyEmptyDays"
+            },
+            {
+              "key": "ESScheduleRunAtIsEmpty",
+              "value": "ESScheduleRunAtIsEmpty"
+            },
+            {
+              "key": "ESScheduleEmptyActionType",
+              "value": "ESScheduleEmptyActionType"
+            },
+            {
+              "key": "ESScheduleMonthlyEmptyDates",
+              "value": "ESScheduleMonthlyEmptyDates"
+            },
+            {
+              "key": "ESScheduleBetweenFromGreaterThanTo",
+              "value": "ESScheduleBetweenFromGreaterThanTo"
+            },
+            {
+              "key": "ESScheduleWorkflowNotExist",
+              "value": "ESScheduleWorkflowNotExist"
+            },
+            {
+              "key": "ESScheduleWorkflowNotHavePermission",
+              "value": "ESScheduleWorkflowNotHavePermission"
+            },
+            {
+              "key": "DutySupervisorIsMissing",
+              "value": "DutySupervisorIsMissing"
+            },
+            {
+              "key": "DutySiteIsMissing",
+              "value": "DutySiteIsMissing"
+            },
+            {
+              "key": "DutyDefaultUserNotExist",
+              "value": "DutyDefaultUserNotExist"
+            },
+            {
+              "key": "DutyDefaultUserGroupNotExist",
+              "value": "DutyDefaultUserGroupNotExist"
+            },
+            {
+              "key": "DutyNameAlreadyExist",
+              "value": "DutyNameAlreadyExist"
+            },
+            {
+              "key": "DutyDeleteReleatedWorkflows",
+              "value": "DutyDeleteReleatedWorkflows"
+            },
+            {
+              "key": "DutyDeleteFailed",
+              "value": "DutyDeleteFailed"
+            },
+            {
+              "key": "AccountFNameNotExist",
+              "value": "AccountFNameNotExist"
+            },
+            {
+              "key": "AccountLNameNotExist",
+              "value": "AccountLNameNotExist"
+            },
+            {
+              "key": "AccountEmailNotValid",
+              "value": "AccountEmailNotValid"
+            },
+            {
+              "key": "AccountEmailAlreadyExist",
+              "value": "AccountEmailAlreadyExist"
+            },
+            {
+              "key": "AccountDeleteMainUser",
+              "value": "AccountDeleteMainUser"
+            },
+            {
+              "key": "AccountDeleteConnectedUser",
+              "value": "AccountDeleteConnectedUser"
+            },
+            {
+              "key": "AccountDeletePreveliges",
+              "value": "AccountDeletePreveliges"
+            },
+            {
+              "key": "AccountDeleteReleatedWorkflows",
+              "value": "AccountDeleteReleatedWorkflows"
+            },
+            {
+              "key": "AccountDeleteFailedGeneral",
+              "value": "AccountDeleteFailedGeneral"
+            },
+            {
+              "key": "NotHavePermissionCreateUser",
+              "value": "NotHavePermissionCreateUser"
+            },
+            {
+              "key": "HigherUserPriviliges",
+              "value": "HigherUserPriviliges"
+            },
+            {
+              "key": "PasswordIsMising",
+              "value": "PasswordIsMising"
+            },
+            {
+              "key": "CannotCreateOrUpdateAdministrator",
+              "value": "CannotCreateOrUpdateAdministrator"
+            },
+            {
+              "key": "RecipientUserExistInLoginUsersAndCannotBeDeleted",
+              "value": "RecipientUserExistInLoginUsersAndCannotBeDeleted"
+            },
+            {
+              "key": "HigherUserPriviligesForSelf",
+              "value": "HigherUserPriviligesForSelf"
+            },
+            {
+              "key": "UserGroupNameAlreadyExist",
+              "value": "UserGroupNameAlreadyExist"
+            },
+            {
+              "key": "UserGroupDeletePreveliges",
+              "value": "UserGroupDeletePreveliges"
+            },
+            {
+              "key": "HigherGroupPriviliges",
+              "value": "HigherGroupPriviliges"
+            },
+            {
+              "key": "NotHavePermissionCreateGroup",
+              "value": "NotHavePermissionCreateGroup"
+            },
+            {
+              "key": "UserGroupDeleteReleatedWorkflows",
+              "value": "UserGroupDeleteReleatedWorkflows"
+            },
+            {
+              "key": "UserGroupDeleteFailed",
+              "value": "UserGroupDeleteFailed"
+            },
+            {
+              "key": "UserGroupOwnerExist",
+              "value": "UserGroupOwnerExist"
+            },
+            {
+              "key": "UserGroupMemberExist",
+              "value": "UserGroupMemberExist"
+            },
+            {
+              "key": "UserGroupDeleteReleatedSelfService",
+              "value": "UserGroupDeleteReleatedSelfService"
+            },
+            {
+              "key": "UsersDeleteReleatedSelfService",
+              "value": "UsersDeleteReleatedSelfService"
+            },
+            {
+              "key": "ConditionsItemsEmpty",
+              "value": "ConditionsItemsEmpty"
+            },
+            {
+              "key": "ConditionNameAlreadyExist",
+              "value": "ConditionNameAlreadyExist"
+            },
+            {
+              "key": "ConditionLoopError",
+              "value": "ConditionLoopError"
+            },
+            {
+              "key": "ConditionCheckError",
+              "value": "ConditionCheckError"
+            },
+            {
+              "key": "ConditionDeleteReleatedTriggers",
+              "value": "ConditionDeleteReleatedTriggers"
+            },
+            {
+              "key": "ConditionMissingOperator",
+              "value": "ConditionMissingOperator"
+            },
+            {
+              "key": "ConditionDeleteReleatedAccessRestriction",
+              "value": "ConditionDeleteReleatedAccessRestriction"
+            },
+            {
+              "key": "ConditionObjectIsReferencedByCondition",
+              "value": "ConditionObjectIsReferencedByCondition"
+            },
+            {
+              "key": "ConditionObjectNameIsMissing",
+              "value": "ConditionObjectNameIsMissing"
+            },
+            {
+              "key": "ConditionObjectValueIsMissing",
+              "value": "ConditionObjectValueIsMissing"
+            },
+            {
+              "key": "ErrorHandlingActivityMissing",
+              "value": "ErrorHandlingActivityMissing"
+            },
+            {
+              "key": "ErrorHandlingReturnErrorMessageIsMissing",
+              "value": "ErrorHandlingReturnErrorMessageIsMissing"
+            },
+            {
+              "key": "ErrorHandlingErrorMessageHaveDuplicateRow",
+              "value": "ErrorHandlingErrorMessageHaveDuplicateRow"
+            },
+            {
+              "key": "ErrorHandlingDeleteReleatedWorkflows",
+              "value": "ErrorHandlingDeleteReleatedWorkflows"
+            },
+            {
+              "key": "ErrorMessageDeleteReleatedErrorHandling",
+              "value": "ErrorMessageDeleteReleatedErrorHandling"
+            },
+            {
+              "key": "MessageTemplateDeleteReleatedWorkflows",
+              "value": "MessageTemplateDeleteReleatedWorkflows"
+            },
+            {
+              "key": "TimeFrameDeleteReleatedWorkflows",
+              "value": "TimeFrameDeleteReleatedWorkflows"
+            },
+            {
+              "key": "TimeFrameDayIsMissing",
+              "value": "TimeFrameDayIsMissing"
+            },
+            {
+              "key": "AccessRestrictionComplexConditionNotAllowed",
+              "value": "AccessRestrictionComplexConditionNotAllowed"
+            },
+            {
+              "key": "SpacesAreNotAllowedInVariableName",
+              "value": "SpacesAreNotAllowedInVariableName"
+            },
+            {
+              "key": "VariableNameContainsInvalidCharacters",
+              "value": "VariableNameContainsInvalidCharacters"
+            },
+            {
+              "key": "OnlyTextTypeIsAllowedForSelectedVariableType",
+              "value": "OnlyTextTypeIsAllowedForSelectedVariableType"
+            },
+            {
+              "key": "PasswordIsMandotoryField",
+              "value": "PasswordIsMandotoryField"
+            },
+            {
+              "key": "DeleteInternalVariableIsIllegal",
+              "value": "DeleteInternalVariableIsIllegal"
+            },
+            {
+              "key": "VariableIsReferencedByUsers",
+              "value": "VariableIsReferencedByUsers"
+            },
+            {
+              "key": "DevelopmentFailedToCompile",
+              "value": "DevelopmentFailedToCompile"
+            },
+            {
+              "key": "DevelopmentILmergeIsMissing",
+              "value": "DevelopmentILmergeIsMissing"
+            },
+            {
+              "key": "DevelopmentMissingType",
+              "value": "DevelopmentMissingType"
+            },
+            {
+              "key": "WorkflowsReferencedToDevelopment",
+              "value": "WorkflowsReferencedToDevelopment"
+            },
+            {
+              "key": "ModulePortMissing",
+              "value": "ModulePortMissing"
+            },
+            {
+              "key": "ModuleDeviceMissing",
+              "value": "ModuleDeviceMissing"
+            },
+            {
+              "key": "ModuleTypeMissing",
+              "value": "ModuleTypeMissing"
+            },
+            {
+              "key": "ModuleDeleteFailedGeneral",
+              "value": "ModuleDeleteFailedGeneral"
+            },
+            {
+              "key": "ModuleDeviceAlreadyExist",
+              "value": "ModuleDeviceAlreadyExist"
+            },
+            {
+              "key": "ModuleLicenseIssue",
+              "value": "ModuleLicenseIssue"
+            },
+            {
+              "key": "FailedGetFields",
+              "value": "FailedGetFields"
+            },
+            {
+              "key": "FailedTestConnection",
+              "value": "FailedTestConnection"
+            },
+            {
+              "key": "FailedGetEntities",
+              "value": "FailedGetEntities"
+            },
+            {
+              "key": "FailedCloseIncident",
+              "value": "FailedCloseIncident"
+            },
+            {
+              "key": "FailedResetIncident",
+              "value": "FailedResetIncident"
+            },
+            {
+              "key": "FailedAssignToIncident",
+              "value": "FailedAssignToIncident"
+            },
+            {
+              "key": "FailedTakeOwnershipIncident",
+              "value": "FailedTakeOwnershipIncident"
+            },
+            {
+              "key": "FailedStartIncidentWorkflow",
+              "value": "FailedStartIncidentWorkflow"
+            },
+            {
+              "key": "FailedStopIncidentWorkflow",
+              "value": "FailedStopIncidentWorkflow"
+            },
+            {
+              "key": "ModuleNameAlreadyExist",
+              "value": "ModuleNameAlreadyExist"
+            },
+            {
+              "key": "CoreModuleAlreadyExist",
+              "value": "CoreModuleAlreadyExist"
+            },
+            {
+              "key": "ModuleReferencedToCondition",
+              "value": "ModuleReferencedToCondition"
+            },
+            {
+              "key": "LoadWfFailedActivityDoesNotExist",
+              "value": "LoadWfFailedActivityDoesNotExist"
+            },
+            {
+              "key": "LoadWfFailedEmptyWf",
+              "value": "LoadWfFailedEmptyWf"
+            },
+            {
+              "key": "LoadWfFailedActivityNotAllowed",
+              "value": "LoadWfFailedActivityNotAllowed"
+            },
+            {
+              "key": "CreateNoWfRemainingInLicense",
+              "value": "CreateNoWfRemainingInLicense"
+            },
+            {
+              "key": "WfLicenseIsInvalid",
+              "value": "WfLicenseIsInvalid"
+            },
+            {
+              "key": "UpdateNoWfRemainingInLicense",
+              "value": "UpdateNoWfRemainingInLicense"
+            },
+            {
+              "key": "CommandNameAlreadyExist",
+              "value": "CommandNameAlreadyExist"
+            },
+            {
+              "key": "CommandPathMissing",
+              "value": "CommandPathMissing"
+            },
+            {
+              "key": "CommandDeviceIsMising",
+              "value": "CommandDeviceIsMising"
+            },
+            {
+              "key": "CommandReferencedToWorkflows",
+              "value": "CommandReferencedToWorkflows"
+            },
+            {
+              "key": "CommandReferencedToModules",
+              "value": "CommandReferencedToModules"
+            },
+            {
+              "key": "DevelopmentReferencedToWorkflows",
+              "value": "DevelopmentReferencedToWorkflows"
+            },
+            {
+              "key": "QueueHostIsEmpty",
+              "value": "QueueHostIsEmpty"
+            },
+            {
+              "key": "QueuePortIsInvalid",
+              "value": "QueuePortIsInvalid"
+            },
+            {
+              "key": "QueueUsernameIsEmpty",
+              "value": "QueueUsernameIsEmpty"
+            },
+            {
+              "key": "QueueNameIsEmpty",
+              "value": "QueueNameIsEmpty"
+            },
+            {
+              "key": "QueueAlreadyExist",
+              "value": "QueueAlreadyExist"
+            },
+            {
+              "key": "NotInPortRange",
+              "value": "NotInPortRange"
+            },
+            {
+              "key": "QueueAndRemoteCommShouldBeEnabled",
+              "value": "QueueAndRemoteCommShouldBeEnabled"
+            },
+            {
+              "key": "CannotDisableBecauseOneOfModulesIsNotUp",
+              "value": "CannotDisableBecauseOneOfModulesIsNotUp"
+            },
+            {
+              "key": "GeneralValueIsReferencedAndCannotBeDeleted",
+              "value": "GeneralValueIsReferencedAndCannotBeDeleted"
+            },
+            {
+              "key": "UploadTypeIsNotSupported",
+              "value": "UploadTypeIsNotSupported"
+            },
+            {
+              "key": "SelfServiceCategoryExist",
+              "value": "SelfServiceCategoryExist"
+            },
+            {
+              "key": "SelfServiceNameLength",
+              "value": "SelfServiceNameLength"
+            },
+            {
+              "key": "SelfServiceFolderNotExist",
+              "value": "SelfServiceFolderNotExist"
+            },
+            {
+              "key": "SelfServiceDescriptionLength",
+              "value": "SelfServiceDescriptionLength"
+            },
+            {
+              "key": "SelfServiceFolderNameLength",
+              "value": "SelfServiceFolderNameLength"
+            },
+            {
+              "key": "LoginFailed",
+              "value": "LoginFailed"
+            },
+            {
+              "key": "SelfServicePermissionsWrongOwnerType",
+              "value": "SelfServicePermissionsWrongOwnerType"
+            },
+            {
+              "key": "SelfServicePermissionsAtLeaseOneOwner",
+              "value": "SelfServicePermissionsAtLeaseOneOwner"
+            },
+            {
+              "key": "SpacesAreNotAllowedInDomainOrServerName",
+              "value": "SpacesAreNotAllowedInDomainOrServerName"
+            },
+            {
+              "key": "SelfServicePermissionsWorkflowNotExist",
+              "value": "SelfServicePermissionsWorkflowNotExist"
+            },
+            {
+              "key": "CanAddAccountAsMemberToActiveDirectory",
+              "value": "CanAddAccountAsMemberToActiveDirectory"
+            },
+            {
+              "key": "RemoteCommHasToBeConfigured",
+              "value": "RemoteCommHasToBeConfigured"
+            },
+            {
+              "key": "BrainInsightXomlIsNotValid",
+              "value": "BrainInsightXomlIsNotValid"
+            },
+            {
+              "key": "ActivityJsonIsNotValid",
+              "value": "ActivityJsonIsNotValid"
+            },
+            {
+              "key": "ActivityNameContainsSpecialChars",
+              "value": "ActivityNameContainsSpecialChars"
+            },
+            {
+              "key": "ActivityDoesNotExists",
+              "value": "ActivityDoesNotExists"
+            },
+            {
+              "key": "ActivityNameContainsDigits",
+              "value": "ActivityNameContainsDigits"
+            },
+            {
+              "key": "ActivityNameHasTooManyCharacters",
+              "value": "ActivityNameHasTooManyCharacters"
+            },
+            {
+              "key": "ActivityJsonSettingsAreWrong",
+              "value": "ActivityJsonSettingsAreWrong"
+            },
+            {
+              "key": "ActivityDescriptionHasTooManyCharacters",
+              "value": "ActivityDescriptionHasTooManyCharacters"
+            },
+            {
+              "key": "CustomActivityFolderDoesNotExist",
+              "value": "CustomActivityFolderDoesNotExist"
+            },
+            {
+              "key": "CustomActivityFolderReleatedActivities",
+              "value": "CustomActivityFolderReleatedActivities"
+            },
+            {
+              "key": "DeleteCustomActivityReleated",
+              "value": "DeleteCustomActivityReleated"
+            },
+            {
+              "key": "CustomActivityReleatedWorkflows",
+              "value": "CustomActivityReleatedWorkflows"
+            },
+            {
+              "key": "CustomActivityReleatedTemplates",
+              "value": "CustomActivityReleatedTemplates"
+            },
+            {
+              "key": "CustomActivityExportFailed",
+              "value": "CustomActivityExportFailed"
+            },
+            {
+              "key": "ExportForbiddenForNonCustomActivity",
+              "value": "ExportForbiddenForNonCustomActivity"
+            },
+            {
+              "key": "ImportActivityGeneralError",
+              "value": "ImportActivityGeneralError"
+            },
+            {
+              "key": "SelfServiceCategoryParentWithChild",
+              "value": "SelfServiceCategoryParentWithChild"
+            },
+            {
+              "key": "BridgeModuleShouldBeCreatedFirst",
+              "value": "BridgeModuleShouldBeCreatedFirst"
+            },
+            {
+              "key": "SelfServiceControlUnknownType",
+              "value": "SelfServiceControlUnknownType"
+            },
+            {
+              "key": "SelfServiceControlMultipleReferenceToSameVariable",
+              "value": "SelfServiceControlMultipleReferenceToSameVariable"
+            },
+            {
+              "key": "GeneralFailedCreateTenant",
+              "value": "GeneralFailedCreateTenant"
+            },
+            {
+              "key": "FailedCreateTenantDb",
+              "value": "FailedCreateTenantDb"
+            },
+            {
+              "key": "FailedCreateTenantRow",
+              "value": "FailedCreateTenantRow"
+            },
+            {
+              "key": "CompanyNameExist",
+              "value": "CompanyNameExist"
+            },
+            {
+              "key": "LicenseIssueTenantsSum",
+              "value": "LicenseIssueTenantsSum"
+            },
+            {
+              "key": "LicenseIssueWorkflows",
+              "value": "LicenseIssueWorkflows"
+            },
+            {
+              "key": "LicenseIssueModules",
+              "value": "LicenseIssueModules"
+            },
+            {
+              "key": "PortRangesOverlap",
+              "value": "PortRangesOverlap"
+            },
+            {
+              "key": "PortRangesOverlapInOther",
+              "value": "PortRangesOverlapInOther"
+            },
+            {
+              "key": "DeviceInUseInTenant",
+              "value": "DeviceInUseInTenant"
+            },
+            {
+              "key": "LicenseIssueDateExperassion",
+              "value": "LicenseIssueDateExperassion"
+            },
+            {
+              "key": "LicenseNotValidForMultiTenant",
+              "value": "LicenseNotValidForMultiTenant"
+            },
+            {
+              "key": "FailedToImportWorkflowXml",
+              "value": "FailedToImportWorkflowXml"
+            },
+            {
+              "key": "XmlStructureIsNotValid",
+              "value": "XmlStructureIsNotValid"
+            },
+            {
+              "key": "MainAdministratorAlreadyRegistered",
+              "value": "MainAdministratorAlreadyRegistered"
+            },
+            {
+              "key": "TenantAdministratorAlreadyRegistered",
+              "value": "TenantAdministratorAlreadyRegistered"
+            },
+            {
+              "key": "UserHaveNotPermissionToOverrideWorkflow",
+              "value": "UserHaveNotPermissionToOverrideWorkflow"
+            }
+          ],
+          "value": "Common_GeneralError"
+        },
+        {
+          "required": false,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "extraData",
+          "label": "ExtraData",
+          "labelKey": "extraData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList____",
+          "label": "ErrorsList[][]",
+          "labelKey": "errorsList_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList_code",
+          "label": "ErrorsList_code",
+          "labelKey": "errorsList_code_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Common_GeneralError",
+              "value": "Common_GeneralError"
+            },
+            {
+              "key": "Common_MissingName",
+              "value": "Common_MissingName"
+            },
+            {
+              "key": "Common_Workflow_Not_Exist",
+              "value": "Common_Workflow_Not_Exist"
+            },
+            {
+              "key": "Common_Token_Not_Exist",
+              "value": "Common_Token_Not_Exist"
+            },
+            {
+              "key": "Common_LogOut_Failed",
+              "value": "Common_LogOut_Failed"
+            },
+            {
+              "key": "Common_Wrong_Password",
+              "value": "Common_Wrong_Password"
+            },
+            {
+              "key": "Common_LoginHasFailed",
+              "value": "Common_LoginHasFailed"
+            },
+            {
+              "key": "Common_CompanyNotExist",
+              "value": "Common_CompanyNotExist"
+            },
+            {
+              "key": "Common_Color_Not_Exist",
+              "value": "Common_Color_Not_Exist"
+            },
+            {
+              "key": "Common_UserNotHavePermissionsToUpdate",
+              "value": "Common_UserNotHavePermissionsToUpdate"
+            },
+            {
+              "key": "Common_NameAlreadyExist",
+              "value": "Common_NameAlreadyExist"
+            },
+            {
+              "key": "Common_MissingPlatform",
+              "value": "Common_MissingPlatform"
+            },
+            {
+              "key": "Common_WindowsMaximumPasswordLength",
+              "value": "Common_WindowsMaximumPasswordLength"
+            },
+            {
+              "key": "Common_MissingWorkflow",
+              "value": "Common_MissingWorkflow"
+            },
+            {
+              "key": "Common_TimeZoneIsMissing",
+              "value": "Common_TimeZoneIsMissing"
+            },
+            {
+              "key": "Common_DateIsMissing",
+              "value": "Common_DateIsMissing"
+            },
+            {
+              "key": "Common_TimeIsMissing",
+              "value": "Common_TimeIsMissing"
+            },
+            {
+              "key": "Common_EndDateIsBigger",
+              "value": "Common_EndDateIsBigger"
+            },
+            {
+              "key": "Common_EndTimeIsBigger",
+              "value": "Common_EndTimeIsBigger"
+            },
+            {
+              "key": "Common_EndDateInPast",
+              "value": "Common_EndDateInPast"
+            },
+            {
+              "key": "Common_EntityMissingName",
+              "value": "Common_EntityMissingName"
+            },
+            {
+              "key": "Common_EntityNameAlreadyExist",
+              "value": "Common_EntityNameAlreadyExist"
+            },
+            {
+              "key": "Common_EntityNotExist",
+              "value": "Common_EntityNotExist"
+            },
+            {
+              "key": "Common_Invalid_License",
+              "value": "Common_Invalid_License"
+            },
+            {
+              "key": "Connection_ToDal_Failed",
+              "value": "Connection_ToDal_Failed"
+            },
+            {
+              "key": "Value_Is_Missing",
+              "value": "Value_Is_Missing"
+            },
+            {
+              "key": "CommonJwtFailed",
+              "value": "CommonJwtFailed"
+            },
+            {
+              "key": "Common_DeleteFailed",
+              "value": "Common_DeleteFailed"
+            },
+            {
+              "key": "Common_LengthNotValid",
+              "value": "Common_LengthNotValid"
+            },
+            {
+              "key": "WorkflowFolderNotExistOrEmpty",
+              "value": "WorkflowFolderNotExistOrEmpty"
+            },
+            {
+              "key": "FolderContainsNotOnlyWorkflows",
+              "value": "FolderContainsNotOnlyWorkflows"
+            },
+            {
+              "key": "UserNotHavePermissionsReadWorkflow",
+              "value": "UserNotHavePermissionsReadWorkflow"
+            },
+            {
+              "key": "WorkflowNameAlreadyExist",
+              "value": "WorkflowNameAlreadyExist"
+            },
+            {
+              "key": "WorkflowNotExist",
+              "value": "WorkflowNotExist"
+            },
+            {
+              "key": "UserNotHavePermissionsRunWorkflow",
+              "value": "UserNotHavePermissionsRunWorkflow"
+            },
+            {
+              "key": "PlanRevisionNotExistForWorkflow",
+              "value": "PlanRevisionNotExistForWorkflow"
+            },
+            {
+              "key": "FailedGetWorkflowStracture",
+              "value": "FailedGetWorkflowStracture"
+            },
+            {
+              "key": "WorkflowNameIsMissing",
+              "value": "WorkflowNameIsMissing"
+            },
+            {
+              "key": "WorkflowCannotCreateRevisionIfNoStructure",
+              "value": "WorkflowCannotCreateRevisionIfNoStructure"
+            },
+            {
+              "key": "WorkflowStopFailed",
+              "value": "WorkflowStopFailed"
+            },
+            {
+              "key": "FailedToRunWorkflow",
+              "value": "FailedToRunWorkflow"
+            },
+            {
+              "key": "FolderNameTooLong",
+              "value": "FolderNameTooLong"
+            },
+            {
+              "key": "WorkflowFilterDateFromBiggerThenToDate",
+              "value": "WorkflowFilterDateFromBiggerThenToDate"
+            },
+            {
+              "key": "TemplateNameAlreadyExist",
+              "value": "TemplateNameAlreadyExist"
+            },
+            {
+              "key": "TagContainsLessThanThreeChars",
+              "value": "TagContainsLessThanThreeChars"
+            },
+            {
+              "key": "WorkflowNameContainsSpecialChars",
+              "value": "WorkflowNameContainsSpecialChars"
+            },
+            {
+              "key": "TagsAlreadyExist",
+              "value": "TagsAlreadyExist"
+            },
+            {
+              "key": "FailedToImportWorkflow",
+              "value": "FailedToImportWorkflow"
+            },
+            {
+              "key": "PolicyTrigerDeleteFailed",
+              "value": "PolicyTrigerDeleteFailed"
+            },
+            {
+              "key": "PolicyTrigerFirstIndex",
+              "value": "PolicyTrigerFirstIndex"
+            },
+            {
+              "key": "PolicyTrigerLastIndex",
+              "value": "PolicyTrigerLastIndex"
+            },
+            {
+              "key": "PolicyConditionDeleteFailed",
+              "value": "PolicyConditionDeleteFailed"
+            },
+            {
+              "key": "PolicyConditionCannotBeEmpty",
+              "value": "PolicyConditionCannotBeEmpty"
+            },
+            {
+              "key": "IncidentClassifactionNameIsEmpty",
+              "value": "IncidentClassifactionNameIsEmpty"
+            },
+            {
+              "key": "IncidentDeviceNotExist",
+              "value": "IncidentDeviceNotExist"
+            },
+            {
+              "key": "IncidentServiceNotExist",
+              "value": "IncidentServiceNotExist"
+            },
+            {
+              "key": "IncidentClassifNotExist",
+              "value": "IncidentClassifNotExist"
+            },
+            {
+              "key": "IncidentAlreadyExist",
+              "value": "IncidentAlreadyExist"
+            },
+            {
+              "key": "IncidentDeleteRefToObjects",
+              "value": "IncidentDeleteRefToObjects"
+            },
+            {
+              "key": "IncidentDeleteRefToWorkflows",
+              "value": "IncidentDeleteRefToWorkflows"
+            },
+            {
+              "key": "IncidentDeleteFailed",
+              "value": "IncidentDeleteFailed"
+            },
+            {
+              "key": "IPAddressNotValid",
+              "value": "IPAddressNotValid"
+            },
+            {
+              "key": "IncidentRankingsDuplicate",
+              "value": "IncidentRankingsDuplicate"
+            },
+            {
+              "key": "IncidentMappingFirstIndex",
+              "value": "IncidentMappingFirstIndex"
+            },
+            {
+              "key": "IncidentMappingLastIndex",
+              "value": "IncidentMappingLastIndex"
+            },
+            {
+              "key": "IncidentMappingTagCodeIsMissing",
+              "value": "IncidentMappingTagCodeIsMissing"
+            },
+            {
+              "key": "HostDeviceMacWrong",
+              "value": "HostDeviceMacWrong"
+            },
+            {
+              "key": "DeviceReferensedToObjects",
+              "value": "DeviceReferensedToObjects"
+            },
+            {
+              "key": "DeviceReferensedToWorkflows",
+              "value": "DeviceReferensedToWorkflows"
+            },
+            {
+              "key": "ServicesReferensedToObjects",
+              "value": "ServicesReferensedToObjects"
+            },
+            {
+              "key": "ClassificationReferensedToObjects",
+              "value": "ClassificationReferensedToObjects"
+            },
+            {
+              "key": "ClassificationNameExist",
+              "value": "ClassificationNameExist"
+            },
+            {
+              "key": "IncidentMappingCodeTestFailed",
+              "value": "IncidentMappingCodeTestFailed"
+            },
+            {
+              "key": "ESScheduleWorklowEmpty",
+              "value": "ESScheduleWorklowEmpty"
+            },
+            {
+              "key": "ESScheduleWeeklyEmptyDays",
+              "value": "ESScheduleWeeklyEmptyDays"
+            },
+            {
+              "key": "ESScheduleRunAtIsEmpty",
+              "value": "ESScheduleRunAtIsEmpty"
+            },
+            {
+              "key": "ESScheduleEmptyActionType",
+              "value": "ESScheduleEmptyActionType"
+            },
+            {
+              "key": "ESScheduleMonthlyEmptyDates",
+              "value": "ESScheduleMonthlyEmptyDates"
+            },
+            {
+              "key": "ESScheduleBetweenFromGreaterThanTo",
+              "value": "ESScheduleBetweenFromGreaterThanTo"
+            },
+            {
+              "key": "ESScheduleWorkflowNotExist",
+              "value": "ESScheduleWorkflowNotExist"
+            },
+            {
+              "key": "ESScheduleWorkflowNotHavePermission",
+              "value": "ESScheduleWorkflowNotHavePermission"
+            },
+            {
+              "key": "DutySupervisorIsMissing",
+              "value": "DutySupervisorIsMissing"
+            },
+            {
+              "key": "DutySiteIsMissing",
+              "value": "DutySiteIsMissing"
+            },
+            {
+              "key": "DutyDefaultUserNotExist",
+              "value": "DutyDefaultUserNotExist"
+            },
+            {
+              "key": "DutyDefaultUserGroupNotExist",
+              "value": "DutyDefaultUserGroupNotExist"
+            },
+            {
+              "key": "DutyNameAlreadyExist",
+              "value": "DutyNameAlreadyExist"
+            },
+            {
+              "key": "DutyDeleteReleatedWorkflows",
+              "value": "DutyDeleteReleatedWorkflows"
+            },
+            {
+              "key": "DutyDeleteFailed",
+              "value": "DutyDeleteFailed"
+            },
+            {
+              "key": "AccountFNameNotExist",
+              "value": "AccountFNameNotExist"
+            },
+            {
+              "key": "AccountLNameNotExist",
+              "value": "AccountLNameNotExist"
+            },
+            {
+              "key": "AccountEmailNotValid",
+              "value": "AccountEmailNotValid"
+            },
+            {
+              "key": "AccountEmailAlreadyExist",
+              "value": "AccountEmailAlreadyExist"
+            },
+            {
+              "key": "AccountDeleteMainUser",
+              "value": "AccountDeleteMainUser"
+            },
+            {
+              "key": "AccountDeleteConnectedUser",
+              "value": "AccountDeleteConnectedUser"
+            },
+            {
+              "key": "AccountDeletePreveliges",
+              "value": "AccountDeletePreveliges"
+            },
+            {
+              "key": "AccountDeleteReleatedWorkflows",
+              "value": "AccountDeleteReleatedWorkflows"
+            },
+            {
+              "key": "AccountDeleteFailedGeneral",
+              "value": "AccountDeleteFailedGeneral"
+            },
+            {
+              "key": "NotHavePermissionCreateUser",
+              "value": "NotHavePermissionCreateUser"
+            },
+            {
+              "key": "HigherUserPriviliges",
+              "value": "HigherUserPriviliges"
+            },
+            {
+              "key": "PasswordIsMising",
+              "value": "PasswordIsMising"
+            },
+            {
+              "key": "CannotCreateOrUpdateAdministrator",
+              "value": "CannotCreateOrUpdateAdministrator"
+            },
+            {
+              "key": "RecipientUserExistInLoginUsersAndCannotBeDeleted",
+              "value": "RecipientUserExistInLoginUsersAndCannotBeDeleted"
+            },
+            {
+              "key": "HigherUserPriviligesForSelf",
+              "value": "HigherUserPriviligesForSelf"
+            },
+            {
+              "key": "UserGroupNameAlreadyExist",
+              "value": "UserGroupNameAlreadyExist"
+            },
+            {
+              "key": "UserGroupDeletePreveliges",
+              "value": "UserGroupDeletePreveliges"
+            },
+            {
+              "key": "HigherGroupPriviliges",
+              "value": "HigherGroupPriviliges"
+            },
+            {
+              "key": "NotHavePermissionCreateGroup",
+              "value": "NotHavePermissionCreateGroup"
+            },
+            {
+              "key": "UserGroupDeleteReleatedWorkflows",
+              "value": "UserGroupDeleteReleatedWorkflows"
+            },
+            {
+              "key": "UserGroupDeleteFailed",
+              "value": "UserGroupDeleteFailed"
+            },
+            {
+              "key": "UserGroupOwnerExist",
+              "value": "UserGroupOwnerExist"
+            },
+            {
+              "key": "UserGroupMemberExist",
+              "value": "UserGroupMemberExist"
+            },
+            {
+              "key": "UserGroupDeleteReleatedSelfService",
+              "value": "UserGroupDeleteReleatedSelfService"
+            },
+            {
+              "key": "UsersDeleteReleatedSelfService",
+              "value": "UsersDeleteReleatedSelfService"
+            },
+            {
+              "key": "ConditionsItemsEmpty",
+              "value": "ConditionsItemsEmpty"
+            },
+            {
+              "key": "ConditionNameAlreadyExist",
+              "value": "ConditionNameAlreadyExist"
+            },
+            {
+              "key": "ConditionLoopError",
+              "value": "ConditionLoopError"
+            },
+            {
+              "key": "ConditionCheckError",
+              "value": "ConditionCheckError"
+            },
+            {
+              "key": "ConditionDeleteReleatedTriggers",
+              "value": "ConditionDeleteReleatedTriggers"
+            },
+            {
+              "key": "ConditionMissingOperator",
+              "value": "ConditionMissingOperator"
+            },
+            {
+              "key": "ConditionDeleteReleatedAccessRestriction",
+              "value": "ConditionDeleteReleatedAccessRestriction"
+            },
+            {
+              "key": "ConditionObjectIsReferencedByCondition",
+              "value": "ConditionObjectIsReferencedByCondition"
+            },
+            {
+              "key": "ConditionObjectNameIsMissing",
+              "value": "ConditionObjectNameIsMissing"
+            },
+            {
+              "key": "ConditionObjectValueIsMissing",
+              "value": "ConditionObjectValueIsMissing"
+            },
+            {
+              "key": "ErrorHandlingActivityMissing",
+              "value": "ErrorHandlingActivityMissing"
+            },
+            {
+              "key": "ErrorHandlingReturnErrorMessageIsMissing",
+              "value": "ErrorHandlingReturnErrorMessageIsMissing"
+            },
+            {
+              "key": "ErrorHandlingErrorMessageHaveDuplicateRow",
+              "value": "ErrorHandlingErrorMessageHaveDuplicateRow"
+            },
+            {
+              "key": "ErrorHandlingDeleteReleatedWorkflows",
+              "value": "ErrorHandlingDeleteReleatedWorkflows"
+            },
+            {
+              "key": "ErrorMessageDeleteReleatedErrorHandling",
+              "value": "ErrorMessageDeleteReleatedErrorHandling"
+            },
+            {
+              "key": "MessageTemplateDeleteReleatedWorkflows",
+              "value": "MessageTemplateDeleteReleatedWorkflows"
+            },
+            {
+              "key": "TimeFrameDeleteReleatedWorkflows",
+              "value": "TimeFrameDeleteReleatedWorkflows"
+            },
+            {
+              "key": "TimeFrameDayIsMissing",
+              "value": "TimeFrameDayIsMissing"
+            },
+            {
+              "key": "AccessRestrictionComplexConditionNotAllowed",
+              "value": "AccessRestrictionComplexConditionNotAllowed"
+            },
+            {
+              "key": "SpacesAreNotAllowedInVariableName",
+              "value": "SpacesAreNotAllowedInVariableName"
+            },
+            {
+              "key": "VariableNameContainsInvalidCharacters",
+              "value": "VariableNameContainsInvalidCharacters"
+            },
+            {
+              "key": "OnlyTextTypeIsAllowedForSelectedVariableType",
+              "value": "OnlyTextTypeIsAllowedForSelectedVariableType"
+            },
+            {
+              "key": "PasswordIsMandotoryField",
+              "value": "PasswordIsMandotoryField"
+            },
+            {
+              "key": "DeleteInternalVariableIsIllegal",
+              "value": "DeleteInternalVariableIsIllegal"
+            },
+            {
+              "key": "VariableIsReferencedByUsers",
+              "value": "VariableIsReferencedByUsers"
+            },
+            {
+              "key": "DevelopmentFailedToCompile",
+              "value": "DevelopmentFailedToCompile"
+            },
+            {
+              "key": "DevelopmentILmergeIsMissing",
+              "value": "DevelopmentILmergeIsMissing"
+            },
+            {
+              "key": "DevelopmentMissingType",
+              "value": "DevelopmentMissingType"
+            },
+            {
+              "key": "WorkflowsReferencedToDevelopment",
+              "value": "WorkflowsReferencedToDevelopment"
+            },
+            {
+              "key": "ModulePortMissing",
+              "value": "ModulePortMissing"
+            },
+            {
+              "key": "ModuleDeviceMissing",
+              "value": "ModuleDeviceMissing"
+            },
+            {
+              "key": "ModuleTypeMissing",
+              "value": "ModuleTypeMissing"
+            },
+            {
+              "key": "ModuleDeleteFailedGeneral",
+              "value": "ModuleDeleteFailedGeneral"
+            },
+            {
+              "key": "ModuleDeviceAlreadyExist",
+              "value": "ModuleDeviceAlreadyExist"
+            },
+            {
+              "key": "ModuleLicenseIssue",
+              "value": "ModuleLicenseIssue"
+            },
+            {
+              "key": "FailedGetFields",
+              "value": "FailedGetFields"
+            },
+            {
+              "key": "FailedTestConnection",
+              "value": "FailedTestConnection"
+            },
+            {
+              "key": "FailedGetEntities",
+              "value": "FailedGetEntities"
+            },
+            {
+              "key": "FailedCloseIncident",
+              "value": "FailedCloseIncident"
+            },
+            {
+              "key": "FailedResetIncident",
+              "value": "FailedResetIncident"
+            },
+            {
+              "key": "FailedAssignToIncident",
+              "value": "FailedAssignToIncident"
+            },
+            {
+              "key": "FailedTakeOwnershipIncident",
+              "value": "FailedTakeOwnershipIncident"
+            },
+            {
+              "key": "FailedStartIncidentWorkflow",
+              "value": "FailedStartIncidentWorkflow"
+            },
+            {
+              "key": "FailedStopIncidentWorkflow",
+              "value": "FailedStopIncidentWorkflow"
+            },
+            {
+              "key": "ModuleNameAlreadyExist",
+              "value": "ModuleNameAlreadyExist"
+            },
+            {
+              "key": "CoreModuleAlreadyExist",
+              "value": "CoreModuleAlreadyExist"
+            },
+            {
+              "key": "ModuleReferencedToCondition",
+              "value": "ModuleReferencedToCondition"
+            },
+            {
+              "key": "LoadWfFailedActivityDoesNotExist",
+              "value": "LoadWfFailedActivityDoesNotExist"
+            },
+            {
+              "key": "LoadWfFailedEmptyWf",
+              "value": "LoadWfFailedEmptyWf"
+            },
+            {
+              "key": "LoadWfFailedActivityNotAllowed",
+              "value": "LoadWfFailedActivityNotAllowed"
+            },
+            {
+              "key": "CreateNoWfRemainingInLicense",
+              "value": "CreateNoWfRemainingInLicense"
+            },
+            {
+              "key": "WfLicenseIsInvalid",
+              "value": "WfLicenseIsInvalid"
+            },
+            {
+              "key": "UpdateNoWfRemainingInLicense",
+              "value": "UpdateNoWfRemainingInLicense"
+            },
+            {
+              "key": "CommandNameAlreadyExist",
+              "value": "CommandNameAlreadyExist"
+            },
+            {
+              "key": "CommandPathMissing",
+              "value": "CommandPathMissing"
+            },
+            {
+              "key": "CommandDeviceIsMising",
+              "value": "CommandDeviceIsMising"
+            },
+            {
+              "key": "CommandReferencedToWorkflows",
+              "value": "CommandReferencedToWorkflows"
+            },
+            {
+              "key": "CommandReferencedToModules",
+              "value": "CommandReferencedToModules"
+            },
+            {
+              "key": "DevelopmentReferencedToWorkflows",
+              "value": "DevelopmentReferencedToWorkflows"
+            },
+            {
+              "key": "QueueHostIsEmpty",
+              "value": "QueueHostIsEmpty"
+            },
+            {
+              "key": "QueuePortIsInvalid",
+              "value": "QueuePortIsInvalid"
+            },
+            {
+              "key": "QueueUsernameIsEmpty",
+              "value": "QueueUsernameIsEmpty"
+            },
+            {
+              "key": "QueueNameIsEmpty",
+              "value": "QueueNameIsEmpty"
+            },
+            {
+              "key": "QueueAlreadyExist",
+              "value": "QueueAlreadyExist"
+            },
+            {
+              "key": "NotInPortRange",
+              "value": "NotInPortRange"
+            },
+            {
+              "key": "QueueAndRemoteCommShouldBeEnabled",
+              "value": "QueueAndRemoteCommShouldBeEnabled"
+            },
+            {
+              "key": "CannotDisableBecauseOneOfModulesIsNotUp",
+              "value": "CannotDisableBecauseOneOfModulesIsNotUp"
+            },
+            {
+              "key": "GeneralValueIsReferencedAndCannotBeDeleted",
+              "value": "GeneralValueIsReferencedAndCannotBeDeleted"
+            },
+            {
+              "key": "UploadTypeIsNotSupported",
+              "value": "UploadTypeIsNotSupported"
+            },
+            {
+              "key": "SelfServiceCategoryExist",
+              "value": "SelfServiceCategoryExist"
+            },
+            {
+              "key": "SelfServiceNameLength",
+              "value": "SelfServiceNameLength"
+            },
+            {
+              "key": "SelfServiceFolderNotExist",
+              "value": "SelfServiceFolderNotExist"
+            },
+            {
+              "key": "SelfServiceDescriptionLength",
+              "value": "SelfServiceDescriptionLength"
+            },
+            {
+              "key": "SelfServiceFolderNameLength",
+              "value": "SelfServiceFolderNameLength"
+            },
+            {
+              "key": "LoginFailed",
+              "value": "LoginFailed"
+            },
+            {
+              "key": "SelfServicePermissionsWrongOwnerType",
+              "value": "SelfServicePermissionsWrongOwnerType"
+            },
+            {
+              "key": "SelfServicePermissionsAtLeaseOneOwner",
+              "value": "SelfServicePermissionsAtLeaseOneOwner"
+            },
+            {
+              "key": "SpacesAreNotAllowedInDomainOrServerName",
+              "value": "SpacesAreNotAllowedInDomainOrServerName"
+            },
+            {
+              "key": "SelfServicePermissionsWorkflowNotExist",
+              "value": "SelfServicePermissionsWorkflowNotExist"
+            },
+            {
+              "key": "CanAddAccountAsMemberToActiveDirectory",
+              "value": "CanAddAccountAsMemberToActiveDirectory"
+            },
+            {
+              "key": "RemoteCommHasToBeConfigured",
+              "value": "RemoteCommHasToBeConfigured"
+            },
+            {
+              "key": "BrainInsightXomlIsNotValid",
+              "value": "BrainInsightXomlIsNotValid"
+            },
+            {
+              "key": "ActivityJsonIsNotValid",
+              "value": "ActivityJsonIsNotValid"
+            },
+            {
+              "key": "ActivityNameContainsSpecialChars",
+              "value": "ActivityNameContainsSpecialChars"
+            },
+            {
+              "key": "ActivityDoesNotExists",
+              "value": "ActivityDoesNotExists"
+            },
+            {
+              "key": "ActivityNameContainsDigits",
+              "value": "ActivityNameContainsDigits"
+            },
+            {
+              "key": "ActivityNameHasTooManyCharacters",
+              "value": "ActivityNameHasTooManyCharacters"
+            },
+            {
+              "key": "ActivityJsonSettingsAreWrong",
+              "value": "ActivityJsonSettingsAreWrong"
+            },
+            {
+              "key": "ActivityDescriptionHasTooManyCharacters",
+              "value": "ActivityDescriptionHasTooManyCharacters"
+            },
+            {
+              "key": "CustomActivityFolderDoesNotExist",
+              "value": "CustomActivityFolderDoesNotExist"
+            },
+            {
+              "key": "CustomActivityFolderReleatedActivities",
+              "value": "CustomActivityFolderReleatedActivities"
+            },
+            {
+              "key": "DeleteCustomActivityReleated",
+              "value": "DeleteCustomActivityReleated"
+            },
+            {
+              "key": "CustomActivityReleatedWorkflows",
+              "value": "CustomActivityReleatedWorkflows"
+            },
+            {
+              "key": "CustomActivityReleatedTemplates",
+              "value": "CustomActivityReleatedTemplates"
+            },
+            {
+              "key": "CustomActivityExportFailed",
+              "value": "CustomActivityExportFailed"
+            },
+            {
+              "key": "ExportForbiddenForNonCustomActivity",
+              "value": "ExportForbiddenForNonCustomActivity"
+            },
+            {
+              "key": "ImportActivityGeneralError",
+              "value": "ImportActivityGeneralError"
+            },
+            {
+              "key": "SelfServiceCategoryParentWithChild",
+              "value": "SelfServiceCategoryParentWithChild"
+            },
+            {
+              "key": "BridgeModuleShouldBeCreatedFirst",
+              "value": "BridgeModuleShouldBeCreatedFirst"
+            },
+            {
+              "key": "SelfServiceControlUnknownType",
+              "value": "SelfServiceControlUnknownType"
+            },
+            {
+              "key": "SelfServiceControlMultipleReferenceToSameVariable",
+              "value": "SelfServiceControlMultipleReferenceToSameVariable"
+            },
+            {
+              "key": "GeneralFailedCreateTenant",
+              "value": "GeneralFailedCreateTenant"
+            },
+            {
+              "key": "FailedCreateTenantDb",
+              "value": "FailedCreateTenantDb"
+            },
+            {
+              "key": "FailedCreateTenantRow",
+              "value": "FailedCreateTenantRow"
+            },
+            {
+              "key": "CompanyNameExist",
+              "value": "CompanyNameExist"
+            },
+            {
+              "key": "LicenseIssueTenantsSum",
+              "value": "LicenseIssueTenantsSum"
+            },
+            {
+              "key": "LicenseIssueWorkflows",
+              "value": "LicenseIssueWorkflows"
+            },
+            {
+              "key": "LicenseIssueModules",
+              "value": "LicenseIssueModules"
+            },
+            {
+              "key": "PortRangesOverlap",
+              "value": "PortRangesOverlap"
+            },
+            {
+              "key": "PortRangesOverlapInOther",
+              "value": "PortRangesOverlapInOther"
+            },
+            {
+              "key": "DeviceInUseInTenant",
+              "value": "DeviceInUseInTenant"
+            },
+            {
+              "key": "LicenseIssueDateExperassion",
+              "value": "LicenseIssueDateExperassion"
+            },
+            {
+              "key": "LicenseNotValidForMultiTenant",
+              "value": "LicenseNotValidForMultiTenant"
+            },
+            {
+              "key": "FailedToImportWorkflowXml",
+              "value": "FailedToImportWorkflowXml"
+            },
+            {
+              "key": "XmlStructureIsNotValid",
+              "value": "XmlStructureIsNotValid"
+            },
+            {
+              "key": "MainAdministratorAlreadyRegistered",
+              "value": "MainAdministratorAlreadyRegistered"
+            },
+            {
+              "key": "TenantAdministratorAlreadyRegistered",
+              "value": "TenantAdministratorAlreadyRegistered"
+            },
+            {
+              "key": "UserHaveNotPermissionToOverrideWorkflow",
+              "value": "UserHaveNotPermissionToOverrideWorkflow"
+            }
+          ],
+          "value": "Common_GeneralError"
+        },
+        {
+          "required": false,
+          "key": "errorsList_description",
+          "label": "ErrorsList_description",
+          "labelKey": "errorsList_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList_extraData",
+          "label": "ErrorsList_extraData",
+          "labelKey": "errorsList_extraData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList____",
+          "label": "ErrorsList[][]",
+          "labelKey": "errorsList_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList_code",
+          "label": "ErrorsList_code",
+          "labelKey": "errorsList_code_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Common_GeneralError",
+              "value": "Common_GeneralError"
+            },
+            {
+              "key": "Common_MissingName",
+              "value": "Common_MissingName"
+            },
+            {
+              "key": "Common_Workflow_Not_Exist",
+              "value": "Common_Workflow_Not_Exist"
+            },
+            {
+              "key": "Common_Token_Not_Exist",
+              "value": "Common_Token_Not_Exist"
+            },
+            {
+              "key": "Common_LogOut_Failed",
+              "value": "Common_LogOut_Failed"
+            },
+            {
+              "key": "Common_Wrong_Password",
+              "value": "Common_Wrong_Password"
+            },
+            {
+              "key": "Common_LoginHasFailed",
+              "value": "Common_LoginHasFailed"
+            },
+            {
+              "key": "Common_CompanyNotExist",
+              "value": "Common_CompanyNotExist"
+            },
+            {
+              "key": "Common_Color_Not_Exist",
+              "value": "Common_Color_Not_Exist"
+            },
+            {
+              "key": "Common_UserNotHavePermissionsToUpdate",
+              "value": "Common_UserNotHavePermissionsToUpdate"
+            },
+            {
+              "key": "Common_NameAlreadyExist",
+              "value": "Common_NameAlreadyExist"
+            },
+            {
+              "key": "Common_MissingPlatform",
+              "value": "Common_MissingPlatform"
+            },
+            {
+              "key": "Common_WindowsMaximumPasswordLength",
+              "value": "Common_WindowsMaximumPasswordLength"
+            },
+            {
+              "key": "Common_MissingWorkflow",
+              "value": "Common_MissingWorkflow"
+            },
+            {
+              "key": "Common_TimeZoneIsMissing",
+              "value": "Common_TimeZoneIsMissing"
+            },
+            {
+              "key": "Common_DateIsMissing",
+              "value": "Common_DateIsMissing"
+            },
+            {
+              "key": "Common_TimeIsMissing",
+              "value": "Common_TimeIsMissing"
+            },
+            {
+              "key": "Common_EndDateIsBigger",
+              "value": "Common_EndDateIsBigger"
+            },
+            {
+              "key": "Common_EndTimeIsBigger",
+              "value": "Common_EndTimeIsBigger"
+            },
+            {
+              "key": "Common_EndDateInPast",
+              "value": "Common_EndDateInPast"
+            },
+            {
+              "key": "Common_EntityMissingName",
+              "value": "Common_EntityMissingName"
+            },
+            {
+              "key": "Common_EntityNameAlreadyExist",
+              "value": "Common_EntityNameAlreadyExist"
+            },
+            {
+              "key": "Common_EntityNotExist",
+              "value": "Common_EntityNotExist"
+            },
+            {
+              "key": "Common_Invalid_License",
+              "value": "Common_Invalid_License"
+            },
+            {
+              "key": "Connection_ToDal_Failed",
+              "value": "Connection_ToDal_Failed"
+            },
+            {
+              "key": "Value_Is_Missing",
+              "value": "Value_Is_Missing"
+            },
+            {
+              "key": "CommonJwtFailed",
+              "value": "CommonJwtFailed"
+            },
+            {
+              "key": "Common_DeleteFailed",
+              "value": "Common_DeleteFailed"
+            },
+            {
+              "key": "Common_LengthNotValid",
+              "value": "Common_LengthNotValid"
+            },
+            {
+              "key": "WorkflowFolderNotExistOrEmpty",
+              "value": "WorkflowFolderNotExistOrEmpty"
+            },
+            {
+              "key": "FolderContainsNotOnlyWorkflows",
+              "value": "FolderContainsNotOnlyWorkflows"
+            },
+            {
+              "key": "UserNotHavePermissionsReadWorkflow",
+              "value": "UserNotHavePermissionsReadWorkflow"
+            },
+            {
+              "key": "WorkflowNameAlreadyExist",
+              "value": "WorkflowNameAlreadyExist"
+            },
+            {
+              "key": "WorkflowNotExist",
+              "value": "WorkflowNotExist"
+            },
+            {
+              "key": "UserNotHavePermissionsRunWorkflow",
+              "value": "UserNotHavePermissionsRunWorkflow"
+            },
+            {
+              "key": "PlanRevisionNotExistForWorkflow",
+              "value": "PlanRevisionNotExistForWorkflow"
+            },
+            {
+              "key": "FailedGetWorkflowStracture",
+              "value": "FailedGetWorkflowStracture"
+            },
+            {
+              "key": "WorkflowNameIsMissing",
+              "value": "WorkflowNameIsMissing"
+            },
+            {
+              "key": "WorkflowCannotCreateRevisionIfNoStructure",
+              "value": "WorkflowCannotCreateRevisionIfNoStructure"
+            },
+            {
+              "key": "WorkflowStopFailed",
+              "value": "WorkflowStopFailed"
+            },
+            {
+              "key": "FailedToRunWorkflow",
+              "value": "FailedToRunWorkflow"
+            },
+            {
+              "key": "FolderNameTooLong",
+              "value": "FolderNameTooLong"
+            },
+            {
+              "key": "WorkflowFilterDateFromBiggerThenToDate",
+              "value": "WorkflowFilterDateFromBiggerThenToDate"
+            },
+            {
+              "key": "TemplateNameAlreadyExist",
+              "value": "TemplateNameAlreadyExist"
+            },
+            {
+              "key": "TagContainsLessThanThreeChars",
+              "value": "TagContainsLessThanThreeChars"
+            },
+            {
+              "key": "WorkflowNameContainsSpecialChars",
+              "value": "WorkflowNameContainsSpecialChars"
+            },
+            {
+              "key": "TagsAlreadyExist",
+              "value": "TagsAlreadyExist"
+            },
+            {
+              "key": "FailedToImportWorkflow",
+              "value": "FailedToImportWorkflow"
+            },
+            {
+              "key": "PolicyTrigerDeleteFailed",
+              "value": "PolicyTrigerDeleteFailed"
+            },
+            {
+              "key": "PolicyTrigerFirstIndex",
+              "value": "PolicyTrigerFirstIndex"
+            },
+            {
+              "key": "PolicyTrigerLastIndex",
+              "value": "PolicyTrigerLastIndex"
+            },
+            {
+              "key": "PolicyConditionDeleteFailed",
+              "value": "PolicyConditionDeleteFailed"
+            },
+            {
+              "key": "PolicyConditionCannotBeEmpty",
+              "value": "PolicyConditionCannotBeEmpty"
+            },
+            {
+              "key": "IncidentClassifactionNameIsEmpty",
+              "value": "IncidentClassifactionNameIsEmpty"
+            },
+            {
+              "key": "IncidentDeviceNotExist",
+              "value": "IncidentDeviceNotExist"
+            },
+            {
+              "key": "IncidentServiceNotExist",
+              "value": "IncidentServiceNotExist"
+            },
+            {
+              "key": "IncidentClassifNotExist",
+              "value": "IncidentClassifNotExist"
+            },
+            {
+              "key": "IncidentAlreadyExist",
+              "value": "IncidentAlreadyExist"
+            },
+            {
+              "key": "IncidentDeleteRefToObjects",
+              "value": "IncidentDeleteRefToObjects"
+            },
+            {
+              "key": "IncidentDeleteRefToWorkflows",
+              "value": "IncidentDeleteRefToWorkflows"
+            },
+            {
+              "key": "IncidentDeleteFailed",
+              "value": "IncidentDeleteFailed"
+            },
+            {
+              "key": "IPAddressNotValid",
+              "value": "IPAddressNotValid"
+            },
+            {
+              "key": "IncidentRankingsDuplicate",
+              "value": "IncidentRankingsDuplicate"
+            },
+            {
+              "key": "IncidentMappingFirstIndex",
+              "value": "IncidentMappingFirstIndex"
+            },
+            {
+              "key": "IncidentMappingLastIndex",
+              "value": "IncidentMappingLastIndex"
+            },
+            {
+              "key": "IncidentMappingTagCodeIsMissing",
+              "value": "IncidentMappingTagCodeIsMissing"
+            },
+            {
+              "key": "HostDeviceMacWrong",
+              "value": "HostDeviceMacWrong"
+            },
+            {
+              "key": "DeviceReferensedToObjects",
+              "value": "DeviceReferensedToObjects"
+            },
+            {
+              "key": "DeviceReferensedToWorkflows",
+              "value": "DeviceReferensedToWorkflows"
+            },
+            {
+              "key": "ServicesReferensedToObjects",
+              "value": "ServicesReferensedToObjects"
+            },
+            {
+              "key": "ClassificationReferensedToObjects",
+              "value": "ClassificationReferensedToObjects"
+            },
+            {
+              "key": "ClassificationNameExist",
+              "value": "ClassificationNameExist"
+            },
+            {
+              "key": "IncidentMappingCodeTestFailed",
+              "value": "IncidentMappingCodeTestFailed"
+            },
+            {
+              "key": "ESScheduleWorklowEmpty",
+              "value": "ESScheduleWorklowEmpty"
+            },
+            {
+              "key": "ESScheduleWeeklyEmptyDays",
+              "value": "ESScheduleWeeklyEmptyDays"
+            },
+            {
+              "key": "ESScheduleRunAtIsEmpty",
+              "value": "ESScheduleRunAtIsEmpty"
+            },
+            {
+              "key": "ESScheduleEmptyActionType",
+              "value": "ESScheduleEmptyActionType"
+            },
+            {
+              "key": "ESScheduleMonthlyEmptyDates",
+              "value": "ESScheduleMonthlyEmptyDates"
+            },
+            {
+              "key": "ESScheduleBetweenFromGreaterThanTo",
+              "value": "ESScheduleBetweenFromGreaterThanTo"
+            },
+            {
+              "key": "ESScheduleWorkflowNotExist",
+              "value": "ESScheduleWorkflowNotExist"
+            },
+            {
+              "key": "ESScheduleWorkflowNotHavePermission",
+              "value": "ESScheduleWorkflowNotHavePermission"
+            },
+            {
+              "key": "DutySupervisorIsMissing",
+              "value": "DutySupervisorIsMissing"
+            },
+            {
+              "key": "DutySiteIsMissing",
+              "value": "DutySiteIsMissing"
+            },
+            {
+              "key": "DutyDefaultUserNotExist",
+              "value": "DutyDefaultUserNotExist"
+            },
+            {
+              "key": "DutyDefaultUserGroupNotExist",
+              "value": "DutyDefaultUserGroupNotExist"
+            },
+            {
+              "key": "DutyNameAlreadyExist",
+              "value": "DutyNameAlreadyExist"
+            },
+            {
+              "key": "DutyDeleteReleatedWorkflows",
+              "value": "DutyDeleteReleatedWorkflows"
+            },
+            {
+              "key": "DutyDeleteFailed",
+              "value": "DutyDeleteFailed"
+            },
+            {
+              "key": "AccountFNameNotExist",
+              "value": "AccountFNameNotExist"
+            },
+            {
+              "key": "AccountLNameNotExist",
+              "value": "AccountLNameNotExist"
+            },
+            {
+              "key": "AccountEmailNotValid",
+              "value": "AccountEmailNotValid"
+            },
+            {
+              "key": "AccountEmailAlreadyExist",
+              "value": "AccountEmailAlreadyExist"
+            },
+            {
+              "key": "AccountDeleteMainUser",
+              "value": "AccountDeleteMainUser"
+            },
+            {
+              "key": "AccountDeleteConnectedUser",
+              "value": "AccountDeleteConnectedUser"
+            },
+            {
+              "key": "AccountDeletePreveliges",
+              "value": "AccountDeletePreveliges"
+            },
+            {
+              "key": "AccountDeleteReleatedWorkflows",
+              "value": "AccountDeleteReleatedWorkflows"
+            },
+            {
+              "key": "AccountDeleteFailedGeneral",
+              "value": "AccountDeleteFailedGeneral"
+            },
+            {
+              "key": "NotHavePermissionCreateUser",
+              "value": "NotHavePermissionCreateUser"
+            },
+            {
+              "key": "HigherUserPriviliges",
+              "value": "HigherUserPriviliges"
+            },
+            {
+              "key": "PasswordIsMising",
+              "value": "PasswordIsMising"
+            },
+            {
+              "key": "CannotCreateOrUpdateAdministrator",
+              "value": "CannotCreateOrUpdateAdministrator"
+            },
+            {
+              "key": "RecipientUserExistInLoginUsersAndCannotBeDeleted",
+              "value": "RecipientUserExistInLoginUsersAndCannotBeDeleted"
+            },
+            {
+              "key": "HigherUserPriviligesForSelf",
+              "value": "HigherUserPriviligesForSelf"
+            },
+            {
+              "key": "UserGroupNameAlreadyExist",
+              "value": "UserGroupNameAlreadyExist"
+            },
+            {
+              "key": "UserGroupDeletePreveliges",
+              "value": "UserGroupDeletePreveliges"
+            },
+            {
+              "key": "HigherGroupPriviliges",
+              "value": "HigherGroupPriviliges"
+            },
+            {
+              "key": "NotHavePermissionCreateGroup",
+              "value": "NotHavePermissionCreateGroup"
+            },
+            {
+              "key": "UserGroupDeleteReleatedWorkflows",
+              "value": "UserGroupDeleteReleatedWorkflows"
+            },
+            {
+              "key": "UserGroupDeleteFailed",
+              "value": "UserGroupDeleteFailed"
+            },
+            {
+              "key": "UserGroupOwnerExist",
+              "value": "UserGroupOwnerExist"
+            },
+            {
+              "key": "UserGroupMemberExist",
+              "value": "UserGroupMemberExist"
+            },
+            {
+              "key": "UserGroupDeleteReleatedSelfService",
+              "value": "UserGroupDeleteReleatedSelfService"
+            },
+            {
+              "key": "UsersDeleteReleatedSelfService",
+              "value": "UsersDeleteReleatedSelfService"
+            },
+            {
+              "key": "ConditionsItemsEmpty",
+              "value": "ConditionsItemsEmpty"
+            },
+            {
+              "key": "ConditionNameAlreadyExist",
+              "value": "ConditionNameAlreadyExist"
+            },
+            {
+              "key": "ConditionLoopError",
+              "value": "ConditionLoopError"
+            },
+            {
+              "key": "ConditionCheckError",
+              "value": "ConditionCheckError"
+            },
+            {
+              "key": "ConditionDeleteReleatedTriggers",
+              "value": "ConditionDeleteReleatedTriggers"
+            },
+            {
+              "key": "ConditionMissingOperator",
+              "value": "ConditionMissingOperator"
+            },
+            {
+              "key": "ConditionDeleteReleatedAccessRestriction",
+              "value": "ConditionDeleteReleatedAccessRestriction"
+            },
+            {
+              "key": "ConditionObjectIsReferencedByCondition",
+              "value": "ConditionObjectIsReferencedByCondition"
+            },
+            {
+              "key": "ConditionObjectNameIsMissing",
+              "value": "ConditionObjectNameIsMissing"
+            },
+            {
+              "key": "ConditionObjectValueIsMissing",
+              "value": "ConditionObjectValueIsMissing"
+            },
+            {
+              "key": "ErrorHandlingActivityMissing",
+              "value": "ErrorHandlingActivityMissing"
+            },
+            {
+              "key": "ErrorHandlingReturnErrorMessageIsMissing",
+              "value": "ErrorHandlingReturnErrorMessageIsMissing"
+            },
+            {
+              "key": "ErrorHandlingErrorMessageHaveDuplicateRow",
+              "value": "ErrorHandlingErrorMessageHaveDuplicateRow"
+            },
+            {
+              "key": "ErrorHandlingDeleteReleatedWorkflows",
+              "value": "ErrorHandlingDeleteReleatedWorkflows"
+            },
+            {
+              "key": "ErrorMessageDeleteReleatedErrorHandling",
+              "value": "ErrorMessageDeleteReleatedErrorHandling"
+            },
+            {
+              "key": "MessageTemplateDeleteReleatedWorkflows",
+              "value": "MessageTemplateDeleteReleatedWorkflows"
+            },
+            {
+              "key": "TimeFrameDeleteReleatedWorkflows",
+              "value": "TimeFrameDeleteReleatedWorkflows"
+            },
+            {
+              "key": "TimeFrameDayIsMissing",
+              "value": "TimeFrameDayIsMissing"
+            },
+            {
+              "key": "AccessRestrictionComplexConditionNotAllowed",
+              "value": "AccessRestrictionComplexConditionNotAllowed"
+            },
+            {
+              "key": "SpacesAreNotAllowedInVariableName",
+              "value": "SpacesAreNotAllowedInVariableName"
+            },
+            {
+              "key": "VariableNameContainsInvalidCharacters",
+              "value": "VariableNameContainsInvalidCharacters"
+            },
+            {
+              "key": "OnlyTextTypeIsAllowedForSelectedVariableType",
+              "value": "OnlyTextTypeIsAllowedForSelectedVariableType"
+            },
+            {
+              "key": "PasswordIsMandotoryField",
+              "value": "PasswordIsMandotoryField"
+            },
+            {
+              "key": "DeleteInternalVariableIsIllegal",
+              "value": "DeleteInternalVariableIsIllegal"
+            },
+            {
+              "key": "VariableIsReferencedByUsers",
+              "value": "VariableIsReferencedByUsers"
+            },
+            {
+              "key": "DevelopmentFailedToCompile",
+              "value": "DevelopmentFailedToCompile"
+            },
+            {
+              "key": "DevelopmentILmergeIsMissing",
+              "value": "DevelopmentILmergeIsMissing"
+            },
+            {
+              "key": "DevelopmentMissingType",
+              "value": "DevelopmentMissingType"
+            },
+            {
+              "key": "WorkflowsReferencedToDevelopment",
+              "value": "WorkflowsReferencedToDevelopment"
+            },
+            {
+              "key": "ModulePortMissing",
+              "value": "ModulePortMissing"
+            },
+            {
+              "key": "ModuleDeviceMissing",
+              "value": "ModuleDeviceMissing"
+            },
+            {
+              "key": "ModuleTypeMissing",
+              "value": "ModuleTypeMissing"
+            },
+            {
+              "key": "ModuleDeleteFailedGeneral",
+              "value": "ModuleDeleteFailedGeneral"
+            },
+            {
+              "key": "ModuleDeviceAlreadyExist",
+              "value": "ModuleDeviceAlreadyExist"
+            },
+            {
+              "key": "ModuleLicenseIssue",
+              "value": "ModuleLicenseIssue"
+            },
+            {
+              "key": "FailedGetFields",
+              "value": "FailedGetFields"
+            },
+            {
+              "key": "FailedTestConnection",
+              "value": "FailedTestConnection"
+            },
+            {
+              "key": "FailedGetEntities",
+              "value": "FailedGetEntities"
+            },
+            {
+              "key": "FailedCloseIncident",
+              "value": "FailedCloseIncident"
+            },
+            {
+              "key": "FailedResetIncident",
+              "value": "FailedResetIncident"
+            },
+            {
+              "key": "FailedAssignToIncident",
+              "value": "FailedAssignToIncident"
+            },
+            {
+              "key": "FailedTakeOwnershipIncident",
+              "value": "FailedTakeOwnershipIncident"
+            },
+            {
+              "key": "FailedStartIncidentWorkflow",
+              "value": "FailedStartIncidentWorkflow"
+            },
+            {
+              "key": "FailedStopIncidentWorkflow",
+              "value": "FailedStopIncidentWorkflow"
+            },
+            {
+              "key": "ModuleNameAlreadyExist",
+              "value": "ModuleNameAlreadyExist"
+            },
+            {
+              "key": "CoreModuleAlreadyExist",
+              "value": "CoreModuleAlreadyExist"
+            },
+            {
+              "key": "ModuleReferencedToCondition",
+              "value": "ModuleReferencedToCondition"
+            },
+            {
+              "key": "LoadWfFailedActivityDoesNotExist",
+              "value": "LoadWfFailedActivityDoesNotExist"
+            },
+            {
+              "key": "LoadWfFailedEmptyWf",
+              "value": "LoadWfFailedEmptyWf"
+            },
+            {
+              "key": "LoadWfFailedActivityNotAllowed",
+              "value": "LoadWfFailedActivityNotAllowed"
+            },
+            {
+              "key": "CreateNoWfRemainingInLicense",
+              "value": "CreateNoWfRemainingInLicense"
+            },
+            {
+              "key": "WfLicenseIsInvalid",
+              "value": "WfLicenseIsInvalid"
+            },
+            {
+              "key": "UpdateNoWfRemainingInLicense",
+              "value": "UpdateNoWfRemainingInLicense"
+            },
+            {
+              "key": "CommandNameAlreadyExist",
+              "value": "CommandNameAlreadyExist"
+            },
+            {
+              "key": "CommandPathMissing",
+              "value": "CommandPathMissing"
+            },
+            {
+              "key": "CommandDeviceIsMising",
+              "value": "CommandDeviceIsMising"
+            },
+            {
+              "key": "CommandReferencedToWorkflows",
+              "value": "CommandReferencedToWorkflows"
+            },
+            {
+              "key": "CommandReferencedToModules",
+              "value": "CommandReferencedToModules"
+            },
+            {
+              "key": "DevelopmentReferencedToWorkflows",
+              "value": "DevelopmentReferencedToWorkflows"
+            },
+            {
+              "key": "QueueHostIsEmpty",
+              "value": "QueueHostIsEmpty"
+            },
+            {
+              "key": "QueuePortIsInvalid",
+              "value": "QueuePortIsInvalid"
+            },
+            {
+              "key": "QueueUsernameIsEmpty",
+              "value": "QueueUsernameIsEmpty"
+            },
+            {
+              "key": "QueueNameIsEmpty",
+              "value": "QueueNameIsEmpty"
+            },
+            {
+              "key": "QueueAlreadyExist",
+              "value": "QueueAlreadyExist"
+            },
+            {
+              "key": "NotInPortRange",
+              "value": "NotInPortRange"
+            },
+            {
+              "key": "QueueAndRemoteCommShouldBeEnabled",
+              "value": "QueueAndRemoteCommShouldBeEnabled"
+            },
+            {
+              "key": "CannotDisableBecauseOneOfModulesIsNotUp",
+              "value": "CannotDisableBecauseOneOfModulesIsNotUp"
+            },
+            {
+              "key": "GeneralValueIsReferencedAndCannotBeDeleted",
+              "value": "GeneralValueIsReferencedAndCannotBeDeleted"
+            },
+            {
+              "key": "UploadTypeIsNotSupported",
+              "value": "UploadTypeIsNotSupported"
+            },
+            {
+              "key": "SelfServiceCategoryExist",
+              "value": "SelfServiceCategoryExist"
+            },
+            {
+              "key": "SelfServiceNameLength",
+              "value": "SelfServiceNameLength"
+            },
+            {
+              "key": "SelfServiceFolderNotExist",
+              "value": "SelfServiceFolderNotExist"
+            },
+            {
+              "key": "SelfServiceDescriptionLength",
+              "value": "SelfServiceDescriptionLength"
+            },
+            {
+              "key": "SelfServiceFolderNameLength",
+              "value": "SelfServiceFolderNameLength"
+            },
+            {
+              "key": "LoginFailed",
+              "value": "LoginFailed"
+            },
+            {
+              "key": "SelfServicePermissionsWrongOwnerType",
+              "value": "SelfServicePermissionsWrongOwnerType"
+            },
+            {
+              "key": "SelfServicePermissionsAtLeaseOneOwner",
+              "value": "SelfServicePermissionsAtLeaseOneOwner"
+            },
+            {
+              "key": "SpacesAreNotAllowedInDomainOrServerName",
+              "value": "SpacesAreNotAllowedInDomainOrServerName"
+            },
+            {
+              "key": "SelfServicePermissionsWorkflowNotExist",
+              "value": "SelfServicePermissionsWorkflowNotExist"
+            },
+            {
+              "key": "CanAddAccountAsMemberToActiveDirectory",
+              "value": "CanAddAccountAsMemberToActiveDirectory"
+            },
+            {
+              "key": "RemoteCommHasToBeConfigured",
+              "value": "RemoteCommHasToBeConfigured"
+            },
+            {
+              "key": "BrainInsightXomlIsNotValid",
+              "value": "BrainInsightXomlIsNotValid"
+            },
+            {
+              "key": "ActivityJsonIsNotValid",
+              "value": "ActivityJsonIsNotValid"
+            },
+            {
+              "key": "ActivityNameContainsSpecialChars",
+              "value": "ActivityNameContainsSpecialChars"
+            },
+            {
+              "key": "ActivityDoesNotExists",
+              "value": "ActivityDoesNotExists"
+            },
+            {
+              "key": "ActivityNameContainsDigits",
+              "value": "ActivityNameContainsDigits"
+            },
+            {
+              "key": "ActivityNameHasTooManyCharacters",
+              "value": "ActivityNameHasTooManyCharacters"
+            },
+            {
+              "key": "ActivityJsonSettingsAreWrong",
+              "value": "ActivityJsonSettingsAreWrong"
+            },
+            {
+              "key": "ActivityDescriptionHasTooManyCharacters",
+              "value": "ActivityDescriptionHasTooManyCharacters"
+            },
+            {
+              "key": "CustomActivityFolderDoesNotExist",
+              "value": "CustomActivityFolderDoesNotExist"
+            },
+            {
+              "key": "CustomActivityFolderReleatedActivities",
+              "value": "CustomActivityFolderReleatedActivities"
+            },
+            {
+              "key": "DeleteCustomActivityReleated",
+              "value": "DeleteCustomActivityReleated"
+            },
+            {
+              "key": "CustomActivityReleatedWorkflows",
+              "value": "CustomActivityReleatedWorkflows"
+            },
+            {
+              "key": "CustomActivityReleatedTemplates",
+              "value": "CustomActivityReleatedTemplates"
+            },
+            {
+              "key": "CustomActivityExportFailed",
+              "value": "CustomActivityExportFailed"
+            },
+            {
+              "key": "ExportForbiddenForNonCustomActivity",
+              "value": "ExportForbiddenForNonCustomActivity"
+            },
+            {
+              "key": "ImportActivityGeneralError",
+              "value": "ImportActivityGeneralError"
+            },
+            {
+              "key": "SelfServiceCategoryParentWithChild",
+              "value": "SelfServiceCategoryParentWithChild"
+            },
+            {
+              "key": "BridgeModuleShouldBeCreatedFirst",
+              "value": "BridgeModuleShouldBeCreatedFirst"
+            },
+            {
+              "key": "SelfServiceControlUnknownType",
+              "value": "SelfServiceControlUnknownType"
+            },
+            {
+              "key": "SelfServiceControlMultipleReferenceToSameVariable",
+              "value": "SelfServiceControlMultipleReferenceToSameVariable"
+            },
+            {
+              "key": "GeneralFailedCreateTenant",
+              "value": "GeneralFailedCreateTenant"
+            },
+            {
+              "key": "FailedCreateTenantDb",
+              "value": "FailedCreateTenantDb"
+            },
+            {
+              "key": "FailedCreateTenantRow",
+              "value": "FailedCreateTenantRow"
+            },
+            {
+              "key": "CompanyNameExist",
+              "value": "CompanyNameExist"
+            },
+            {
+              "key": "LicenseIssueTenantsSum",
+              "value": "LicenseIssueTenantsSum"
+            },
+            {
+              "key": "LicenseIssueWorkflows",
+              "value": "LicenseIssueWorkflows"
+            },
+            {
+              "key": "LicenseIssueModules",
+              "value": "LicenseIssueModules"
+            },
+            {
+              "key": "PortRangesOverlap",
+              "value": "PortRangesOverlap"
+            },
+            {
+              "key": "PortRangesOverlapInOther",
+              "value": "PortRangesOverlapInOther"
+            },
+            {
+              "key": "DeviceInUseInTenant",
+              "value": "DeviceInUseInTenant"
+            },
+            {
+              "key": "LicenseIssueDateExperassion",
+              "value": "LicenseIssueDateExperassion"
+            },
+            {
+              "key": "LicenseNotValidForMultiTenant",
+              "value": "LicenseNotValidForMultiTenant"
+            },
+            {
+              "key": "FailedToImportWorkflowXml",
+              "value": "FailedToImportWorkflowXml"
+            },
+            {
+              "key": "XmlStructureIsNotValid",
+              "value": "XmlStructureIsNotValid"
+            },
+            {
+              "key": "MainAdministratorAlreadyRegistered",
+              "value": "MainAdministratorAlreadyRegistered"
+            },
+            {
+              "key": "TenantAdministratorAlreadyRegistered",
+              "value": "TenantAdministratorAlreadyRegistered"
+            },
+            {
+              "key": "UserHaveNotPermissionToOverrideWorkflow",
+              "value": "UserHaveNotPermissionToOverrideWorkflow"
+            }
+          ],
+          "value": "Common_GeneralError"
+        },
+        {
+          "required": false,
+          "key": "errorsList_description",
+          "label": "ErrorsList_description",
+          "labelKey": "errorsList_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList_extraData",
+          "label": "ErrorsList_extraData",
+          "labelKey": "errorsList_extraData_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorsList____",
+          "label": "ErrorsList[][]",
+          "labelKey": "errorsList_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorType",
+          "label": "ErrorType",
+          "labelKey": "errorType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Ok",
+              "value": "Ok"
+            },
+            {
+              "key": "Warning",
+              "value": "Warning"
+            },
+            {
+              "key": "Error",
+              "value": "Error"
+            }
+          ],
+          "value": "Ok"
+        },
+        {
+          "required": false,
+          "key": "errorsList_errorType",
+          "label": "ErrorsList_errorType",
+          "labelKey": "errorsList_errorType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Ok",
+              "value": "Ok"
+            },
+            {
+              "key": "Warning",
+              "value": "Warning"
+            },
+            {
+              "key": "Error",
+              "value": "Error"
+            }
+          ],
+          "value": "Ok"
+        },
+        {
+          "required": false,
+          "key": "errorMessageDetails_errorType",
+          "label": "ErrorMessageDetails_errorType",
+          "labelKey": "errorMessageDetails_errorType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Ok",
+              "value": "Ok"
+            },
+            {
+              "key": "Warning",
+              "value": "Warning"
+            },
+            {
+              "key": "Error",
+              "value": "Error"
+            }
+          ],
+          "value": "Ok"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "createModuleType",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

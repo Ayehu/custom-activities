@@ -1,0 +1,212 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY SearchFlatSampleSearch",
+    "description": "AY SearchFlatSampleSearch",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "queryString",
+          "label": "QueryString",
+          "labelKey": "queryString_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isScheduled",
+          "label": "IsScheduled",
+          "labelKey": "isScheduled_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isInTriggerAction",
+          "label": "IsInTriggerAction",
+          "labelKey": "isInTriggerAction_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isInSelfService",
+          "label": "IsInSelfService",
+          "labelKey": "isInSelfService_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "valid",
+          "label": "Valid",
+          "labelKey": "valid_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "All",
+              "value": "All"
+            },
+            {
+              "key": "Valid",
+              "value": "Valid"
+            },
+            {
+              "key": "NotValid",
+              "value": "NotValid"
+            }
+          ],
+          "value": "All"
+        },
+        {
+          "required": false,
+          "key": "startTime",
+          "label": "StartTime",
+          "labelKey": "startTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "endTime",
+          "label": "EndTime",
+          "labelKey": "endTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorHandling____",
+          "label": "ErrorHandling[][]",
+          "labelKey": "errorHandling_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "modifiedBetweenDates",
+          "label": "ModifiedBetweenDates",
+          "labelKey": "modifiedBetweenDates_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tags____",
+          "label": "Tags[][]",
+          "labelKey": "tags_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "All",
+              "value": "All"
+            },
+            {
+              "key": "Workflow",
+              "value": "Workflow"
+            },
+            {
+              "key": "Snippet",
+              "value": "Snippet"
+            },
+            {
+              "key": "Template",
+              "value": "Template"
+            }
+          ],
+          "value": "All"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "flatSampleSearch",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
