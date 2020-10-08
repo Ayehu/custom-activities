@@ -9,6 +9,7 @@ The various API endpoints used by these activities are:
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/CaseExchange">https://docs.microfocus.com/itom/SMAX:2020.05/CaseExchange</a></li>
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol">https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol</a></li>
 <li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps">https://docs.microfocus.com/itom/SMAX:2020.05/SingleEntityOps</a></li>
+<li><a href="https://docs.microfocus.com/itom/SMAX:2020.05/BulkUpdate">https://docs.microfocus.com/itom/SMAX:2020.05/BulkUpdate</a></li>
 </ul>
 <br>
 For information on filter syntax, visit <a href="https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol#Collection_filtering">https://docs.microfocus.com/itom/SMAX:2020.05/CollectQueryProtocol#Collection_filtering</a>.
