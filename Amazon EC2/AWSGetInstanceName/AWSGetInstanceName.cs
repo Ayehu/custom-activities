@@ -56,7 +56,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 				string tagsJson = jsonResults["Reservations"][0]["Instances"][0]["Tags"].ToString();
 
-				JArray tagsJsonArray = Newtonsoft.Json.JsonConvert.DeserializeObject<JArray>(tagsJson);
+				JArray tagsJsonArray = JsonConvert.DeserializeObject<JArray>(tagsJson);
 
 				string instanceName = "";
 
