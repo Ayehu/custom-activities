@@ -23,8 +23,6 @@ namespace Ayehu.Sdk.ActivityCreation
 		{
 			try
 			{
-				issueType = issueType.ToLower();
-
 				WebClient wc = new WebClient();
 				
 				wc.Headers["Authorization"] = "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + apiToken));
