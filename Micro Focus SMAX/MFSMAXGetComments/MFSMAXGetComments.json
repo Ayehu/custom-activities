@@ -71,6 +71,33 @@
           "labelKey": "TICKETNUMBER_VALUE",
           "baseType": "control",
           "controlType": "textbox"
+        },
+        {
+          "value": "ALL",
+          "required": true,
+          "key": "commentType",
+          "label": "Comment Type",
+          "labelKey": "COMMENTTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "ALL",
+              "value": "ALL"
+            },
+            {
+              "key": "INTERNAL",
+              "value": "INTERNAL"
+            },
+            {
+              "key": "PUBLIC",
+              "value": "PUBLIC"
+            },
+            {
+              "key": "AGENTPUBLIC",
+              "value": "AGENTPUBLIC"
+            }
+          ]
         }
       ],
       "index": "1",

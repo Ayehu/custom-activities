@@ -21,6 +21,7 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string password;
 		public string recordType;
 		public string ticketNumber;
+		public string commentType;
 
 		public ICustomActivityResult Execute()
 		{
@@ -60,6 +61,11 @@ namespace Ayehu.Sdk.ActivityCreation
 			}
 
 			string apiURL = instanceURL + "/rest/" + tenantID + "/collaboration/comments/" + recordType + "/" + ticketNumber;
+
+			if(commentType != "ALL")
+			{
+				apiURL += "?PrivacyType=" + commentType;
+			}
 
 			string contentType = "application/json";
 			string accept = "application/json";
