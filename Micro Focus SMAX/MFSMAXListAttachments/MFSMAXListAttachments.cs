@@ -13,7 +13,7 @@ using System;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-	public class CustomActivity: IActivity
+	public class CustomActivity : IActivity
 	{
 		public string instanceURL;
 		public string tenantID;
@@ -34,8 +34,8 @@ namespace Ayehu.Sdk.ActivityCreation
 			try
 			{
 				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-
-				var tokenHttpWebRequest = (HttpWebRequest) WebRequest.Create(tokenURL);
+				
+				var tokenHttpWebRequest = (HttpWebRequest)WebRequest.Create(tokenURL);
 				tokenHttpWebRequest.ContentType = tokenContentType;
 				tokenHttpWebRequest.Accept = tokenAccept;
 				tokenHttpWebRequest.Method = tokenMethod;
@@ -46,7 +46,7 @@ namespace Ayehu.Sdk.ActivityCreation
 					tokenStreamWriter.Flush();
 					tokenStreamWriter.Close();
 
-					var tokenHttpResponse = (HttpWebResponse) tokenHttpWebRequest.GetResponse();
+					var tokenHttpResponse = (HttpWebResponse)tokenHttpWebRequest.GetResponse();
 
 					using(var tokenStreamReader = new StreamReader(tokenHttpResponse.GetResponseStream()))
 					{
@@ -54,12 +54,12 @@ namespace Ayehu.Sdk.ActivityCreation
 					}
 				}
 			}
-			catch (WebException e)
+			catch(WebException e)
 			{
 				throw new Exception(e.Message);
 			}
 
-			string apiURL = instanceURL + "/rest/" + tenantID + "/ems/" + recordType + "/" + recordNumber + "/?layout=RequestAttachments";
+			string apiURL = instanceURL + "/rest/" + tenantID + "/ems/" + recordType + "/" + recordNumber + "/?layout=" + recordType + "Attachments";
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "GET";
@@ -67,14 +67,14 @@ namespace Ayehu.Sdk.ActivityCreation
 			try
 			{
 				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-
-				var httpWebRequest = (HttpWebRequest) WebRequest.Create(apiURL);
+				
+				var httpWebRequest = (HttpWebRequest)WebRequest.Create(apiURL);
 				httpWebRequest.ContentType = contentType;
 				httpWebRequest.Accept = accept;
 				httpWebRequest.Headers.Add("Cookie", "LWSSO_COOKIE_KEY=" + tokenResponseString);
 				httpWebRequest.Method = method;
 
-				var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
+				var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
 				using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
 				{
@@ -86,40 +86,40 @@ namespace Ayehu.Sdk.ActivityCreation
 
 					JObject jsonAttachments = JObject.Parse(jsonEncoded);
 
-					JArray attachments = (JArray) jsonAttachments["complexTypeProperties"];
+					JArray attachments = (JArray)jsonAttachments["complexTypeProperties"];
+            
+		            int attachmentCount = attachments.Count;
 
-					int attachmentCount = attachments.Count;
-
-					if (attachmentCount == 0)
-					{
-						return this.GenerateActivityResult("No attachments found.");
-					}
-					else
-					{
+		            if(attachmentCount == 0)
+		            {
+		            	return this.GenerateActivityResult("No attachments found.");
+		            }
+		            else
+		            {
 						DataTable dt = new DataTable("resultSet");
-
-						for (int i = 0; i < attachmentCount; i++)
+						
+						for(int i = 0; i < attachmentCount; i ++)
 						{
 							dt.Rows.Add(dt.NewRow());
 
 							JObject attachmentDetails = JObject.Parse(jsonAttachments["complexTypeProperties"][i]["properties"].ToString());
-
+			                
 							foreach(JProperty property in attachmentDetails.Properties())
 							{
-								if (!dt.Columns.Contains(property.Name))
-								{
-									dt.Columns.Add(property.Name);
-								}
+			                    if(!dt.Columns.Contains(property.Name))
+                                {
+                                    dt.Columns.Add(property.Name);
+                                }
 
-								dt.Rows[i][property.Name] = property.Value;
+                                dt.Rows[i][property.Name] = property.Value;
 							}
 						}
 
 						return this.GenerateActivityResult(dt);
-					}
+			        }
 				}
 			}
-			catch (WebException e)
+			catch(WebException e)
 			{
 				throw new Exception(e.Message);
 			}
