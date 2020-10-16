@@ -16,6 +16,7 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string instanceURL;
 		public string username;
 		public string apiToken;
+		public string issueType;
 		public string ticketNumber;
 		public string filePath;
 
@@ -23,12 +24,14 @@ namespace Ayehu.Sdk.ActivityCreation
 		{
 			try
 			{
+				issueType = issueType.ToLower();
+				
 				WebClient wc = new WebClient();
 				
 				wc.Headers["Authorization"] = "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + apiToken));
 				wc.Headers["X-Atlassian-Token"] = "nocheck";
 
-				string apiURL = instanceURL + "/issue/" + ticketNumber + "/attachments";
+				string apiURL = instanceURL + "/" + issueType + "/" + ticketNumber + "/attachments";
 
 				wc.UploadFile(apiURL, "POST", filePath);
 
