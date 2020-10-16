@@ -38,15 +38,6 @@
         {
           "value": "",
           "required": true,
-          "key": "issueType",
-          "label": "Issue Type",
-          "labelKey": "ISSUETYPE_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
           "key": "ticketNumber",
           "label": "Ticket Number",
           "labelKey": "TICKETNUMBER_VALUE",
