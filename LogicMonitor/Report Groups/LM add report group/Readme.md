@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-add report group
-
-LM add report group
-
-Method: Post
-
-OperationID: addReportGroup
-
-EndPoint:
-
-/report/groups
+<br>#     LogicMonitor</br>
+<br>add report group</br>
+<br>LM add report group</br>
+<br>Method: Post</br>
+<br>OperationID: addReportGroup</br>
+<br>EndPoint:</br>
+<br>/report/groups</br>

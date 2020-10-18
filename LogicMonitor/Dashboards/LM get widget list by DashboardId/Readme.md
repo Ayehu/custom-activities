@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get widget list by DashboardId
-
-LM get widget list by DashboardId
-
-Method: Get
-
-OperationID: getWidgetListByDashboardId
-
-EndPoint:
-
-/dashboard/dashboards/{id}/widgets
+<br>#     LogicMonitor</br>
+<br>get widget list by DashboardId</br>
+<br>LM get widget list by DashboardId</br>
+<br>Method: Get</br>
+<br>OperationID: getWidgetListByDashboardId</br>
+<br>EndPoint:</br>
+<br>/dashboard/dashboards/{id}/widgets</br>

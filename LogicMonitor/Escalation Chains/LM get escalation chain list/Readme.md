@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get escalation chain list
-
-LM get escalation chain list
-
-Method: Get
-
-OperationID: getEscalationChainList
-
-EndPoint:
-
-/setting/alert/chains
+<br>#     LogicMonitor</br>
+<br>get escalation chain list</br>
+<br>LM get escalation chain list</br>
+<br>Method: Get</br>
+<br>OperationID: getEscalationChainList</br>
+<br>EndPoint:</br>
+<br>/setting/alert/chains</br>

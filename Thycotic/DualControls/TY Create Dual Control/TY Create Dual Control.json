@@ -28,54 +28,9 @@
         },
         {
           "required": false,
-          "key": "dualControlApprovalGroups____",
-          "label": "DualControlApprovalGroups[][]",
+          "key": "dualControlApprovalGroups",
+          "label": "DualControlApprovalGroups[]",
           "labelKey": "dualControlApprovalGroups_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "dualControlId",
-          "label": "DualControlId",
-          "labelKey": "dualControlId_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "enabled",
-          "label": "Enabled",
-          "labelKey": "enabled_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "groupId",
-          "label": "GroupId",
-          "labelKey": "groupId_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "groupName",
-          "label": "GroupName",
-          "labelKey": "groupName_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "id_p",
-          "label": "Id",
-          "labelKey": "id_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -94,6 +49,15 @@
           "key": "itemId",
           "label": "ItemId",
           "labelKey": "itemId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

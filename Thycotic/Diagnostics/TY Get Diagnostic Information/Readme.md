@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Diagnostic Information
-
-Get Diagnostic Information
-
-Method: Get
-
-OperationID: DiagnosticsService_GetDiagnosticInformation
-
-EndPoint:
-
-/diagnostics
+<br>#     Thycotic</br>
+<br>Get Diagnostic Information</br>
+<br>Get Diagnostic Information</br>
+<br>Method: Get</br>
+<br>OperationID: DiagnosticsService_GetDiagnosticInformation</br>
+<br>EndPoint:</br>
+<br>/diagnostics</br>

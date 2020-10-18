@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-update a netscan
-
-LM update a netscan
-
-Method: Put
-
-OperationID: updateNetscan
-
-EndPoint:
-
-/setting/netscans/{id}
+<br>#     LogicMonitor</br>
+<br>update a netscan</br>
+<br>LM update a netscan</br>
+<br>Method: Patch</br>
+<br>OperationID: patchNetscan</br>
+<br>EndPoint:</br>
+<br>/setting/netscans/{id}</br>

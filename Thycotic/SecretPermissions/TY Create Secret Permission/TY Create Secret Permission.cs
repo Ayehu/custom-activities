@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Secret_Permission : IActivityAsync
+    public class TY_Create_Secret_Permission : IActivityAsync
     {
 
 
@@ -40,28 +40,76 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/secret-permissions";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/secret-permissions";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"domainName\": \"{0}\",  \"groupId\": \"{1}\",  \"groupName\": \"{2}\",  \"secretAccessRoleName\": \"{3}\",  \"secretId\": \"{4}\",  \"userId\": \"{5}\",  \"userName\": \"{6}\" }}",domainName,groupId,groupName,secretAccessRoleName,secretId,userId,userName);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"domainName\": \"{0}\",  \"groupId\": \"{1}\",  \"groupName\": \"{2}\",  \"secretAccessRoleName\": \"{3}\",  \"secretId\": \"{4}\",  \"userId\": \"{5}\",  \"userName\": \"{6}\" }}",domainName,groupId,groupName,secretAccessRoleName,secretId,userId,userName);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Secret_Permission() {
+    }
+    
+    public TY_Create_Secret_Permission(string endPoint, string Jsonkeypath, string password1, string domainName, string groupId, string groupName, string secretAccessRoleName, string secretId, string userId, string userName) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.domainName = domainName;
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.secretAccessRoleName = secretAccessRoleName;
+        this.secretId = secretId;
+        this.userId = userId;
+        this.userName = userName;
     }
 
 
@@ -84,7 +132,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

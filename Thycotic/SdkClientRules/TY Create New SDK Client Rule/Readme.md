@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Create New SDK Client Rule
-
-Create a new SDK Client rule
-
-Method: Post
-
-OperationID: SdkClientRulesService_CreateClientRule
-
-EndPoint:
-
-/sdk-client-rules
+<br>#     Thycotic</br>
+<br>Create New SDK Client Rule</br>
+<br>Create a new SDK Client rule</br>
+<br>Method: Post</br>
+<br>OperationID: SdkClientRulesService_CreateClientRule</br>
+<br>EndPoint:</br>
+<br>/sdk-client-rules</br>

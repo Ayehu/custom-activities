@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Search SDK Client Audits
-
-Search, filter, sort, and page app SDK Client audits
-
-Method: Get
-
-OperationID: SdkClientAuditsService_SearchClientAudit
-
-EndPoint:
-
-/sdk-client-audits
+<br>#     Thycotic</br>
+<br>Search SDK Client Audits</br>
+<br>Search, filter, sort, and page app SDK Client audits</br>
+<br>Method: Get</br>
+<br>OperationID: SdkClientAuditsService_SearchClientAudit</br>
+<br>EndPoint:</br>
+<br>/sdk-client-audits</br>

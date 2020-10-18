@@ -1,12 +1,6 @@
-#     Thycotic
-
-
-TY ServiceGetEventPipelineTriggerOptions
-
-Method: Get
-
-OperationID: EventPipelineTriggerService_GetEventPipelineTriggerOptions
-
-EndPoint:
-
-/event-pipeline/trigger/options
+<br>#     Thycotic</br>
+<br>TY ServiceGetEventPipelineTriggerOptions</br>
+<br>Method: Get</br>
+<br>OperationID: EventPipelineTriggerService_GetEventPipelineTriggerOptions</br>
+<br>EndPoint:</br>
+<br>/event-pipeline/trigger/options</br>

@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Folder Stub
-
-Return the default values for a new secret folder
-
-Method: Get
-
-OperationID: FoldersService_Stub
-
-EndPoint:
-
-/folders/stub
+<br>#     Thycotic</br>
+<br>Get Folder Stub</br>
+<br>Return the default values for a new secret folder</br>
+<br>Method: Get</br>
+<br>OperationID: FoldersService_Stub</br>
+<br>EndPoint:</br>
+<br>/folders/stub</br>

@@ -1,12 +1,6 @@
-#     Thycotic
-
-
-TY ServiceGetFoldersForPipelinePolicies
-
-Method: Get
-
-OperationID: EventPipelinePolicyService_GetFoldersForPipelinePolicies
-
-EndPoint:
-
-/event-pipeline-policy/{id}/folders
+<br>#     Thycotic</br>
+<br>TY ServiceGetFoldersForPipelinePolicies</br>
+<br>Method: Get</br>
+<br>OperationID: EventPipelinePolicyService_GetFoldersForPipelinePolicies</br>
+<br>EndPoint:</br>
+<br>/event-pipeline-policy/{id}/folders</br>

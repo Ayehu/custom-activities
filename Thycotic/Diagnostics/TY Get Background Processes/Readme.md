@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Background Processes
-
-Get Background Process Information
-
-Method: Get
-
-OperationID: DiagnosticsService_GetBackgroundProcesses
-
-EndPoint:
-
-/diagnostics/background-processes
+<br>#     Thycotic</br>
+<br>Get Background Processes</br>
+<br>Get Background Process Information</br>
+<br>Method: Get</br>
+<br>OperationID: DiagnosticsService_GetBackgroundProcesses</br>
+<br>EndPoint:</br>
+<br>/diagnostics/background-processes</br>

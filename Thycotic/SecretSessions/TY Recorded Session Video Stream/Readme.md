@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Recorded Session Video Stream
-
-Get the video stream for a recorded session
-
-Method: Get
-
-OperationID: SecretSessionsService_GetSessionRecording
-
-EndPoint:
-
-/recorded-sessions/{id}/session-recordings
+<br>#     Thycotic</br>
+<br>Recorded Session Video Stream</br>
+<br>Get the video stream for a recorded session</br>
+<br>Method: Get</br>
+<br>OperationID: SecretSessionsService_GetSessionRecording</br>
+<br>EndPoint:</br>
+<br>/recorded-sessions/{id}/session-recordings</br>

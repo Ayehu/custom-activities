@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -37,8 +37,8 @@
         },
         {
           "required": false,
-          "key": "allowedTemplates____",
-          "label": "AllowedTemplates[][]",
+          "key": "allowedTemplates",
+          "label": "AllowedTemplates[]",
           "labelKey": "allowedTemplates_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -109,36 +109,9 @@
         },
         {
           "required": false,
-          "key": "permissons____",
-          "label": "Permissons[][]",
+          "key": "permissons",
+          "label": "Permissons[]",
           "labelKey": "permissons_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "folderAccessRoleId",
-          "label": "FolderAccessRoleId",
-          "labelKey": "folderAccessRoleId_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "groupId",
-          "label": "GroupId",
-          "labelKey": "groupId_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "secretAccessRoleId",
-          "label": "SecretAccessRoleId",
-          "labelKey": "secretAccessRoleId_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -157,6 +130,15 @@
           "key": "secretPolicy_value",
           "label": "SecretPolicy_value",
           "labelKey": "secretPolicy_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

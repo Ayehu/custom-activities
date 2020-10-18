@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Secret Templates
-
-Get Secret Templates valid for web passwords
-
-Method: Get
-
-OperationID: SecretExtensionsService_GetWebSecretTemplates
-
-EndPoint:
-
-/secret-extensions/web-secret-templates
+<br>#     Thycotic</br>
+<br>Get Secret Templates</br>
+<br>Get Secret Templates valid for web passwords</br>
+<br>Method: Get</br>
+<br>OperationID: SecretExtensionsService_GetWebSecretTemplates</br>
+<br>EndPoint:</br>
+<br>/secret-extensions/web-secret-templates</br>

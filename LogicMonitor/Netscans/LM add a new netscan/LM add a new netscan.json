@@ -18,7 +18,7 @@
           "controlType": "textbox"
         },
         {
-          "required": true,
+          "required": false,
           "key": "accessid",
           "label": "Accessid",
           "labelKey": "accessid_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Accesskey",
           "labelKey": "accesskey_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "collector",
           "label": "Collector",
           "labelKey": "collector_l",
@@ -82,7 +82,7 @@
         },
         {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -91,8 +91,8 @@
         },
         {
           "required": false,
-          "key": "collectors____",
-          "label": "Collectors[][]",
+          "key": "collectors",
+          "label": "Collectors[]",
           "labelKey": "collectors_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -100,8 +100,8 @@
         },
         {
           "required": false,
-          "key": "groups____",
-          "label": "Groups[][]",
+          "key": "groups",
+          "label": "Groups[]",
           "labelKey": "groups_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -109,7 +109,7 @@
         },
         {
           "required": false,
-          "key": "type",
+          "key": "type_p",
           "label": "Type",
           "labelKey": "type_l",
           "baseType": "control",
@@ -135,7 +135,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "method",
           "label": "Method",
           "labelKey": "method_l",
@@ -144,7 +144,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "name_p",
           "label": "Name",
           "labelKey": "name_l",
@@ -199,8 +199,8 @@
         },
         {
           "required": false,
-          "key": "recipients____",
-          "label": "Recipients[][]",
+          "key": "recipients",
+          "label": "Recipients[]",
           "labelKey": "recipients_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -229,6 +229,15 @@
           "key": "version",
           "label": "Version",
           "labelKey": "version_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

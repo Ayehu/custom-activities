@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Dual_Control : IActivityAsync
+    public class TY_Create_Dual_Control : IActivityAsync
     {
 
 
@@ -20,17 +20,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
-    public string dualControlApprovalGroups__ = "";
-    
-    public string dualControlId = "";
-    
-    public string enabled = "";
-    
-    public string groupId = "";
-    
-    public string groupName = "";
-    
-    public string id_p = "";
+    public string dualControlApprovalGroups = "";
     
     public string dualControlTypeId = "";
     
@@ -42,28 +32,72 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/dual-controls";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/dual-controls";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"dualControlApprovalGroups\": [    {{     \"dualControlId\": \"{0}\",      \"enabled\": \"{1}\",      \"groupId\": \"{2}\",      \"groupName\": \"{3}\",      \"id\": \"{4}\"     }}  ],  \"dualControlTypeId\": \"{5}\",  \"itemId\": \"{6}\" }}",dualControlId,enabled,groupId,groupName,id_p,dualControlTypeId,itemId);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"dualControlApprovalGroups\": {0},  \"dualControlTypeId\": \"{1}\",  \"itemId\": \"{2}\" }}",dualControlApprovalGroups,dualControlTypeId,itemId);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Dual_Control() {
+    }
+    
+    public TY_Create_Dual_Control(string endPoint, string Jsonkeypath, string password1, string dualControlApprovalGroups, string dualControlTypeId, string itemId) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.dualControlApprovalGroups = dualControlApprovalGroups;
+        this.dualControlTypeId = dualControlTypeId;
+        this.itemId = itemId;
     }
 
 
@@ -86,7 +120,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get website group list
-
-LM get website group list
-
-Method: Get
-
-OperationID: getWebsiteGroupList
-
-EndPoint:
-
-/service/groups
+<br>#     LogicMonitor</br>
+<br>get website group list</br>
+<br>LM get website group list</br>
+<br>Method: Get</br>
+<br>OperationID: getWebsiteGroupList</br>
+<br>EndPoint:</br>
+<br>/website/groups</br>

@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -76,6 +76,15 @@
           "key": "siteName",
           "label": "SiteName",
           "labelKey": "siteName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "engine",
+          "label": "Engine",
+          "labelKey": "engine_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

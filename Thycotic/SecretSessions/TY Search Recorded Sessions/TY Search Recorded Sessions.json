@@ -73,8 +73,8 @@
         },
         {
           "required": false,
-          "key": "filter_groupIds____",
-          "label": "Filter.groupIds[][]",
+          "key": "filter_groupIds",
+          "label": "Filter.groupIds[]",
           "labelKey": "filter_groupIds_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -136,8 +136,8 @@
         },
         {
           "required": false,
-          "key": "filter_searchTypes____",
-          "label": "Filter.searchTypes[][]",
+          "key": "filter_searchTypes",
+          "label": "Filter.searchTypes[]",
           "labelKey": "filter_searchTypes_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -145,8 +145,8 @@
         },
         {
           "required": false,
-          "key": "filter_secretIds____",
-          "label": "Filter.secretIds[][]",
+          "key": "filter_secretIds",
+          "label": "Filter.secretIds[]",
           "labelKey": "filter_secretIds_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -181,8 +181,8 @@
         },
         {
           "required": false,
-          "key": "filter_userIds____",
-          "label": "Filter.userIds[][]",
+          "key": "filter_userIds",
+          "label": "Filter.userIds[]",
           "labelKey": "filter_userIds_l",
           "baseType": "control",
           "controlType": "textbox",

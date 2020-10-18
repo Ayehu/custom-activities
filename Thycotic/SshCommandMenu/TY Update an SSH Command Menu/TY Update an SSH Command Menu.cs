@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_an_SSH_Command_Menu : IActivityAsync
+    public class TY_Update_an_SSH_Command_Menu : IActivityAsync
     {
 
 
@@ -44,28 +44,78 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/ssh-command-menu/{0}",sshCommandMenuId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/ssh-command-menu/{0}",sshCommandMenuId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"data\": {{   \"active\": {{     \"dirty\": \"{0}\",      \"value\": \"{1}\"     }},    \"description\": {{     \"dirty\": \"{2}\",      \"value\": \"{3}\"     }},    \"name\": {{     \"dirty\": \"{4}\",      \"value\": \"{5}\"     }},    \"sshCommands\": {{     \"dirty\": \"{6}\",      \"value\": \"{7}\"     }}   }} }}",dirty,value,description_dirty,description_value,name_dirty,name_value,sshCommands_dirty,sshCommands_value);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"data\": {{   \"active\": {{     \"dirty\": \"{0}\",      \"value\": \"{1}\"     }},    \"description\": {{     \"dirty\": \"{2}\",      \"value\": \"{3}\"     }},    \"name\": {{     \"dirty\": \"{4}\",      \"value\": \"{5}\"     }},    \"sshCommands\": {{     \"dirty\": \"{6}\",      \"value\": \"{7}\"     }}   }} }}",dirty,value,description_dirty,description_value,name_dirty,name_value,sshCommands_dirty,sshCommands_value);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_an_SSH_Command_Menu() {
+    }
+    
+    public TY_Update_an_SSH_Command_Menu(string endPoint, string Jsonkeypath, string password1, string sshCommandMenuId, string dirty, string value, string description_dirty, string description_value, string name_dirty, string name_value, string sshCommands_dirty, string sshCommands_value) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.sshCommandMenuId = sshCommandMenuId;
+        this.dirty = dirty;
+        this.value = value;
+        this.description_dirty = description_dirty;
+        this.description_value = description_value;
+        this.name_dirty = name_dirty;
+        this.name_value = name_value;
+        this.sshCommands_dirty = sshCommands_dirty;
+        this.sshCommands_value = sshCommands_value;
     }
 
 
@@ -88,7 +138,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

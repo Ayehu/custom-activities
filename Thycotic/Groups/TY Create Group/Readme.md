@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Create Group
-
-Create a new group
-
-Method: Post
-
-OperationID: GroupsService_Create
-
-EndPoint:
-
-/groups
+<br>#     Thycotic</br>
+<br>Create Group</br>
+<br>Create a new group</br>
+<br>Method: Post</br>
+<br>OperationID: GroupsService_Create</br>
+<br>EndPoint:</br>
+<br>/groups</br>

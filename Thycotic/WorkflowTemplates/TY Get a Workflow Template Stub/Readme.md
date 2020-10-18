@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get a Workflow Template Stub
-
-Get an empty Workflow Template.
-
-Method: Get
-
-OperationID: WorkflowTemplatesService_StubWorkflowTemplate
-
-EndPoint:
-
-/workflows/templates/stub
+<br>#     Thycotic</br>
+<br>Get a Workflow Template Stub</br>
+<br>Get an empty Workflow Template.</br>
+<br>Method: Get</br>
+<br>OperationID: WorkflowTemplatesService_StubWorkflowTemplate</br>
+<br>EndPoint:</br>
+<br>/workflows/templates/stub</br>

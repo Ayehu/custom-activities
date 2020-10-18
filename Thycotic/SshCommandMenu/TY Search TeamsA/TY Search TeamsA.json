@@ -28,9 +28,9 @@
         },
         {
           "required": false,
-          "key": "filter_sshCommandMenuName",
-          "label": "Filter.sshCommandMenuName",
-          "labelKey": "filter_sshCommandMenuName_l",
+          "key": "filter_includeDisabled",
+          "label": "Filter.includeDisabled",
+          "labelKey": "filter_includeDisabled_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

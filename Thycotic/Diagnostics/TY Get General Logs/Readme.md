@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get General Logs
-
-Get General Logs
-
-Method: Get
-
-OperationID: DiagnosticsService_GetGeneralLogs
-
-EndPoint:
-
-/diagnostics/general-logs
+<br>#     Thycotic</br>
+<br>Get General Logs</br>
+<br>Get General Logs</br>
+<br>Method: Get</br>
+<br>OperationID: DiagnosticsService_GetGeneralLogs</br>
+<br>EndPoint:</br>
+<br>/diagnostics/general-logs</br>

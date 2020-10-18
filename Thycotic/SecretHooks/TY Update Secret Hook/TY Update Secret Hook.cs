@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_Secret_Hook : IActivityAsync
+    public class TY_Update_Secret_Hook : IActivityAsync
     {
 
 
@@ -48,13 +48,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string name_value = "";
     
-    public string parameters__ = "";
-    
-    public string parameterName = "";
-    
-    public string parameterType = "";
-    
-    public string parameterValue = "";
+    public string parameters = "";
     
     public string port_dirty = "";
     
@@ -106,28 +100,146 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/secret-detail/{1}/hook/{0}",secretHookId,secretId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/secret-detail/{1}/hook/{0}",secretHookId,secretId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"data\": {{   \"arguments\": {{     \"dirty\": \"{0}\",      \"value\": \"{1}\"     }},    \"database\": {{     \"dirty\": \"{2}\",      \"value\": \"{3}\"     }},    \"description\": {{     \"dirty\": \"{4}\",      \"value\": \"{5}\"     }},    \"eventActionId\": {{     \"dirty\": \"{6}\",      \"value\": \"{7}\"     }},    \"failureMessage\": {{     \"dirty\": \"{8}\",      \"value\": \"{9}\"     }},    \"name\": {{     \"dirty\": \"{10}\",      \"value\": \"{11}\"     }},    \"parameters\": [      {{       \"parameterName\": \"{12}\",        \"parameterType\": \"{13}\",        \"parameterValue\": \"{14}\"       }}    ],    \"port\": {{     \"dirty\": \"{15}\",      \"value\": \"{16}\"     }},    \"prePostOption\": {{     \"dirty\": \"{17}\",      \"value\": \"{18}\"     }},    \"privilegedSecretId\": {{     \"dirty\": \"{19}\",      \"value\": \"{20}\"     }},    \"scriptId\": {{     \"dirty\": \"{21}\",      \"value\": \"{22}\"     }},    \"scriptTypeId\": {{     \"dirty\": \"{23}\",      \"value\": \"{24}\"     }},    \"serverKeyDigest\": {{     \"dirty\": \"{25}\",      \"value\": \"{26}\"     }},    \"serverName\": {{     \"dirty\": \"{27}\",      \"value\": \"{28}\"     }},    \"sortOrder\": {{     \"dirty\": \"{29}\",      \"value\": \"{30}\"     }},    \"sshKeySecretId\": {{     \"dirty\": \"{31}\",      \"value\": \"{32}\"     }},    \"status\": {{     \"dirty\": \"{33}\",      \"value\": \"{34}\"     }},    \"stopOnFailure\": {{     \"dirty\": \"{35}\",      \"value\": \"{36}\"     }}   }} }}",dirty,value,database_dirty,database_value,description_dirty,description_value,eventActionId_dirty,eventActionId_value,failureMessage_dirty,failureMessage_value,name_dirty,name_value,parameterName,parameterType,parameterValue,port_dirty,port_value,prePostOption_dirty,prePostOption_value,privilegedSecretId_dirty,privilegedSecretId_value,scriptId_dirty,scriptId_value,scriptTypeId_dirty,scriptTypeId_value,serverKeyDigest_dirty,serverKeyDigest_value,serverName_dirty,serverName_value,sortOrder_dirty,sortOrder_value,sshKeySecretId_dirty,sshKeySecretId_value,status_dirty,status_value,stopOnFailure_dirty,stopOnFailure_value);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"data\": {{   \"arguments\": {{     \"dirty\": \"{0}\",      \"value\": \"{1}\"     }},    \"database\": {{     \"dirty\": \"{2}\",      \"value\": \"{3}\"     }},    \"description\": {{     \"dirty\": \"{4}\",      \"value\": \"{5}\"     }},    \"eventActionId\": {{     \"dirty\": \"{6}\",      \"value\": \"{7}\"     }},    \"failureMessage\": {{     \"dirty\": \"{8}\",      \"value\": \"{9}\"     }},    \"name\": {{     \"dirty\": \"{10}\",      \"value\": \"{11}\"     }},    \"parameters\": {12},    \"port\": {{     \"dirty\": \"{13}\",      \"value\": \"{14}\"     }},    \"prePostOption\": {{     \"dirty\": \"{15}\",      \"value\": \"{16}\"     }},    \"privilegedSecretId\": {{     \"dirty\": \"{17}\",      \"value\": \"{18}\"     }},    \"scriptId\": {{     \"dirty\": \"{19}\",      \"value\": \"{20}\"     }},    \"scriptTypeId\": {{     \"dirty\": \"{21}\",      \"value\": \"{22}\"     }},    \"serverKeyDigest\": {{     \"dirty\": \"{23}\",      \"value\": \"{24}\"     }},    \"serverName\": {{     \"dirty\": \"{25}\",      \"value\": \"{26}\"     }},    \"sortOrder\": {{     \"dirty\": \"{27}\",      \"value\": \"{28}\"     }},    \"sshKeySecretId\": {{     \"dirty\": \"{29}\",      \"value\": \"{30}\"     }},    \"status\": {{     \"dirty\": \"{31}\",      \"value\": \"{32}\"     }},    \"stopOnFailure\": {{     \"dirty\": \"{33}\",      \"value\": \"{34}\"     }}   }} }}",dirty,value,database_dirty,database_value,description_dirty,description_value,eventActionId_dirty,eventActionId_value,failureMessage_dirty,failureMessage_value,name_dirty,name_value,parameters,port_dirty,port_value,prePostOption_dirty,prePostOption_value,privilegedSecretId_dirty,privilegedSecretId_value,scriptId_dirty,scriptId_value,scriptTypeId_dirty,scriptTypeId_value,serverKeyDigest_dirty,serverKeyDigest_value,serverName_dirty,serverName_value,sortOrder_dirty,sortOrder_value,sshKeySecretId_dirty,sshKeySecretId_value,status_dirty,status_value,stopOnFailure_dirty,stopOnFailure_value);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_Secret_Hook() {
+    }
+    
+    public TY_Update_Secret_Hook(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string secretHookId, 
+                string secretId, 
+                string dirty, 
+                string value, 
+                string database_dirty, 
+                string database_value, 
+                string description_dirty, 
+                string description_value, 
+                string eventActionId_dirty, 
+                string eventActionId_value, 
+                string failureMessage_dirty, 
+                string failureMessage_value, 
+                string name_dirty, 
+                string name_value, 
+                string parameters, 
+                string port_dirty, 
+                string port_value, 
+                string prePostOption_dirty, 
+                string prePostOption_value, 
+                string privilegedSecretId_dirty, 
+                string privilegedSecretId_value, 
+                string scriptId_dirty, 
+                string scriptId_value, 
+                string scriptTypeId_dirty, 
+                string scriptTypeId_value, 
+                string serverKeyDigest_dirty, 
+                string serverKeyDigest_value, 
+                string serverName_dirty, 
+                string serverName_value, 
+                string sortOrder_dirty, 
+                string sortOrder_value, 
+                string sshKeySecretId_dirty, 
+                string sshKeySecretId_value, 
+                string status_dirty, 
+                string status_value, 
+                string stopOnFailure_dirty, 
+                string stopOnFailure_value) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.secretHookId = secretHookId;
+        this.secretId = secretId;
+        this.dirty = dirty;
+        this.value = value;
+        this.database_dirty = database_dirty;
+        this.database_value = database_value;
+        this.description_dirty = description_dirty;
+        this.description_value = description_value;
+        this.eventActionId_dirty = eventActionId_dirty;
+        this.eventActionId_value = eventActionId_value;
+        this.failureMessage_dirty = failureMessage_dirty;
+        this.failureMessage_value = failureMessage_value;
+        this.name_dirty = name_dirty;
+        this.name_value = name_value;
+        this.parameters = parameters;
+        this.port_dirty = port_dirty;
+        this.port_value = port_value;
+        this.prePostOption_dirty = prePostOption_dirty;
+        this.prePostOption_value = prePostOption_value;
+        this.privilegedSecretId_dirty = privilegedSecretId_dirty;
+        this.privilegedSecretId_value = privilegedSecretId_value;
+        this.scriptId_dirty = scriptId_dirty;
+        this.scriptId_value = scriptId_value;
+        this.scriptTypeId_dirty = scriptTypeId_dirty;
+        this.scriptTypeId_value = scriptTypeId_value;
+        this.serverKeyDigest_dirty = serverKeyDigest_dirty;
+        this.serverKeyDigest_value = serverKeyDigest_value;
+        this.serverName_dirty = serverName_dirty;
+        this.serverName_value = serverName_value;
+        this.sortOrder_dirty = sortOrder_dirty;
+        this.sortOrder_value = sortOrder_value;
+        this.sshKeySecretId_dirty = sshKeySecretId_dirty;
+        this.sshKeySecretId_value = sshKeySecretId_value;
+        this.status_dirty = status_dirty;
+        this.status_value = status_value;
+        this.stopOnFailure_dirty = stopOnFailure_dirty;
+        this.stopOnFailure_value = stopOnFailure_value;
     }
 
 
@@ -150,7 +262,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-delete a netscan
-
-LM delete a netscan
-
-Method: Delete
-
-OperationID: deleteNetscanById
-
-EndPoint:
-
-/setting/netscans/{id}
+<br>#     LogicMonitor</br>
+<br>delete a netscan</br>
+<br>LM delete a netscan</br>
+<br>Method: Delete</br>
+<br>OperationID: deleteNetscanById</br>
+<br>EndPoint:</br>
+<br>/setting/netscans/{id}</br>

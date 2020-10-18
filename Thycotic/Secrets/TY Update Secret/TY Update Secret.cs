@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_Secret : IActivityAsync
+    public class TY_Update_Secret : IActivityAsync
     {
 
 
@@ -52,29 +52,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string includeInactive = "";
     
-    public string items__ = "";
-    
-    public string fieldDescription = "";
-    
-    public string fieldId = "";
-    
-    public string fieldName = "";
-    
-    public string fileAttachmentId = "";
-    
-    public string filename = "";
-    
-    public string isFile = "";
-    
-    public string isNotes = "";
-    
-    public string isPassword = "";
-    
-    public string itemId = "";
-    
-    public string itemValue = "";
-    
-    public string slug = "";
+    public string items = "";
     
     public string launcherConnectAsSecretId = "";
     
@@ -108,28 +86,132 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/secrets/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/secrets/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"accessRequestWorkflowMapId\": \"{0}\",  \"active\": \"{1}\",  \"autoChangeEnabled\": \"{2}\",  \"autoChangeNextPassword\": \"{3}\",  \"checkOutChangePasswordEnabled\": \"{4}\",  \"checkOutEnabled\": \"{5}\",  \"checkOutIntervalMinutes\": \"{6}\",  \"comment\": \"{7}\",  \"doubleLockPassword\": \"{8}\",  \"enableInheritPermissions\": \"{9}\",  \"enableInheritSecretPolicy\": \"{10}\",  \"folderId\": \"{11}\",  \"forceCheckIn\": \"{12}\",  \"id\": \"{13}\",  \"includeInactive\": \"{14}\",  \"items\": [    {{     \"fieldDescription\": \"{15}\",      \"fieldId\": \"{16}\",      \"fieldName\": \"{17}\",      \"fileAttachmentId\": \"{18}\",      \"filename\": \"{19}\",      \"isFile\": \"{20}\",      \"isNotes\": \"{21}\",      \"isPassword\": \"{22}\",      \"itemId\": \"{23}\",      \"itemValue\": \"{24}\",      \"slug\": \"{25}\"     }}  ],  \"launcherConnectAsSecretId\": \"{26}\",  \"name\": \"{27}\",  \"newPassword\": \"{28}\",  \"passwordTypeWebScriptId\": \"{29}\",  \"proxyEnabled\": \"{30}\",  \"requiresComment\": \"{31}\",  \"secretPolicyId\": \"{32}\",  \"sessionRecordingEnabled\": \"{33}\",  \"siteId\": \"{34}\",  \"sshKeyArgs\": {{   \"generatePassphrase\": \"{35}\",    \"generateSshKeys\": \"{36}\"   }},  \"ticketNumber\": \"{37}\",  \"ticketSystemId\": \"{38}\" }}",accessRequestWorkflowMapId,active,autoChangeEnabled,autoChangeNextPassword,checkOutChangePasswordEnabled,checkOutEnabled,checkOutIntervalMinutes,comment,doubleLockPassword,enableInheritPermissions,enableInheritSecretPolicy,folderId,forceCheckIn,_id,includeInactive,fieldDescription,fieldId,fieldName,fileAttachmentId,filename,isFile,isNotes,isPassword,itemId,itemValue,slug,launcherConnectAsSecretId,name_p,newPassword,passwordTypeWebScriptId,proxyEnabled,requiresComment,secretPolicyId,sessionRecordingEnabled,siteId,generatePassphrase,generateSshKeys,ticketNumber,ticketSystemId);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"accessRequestWorkflowMapId\": \"{0}\",  \"active\": \"{1}\",  \"autoChangeEnabled\": \"{2}\",  \"autoChangeNextPassword\": \"{3}\",  \"checkOutChangePasswordEnabled\": \"{4}\",  \"checkOutEnabled\": \"{5}\",  \"checkOutIntervalMinutes\": \"{6}\",  \"comment\": \"{7}\",  \"doubleLockPassword\": \"{8}\",  \"enableInheritPermissions\": \"{9}\",  \"enableInheritSecretPolicy\": \"{10}\",  \"folderId\": \"{11}\",  \"forceCheckIn\": \"{12}\",  \"id\": \"{13}\",  \"includeInactive\": \"{14}\",  \"items\": {15},  \"launcherConnectAsSecretId\": \"{16}\",  \"name\": \"{17}\",  \"newPassword\": \"{18}\",  \"passwordTypeWebScriptId\": \"{19}\",  \"proxyEnabled\": \"{20}\",  \"requiresComment\": \"{21}\",  \"secretPolicyId\": \"{22}\",  \"sessionRecordingEnabled\": \"{23}\",  \"siteId\": \"{24}\",  \"sshKeyArgs\": {{   \"generatePassphrase\": \"{25}\",    \"generateSshKeys\": \"{26}\"   }},  \"ticketNumber\": \"{27}\",  \"ticketSystemId\": \"{28}\" }}",accessRequestWorkflowMapId,active,autoChangeEnabled,autoChangeNextPassword,checkOutChangePasswordEnabled,checkOutEnabled,checkOutIntervalMinutes,comment,doubleLockPassword,enableInheritPermissions,enableInheritSecretPolicy,folderId,forceCheckIn,_id,includeInactive,items,launcherConnectAsSecretId,name_p,newPassword,passwordTypeWebScriptId,proxyEnabled,requiresComment,secretPolicyId,sessionRecordingEnabled,siteId,generatePassphrase,generateSshKeys,ticketNumber,ticketSystemId);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_Secret() {
+    }
+    
+    public TY_Update_Secret(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string id_p, 
+                string accessRequestWorkflowMapId, 
+                string active, 
+                string autoChangeEnabled, 
+                string autoChangeNextPassword, 
+                string checkOutChangePasswordEnabled, 
+                string checkOutEnabled, 
+                string checkOutIntervalMinutes, 
+                string comment, 
+                string doubleLockPassword, 
+                string enableInheritPermissions, 
+                string enableInheritSecretPolicy, 
+                string folderId, 
+                string forceCheckIn, 
+                string _id, 
+                string includeInactive, 
+                string items, 
+                string launcherConnectAsSecretId, 
+                string name_p, 
+                string newPassword, 
+                string passwordTypeWebScriptId, 
+                string proxyEnabled, 
+                string requiresComment, 
+                string secretPolicyId, 
+                string sessionRecordingEnabled, 
+                string siteId, 
+                string generatePassphrase, 
+                string generateSshKeys, 
+                string ticketNumber, 
+                string ticketSystemId) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.accessRequestWorkflowMapId = accessRequestWorkflowMapId;
+        this.active = active;
+        this.autoChangeEnabled = autoChangeEnabled;
+        this.autoChangeNextPassword = autoChangeNextPassword;
+        this.checkOutChangePasswordEnabled = checkOutChangePasswordEnabled;
+        this.checkOutEnabled = checkOutEnabled;
+        this.checkOutIntervalMinutes = checkOutIntervalMinutes;
+        this.comment = comment;
+        this.doubleLockPassword = doubleLockPassword;
+        this.enableInheritPermissions = enableInheritPermissions;
+        this.enableInheritSecretPolicy = enableInheritSecretPolicy;
+        this.folderId = folderId;
+        this.forceCheckIn = forceCheckIn;
+        this._id = _id;
+        this.includeInactive = includeInactive;
+        this.items = items;
+        this.launcherConnectAsSecretId = launcherConnectAsSecretId;
+        this.name_p = name_p;
+        this.newPassword = newPassword;
+        this.passwordTypeWebScriptId = passwordTypeWebScriptId;
+        this.proxyEnabled = proxyEnabled;
+        this.requiresComment = requiresComment;
+        this.secretPolicyId = secretPolicyId;
+        this.sessionRecordingEnabled = sessionRecordingEnabled;
+        this.siteId = siteId;
+        this.generatePassphrase = generatePassphrase;
+        this.generateSshKeys = generateSshKeys;
+        this.ticketNumber = ticketNumber;
+        this.ticketSystemId = ticketSystemId;
     }
 
 
@@ -152,7 +234,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

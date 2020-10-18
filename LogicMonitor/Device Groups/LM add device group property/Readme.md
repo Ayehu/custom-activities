@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-add device group property
-
-LM add device group property
-
-Method: Post
-
-OperationID: addDeviceGroupProperty
-
-EndPoint:
-
-/device/groups/{gid}/properties
+<br>#     LogicMonitor</br>
+<br>add device group property</br>
+<br>LM add device group property</br>
+<br>Method: Post</br>
+<br>OperationID: addDeviceGroupProperty</br>
+<br>EndPoint:</br>
+<br>/device/groups/{gid}/properties</br>

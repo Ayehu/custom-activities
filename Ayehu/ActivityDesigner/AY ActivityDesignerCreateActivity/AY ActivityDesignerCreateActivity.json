@@ -1,0 +1,231 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY ActivityDesignerCreateActivity",
+    "description": "AY ActivityDesignerCreateActivity",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "label_p",
+          "label": "Label",
+          "labelKey": "label_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "groupId",
+          "label": "GroupId",
+          "labelKey": "groupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "assemblyName",
+          "label": "AssemblyName",
+          "labelKey": "assemblyName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "settings_p",
+          "label": "Settings",
+          "labelKey": "settings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isVisible",
+          "label": "IsVisible",
+          "labelKey": "isVisible_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "language",
+          "label": "Language",
+          "labelKey": "language_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "C_Sharp",
+              "value": "C_Sharp"
+            },
+            {
+              "key": "VB",
+              "value": "VB"
+            },
+            {
+              "key": "Python",
+              "value": "Python"
+            }
+          ],
+          "value": "C_Sharp"
+        },
+        {
+          "required": false,
+          "key": "color_p",
+          "label": "Color",
+          "labelKey": "color_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "icon_p",
+          "label": "Icon",
+          "labelKey": "icon_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "helpHtml_p",
+          "label": "HelpHtml",
+          "labelKey": "helpHtml_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "codeBehind",
+          "label": "CodeBehind",
+          "labelKey": "codeBehind_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "referencedAssembliesList",
+          "label": "ReferencedAssembliesList[]",
+          "labelKey": "referencedAssembliesList_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "version",
+          "label": "Version",
+          "labelKey": "version_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activityGroupModuleType",
+          "label": "ActivityGroupModuleType",
+          "labelKey": "activityGroupModuleType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Executor",
+              "value": "Executor"
+            },
+            {
+              "key": "CustomActivities",
+              "value": "CustomActivities"
+            }
+          ],
+          "value": "Executor"
+        },
+        {
+          "required": false,
+          "key": "entity",
+          "label": "Entity",
+          "labelKey": "entity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "createActivity",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

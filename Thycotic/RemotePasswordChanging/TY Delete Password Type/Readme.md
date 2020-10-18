@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Delete Password Type
-
-Delete a Password Type
-
-Method: Delete
-
-OperationID: RemotePasswordChangingService_DeletePasswordType
-
-EndPoint:
-
-/remote-password-changing/password-types/{id}
+<br>#     Thycotic</br>
+<br>Delete Password Type</br>
+<br>Delete a Password Type</br>
+<br>Method: Delete</br>
+<br>OperationID: RemotePasswordChangingService_DeletePasswordType</br>
+<br>EndPoint:</br>
+<br>/remote-password-changing/password-types/{id}</br>

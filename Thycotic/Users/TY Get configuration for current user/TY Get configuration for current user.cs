@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Get_configuration_for_current_user : IActivityAsync
+    public class TY_Get_configuration_for_current_user : IActivityAsync
     {
 
 
@@ -45,8 +45,6 @@ namespace Ayehu.Sdk.ActivityCreation
     public string fido2TwoFactor_dirty = "";
     
     public string fido2TwoFactor_value = "";
-    
-    public string groupOwners__ = "";
     
     public string _id = "";
     
@@ -94,28 +92,138 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/users/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/users/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"dateOptionId\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"displayName\": {{   \"dirty\": \"{2}\",    \"value\": \"{3}\"   }},  \"duoTwoFactor\": {{   \"dirty\": \"{4}\",    \"value\": \"{5}\"   }},  \"emailAddress\": {{   \"dirty\": \"{6}\",    \"value\": \"{7}\"   }},  \"enabled\": {{   \"dirty\": \"{8}\",    \"value\": \"{9}\"   }},  \"fido2TwoFactor\": {{   \"dirty\": \"{10}\",    \"value\": \"{11}\"   }},  \"id\": \"{12}\",  \"isApplicationAccount\": {{   \"dirty\": \"{13}\",    \"value\": \"{14}\"   }},  \"isGroupOwnerUpdate\": \"{15}\",  \"isLockedOut\": {{   \"dirty\": \"{16}\",    \"value\": \"{17}\"   }},  \"loginFailures\": {{   \"dirty\": \"{18}\",    \"value\": \"{19}\"   }},  \"oathTwoFactor\": {{   \"dirty\": \"{20}\",    \"value\": \"{21}\"   }},  \"password\": {{   \"dirty\": \"{22}\",    \"value\": \"{23}\"   }},  \"radiusTwoFactor\": {{   \"dirty\": \"{24}\",    \"value\": \"{25}\"   }},  \"radiusUserName\": {{   \"dirty\": \"{26}\",    \"value\": \"{27}\"   }},  \"timeOptionId\": {{   \"dirty\": \"{28}\",    \"value\": \"{29}\"   }},  \"twoFactor\": {{   \"dirty\": \"{30}\",    \"value\": \"{31}\"   }} }}",dirty,value,displayName_dirty,displayName_value,duoTwoFactor_dirty,duoTwoFactor_value,emailAddress_dirty,emailAddress_value,enabled_dirty,enabled_value,fido2TwoFactor_dirty,fido2TwoFactor_value,_id,isApplicationAccount_dirty,isApplicationAccount_value,isGroupOwnerUpdate,isLockedOut_dirty,isLockedOut_value,loginFailures_dirty,loginFailures_value,oathTwoFactor_dirty,oathTwoFactor_value,password_dirty,password_value,radiusTwoFactor_dirty,radiusTwoFactor_value,radiusUserName_dirty,radiusUserName_value,timeOptionId_dirty,timeOptionId_value,twoFactor_dirty,twoFactor_value);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"dateOptionId\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"displayName\": {{   \"dirty\": \"{2}\",    \"value\": \"{3}\"   }},  \"duoTwoFactor\": {{   \"dirty\": \"{4}\",    \"value\": \"{5}\"   }},  \"emailAddress\": {{   \"dirty\": \"{6}\",    \"value\": \"{7}\"   }},  \"enabled\": {{   \"dirty\": \"{8}\",    \"value\": \"{9}\"   }},  \"fido2TwoFactor\": {{   \"dirty\": \"{10}\",    \"value\": \"{11}\"   }},  \"id\": \"{12}\",  \"isApplicationAccount\": {{   \"dirty\": \"{13}\",    \"value\": \"{14}\"   }},  \"isGroupOwnerUpdate\": \"{15}\",  \"isLockedOut\": {{   \"dirty\": \"{16}\",    \"value\": \"{17}\"   }},  \"loginFailures\": {{   \"dirty\": \"{18}\",    \"value\": \"{19}\"   }},  \"oathTwoFactor\": {{   \"dirty\": \"{20}\",    \"value\": \"{21}\"   }},  \"password\": {{   \"dirty\": \"{22}\",    \"value\": \"{23}\"   }},  \"radiusTwoFactor\": {{   \"dirty\": \"{24}\",    \"value\": \"{25}\"   }},  \"radiusUserName\": {{   \"dirty\": \"{26}\",    \"value\": \"{27}\"   }},  \"timeOptionId\": {{   \"dirty\": \"{28}\",    \"value\": \"{29}\"   }},  \"twoFactor\": {{   \"dirty\": \"{30}\",    \"value\": \"{31}\"   }} }}",dirty,value,displayName_dirty,displayName_value,duoTwoFactor_dirty,duoTwoFactor_value,emailAddress_dirty,emailAddress_value,enabled_dirty,enabled_value,fido2TwoFactor_dirty,fido2TwoFactor_value,_id,isApplicationAccount_dirty,isApplicationAccount_value,isGroupOwnerUpdate,isLockedOut_dirty,isLockedOut_value,loginFailures_dirty,loginFailures_value,oathTwoFactor_dirty,oathTwoFactor_value,password_dirty,password_value,radiusTwoFactor_dirty,radiusTwoFactor_value,radiusUserName_dirty,radiusUserName_value,timeOptionId_dirty,timeOptionId_value,twoFactor_dirty,twoFactor_value);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Get_configuration_for_current_user() {
+    }
+    
+    public TY_Get_configuration_for_current_user(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string id_p, 
+                string dirty, 
+                string value, 
+                string displayName_dirty, 
+                string displayName_value, 
+                string duoTwoFactor_dirty, 
+                string duoTwoFactor_value, 
+                string emailAddress_dirty, 
+                string emailAddress_value, 
+                string enabled_dirty, 
+                string enabled_value, 
+                string fido2TwoFactor_dirty, 
+                string fido2TwoFactor_value, 
+                string _id, 
+                string isApplicationAccount_dirty, 
+                string isApplicationAccount_value, 
+                string isGroupOwnerUpdate, 
+                string isLockedOut_dirty, 
+                string isLockedOut_value, 
+                string loginFailures_dirty, 
+                string loginFailures_value, 
+                string oathTwoFactor_dirty, 
+                string oathTwoFactor_value, 
+                string password_dirty, 
+                string password_value, 
+                string radiusTwoFactor_dirty, 
+                string radiusTwoFactor_value, 
+                string radiusUserName_dirty, 
+                string radiusUserName_value, 
+                string timeOptionId_dirty, 
+                string timeOptionId_value, 
+                string twoFactor_dirty, 
+                string twoFactor_value) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.dirty = dirty;
+        this.value = value;
+        this.displayName_dirty = displayName_dirty;
+        this.displayName_value = displayName_value;
+        this.duoTwoFactor_dirty = duoTwoFactor_dirty;
+        this.duoTwoFactor_value = duoTwoFactor_value;
+        this.emailAddress_dirty = emailAddress_dirty;
+        this.emailAddress_value = emailAddress_value;
+        this.enabled_dirty = enabled_dirty;
+        this.enabled_value = enabled_value;
+        this.fido2TwoFactor_dirty = fido2TwoFactor_dirty;
+        this.fido2TwoFactor_value = fido2TwoFactor_value;
+        this._id = _id;
+        this.isApplicationAccount_dirty = isApplicationAccount_dirty;
+        this.isApplicationAccount_value = isApplicationAccount_value;
+        this.isGroupOwnerUpdate = isGroupOwnerUpdate;
+        this.isLockedOut_dirty = isLockedOut_dirty;
+        this.isLockedOut_value = isLockedOut_value;
+        this.loginFailures_dirty = loginFailures_dirty;
+        this.loginFailures_value = loginFailures_value;
+        this.oathTwoFactor_dirty = oathTwoFactor_dirty;
+        this.oathTwoFactor_value = oathTwoFactor_value;
+        this.password_dirty = password_dirty;
+        this.password_value = password_value;
+        this.radiusTwoFactor_dirty = radiusTwoFactor_dirty;
+        this.radiusTwoFactor_value = radiusTwoFactor_value;
+        this.radiusUserName_dirty = radiusUserName_dirty;
+        this.radiusUserName_value = radiusUserName_value;
+        this.timeOptionId_dirty = timeOptionId_dirty;
+        this.timeOptionId_value = timeOptionId_value;
+        this.twoFactor_dirty = twoFactor_dirty;
+        this.twoFactor_value = twoFactor_value;
     }
 
 
@@ -138,7 +246,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

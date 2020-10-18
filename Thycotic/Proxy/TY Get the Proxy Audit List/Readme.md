@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get the Proxy Audit List
-
-Search, filter, sort, and page Proxy Audits.
-
-Method: Get
-
-OperationID: ProxyService_GetAudits
-
-EndPoint:
-
-/proxy/audit
+<br>#     Thycotic</br>
+<br>Get the Proxy Audit List</br>
+<br>Search, filter, sort, and page Proxy Audits.</br>
+<br>Method: Get</br>
+<br>OperationID: ProxyService_GetAudits</br>
+<br>EndPoint:</br>
+<br>/proxy/audit</br>

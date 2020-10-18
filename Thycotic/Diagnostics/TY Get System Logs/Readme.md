@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get System Logs
-
-Get System Logs
-
-Method: Get
-
-OperationID: DiagnosticsService_GetSystemLogs
-
-EndPoint:
-
-/diagnostics/system-logs
+<br>#     Thycotic</br>
+<br>Get System Logs</br>
+<br>Get System Logs</br>
+<br>Method: Get</br>
+<br>OperationID: DiagnosticsService_GetSystemLogs</br>
+<br>EndPoint:</br>
+<br>/diagnostics/system-logs</br>

@@ -1,12 +1,6 @@
-#     Thycotic
-
-
-TY ServiceImportEventPipelinePolicy
-
-Method: Post
-
-OperationID: EventPipelinePolicyService_ImportEventPipelinePolicy
-
-EndPoint:
-
-/event-pipeline-policy/import
+<br>#     Thycotic</br>
+<br>TY ServiceImportEventPipelinePolicy</br>
+<br>Method: Post</br>
+<br>OperationID: EventPipelinePolicyService_ImportEventPipelinePolicy</br>
+<br>EndPoint:</br>
+<br>/event-pipeline-policy/import</br>

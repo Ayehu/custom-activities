@@ -1,0 +1,405 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY ModuleTypesCreateModuleType",
+    "description": "AY ModuleTypesCreateModuleType",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "typeName",
+          "label": "TypeName",
+          "labelKey": "typeName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entityName",
+          "label": "EntityName",
+          "labelKey": "entityName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "icon_p",
+          "label": "Icon",
+          "labelKey": "icon_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "desc",
+          "label": "Desc",
+          "labelKey": "desc_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "confType",
+          "label": "ConfType",
+          "labelKey": "confType_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "settings_p",
+          "label": "Settings",
+          "labelKey": "settings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "behavior",
+          "label": "Behavior",
+          "labelKey": "behavior_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "defaultPort",
+          "label": "DefaultPort",
+          "labelKey": "defaultPort_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Popserver",
+          "label": "Popserver",
+          "labelKey": "Popserver_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Popuser",
+          "label": "Popuser",
+          "labelKey": "Popuser_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Poppass",
+          "label": "Poppass",
+          "labelKey": "Poppass_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Smtpserver",
+          "label": "Smtpserver",
+          "labelKey": "Smtpserver_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Smtpout",
+          "label": "Smtpout",
+          "labelKey": "Smtpout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Isavailable_p",
+          "label": "Isavailable",
+          "labelKey": "Isavailable_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Incom",
+          "label": "Incom",
+          "labelKey": "Incom_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Outcom",
+          "label": "Outcom",
+          "labelKey": "Outcom_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicerepeat",
+          "label": "Voicerepeat",
+          "labelKey": "Voicerepeat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicespeed",
+          "label": "Voicespeed",
+          "labelKey": "Voicespeed_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicetype",
+          "label": "Voicetype",
+          "labelKey": "Voicetype_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicetypes",
+          "label": "Voicetypes",
+          "labelKey": "Voicetypes_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Voicevolume",
+          "label": "Voicevolume",
+          "labelKey": "Voicevolume_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Smscom",
+          "label": "Smscom",
+          "labelKey": "Smscom_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Notactive",
+          "label": "Notactive",
+          "labelKey": "Notactive_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Lic1",
+          "label": "Lic1",
+          "labelKey": "Lic1_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Lic2",
+          "label": "Lic2",
+          "labelKey": "Lic2_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Keypress",
+          "label": "Keypress",
+          "labelKey": "Keypress_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Alerttype",
+          "label": "Alerttype",
+          "labelKey": "Alerttype_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "moduledevices",
+          "label": "Moduledevices",
+          "labelKey": "moduledevices_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "reporttf",
+          "label": "Reporttf",
+          "labelKey": "reporttf_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "PhoneLines",
+          "label": "PhoneLines",
+          "labelKey": "PhoneLines_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Exe_Path",
+          "label": "Exe_Path",
+          "labelKey": "Exe_Path_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "loglevel",
+          "label": "Loglevel",
+          "labelKey": "loglevel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "logsdirectory",
+          "label": "Logsdirectory",
+          "labelKey": "logsdirectory_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "lognumberofdaystopreserve",
+          "label": "Lognumberofdaystopreserve",
+          "labelKey": "lognumberofdaystopreserve_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dateformat",
+          "label": "Dateformat",
+          "labelKey": "dateformat_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "files",
+          "label": "Files[]",
+          "labelKey": "files_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entity",
+          "label": "Entity",
+          "labelKey": "entity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "createModuleType",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

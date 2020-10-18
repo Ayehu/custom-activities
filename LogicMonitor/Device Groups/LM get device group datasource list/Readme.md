@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get device group datasource list
-
-LM get device group datasource list
-
-Method: Get
-
-OperationID: getDeviceGroupDatasourceList
-
-EndPoint:
-
-/device/groups/{deviceGroupId}/datasources
+<br>#     LogicMonitor</br>
+<br>get device group datasource list</br>
+<br>LM get device group datasource list</br>
+<br>Method: Get</br>
+<br>OperationID: getDeviceGroupDatasourceList</br>
+<br>EndPoint:</br>
+<br>/device/groups/{deviceGroupId}/datasources</br>

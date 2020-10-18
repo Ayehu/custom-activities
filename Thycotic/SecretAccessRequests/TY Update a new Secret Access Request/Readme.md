@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update a new Secret Access Request
-
-Update a new Secret Access Request
-
-Method: Put
-
-OperationID: SecretAccessRequestsService_UpdateRequest
-
-EndPoint:
-
-/secret-access-requests
+<br>#     Thycotic</br>
+<br>Update a new Secret Access Request</br>
+<br>Update a new Secret Access Request</br>
+<br>Method: Put</br>
+<br>OperationID: SecretAccessRequestsService_UpdateRequest</br>
+<br>EndPoint:</br>
+<br>/secret-access-requests</br>

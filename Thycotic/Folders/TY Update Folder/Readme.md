@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Folder
-
-Update a single secret folder by ID
-
-Method: Put
-
-OperationID: FoldersService_Update
-
-EndPoint:
-
-/folders/{id}
+<br>#     Thycotic</br>
+<br>Update Folder</br>
+<br>Update a single secret folder by ID</br>
+<br>Method: Put</br>
+<br>OperationID: FoldersService_Update</br>
+<br>EndPoint:</br>
+<br>/folders/{id}</br>

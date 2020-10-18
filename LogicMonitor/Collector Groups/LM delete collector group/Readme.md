@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-delete collector group
-
-LM delete collector group
-
-Method: Delete
-
-OperationID: deleteCollectorGroupById
-
-EndPoint:
-
-/setting/collector/groups/{id}
+<br>#     LogicMonitor</br>
+<br>delete collector group</br>
+<br>LM delete collector group</br>
+<br>Method: Delete</br>
+<br>OperationID: deleteCollectorGroupById</br>
+<br>EndPoint:</br>
+<br>/setting/collector/groups/{id}</br>

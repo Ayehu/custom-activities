@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get the proxy endpoints list
-
-Get the proxy endpoints list
-
-Method: Get
-
-OperationID: ProxyService_GetEndpoints
-
-EndPoint:
-
-/proxy/endpoints
+<br>#     Thycotic</br>
+<br>Get the proxy endpoints list</br>
+<br>Get the proxy endpoints list</br>
+<br>Method: Get</br>
+<br>OperationID: ProxyService_GetEndpoints</br>
+<br>EndPoint:</br>
+<br>/proxy/endpoints</br>

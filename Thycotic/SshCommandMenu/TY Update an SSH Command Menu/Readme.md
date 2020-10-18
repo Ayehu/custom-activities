@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update an SSH Command Menu
-
-Update an SSH Command Menu
-
-Method: Patch
-
-OperationID: SshCommandMenuService_PatchSshCommandMenu
-
-EndPoint:
-
-/ssh-command-menu/{sshCommandMenuId}
+<br>#     Thycotic</br>
+<br>Update an SSH Command Menu</br>
+<br>Update an SSH Command Menu</br>
+<br>Method: Patch</br>
+<br>OperationID: SshCommandMenuService_PatchSshCommandMenu</br>
+<br>EndPoint:</br>
+<br>/ssh-command-menu/{sshCommandMenuId}</br>

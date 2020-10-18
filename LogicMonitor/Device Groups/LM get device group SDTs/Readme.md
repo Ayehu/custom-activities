@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get device group SDTs
-
-LM get device group SDTs
-
-Method: Get
-
-OperationID: getDeviceGroupSDTList
-
-EndPoint:
-
-/device/groups/{id}/sdts
+<br>#     LogicMonitor</br>
+<br>get device group SDTs</br>
+<br>LM get device group SDTs</br>
+<br>Method: Get</br>
+<br>OperationID: getDeviceGroupSDTList</br>
+<br>EndPoint:</br>
+<br>/device/groups/{id}/sdts</br>

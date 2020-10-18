@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get recipient group List
-
-LM get recipient group List
-
-Method: Get
-
-OperationID: getRecipientGroupList
-
-EndPoint:
-
-/setting/recipientgroups
+<br>#     LogicMonitor</br>
+<br>get recipient group List</br>
+<br>LM get recipient group List</br>
+<br>Method: Get</br>
+<br>OperationID: getRecipientGroupList</br>
+<br>EndPoint:</br>
+<br>/setting/recipientgroups</br>

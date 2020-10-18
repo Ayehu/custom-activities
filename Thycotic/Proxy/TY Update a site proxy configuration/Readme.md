@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update a site proxy configuration
-
-Update a site proxy configuration
-
-Method: Patch
-
-OperationID: ProxyService_PatchSite
-
-EndPoint:
-
-/proxy/endpoints/sites/{id}
+<br>#     Thycotic</br>
+<br>Update a site proxy configuration</br>
+<br>Update a site proxy configuration</br>
+<br>Method: Patch</br>
+<br>OperationID: ProxyService_PatchSite</br>
+<br>EndPoint:</br>
+<br>/proxy/endpoints/sites/{id}</br>

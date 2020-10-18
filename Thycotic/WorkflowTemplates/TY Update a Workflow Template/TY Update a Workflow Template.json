@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -139,6 +139,15 @@
           "key": "name_value",
           "label": "Name_value",
           "labelKey": "name_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

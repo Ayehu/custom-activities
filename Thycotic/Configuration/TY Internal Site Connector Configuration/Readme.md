@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Internal Site Connector Configuration
-
-Internal Site Connector Configuration
-
-Method: Get
-
-OperationID: ConfigurationService_GetInternalSiteConfiguration
-
-EndPoint:
-
-/configuration/internal-site-connector
+<br>#     Thycotic</br>
+<br>Internal Site Connector Configuration</br>
+<br>Internal Site Connector Configuration</br>
+<br>Method: Get</br>
+<br>OperationID: ConfigurationService_GetInternalSiteConfiguration</br>
+<br>EndPoint:</br>
+<br>/configuration/internal-site-connector</br>

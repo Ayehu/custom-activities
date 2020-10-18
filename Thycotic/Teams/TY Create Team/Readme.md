@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Create Team
-
-Create a new team
-
-Method: Post
-
-OperationID: TeamsService_CreateTeam
-
-EndPoint:
-
-/teams
+<br>#     Thycotic</br>
+<br>Create Team</br>
+<br>Create a new team</br>
+<br>Method: Post</br>
+<br>OperationID: TeamsService_CreateTeam</br>
+<br>EndPoint:</br>
+<br>/teams</br>

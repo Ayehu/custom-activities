@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get device instance 
-
-LM get device instance
-
-Method: Get
-
-OperationID: getDeviceDatasourceInstanceById
-
-EndPoint:
-
-/device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}
+<br>#     LogicMonitor</br>
+<br>get device instance </br>
+<br>LM get device instance</br>
+<br>Method: Get</br>
+<br>OperationID: getDeviceDatasourceInstanceById</br>
+<br>EndPoint:</br>
+<br>/device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}</br>

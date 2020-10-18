@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Search SDK Client Rules
-
-Search, filter, sort, and page app SDK Client rules
-
-Method: Get
-
-OperationID: SdkClientRulesService_SearchClientRules
-
-EndPoint:
-
-/sdk-client-rules
+<br>#     Thycotic</br>
+<br>Search SDK Client Rules</br>
+<br>Search, filter, sort, and page app SDK Client rules</br>
+<br>Method: Get</br>
+<br>OperationID: SdkClientRulesService_SearchClientRules</br>
+<br>EndPoint:</br>
+<br>/sdk-client-rules</br>

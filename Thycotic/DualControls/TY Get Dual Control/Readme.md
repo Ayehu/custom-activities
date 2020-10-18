@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Dual Control
-
-Get a single dual control by ID
-
-Method: Get
-
-OperationID: DualControlsService_Get
-
-EndPoint:
-
-/dual-controls/{id}
+<br>#     Thycotic</br>
+<br>Get Dual Control</br>
+<br>Get a single dual control by ID</br>
+<br>Method: Get</br>
+<br>OperationID: DualControlsService_Get</br>
+<br>EndPoint:</br>
+<br>/dual-controls/{id}</br>

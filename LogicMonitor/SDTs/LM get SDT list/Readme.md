@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get SDT list
-
-LM get SDT list
-
-Method: Get
-
-OperationID: getSDTList
-
-EndPoint:
-
-/sdt/sdts
+<br>#     LogicMonitor</br>
+<br>get SDT list</br>
+<br>LM get SDT list</br>
+<br>Method: Get</br>
+<br>OperationID: getSDTList</br>
+<br>EndPoint:</br>
+<br>/sdt/sdts</br>

@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Heartbeat Logs
-
-Get Heartbeat Logs
-
-Method: Get
-
-OperationID: DiagnosticsService_GetHeartbeatLogs
-
-EndPoint:
-
-/diagnostics/heartbeat-logs
+<br>#     Thycotic</br>
+<br>Get Heartbeat Logs</br>
+<br>Get Heartbeat Logs</br>
+<br>Method: Get</br>
+<br>OperationID: DiagnosticsService_GetHeartbeatLogs</br>
+<br>EndPoint:</br>
+<br>/diagnostics/heartbeat-logs</br>

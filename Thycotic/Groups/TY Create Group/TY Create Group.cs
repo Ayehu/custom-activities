@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Group : IActivityAsync
+    public class TY_Create_Group : IActivityAsync
     {
 
 
@@ -30,14 +30,6 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string name_p = "";
     
-    public string ownerGroupIds__ = "";
-    
-    public string ownerGroupNames__ = "";
-    
-    public string ownerUserIds__ = "";
-    
-    public string ownerUserNames__ = "";
-    
     public string synchronized = "";
     
     public string synchronizeNow = "";
@@ -48,28 +40,76 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/groups";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/groups";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"adGuid\": \"{0}\",  \"domainId\": \"{1}\",  \"enabled\": \"{2}\",  \"hasGroupOwners\": \"{3}\",  \"name\": \"{4}\",  \"synchronized\": \"{5}\",  \"synchronizeNow\": \"{6}\" }}",adGuid,domainId,enabled,hasGroupOwners,name_p,synchronized,synchronizeNow);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"adGuid\": \"{0}\",  \"domainId\": \"{1}\",  \"enabled\": \"{2}\",  \"hasGroupOwners\": \"{3}\",  \"name\": \"{4}\",  \"synchronized\": \"{5}\",  \"synchronizeNow\": \"{6}\" }}",adGuid,domainId,enabled,hasGroupOwners,name_p,synchronized,synchronizeNow);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Group() {
+    }
+    
+    public TY_Create_Group(string endPoint, string Jsonkeypath, string password1, string adGuid, string domainId, string enabled, string hasGroupOwners, string name_p, string synchronized, string synchronizeNow) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.adGuid = adGuid;
+        this.domainId = domainId;
+        this.enabled = enabled;
+        this.hasGroupOwners = hasGroupOwners;
+        this.name_p = name_p;
+        this.synchronized = synchronized;
+        this.synchronizeNow = synchronizeNow;
     }
 
 
@@ -92,7 +132,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

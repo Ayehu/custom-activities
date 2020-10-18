@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-add device property
-
-LM add device property
-
-Method: Post
-
-OperationID: addDeviceProperty
-
-EndPoint:
-
-/device/devices/{deviceId}/properties
+<br>#     LogicMonitor</br>
+<br>add device property</br>
+<br>LM add device property</br>
+<br>Method: Post</br>
+<br>OperationID: addDeviceProperty</br>
+<br>EndPoint:</br>
+<br>/device/devices/{deviceId}/properties</br>

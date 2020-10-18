@@ -1,12 +1,6 @@
-#     Thycotic
-
-
-TY ServiceGetEventPipelinePolicyRuns
-
-Method: Get
-
-OperationID: EventPipelinePolicyService_GetEventPipelinePolicyRuns
-
-EndPoint:
-
-/event-pipeline-policy/runs
+<br>#     Thycotic</br>
+<br>TY ServiceGetEventPipelinePolicyRuns</br>
+<br>Method: Get</br>
+<br>OperationID: EventPipelinePolicyService_GetEventPipelinePolicyRuns</br>
+<br>EndPoint:</br>
+<br>/event-pipeline-policy/runs</br>

@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-add widget
-
-LM add widget
-
-Method: Post
-
-OperationID: addWidget
-
-EndPoint:
-
-/dashboard/widgets
+<br>#     LogicMonitor</br>
+<br>add widget</br>
+<br>LM add widget</br>
+<br>Method: Post</br>
+<br>OperationID: addWidget</br>
+<br>EndPoint:</br>
+<br>/dashboard/widgets</br>

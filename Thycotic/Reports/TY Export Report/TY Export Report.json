@@ -145,27 +145,9 @@
         },
         {
           "required": false,
-          "key": "parameters____",
-          "label": "Parameters[][]",
+          "key": "parameters",
+          "label": "Parameters[]",
           "labelKey": "parameters_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "parameters_name",
-          "label": "Parameters_name",
-          "labelKey": "parameters_name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "value",
-          "label": "Value",
-          "labelKey": "value_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -193,6 +175,15 @@
           "key": "timeZone",
           "label": "TimeZone",
           "labelKey": "timeZone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

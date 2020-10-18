@@ -1,0 +1,425 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY ActivityGetSuggestedActivities",
+    "description": "AY ActivityGetSuggestedActivities",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "displayName_p",
+          "label": "DisplayName",
+          "labelKey": "displayName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "category_p",
+          "label": "Category",
+          "labelKey": "category_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "subCategory_p",
+          "label": "SubCategory",
+          "labelKey": "subCategory_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "documantation",
+          "label": "Documantation",
+          "labelKey": "documantation_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isFavorite_p",
+          "label": "IsFavorite",
+          "labelKey": "isFavorite_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activityList_p",
+          "label": "ActivityList[]",
+          "labelKey": "activityList_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_groupId",
+          "label": "PreviousActivity_groupId",
+          "labelKey": "previousActivity_groupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_settings",
+          "label": "PreviousActivity_settings",
+          "labelKey": "previousActivity_settings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_activityLicenseType",
+          "label": "PreviousActivity_activityLicenseType",
+          "labelKey": "previousActivity_activityLicenseType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Default",
+              "value": "Default"
+            },
+            {
+              "key": "Custom",
+              "value": "Custom"
+            }
+          ],
+          "value": "Default"
+        },
+        {
+          "required": false,
+          "key": "previousActivity_id",
+          "label": "PreviousActivity_id",
+          "labelKey": "previousActivity_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_labelKey",
+          "label": "PreviousActivity_labelKey",
+          "labelKey": "previousActivity_labelKey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_label",
+          "label": "PreviousActivity_label",
+          "labelKey": "previousActivity_label_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_isAvailable",
+          "label": "PreviousActivity_isAvailable",
+          "labelKey": "previousActivity_isAvailable_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_visible",
+          "label": "PreviousActivity_visible",
+          "labelKey": "previousActivity_visible_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_icon",
+          "label": "PreviousActivity_icon",
+          "labelKey": "previousActivity_icon_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_color",
+          "label": "PreviousActivity_color",
+          "labelKey": "previousActivity_color_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_description",
+          "label": "PreviousActivity_description",
+          "labelKey": "previousActivity_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "previousActivity_index",
+          "label": "PreviousActivity_index",
+          "labelKey": "previousActivity_index_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_name",
+          "label": "NextActivity_name",
+          "labelKey": "nextActivity_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_displayName",
+          "label": "NextActivity_displayName",
+          "labelKey": "nextActivity_displayName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_category",
+          "label": "NextActivity_category",
+          "labelKey": "nextActivity_category_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_subCategory",
+          "label": "NextActivity_subCategory",
+          "labelKey": "nextActivity_subCategory_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_documantation",
+          "label": "NextActivity_documantation",
+          "labelKey": "nextActivity_documantation_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_isFavorite",
+          "label": "NextActivity_isFavorite",
+          "labelKey": "nextActivity_isFavorite_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activityList_p",
+          "label": "ActivityList[]",
+          "labelKey": "activityList_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_groupId",
+          "label": "NextActivity_groupId",
+          "labelKey": "nextActivity_groupId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_settings",
+          "label": "NextActivity_settings",
+          "labelKey": "nextActivity_settings_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_activityLicenseType",
+          "label": "NextActivity_activityLicenseType",
+          "labelKey": "nextActivity_activityLicenseType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Default",
+              "value": "Default"
+            },
+            {
+              "key": "Custom",
+              "value": "Custom"
+            }
+          ],
+          "value": "Default"
+        },
+        {
+          "required": false,
+          "key": "nextActivity_id",
+          "label": "NextActivity_id",
+          "labelKey": "nextActivity_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_labelKey",
+          "label": "NextActivity_labelKey",
+          "labelKey": "nextActivity_labelKey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_label",
+          "label": "NextActivity_label",
+          "labelKey": "nextActivity_label_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_isAvailable",
+          "label": "NextActivity_isAvailable",
+          "labelKey": "nextActivity_isAvailable_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_visible",
+          "label": "NextActivity_visible",
+          "labelKey": "nextActivity_visible_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_icon",
+          "label": "NextActivity_icon",
+          "labelKey": "nextActivity_icon_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_color",
+          "label": "NextActivity_color",
+          "labelKey": "nextActivity_color_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_description",
+          "label": "NextActivity_description",
+          "labelKey": "nextActivity_description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nextActivity_index",
+          "label": "NextActivity_index",
+          "labelKey": "nextActivity_index_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activity",
+          "label": "Activity",
+          "labelKey": "activity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "getSuggestedActivities",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

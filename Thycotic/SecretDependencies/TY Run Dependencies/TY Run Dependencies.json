@@ -27,6 +27,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "dependencyIds",
+          "label": "DependencyIds",
+          "labelKey": "dependencyIds_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

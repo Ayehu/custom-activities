@@ -162,6 +162,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "domainCreateArgs",
+          "label": "DomainCreateArgs",
+          "labelKey": "domainCreateArgs_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

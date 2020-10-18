@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-import eventsource via xml
-
-LM import eventsource via xml
-
-Method: Post
-
-OperationID: importEventSource
-
-EndPoint:
-
-/setting/eventsources/importxml
+<br>#     LogicMonitor</br>
+<br>import eventsource via xml</br>
+<br>LM import eventsource via xml</br>
+<br>Method: Post</br>
+<br>OperationID: importEventSource</br>
+<br>EndPoint:</br>
+<br>/setting/eventsources/importxml</br>

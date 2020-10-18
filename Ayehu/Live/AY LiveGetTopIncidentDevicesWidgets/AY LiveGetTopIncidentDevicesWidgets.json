@@ -1,0 +1,99 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY LiveGetTopIncidentDevicesWidgets",
+    "description": "AY LiveGetTopIncidentDevicesWidgets",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "topCount",
+          "label": "TopCount",
+          "labelKey": "topCount_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dateType",
+          "label": "DateType",
+          "labelKey": "dateType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "TwentyFourHours",
+              "value": "TwentyFourHours"
+            },
+            {
+              "key": "SevenDays",
+              "value": "SevenDays"
+            },
+            {
+              "key": "ThirtyDays",
+              "value": "ThirtyDays"
+            },
+            {
+              "key": "SixMonth",
+              "value": "SixMonth"
+            }
+          ],
+          "value": "TwentyFourHours"
+        },
+        {
+          "required": false,
+          "key": "request",
+          "label": "Request",
+          "labelKey": "request_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "getTopIncidentDevicesWidgets",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

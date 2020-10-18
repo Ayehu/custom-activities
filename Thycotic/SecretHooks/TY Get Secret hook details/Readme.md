@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Secret hook details
-
-Get Secret hook details
-
-Method: Get
-
-OperationID: SecretHooksService_GetHook
-
-EndPoint:
-
-/secret-detail/{secretId}/hook/get/{secretHookId}
+<br>#     Thycotic</br>
+<br>Get Secret hook details</br>
+<br>Get Secret hook details</br>
+<br>Method: Get</br>
+<br>OperationID: SecretHooksService_GetHook</br>
+<br>EndPoint:</br>
+<br>/secret-detail/{secretId}/hook/get/{secretHookId}</br>

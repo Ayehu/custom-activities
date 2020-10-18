@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_User : IActivityAsync
+    public class TY_Update_User : IActivityAsync
     {
 
 
@@ -24,7 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string dateOptionId = "";
     
-    public string displayName = "";
+    public string displayName_p = "";
     
     public string duoTwoFactor = "";
     
@@ -33,8 +33,6 @@ namespace Ayehu.Sdk.ActivityCreation
     public string enabled = "";
     
     public string fido2TwoFactor = "";
-    
-    public string groupOwners__ = "";
     
     public string _id = "";
     
@@ -64,28 +62,108 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/users/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/users/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"dateOptionId\": \"{0}\",  \"displayName\": \"{1}\",  \"duoTwoFactor\": \"{2}\",  \"emailAddress\": \"{3}\",  \"enabled\": \"{4}\",  \"fido2TwoFactor\": \"{5}\",  \"id\": \"{6}\",  \"isApplicationAccount\": \"{7}\",  \"isGroupOwnerUpdate\": \"{8}\",  \"isLockedOut\": \"{9}\",  \"loginFailures\": \"{10}\",  \"oathTwoFactor\": \"{11}\",  \"password\": \"{12}\",  \"radiusTwoFactor\": \"{13}\",  \"radiusUserName\": \"{14}\",  \"timeOptionId\": \"{15}\",  \"twoFactor\": \"{16}\" }}",dateOptionId,displayName,duoTwoFactor,emailAddress,enabled,fido2TwoFactor,_id,isApplicationAccount,isGroupOwnerUpdate,isLockedOut,loginFailures,oathTwoFactor,password,radiusTwoFactor,radiusUserName,timeOptionId,twoFactor);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"dateOptionId\": \"{0}\",  \"displayName\": \"{1}\",  \"duoTwoFactor\": \"{2}\",  \"emailAddress\": \"{3}\",  \"enabled\": \"{4}\",  \"fido2TwoFactor\": \"{5}\",  \"id\": \"{6}\",  \"isApplicationAccount\": \"{7}\",  \"isGroupOwnerUpdate\": \"{8}\",  \"isLockedOut\": \"{9}\",  \"loginFailures\": \"{10}\",  \"oathTwoFactor\": \"{11}\",  \"password\": \"{12}\",  \"radiusTwoFactor\": \"{13}\",  \"radiusUserName\": \"{14}\",  \"timeOptionId\": \"{15}\",  \"twoFactor\": \"{16}\" }}",dateOptionId,displayName_p,duoTwoFactor,emailAddress,enabled,fido2TwoFactor,_id,isApplicationAccount,isGroupOwnerUpdate,isLockedOut,loginFailures,oathTwoFactor,password,radiusTwoFactor,radiusUserName,timeOptionId,twoFactor);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_User() {
+    }
+    
+    public TY_Update_User(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string id_p, 
+                string dateOptionId, 
+                string displayName_p, 
+                string duoTwoFactor, 
+                string emailAddress, 
+                string enabled, 
+                string fido2TwoFactor, 
+                string _id, 
+                string isApplicationAccount, 
+                string isGroupOwnerUpdate, 
+                string isLockedOut, 
+                string loginFailures, 
+                string oathTwoFactor, 
+                string password, 
+                string radiusTwoFactor, 
+                string radiusUserName, 
+                string timeOptionId, 
+                string twoFactor) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.dateOptionId = dateOptionId;
+        this.displayName_p = displayName_p;
+        this.duoTwoFactor = duoTwoFactor;
+        this.emailAddress = emailAddress;
+        this.enabled = enabled;
+        this.fido2TwoFactor = fido2TwoFactor;
+        this._id = _id;
+        this.isApplicationAccount = isApplicationAccount;
+        this.isGroupOwnerUpdate = isGroupOwnerUpdate;
+        this.isLockedOut = isLockedOut;
+        this.loginFailures = loginFailures;
+        this.oathTwoFactor = oathTwoFactor;
+        this.password = password;
+        this.radiusTwoFactor = radiusTwoFactor;
+        this.radiusUserName = radiusUserName;
+        this.timeOptionId = timeOptionId;
+        this.twoFactor = twoFactor;
     }
 
 
@@ -108,7 +186,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

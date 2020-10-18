@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_an_engine_proxy_configuration : IActivityAsync
+    public class TY_Update_an_engine_proxy_configuration : IActivityAsync
     {
 
 
@@ -38,28 +38,75 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/proxy/endpoints/engines/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/proxy/endpoints/engines/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"bindIpAddress\": \"{0}\",  \"engineId\": \"{1}\",  \"friendlyName\": \"{2}\",  \"publicHost\": \"{3}\",  \"siteName\": \"{4}\" }}",bindIpAddress,engineId,friendlyName,publicHost,siteName);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"bindIpAddress\": \"{0}\",  \"engineId\": \"{1}\",  \"friendlyName\": \"{2}\",  \"publicHost\": \"{3}\",  \"siteName\": \"{4}\" }}",bindIpAddress,engineId,friendlyName,publicHost,siteName);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_an_engine_proxy_configuration() {
+    }
+    
+    public TY_Update_an_engine_proxy_configuration(string endPoint, string Jsonkeypath, string password1, string id_p, string bindIpAddress, string engineId, string friendlyName, string publicHost, string siteName) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.bindIpAddress = bindIpAddress;
+        this.engineId = engineId;
+        this.friendlyName = friendlyName;
+        this.publicHost = publicHost;
+        this.siteName = siteName;
     }
 
 
@@ -82,7 +129,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

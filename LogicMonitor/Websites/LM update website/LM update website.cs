@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_update_website : IActivityAsync
+    public class LM_update_website : IActivityAsync
     {
 
 
@@ -24,11 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string id_p = "";
     
-    public string opType = "";
-    
-    public string checkpoints__ = "";
-    
-    public string description = "";
+    public string description_p = "";
     
     public string disableAlerting = "";
     
@@ -50,15 +46,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string all = "";
     
-    public string collectorIds__ = "";
-    
-    public string collectors__ = "";
-    
-    public string smgIds__ = "";
-    
     public string transition = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string useDefaultAlertSetting = "";
     
@@ -70,30 +60,110 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/service/services/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/website/websites/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"description\": \"{0}\",  \"disableAlerting\": \"{1}\",  \"globalSmAlertCond\": \"{2}\",  \"individualAlertLevel\": \"{3}\",  \"individualSmAlertEnable\": \"{4}\",  \"isInternal\": \"{5}\",  \"name\": \"{6}\",  \"overallAlertLevel\": \"{7}\",  \"pollingInterval\": \"{8}\",  \"stopMonitoring\": \"{9}\",  \"testLocation\": {{   \"all\": \"{10}\"   }},  \"transition\": \"{11}\",  \"type\": \"{12}\",  \"useDefaultAlertSetting\": \"{13}\",  \"useDefaultLocationSetting\": \"{14}\",  \"userPermission\": \"{15}\" }}",description,disableAlerting,globalSmAlertCond,individualAlertLevel,individualSmAlertEnable,isInternal,name_p,overallAlertLevel,pollingInterval,stopMonitoring,all,transition,type,useDefaultAlertSetting,useDefaultLocationSetting,userPermission);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"description\": \"{0}\",  \"disableAlerting\": \"{1}\",  \"globalSmAlertCond\": \"{2}\",  \"individualAlertLevel\": \"{3}\",  \"individualSmAlertEnable\": \"{4}\",  \"isInternal\": \"{5}\",  \"name\": \"{6}\",  \"overallAlertLevel\": \"{7}\",  \"pollingInterval\": \"{8}\",  \"stopMonitoring\": \"{9}\",  \"testLocation\": {{   \"all\": \"{10}\"   }},  \"transition\": \"{11}\",  \"type\": \"{12}\",  \"useDefaultAlertSetting\": \"{13}\",  \"useDefaultLocationSetting\": \"{14}\",  \"userPermission\": \"{15}\" }}",description_p,disableAlerting,globalSmAlertCond,individualAlertLevel,individualSmAlertEnable,isInternal,name_p,overallAlertLevel,pollingInterval,stopMonitoring,all,transition,type_p,useDefaultAlertSetting,useDefaultLocationSetting,userPermission);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_update_website() {
+    }
+    
+    public LM_update_website(
+                string endPoint, 
+                string Jsonkeypath, 
+                string accessid, 
+                string password1, 
+                string id_p, 
+                string description_p, 
+                string disableAlerting, 
+                string globalSmAlertCond, 
+                string individualAlertLevel, 
+                string individualSmAlertEnable, 
+                string isInternal, 
+                string name_p, 
+                string overallAlertLevel, 
+                string pollingInterval, 
+                string stopMonitoring, 
+                string all, 
+                string transition, 
+                string type_p, 
+                string useDefaultAlertSetting, 
+                string useDefaultLocationSetting, 
+                string userPermission) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.description_p = description_p;
+        this.disableAlerting = disableAlerting;
+        this.globalSmAlertCond = globalSmAlertCond;
+        this.individualAlertLevel = individualAlertLevel;
+        this.individualSmAlertEnable = individualSmAlertEnable;
+        this.isInternal = isInternal;
+        this.name_p = name_p;
+        this.overallAlertLevel = overallAlertLevel;
+        this.pollingInterval = pollingInterval;
+        this.stopMonitoring = stopMonitoring;
+        this.all = all;
+        this.transition = transition;
+        this.type_p = type_p;
+        this.useDefaultAlertSetting = useDefaultAlertSetting;
+        this.useDefaultLocationSetting = useDefaultLocationSetting;
+        this.userPermission = userPermission;
     }
 
 
@@ -115,13 +185,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

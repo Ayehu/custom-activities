@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Password Type
-
-Update a Password Type
-
-Method: Put
-
-OperationID: RemotePasswordChangingService_UpdatePasswordType
-
-EndPoint:
-
-/remote-password-changing/password-types/{id}
+<br>#     Thycotic</br>
+<br>Update Password Type</br>
+<br>Update a Password Type</br>
+<br>Method: Put</br>
+<br>OperationID: RemotePasswordChangingService_UpdatePasswordType</br>
+<br>EndPoint:</br>
+<br>/remote-password-changing/password-types/{id}</br>

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_add_a_new_device : IActivityAsync
+    public class LM_add_a_new_device : IActivityAsync
     {
 
 
@@ -22,29 +22,17 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
-    public string start = "";
-    
-    public string end = "";
-    
-    public string netflowFilter = "";
-    
-    public string addFromWizard = "";
-    
     public string currentCollectorId = "";
     
-    public string customProperties__ = "";
+    public string customProperties = "";
     
-    public string name_p = "";
-    
-    public string value = "";
-    
-    public string description = "";
+    public string description_p = "";
     
     public string deviceType = "";
     
     public string disableAlerting = "";
     
-    public string displayName = "";
+    public string displayName_p = "";
     
     public string enableNetflow = "";
     
@@ -66,28 +54,100 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "/device/devices";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "/device/devices";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"currentCollectorId\": \"{0}\",  \"customProperties\": [    {{     \"name\": \"{1}\",      \"value\": \"{2}\"     }}  ],  \"description\": \"{3}\",  \"deviceType\": \"{4}\",  \"disableAlerting\": \"{5}\",  \"displayName\": \"{6}\",  \"enableNetflow\": \"{7}\",  \"hostGroupIds\": \"{8}\",  \"link\": \"{9}\",  \"name\": \"{10}\",  \"netflowCollectorId\": \"{11}\",  \"preferredCollectorId\": \"{12}\",  \"relatedDeviceId\": \"{13}\" }}",currentCollectorId,name_p,value,description,deviceType,disableAlerting,displayName,enableNetflow,hostGroupIds,link,_name,netflowCollectorId,preferredCollectorId,relatedDeviceId);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"currentCollectorId\": \"{0}\",  \"customProperties\": {1},  \"description\": \"{2}\",  \"deviceType\": \"{3}\",  \"disableAlerting\": \"{4}\",  \"displayName\": \"{5}\",  \"enableNetflow\": \"{6}\",  \"hostGroupIds\": \"{7}\",  \"link\": \"{8}\",  \"name\": \"{9}\",  \"netflowCollectorId\": \"{10}\",  \"preferredCollectorId\": \"{11}\",  \"relatedDeviceId\": \"{12}\" }}",currentCollectorId,customProperties,description_p,deviceType,disableAlerting,displayName_p,enableNetflow,hostGroupIds,link,_name,netflowCollectorId,preferredCollectorId,relatedDeviceId);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_add_a_new_device() {
+    }
+    
+    public LM_add_a_new_device(
+                string endPoint, 
+                string Jsonkeypath, 
+                string accessid, 
+                string password1, 
+                string currentCollectorId, 
+                string customProperties, 
+                string description_p, 
+                string deviceType, 
+                string disableAlerting, 
+                string displayName_p, 
+                string enableNetflow, 
+                string hostGroupIds, 
+                string link, 
+                string _name, 
+                string netflowCollectorId, 
+                string preferredCollectorId, 
+                string relatedDeviceId) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.currentCollectorId = currentCollectorId;
+        this.customProperties = customProperties;
+        this.description_p = description_p;
+        this.deviceType = deviceType;
+        this.disableAlerting = disableAlerting;
+        this.displayName_p = displayName_p;
+        this.enableNetflow = enableNetflow;
+        this.hostGroupIds = hostGroupIds;
+        this.link = link;
+        this._name = _name;
+        this.netflowCollectorId = netflowCollectorId;
+        this.preferredCollectorId = preferredCollectorId;
+        this.relatedDeviceId = relatedDeviceId;
     }
 
 
@@ -109,13 +169,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

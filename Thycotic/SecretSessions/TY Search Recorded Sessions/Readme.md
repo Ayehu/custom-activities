@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Search Recorded Sessions
-
-Search, filter, sort, and page recorded sessions
-
-Method: Get
-
-OperationID: SecretSessionsService_SearchSessions
-
-EndPoint:
-
-/recorded-sessions
+<br>#     Thycotic</br>
+<br>Search Recorded Sessions</br>
+<br>Search, filter, sort, and page recorded sessions</br>
+<br>Method: Get</br>
+<br>OperationID: SecretSessionsService_SearchSessions</br>
+<br>EndPoint:</br>
+<br>/recorded-sessions</br>

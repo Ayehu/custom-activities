@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Secret_hook : IActivityAsync
+    public class TY_Create_Secret_hook : IActivityAsync
     {
 
 
@@ -26,7 +26,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string database = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string eventActionId = "";
     
@@ -34,13 +34,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string name_p = "";
     
-    public string parameters__ = "";
-    
-    public string parameterName = "";
-    
-    public string parameterType = "";
-    
-    public string parameterValue = "";
+    public string parameters = "";
     
     public string port = "";
     
@@ -66,28 +60,106 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/secret-detail/{0}/hook",secretId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/secret-detail/{0}/hook",secretId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"data\": {{   \"arguments\": \"{0}\",    \"database\": \"{1}\",    \"description\": \"{2}\",    \"eventActionId\": \"{3}\",    \"failureMessage\": \"{4}\",    \"name\": \"{5}\",    \"parameters\": [      {{       \"parameterName\": \"{6}\",        \"parameterType\": \"{7}\",        \"parameterValue\": \"{8}\"       }}    ],    \"port\": \"{9}\",    \"prePostOption\": \"{10}\",    \"privilegedSecretId\": \"{11}\",    \"scriptId\": \"{12}\",    \"secretId\": \"{13}\",    \"serverKeyDigest\": \"{14}\",    \"serverName\": \"{15}\",    \"sshKeySecretId\": \"{16}\",    \"stopOnFailure\": \"{17}\"   }} }}",arguments,database,description,eventActionId,failureMessage,name_p,parameterName,parameterType,parameterValue,port,prePostOption,privilegedSecretId,scriptId,data_secretId,serverKeyDigest,serverName,sshKeySecretId,stopOnFailure);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"data\": {{   \"arguments\": \"{0}\",    \"database\": \"{1}\",    \"description\": \"{2}\",    \"eventActionId\": \"{3}\",    \"failureMessage\": \"{4}\",    \"name\": \"{5}\",    \"parameters\": {6},    \"port\": \"{7}\",    \"prePostOption\": \"{8}\",    \"privilegedSecretId\": \"{9}\",    \"scriptId\": \"{10}\",    \"secretId\": \"{11}\",    \"serverKeyDigest\": \"{12}\",    \"serverName\": \"{13}\",    \"sshKeySecretId\": \"{14}\",    \"stopOnFailure\": \"{15}\"   }} }}",arguments,database,description_p,eventActionId,failureMessage,name_p,parameters,port,prePostOption,privilegedSecretId,scriptId,data_secretId,serverKeyDigest,serverName,sshKeySecretId,stopOnFailure);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Secret_hook() {
+    }
+    
+    public TY_Create_Secret_hook(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string secretId, 
+                string arguments, 
+                string database, 
+                string description_p, 
+                string eventActionId, 
+                string failureMessage, 
+                string name_p, 
+                string parameters, 
+                string port, 
+                string prePostOption, 
+                string privilegedSecretId, 
+                string scriptId, 
+                string data_secretId, 
+                string serverKeyDigest, 
+                string serverName, 
+                string sshKeySecretId, 
+                string stopOnFailure) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.secretId = secretId;
+        this.arguments = arguments;
+        this.database = database;
+        this.description_p = description_p;
+        this.eventActionId = eventActionId;
+        this.failureMessage = failureMessage;
+        this.name_p = name_p;
+        this.parameters = parameters;
+        this.port = port;
+        this.prePostOption = prePostOption;
+        this.privilegedSecretId = privilegedSecretId;
+        this.scriptId = scriptId;
+        this.data_secretId = data_secretId;
+        this.serverKeyDigest = serverKeyDigest;
+        this.serverName = serverName;
+        this.sshKeySecretId = sshKeySecretId;
+        this.stopOnFailure = stopOnFailure;
     }
 
 
@@ -110,7 +182,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

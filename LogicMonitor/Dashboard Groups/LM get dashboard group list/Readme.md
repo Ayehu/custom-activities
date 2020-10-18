@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get dashboard group list
-
-LM get dashboard group list
-
-Method: Get
-
-OperationID: getDashboardGroupList
-
-EndPoint:
-
-/dashboard/groups
+<br>#     LogicMonitor</br>
+<br>get dashboard group list</br>
+<br>LM get dashboard group list</br>
+<br>Method: Get</br>
+<br>OperationID: getDashboardGroupList</br>
+<br>EndPoint:</br>
+<br>/dashboard/groups</br>

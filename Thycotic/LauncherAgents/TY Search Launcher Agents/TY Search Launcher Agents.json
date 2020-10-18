@@ -28,27 +28,9 @@
         },
         {
           "required": false,
-          "key": "filter_includeInactive",
-          "label": "Filter.includeInactive",
-          "labelKey": "filter_includeInactive_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
           "key": "filter_launcherAgentCollectionId",
           "label": "Filter.launcherAgentCollectionId",
           "labelKey": "filter_launcherAgentCollectionId_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "filter_outOfDate",
-          "label": "Filter.outOfDate",
-          "labelKey": "filter_outOfDate_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -117,7 +99,7 @@
           "controlType": "hr"
         },
         {
-          "value": "launcheragents",
+          "value": "issues",
           "required": false,
           "key": "Jsonkeypath",
           "label": "Json keypath",

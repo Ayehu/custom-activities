@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get metrics usage
-
-LM get metrics usage
-
-Method: Get
-
-OperationID: getMetricsUsage
-
-EndPoint:
-
-/metrics/usage
+<br>#     LogicMonitor</br>
+<br>get metrics usage</br>
+<br>LM get metrics usage</br>
+<br>Method: Get</br>
+<br>OperationID: getMetricsUsage</br>
+<br>EndPoint:</br>
+<br>/metrics/usage</br>

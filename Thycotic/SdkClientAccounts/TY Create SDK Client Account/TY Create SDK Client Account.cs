@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_SDK_Client_Account : IActivityAsync
+    public class TY_Create_SDK_Client_Account : IActivityAsync
     {
 
 
@@ -22,7 +22,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string clientId = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string name_p = "";
     
@@ -36,28 +36,74 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/sdk-client-accounts";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/sdk-client-accounts";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"clientId\": \"{0}\",  \"description\": \"{1}\",  \"name\": \"{2}\",  \"onboardingKey\": \"{3}\",  \"ruleName\": \"{4}\" }}",clientId,description,name_p,onboardingKey,ruleName);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"clientId\": \"{0}\",  \"description\": \"{1}\",  \"name\": \"{2}\",  \"onboardingKey\": \"{3}\",  \"ruleName\": \"{4}\" }}",clientId,description_p,name_p,onboardingKey,ruleName);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_SDK_Client_Account() {
+    }
+    
+    public TY_Create_SDK_Client_Account(string endPoint, string Jsonkeypath, string password1, string clientId, string description_p, string name_p, string onboardingKey, string ruleName) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.clientId = clientId;
+        this.description_p = description_p;
+        this.name_p = name_p;
+        this.onboardingKey = onboardingKey;
+        this.ruleName = ruleName;
     }
 
 
@@ -80,7 +126,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Secret_Template : IActivityAsync
+    public class TY_Create_Secret_Template : IActivityAsync
     {
 
 
@@ -20,49 +20,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
-    public string fields__ = "";
-    
-    public string description = "";
-    
-    public string displayName = "";
-    
-    public string editablePermission = "";
-    
-    public string editRequires = "";
-    
-    public string fieldSlugName = "";
-    
-    public string generatePasswordCharacterSet = "";
-    
-    public string generatePasswordLength = "";
-    
-    public string hideOnView = "";
-    
-    public string historyLength = "";
-    
-    public string isExpirationField = "";
-    
-    public string isFile = "";
-    
-    public string isIndexable = "";
-    
-    public string isNotes = "";
-    
-    public string isPassword = "";
-    
-    public string isRequired = "";
-    
-    public string isUrl = "";
-    
-    public string mustEncrypt = "";
-    
-    public string name_p = "";
-    
-    public string passwordRequirementId = "";
-    
-    public string passwordTypeFieldId = "";
-    
-    public string sortOrder = "";
+    public string fields = "";
     
     public string _name = "";
     
@@ -72,28 +30,71 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/secret-templates";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/secret-templates";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"fields\": [    {{     \"description\": \"{0}\",      \"displayName\": \"{1}\",      \"editablePermission\": \"{2}\",      \"editRequires\": \"{3}\",      \"fieldSlugName\": \"{4}\",      \"generatePasswordCharacterSet\": \"{5}\",      \"generatePasswordLength\": \"{6}\",      \"hideOnView\": \"{7}\",      \"historyLength\": \"{8}\",      \"isExpirationField\": \"{9}\",      \"isFile\": \"{10}\",      \"isIndexable\": \"{11}\",      \"isNotes\": \"{12}\",      \"isPassword\": \"{13}\",      \"isRequired\": \"{14}\",      \"isUrl\": \"{15}\",      \"mustEncrypt\": \"{16}\",      \"name\": \"{17}\",      \"passwordRequirementId\": \"{18}\",      \"passwordTypeFieldId\": \"{19}\",      \"sortOrder\": \"{20}\"     }}  ],  \"name\": \"{21}\" }}",description,displayName,editablePermission,editRequires,fieldSlugName,generatePasswordCharacterSet,generatePasswordLength,hideOnView,historyLength,isExpirationField,isFile,isIndexable,isNotes,isPassword,isRequired,isUrl,mustEncrypt,name_p,passwordRequirementId,passwordTypeFieldId,sortOrder,_name);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"fields\": {0},  \"name\": \"{1}\" }}",fields,_name);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Secret_Template() {
+    }
+    
+    public TY_Create_Secret_Template(string endPoint, string Jsonkeypath, string password1, string fields, string _name) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.fields = fields;
+        this._name = _name;
     }
 
 
@@ -116,7 +117,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

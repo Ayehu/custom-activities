@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get website checkpoint list
-
-LM get website checkpoint list
-
-Method: Get
-
-OperationID: getSiteMonitorCheckPointList
-
-EndPoint:
-
-/service/smcheckpoints
+<br>#     LogicMonitor</br>
+<br>get website checkpoint list</br>
+<br>LM get website checkpoint list</br>
+<br>Method: Get</br>
+<br>OperationID: getSiteMonitorCheckPointList</br>
+<br>EndPoint:</br>
+<br>/website/smcheckpoints</br>

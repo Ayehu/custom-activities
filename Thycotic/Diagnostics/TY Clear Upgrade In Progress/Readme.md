@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Clear Upgrade In Progress
-
-Clear Upgrade In Progress
-
-Method: Post
-
-OperationID: DiagnosticsService_ClearUpgradeInProgress
-
-EndPoint:
-
-/diagnostics/clear-upgrade-in-progress
+<br>#     Thycotic</br>
+<br>Clear Upgrade In Progress</br>
+<br>Clear Upgrade In Progress</br>
+<br>Method: Post</br>
+<br>OperationID: DiagnosticsService_ClearUpgradeInProgress</br>
+<br>EndPoint:</br>
+<br>/diagnostics/clear-upgrade-in-progress</br>

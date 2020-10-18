@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Domains
-
-Get Domains
-
-Method: Get
-
-OperationID: UsersService_GetDomains
-
-EndPoint:
-
-/domains
+<br>#     Thycotic</br>
+<br>Get Domains</br>
+<br>Get Domains</br>
+<br>Method: Get</br>
+<br>OperationID: UsersService_GetDomains</br>
+<br>EndPoint:</br>
+<br>/domains</br>

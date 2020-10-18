@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Secret Server Version
-
-Retrieve Secret Server Version
-
-Method: Get
-
-OperationID: VersionService_Get
-
-EndPoint:
-
-/version
+<br>#     Thycotic</br>
+<br>Secret Server Version</br>
+<br>Retrieve Secret Server Version</br>
+<br>Method: Get</br>
+<br>OperationID: VersionService_Get</br>
+<br>EndPoint:</br>
+<br>/version</br>

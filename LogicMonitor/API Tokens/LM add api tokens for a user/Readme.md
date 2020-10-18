@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-add api tokens for a user
-
-LM add api tokens for a user
-
-Method: Post
-
-OperationID: addApiTokenByAdminId
-
-EndPoint:
-
-/setting/admins/{adminId}/apitokens
+<br>#     LogicMonitor</br>
+<br>add api tokens for a user</br>
+<br>LM add api tokens for a user</br>
+<br>Method: Post</br>
+<br>OperationID: addApiTokenByAdminId</br>
+<br>EndPoint:</br>
+<br>/setting/admins/{adminId}/apitokens</br>

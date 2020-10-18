@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -103,6 +103,15 @@
           "key": "sshProxyPortInherited",
           "label": "SshProxyPortInherited",
           "labelKey": "sshProxyPortInherited_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "site",
+          "label": "Site",
+          "labelKey": "site_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

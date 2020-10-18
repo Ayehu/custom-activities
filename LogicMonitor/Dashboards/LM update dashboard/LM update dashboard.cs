@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_update_dashboard : IActivityAsync
+    public class LM_update_dashboard : IActivityAsync
     {
 
 
@@ -24,9 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string id_p = "";
     
-    public string overwriteGroupFields = "";
-    
-    public string description = "";
+    public string description_p = "";
     
     public string groupId = "";
     
@@ -38,42 +36,86 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string sharable = "";
     
-    public string widgetTokens__ = "";
-    
-    public string inheritList__ = "";
-    
-    public string widgetTokens_name = "";
-    
-    public string value = "";
+    public string widgetTokens = "";
     
     private bool omitJsonEmptyorNull = true;
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/dashboard/dashboards/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/dashboard/dashboards/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"description\": \"{0}\",  \"groupId\": \"{1}\",  \"groupName\": \"{2}\",  \"name\": \"{3}\",  \"owner\": \"{4}\",  \"sharable\": \"{5}\",  \"widgetTokens\": [    {{     \"name\": \"{6}\",      \"value\": \"{7}\"     }}  ] }}",description,groupId,groupName,name_p,owner,sharable,widgetTokens_name,value);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"description\": \"{0}\",  \"groupId\": \"{1}\",  \"groupName\": \"{2}\",  \"name\": \"{3}\",  \"owner\": \"{4}\",  \"sharable\": \"{5}\",  \"widgetTokens\": {6} }}",description_p,groupId,groupName,name_p,owner,sharable,widgetTokens);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_update_dashboard() {
+    }
+    
+    public LM_update_dashboard(string endPoint, string Jsonkeypath, string accessid, string password1, string id_p, string description_p, string groupId, string groupName, string name_p, string owner, string sharable, string widgetTokens) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.description_p = description_p;
+        this.groupId = groupId;
+        this.groupName = groupName;
+        this.name_p = name_p;
+        this.owner = owner;
+        this.sharable = sharable;
+        this.widgetTokens = widgetTokens;
     }
 
 
@@ -95,13 +137,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-Get the result of a Collector debug command
-
-LM Get the result of a Collector debug command
-
-Method: Get
-
-OperationID: getDebugCommandResult
-
-EndPoint:
-
-/debug/{id}
+<br>#     LogicMonitor</br>
+<br>Get the result of a Collector debug command</br>
+<br>LM Get the result of a Collector debug command</br>
+<br>Method: Get</br>
+<br>OperationID: getDebugCommandResult</br>
+<br>EndPoint:</br>
+<br>/debug/{id}</br>

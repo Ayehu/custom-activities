@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Pba Configuration
-
-Update Pba Configuration
-
-Method: Put
-
-OperationID: PbaConfigurationService_UpdatePbaConfiguration
-
-EndPoint:
-
-/pba-configuration
+<br>#     Thycotic</br>
+<br>Update Pba Configuration</br>
+<br>Update Pba Configuration</br>
+<br>Method: Put</br>
+<br>OperationID: PbaConfigurationService_UpdatePbaConfiguration</br>
+<br>EndPoint:</br>
+<br>/pba-configuration</br>

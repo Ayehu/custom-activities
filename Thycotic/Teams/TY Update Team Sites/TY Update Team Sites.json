@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -64,9 +64,18 @@
         },
         {
           "required": false,
-          "key": "siteIds_value____",
-          "label": "SiteIds_value[][]",
+          "key": "siteIds_value",
+          "label": "SiteIds_value[]",
           "labelKey": "siteIds_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

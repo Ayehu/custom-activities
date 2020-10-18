@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_get_logic_module_metadata : IActivityAsync
+    public class LM_get_logic_module_metadata : IActivityAsync
     {
 
 
@@ -32,28 +32,72 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "GET";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("/setting/registry/metadata/{0}/{1}",lmType,lmId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/setting/registry/metadata/{0}/{1}",lmType,lmId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return "";
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = "";
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_get_logic_module_metadata() {
+    }
+    
+    public LM_get_logic_module_metadata(string endPoint, string Jsonkeypath, string accessid, string password1, string lmType, string lmId) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.lmType = lmType;
+        this.lmId = lmId;
     }
 
 
@@ -75,13 +119,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

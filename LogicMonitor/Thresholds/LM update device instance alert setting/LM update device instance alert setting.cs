@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_update_device_instance_alert_setting : IActivityAsync
+    public class LM_update_device_instance_alert_setting : IActivityAsync
     {
 
 
@@ -40,30 +40,79 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/device/devices/{0}/devicedatasources/{1}/instances/{2}/alertsettings/{3}",deviceId,hdsId,instanceId,id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/device/devices/{0}/devicedatasources/{1}/instances/{2}/alertsettings/{3}",deviceId,hdsId,instanceId,id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"alertExpr\": \"{0}\",  \"alertExprNote\": \"{1}\",  \"disableAlerting\": \"{2}\" }}",alertExpr,alertExprNote,disableAlerting);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"alertExpr\": \"{0}\",  \"alertExprNote\": \"{1}\",  \"disableAlerting\": \"{2}\" }}",alertExpr,alertExprNote,disableAlerting);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_update_device_instance_alert_setting() {
+    }
+    
+    public LM_update_device_instance_alert_setting(string endPoint, string Jsonkeypath, string accessid, string password1, string deviceId, string hdsId, string instanceId, string id_p, string alertExpr, string alertExprNote, string disableAlerting) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.deviceId = deviceId;
+        this.hdsId = hdsId;
+        this.instanceId = instanceId;
+        this.id_p = id_p;
+        this.alertExpr = alertExpr;
+        this.alertExprNote = alertExprNote;
+        this.disableAlerting = disableAlerting;
     }
 
 
@@ -85,13 +134,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

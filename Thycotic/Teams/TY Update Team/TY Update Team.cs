@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_Team : IActivityAsync
+    public class TY_Update_Team : IActivityAsync
     {
 
 
@@ -44,28 +44,78 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/teams/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/teams/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"active\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"domainId\": {{   \"dirty\": \"{2}\",    \"value\": \"{3}\"   }},  \"teamDescription\": {{   \"dirty\": \"{4}\",    \"value\": \"{5}\"   }},  \"teamName\": {{   \"dirty\": \"{6}\",    \"value\": \"{7}\"   }} }}",dirty,value,domainId_dirty,domainId_value,teamDescription_dirty,teamDescription_value,teamName_dirty,teamName_value);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"active\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"domainId\": {{   \"dirty\": \"{2}\",    \"value\": \"{3}\"   }},  \"teamDescription\": {{   \"dirty\": \"{4}\",    \"value\": \"{5}\"   }},  \"teamName\": {{   \"dirty\": \"{6}\",    \"value\": \"{7}\"   }} }}",dirty,value,domainId_dirty,domainId_value,teamDescription_dirty,teamDescription_value,teamName_dirty,teamName_value);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_Team() {
+    }
+    
+    public TY_Update_Team(string endPoint, string Jsonkeypath, string password1, string id_p, string dirty, string value, string domainId_dirty, string domainId_value, string teamDescription_dirty, string teamDescription_value, string teamName_dirty, string teamName_value) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.dirty = dirty;
+        this.value = value;
+        this.domainId_dirty = domainId_dirty;
+        this.domainId_value = domainId_value;
+        this.teamDescription_dirty = teamDescription_dirty;
+        this.teamDescription_value = teamDescription_value;
+        this.teamName_dirty = teamName_dirty;
+        this.teamName_value = teamName_value;
     }
 
 
@@ -88,7 +138,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

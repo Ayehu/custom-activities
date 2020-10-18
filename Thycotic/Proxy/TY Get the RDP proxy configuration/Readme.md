@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get the RDP proxy configuration
-
-Get the RDP proxy configuration
-
-Method: Get
-
-OperationID: ProxyService_GetRdpProxyConfiguration
-
-EndPoint:
-
-/proxy/rdp/config
+<br>#     Thycotic</br>
+<br>Get the RDP proxy configuration</br>
+<br>Get the RDP proxy configuration</br>
+<br>Method: Get</br>
+<br>OperationID: ProxyService_GetRdpProxyConfiguration</br>
+<br>EndPoint:</br>
+<br>/proxy/rdp/config</br>

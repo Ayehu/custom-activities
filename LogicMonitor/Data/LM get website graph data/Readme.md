@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get website graph data
-
-LM get website graph data
-
-Method: Get
-
-OperationID: getWebsiteGraphData
-
-EndPoint:
-
-/service/services/{serviceId}/checkpoints/{checkpointId}/graphs/{graphName}/data
+<br>#     LogicMonitor</br>
+<br>get website graph data</br>
+<br>LM get website graph data</br>
+<br>Method: Get</br>
+<br>OperationID: getWebsiteGraphData</br>
+<br>EndPoint:</br>
+<br>/website/websites/{websiteId}/checkpoints/{checkpointId}/graphs/{graphName}/data</br>

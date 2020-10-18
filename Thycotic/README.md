@@ -9,7 +9,7 @@
 
 Ayehu NG v1.7+
 
-Ayehu.Sdk.ActivityCreation.dll v1.0.9+ <br>https://github.com/Ayehu/Custom-Activity-Helper</br>
+Ayehu.Sdk.ActivityCreation.dll v1.1.0+ <br>https://github.com/Ayehu/Custom-Activity-Helper</br>
 
 
 The following .NET Global Assemblies are used:

@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Search Dual Controls
-
-Search, filter, sort, and page dual controls
-
-Method: Get
-
-OperationID: DualControlsService_SearchDualControls
-
-EndPoint:
-
-/dual-controls
+<br>#     Thycotic</br>
+<br>Search Dual Controls</br>
+<br>Search, filter, sort, and page dual controls</br>
+<br>Method: Get</br>
+<br>OperationID: DualControlsService_SearchDualControls</br>
+<br>EndPoint:</br>
+<br>/dual-controls</br>

@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -94,6 +94,15 @@
           "key": "pause",
           "label": "Pause",
           "labelKey": "pause_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "updateArgs",
+          "label": "UpdateArgs",
+          "labelKey": "updateArgs_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

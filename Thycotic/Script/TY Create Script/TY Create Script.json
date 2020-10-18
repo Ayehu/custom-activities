@@ -46,7 +46,7 @@
         },
         {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -64,8 +64,8 @@
         },
         {
           "required": false,
-          "key": "odbcConnectionStringArgs____",
-          "label": "OdbcConnectionStringArgs[][]",
+          "key": "odbcConnectionStringArgs",
+          "label": "OdbcConnectionStringArgs[]",
           "labelKey": "odbcConnectionStringArgs_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -126,6 +126,15 @@
           "key": "usageCount",
           "label": "UsageCount",
           "labelKey": "usageCount_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

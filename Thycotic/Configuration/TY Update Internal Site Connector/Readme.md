@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Internal Site Connector
-
-Update Internal Site Connector
-
-Method: Patch
-
-OperationID: ConfigurationService_PatchInternalSiteConfiguration
-
-EndPoint:
-
-/configuration/internal-site-connector
+<br>#     Thycotic</br>
+<br>Update Internal Site Connector</br>
+<br>Update Internal Site Connector</br>
+<br>Method: Patch</br>
+<br>OperationID: ConfigurationService_PatchInternalSiteConfiguration</br>
+<br>EndPoint:</br>
+<br>/configuration/internal-site-connector</br>

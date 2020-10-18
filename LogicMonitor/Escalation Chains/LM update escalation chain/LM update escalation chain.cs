@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_update_escalation_chain : IActivityAsync
+    public class LM_update_escalation_chain : IActivityAsync
     {
 
 
@@ -24,39 +24,11 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string id_p = "";
     
-    public string ccDestinations__ = "";
+    public string ccDestinations = "";
     
-    public string addr = "";
+    public string description_p = "";
     
-    public string contact = "";
-    
-    public string method = "";
-    
-    public string type = "";
-    
-    public string description = "";
-    
-    public string destinations__ = "";
-    
-    public string endMinutes = "";
-    
-    public string startMinutes = "";
-    
-    public string timezone = "";
-    
-    public string weekDays__ = "";
-    
-    public string stages__ = "";
-    
-    public string stages_addr = "";
-    
-    public string stages_contact = "";
-    
-    public string stages_method = "";
-    
-    public string stages_type = "";
-    
-    public string destinations_type = "";
+    public string destinations = "";
     
     public string enableThrottling = "";
     
@@ -70,30 +42,80 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/setting/alert/chains/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/setting/alert/chains/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"ccDestinations\": [    {{     \"addr\": \"{0}\",      \"contact\": \"{1}\",      \"method\": \"{2}\",      \"type\": \"{3}\"     }}  ],  \"description\": \"{4}\",  \"destinations\": [    {{     \"period\": {{       \"endMinutes\": \"{5}\",        \"startMinutes\": \"{6}\",        \"timezone\": \"{7}\"       }},      \"stages\": [        [          {{           \"addr\": \"{8}\",            \"contact\": \"{9}\",            \"method\": \"{10}\",            \"type\": \"{11}\"           }}        ]      ],      \"type\": \"{12}\"     }}  ],  \"enableThrottling\": \"{13}\",  \"name\": \"{14}\",  \"throttlingAlerts\": \"{15}\",  \"throttlingPeriod\": \"{16}\" }}",addr,contact,method,type,description,endMinutes,startMinutes,timezone,stages_addr,stages_contact,stages_method,stages_type,destinations_type,enableThrottling,name_p,throttlingAlerts,throttlingPeriod);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"ccDestinations\": {0},  \"description\": \"{1}\",  \"destinations\": {2},  \"enableThrottling\": \"{3}\",  \"name\": \"{4}\",  \"throttlingAlerts\": \"{5}\",  \"throttlingPeriod\": \"{6}\" }}",ccDestinations,description_p,destinations,enableThrottling,name_p,throttlingAlerts,throttlingPeriod);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_update_escalation_chain() {
+    }
+    
+    public LM_update_escalation_chain(string endPoint, string Jsonkeypath, string accessid, string password1, string id_p, string ccDestinations, string description_p, string destinations, string enableThrottling, string name_p, string throttlingAlerts, string throttlingPeriod) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.ccDestinations = ccDestinations;
+        this.description_p = description_p;
+        this.destinations = destinations;
+        this.enableThrottling = enableThrottling;
+        this.name_p = name_p;
+        this.throttlingAlerts = throttlingAlerts;
+        this.throttlingPeriod = throttlingPeriod;
     }
 
 
@@ -115,13 +137,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

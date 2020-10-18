@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-delete report group
-
-LM delete report group
-
-Method: Delete
-
-OperationID: deleteReportGroupById
-
-EndPoint:
-
-/report/groups/{id}
+<br>#     LogicMonitor</br>
+<br>delete report group</br>
+<br>LM delete report group</br>
+<br>Method: Delete</br>
+<br>OperationID: deleteReportGroupById</br>
+<br>EndPoint:</br>
+<br>/report/groups/{id}</br>

@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get App Settings
-
-Get App Settings
-
-Method: Get
-
-OperationID: DiagnosticsService_GetAppSettings
-
-EndPoint:
-
-/diagnostics/app-settings
+<br>#     Thycotic</br>
+<br>Get App Settings</br>
+<br>Get App Settings</br>
+<br>Method: Get</br>
+<br>OperationID: DiagnosticsService_GetAppSettings</br>
+<br>EndPoint:</br>
+<br>/diagnostics/app-settings</br>

@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get website data by graph name
-
-LM get website data by graph name
-
-Method: Get
-
-OperationID: getWebsiteDataByGraphName
-
-EndPoint:
-
-/service/services/{id}/graphs/{graphName}/data
+<br>#     LogicMonitor</br>
+<br>get website data by graph name</br>
+<br>LM get website data by graph name</br>
+<br>Method: Get</br>
+<br>OperationID: getWebsiteDataByGraphName</br>
+<br>EndPoint:</br>
+<br>/website/websites/{id}/graphs/{graphName}/data</br>

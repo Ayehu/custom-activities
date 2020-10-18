@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Team Members
-
-Save members of the team by GroupId
-
-Method: Post
-
-OperationID: TeamsService_AddTeamMember
-
-EndPoint:
-
-/teams/{id}/members
+<br>#     Thycotic</br>
+<br>Update Team Members</br>
+<br>Save members of the team by GroupId</br>
+<br>Method: Post</br>
+<br>OperationID: TeamsService_AddTeamMember</br>
+<br>EndPoint:</br>
+<br>/teams/{id}/members</br>

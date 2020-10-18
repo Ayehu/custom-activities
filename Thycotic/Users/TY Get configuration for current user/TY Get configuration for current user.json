@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -145,8 +145,8 @@
         },
         {
           "required": false,
-          "key": "groupOwners____",
-          "label": "GroupOwners[][]",
+          "key": "groupOwners",
+          "label": "GroupOwners[]",
           "labelKey": "groupOwners_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -328,6 +328,15 @@
           "key": "twoFactor_value",
           "label": "TwoFactor_value",
           "labelKey": "twoFactor_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "patchModel",
+          "label": "PatchModel",
+          "labelKey": "patchModel_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

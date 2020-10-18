@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-Get audit logs
-
-LM Get audit logs
-
-Method: Get
-
-OperationID: getAuditLogList
-
-EndPoint:
-
-/setting/accesslogs
+<br>#     LogicMonitor</br>
+<br>Get audit logs</br>
+<br>LM Get audit logs</br>
+<br>Method: Get</br>
+<br>OperationID: getAuditLogList</br>
+<br>EndPoint:</br>
+<br>/setting/accesslogs</br>

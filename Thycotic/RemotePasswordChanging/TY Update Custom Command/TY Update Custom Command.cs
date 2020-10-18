@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_Custom_Command : IActivityAsync
+    public class TY_Update_Custom_Command : IActivityAsync
     {
 
 
@@ -42,28 +42,77 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/remote-password-changing/custom-commands/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/remote-password-changing/custom-commands/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"command\": \"{0}\",  \"commandTypeCode\": \"{1}\",  \"comment\": \"{2}\",  \"concurrencyId\": \"{3}\",  \"order\": \"{4}\",  \"passwordTypeId\": \"{5}\",  \"pause\": \"{6}\" }}",command,commandTypeCode,comment,concurrencyId,order,passwordTypeId,pause);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"command\": \"{0}\",  \"commandTypeCode\": \"{1}\",  \"comment\": \"{2}\",  \"concurrencyId\": \"{3}\",  \"order\": \"{4}\",  \"passwordTypeId\": \"{5}\",  \"pause\": \"{6}\" }}",command,commandTypeCode,comment,concurrencyId,order,passwordTypeId,pause);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_Custom_Command() {
+    }
+    
+    public TY_Update_Custom_Command(string endPoint, string Jsonkeypath, string password1, string id_p, string command, string commandTypeCode, string comment, string concurrencyId, string order, string passwordTypeId, string pause) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.command = command;
+        this.commandTypeCode = commandTypeCode;
+        this.comment = comment;
+        this.concurrencyId = concurrencyId;
+        this.order = order;
+        this.passwordTypeId = passwordTypeId;
+        this.pause = pause;
     }
 
 
@@ -86,7 +135,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

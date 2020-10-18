@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Search Secret Dependencies
-
-Search, filter, sort, and page Secret Dependencies on a Secret
-
-Method: Get
-
-OperationID: SecretDependenciesService_SearchDependencySummary
-
-EndPoint:
-
-/secret-dependencies
+<br>#     Thycotic</br>
+<br>Search Secret Dependencies</br>
+<br>Search, filter, sort, and page Secret Dependencies on a Secret</br>
+<br>Method: Get</br>
+<br>OperationID: SecretDependenciesService_SearchDependencySummary</br>
+<br>EndPoint:</br>
+<br>/secret-dependencies</br>

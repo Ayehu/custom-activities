@@ -18,7 +18,7 @@
           "controlType": "textbox"
         },
         {
-          "required": true,
+          "required": false,
           "key": "accessid",
           "label": "Accessid",
           "labelKey": "accessid_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Accesskey",
           "labelKey": "accesskey_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -55,8 +55,8 @@
         },
         {
           "required": false,
-          "key": "checkpoints____",
-          "label": "Checkpoints[][]",
+          "key": "checkpoints",
+          "label": "Checkpoints[]",
           "labelKey": "checkpoints_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -64,7 +64,7 @@
         },
         {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -117,7 +117,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "name_p",
           "label": "Name",
           "labelKey": "name_l",
@@ -163,8 +163,8 @@
         },
         {
           "required": false,
-          "key": "collectorIds____",
-          "label": "CollectorIds[][]",
+          "key": "collectorIds",
+          "label": "CollectorIds[]",
           "labelKey": "collectorIds_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -172,8 +172,8 @@
         },
         {
           "required": false,
-          "key": "collectors____",
-          "label": "Collectors[][]",
+          "key": "collectors",
+          "label": "Collectors[]",
           "labelKey": "collectors_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -181,8 +181,8 @@
         },
         {
           "required": false,
-          "key": "smgIds____",
-          "label": "SmgIds[][]",
+          "key": "smgIds",
+          "label": "SmgIds[]",
           "labelKey": "smgIds_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -198,8 +198,8 @@
           "value": ""
         },
         {
-          "required": true,
-          "key": "type",
+          "required": false,
+          "key": "type_p",
           "label": "Type",
           "labelKey": "type_l",
           "baseType": "control",
@@ -229,6 +229,15 @@
           "key": "userPermission",
           "label": "UserPermission",
           "labelKey": "userPermission_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

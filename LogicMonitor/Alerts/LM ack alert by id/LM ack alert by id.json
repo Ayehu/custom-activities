@@ -18,7 +18,7 @@
           "controlType": "textbox"
         },
         {
-          "required": true,
+          "required": false,
           "key": "accessid",
           "label": "Accessid",
           "labelKey": "accessid_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Accesskey",
           "labelKey": "accesskey_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -45,10 +45,19 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "ackComment",
           "label": "AckComment",
           "labelKey": "ackComment_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

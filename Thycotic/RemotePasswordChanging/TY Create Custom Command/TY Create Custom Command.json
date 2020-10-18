@@ -72,6 +72,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "createArgs",
+          "label": "CreateArgs",
+          "labelKey": "createArgs_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

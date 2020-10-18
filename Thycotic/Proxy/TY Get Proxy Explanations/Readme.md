@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Proxy Explanations
-
-Get an explanation of the SSH proxy, SSH terminal, and RDP proxy features
-
-Method: Get
-
-OperationID: ProxyService_GetExplanations
-
-EndPoint:
-
-/proxy/explanation
+<br>#     Thycotic</br>
+<br>Get Proxy Explanations</br>
+<br>Get an explanation of the SSH proxy, SSH terminal, and RDP proxy features</br>
+<br>Method: Get</br>
+<br>OperationID: ProxyService_GetExplanations</br>
+<br>EndPoint:</br>
+<br>/proxy/explanation</br>

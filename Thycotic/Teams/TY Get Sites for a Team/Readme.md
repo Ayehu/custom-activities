@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Sites for a Team
-
-Get sites a team has associated
-
-Method: Get
-
-OperationID: TeamsService_GetTeamSites
-
-EndPoint:
-
-/teams/{id}/sites
+<br>#     Thycotic</br>
+<br>Get Sites for a Team</br>
+<br>Get sites a team has associated</br>
+<br>Method: Get</br>
+<br>OperationID: TeamsService_GetTeamSites</br>
+<br>EndPoint:</br>
+<br>/teams/{id}/sites</br>

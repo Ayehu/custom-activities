@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get a list of SDTs for a website group
-
-LM get a list of SDTs for a website group
-
-Method: Get
-
-OperationID: getAllSDTListByWebsiteGroupId
-
-EndPoint:
-
-/service/groups/{id}/sdts
+<br>#     LogicMonitor</br>
+<br>get a list of SDTs for a website group</br>
+<br>LM get a list of SDTs for a website group</br>
+<br>Method: Get</br>
+<br>OperationID: getAllSDTListByWebsiteGroupId</br>
+<br>EndPoint:</br>
+<br>/website/groups/{id}/sdts</br>

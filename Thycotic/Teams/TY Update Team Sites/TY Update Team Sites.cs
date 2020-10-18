@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_Team_Sites : IActivityAsync
+    public class TY_Update_Team_Sites : IActivityAsync
     {
 
 
@@ -28,36 +28,79 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string siteIds_dirty = "";
     
-    public string siteIds_value__ = "";
-    
     private bool omitJsonEmptyorNull = true;
     
     private string contentType = "application/json";
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/teams/{0}/sites",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/teams/{0}/sites",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"shouldRestrictSites\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"siteIds\": {{   \"dirty\": \"{2}\"   }} }}",dirty,value,siteIds_dirty);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"shouldRestrictSites\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"siteIds\": {{   \"dirty\": \"{2}\"   }} }}",dirty,value,siteIds_dirty);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_Team_Sites() {
+    }
+    
+    public TY_Update_Team_Sites(string endPoint, string Jsonkeypath, string password1, string id_p, string dirty, string value, string siteIds_dirty) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.dirty = dirty;
+        this.value = value;
+        this.siteIds_dirty = siteIds_dirty;
     }
 
 
@@ -80,7 +123,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

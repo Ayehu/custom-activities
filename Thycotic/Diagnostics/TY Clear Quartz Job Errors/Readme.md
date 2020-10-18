@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Clear Quartz Job Errors
-
-Clear Quartz Job Errors
-
-Method: Post
-
-OperationID: DiagnosticsService_ClearQuartzJobErrors
-
-EndPoint:
-
-/diagnostics/clear-quartz-job-errors
+<br>#     Thycotic</br>
+<br>Clear Quartz Job Errors</br>
+<br>Clear Quartz Job Errors</br>
+<br>Method: Post</br>
+<br>OperationID: DiagnosticsService_ClearQuartzJobErrors</br>
+<br>EndPoint:</br>
+<br>/diagnostics/clear-quartz-job-errors</br>

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_add_widget : IActivityAsync
+    public class LM_add_widget : IActivityAsync
     {
 
 
@@ -24,7 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string dashboardId = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string id_p = "";
     
@@ -36,7 +36,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string timescale = "";
     
-    public string type = "";
+    public string type_p = "";
     
     private bool omitJsonEmptyorNull = true;
     
@@ -44,28 +44,78 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "/dashboard/widgets";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "/dashboard/widgets";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"dashboardId\": \"{0}\",  \"description\": \"{1}\",  \"id\": \"{2}\",  \"interval\": \"{3}\",  \"name\": \"{4}\",  \"theme\": \"{5}\",  \"timescale\": \"{6}\",  \"type\": \"{7}\" }}",dashboardId,description,id_p,interval,name_p,theme,timescale,type);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"dashboardId\": \"{0}\",  \"description\": \"{1}\",  \"id\": \"{2}\",  \"interval\": \"{3}\",  \"name\": \"{4}\",  \"theme\": \"{5}\",  \"timescale\": \"{6}\",  \"type\": \"{7}\" }}",dashboardId,description_p,id_p,interval,name_p,theme,timescale,type_p);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_add_widget() {
+    }
+    
+    public LM_add_widget(string endPoint, string Jsonkeypath, string accessid, string password1, string dashboardId, string description_p, string id_p, string interval, string name_p, string theme, string timescale, string type_p) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.dashboardId = dashboardId;
+        this.description_p = description_p;
+        this.id_p = id_p;
+        this.interval = interval;
+        this.name_p = name_p;
+        this.theme = theme;
+        this.timescale = timescale;
+        this.type_p = type_p;
     }
 
 
@@ -87,13 +137,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

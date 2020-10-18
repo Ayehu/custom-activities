@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Domain : IActivityAsync
+    public class TY_Create_Domain : IActivityAsync
     {
 
 
@@ -56,28 +56,102 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/active-directory/domains";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/active-directory/domains";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"active\": \"{0}\",  \"discoverSpecificOUs\": \"{1}\",  \"domainName\": \"{2}\",  \"enableDiscovery\": \"{3}\",  \"enableLogin\": \"{4}\",  \"friendlyName\": \"{5}\",  \"requireDuoAuthentication\": \"{6}\",  \"requireEmailAuthentication\": \"{7}\",  \"requireFido2Authentication\": \"{8}\",  \"requireOATHAuthentication\": \"{9}\",  \"requireRadiusAuthentication\": \"{10}\",  \"siteId\": \"{11}\",  \"syncSecretId\": \"{12}\",  \"useAES256\": \"{13}\",  \"useSecureLDAP\": \"{14}\" }}",active,discoverSpecificOUs,domainName,enableDiscovery,enableLogin,friendlyName,requireDuoAuthentication,requireEmailAuthentication,requireFido2Authentication,requireOATHAuthentication,requireRadiusAuthentication,siteId,syncSecretId,useAES256,useSecureLDAP);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"active\": \"{0}\",  \"discoverSpecificOUs\": \"{1}\",  \"domainName\": \"{2}\",  \"enableDiscovery\": \"{3}\",  \"enableLogin\": \"{4}\",  \"friendlyName\": \"{5}\",  \"requireDuoAuthentication\": \"{6}\",  \"requireEmailAuthentication\": \"{7}\",  \"requireFido2Authentication\": \"{8}\",  \"requireOATHAuthentication\": \"{9}\",  \"requireRadiusAuthentication\": \"{10}\",  \"siteId\": \"{11}\",  \"syncSecretId\": \"{12}\",  \"useAES256\": \"{13}\",  \"useSecureLDAP\": \"{14}\" }}",active,discoverSpecificOUs,domainName,enableDiscovery,enableLogin,friendlyName,requireDuoAuthentication,requireEmailAuthentication,requireFido2Authentication,requireOATHAuthentication,requireRadiusAuthentication,siteId,syncSecretId,useAES256,useSecureLDAP);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Domain() {
+    }
+    
+    public TY_Create_Domain(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string active, 
+                string discoverSpecificOUs, 
+                string domainName, 
+                string enableDiscovery, 
+                string enableLogin, 
+                string friendlyName, 
+                string requireDuoAuthentication, 
+                string requireEmailAuthentication, 
+                string requireFido2Authentication, 
+                string requireOATHAuthentication, 
+                string requireRadiusAuthentication, 
+                string siteId, 
+                string syncSecretId, 
+                string useAES256, 
+                string useSecureLDAP) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.active = active;
+        this.discoverSpecificOUs = discoverSpecificOUs;
+        this.domainName = domainName;
+        this.enableDiscovery = enableDiscovery;
+        this.enableLogin = enableLogin;
+        this.friendlyName = friendlyName;
+        this.requireDuoAuthentication = requireDuoAuthentication;
+        this.requireEmailAuthentication = requireEmailAuthentication;
+        this.requireFido2Authentication = requireFido2Authentication;
+        this.requireOATHAuthentication = requireOATHAuthentication;
+        this.requireRadiusAuthentication = requireRadiusAuthentication;
+        this.siteId = siteId;
+        this.syncSecretId = syncSecretId;
+        this.useAES256 = useAES256;
+        this.useSecureLDAP = useSecureLDAP;
     }
 
 
@@ -100,7 +174,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

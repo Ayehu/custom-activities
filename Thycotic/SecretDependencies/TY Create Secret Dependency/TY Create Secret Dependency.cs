@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_Secret_Dependency : IActivityAsync
+    public class TY_Create_Secret_Dependency : IActivityAsync
     {
 
 
@@ -28,15 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string changerScriptId = "";
     
-    public string dependencyScanItemFields__ = "";
-    
-    public string id_p = "";
-    
-    public string name_p = "";
-    
-    public string parentName = "";
-    
-    public string value = "";
+    public string dependencyScanItemFields = "";
     
     public string scriptName = "";
     
@@ -44,7 +36,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string secretDependencyTemplateId = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string groupId = "";
     
@@ -54,19 +46,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string runScript_machineName = "";
     
-    public string odbcConnectionArguments__ = "";
+    public string odbcConnectionArguments = "";
     
-    public string odbcConnectionArguments_name = "";
-    
-    public string odbcConnectionArguments_value = "";
-    
-    public string scriptArguments__ = "";
-    
-    public string scriptArguments_name = "";
-    
-    public string type = "";
-    
-    public string scriptArguments_value = "";
+    public string scriptArguments = "";
     
     public string scriptId = "";
     
@@ -80,87 +62,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string _serviceName = "";
     
-    public string settings__ = "";
-    
-    public string changerSettingValue = "";
-    
-    public string setting_active = "";
-    
-    public string canEdit = "";
-    
-    public string canEditValue = "";
-    
-    public string childSettings__ = "";
-    
-    public string childSettings_active = "";
-    
-    public string childSettings_canEdit = "";
-    
-    public string childSettings_canEditValue = "";
-    
-    public string defaultValue = "";
-    
-    public string displayName = "";
-    
-    public string childSettings_id = "";
-    
-    public string isVisibile = "";
-    
-    public string parentSettingId = "";
-    
-    public string regexValidation = "";
-    
-    public string settingName = "";
-    
-    public string settingSectionId = "";
-    
-    public string settingType = "";
-    
-    public string subSettingSectionId = "";
-    
-    public string childSettings_defaultValue = "";
-    
-    public string childSettings_displayName = "";
-    
-    public string childSettings_isVisibile = "";
-    
-    public string childSettings_parentSettingId = "";
-    
-    public string childSettings_regexValidation = "";
-    
-    public string childSettings_settingName = "";
-    
-    public string childSettings_settingSectionId = "";
-    
-    public string childSettings_settingType = "";
-    
-    public string childSettings_subSettingSectionId = "";
-    
-    public string setting_defaultValue = "";
-    
-    public string setting_displayName = "";
-    
-    public string setting_id = "";
-    
-    public string setting_isVisibile = "";
-    
-    public string setting_parentSettingId = "";
-    
-    public string setting_regexValidation = "";
-    
-    public string setting_settingName = "";
-    
-    public string setting_settingSectionId = "";
-    
-    public string setting_settingType = "";
-    
-    public string setting_subSettingSectionId = "";
-    
-    public string settingId = "";
-    
-    public string settings_settingName = "";
-    
-    public string settingValue = "";
+    public string settings_p = "";
     
     public string sortOrder = "";
     
@@ -176,28 +78,124 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/secret-dependencies";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/secret-dependencies";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"active\": \"{0}\",  \"conditionDependencyId\": \"{1}\",  \"conditionMode\": \"{2}\",  \"dependencyTemplate\": {{   \"changerScriptId\": \"{3}\",    \"dependencyScanItemFields\": [      {{       \"id\": \"{4}\",        \"name\": \"{5}\",        \"parentName\": \"{6}\",        \"value\": \"{7}\"       }}    ],    \"scriptName\": \"{8}\",    \"secretDependencyChangerId\": \"{9}\",    \"secretDependencyTemplateId\": \"{10}\"   }},  \"description\": \"{11}\",  \"groupId\": \"{12}\",  \"machineName\": \"{13}\",  \"privilegedAccountSecretId\": \"{14}\",  \"runScript\": {{   \"machineName\": \"{15}\",    \"odbcConnectionArguments\": [      {{       \"name\": \"{16}\",        \"value\": \"{17}\"       }}    ],    \"scriptArguments\": [      {{       \"name\": \"{18}\",        \"type\": \"{19}\",        \"value\": \"{20}\"       }}    ],    \"scriptId\": \"{21}\",    \"scriptName\": \"{22}\",    \"serviceName\": \"{23}\"   }},  \"secretId\": \"{24}\",  \"secretName\": \"{25}\",  \"serviceName\": \"{26}\",  \"settings\": [    {{     \"changerSettingValue\": \"{27}\",      \"setting\": {{       \"active\": \"{28}\",        \"canEdit\": \"{29}\",        \"canEditValue\": \"{30}\",        \"childSettings\": [          {{           \"active\": \"{31}\",            \"canEdit\": \"{32}\",            \"canEditValue\": \"{33}\",            \"childSettings\": [              {{               \"active\": \"{31}\",                \"canEdit\": \"{32}\",                \"canEditValue\": \"{33}\",                \"defaultValue\": \"{34}\",                \"displayName\": \"{35}\",                \"id\": \"{36}\",                \"isVisibile\": \"{37}\",                \"parentSettingId\": \"{38}\",                \"regexValidation\": \"{39}\",                \"settingName\": \"{40}\",                \"settingSectionId\": \"{41}\",                \"settingType\": \"{42}\",                \"subSettingSectionId\": \"{43}\"               }}            ],            \"defaultValue\": \"{44}\",            \"displayName\": \"{45}\",            \"id\": \"{36}\",            \"isVisibile\": \"{46}\",            \"parentSettingId\": \"{47}\",            \"regexValidation\": \"{48}\",            \"settingName\": \"{49}\",            \"settingSectionId\": \"{50}\",            \"settingType\": \"{51}\",            \"subSettingSectionId\": \"{52}\"           }}        ],        \"defaultValue\": \"{53}\",        \"displayName\": \"{54}\",        \"id\": \"{55}\",        \"isVisibile\": \"{56}\",        \"parentSettingId\": \"{57}\",        \"regexValidation\": \"{58}\",        \"settingName\": \"{59}\",        \"settingSectionId\": \"{60}\",        \"settingType\": \"{61}\",        \"subSettingSectionId\": \"{62}\"       }},      \"settingId\": \"{63}\",      \"settingName\": \"{64}\",      \"settingValue\": \"{65}\"     }}  ],  \"sortOrder\": \"{66}\",  \"sshKeySecretId\": \"{67}\",  \"typeId\": \"{68}\",  \"typeName\": \"{69}\" }}",active,conditionDependencyId,conditionMode,changerScriptId,id_p,name_p,parentName,value,scriptName,secretDependencyChangerId,secretDependencyTemplateId,description,groupId,machineName,privilegedAccountSecretId,runScript_machineName,odbcConnectionArguments_name,odbcConnectionArguments_value,scriptArguments_name,type,scriptArguments_value,scriptId,runScript_scriptName,serviceName,secretId,secretName,_serviceName,changerSettingValue,setting_active,canEdit,canEditValue,childSettings_active,childSettings_canEdit,childSettings_canEditValue,defaultValue,displayName,childSettings_id,isVisibile,parentSettingId,regexValidation,settingName,settingSectionId,settingType,subSettingSectionId,childSettings_defaultValue,childSettings_displayName,childSettings_isVisibile,childSettings_parentSettingId,childSettings_regexValidation,childSettings_settingName,childSettings_settingSectionId,childSettings_settingType,childSettings_subSettingSectionId,setting_defaultValue,setting_displayName,setting_id,setting_isVisibile,setting_parentSettingId,setting_regexValidation,setting_settingName,setting_settingSectionId,setting_settingType,setting_subSettingSectionId,settingId,settings_settingName,settingValue,sortOrder,sshKeySecretId,typeId,typeName);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"active\": \"{0}\",  \"conditionDependencyId\": \"{1}\",  \"conditionMode\": \"{2}\",  \"dependencyTemplate\": {{   \"changerScriptId\": \"{3}\",    \"dependencyScanItemFields\": {4},    \"scriptName\": \"{5}\",    \"secretDependencyChangerId\": \"{6}\",    \"secretDependencyTemplateId\": \"{7}\"   }},  \"description\": \"{8}\",  \"groupId\": \"{9}\",  \"machineName\": \"{10}\",  \"privilegedAccountSecretId\": \"{11}\",  \"runScript\": {{   \"machineName\": \"{12}\",    \"odbcConnectionArguments\": {13},    \"scriptArguments\": {14},    \"scriptId\": \"{15}\",    \"scriptName\": \"{16}\",    \"serviceName\": \"{17}\"   }},  \"secretId\": \"{18}\",  \"secretName\": \"{19}\",  \"serviceName\": \"{20}\",  \"settings\": {21},  \"sortOrder\": \"{22}\",  \"sshKeySecretId\": \"{23}\",  \"typeId\": \"{24}\",  \"typeName\": \"{25}\" }}",active,conditionDependencyId,conditionMode,changerScriptId,dependencyScanItemFields,scriptName,secretDependencyChangerId,secretDependencyTemplateId,description_p,groupId,machineName,privilegedAccountSecretId,runScript_machineName,odbcConnectionArguments,scriptArguments,scriptId,runScript_scriptName,serviceName,secretId,secretName,_serviceName,settings_p,sortOrder,sshKeySecretId,typeId,typeName);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_Secret_Dependency() {
+    }
+    
+    public TY_Create_Secret_Dependency(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string active, 
+                string conditionDependencyId, 
+                string conditionMode, 
+                string changerScriptId, 
+                string dependencyScanItemFields, 
+                string scriptName, 
+                string secretDependencyChangerId, 
+                string secretDependencyTemplateId, 
+                string description_p, 
+                string groupId, 
+                string machineName, 
+                string privilegedAccountSecretId, 
+                string runScript_machineName, 
+                string odbcConnectionArguments, 
+                string scriptArguments, 
+                string scriptId, 
+                string runScript_scriptName, 
+                string serviceName, 
+                string secretId, 
+                string secretName, 
+                string _serviceName, 
+                string settings_p, 
+                string sortOrder, 
+                string sshKeySecretId, 
+                string typeId, 
+                string typeName) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.active = active;
+        this.conditionDependencyId = conditionDependencyId;
+        this.conditionMode = conditionMode;
+        this.changerScriptId = changerScriptId;
+        this.dependencyScanItemFields = dependencyScanItemFields;
+        this.scriptName = scriptName;
+        this.secretDependencyChangerId = secretDependencyChangerId;
+        this.secretDependencyTemplateId = secretDependencyTemplateId;
+        this.description_p = description_p;
+        this.groupId = groupId;
+        this.machineName = machineName;
+        this.privilegedAccountSecretId = privilegedAccountSecretId;
+        this.runScript_machineName = runScript_machineName;
+        this.odbcConnectionArguments = odbcConnectionArguments;
+        this.scriptArguments = scriptArguments;
+        this.scriptId = scriptId;
+        this.runScript_scriptName = runScript_scriptName;
+        this.serviceName = serviceName;
+        this.secretId = secretId;
+        this.secretName = secretName;
+        this._serviceName = _serviceName;
+        this.settings_p = settings_p;
+        this.sortOrder = sortOrder;
+        this.sshKeySecretId = sshKeySecretId;
+        this.typeId = typeId;
+        this.typeName = typeName;
     }
 
 
@@ -220,7 +218,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

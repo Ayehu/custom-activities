@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-schedule active discovery for a device
-
-LM schedule active discovery for a device
-
-Method: Post
-
-OperationID: scheduleAutoDiscoveryByDeviceId
-
-EndPoint:
-
-/device/devices/{id}/scheduleAutoDiscovery
+<br>#     LogicMonitor</br>
+<br>schedule active discovery for a device</br>
+<br>LM schedule active discovery for a device</br>
+<br>Method: Post</br>
+<br>OperationID: scheduleAutoDiscoveryByDeviceId</br>
+<br>EndPoint:</br>
+<br>/device/devices/{id}/scheduleAutoDiscovery</br>

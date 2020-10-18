@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get collector installer
-
-LM get collector installer
-
-Method: Get
-
-OperationID: getCollectorInstaller
-
-EndPoint:
-
-/setting/collector/collectors/{collectorId}/installers/{osAndArch}
+<br>#     LogicMonitor</br>
+<br>get collector installer</br>
+<br>LM get collector installer</br>
+<br>Method: Get</br>
+<br>OperationID: getCollectorInstaller</br>
+<br>EndPoint:</br>
+<br>/setting/collector/collectors/{collectorId}/installers/{osAndArch}</br>

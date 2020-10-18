@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-import config source via xml
-
-LM import config source via xml
-
-Method: Post
-
-OperationID: importConfigSource
-
-EndPoint:
-
-/setting/configsources/importxml
+<br>#     LogicMonitor</br>
+<br>import config source via xml</br>
+<br>LM import config source via xml</br>
+<br>Method: Post</br>
+<br>OperationID: importConfigSource</br>
+<br>EndPoint:</br>
+<br>/setting/configsources/importxml</br>

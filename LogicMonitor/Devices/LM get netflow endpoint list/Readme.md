@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get netflow endpoint list
-
-LM get netflow endpoint list
-
-Method: Get
-
-OperationID: getNetflowEndpointList
-
-EndPoint:
-
-/device/devices/{id}/endpoints
+<br>#     LogicMonitor</br>
+<br>get netflow endpoint list</br>
+<br>LM get netflow endpoint list</br>
+<br>Method: Get</br>
+<br>OperationID: getNetflowEndpointList</br>
+<br>EndPoint:</br>
+<br>/device/devices/{id}/endpoints</br>

@@ -18,7 +18,7 @@
           "controlType": "textbox"
         },
         {
-          "required": true,
+          "required": false,
           "key": "accessid",
           "label": "Accessid",
           "labelKey": "accessid_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Accesskey",
           "labelKey": "accesskey_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "dayOfWeek",
           "label": "DayOfWeek",
           "labelKey": "dayOfWeek_l",
@@ -46,7 +46,7 @@
         },
         {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -54,7 +54,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "hour",
           "label": "Hour",
           "labelKey": "hour_l",
@@ -63,7 +63,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "minute",
           "label": "Minute",
           "labelKey": "minute_l",
@@ -72,7 +72,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "occurrence",
           "label": "Occurrence",
           "labelKey": "occurrence_l",
@@ -90,7 +90,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "version",
           "label": "Version",
           "labelKey": "version_l",
@@ -118,27 +118,9 @@
         },
         {
           "required": false,
-          "key": "customProperties____",
-          "label": "CustomProperties[][]",
+          "key": "customProperties",
+          "label": "CustomProperties[]",
           "labelKey": "customProperties_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "name_p",
-          "label": "Name",
-          "labelKey": "name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "value",
-          "label": "Value",
-          "labelKey": "value_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -207,7 +189,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "majorVersion",
           "label": "MajorVersion",
           "labelKey": "majorVersion_l",
@@ -216,7 +198,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "minorVersion",
           "label": "MinorVersion",
           "labelKey": "minorVersion_l",
@@ -225,7 +207,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "startEpoch",
           "label": "StartEpoch",
           "labelKey": "startEpoch_l",
@@ -252,7 +234,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "onetimeUpgradeInfo_majorVersion",
           "label": "OnetimeUpgradeInfo_majorVersion",
           "labelKey": "onetimeUpgradeInfo_majorVersion_l",
@@ -261,7 +243,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "onetimeUpgradeInfo_minorVersion",
           "label": "OnetimeUpgradeInfo_minorVersion",
           "labelKey": "onetimeUpgradeInfo_minorVersion_l",
@@ -270,7 +252,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "onetimeUpgradeInfo_startEpoch",
           "label": "OnetimeUpgradeInfo_startEpoch",
           "labelKey": "onetimeUpgradeInfo_startEpoch_l",
@@ -310,6 +292,15 @@
           "key": "suppressAlertClear",
           "label": "SuppressAlertClear",
           "labelKey": "suppressAlertClear_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

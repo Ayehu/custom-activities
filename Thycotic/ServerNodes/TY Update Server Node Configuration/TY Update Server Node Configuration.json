@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "nodeId",
           "label": "NodeId",
           "labelKey": "nodeId_l",
@@ -76,6 +76,15 @@
           "key": "readonlyModeEnabled",
           "label": "ReadonlyModeEnabled",
           "labelKey": "readonlyModeEnabled_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "nodeConfiguration",
+          "label": "NodeConfiguration",
+          "labelKey": "nodeConfiguration_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

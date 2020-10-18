@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-update report group
-
-LM update report group
-
-Method: Put
-
-OperationID: updateReportGroupById
-
-EndPoint:
-
-/report/groups/{id}
+<br>#     LogicMonitor</br>
+<br>update report group</br>
+<br>LM update report group</br>
+<br>Method: Patch</br>
+<br>OperationID: patchReportGroupById</br>
+<br>EndPoint:</br>
+<br>/report/groups/{id}</br>

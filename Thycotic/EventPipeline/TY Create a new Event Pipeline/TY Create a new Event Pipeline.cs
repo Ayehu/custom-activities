@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_a_new_Event_Pipeline : IActivityAsync
+    public class TY_Create_a_new_Event_Pipeline : IActivityAsync
     {
 
 
@@ -34,59 +34,15 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string filters_dirty = "";
     
-    public string filters_value__ = "";
-    
-    public string eventPipelineFilterId_dirty = "";
-    
-    public string eventPipelineFilterId_value = "";
-    
-    public string eventPipelineFilterMapId_dirty = "";
-    
-    public string eventPipelineFilterMapId_value = "";
-    
-    public string eventPipelineFilterName_dirty = "";
-    
-    public string eventPipelineFilterName_value = "";
-    
-    public string settings_dirty = "";
-    
-    public string settings_value__ = "";
-    
-    public string settingName_dirty = "";
-    
-    public string settingName_value = "";
-    
-    public string settingValue_dirty = "";
-    
-    public string settingValue_value = "";
-    
-    public string sortOrder_dirty = "";
-    
-    public string sortOrder_value = "";
+    public string filters_value = "";
     
     public string tasks_dirty = "";
     
-    public string tasks_value__ = "";
-    
-    public string eventPipelineTaskId_dirty = "";
-    
-    public string eventPipelineTaskId_value = "";
-    
-    public string eventPipelineTaskMapId_dirty = "";
-    
-    public string eventPipelineTaskMapId_value = "";
-    
-    public string eventPipelineTaskName_dirty = "";
-    
-    public string eventPipelineTaskName_value = "";
+    public string tasks_value = "";
     
     public string triggers_dirty = "";
     
-    public string triggers_value__ = "";
-    
-    public string eventActionId_dirty = "";
-    
-    public string eventActionId_value = "";
+    public string triggers_value = "";
     
     public string eventPipelinePolicyId = "";
     
@@ -96,28 +52,98 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/event-pipeline";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/event-pipeline";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"data\": {{   \"active\": {{     \"dirty\": \"{0}\",      \"value\": \"{1}\"     }},    \"eventPipelineDescription\": {{     \"dirty\": \"{2}\",      \"value\": \"{3}\"     }},    \"eventPipelineName\": {{     \"dirty\": \"{4}\",      \"value\": \"{5}\"     }},    \"filters\": {{     \"dirty\": \"{6}\",      \"value\": [        {{         \"eventPipelineFilterId\": {{           \"dirty\": \"{7}\",            \"value\": \"{8}\"           }},          \"eventPipelineFilterMapId\": {{           \"dirty\": \"{9}\",            \"value\": \"{10}\"           }},          \"eventPipelineFilterName\": {{           \"dirty\": \"{11}\",            \"value\": \"{12}\"           }},          \"settings\": {{           \"dirty\": \"{13}\",            \"value\": [              {{               \"settingName\": {{                 \"dirty\": \"{14}\",                  \"value\": \"{15}\"                 }},                \"settingValue\": {{                 \"dirty\": \"{16}\",                  \"value\": \"{17}\"                 }}               }}            ]           }},          \"sortOrder\": {{           \"dirty\": \"{18}\",            \"value\": \"{19}\"           }}         }}      ]     }},    \"tasks\": {{     \"dirty\": \"{20}\",      \"value\": [        {{         \"eventPipelineTaskId\": {{           \"dirty\": \"{21}\",            \"value\": \"{22}\"           }},          \"eventPipelineTaskMapId\": {{           \"dirty\": \"{23}\",            \"value\": \"{24}\"           }},          \"eventPipelineTaskName\": {{           \"dirty\": \"{25}\",            \"value\": \"{26}\"           }},          \"settings\": {{           \"dirty\": \"{13}\",            \"value\": [              {{               \"settingName\": {{                 \"dirty\": \"{14}\",                  \"value\": \"{15}\"                 }},                \"settingValue\": {{                 \"dirty\": \"{16}\",                  \"value\": \"{17}\"                 }}               }}            ]           }},          \"sortOrder\": {{           \"dirty\": \"{18}\",            \"value\": \"{19}\"           }}         }}      ]     }},    \"triggers\": {{     \"dirty\": \"{27}\",      \"value\": [        {{         \"eventActionId\": {{           \"dirty\": \"{28}\",            \"value\": \"{29}\"           }}         }}      ]     }}   }},  \"eventPipelinePolicyId\": \"{30}\" }}",dirty,value,eventPipelineDescription_dirty,eventPipelineDescription_value,eventPipelineName_dirty,eventPipelineName_value,filters_dirty,eventPipelineFilterId_dirty,eventPipelineFilterId_value,eventPipelineFilterMapId_dirty,eventPipelineFilterMapId_value,eventPipelineFilterName_dirty,eventPipelineFilterName_value,settings_dirty,settingName_dirty,settingName_value,settingValue_dirty,settingValue_value,sortOrder_dirty,sortOrder_value,tasks_dirty,eventPipelineTaskId_dirty,eventPipelineTaskId_value,eventPipelineTaskMapId_dirty,eventPipelineTaskMapId_value,eventPipelineTaskName_dirty,eventPipelineTaskName_value,triggers_dirty,eventActionId_dirty,eventActionId_value,eventPipelinePolicyId);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"data\": {{   \"active\": {{     \"dirty\": \"{0}\",      \"value\": \"{1}\"     }},    \"eventPipelineDescription\": {{     \"dirty\": \"{2}\",      \"value\": \"{3}\"     }},    \"eventPipelineName\": {{     \"dirty\": \"{4}\",      \"value\": \"{5}\"     }},    \"filters\": {{     \"dirty\": \"{6}\",      \"value\": {7}     }},    \"tasks\": {{     \"dirty\": \"{8}\",      \"value\": {9}     }},    \"triggers\": {{     \"dirty\": \"{10}\",      \"value\": {11}     }}   }},  \"eventPipelinePolicyId\": \"{12}\" }}",dirty,value,eventPipelineDescription_dirty,eventPipelineDescription_value,eventPipelineName_dirty,eventPipelineName_value,filters_dirty,filters_value,tasks_dirty,tasks_value,triggers_dirty,triggers_value,eventPipelinePolicyId);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_a_new_Event_Pipeline() {
+    }
+    
+    public TY_Create_a_new_Event_Pipeline(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string dirty, 
+                string value, 
+                string eventPipelineDescription_dirty, 
+                string eventPipelineDescription_value, 
+                string eventPipelineName_dirty, 
+                string eventPipelineName_value, 
+                string filters_dirty, 
+                string filters_value, 
+                string tasks_dirty, 
+                string tasks_value, 
+                string triggers_dirty, 
+                string triggers_value, 
+                string eventPipelinePolicyId) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.dirty = dirty;
+        this.value = value;
+        this.eventPipelineDescription_dirty = eventPipelineDescription_dirty;
+        this.eventPipelineDescription_value = eventPipelineDescription_value;
+        this.eventPipelineName_dirty = eventPipelineName_dirty;
+        this.eventPipelineName_value = eventPipelineName_value;
+        this.filters_dirty = filters_dirty;
+        this.filters_value = filters_value;
+        this.tasks_dirty = tasks_dirty;
+        this.tasks_value = tasks_value;
+        this.triggers_dirty = triggers_dirty;
+        this.triggers_value = triggers_value;
+        this.eventPipelinePolicyId = eventPipelinePolicyId;
     }
 
 
@@ -140,7 +166,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Count of Entities using a Workflow Template
-
-Request the number of entities that use the Workflow Template.
-
-Method: Get
-
-OperationID: WorkflowTemplatesService_GetWorkflowEntities
-
-EndPoint:
-
-/workflows/templates/{id}/entities/{includeAll}
+<br>#     Thycotic</br>
+<br>Count of Entities using a Workflow Template</br>
+<br>Request the number of entities that use the Workflow Template.</br>
+<br>Method: Get</br>
+<br>OperationID: WorkflowTemplatesService_GetWorkflowEntities</br>
+<br>EndPoint:</br>
+<br>/workflows/templates/{id}/entities/{includeAll}</br>

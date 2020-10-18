@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Create Domain
-
-Create a new Domain
-
-Method: Post
-
-OperationID: ActiveDirectoryService_CreateDomain
-
-EndPoint:
-
-/active-directory/domains
+<br>#     Thycotic</br>
+<br>Create Domain</br>
+<br>Create a new Domain</br>
+<br>Method: Post</br>
+<br>OperationID: ActiveDirectoryService_CreateDomain</br>
+<br>EndPoint:</br>
+<br>/active-directory/domains</br>

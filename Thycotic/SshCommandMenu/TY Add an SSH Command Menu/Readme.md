@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Add an SSH Command Menu
-
-Add an SSH Command Menu
-
-Method: Post
-
-OperationID: SshCommandMenuService_AddSshCommandMenu
-
-EndPoint:
-
-/ssh-command-menu
+<br>#     Thycotic</br>
+<br>Add an SSH Command Menu</br>
+<br>Add an SSH Command Menu</br>
+<br>Method: Post</br>
+<br>OperationID: SshCommandMenuService_AddSshCommandMenu</br>
+<br>EndPoint:</br>
+<br>/ssh-command-menu</br>

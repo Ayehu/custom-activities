@@ -1,0 +1,348 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY TenantManagementUpdateTenant",
+    "description": "AY TenantManagementUpdateTenant",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userName",
+          "label": "UserName",
+          "labelKey": "userName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "desc",
+          "label": "Desc",
+          "labelKey": "desc_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Production",
+              "value": "Production"
+            },
+            {
+              "key": "Development",
+              "value": "Development"
+            },
+            {
+              "key": "Trial",
+              "value": "Trial"
+            }
+          ],
+          "value": "Production"
+        },
+        {
+          "required": false,
+          "key": "enabled",
+          "label": "Enabled",
+          "labelKey": "enabled_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ownerFname",
+          "label": "OwnerFname",
+          "labelKey": "ownerFname_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ownerLname",
+          "label": "OwnerLname",
+          "labelKey": "ownerLname_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ownerEmail",
+          "label": "OwnerEmail",
+          "labelKey": "ownerEmail_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ownerPhoneNumber",
+          "label": "OwnerPhoneNumber",
+          "labelKey": "ownerPhoneNumber_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "adminUserName",
+          "label": "AdminUserName",
+          "labelKey": "adminUserName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "adminFirstName",
+          "label": "AdminFirstName",
+          "labelKey": "adminFirstName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "adminLastName",
+          "label": "AdminLastName",
+          "labelKey": "adminLastName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "adminEmail",
+          "label": "AdminEmail",
+          "labelKey": "adminEmail_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isPasswordEncrypted",
+          "label": "IsPasswordEncrypted",
+          "labelKey": "isPasswordEncrypted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ports",
+          "label": "Ports[]",
+          "labelKey": "ports_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "clonedTenantId",
+          "label": "ClonedTenantId",
+          "labelKey": "clonedTenantId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timeZone",
+          "label": "TimeZone",
+          "labelKey": "timeZone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "createdModules",
+          "label": "CreatedModules[]",
+          "labelKey": "createdModules_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "licenseModules",
+          "label": "LicenseModules[]",
+          "labelKey": "licenseModules_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "licenseExpireDate",
+          "label": "LicenseExpireDate",
+          "labelKey": "licenseExpireDate_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "licensedWorkflow",
+          "label": "LicensedWorkflow",
+          "labelKey": "licensedWorkflow_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "licenseVersion",
+          "label": "LicenseVersion",
+          "labelKey": "licenseVersion_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "supportType",
+          "label": "SupportType",
+          "labelKey": "supportType_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "None",
+              "value": "None"
+            },
+            {
+              "key": "Gold",
+              "value": "Gold"
+            },
+            {
+              "key": "Silver",
+              "value": "Silver"
+            },
+            {
+              "key": "Bronze",
+              "value": "Bronze"
+            }
+          ],
+          "value": "None"
+        },
+        {
+          "required": false,
+          "key": "model",
+          "label": "Model",
+          "labelKey": "model_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Subscription",
+              "value": "Subscription"
+            },
+            {
+              "key": "Perpetual",
+              "value": "Perpetual"
+            }
+          ],
+          "value": "Subscription"
+        },
+        {
+          "required": false,
+          "key": "IsDeleted",
+          "label": "IsDeleted",
+          "labelKey": "IsDeleted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entity",
+          "label": "Entity",
+          "labelKey": "entity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "updateTenant",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

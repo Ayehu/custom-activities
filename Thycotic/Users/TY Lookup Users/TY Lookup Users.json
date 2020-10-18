@@ -46,8 +46,8 @@
         },
         {
           "required": false,
-          "key": "filter_searchFields____",
-          "label": "Filter.searchFields[][]",
+          "key": "filter_searchFields",
+          "label": "Filter.searchFields[]",
           "labelKey": "filter_searchFields_l",
           "baseType": "control",
           "controlType": "textbox",

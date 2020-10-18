@@ -162,6 +162,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "viewModel",
+          "label": "ViewModel",
+          "labelKey": "viewModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

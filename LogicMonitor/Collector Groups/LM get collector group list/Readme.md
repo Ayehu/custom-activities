@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get collector group list
-
-LM get collector group list
-
-Method: Get
-
-OperationID: getCollectorGroupList
-
-EndPoint:
-
-/setting/collector/groups
+<br>#     LogicMonitor</br>
+<br>get collector group list</br>
+<br>LM get collector group list</br>
+<br>Method: Get</br>
+<br>OperationID: getCollectorGroupList</br>
+<br>EndPoint:</br>
+<br>/setting/collector/groups</br>

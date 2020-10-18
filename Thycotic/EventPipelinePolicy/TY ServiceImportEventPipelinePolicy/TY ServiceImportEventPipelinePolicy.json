@@ -36,6 +36,15 @@
           "value": ""
         },
         {
+          "required": false,
+          "key": "importPolicy",
+          "label": "ImportPolicy",
+          "labelKey": "importPolicy_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
           "value": "",
           "required": false,
           "key": "linekey",

@@ -18,7 +18,7 @@
           "controlType": "textbox"
         },
         {
-          "required": true,
+          "required": false,
           "key": "accessid",
           "label": "Accessid",
           "labelKey": "accessid_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Accesskey",
           "labelKey": "accesskey_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "deviceId",
           "label": "DeviceId",
           "labelKey": "deviceId_l",
@@ -45,7 +45,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "hdsId",
           "label": "HdsId",
           "labelKey": "hdsId_l",
@@ -55,61 +55,25 @@
         },
         {
           "required": false,
-          "key": "autoProperties____",
-          "label": "AutoProperties[][]",
+          "key": "autoProperties",
+          "label": "AutoProperties[]",
           "labelKey": "autoProperties_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
         },
         {
-          "required": true,
-          "key": "name_p",
-          "label": "Name",
-          "labelKey": "name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "value",
-          "label": "Value",
-          "labelKey": "value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
           "required": false,
-          "key": "customProperties____",
-          "label": "CustomProperties[][]",
+          "key": "customProperties",
+          "label": "CustomProperties[]",
           "labelKey": "customProperties_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
         },
         {
-          "required": true,
-          "key": "customProperties_name",
-          "label": "CustomProperties_name",
-          "labelKey": "customProperties_name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "customProperties_value",
-          "label": "CustomProperties_value",
-          "labelKey": "customProperties_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -126,8 +90,8 @@
           "value": ""
         },
         {
-          "required": true,
-          "key": "displayName",
+          "required": false,
+          "key": "displayName_p",
           "label": "DisplayName",
           "labelKey": "displayName_l",
           "baseType": "control",
@@ -163,33 +127,15 @@
         },
         {
           "required": false,
-          "key": "systemProperties____",
-          "label": "SystemProperties[][]",
+          "key": "systemProperties",
+          "label": "SystemProperties[]",
           "labelKey": "systemProperties_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
         },
         {
-          "required": true,
-          "key": "systemProperties_name",
-          "label": "SystemProperties_name",
-          "labelKey": "systemProperties_name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "systemProperties_value",
-          "label": "SystemProperties_value",
-          "labelKey": "systemProperties_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
+          "required": false,
           "key": "wildValue",
           "label": "WildValue",
           "labelKey": "wildValue_l",
@@ -202,6 +148,15 @@
           "key": "wildValue2",
           "label": "WildValue2",
           "labelKey": "wildValue2_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

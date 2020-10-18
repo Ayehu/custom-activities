@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Delete Custom Command
-
-Delete a Custom Command
-
-Method: Delete
-
-OperationID: RemotePasswordChangingService_DeleteCustomCommand
-
-EndPoint:
-
-/remote-password-changing/custom-commands/{id}
+<br>#     Thycotic</br>
+<br>Delete Custom Command</br>
+<br>Delete a Custom Command</br>
+<br>Method: Delete</br>
+<br>OperationID: RemotePasswordChangingService_DeleteCustomCommand</br>
+<br>EndPoint:</br>
+<br>/remote-password-changing/custom-commands/{id}</br>

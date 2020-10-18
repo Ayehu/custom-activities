@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_Secret_Dependency : IActivityAsync
+    public class TY_Update_Secret_Dependency : IActivityAsync
     {
 
 
@@ -30,15 +30,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string changerScriptId = "";
     
-    public string dependencyScanItemFields__ = "";
-    
-    public string dependencyScanItemFields_id = "";
-    
-    public string name_p = "";
-    
-    public string parentName = "";
-    
-    public string value = "";
+    public string dependencyScanItemFields = "";
     
     public string scriptName = "";
     
@@ -46,7 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string secretDependencyTemplateId = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string groupId = "";
     
@@ -58,19 +50,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string runScript_machineName = "";
     
-    public string odbcConnectionArguments__ = "";
+    public string odbcConnectionArguments = "";
     
-    public string odbcConnectionArguments_name = "";
-    
-    public string odbcConnectionArguments_value = "";
-    
-    public string scriptArguments__ = "";
-    
-    public string scriptArguments_name = "";
-    
-    public string type = "";
-    
-    public string scriptArguments_value = "";
+    public string scriptArguments = "";
     
     public string scriptId = "";
     
@@ -84,87 +66,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string _serviceName = "";
     
-    public string settings__ = "";
-    
-    public string changerSettingValue = "";
-    
-    public string setting_active = "";
-    
-    public string canEdit = "";
-    
-    public string canEditValue = "";
-    
-    public string childSettings__ = "";
-    
-    public string childSettings_active = "";
-    
-    public string childSettings_canEdit = "";
-    
-    public string childSettings_canEditValue = "";
-    
-    public string defaultValue = "";
-    
-    public string displayName = "";
-    
-    public string childSettings_id = "";
-    
-    public string isVisibile = "";
-    
-    public string parentSettingId = "";
-    
-    public string regexValidation = "";
-    
-    public string settingName = "";
-    
-    public string settingSectionId = "";
-    
-    public string settingType = "";
-    
-    public string subSettingSectionId = "";
-    
-    public string childSettings_defaultValue = "";
-    
-    public string childSettings_displayName = "";
-    
-    public string childSettings_isVisibile = "";
-    
-    public string childSettings_parentSettingId = "";
-    
-    public string childSettings_regexValidation = "";
-    
-    public string childSettings_settingName = "";
-    
-    public string childSettings_settingSectionId = "";
-    
-    public string childSettings_settingType = "";
-    
-    public string childSettings_subSettingSectionId = "";
-    
-    public string setting_defaultValue = "";
-    
-    public string setting_displayName = "";
-    
-    public string setting_id = "";
-    
-    public string setting_isVisibile = "";
-    
-    public string setting_parentSettingId = "";
-    
-    public string setting_regexValidation = "";
-    
-    public string setting_settingName = "";
-    
-    public string setting_settingSectionId = "";
-    
-    public string setting_settingType = "";
-    
-    public string setting_subSettingSectionId = "";
-    
-    public string settingId = "";
-    
-    public string settings_settingName = "";
-    
-    public string settingValue = "";
+    public string settings_p = "";
     
     public string sortOrder = "";
     
@@ -180,28 +82,128 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/secret-dependencies/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/secret-dependencies/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"active\": \"{0}\",  \"conditionDependencyId\": \"{1}\",  \"conditionMode\": \"{2}\",  \"dependencyTemplate\": {{   \"changerScriptId\": \"{3}\",    \"dependencyScanItemFields\": [      {{       \"id\": \"{4}\",        \"name\": \"{5}\",        \"parentName\": \"{6}\",        \"value\": \"{7}\"       }}    ],    \"scriptName\": \"{8}\",    \"secretDependencyChangerId\": \"{9}\",    \"secretDependencyTemplateId\": \"{10}\"   }},  \"description\": \"{11}\",  \"groupId\": \"{12}\",  \"id\": \"{13}\",  \"machineName\": \"{14}\",  \"privilegedAccountSecretId\": \"{15}\",  \"runScript\": {{   \"machineName\": \"{16}\",    \"odbcConnectionArguments\": [      {{       \"name\": \"{17}\",        \"value\": \"{18}\"       }}    ],    \"scriptArguments\": [      {{       \"name\": \"{19}\",        \"type\": \"{20}\",        \"value\": \"{21}\"       }}    ],    \"scriptId\": \"{22}\",    \"scriptName\": \"{23}\",    \"serviceName\": \"{24}\"   }},  \"secretId\": \"{25}\",  \"secretName\": \"{26}\",  \"serviceName\": \"{27}\",  \"settings\": [    {{     \"changerSettingValue\": \"{28}\",      \"setting\": {{       \"active\": \"{29}\",        \"canEdit\": \"{30}\",        \"canEditValue\": \"{31}\",        \"childSettings\": [          {{           \"active\": \"{32}\",            \"canEdit\": \"{33}\",            \"canEditValue\": \"{34}\",            \"childSettings\": [              {{               \"active\": \"{32}\",                \"canEdit\": \"{33}\",                \"canEditValue\": \"{34}\",                \"defaultValue\": \"{35}\",                \"displayName\": \"{36}\",                \"id\": \"{37}\",                \"isVisibile\": \"{38}\",                \"parentSettingId\": \"{39}\",                \"regexValidation\": \"{40}\",                \"settingName\": \"{41}\",                \"settingSectionId\": \"{42}\",                \"settingType\": \"{43}\",                \"subSettingSectionId\": \"{44}\"               }}            ],            \"defaultValue\": \"{45}\",            \"displayName\": \"{46}\",            \"id\": \"{37}\",            \"isVisibile\": \"{47}\",            \"parentSettingId\": \"{48}\",            \"regexValidation\": \"{49}\",            \"settingName\": \"{50}\",            \"settingSectionId\": \"{51}\",            \"settingType\": \"{52}\",            \"subSettingSectionId\": \"{53}\"           }}        ],        \"defaultValue\": \"{54}\",        \"displayName\": \"{55}\",        \"id\": \"{56}\",        \"isVisibile\": \"{57}\",        \"parentSettingId\": \"{58}\",        \"regexValidation\": \"{59}\",        \"settingName\": \"{60}\",        \"settingSectionId\": \"{61}\",        \"settingType\": \"{62}\",        \"subSettingSectionId\": \"{63}\"       }},      \"settingId\": \"{64}\",      \"settingName\": \"{65}\",      \"settingValue\": \"{66}\"     }}  ],  \"sortOrder\": \"{67}\",  \"sshKeySecretId\": \"{68}\",  \"typeId\": \"{69}\",  \"typeName\": \"{70}\" }}",active,conditionDependencyId,conditionMode,changerScriptId,dependencyScanItemFields_id,name_p,parentName,value,scriptName,secretDependencyChangerId,secretDependencyTemplateId,description,groupId,_id,machineName,privilegedAccountSecretId,runScript_machineName,odbcConnectionArguments_name,odbcConnectionArguments_value,scriptArguments_name,type,scriptArguments_value,scriptId,runScript_scriptName,serviceName,secretId,secretName,_serviceName,changerSettingValue,setting_active,canEdit,canEditValue,childSettings_active,childSettings_canEdit,childSettings_canEditValue,defaultValue,displayName,childSettings_id,isVisibile,parentSettingId,regexValidation,settingName,settingSectionId,settingType,subSettingSectionId,childSettings_defaultValue,childSettings_displayName,childSettings_isVisibile,childSettings_parentSettingId,childSettings_regexValidation,childSettings_settingName,childSettings_settingSectionId,childSettings_settingType,childSettings_subSettingSectionId,setting_defaultValue,setting_displayName,setting_id,setting_isVisibile,setting_parentSettingId,setting_regexValidation,setting_settingName,setting_settingSectionId,setting_settingType,setting_subSettingSectionId,settingId,settings_settingName,settingValue,sortOrder,sshKeySecretId,typeId,typeName);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"active\": \"{0}\",  \"conditionDependencyId\": \"{1}\",  \"conditionMode\": \"{2}\",  \"dependencyTemplate\": {{   \"changerScriptId\": \"{3}\",    \"dependencyScanItemFields\": {4},    \"scriptName\": \"{5}\",    \"secretDependencyChangerId\": \"{6}\",    \"secretDependencyTemplateId\": \"{7}\"   }},  \"description\": \"{8}\",  \"groupId\": \"{9}\",  \"id\": \"{10}\",  \"machineName\": \"{11}\",  \"privilegedAccountSecretId\": \"{12}\",  \"runScript\": {{   \"machineName\": \"{13}\",    \"odbcConnectionArguments\": {14},    \"scriptArguments\": {15},    \"scriptId\": \"{16}\",    \"scriptName\": \"{17}\",    \"serviceName\": \"{18}\"   }},  \"secretId\": \"{19}\",  \"secretName\": \"{20}\",  \"serviceName\": \"{21}\",  \"settings\": {22},  \"sortOrder\": \"{23}\",  \"sshKeySecretId\": \"{24}\",  \"typeId\": \"{25}\",  \"typeName\": \"{26}\" }}",active,conditionDependencyId,conditionMode,changerScriptId,dependencyScanItemFields,scriptName,secretDependencyChangerId,secretDependencyTemplateId,description_p,groupId,_id,machineName,privilegedAccountSecretId,runScript_machineName,odbcConnectionArguments,scriptArguments,scriptId,runScript_scriptName,serviceName,secretId,secretName,_serviceName,settings_p,sortOrder,sshKeySecretId,typeId,typeName);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_Secret_Dependency() {
+    }
+    
+    public TY_Update_Secret_Dependency(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string id_p, 
+                string active, 
+                string conditionDependencyId, 
+                string conditionMode, 
+                string changerScriptId, 
+                string dependencyScanItemFields, 
+                string scriptName, 
+                string secretDependencyChangerId, 
+                string secretDependencyTemplateId, 
+                string description_p, 
+                string groupId, 
+                string _id, 
+                string machineName, 
+                string privilegedAccountSecretId, 
+                string runScript_machineName, 
+                string odbcConnectionArguments, 
+                string scriptArguments, 
+                string scriptId, 
+                string runScript_scriptName, 
+                string serviceName, 
+                string secretId, 
+                string secretName, 
+                string _serviceName, 
+                string settings_p, 
+                string sortOrder, 
+                string sshKeySecretId, 
+                string typeId, 
+                string typeName) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.active = active;
+        this.conditionDependencyId = conditionDependencyId;
+        this.conditionMode = conditionMode;
+        this.changerScriptId = changerScriptId;
+        this.dependencyScanItemFields = dependencyScanItemFields;
+        this.scriptName = scriptName;
+        this.secretDependencyChangerId = secretDependencyChangerId;
+        this.secretDependencyTemplateId = secretDependencyTemplateId;
+        this.description_p = description_p;
+        this.groupId = groupId;
+        this._id = _id;
+        this.machineName = machineName;
+        this.privilegedAccountSecretId = privilegedAccountSecretId;
+        this.runScript_machineName = runScript_machineName;
+        this.odbcConnectionArguments = odbcConnectionArguments;
+        this.scriptArguments = scriptArguments;
+        this.scriptId = scriptId;
+        this.runScript_scriptName = runScript_scriptName;
+        this.serviceName = serviceName;
+        this.secretId = secretId;
+        this.secretName = secretName;
+        this._serviceName = _serviceName;
+        this.settings_p = settings_p;
+        this.sortOrder = sortOrder;
+        this.sshKeySecretId = sshKeySecretId;
+        this.typeId = typeId;
+        this.typeName = typeName;
     }
 
 
@@ -224,7 +226,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

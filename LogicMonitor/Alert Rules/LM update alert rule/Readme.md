@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-update alert rule
-
-LM update alert rule
-
-Method: Put
-
-OperationID: updateAlertRuleById
-
-EndPoint:
-
-/setting/alert/rules/{id}
+<br>#     LogicMonitor</br>
+<br>update alert rule</br>
+<br>LM update alert rule</br>
+<br>Method: Patch</br>
+<br>OperationID: patchAlertRuleById</br>
+<br>EndPoint:</br>
+<br>/setting/alert/rules/{id}</br>

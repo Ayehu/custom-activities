@@ -1,12 +1,6 @@
-#     Thycotic
-
-
-TY ServiceGetChildFolderDataForPipelinePolicyFolder
-
-Method: Get
-
-OperationID: EventPipelinePolicyService_GetChildFolderDataForPipelinePolicyFolder
-
-EndPoint:
-
-/event-pipeline-policy/{id}/folders/{folderId}/childdata
+<br>#     Thycotic</br>
+<br>TY ServiceGetChildFolderDataForPipelinePolicyFolder</br>
+<br>Method: Get</br>
+<br>OperationID: EventPipelinePolicyService_GetChildFolderDataForPipelinePolicyFolder</br>
+<br>EndPoint:</br>
+<br>/event-pipeline-policy/{id}/folders/{folderId}/childdata</br>

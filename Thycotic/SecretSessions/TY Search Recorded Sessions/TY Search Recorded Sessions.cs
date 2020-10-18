@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Search_Recorded_Sessions : IActivityAsync
+    public class TY_Search_Recorded_Sessions : IActivityAsync
     {
 
 
@@ -72,28 +72,118 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "GET";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/recorded-sessions";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/recorded-sessions";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return "";
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = "";
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {{"filter.active",filter_active},{"filter.dateRange",filter_dateRange},{"filter.endDate",filter_endDate},{"filter.endTime",filter_endTime},{"filter.folderId",filter_folderId},{"filter.groupIds[]",filter_groupIds},{"filter.includeNonSecretServerSessions",filter_includeNonSecretServerSessions},{"filter.includeOnlyLaunchedSuccessfully",filter_includeOnlyLaunchedSuccessfully},{"filter.includeRestricted",filter_includeRestricted},{"filter.includeSubFolders",filter_includeSubFolders},{"filter.launcherTypeId",filter_launcherTypeId},{"filter.searchText",filter_searchText},{"filter.searchTypes[]",filter_searchTypes},{"filter.secretIds[]",filter_secretIds},{"filter.siteId",filter_siteId},{"filter.startDate",filter_startDate},{"filter.startTime",filter_startTime},{"filter.userIds[]",filter_userIds},{"skip",skip},{"sortBy[0].direction",sortBy_0__direction},{"sortBy[0].name",sortBy_0__name},{"sortBy[0].priority",sortBy_0__priority},{"take",take}};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() { {"filter.active",filter_active},{"filter.dateRange",filter_dateRange},{"filter.endDate",filter_endDate},{"filter.endTime",filter_endTime},{"filter.folderId",filter_folderId},{"filter.groupIds",filter_groupIds},{"filter.includeNonSecretServerSessions",filter_includeNonSecretServerSessions},{"filter.includeOnlyLaunchedSuccessfully",filter_includeOnlyLaunchedSuccessfully},{"filter.includeRestricted",filter_includeRestricted},{"filter.includeSubFolders",filter_includeSubFolders},{"filter.launcherTypeId",filter_launcherTypeId},{"filter.searchText",filter_searchText},{"filter.searchTypes",filter_searchTypes},{"filter.secretIds",filter_secretIds},{"filter.siteId",filter_siteId},{"filter.startDate",filter_startDate},{"filter.startTime",filter_startTime},{"filter.userIds",filter_userIds},{"skip",skip},{"sortBy[0].direction",sortBy_0__direction},{"sortBy[0].name",sortBy_0__name},{"sortBy[0].priority",sortBy_0__priority},{"take",take} };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Search_Recorded_Sessions() {
+    }
+    
+    public TY_Search_Recorded_Sessions(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string filter_active, 
+                string filter_dateRange, 
+                string filter_endDate, 
+                string filter_endTime, 
+                string filter_folderId, 
+                string filter_groupIds, 
+                string filter_includeNonSecretServerSessions, 
+                string filter_includeOnlyLaunchedSuccessfully, 
+                string filter_includeRestricted, 
+                string filter_includeSubFolders, 
+                string filter_launcherTypeId, 
+                string filter_searchText, 
+                string filter_searchTypes, 
+                string filter_secretIds, 
+                string filter_siteId, 
+                string filter_startDate, 
+                string filter_startTime, 
+                string filter_userIds, 
+                string skip, 
+                string sortBy_0__direction, 
+                string sortBy_0__name, 
+                string sortBy_0__priority, 
+                string take) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.filter_active = filter_active;
+        this.filter_dateRange = filter_dateRange;
+        this.filter_endDate = filter_endDate;
+        this.filter_endTime = filter_endTime;
+        this.filter_folderId = filter_folderId;
+        this.filter_groupIds = filter_groupIds;
+        this.filter_includeNonSecretServerSessions = filter_includeNonSecretServerSessions;
+        this.filter_includeOnlyLaunchedSuccessfully = filter_includeOnlyLaunchedSuccessfully;
+        this.filter_includeRestricted = filter_includeRestricted;
+        this.filter_includeSubFolders = filter_includeSubFolders;
+        this.filter_launcherTypeId = filter_launcherTypeId;
+        this.filter_searchText = filter_searchText;
+        this.filter_searchTypes = filter_searchTypes;
+        this.filter_secretIds = filter_secretIds;
+        this.filter_siteId = filter_siteId;
+        this.filter_startDate = filter_startDate;
+        this.filter_startTime = filter_startTime;
+        this.filter_userIds = filter_userIds;
+        this.skip = skip;
+        this.sortBy_0__direction = sortBy_0__direction;
+        this.sortBy_0__name = sortBy_0__name;
+        this.sortBy_0__priority = sortBy_0__priority;
+        this.take = take;
     }
 
 
@@ -116,7 +206,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

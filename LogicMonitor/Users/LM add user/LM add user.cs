@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_add_user : IActivityAsync
+    public class LM_add_user : IActivityAsync
     {
 
 
@@ -24,11 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string acceptEULA = "";
     
-    public string apiTokens__ = "";
-    
-    public string note = "";
-    
-    public string status = "";
+    public string apiTokens = "";
     
     public string apionly = "";
     
@@ -50,27 +46,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string phone = "";
     
-    public string roles__ = "";
-    
-    public string customHelpLabel = "";
-    
-    public string customHelpURL = "";
-    
-    public string description = "";
-    
-    public string name_p = "";
-    
-    public string privileges__ = "";
-    
-    public string objectId = "";
-    
-    public string objectType = "";
-    
-    public string operation = "";
-    
-    public string requireEULA = "";
-    
-    public string twoFARequired = "";
+    public string roles = "";
     
     public string smsEmail = "";
     
@@ -90,28 +66,112 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "/setting/admins";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "/setting/admins";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"acceptEULA\": \"{0}\",  \"apiTokens\": [    {{     \"note\": \"{1}\",      \"status\": \"{2}\"     }}  ],  \"apionly\": \"{3}\",  \"contactMethod\": \"{4}\",  \"createdBy\": \"{5}\",  \"email\": \"{6}\",  \"firstName\": \"{7}\",  \"forcePasswordChange\": \"{8}\",  \"lastName\": \"{9}\",  \"note\": \"{10}\",  \"password\": \"{11}\",  \"phone\": \"{12}\",  \"roles\": [    {{     \"customHelpLabel\": \"{13}\",      \"customHelpURL\": \"{14}\",      \"description\": \"{15}\",      \"name\": \"{16}\",      \"privileges\": [        {{         \"objectId\": \"{17}\",          \"objectType\": \"{18}\",          \"operation\": \"{19}\"         }}      ],      \"requireEULA\": \"{20}\",      \"twoFARequired\": \"{21}\"     }}  ],  \"smsEmail\": \"{22}\",  \"smsEmailFormat\": \"{23}\",  \"status\": \"{24}\",  \"timezone\": \"{25}\",  \"twoFAEnabled\": \"{26}\",  \"username\": \"{27}\" }}",acceptEULA,note,status,apionly,contactMethod,createdBy,email,firstName,forcePasswordChange,lastName,_note,password,phone,customHelpLabel,customHelpURL,description,name_p,objectId,objectType,operation,requireEULA,twoFARequired,smsEmail,smsEmailFormat,_status,timezone,twoFAEnabled,username);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"acceptEULA\": \"{0}\",  \"apiTokens\": {1},  \"apionly\": \"{2}\",  \"contactMethod\": \"{3}\",  \"createdBy\": \"{4}\",  \"email\": \"{5}\",  \"firstName\": \"{6}\",  \"forcePasswordChange\": \"{7}\",  \"lastName\": \"{8}\",  \"note\": \"{9}\",  \"password\": \"{10}\",  \"phone\": \"{11}\",  \"roles\": {12},  \"smsEmail\": \"{13}\",  \"smsEmailFormat\": \"{14}\",  \"status\": \"{15}\",  \"timezone\": \"{16}\",  \"twoFAEnabled\": \"{17}\",  \"username\": \"{18}\" }}",acceptEULA,apiTokens,apionly,contactMethod,createdBy,email,firstName,forcePasswordChange,lastName,_note,password,phone,roles,smsEmail,smsEmailFormat,_status,timezone,twoFAEnabled,username);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_add_user() {
+    }
+    
+    public LM_add_user(
+                string endPoint, 
+                string Jsonkeypath, 
+                string accessid, 
+                string password1, 
+                string acceptEULA, 
+                string apiTokens, 
+                string apionly, 
+                string contactMethod, 
+                string createdBy, 
+                string email, 
+                string firstName, 
+                string forcePasswordChange, 
+                string lastName, 
+                string _note, 
+                string password, 
+                string phone, 
+                string roles, 
+                string smsEmail, 
+                string smsEmailFormat, 
+                string _status, 
+                string timezone, 
+                string twoFAEnabled, 
+                string username) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.acceptEULA = acceptEULA;
+        this.apiTokens = apiTokens;
+        this.apionly = apionly;
+        this.contactMethod = contactMethod;
+        this.createdBy = createdBy;
+        this.email = email;
+        this.firstName = firstName;
+        this.forcePasswordChange = forcePasswordChange;
+        this.lastName = lastName;
+        this._note = _note;
+        this.password = password;
+        this.phone = phone;
+        this.roles = roles;
+        this.smsEmail = smsEmail;
+        this.smsEmailFormat = smsEmailFormat;
+        this._status = _status;
+        this.timezone = timezone;
+        this.twoFAEnabled = twoFAEnabled;
+        this.username = username;
     }
 
 
@@ -133,13 +193,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

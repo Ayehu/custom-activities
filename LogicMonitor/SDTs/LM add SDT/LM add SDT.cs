@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_add_SDT : IActivityAsync
+    public class LM_add_SDT : IActivityAsync
     {
 
 
@@ -44,7 +44,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string timezone = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string weekDay = "";
     
@@ -56,28 +56,102 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "/sdt/sdts";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "/sdt/sdts";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"comment\": \"{0}\",  \"duration\": \"{1}\",  \"endDateTime\": \"{2}\",  \"endHour\": \"{3}\",  \"endMinute\": \"{4}\",  \"hour\": \"{5}\",  \"minute\": \"{6}\",  \"monthDay\": \"{7}\",  \"sdtType\": \"{8}\",  \"startDateTime\": \"{9}\",  \"timezone\": \"{10}\",  \"type\": \"{11}\",  \"weekDay\": \"{12}\",  \"weekOfMonth\": \"{13}\" }}",comment,duration,endDateTime,endHour,endMinute,hour,minute,monthDay,sdtType,startDateTime,timezone,type,weekDay,weekOfMonth);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"comment\": \"{0}\",  \"duration\": \"{1}\",  \"endDateTime\": \"{2}\",  \"endHour\": \"{3}\",  \"endMinute\": \"{4}\",  \"hour\": \"{5}\",  \"minute\": \"{6}\",  \"monthDay\": \"{7}\",  \"sdtType\": \"{8}\",  \"startDateTime\": \"{9}\",  \"timezone\": \"{10}\",  \"type\": \"{11}\",  \"weekDay\": \"{12}\",  \"weekOfMonth\": \"{13}\" }}",comment,duration,endDateTime,endHour,endMinute,hour,minute,monthDay,sdtType,startDateTime,timezone,type_p,weekDay,weekOfMonth);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_add_SDT() {
+    }
+    
+    public LM_add_SDT(
+                string endPoint, 
+                string Jsonkeypath, 
+                string accessid, 
+                string password1, 
+                string comment, 
+                string duration, 
+                string endDateTime, 
+                string endHour, 
+                string endMinute, 
+                string hour, 
+                string minute, 
+                string monthDay, 
+                string sdtType, 
+                string startDateTime, 
+                string timezone, 
+                string type_p, 
+                string weekDay, 
+                string weekOfMonth) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.comment = comment;
+        this.duration = duration;
+        this.endDateTime = endDateTime;
+        this.endHour = endHour;
+        this.endMinute = endMinute;
+        this.hour = hour;
+        this.minute = minute;
+        this.monthDay = monthDay;
+        this.sdtType = sdtType;
+        this.startDateTime = startDateTime;
+        this.timezone = timezone;
+        this.type_p = type_p;
+        this.weekDay = weekDay;
+        this.weekOfMonth = weekOfMonth;
     }
 
 
@@ -99,13 +173,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

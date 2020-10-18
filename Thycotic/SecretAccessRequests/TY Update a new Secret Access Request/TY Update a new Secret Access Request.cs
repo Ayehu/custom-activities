@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_a_new_Secret_Access_Request : IActivityAsync
+    public class TY_Update_a_new_Secret_Access_Request : IActivityAsync
     {
 
 
@@ -100,28 +100,146 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/secret-access-requests";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/secret-access-requests";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"expirationDate\": {{   \"date\": \"{0}\",    \"dateTime\": \"{1}\",    \"day\": \"{2}\",    \"dayOfWeek\": \"{3}\",    \"dayOfYear\": \"{4}\",    \"hour\": \"{5}\",    \"localDateTime\": \"{6}\",    \"millisecond\": \"{7}\",    \"minute\": \"{8}\",    \"month\": \"{9}\",    \"offset\": \"{10}\",    \"second\": \"{11}\",    \"ticks\": \"{12}\",    \"timeOfDay\": \"{13}\",    \"utcDateTime\": \"{14}\",    \"utcTicks\": \"{15}\",    \"year\": \"{16}\"   }},  \"responseComment\": \"{17}\",  \"secretAccessRequestId\": \"{18}\",  \"startDate\": {{   \"date\": \"{19}\",    \"dateTime\": \"{20}\",    \"day\": \"{21}\",    \"dayOfWeek\": \"{22}\",    \"dayOfYear\": \"{23}\",    \"hour\": \"{24}\",    \"localDateTime\": \"{25}\",    \"millisecond\": \"{26}\",    \"minute\": \"{27}\",    \"month\": \"{28}\",    \"offset\": \"{29}\",    \"second\": \"{30}\",    \"ticks\": \"{31}\",    \"timeOfDay\": \"{32}\",    \"utcDateTime\": \"{33}\",    \"utcTicks\": \"{34}\",    \"year\": \"{35}\"   }},  \"status\": \"{36}\" }}",date,dateTime,day,dayOfWeek,dayOfYear,hour,localDateTime,millisecond,minute,month,offset,second,ticks,timeOfDay,utcDateTime,utcTicks,year,responseComment,secretAccessRequestId,startDate_date,startDate_dateTime,startDate_day,startDate_dayOfWeek,startDate_dayOfYear,startDate_hour,startDate_localDateTime,startDate_millisecond,startDate_minute,startDate_month,startDate_offset,startDate_second,startDate_ticks,startDate_timeOfDay,startDate_utcDateTime,startDate_utcTicks,startDate_year,status);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"expirationDate\": {{   \"date\": \"{0}\",    \"dateTime\": \"{1}\",    \"day\": \"{2}\",    \"dayOfWeek\": \"{3}\",    \"dayOfYear\": \"{4}\",    \"hour\": \"{5}\",    \"localDateTime\": \"{6}\",    \"millisecond\": \"{7}\",    \"minute\": \"{8}\",    \"month\": \"{9}\",    \"offset\": \"{10}\",    \"second\": \"{11}\",    \"ticks\": \"{12}\",    \"timeOfDay\": \"{13}\",    \"utcDateTime\": \"{14}\",    \"utcTicks\": \"{15}\",    \"year\": \"{16}\"   }},  \"responseComment\": \"{17}\",  \"secretAccessRequestId\": \"{18}\",  \"startDate\": {{   \"date\": \"{19}\",    \"dateTime\": \"{20}\",    \"day\": \"{21}\",    \"dayOfWeek\": \"{22}\",    \"dayOfYear\": \"{23}\",    \"hour\": \"{24}\",    \"localDateTime\": \"{25}\",    \"millisecond\": \"{26}\",    \"minute\": \"{27}\",    \"month\": \"{28}\",    \"offset\": \"{29}\",    \"second\": \"{30}\",    \"ticks\": \"{31}\",    \"timeOfDay\": \"{32}\",    \"utcDateTime\": \"{33}\",    \"utcTicks\": \"{34}\",    \"year\": \"{35}\"   }},  \"status\": \"{36}\" }}",date,dateTime,day,dayOfWeek,dayOfYear,hour,localDateTime,millisecond,minute,month,offset,second,ticks,timeOfDay,utcDateTime,utcTicks,year,responseComment,secretAccessRequestId,startDate_date,startDate_dateTime,startDate_day,startDate_dayOfWeek,startDate_dayOfYear,startDate_hour,startDate_localDateTime,startDate_millisecond,startDate_minute,startDate_month,startDate_offset,startDate_second,startDate_ticks,startDate_timeOfDay,startDate_utcDateTime,startDate_utcTicks,startDate_year,status);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_a_new_Secret_Access_Request() {
+    }
+    
+    public TY_Update_a_new_Secret_Access_Request(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string date, 
+                string dateTime, 
+                string day, 
+                string dayOfWeek, 
+                string dayOfYear, 
+                string hour, 
+                string localDateTime, 
+                string millisecond, 
+                string minute, 
+                string month, 
+                string offset, 
+                string second, 
+                string ticks, 
+                string timeOfDay, 
+                string utcDateTime, 
+                string utcTicks, 
+                string year, 
+                string responseComment, 
+                string secretAccessRequestId, 
+                string startDate_date, 
+                string startDate_dateTime, 
+                string startDate_day, 
+                string startDate_dayOfWeek, 
+                string startDate_dayOfYear, 
+                string startDate_hour, 
+                string startDate_localDateTime, 
+                string startDate_millisecond, 
+                string startDate_minute, 
+                string startDate_month, 
+                string startDate_offset, 
+                string startDate_second, 
+                string startDate_ticks, 
+                string startDate_timeOfDay, 
+                string startDate_utcDateTime, 
+                string startDate_utcTicks, 
+                string startDate_year, 
+                string status) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.date = date;
+        this.dateTime = dateTime;
+        this.day = day;
+        this.dayOfWeek = dayOfWeek;
+        this.dayOfYear = dayOfYear;
+        this.hour = hour;
+        this.localDateTime = localDateTime;
+        this.millisecond = millisecond;
+        this.minute = minute;
+        this.month = month;
+        this.offset = offset;
+        this.second = second;
+        this.ticks = ticks;
+        this.timeOfDay = timeOfDay;
+        this.utcDateTime = utcDateTime;
+        this.utcTicks = utcTicks;
+        this.year = year;
+        this.responseComment = responseComment;
+        this.secretAccessRequestId = secretAccessRequestId;
+        this.startDate_date = startDate_date;
+        this.startDate_dateTime = startDate_dateTime;
+        this.startDate_day = startDate_day;
+        this.startDate_dayOfWeek = startDate_dayOfWeek;
+        this.startDate_dayOfYear = startDate_dayOfYear;
+        this.startDate_hour = startDate_hour;
+        this.startDate_localDateTime = startDate_localDateTime;
+        this.startDate_millisecond = startDate_millisecond;
+        this.startDate_minute = startDate_minute;
+        this.startDate_month = startDate_month;
+        this.startDate_offset = startDate_offset;
+        this.startDate_second = startDate_second;
+        this.startDate_ticks = startDate_ticks;
+        this.startDate_timeOfDay = startDate_timeOfDay;
+        this.startDate_utcDateTime = startDate_utcDateTime;
+        this.startDate_utcTicks = startDate_utcTicks;
+        this.startDate_year = startDate_year;
+        this.status = status;
     }
 
 
@@ -144,7 +262,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_update_report : IActivityAsync
+    public class LM_update_report : IActivityAsync
     {
 
 
@@ -26,7 +26,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string delivery = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string format = "";
     
@@ -34,13 +34,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string name_p = "";
     
-    public string recipients__ = "";
-    
-    public string addr = "";
-    
-    public string method = "";
-    
-    public string type = "";
+    public string recipients = "";
     
     public string schedule = "";
     
@@ -52,30 +46,82 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/report/reports/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/report/reports/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"delivery\": \"{0}\",  \"description\": \"{1}\",  \"format\": \"{2}\",  \"groupId\": \"{3}\",  \"name\": \"{4}\",  \"recipients\": [    {{     \"addr\": \"{5}\",      \"method\": \"{6}\",      \"type\": \"{7}\"     }}  ],  \"schedule\": \"{8}\",  \"scheduleTimezone\": \"{9}\",  \"type\": \"{10}\" }}",delivery,description,format,groupId,name_p,addr,method,type,schedule,scheduleTimezone,_type);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"delivery\": \"{0}\",  \"description\": \"{1}\",  \"format\": \"{2}\",  \"groupId\": \"{3}\",  \"name\": \"{4}\",  \"recipients\": {5},  \"schedule\": \"{6}\",  \"scheduleTimezone\": \"{7}\",  \"type\": \"{8}\" }}",delivery,description_p,format,groupId,name_p,recipients,schedule,scheduleTimezone,_type);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_update_report() {
+    }
+    
+    public LM_update_report(string endPoint, string Jsonkeypath, string accessid, string password1, string id_p, string delivery, string description_p, string format, string groupId, string name_p, string recipients, string schedule, string scheduleTimezone, string _type) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.delivery = delivery;
+        this.description_p = description_p;
+        this.format = format;
+        this.groupId = groupId;
+        this.name_p = name_p;
+        this.recipients = recipients;
+        this.schedule = schedule;
+        this.scheduleTimezone = scheduleTimezone;
+        this._type = _type;
     }
 
 
@@ -97,13 +143,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

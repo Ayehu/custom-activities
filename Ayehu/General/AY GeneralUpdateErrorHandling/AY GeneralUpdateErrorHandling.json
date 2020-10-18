@@ -1,0 +1,188 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY GeneralUpdateErrorHandling",
+    "description": "AY GeneralUpdateErrorHandling",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "action",
+          "label": "Action",
+          "labelKey": "action_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "ContinueToNextActivity",
+              "value": "ContinueToNextActivity"
+            },
+            {
+              "key": "StopWorkflowImmediately",
+              "value": "StopWorkflowImmediately"
+            },
+            {
+              "key": "StopWorkflowImmediatelyAndRunWorkflow",
+              "value": "StopWorkflowImmediatelyAndRunWorkflow"
+            },
+            {
+              "key": "RunWorkflowInBackground",
+              "value": "RunWorkflowInBackground"
+            },
+            {
+              "key": "GotoSpecificActivityInCurrentWorkflow",
+              "value": "GotoSpecificActivityInCurrentWorkflow"
+            },
+            {
+              "key": "ReturnErrorMessage",
+              "value": "ReturnErrorMessage"
+            }
+          ],
+          "value": "ContinueToNextActivity"
+        },
+        {
+          "required": false,
+          "key": "workflowId",
+          "label": "WorkflowId",
+          "labelKey": "workflowId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "workflowBackgroundId",
+          "label": "WorkflowBackgroundId",
+          "labelKey": "workflowBackgroundId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activity",
+          "label": "Activity",
+          "labelKey": "activity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "returnErrorMessage",
+          "label": "ReturnErrorMessage",
+          "labelKey": "returnErrorMessage_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "retryActivity",
+          "label": "RetryActivity",
+          "labelKey": "retryActivity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorMessages",
+          "label": "ErrorMessages[]",
+          "labelKey": "errorMessages_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "_applyForAllWorkflows",
+          "label": "_applyForAllWorkflows",
+          "labelKey": "_applyForAllWorkflows_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "errorHandlingEntity",
+          "label": "ErrorHandlingEntity",
+          "labelKey": "errorHandlingEntity_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "updateErrorHandling",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

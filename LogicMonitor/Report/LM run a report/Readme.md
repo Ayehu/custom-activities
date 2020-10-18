@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-run a report
-
-LM run a report
-
-Method: Post
-
-OperationID: generateReportById
-
-EndPoint:
-
-/report/reports/{id}/executions
+<br>#     LogicMonitor</br>
+<br>run a report</br>
+<br>LM run a report</br>
+<br>Method: Post</br>
+<br>OperationID: generateReportById</br>
+<br>EndPoint:</br>
+<br>/report/reports/{id}/executions</br>

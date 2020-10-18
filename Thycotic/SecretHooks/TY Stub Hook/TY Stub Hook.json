@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "scriptId",
           "label": "ScriptId",
           "labelKey": "scriptId_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "secretId",
           "label": "SecretId",
           "labelKey": "secretId_l",

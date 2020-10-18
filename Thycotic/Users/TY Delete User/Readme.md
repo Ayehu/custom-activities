@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Delete User
-
-Delete a user by ID
-
-Method: Delete
-
-OperationID: UsersService_Delete
-
-EndPoint:
-
-/users/{id}
+<br>#     Thycotic</br>
+<br>Delete User</br>
+<br>Delete a user by ID</br>
+<br>Method: Delete</br>
+<br>OperationID: UsersService_Delete</br>
+<br>EndPoint:</br>
+<br>/users/{id}</br>

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_User : IActivityAsync
+    public class TY_Create_User : IActivityAsync
     {
 
 
@@ -22,7 +22,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string adGuid = "";
     
-    public string displayName = "";
+    public string displayName_p = "";
     
     public string domainId = "";
     
@@ -54,28 +54,100 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/users";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/users";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"adGuid\": \"{0}\",  \"displayName\": \"{1}\",  \"domainId\": \"{2}\",  \"duoTwoFactor\": \"{3}\",  \"emailAddress\": \"{4}\",  \"enabled\": \"{5}\",  \"fido2TwoFactor\": \"{6}\",  \"isApplicationAccount\": \"{7}\",  \"oathTwoFactor\": \"{8}\",  \"password\": \"{9}\",  \"radiusTwoFactor\": \"{10}\",  \"radiusUserName\": \"{11}\",  \"twoFactor\": \"{12}\",  \"userName\": \"{13}\" }}",adGuid,displayName,domainId,duoTwoFactor,emailAddress,enabled,fido2TwoFactor,isApplicationAccount,oathTwoFactor,password,radiusTwoFactor,radiusUserName,twoFactor,userName);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"adGuid\": \"{0}\",  \"displayName\": \"{1}\",  \"domainId\": \"{2}\",  \"duoTwoFactor\": \"{3}\",  \"emailAddress\": \"{4}\",  \"enabled\": \"{5}\",  \"fido2TwoFactor\": \"{6}\",  \"isApplicationAccount\": \"{7}\",  \"oathTwoFactor\": \"{8}\",  \"password\": \"{9}\",  \"radiusTwoFactor\": \"{10}\",  \"radiusUserName\": \"{11}\",  \"twoFactor\": \"{12}\",  \"userName\": \"{13}\" }}",adGuid,displayName_p,domainId,duoTwoFactor,emailAddress,enabled,fido2TwoFactor,isApplicationAccount,oathTwoFactor,password,radiusTwoFactor,radiusUserName,twoFactor,userName);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_User() {
+    }
+    
+    public TY_Create_User(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string adGuid, 
+                string displayName_p, 
+                string domainId, 
+                string duoTwoFactor, 
+                string emailAddress, 
+                string enabled, 
+                string fido2TwoFactor, 
+                string isApplicationAccount, 
+                string oathTwoFactor, 
+                string password, 
+                string radiusTwoFactor, 
+                string radiusUserName, 
+                string twoFactor, 
+                string userName) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.adGuid = adGuid;
+        this.displayName_p = displayName_p;
+        this.domainId = domainId;
+        this.duoTwoFactor = duoTwoFactor;
+        this.emailAddress = emailAddress;
+        this.enabled = enabled;
+        this.fido2TwoFactor = fido2TwoFactor;
+        this.isApplicationAccount = isApplicationAccount;
+        this.oathTwoFactor = oathTwoFactor;
+        this.password = password;
+        this.radiusTwoFactor = radiusTwoFactor;
+        this.radiusUserName = radiusUserName;
+        this.twoFactor = twoFactor;
+        this.userName = userName;
     }
 
 
@@ -98,7 +170,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

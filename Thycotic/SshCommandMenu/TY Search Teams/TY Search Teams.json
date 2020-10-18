@@ -27,10 +27,55 @@
           "value": ""
         },
         {
-          "required": true,
-          "key": "sshCommandMenuId",
-          "label": "SshCommandMenuId",
-          "labelKey": "sshCommandMenuId_l",
+          "required": false,
+          "key": "filter_sshCommandMenuName",
+          "label": "Filter.sshCommandMenuName",
+          "labelKey": "filter_sshCommandMenuName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "skip",
+          "label": "Skip",
+          "labelKey": "skip_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__direction",
+          "label": "SortBy[0].direction",
+          "labelKey": "sortBy0_direction_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__name",
+          "label": "SortBy[0].name",
+          "labelKey": "sortBy0_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sortBy_0__priority",
+          "label": "SortBy[0].priority",
+          "labelKey": "sortBy0_priority_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "take",
+          "label": "Take",
+          "labelKey": "take_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -45,7 +90,7 @@
           "controlType": "hr"
         },
         {
-          "value": "",
+          "value": "search",
           "required": false,
           "key": "Jsonkeypath",
           "label": "Json keypath",

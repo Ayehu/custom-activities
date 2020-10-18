@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "id_p",
           "label": "Id",
           "labelKey": "id_l",
@@ -37,9 +37,18 @@
         },
         {
           "required": false,
-          "key": "data____",
-          "label": "Data[][]",
+          "key": "data",
+          "label": "Data[]",
           "labelKey": "data_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicyFolderMaps",
+          "label": "EventPipelinePolicyFolderMaps",
+          "labelKey": "eventPipelinePolicyFolderMaps_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

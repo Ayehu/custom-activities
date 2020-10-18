@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Secret Permission
-
-Update a single secret permission by ID
-
-Method: Put
-
-OperationID: SecretPermissionsService_UpdateSecretPermission
-
-EndPoint:
-
-/secret-permissions/{id}
+<br>#     Thycotic</br>
+<br>Update Secret Permission</br>
+<br>Update a single secret permission by ID</br>
+<br>Method: Put</br>
+<br>OperationID: SecretPermissionsService_UpdateSecretPermission</br>
+<br>EndPoint:</br>
+<br>/secret-permissions/{id}</br>

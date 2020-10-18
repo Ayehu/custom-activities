@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Launcher Agent Collection Stub
-
-Return the default values for a new Launcher Agent Collection
-
-Method: Get
-
-OperationID: LauncherAgentsService_Stub
-
-EndPoint:
-
-/launcheragents/collections/stub
+<br>#     Thycotic</br>
+<br>Get Launcher Agent Collection Stub</br>
+<br>Return the default values for a new Launcher Agent Collection</br>
+<br>Method: Get</br>
+<br>OperationID: LauncherAgentsService_Stub</br>
+<br>EndPoint:</br>
+<br>/launcheragents/collections/stub</br>

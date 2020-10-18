@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Secret Dependency Groups for a Secret
-
-Get Secret Dependency Groups for a Secret
-
-Method: Get
-
-OperationID: SecretDependenciesService_GetGroups
-
-EndPoint:
-
-/secret-dependencies/groups/{secretId}
+<br>#     Thycotic</br>
+<br>Get Secret Dependency Groups for a Secret</br>
+<br>Get Secret Dependency Groups for a Secret</br>
+<br>Method: Get</br>
+<br>OperationID: SecretDependenciesService_GetGroups</br>
+<br>EndPoint:</br>
+<br>/secret-dependencies/groups/{secretId}</br>

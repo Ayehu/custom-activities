@@ -91,135 +91,9 @@
         },
         {
           "required": false,
-          "key": "filters_value____",
-          "label": "Filters_value[][]",
+          "key": "filters_value",
+          "label": "Filters_value[]",
           "labelKey": "filters_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineFilterId_dirty",
-          "label": "EventPipelineFilterId_dirty",
-          "labelKey": "eventPipelineFilterId_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineFilterId_value",
-          "label": "EventPipelineFilterId_value",
-          "labelKey": "eventPipelineFilterId_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineFilterMapId_dirty",
-          "label": "EventPipelineFilterMapId_dirty",
-          "labelKey": "eventPipelineFilterMapId_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineFilterMapId_value",
-          "label": "EventPipelineFilterMapId_value",
-          "labelKey": "eventPipelineFilterMapId_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineFilterName_dirty",
-          "label": "EventPipelineFilterName_dirty",
-          "labelKey": "eventPipelineFilterName_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineFilterName_value",
-          "label": "EventPipelineFilterName_value",
-          "labelKey": "eventPipelineFilterName_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settings_dirty",
-          "label": "Settings_dirty",
-          "labelKey": "settings_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settings_value____",
-          "label": "Settings_value[][]",
-          "labelKey": "settings_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingName_dirty",
-          "label": "SettingName_dirty",
-          "labelKey": "settingName_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingName_value",
-          "label": "SettingName_value",
-          "labelKey": "settingName_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingValue_dirty",
-          "label": "SettingValue_dirty",
-          "labelKey": "settingValue_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingValue_value",
-          "label": "SettingValue_value",
-          "labelKey": "settingValue_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "sortOrder_dirty",
-          "label": "SortOrder_dirty",
-          "labelKey": "sortOrder_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "sortOrder_value",
-          "label": "SortOrder_value",
-          "labelKey": "sortOrder_value_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -235,135 +109,9 @@
         },
         {
           "required": false,
-          "key": "tasks_value____",
-          "label": "Tasks_value[][]",
+          "key": "tasks_value",
+          "label": "Tasks_value[]",
           "labelKey": "tasks_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineTaskId_dirty",
-          "label": "EventPipelineTaskId_dirty",
-          "labelKey": "eventPipelineTaskId_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineTaskId_value",
-          "label": "EventPipelineTaskId_value",
-          "labelKey": "eventPipelineTaskId_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineTaskMapId_dirty",
-          "label": "EventPipelineTaskMapId_dirty",
-          "labelKey": "eventPipelineTaskMapId_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineTaskMapId_value",
-          "label": "EventPipelineTaskMapId_value",
-          "labelKey": "eventPipelineTaskMapId_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineTaskName_dirty",
-          "label": "EventPipelineTaskName_dirty",
-          "labelKey": "eventPipelineTaskName_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventPipelineTaskName_value",
-          "label": "EventPipelineTaskName_value",
-          "labelKey": "eventPipelineTaskName_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settings_dirty",
-          "label": "Settings_dirty",
-          "labelKey": "settings_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settings_value____",
-          "label": "Settings_value[][]",
-          "labelKey": "settings_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingName_dirty",
-          "label": "SettingName_dirty",
-          "labelKey": "settingName_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingName_value",
-          "label": "SettingName_value",
-          "labelKey": "settingName_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingValue_dirty",
-          "label": "SettingValue_dirty",
-          "labelKey": "settingValue_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "settingValue_value",
-          "label": "SettingValue_value",
-          "labelKey": "settingValue_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "sortOrder_dirty",
-          "label": "SortOrder_dirty",
-          "labelKey": "sortOrder_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "sortOrder_value",
-          "label": "SortOrder_value",
-          "labelKey": "sortOrder_value_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -379,27 +127,9 @@
         },
         {
           "required": false,
-          "key": "triggers_value____",
-          "label": "Triggers_value[][]",
+          "key": "triggers_value",
+          "label": "Triggers_value[]",
           "labelKey": "triggers_value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventActionId_dirty",
-          "label": "EventActionId_dirty",
-          "labelKey": "eventActionId_dirty_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "eventActionId_value",
-          "label": "EventActionId_value",
-          "labelKey": "eventActionId_value_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -409,6 +139,15 @@
           "key": "eventPipelinePolicyId",
           "label": "EventPipelinePolicyId",
           "labelKey": "eventPipelinePolicyId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

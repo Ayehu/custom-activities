@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-delete alert rule
-
-LM delete alert rule
-
-Method: Delete
-
-OperationID: deleteAlertRuleById
-
-EndPoint:
-
-/setting/alert/rules/{id}
+<br>#     LogicMonitor</br>
+<br>delete alert rule</br>
+<br>LM delete alert rule</br>
+<br>Method: Delete</br>
+<br>OperationID: deleteAlertRuleById</br>
+<br>EndPoint:</br>
+<br>/setting/alert/rules/{id}</br>

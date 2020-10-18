@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-delete user
-
-LM delete user
-
-Method: Delete
-
-OperationID: deleteAdminById
-
-EndPoint:
-
-/setting/admins/{id}
+<br>#     LogicMonitor</br>
+<br>delete user</br>
+<br>LM delete user</br>
+<br>Method: Delete</br>
+<br>OperationID: deleteAdminById</br>
+<br>EndPoint:</br>
+<br>/setting/admins/{id}</br>

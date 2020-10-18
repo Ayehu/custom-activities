@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "folderId",
           "label": "FolderId",
           "labelKey": "folderId_l",

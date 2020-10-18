@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Dual Control Stub
-
-Return the default values for a new dual control
-
-Method: Get
-
-OperationID: DualControlsService_Stub
-
-EndPoint:
-
-/dual-controls/stub
+<br>#     Thycotic</br>
+<br>Get Dual Control Stub</br>
+<br>Return the default values for a new dual control</br>
+<br>Method: Get</br>
+<br>OperationID: DualControlsService_Stub</br>
+<br>EndPoint:</br>
+<br>/dual-controls/stub</br>

@@ -7,72 +7,20 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Lookup_Secrets : IActivityAsync
+    public class TY_Lookup_Secrets : IActivityAsync
     {
 
 
     
     public string endPoint = "https://{hostname}";
     
-    public string Jsonkeypath = "lookup";
+    public string Jsonkeypath = "";
     
     public string password1 = "";
     
-    public string filter_allowDoubleLocks = "";
-    
-    public string filter_doNotCalculateTotal = "";
-    
-    public string filter_doubleLockId = "";
-    
-    public string filter_extendedFields = "";
-    
-    public string filter_extendedTypeId = "";
-    
-    public string filter_folderId = "";
-    
-    public string filter_heartbeatStatus = "";
-    
-    public string filter_includeActive = "";
-    
-    public string filter_includeInactive = "";
-    
-    public string filter_includeRestricted = "";
-    
-    public string filter_includeSubFolders = "";
-    
-    public string filter_isExactMatch = "";
-    
-    public string filter_onlyRPCEnabled = "";
-    
-    public string filter_onlySharedWithMe = "";
-    
-    public string filter_passwordTypeIds = "";
-    
-    public string filter_permissionRequired = "";
-    
-    public string filter_scope = "";
-    
-    public string filter_searchField = "";
-    
-    public string filter_searchFieldSlug = "";
-    
-    public string filter_searchText = "";
-    
-    public string filter_secretTemplateId = "";
-    
-    public string filter_siteId = "";
-    
-    public string skip = "";
-    
-    public string sortBy_0__direction = "";
-    
-    public string sortBy_0__name = "";
-    
-    public string sortBy_0__priority = "";
-    
-    public string take = "";
+    public string id_p = "";
     
     private bool omitJsonEmptyorNull = true;
     
@@ -80,28 +28,70 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "GET";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/secrets/lookup";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/secrets/lookup/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return "";
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = "";
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {{"filter.allowDoubleLocks",filter_allowDoubleLocks},{"filter.doNotCalculateTotal",filter_doNotCalculateTotal},{"filter.doubleLockId",filter_doubleLockId},{"filter.extendedFields[]",filter_extendedFields},{"filter.extendedTypeId",filter_extendedTypeId},{"filter.folderId",filter_folderId},{"filter.heartbeatStatus",filter_heartbeatStatus},{"filter.includeActive",filter_includeActive},{"filter.includeInactive",filter_includeInactive},{"filter.includeRestricted",filter_includeRestricted},{"filter.includeSubFolders",filter_includeSubFolders},{"filter.isExactMatch",filter_isExactMatch},{"filter.onlyRPCEnabled",filter_onlyRPCEnabled},{"filter.onlySharedWithMe",filter_onlySharedWithMe},{"filter.passwordTypeIds[]",filter_passwordTypeIds},{"filter.permissionRequired",filter_permissionRequired},{"filter.scope",filter_scope},{"filter.searchField",filter_searchField},{"filter.searchFieldSlug",filter_searchFieldSlug},{"filter.searchText",filter_searchText},{"filter.secretTemplateId",filter_secretTemplateId},{"filter.siteId",filter_siteId},{"skip",skip},{"sortBy[0].direction",sortBy_0__direction},{"sortBy[0].name",sortBy_0__name},{"sortBy[0].priority",sortBy_0__priority},{"take",take}};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Lookup_Secrets() {
+    }
+    
+    public TY_Lookup_Secrets(string endPoint, string Jsonkeypath, string password1, string id_p) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
     }
 
 
@@ -124,7 +114,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

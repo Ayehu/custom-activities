@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Secret Field
-
-Update a secret data field
-
-Method: Put
-
-OperationID: SecretsService_PutField
-
-EndPoint:
-
-/secrets/{id}/fields/{slug}
+<br>#     Thycotic</br>
+<br>Update Secret Field</br>
+<br>Update a secret data field</br>
+<br>Method: Put</br>
+<br>OperationID: SecretsService_PutField</br>
+<br>EndPoint:</br>
+<br>/secrets/{id}/fields/{slug}</br>

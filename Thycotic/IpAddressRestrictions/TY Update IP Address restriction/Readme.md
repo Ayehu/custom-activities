@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update IP Address restriction
-
-Update a new IP Address restriction
-
-Method: Put
-
-OperationID: IpAddressRestrictionsService_Update
-
-EndPoint:
-
-/ipaddress-restrictions/{id}
+<br>#     Thycotic</br>
+<br>Update IP Address restriction</br>
+<br>Update a new IP Address restriction</br>
+<br>Method: Put</br>
+<br>OperationID: IpAddressRestrictionsService_Update</br>
+<br>EndPoint:</br>
+<br>/ipaddress-restrictions/{id}</br>

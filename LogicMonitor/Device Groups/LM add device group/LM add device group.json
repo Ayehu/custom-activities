@@ -18,7 +18,7 @@
           "controlType": "textbox"
         },
         {
-          "required": true,
+          "required": false,
           "key": "accessid",
           "label": "Accessid",
           "labelKey": "accessid_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Accesskey",
           "labelKey": "accesskey_l",
@@ -55,8 +55,8 @@
         },
         {
           "required": false,
-          "key": "noPermissionServices____",
-          "label": "NoPermissionServices[][]",
+          "key": "noPermissionServices",
+          "label": "NoPermissionServices[]",
           "labelKey": "noPermissionServices_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -64,8 +64,8 @@
         },
         {
           "required": false,
-          "key": "nonPermissionErrors____",
-          "label": "NonPermissionErrors[][]",
+          "key": "nonPermissionErrors",
+          "label": "NonPermissionErrors[]",
           "labelKey": "nonPermissionErrors_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -73,27 +73,9 @@
         },
         {
           "required": false,
-          "key": "customProperties____",
-          "label": "CustomProperties[][]",
+          "key": "customProperties",
+          "label": "CustomProperties[]",
           "labelKey": "customProperties_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "name_p",
-          "label": "Name",
-          "labelKey": "name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
-          "key": "value",
-          "label": "Value",
-          "labelKey": "value_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -109,7 +91,7 @@
         },
         {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -145,8 +127,8 @@
         },
         {
           "required": false,
-          "key": "noPermissionServices____",
-          "label": "NoPermissionServices[][]",
+          "key": "noPermissionServices",
+          "label": "NoPermissionServices[]",
           "labelKey": "noPermissionServices_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -154,8 +136,8 @@
         },
         {
           "required": false,
-          "key": "nonPermissionErrors____",
-          "label": "NonPermissionErrors[][]",
+          "key": "nonPermissionErrors",
+          "label": "NonPermissionErrors[]",
           "labelKey": "nonPermissionErrors_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -171,7 +153,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "_name",
           "label": "_name",
           "labelKey": "_name_l",
@@ -184,6 +166,15 @@
           "key": "parentId",
           "label": "ParentId",
           "labelKey": "parentId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

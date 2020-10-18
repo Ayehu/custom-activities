@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Update_a_Workflow_Template : IActivityAsync
+    public class TY_Update_a_Workflow_Template : IActivityAsync
     {
 
 
@@ -52,28 +52,98 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("SecretServer/api/v1/workflows/templates/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("SecretServer/api/v1/workflows/templates/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"active\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"configurationJson\": {{   \"dirty\": \"{2}\",    \"value\": \"{3}\"   }},  \"description\": {{   \"dirty\": \"{4}\",    \"value\": \"{5}\"   }},  \"expirationMinutes\": {{   \"dirty\": \"{6}\",    \"value\": \"{7}\"   }},  \"isCopy\": {{   \"dirty\": \"{8}\",    \"value\": \"{9}\"   }},  \"name\": {{   \"dirty\": \"{10}\",    \"value\": \"{11}\"   }} }}",dirty,value,configurationJson_dirty,configurationJson_value,description_dirty,description_value,expirationMinutes_dirty,expirationMinutes_value,isCopy_dirty,isCopy_value,name_dirty,name_value);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"active\": {{   \"dirty\": \"{0}\",    \"value\": \"{1}\"   }},  \"configurationJson\": {{   \"dirty\": \"{2}\",    \"value\": \"{3}\"   }},  \"description\": {{   \"dirty\": \"{4}\",    \"value\": \"{5}\"   }},  \"expirationMinutes\": {{   \"dirty\": \"{6}\",    \"value\": \"{7}\"   }},  \"isCopy\": {{   \"dirty\": \"{8}\",    \"value\": \"{9}\"   }},  \"name\": {{   \"dirty\": \"{10}\",    \"value\": \"{11}\"   }} }}",dirty,value,configurationJson_dirty,configurationJson_value,description_dirty,description_value,expirationMinutes_dirty,expirationMinutes_value,isCopy_dirty,isCopy_value,name_dirty,name_value);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Update_a_Workflow_Template() {
+    }
+    
+    public TY_Update_a_Workflow_Template(
+                string endPoint, 
+                string Jsonkeypath, 
+                string password1, 
+                string id_p, 
+                string dirty, 
+                string value, 
+                string configurationJson_dirty, 
+                string configurationJson_value, 
+                string description_dirty, 
+                string description_value, 
+                string expirationMinutes_dirty, 
+                string expirationMinutes_value, 
+                string isCopy_dirty, 
+                string isCopy_value, 
+                string name_dirty, 
+                string name_value) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.dirty = dirty;
+        this.value = value;
+        this.configurationJson_dirty = configurationJson_dirty;
+        this.configurationJson_value = configurationJson_value;
+        this.description_dirty = description_dirty;
+        this.description_value = description_value;
+        this.expirationMinutes_dirty = expirationMinutes_dirty;
+        this.expirationMinutes_value = expirationMinutes_value;
+        this.isCopy_dirty = isCopy_dirty;
+        this.isCopy_value = isCopy_value;
+        this.name_dirty = name_dirty;
+        this.name_value = name_value;
     }
 
 
@@ -96,7 +166,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

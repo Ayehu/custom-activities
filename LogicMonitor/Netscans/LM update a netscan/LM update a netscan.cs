@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_update_a_netscan : IActivityAsync
+    public class LM_update_a_netscan : IActivityAsync
     {
 
 
@@ -21,8 +21,6 @@ namespace Ayehu.Sdk.ActivityCreation
     public string accessid = "";
     
     public string password1 = "";
-    
-    public string reason = "";
     
     public string id_p = "";
     
@@ -36,13 +34,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string creator = "";
     
-    public string description = "";
+    public string description_p = "";
     
-    public string collectors__ = "";
-    
-    public string groups__ = "";
-    
-    public string type = "";
+    public string type_p = "";
     
     public string group = "";
     
@@ -62,8 +56,6 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string notify = "";
     
-    public string recipients__ = "";
-    
     public string timezone = "";
     
     public string schedule_type = "";
@@ -74,30 +66,116 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/setting/netscans/{0}",id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/setting/netscans/{0}",id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"collector\": \"{0}\",  \"collectorDescription\": \"{1}\",  \"collectorGroup\": \"{2}\",  \"collectorGroupName\": \"{3}\",  \"creator\": \"{4}\",  \"description\": \"{5}\",  \"duplicate\": {{   \"type\": \"{6}\"   }},  \"group\": \"{7}\",  \"id\": \"{8}\",  \"method\": \"{9}\",  \"name\": \"{10}\",  \"nextStart\": \"{11}\",  \"nextStartEpoch\": \"{12}\",  \"nsgId\": \"{13}\",  \"schedule\": {{   \"cron\": \"{14}\",    \"notify\": \"{15}\",    \"timezone\": \"{16}\",    \"type\": \"{17}\"   }},  \"version\": \"{18}\" }}",collector,collectorDescription,collectorGroup,collectorGroupName,creator,description,type,group,_id,method,name_p,nextStart,nextStartEpoch,nsgId,cron,notify,timezone,schedule_type,version);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"collector\": \"{0}\",  \"collectorDescription\": \"{1}\",  \"collectorGroup\": \"{2}\",  \"collectorGroupName\": \"{3}\",  \"creator\": \"{4}\",  \"description\": \"{5}\",  \"duplicate\": {{   \"type\": \"{6}\"   }},  \"group\": \"{7}\",  \"id\": \"{8}\",  \"method\": \"{9}\",  \"name\": \"{10}\",  \"nextStart\": \"{11}\",  \"nextStartEpoch\": \"{12}\",  \"nsgId\": \"{13}\",  \"schedule\": {{   \"cron\": \"{14}\",    \"notify\": \"{15}\",    \"timezone\": \"{16}\",    \"type\": \"{17}\"   }},  \"version\": \"{18}\" }}",collector,collectorDescription,collectorGroup,collectorGroupName,creator,description_p,type_p,group,_id,method,name_p,nextStart,nextStartEpoch,nsgId,cron,notify,timezone,schedule_type,version);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_update_a_netscan() {
+    }
+    
+    public LM_update_a_netscan(
+                string endPoint, 
+                string Jsonkeypath, 
+                string accessid, 
+                string password1, 
+                string id_p, 
+                string collector, 
+                string collectorDescription, 
+                string collectorGroup, 
+                string collectorGroupName, 
+                string creator, 
+                string description_p, 
+                string type_p, 
+                string group, 
+                string _id, 
+                string method, 
+                string name_p, 
+                string nextStart, 
+                string nextStartEpoch, 
+                string nsgId, 
+                string cron, 
+                string notify, 
+                string timezone, 
+                string schedule_type, 
+                string version) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.id_p = id_p;
+        this.collector = collector;
+        this.collectorDescription = collectorDescription;
+        this.collectorGroup = collectorGroup;
+        this.collectorGroupName = collectorGroupName;
+        this.creator = creator;
+        this.description_p = description_p;
+        this.type_p = type_p;
+        this.group = group;
+        this._id = _id;
+        this.method = method;
+        this.name_p = name_p;
+        this.nextStart = nextStart;
+        this.nextStartEpoch = nextStartEpoch;
+        this.nsgId = nsgId;
+        this.cron = cron;
+        this.notify = notify;
+        this.timezone = timezone;
+        this.schedule_type = schedule_type;
+        this.version = version;
     }
 
 
@@ -119,13 +197,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 

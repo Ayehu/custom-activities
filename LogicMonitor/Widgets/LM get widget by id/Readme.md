@@ -1,14 +1,7 @@
-#     LogicMonitor
-
-
-get widget by id
-
-LM get widget by id
-
-Method: Get
-
-OperationID: getWidgetById
-
-EndPoint:
-
-/dashboard/widgets/{id}
+<br>#     LogicMonitor</br>
+<br>get widget by id</br>
+<br>LM get widget by id</br>
+<br>Method: Get</br>
+<br>OperationID: getWidgetById</br>
+<br>EndPoint:</br>
+<br>/dashboard/widgets/{id}</br>

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Thycotic
 {
-    public class CustomActivity_TY_Create_a_new_Secret_Access_Request : IActivityAsync
+    public class TY_Create_a_new_Secret_Access_Request : IActivityAsync
     {
 
 
@@ -38,28 +38,75 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "SecretServer/api/v1/secret-access-requests";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "SecretServer/api/v1/secret-access-requests";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"expirationDate\": \"{0}\",  \"requestComment\": \"{1}\",  \"secretId\": \"{2}\",  \"startDate\": \"{3}\",  \"ticketNumber\": \"{4}\",  \"ticketSystemId\": \"{5}\" }}",expirationDate,requestComment,secretId,startDate,ticketNumber,ticketSystemId);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"expirationDate\": \"{0}\",  \"requestComment\": \"{1}\",  \"secretId\": \"{2}\",  \"startDate\": \"{3}\",  \"ticketNumber\": \"{4}\",  \"ticketSystemId\": \"{5}\" }}",expirationDate,requestComment,secretId,startDate,ticketNumber,ticketSystemId);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"Authorization","Bearer " + password1}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"Authorization","Bearer " + password1} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public TY_Create_a_new_Secret_Access_Request() {
+    }
+    
+    public TY_Create_a_new_Secret_Access_Request(string endPoint, string Jsonkeypath, string password1, string expirationDate, string requestComment, string secretId, string startDate, string ticketNumber, string ticketSystemId) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.password1 = password1;
+        this.expirationDate = expirationDate;
+        this.requestComment = requestComment;
+        this.secretId = secretId;
+        this.startDate = startDate;
+        this.ticketNumber = ticketNumber;
+        this.ticketSystemId = ticketSystemId;
     }
 
 
@@ -82,7 +129,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

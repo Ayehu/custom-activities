@@ -1,0 +1,245 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AY RecipientAccountUpdateUser",
+    "description": "AY RecipientAccountUpdateUser",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}:8442",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fName",
+          "label": "FName",
+          "labelKey": "fName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "lName",
+          "label": "LName",
+          "labelKey": "lName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "email",
+          "label": "Email",
+          "labelKey": "email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "mobilePhoneNumber",
+          "label": "MobilePhoneNumber",
+          "labelKey": "mobilePhoneNumber_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "roleId",
+          "label": "RoleId",
+          "labelKey": "roleId_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "All",
+              "value": "All"
+            },
+            {
+              "key": "Administrator",
+              "value": "Administrator"
+            },
+            {
+              "key": "Operator",
+              "value": "Operator"
+            },
+            {
+              "key": "AdvancedUser",
+              "value": "AdvancedUser"
+            },
+            {
+              "key": "Recipient",
+              "value": "Recipient"
+            },
+            {
+              "key": "Specialist",
+              "value": "Specialist"
+            },
+            {
+              "key": "WorkflowEditor",
+              "value": "WorkflowEditor"
+            },
+            {
+              "key": "NoLicense",
+              "value": "NoLicense"
+            },
+            {
+              "key": "SelfServiceUser",
+              "value": "SelfServiceUser"
+            }
+          ],
+          "value": "All"
+        },
+        {
+          "required": false,
+          "key": "roleName",
+          "label": "RoleName",
+          "labelKey": "roleName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "activeDirectoryId",
+          "label": "ActiveDirectoryId",
+          "labelKey": "activeDirectoryId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ayehuIm",
+          "label": "AyehuIm",
+          "labelKey": "ayehuIm_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "employeeNumber",
+          "label": "EmployeeNumber",
+          "labelKey": "employeeNumber_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userGroups",
+          "label": "UserGroups[]",
+          "labelKey": "userGroups_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "_domainId",
+          "label": "_domainId",
+          "labelKey": "_domainId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "_domainName",
+          "label": "_domainName",
+          "labelKey": "_domainName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "isPasswordEncrypted",
+          "label": "IsPasswordEncrypted",
+          "labelKey": "isPasswordEncrypted_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userModel",
+          "label": "UserModel",
+          "labelKey": "userModel_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "updateUser",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "pipelineId",
           "label": "PipelineId",
           "labelKey": "pipelineId_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "policyId",
           "label": "PolicyId",
           "labelKey": "policyId_l",

@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Test Event Log
-
-Test Event Log
-
-Method: Post
-
-OperationID: DiagnosticsService_TestEventLog
-
-EndPoint:
-
-/diagnostics/test-event-log
+<br>#     Thycotic</br>
+<br>Test Event Log</br>
+<br>Test Event Log</br>
+<br>Method: Post</br>
+<br>OperationID: DiagnosticsService_TestEventLog</br>
+<br>EndPoint:</br>
+<br>/diagnostics/test-event-log</br>

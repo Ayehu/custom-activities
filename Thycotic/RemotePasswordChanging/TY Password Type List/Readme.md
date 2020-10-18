@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Password Type List
-
-Lists Available Password Types
-
-Method: Get
-
-OperationID: RemotePasswordChangingService_GetPasswordTypeList
-
-EndPoint:
-
-/remote-password-changing/password-types
+<br>#     Thycotic</br>
+<br>Password Type List</br>
+<br>Lists Available Password Types</br>
+<br>Method: Get</br>
+<br>OperationID: RemotePasswordChangingService_GetPasswordType</br>
+<br>EndPoint:</br>
+<br>/remote-password-changing/password-types/{id}</br>

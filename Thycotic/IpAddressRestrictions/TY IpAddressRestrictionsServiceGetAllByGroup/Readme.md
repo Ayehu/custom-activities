@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Search IP Address restrictions assigned to a group
-
-Search, filter, sort, and page IP Address restriction assigned to a group
-
-Method: Get
-
-OperationID: IpAddressRestrictionsService_GetAllByGroup
-
-EndPoint:
-
-/groups/{id}/ipaddress-restrictions
+<br>#     Thycotic</br>
+<br>Search IP Address restrictions assigned to a group</br>
+<br>Search, filter, sort, and page IP Address restriction assigned to a group</br>
+<br>Method: Get</br>
+<br>OperationID: IpAddressRestrictionsService_GetAllByGroup</br>
+<br>EndPoint:</br>
+<br>/groups/{id}/ipaddress-restrictions</br>

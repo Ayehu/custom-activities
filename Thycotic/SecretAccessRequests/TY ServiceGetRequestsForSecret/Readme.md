@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Get Secret Access Requests by Status for Current User.
-
-Get Secret Access Requests by Status for Current User.
-
-Method: Get
-
-OperationID: SecretAccessRequestsService_GetRequestsForSecret
-
-EndPoint:
-
-/secret-access-requests/secrets/{id}
+<br>#     Thycotic</br>
+<br>Get Secret Access Requests by Status for Current User.</br>
+<br>Get Secret Access Requests by Status for Current User.</br>
+<br>Method: Get</br>
+<br>OperationID: SecretAccessRequestsService_GetRequestsForSecret</br>
+<br>EndPoint:</br>
+<br>/secret-access-requests/secrets/{id}</br>

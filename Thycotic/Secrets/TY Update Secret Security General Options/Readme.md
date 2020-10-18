@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-Update Secret Security General Options
-
-Update Secret Security General Options
-
-Method: Patch
-
-OperationID: SecretsService_UpdateSecurity
-
-EndPoint:
-
-/secrets/{id}/security-general
+<br>#     Thycotic</br>
+<br>Update Secret Security General Options</br>
+<br>Update Secret Security General Options</br>
+<br>Method: Patch</br>
+<br>OperationID: SecretsService_UpdateSecurity</br>
+<br>EndPoint:</br>
+<br>/secrets/{id}/security-general</br>

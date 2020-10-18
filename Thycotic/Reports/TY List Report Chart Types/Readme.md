@@ -1,14 +1,7 @@
-#     Thycotic
-
-
-List Report Chart Types
-
-List the report chart types
-
-Method: Get
-
-OperationID: ReportsService_GetChartTypes
-
-EndPoint:
-
-/reports/charttypes
+<br>#     Thycotic</br>
+<br>List Report Chart Types</br>
+<br>List the report chart types</br>
+<br>Method: Get</br>
+<br>OperationID: ReportsService_GetChartTypes</br>
+<br>EndPoint:</br>
+<br>/reports/charttypes</br>

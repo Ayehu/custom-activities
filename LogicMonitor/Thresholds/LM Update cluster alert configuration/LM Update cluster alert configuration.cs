@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.LogicMonitor
 {
-    public class CustomActivity_LM_Update_cluster_alert_configuration : IActivityAsync
+    public class LM_Update_cluster_alert_configuration : IActivityAsync
     {
 
 
@@ -46,30 +46,82 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string contentType = "application/json";
     
-    private string httpMethod = "PUT";
+    private string httpMethod = "PATCH";
+    
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
     
     private string uriBuilderPath {
         get {
-            return string.Format("/device/groups/{0}/clusterAlertConf/{1}",deviceGroupId,id_p);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("/device/groups/{0}/clusterAlertConf/{1}",deviceGroupId,id_p);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{ \"alertExpr\": \"{0}\",  \"countBy\": \"{1}\",  \"dataSourceDisplayName\": \"{2}\",  \"dataSourceId\": \"{3}\",  \"disableAlerting\": \"{4}\",  \"minAlertLevel\": \"{5}\",  \"suppressIndAlert\": \"{6}\",  \"thresholdType\": \"{7}\" }}",alertExpr,countBy,dataSourceDisplayName,dataSourceId,disableAlerting,minAlertLevel,suppressIndAlert,thresholdType);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"alertExpr\": \"{0}\",  \"countBy\": \"{1}\",  \"dataSourceDisplayName\": \"{2}\",  \"dataSourceId\": \"{3}\",  \"disableAlerting\": \"{4}\",  \"minAlertLevel\": \"{5}\",  \"suppressIndAlert\": \"{6}\",  \"thresholdType\": \"{7}\" }}",alertExpr,countBy,dataSourceDisplayName,dataSourceId,disableAlerting,minAlertLevel,suppressIndAlert,thresholdType);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() {  };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public LM_Update_cluster_alert_configuration() {
+    }
+    
+    public LM_Update_cluster_alert_configuration(string endPoint, string Jsonkeypath, string accessid, string password1, string deviceGroupId, string id_p, string alertExpr, string countBy, string dataSourceDisplayName, string dataSourceId, string disableAlerting, string minAlertLevel, string suppressIndAlert, string thresholdType) {
+        this.endPoint = endPoint;
+        this.Jsonkeypath = Jsonkeypath;
+        this.accessid = accessid;
+        this.password1 = password1;
+        this.deviceGroupId = deviceGroupId;
+        this.id_p = id_p;
+        this.alertExpr = alertExpr;
+        this.countBy = countBy;
+        this.dataSourceDisplayName = dataSourceDisplayName;
+        this.dataSourceId = dataSourceId;
+        this.disableAlerting = disableAlerting;
+        this.minAlertLevel = minAlertLevel;
+        this.suppressIndAlert = suppressIndAlert;
+        this.thresholdType = thresholdType;
     }
 
 
@@ -91,13 +143,14 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                if (omitJsonEmptyorNull)
                   data = AyehuHelper.omitJsonEmptyorNull(postData);
-                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, "application/json");
+                  myHttpRequestMessage.Content = new StringContent(data, Encoding.UTF8, contentType);
             }
                
             var epoch = (long)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalMilliseconds;
             var authHeaderValue = string.Format("LMv1 {0}:{1}:{2}", accessid, GenerateSignature(epoch, httpMethod, data, uriBuilderPath, password1), epoch);
 
             client.DefaultRequestHeaders.Add("Authorization", authHeaderValue);
+            client.DefaultRequestHeaders.Add("X-Version", "2");
 
             HttpResponseMessage response = client.SendAsync(myHttpRequestMessage).Result;
 
