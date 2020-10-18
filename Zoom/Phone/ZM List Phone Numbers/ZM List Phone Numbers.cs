@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_List_Phone_Numbers : IActivityAsync
+    public class ZM_List_Phone_Numbers : IActivityAsync
     {
 
 
@@ -22,7 +22,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string next_page_token = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string extension_type = "";
     
@@ -40,28 +40,75 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "GET";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "v2/phone/numbers";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "v2/phone/numbers";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return "";
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = "";
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {{"next_page_token",next_page_token},{"type",type},{"extension_type",extension_type},{"page_size",page_size},{"number_type",number_type},{"pending_numbers",pending_numbers}};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() { {"next_page_token",next_page_token},{"type",type_p},{"extension_type",extension_type},{"page_size",page_size},{"number_type",number_type},{"pending_numbers",pending_numbers} };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_List_Phone_Numbers() {
+    }
+    
+    public ZM_List_Phone_Numbers(string Jsonkeypath, string apikey, string password1, string next_page_token, string type_p, string extension_type, string page_size, string number_type, string pending_numbers) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.next_page_token = next_page_token;
+        this.type_p = type_p;
+        this.extension_type = extension_type;
+        this.page_size = page_size;
+        this.number_type = number_type;
+        this.pending_numbers = pending_numbers;
     }
 
 
@@ -84,7 +131,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

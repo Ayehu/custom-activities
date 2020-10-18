@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "meetingId",
           "label": "MeetingId",
           "labelKey": "meetingId_l",
@@ -37,8 +37,8 @@
         },
         {
           "required": false,
-          "key": "questions____",
-          "label": "Questions[][]",
+          "key": "questions",
+          "label": "Questions[]",
           "labelKey": "questions_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -46,84 +46,8 @@
         },
         {
           "required": false,
-          "key": "field_name",
-          "label": "Field_name",
-          "labelKey": "field_name_l",
-          "baseType": "control",
-          "controlType": "autocomplete",
-          "controlOptions": [
-            {
-              "key": "last_name",
-              "value": "last_name"
-            },
-            {
-              "key": "address",
-              "value": "address"
-            },
-            {
-              "key": "city",
-              "value": "city"
-            },
-            {
-              "key": "country",
-              "value": "country"
-            },
-            {
-              "key": "zip",
-              "value": "zip"
-            },
-            {
-              "key": "state",
-              "value": "state"
-            },
-            {
-              "key": "phone",
-              "value": "phone"
-            },
-            {
-              "key": "industry",
-              "value": "industry"
-            },
-            {
-              "key": "org",
-              "value": "org"
-            },
-            {
-              "key": "job_title",
-              "value": "job_title"
-            },
-            {
-              "key": "purchasing_time_frame",
-              "value": "purchasing_time_frame"
-            },
-            {
-              "key": "role_in_purchase_process",
-              "value": "role_in_purchase_process"
-            },
-            {
-              "key": "no_of_employees",
-              "value": "no_of_employees"
-            },
-            {
-              "key": "comments",
-              "value": "comments"
-            }
-          ],
-          "value": "last_name"
-        },
-        {
-          "required": false,
-          "key": "required",
-          "label": "Required",
-          "labelKey": "required_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "custom_questions____",
-          "label": "Custom_questions[][]",
+          "key": "custom_questions",
+          "label": "Custom_questions[]",
           "labelKey": "custom_questions_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -131,50 +55,9 @@
         },
         {
           "required": false,
-          "key": "title",
-          "label": "Title",
-          "labelKey": "title_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "type",
-          "label": "Type",
-          "labelKey": "type_l",
-          "baseType": "control",
-          "controlType": "autocomplete",
-          "controlOptions": [
-            {
-              "key": "short",
-              "value": "short"
-            },
-            {
-              "key": "single",
-              "value": "single"
-            },
-            {
-              "key": "multiple",
-              "value": "multiple"
-            }
-          ],
-          "value": "short"
-        },
-        {
-          "required": false,
-          "key": "custom_questions_required",
-          "label": "Custom_questions_required",
-          "labelKey": "custom_questions_required_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "answers____",
-          "label": "Answers[][]",
-          "labelKey": "answers_l",
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

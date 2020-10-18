@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "fieldId",
           "label": "FieldId",
           "labelKey": "fieldId_l",
@@ -55,7 +55,7 @@
         },
         {
           "required": false,
-          "key": "visible",
+          "key": "visible_p",
           "label": "Visible",
           "labelKey": "visible_l",
           "baseType": "control",
@@ -64,9 +64,18 @@
         },
         {
           "required": false,
-          "key": "recommended_values____",
-          "label": "Recommended_values[][]",
+          "key": "recommended_values",
+          "label": "Recommended_values[]",
           "labelKey": "recommended_values_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

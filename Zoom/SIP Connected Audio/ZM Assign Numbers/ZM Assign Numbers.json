@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "accountId",
           "label": "AccountId",
           "labelKey": "accountId_l",
@@ -37,9 +37,18 @@
         },
         {
           "required": false,
-          "key": "phone_numbers____",
-          "label": "Phone_numbers[][]",
+          "key": "phone_numbers",
+          "label": "Phone_numbers[]",
           "labelKey": "phone_numbers_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

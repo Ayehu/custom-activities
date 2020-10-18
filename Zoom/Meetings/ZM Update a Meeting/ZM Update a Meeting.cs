@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Update_a_Meeting : IActivityAsync
+    public class ZM_Update_a_Meeting : IActivityAsync
     {
 
 
@@ -22,13 +22,11 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string meetingId = "";
     
-    public string occurrence_id = "";
-    
     public string schedule_for = "";
     
     public string topic = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string start_time = "";
     
@@ -40,11 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string agenda = "";
     
-    public string tracking_fields__ = "";
-    
-    public string field = "";
-    
-    public string value = "";
+    public string tracking_fields = "";
     
     public string recurrence_type = "";
     
@@ -70,28 +64,108 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/meetings/{0}",meetingId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/meetings/{0}",meetingId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"schedule_for\": \"{0}\",   \"topic\": \"{1}\",   \"type\": \"{2}\",   \"start_time\": \"{3}\",   \"duration\": \"{4}\",   \"timezone\": \"{5}\",   \"password\": \"{6}\",   \"agenda\": \"{7}\",   \"tracking_fields\": [     {{       \"field\": \"{8}\",       \"value\": \"{9}\"     }}   ],   \"recurrence\": {{     \"type\": \"{10}\",     \"repeat_interval\": \"{11}\",     \"weekly_days\": \"{12}\",     \"monthly_day\": \"{13}\",     \"monthly_week\": \"{14}\",     \"monthly_week_day\": \"{15}\",     \"end_times\": \"{16}\",     \"end_date_time\": \"{17}\"   }} }}",schedule_for,topic,type,start_time,duration,timezone,password,agenda,field,value,recurrence_type,repeat_interval,weekly_days,monthly_day,monthly_week,monthly_week_day,end_times,end_date_time);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"schedule_for\": \"{0}\",  \"topic\": \"{1}\",  \"type\": \"{2}\",  \"start_time\": \"{3}\",  \"duration\": \"{4}\",  \"timezone\": \"{5}\",  \"password\": \"{6}\",  \"agenda\": \"{7}\",  \"tracking_fields\": {8},  \"recurrence\": {{   \"type\": \"{9}\",    \"repeat_interval\": \"{10}\",    \"weekly_days\": \"{11}\",    \"monthly_day\": \"{12}\",    \"monthly_week\": \"{13}\",    \"monthly_week_day\": \"{14}\",    \"end_times\": \"{15}\",    \"end_date_time\": \"{16}\"   }} }}",schedule_for,topic,type_p,start_time,duration,timezone,password,agenda,tracking_fields,recurrence_type,repeat_interval,weekly_days,monthly_day,monthly_week,monthly_week_day,end_times,end_date_time);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Update_a_Meeting() {
+    }
+    
+    public ZM_Update_a_Meeting(
+                string Jsonkeypath, 
+                string apikey, 
+                string password1, 
+                string meetingId, 
+                string schedule_for, 
+                string topic, 
+                string type_p, 
+                string start_time, 
+                string duration, 
+                string timezone, 
+                string password, 
+                string agenda, 
+                string tracking_fields, 
+                string recurrence_type, 
+                string repeat_interval, 
+                string weekly_days, 
+                string monthly_day, 
+                string monthly_week, 
+                string monthly_week_day, 
+                string end_times, 
+                string end_date_time) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.meetingId = meetingId;
+        this.schedule_for = schedule_for;
+        this.topic = topic;
+        this.type_p = type_p;
+        this.start_time = start_time;
+        this.duration = duration;
+        this.timezone = timezone;
+        this.password = password;
+        this.agenda = agenda;
+        this.tracking_fields = tracking_fields;
+        this.recurrence_type = recurrence_type;
+        this.repeat_interval = repeat_interval;
+        this.weekly_days = weekly_days;
+        this.monthly_day = monthly_day;
+        this.monthly_week = monthly_week;
+        this.monthly_week_day = monthly_week_day;
+        this.end_times = end_times;
+        this.end_date_time = end_date_time;
     }
 
 
@@ -114,7 +188,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

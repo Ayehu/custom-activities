@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Create_a_Meeting : IActivityAsync
+    public class ZM_Create_a_Meeting : IActivityAsync
     {
 
 
@@ -24,7 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string topic = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string start_time = "";
     
@@ -36,11 +36,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string agenda = "";
     
-    public string tracking_fields__ = "";
-    
-    public string field = "";
-    
-    public string value = "";
+    public string tracking_fields = "";
     
     public string recurrence_type = "";
     
@@ -92,8 +88,6 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string waiting_room = "";
     
-    public string global_dial_in_countries__ = "";
-    
     public string contact_name = "";
     
     public string contact_email = "";
@@ -114,28 +108,152 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/users/{0}/meetings",userId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/users/{0}/meetings",userId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"topic\": \"{0}\",   \"type\": \"{1}\",   \"start_time\": \"{2}\",   \"duration\": \"{3}\",   \"timezone\": \"{4}\",   \"password\": \"{5}\",   \"agenda\": \"{6}\",   \"tracking_fields\": [     {{       \"field\": \"{7}\",       \"value\": \"{8}\"     }}   ],   \"recurrence\": {{     \"type\": \"{9}\",     \"repeat_interval\": \"{10}\",     \"weekly_days\": \"{11}\",     \"monthly_day\": \"{12}\",     \"monthly_week\": \"{13}\",     \"monthly_week_day\": \"{14}\",     \"end_times\": \"{15}\",     \"end_date_time\": \"{16}\"   }},   \"settings\": {{     \"host_video\": \"{17}\",     \"participant_video\": \"{18}\",     \"cn_meeting\": \"{19}\",     \"in_meeting\": \"{20}\",     \"join_before_host\": \"{21}\",     \"mute_upon_entry\": \"{22}\",     \"watermark\": \"{23}\",     \"use_pmi\": \"{24}\",     \"approval_type\": \"{25}\",     \"registration_type\": \"{26}\",     \"audio\": \"{27}\",     \"auto_recording\": \"{28}\",     \"enforce_login\": \"{29}\",     \"enforce_login_domains\": \"{30}\",     \"alternative_hosts\": \"{31}\",     \"close_registration\": \"{32}\",     \"waiting_room\": \"{33}\",     \"contact_name\": \"{34}\",     \"contact_email\": \"{35}\",     \"registrants_email_notification\": \"{36}\",     \"meeting_authentication\": \"{37}\",     \"authentication_option\": \"{38}\",     \"authentication_domains\": \"{39}\"   }} }}",topic,type,start_time,duration,timezone,password,agenda,field,value,recurrence_type,repeat_interval,weekly_days,monthly_day,monthly_week,monthly_week_day,end_times,end_date_time,host_video,participant_video,cn_meeting,in_meeting,join_before_host,mute_upon_entry,watermark,use_pmi,approval_type,registration_type,audio,auto_recording,enforce_login,enforce_login_domains,alternative_hosts,close_registration,waiting_room,contact_name,contact_email,registrants_email_notification,meeting_authentication,authentication_option,authentication_domains);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"topic\": \"{0}\",  \"type\": \"{1}\",  \"start_time\": \"{2}\",  \"duration\": \"{3}\",  \"timezone\": \"{4}\",  \"password\": \"{5}\",  \"agenda\": \"{6}\",  \"tracking_fields\": {7},  \"recurrence\": {{   \"type\": \"{8}\",    \"repeat_interval\": \"{9}\",    \"weekly_days\": \"{10}\",    \"monthly_day\": \"{11}\",    \"monthly_week\": \"{12}\",    \"monthly_week_day\": \"{13}\",    \"end_times\": \"{14}\",    \"end_date_time\": \"{15}\"   }},  \"settings\": {{   \"host_video\": \"{16}\",    \"participant_video\": \"{17}\",    \"cn_meeting\": \"{18}\",    \"in_meeting\": \"{19}\",    \"join_before_host\": \"{20}\",    \"mute_upon_entry\": \"{21}\",    \"watermark\": \"{22}\",    \"use_pmi\": \"{23}\",    \"approval_type\": \"{24}\",    \"registration_type\": \"{25}\",    \"audio\": \"{26}\",    \"auto_recording\": \"{27}\",    \"enforce_login\": \"{28}\",    \"enforce_login_domains\": \"{29}\",    \"alternative_hosts\": \"{30}\",    \"close_registration\": \"{31}\",    \"waiting_room\": \"{32}\",    \"contact_name\": \"{33}\",    \"contact_email\": \"{34}\",    \"registrants_email_notification\": \"{35}\",    \"meeting_authentication\": \"{36}\",    \"authentication_option\": \"{37}\",    \"authentication_domains\": \"{38}\"   }} }}",topic,type_p,start_time,duration,timezone,password,agenda,tracking_fields,recurrence_type,repeat_interval,weekly_days,monthly_day,monthly_week,monthly_week_day,end_times,end_date_time,host_video,participant_video,cn_meeting,in_meeting,join_before_host,mute_upon_entry,watermark,use_pmi,approval_type,registration_type,audio,auto_recording,enforce_login,enforce_login_domains,alternative_hosts,close_registration,waiting_room,contact_name,contact_email,registrants_email_notification,meeting_authentication,authentication_option,authentication_domains);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Create_a_Meeting() {
+    }
+    
+    public ZM_Create_a_Meeting(
+                string Jsonkeypath, 
+                string apikey, 
+                string password1, 
+                string userId, 
+                string topic, 
+                string type_p, 
+                string start_time, 
+                string duration, 
+                string timezone, 
+                string password, 
+                string agenda, 
+                string tracking_fields, 
+                string recurrence_type, 
+                string repeat_interval, 
+                string weekly_days, 
+                string monthly_day, 
+                string monthly_week, 
+                string monthly_week_day, 
+                string end_times, 
+                string end_date_time, 
+                string host_video, 
+                string participant_video, 
+                string cn_meeting, 
+                string in_meeting, 
+                string join_before_host, 
+                string mute_upon_entry, 
+                string watermark, 
+                string use_pmi, 
+                string approval_type, 
+                string registration_type, 
+                string audio, 
+                string auto_recording, 
+                string enforce_login, 
+                string enforce_login_domains, 
+                string alternative_hosts, 
+                string close_registration, 
+                string waiting_room, 
+                string contact_name, 
+                string contact_email, 
+                string registrants_email_notification, 
+                string meeting_authentication, 
+                string authentication_option, 
+                string authentication_domains) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.userId = userId;
+        this.topic = topic;
+        this.type_p = type_p;
+        this.start_time = start_time;
+        this.duration = duration;
+        this.timezone = timezone;
+        this.password = password;
+        this.agenda = agenda;
+        this.tracking_fields = tracking_fields;
+        this.recurrence_type = recurrence_type;
+        this.repeat_interval = repeat_interval;
+        this.weekly_days = weekly_days;
+        this.monthly_day = monthly_day;
+        this.monthly_week = monthly_week;
+        this.monthly_week_day = monthly_week_day;
+        this.end_times = end_times;
+        this.end_date_time = end_date_time;
+        this.host_video = host_video;
+        this.participant_video = participant_video;
+        this.cn_meeting = cn_meeting;
+        this.in_meeting = in_meeting;
+        this.join_before_host = join_before_host;
+        this.mute_upon_entry = mute_upon_entry;
+        this.watermark = watermark;
+        this.use_pmi = use_pmi;
+        this.approval_type = approval_type;
+        this.registration_type = registration_type;
+        this.audio = audio;
+        this.auto_recording = auto_recording;
+        this.enforce_login = enforce_login;
+        this.enforce_login_domains = enforce_login_domains;
+        this.alternative_hosts = alternative_hosts;
+        this.close_registration = close_registration;
+        this.waiting_room = waiting_room;
+        this.contact_name = contact_name;
+        this.contact_email = contact_email;
+        this.registrants_email_notification = registrants_email_notification;
+        this.meeting_authentication = meeting_authentication;
+        this.authentication_option = authentication_option;
+        this.authentication_domains = authentication_domains;
     }
 
 
@@ -158,7 +276,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

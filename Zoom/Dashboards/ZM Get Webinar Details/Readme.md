@@ -1,19 +1,12 @@
-#     Zoom
-
-
-Get Webinar Details
-
-Retrieve details from live or past webinars.
+<br>#     Zoom</br>
+<br>Get Webinar Details</br>
+<br>Retrieve details from live or past webinars.
 **Scopes:** `dashboard:read:admin` 
 **Prerequisites:**
 * Business, Education or API Plan with Webinar add-on.
 
-
-
-Method: Get
-
-OperationID: dashboardWebinarDetail
-
-EndPoint:
-
-/metrics/webinars/{webinarId}
+</br>
+<br>Method: Get</br>
+<br>OperationID: dashboardWebinarDetail</br>
+<br>EndPoint:</br>
+<br>/metrics/webinars/{webinarId}</br>

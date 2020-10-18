@@ -1,9 +1,6 @@
-#     Zoom
-
-
-Delete a Device
-
-Remove a [desk phone device](https://support.zoom.us/hc/en-us/articles/360021119092) from the Zoom Phone System Management.
+<br>#     Zoom</br>
+<br>Delete a Device</br>
+<br>Remove a [desk phone device](https://support.zoom.us/hc/en-us/articles/360021119092) from the Zoom Phone System Management.
 **Prerequisites:**
 * Pro or a higher account with Zoom Phone license
 * Account owner or admin permissions
@@ -11,12 +8,8 @@ Remove a [desk phone device](https://support.zoom.us/hc/en-us/articles/360021119
 **Scopes:** `phone:write:admin` 
 
 
-
-
-Method: Delete
-
-OperationID: deleteADevice
-
-EndPoint:
-
-/phone/devices/{deviceId}
+</br>
+<br>Method: Delete</br>
+<br>OperationID: deleteADevice</br>
+<br>EndPoint:</br>
+<br>/phone/devices/{deviceId}</br>

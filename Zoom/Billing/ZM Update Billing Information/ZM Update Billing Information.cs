@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Update_Billing_Information : IActivityAsync
+    public class ZM_Update_Billing_Information : IActivityAsync
     {
 
 
@@ -50,28 +50,80 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/accounts/{0}/billing",accountId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/accounts/{0}/billing",accountId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"first_name\": \"{0}\",   \"last_name\": \"{1}\",   \"email\": \"{2}\",   \"phone_number\": \"{3}\",   \"address\": \"{4}\",   \"apt\": \"{5}\",   \"city\": \"{6}\",   \"state\": \"{7}\",   \"zip\": \"{8}\",   \"country\": \"{9}\" }}",first_name,last_name,email,phone_number,address,apt,city,state,zip,country);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"first_name\": \"{0}\",  \"last_name\": \"{1}\",  \"email\": \"{2}\",  \"phone_number\": \"{3}\",  \"address\": \"{4}\",  \"apt\": \"{5}\",  \"city\": \"{6}\",  \"state\": \"{7}\",  \"zip\": \"{8}\",  \"country\": \"{9}\" }}",first_name,last_name,email,phone_number,address,apt,city,state,zip,country);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Update_Billing_Information() {
+    }
+    
+    public ZM_Update_Billing_Information(string Jsonkeypath, string apikey, string password1, string accountId, string first_name, string last_name, string email, string phone_number, string address, string apt, string city, string state, string zip, string country) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.accountId = accountId;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.apt = apt;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
     }
 
 
@@ -94,7 +146,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

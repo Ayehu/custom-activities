@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "phoneId",
           "label": "PhoneId",
           "labelKey": "phoneId_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "domain",
           "label": "Domain",
           "labelKey": "domain_l",
@@ -45,7 +45,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "register_server",
           "label": "Register_server",
           "labelKey": "register_server_l",
@@ -81,7 +81,7 @@
           "value": "UDP"
         },
         {
-          "required": true,
+          "required": false,
           "key": "proxy_server",
           "label": "Proxy_server",
           "labelKey": "proxy_server_l",
@@ -90,7 +90,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "register_server2",
           "label": "Register_server2",
           "labelKey": "register_server2_l",
@@ -126,7 +126,7 @@
           "value": "UDP"
         },
         {
-          "required": true,
+          "required": false,
           "key": "proxy_server2",
           "label": "Proxy_server2",
           "labelKey": "proxy_server2_l",
@@ -135,7 +135,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "register_server3",
           "label": "Register_server3",
           "labelKey": "register_server3_l",
@@ -171,7 +171,7 @@
           "value": "UDP"
         },
         {
-          "required": true,
+          "required": false,
           "key": "proxy_server3",
           "label": "Proxy_server3",
           "labelKey": "proxy_server3_l",
@@ -189,7 +189,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "user_name",
           "label": "User_name",
           "labelKey": "user_name_l",
@@ -198,7 +198,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password",
           "label": "Password",
           "labelKey": "password_l",
@@ -207,7 +207,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "authorization_name",
           "label": "Authorization_name",
           "labelKey": "authorization_name_l",
@@ -216,10 +216,19 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "voice_mail",
           "label": "Voice_mail",
           "labelKey": "voice_mail_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

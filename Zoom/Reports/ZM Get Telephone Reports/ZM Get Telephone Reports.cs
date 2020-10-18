@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Get_Telephone_Reports : IActivityAsync
+    public class ZM_Get_Telephone_Reports : IActivityAsync
     {
 
 
@@ -20,7 +20,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string password1 = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string from = "";
     
@@ -38,28 +38,74 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "GET";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "v2/report/telephone";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "v2/report/telephone";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return "";
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = "";
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {{"type",type},{"from",from},{"to",to_p},{"page_size",page_size},{"page_number",page_number}};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() { {"type",type_p},{"from",from},{"to",to_p},{"page_size",page_size},{"page_number",page_number} };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Get_Telephone_Reports() {
+    }
+    
+    public ZM_Get_Telephone_Reports(string Jsonkeypath, string apikey, string password1, string type_p, string from, string to_p, string page_size, string page_number) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.type_p = type_p;
+        this.from = from;
+        this.to_p = to_p;
+        this.page_size = page_size;
+        this.page_number = page_number;
     }
 
 
@@ -82,7 +128,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

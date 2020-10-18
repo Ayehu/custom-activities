@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "accountId",
           "label": "AccountId",
           "labelKey": "accountId_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "first_name",
           "label": "First_name",
           "labelKey": "first_name_l",
@@ -45,7 +45,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "last_name",
           "label": "Last_name",
           "labelKey": "last_name_l",
@@ -54,7 +54,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "email",
           "label": "Email",
           "labelKey": "email_l",
@@ -63,7 +63,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "phone_number",
           "label": "Phone_number",
           "labelKey": "phone_number_l",
@@ -72,7 +72,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "address",
           "label": "Address",
           "labelKey": "address_l",
@@ -90,7 +90,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "city",
           "label": "City",
           "labelKey": "city_l",
@@ -99,7 +99,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "state",
           "label": "State",
           "labelKey": "state_l",
@@ -108,7 +108,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "zip",
           "label": "Zip",
           "labelKey": "zip_l",
@@ -117,7 +117,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "country",
           "label": "Country",
           "labelKey": "country_l",
@@ -127,7 +127,7 @@
         },
         {
           "required": true,
-          "key": "type",
+          "key": "type_p",
           "label": "Type",
           "labelKey": "type_l",
           "baseType": "control",
@@ -181,8 +181,8 @@
         },
         {
           "required": false,
-          "key": "plan_large_meeting____",
-          "label": "Plan_large_meeting[][]",
+          "key": "plan_large_meeting",
+          "label": "Plan_large_meeting[]",
           "labelKey": "plan_large_meeting_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -190,45 +190,9 @@
         },
         {
           "required": false,
-          "key": "plan_large_meeting_type",
-          "label": "Plan_large_meeting_type",
-          "labelKey": "plan_large_meeting_type_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_large_meeting_hosts",
-          "label": "Plan_large_meeting_hosts",
-          "labelKey": "plan_large_meeting_hosts_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_webinar____",
-          "label": "Plan_webinar[][]",
+          "key": "plan_webinar",
+          "label": "Plan_webinar[]",
           "labelKey": "plan_webinar_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_webinar_type",
-          "label": "Plan_webinar_type",
-          "labelKey": "plan_webinar_type_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_webinar_hosts",
-          "label": "Plan_webinar_hosts",
-          "labelKey": "plan_webinar_hosts_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -307,8 +271,8 @@
         },
         {
           "required": false,
-          "key": "plan_calling____",
-          "label": "Plan_calling[][]",
+          "key": "plan_calling",
+          "label": "Plan_calling[]",
           "labelKey": "plan_calling_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -316,26 +280,8 @@
         },
         {
           "required": false,
-          "key": "plan_calling_type",
-          "label": "Plan_calling_type",
-          "labelKey": "plan_calling_type_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_calling_hosts",
-          "label": "Plan_calling_hosts",
-          "labelKey": "plan_calling_hosts_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_number____",
-          "label": "Plan_number[][]",
+          "key": "plan_number",
+          "label": "Plan_number[]",
           "labelKey": "plan_number_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -343,18 +289,9 @@
         },
         {
           "required": false,
-          "key": "plan_number_type",
-          "label": "Plan_number_type",
-          "labelKey": "plan_number_type_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "plan_number_hosts",
-          "label": "Plan_number_hosts",
-          "labelKey": "plan_number_hosts_l",
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

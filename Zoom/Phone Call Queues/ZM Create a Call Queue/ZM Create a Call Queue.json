@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "site_id",
           "label": "Site_id",
           "labelKey": "site_id_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "name_p",
           "label": "Name",
           "labelKey": "name_l",
@@ -55,7 +55,7 @@
         },
         {
           "required": false,
-          "key": "description",
+          "key": "description_p",
           "label": "Description",
           "labelKey": "description_l",
           "baseType": "control",
@@ -64,8 +64,8 @@
         },
         {
           "required": false,
-          "key": "users____",
-          "label": "Users[][]",
+          "key": "users",
+          "label": "Users[]",
           "labelKey": "users_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -73,27 +73,18 @@
         },
         {
           "required": false,
-          "key": "id_p",
-          "label": "Id",
-          "labelKey": "id_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "email",
-          "label": "Email",
-          "labelKey": "email_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "common_area_phone_ids____",
-          "label": "Common_area_phone_ids[][]",
+          "key": "common_area_phone_ids",
+          "label": "Common_area_phone_ids[]",
           "labelKey": "common_area_phone_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

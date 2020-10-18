@@ -1,9 +1,6 @@
-#     Zoom
-
-
-Switch a User's Account
-
-Disassociate a user from one Account and move the user to another Account under the same Master Account. 
+<br>#     Zoom</br>
+<br>Switch a User's Account</br>
+<br>Disassociate a user from one Account and move the user to another Account under the same Master Account. 
 
 With this API, a user under a Master Account or a Sub Account can be moved to another Sub Account within the same Master Account. To move a user from a Master Account to a Sub Account, use `me` as the value for `accountId`. In this scenario, "me" refers to the Account ID of the Master Account. 
 
@@ -15,12 +12,8 @@ To move a user from one Sub Account to another Sub Account, provide the Sub Acco
 * The user should not have the same [managed domain](https://support.zoom.us/hc/en-us/articles/203395207-What-is-Managed-Domain-) as the account owner.
 
 **Scope:** `user:master` 
-
-
-Method: Put
-
-OperationID: switchUserAccount
-
-EndPoint:
-
-/accounts/{accountId}/users/{userId}/account
+</br>
+<br>Method: Put</br>
+<br>OperationID: switchUserAccount</br>
+<br>EndPoint:</br>
+<br>/accounts/{accountId}/users/{userId}/account</br>

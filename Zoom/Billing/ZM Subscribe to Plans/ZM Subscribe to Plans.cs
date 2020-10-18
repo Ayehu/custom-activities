@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Subscribe_to_Plans : IActivityAsync
+    public class ZM_Subscribe_to_Plans : IActivityAsync
     {
 
 
@@ -42,7 +42,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string country = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string hosts = "";
     
@@ -54,17 +54,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string plan_room_connector_hosts = "";
     
-    public string plan_large_meeting__ = "";
+    public string plan_large_meeting = "";
     
-    public string plan_large_meeting_type = "";
-    
-    public string plan_large_meeting_hosts = "";
-    
-    public string plan_webinar__ = "";
-    
-    public string plan_webinar_type = "";
-    
-    public string plan_webinar_hosts = "";
+    public string plan_webinar = "";
     
     public string plan_recording = "";
     
@@ -82,17 +74,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string plan_base_callout_countries = "";
     
-    public string plan_calling__ = "";
+    public string plan_calling = "";
     
-    public string plan_calling_type = "";
-    
-    public string plan_calling_hosts = "";
-    
-    public string plan_number__ = "";
-    
-    public string plan_number_type = "";
-    
-    public string plan_number_hosts = "";
+    public string plan_number = "";
     
     private bool omitJsonEmptyorNull = true;
     
@@ -102,28 +86,130 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/accounts/{0}/plans",accountId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/accounts/{0}/plans",accountId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"contact\": {{     \"first_name\": \"{0}\",     \"last_name\": \"{1}\",     \"email\": \"{2}\",     \"phone_number\": \"{3}\",     \"address\": \"{4}\",     \"apt\": \"{5}\",     \"city\": \"{6}\",     \"state\": \"{7}\",     \"zip\": \"{8}\",     \"country\": \"{9}\"   }},   \"plan_base\": {{     \"type\": \"{10}\",     \"hosts\": \"{11}\"   }},   \"plan_zoom_rooms\": {{     \"type\": \"{12}\",     \"hosts\": \"{13}\"   }},   \"plan_room_connector\": {{     \"type\": \"{14}\",     \"hosts\": \"{15}\"   }},   \"plan_large_meeting\": [     {{       \"type\": \"{16}\",       \"hosts\": \"{17}\"     }}   ],   \"plan_webinar\": [     {{       \"type\": \"{18}\",       \"hosts\": \"{19}\"     }}   ],   \"plan_recording\": \"{20}\",   \"plan_audio\": {{     \"type\": \"{21}\",     \"tollfree_countries\": \"{22}\",     \"premium_countries\": \"{23}\",     \"callout_countries\": \"{24}\",     \"ddi_numbers\": \"{25}\"   }},   \"plan_phone\": {{     \"plan_base\": {{       \"type\": \"{26}\",       \"callout_countries\": \"{27}\"     }},     \"plan_calling\": [       {{         \"type\": \"{28}\",         \"hosts\": \"{29}\"       }}     ],     \"plan_number\": [       {{         \"type\": \"{30}\",         \"hosts\": \"{31}\"       }}     ]   }} }}",first_name,last_name,email,phone_number,address,apt,city,state,zip,country,type,hosts,plan_zoom_rooms_type,plan_zoom_rooms_hosts,plan_room_connector_type,plan_room_connector_hosts,plan_large_meeting_type,plan_large_meeting_hosts,plan_webinar_type,plan_webinar_hosts,plan_recording,plan_audio_type,tollfree_countries,premium_countries,callout_countries,ddi_numbers,plan_base_type,plan_base_callout_countries,plan_calling_type,plan_calling_hosts,plan_number_type,plan_number_hosts);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"contact\": {{   \"first_name\": \"{0}\",    \"last_name\": \"{1}\",    \"email\": \"{2}\",    \"phone_number\": \"{3}\",    \"address\": \"{4}\",    \"apt\": \"{5}\",    \"city\": \"{6}\",    \"state\": \"{7}\",    \"zip\": \"{8}\",    \"country\": \"{9}\"   }},  \"plan_base\": {{   \"type\": \"{10}\",    \"hosts\": \"{11}\"   }},  \"plan_zoom_rooms\": {{   \"type\": \"{12}\",    \"hosts\": \"{13}\"   }},  \"plan_room_connector\": {{   \"type\": \"{14}\",    \"hosts\": \"{15}\"   }},  \"plan_large_meeting\": {16},  \"plan_webinar\": {17},  \"plan_recording\": \"{18}\",  \"plan_audio\": {{   \"type\": \"{19}\",    \"tollfree_countries\": \"{20}\",    \"premium_countries\": \"{21}\",    \"callout_countries\": \"{22}\",    \"ddi_numbers\": \"{23}\"   }},  \"plan_phone\": {{   \"plan_base\": {{     \"type\": \"{24}\",      \"callout_countries\": \"{25}\"     }},    \"plan_calling\": {26},    \"plan_number\": {27}   }} }}",first_name,last_name,email,phone_number,address,apt,city,state,zip,country,type_p,hosts,plan_zoom_rooms_type,plan_zoom_rooms_hosts,plan_room_connector_type,plan_room_connector_hosts,plan_large_meeting,plan_webinar,plan_recording,plan_audio_type,tollfree_countries,premium_countries,callout_countries,ddi_numbers,plan_base_type,plan_base_callout_countries,plan_calling,plan_number);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Subscribe_to_Plans() {
+    }
+    
+    public ZM_Subscribe_to_Plans(
+                string Jsonkeypath, 
+                string apikey, 
+                string password1, 
+                string accountId, 
+                string first_name, 
+                string last_name, 
+                string email, 
+                string phone_number, 
+                string address, 
+                string apt, 
+                string city, 
+                string state, 
+                string zip, 
+                string country, 
+                string type_p, 
+                string hosts, 
+                string plan_zoom_rooms_type, 
+                string plan_zoom_rooms_hosts, 
+                string plan_room_connector_type, 
+                string plan_room_connector_hosts, 
+                string plan_large_meeting, 
+                string plan_webinar, 
+                string plan_recording, 
+                string plan_audio_type, 
+                string tollfree_countries, 
+                string premium_countries, 
+                string callout_countries, 
+                string ddi_numbers, 
+                string plan_base_type, 
+                string plan_base_callout_countries, 
+                string plan_calling, 
+                string plan_number) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.accountId = accountId;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.phone_number = phone_number;
+        this.address = address;
+        this.apt = apt;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
+        this.type_p = type_p;
+        this.hosts = hosts;
+        this.plan_zoom_rooms_type = plan_zoom_rooms_type;
+        this.plan_zoom_rooms_hosts = plan_zoom_rooms_hosts;
+        this.plan_room_connector_type = plan_room_connector_type;
+        this.plan_room_connector_hosts = plan_room_connector_hosts;
+        this.plan_large_meeting = plan_large_meeting;
+        this.plan_webinar = plan_webinar;
+        this.plan_recording = plan_recording;
+        this.plan_audio_type = plan_audio_type;
+        this.tollfree_countries = tollfree_countries;
+        this.premium_countries = premium_countries;
+        this.callout_countries = callout_countries;
+        this.ddi_numbers = ddi_numbers;
+        this.plan_base_type = plan_base_type;
+        this.plan_base_callout_countries = plan_base_callout_countries;
+        this.plan_calling = plan_calling;
+        this.plan_number = plan_number;
     }
 
 
@@ -146,7 +232,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

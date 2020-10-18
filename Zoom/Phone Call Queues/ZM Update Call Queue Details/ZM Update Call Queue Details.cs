@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Update_Call_Queue_Details : IActivityAsync
+    public class ZM_Update_Call_Queue_Details : IActivityAsync
     {
 
 
@@ -24,7 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string name_p = "";
     
-    public string description = "";
+    public string description_p = "";
     
     public string site_id = "";
     
@@ -42,28 +42,76 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/phone/call_queues/{0}",callQueueId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/phone/call_queues/{0}",callQueueId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"name\": \"{0}\",   \"description\": \"{1}\",   \"site_id\": \"{2}\",   \"extension_number\": \"{3}\",   \"timezone\": \"{4}\",   \"status\": \"{5}\" }}",name_p,description,site_id,extension_number,timezone,status);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"name\": \"{0}\",  \"description\": \"{1}\",  \"site_id\": \"{2}\",  \"extension_number\": \"{3}\",  \"timezone\": \"{4}\",  \"status\": \"{5}\" }}",name_p,description_p,site_id,extension_number,timezone,status);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Update_Call_Queue_Details() {
+    }
+    
+    public ZM_Update_Call_Queue_Details(string Jsonkeypath, string apikey, string password1, string callQueueId, string name_p, string description_p, string site_id, string extension_number, string timezone, string status) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.callQueueId = callQueueId;
+        this.name_p = name_p;
+        this.description_p = description_p;
+        this.site_id = site_id;
+        this.extension_number = extension_number;
+        this.timezone = timezone;
+        this.status = status;
     }
 
 
@@ -86,7 +134,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "meetingId",
           "label": "MeetingId",
           "labelKey": "meetingId_l",
@@ -46,8 +46,8 @@
         },
         {
           "required": false,
-          "key": "questions____",
-          "label": "Questions[][]",
+          "key": "questions",
+          "label": "Questions[]",
           "labelKey": "questions_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -55,37 +55,9 @@
         },
         {
           "required": false,
-          "key": "name_p",
-          "label": "Name",
-          "labelKey": "name_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "type",
-          "label": "Type",
-          "labelKey": "type_l",
-          "baseType": "control",
-          "controlType": "autocomplete",
-          "controlOptions": [
-            {
-              "key": "single",
-              "value": "single"
-            },
-            {
-              "key": "multiple",
-              "value": "multiple"
-            }
-          ],
-          "value": "single"
-        },
-        {
-          "required": false,
-          "key": "answers____",
-          "label": "Answers[][]",
-          "labelKey": "answers_l",
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

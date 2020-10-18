@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Update_Registration_Questions : IActivityAsync
+    public class ZM_Update_Registration_Questions : IActivityAsync
     {
 
 
@@ -22,21 +22,9 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string meetingId = "";
     
-    public string questions__ = "";
+    public string questions = "";
     
-    public string field_name = "";
-    
-    public string required = "";
-    
-    public string custom_questions__ = "";
-    
-    public string title = "";
-    
-    public string type = "";
-    
-    public string custom_questions_required = "";
-    
-    public string answers__ = "";
+    public string custom_questions = "";
     
     private bool omitJsonEmptyorNull = true;
     
@@ -46,28 +34,72 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/meetings/{0}/registrants/questions",meetingId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/meetings/{0}/registrants/questions",meetingId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"questions\": [     {{       \"field_name\": \"{0}\",       \"required\": \"{1}\"     }}   ],   \"custom_questions\": [     {{       \"title\": \"{2}\",       \"type\": \"{3}\",       \"required\": \"{4}\"     }}   ] }}",field_name,required,title,type,custom_questions_required);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"questions\": {0},  \"custom_questions\": {1} }}",questions,custom_questions);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Update_Registration_Questions() {
+    }
+    
+    public ZM_Update_Registration_Questions(string Jsonkeypath, string apikey, string password1, string meetingId, string questions, string custom_questions) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.meetingId = meetingId;
+        this.questions = questions;
+        this.custom_questions = custom_questions;
     }
 
 
@@ -90,7 +122,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

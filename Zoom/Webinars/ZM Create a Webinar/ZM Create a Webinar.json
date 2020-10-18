@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "userId",
           "label": "UserId",
           "labelKey": "userId_l",
@@ -46,7 +46,7 @@
         },
         {
           "required": false,
-          "key": "type",
+          "key": "type_p",
           "label": "Type",
           "labelKey": "type_l",
           "baseType": "control",
@@ -114,33 +114,15 @@
         },
         {
           "required": false,
-          "key": "tracking_fields____",
-          "label": "Tracking_fields[][]",
+          "key": "tracking_fields",
+          "label": "Tracking_fields[]",
           "labelKey": "tracking_fields_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
         },
         {
-          "required": true,
-          "key": "field",
-          "label": "Field",
-          "labelKey": "field_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
           "required": false,
-          "key": "value",
-          "label": "Value",
-          "labelKey": "value_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": true,
           "key": "recurrence_type",
           "label": "Recurrence_type",
           "labelKey": "recurrence_type_l",
@@ -500,8 +482,8 @@
         },
         {
           "required": false,
-          "key": "global_dial_in_countries____",
-          "label": "Global_dial_in_countries[][]",
+          "key": "global_dial_in_countries",
+          "label": "Global_dial_in_countries[]",
           "labelKey": "global_dial_in_countries_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -584,6 +566,15 @@
           "key": "authentication_domains",
           "label": "Authentication_domains",
           "labelKey": "authentication_domains_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

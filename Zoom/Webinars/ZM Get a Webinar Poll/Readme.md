@@ -1,18 +1,11 @@
-#     Zoom
-
-
-Get a Webinar Poll
-
-Get a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars) details.
+<br>#     Zoom</br>
+<br>Get a Webinar Poll</br>
+<br>Get a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars) details.
 **Scopes:** `webinar:read:admin` `webinar:read`
  
 
-
-
-Method: Get
-
-OperationID: webinarPollGet
-
-EndPoint:
-
-/webinars/{webinarId}/polls/{pollId}
+</br>
+<br>Method: Get</br>
+<br>OperationID: webinarPollGet</br>
+<br>EndPoint:</br>
+<br>/webinars/{webinarId}/polls/{pollId}</br>

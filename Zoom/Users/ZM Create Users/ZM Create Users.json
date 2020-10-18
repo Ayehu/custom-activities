@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "action",
           "label": "Action",
           "labelKey": "action_l",
@@ -54,7 +54,7 @@
           "value": "create"
         },
         {
-          "required": true,
+          "required": false,
           "key": "email",
           "label": "Email",
           "labelKey": "email_l",
@@ -63,8 +63,8 @@
           "value": ""
         },
         {
-          "required": true,
-          "key": "type",
+          "required": false,
+          "key": "type_p",
           "label": "Type",
           "labelKey": "type_l",
           "baseType": "control",
@@ -110,6 +110,15 @@
           "labelKey": "password_l",
           "baseType": "control",
           "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
           "value": ""
         },
         {

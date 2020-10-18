@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "deviceId",
           "label": "DeviceId",
           "labelKey": "deviceId_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "name_p",
           "label": "Name",
           "labelKey": "name_l",
@@ -45,7 +45,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "protocol",
           "label": "Protocol",
           "labelKey": "protocol_l",
@@ -64,7 +64,7 @@
           "value": "H.323"
         },
         {
-          "required": true,
+          "required": false,
           "key": "ip",
           "label": "Ip",
           "labelKey": "ip_l",
@@ -73,7 +73,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "encryption",
           "label": "Encryption",
           "labelKey": "encryption_l",
@@ -94,6 +94,15 @@
             }
           ],
           "value": "auto"
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
         },
         {
           "value": "",

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Update_Zoom_Room_Location_Profile : IActivityAsync
+    public class ZM_Update_Zoom_Room_Location_Profile : IActivityAsync
     {
 
 
@@ -46,28 +46,78 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/rooms/locations/{0}",locationId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/rooms/locations/{0}",locationId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"basic\": {{     \"name\": \"{0}\",     \"description \": \"{1}\",     \"timezone\": \"{2}\",     \"address\": \"{3}\",     \"support_email\": \"{4}\",     \"support_phone\": \"{5}\",     \"room_passcode\": \"{6}\",     \"required_code_to_ext\": \"{7}\"   }} }}",name_p,description ,timezone,address,support_email,support_phone,room_passcode,required_code_to_ext);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"basic\": {{   \"name\": \"{0}\",    \"description \": \"{1}\",    \"timezone\": \"{2}\",    \"address\": \"{3}\",    \"support_email\": \"{4}\",    \"support_phone\": \"{5}\",    \"room_passcode\": \"{6}\",    \"required_code_to_ext\": \"{7}\"   }} }}",name_p,description ,timezone,address,support_email,support_phone,room_passcode,required_code_to_ext);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Update_Zoom_Room_Location_Profile() {
+    }
+    
+    public ZM_Update_Zoom_Room_Location_Profile(string Jsonkeypath, string apikey, string password1, string locationId, string name_p, string description , string timezone, string address, string support_email, string support_phone, string room_passcode, string required_code_to_ext) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.locationId = locationId;
+        this.name_p = name_p;
+        this.description  = description ;
+        this.timezone = timezone;
+        this.address = address;
+        this.support_email = support_email;
+        this.support_phone = support_phone;
+        this.room_passcode = room_passcode;
+        this.required_code_to_ext = required_code_to_ext;
     }
 
 
@@ -90,7 +140,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

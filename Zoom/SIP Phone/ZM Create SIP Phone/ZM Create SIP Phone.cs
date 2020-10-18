@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Create_SIP_Phone : IActivityAsync
+    public class ZM_Create_SIP_Phone : IActivityAsync
     {
 
 
@@ -60,28 +60,104 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "v2/sip_phones";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "v2/sip_phones";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"domain\": \"{0}\",   \"register_server\": \"{1}\",   \"transport_protocol\": \"{2}\",   \"proxy_server\": \"{3}\",   \"register_server2\": \"{4}\",   \"transport_protocol2\": \"{5}\",   \"proxy_server2\": \"{6}\",   \"register_server3\": \"{7}\",   \"transport_protocol3\": \"{8}\",   \"proxy_server3\": \"{9}\",   \"registration_expire_time\": \"{10}\",   \"user_name\": \"{11}\",   \"password\": \"{12}\",   \"authorization_name\": \"{13}\",   \"user_email\": \"{14}\",   \"voice_mail\": \"{15}\" }}",domain,register_server,transport_protocol,proxy_server,register_server2,transport_protocol2,proxy_server2,register_server3,transport_protocol3,proxy_server3,registration_expire_time,user_name,password,authorization_name,user_email,voice_mail);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"domain\": \"{0}\",  \"register_server\": \"{1}\",  \"transport_protocol\": \"{2}\",  \"proxy_server\": \"{3}\",  \"register_server2\": \"{4}\",  \"transport_protocol2\": \"{5}\",  \"proxy_server2\": \"{6}\",  \"register_server3\": \"{7}\",  \"transport_protocol3\": \"{8}\",  \"proxy_server3\": \"{9}\",  \"registration_expire_time\": \"{10}\",  \"user_name\": \"{11}\",  \"password\": \"{12}\",  \"authorization_name\": \"{13}\",  \"user_email\": \"{14}\",  \"voice_mail\": \"{15}\" }}",domain,register_server,transport_protocol,proxy_server,register_server2,transport_protocol2,proxy_server2,register_server3,transport_protocol3,proxy_server3,registration_expire_time,user_name,password,authorization_name,user_email,voice_mail);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Create_SIP_Phone() {
+    }
+    
+    public ZM_Create_SIP_Phone(
+                string Jsonkeypath, 
+                string apikey, 
+                string password1, 
+                string domain, 
+                string register_server, 
+                string transport_protocol, 
+                string proxy_server, 
+                string register_server2, 
+                string transport_protocol2, 
+                string proxy_server2, 
+                string register_server3, 
+                string transport_protocol3, 
+                string proxy_server3, 
+                string registration_expire_time, 
+                string user_name, 
+                string password, 
+                string authorization_name, 
+                string user_email, 
+                string voice_mail) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.domain = domain;
+        this.register_server = register_server;
+        this.transport_protocol = transport_protocol;
+        this.proxy_server = proxy_server;
+        this.register_server2 = register_server2;
+        this.transport_protocol2 = transport_protocol2;
+        this.proxy_server2 = proxy_server2;
+        this.register_server3 = register_server3;
+        this.transport_protocol3 = transport_protocol3;
+        this.proxy_server3 = proxy_server3;
+        this.registration_expire_time = registration_expire_time;
+        this.user_name = user_name;
+        this.password = password;
+        this.authorization_name = authorization_name;
+        this.user_email = user_email;
+        this.voice_mail = voice_mail;
     }
 
 
@@ -104,7 +180,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

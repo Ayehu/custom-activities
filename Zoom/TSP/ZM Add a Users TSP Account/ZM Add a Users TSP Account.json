@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "userId",
           "label": "UserId",
           "labelKey": "userId_l",
@@ -36,7 +36,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "conference_code",
           "label": "Conference_code",
           "labelKey": "conference_code_l",
@@ -45,7 +45,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "leader_pin",
           "label": "Leader_pin",
           "labelKey": "leader_pin_l",
@@ -55,59 +55,9 @@
         },
         {
           "required": false,
-          "key": "dial_in_numbers____",
-          "label": "Dial_in_numbers[][]",
+          "key": "dial_in_numbers",
+          "label": "Dial_in_numbers[]",
           "labelKey": "dial_in_numbers_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "code",
-          "label": "Code",
-          "labelKey": "code_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "number",
-          "label": "Number",
-          "labelKey": "number_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "type",
-          "label": "Type",
-          "labelKey": "type_l",
-          "baseType": "control",
-          "controlType": "autocomplete",
-          "controlOptions": [
-            {
-              "key": "toll",
-              "value": "toll"
-            },
-            {
-              "key": "tollfree",
-              "value": "tollfree"
-            },
-            {
-              "key": "media_link",
-              "value": "media_link"
-            }
-          ],
-          "value": "toll"
-        },
-        {
-          "required": false,
-          "key": "country_label",
-          "label": "Country_label",
-          "labelKey": "country_label_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""
@@ -130,6 +80,15 @@
             }
           ],
           "value": "US_TSP_TB"
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
         },
         {
           "value": "",

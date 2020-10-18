@@ -1,18 +1,11 @@
-#     Zoom
-
-
-Delete a Webinar Poll
-
-Delete a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars).
+<br>#     Zoom</br>
+<br>Delete a Webinar Poll</br>
+<br>Delete a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars).
 **Scopes:** `webinar:write:admin` `webinar:write`
  
 
-
-
-Method: Delete
-
-OperationID: webinarPollDelete
-
-EndPoint:
-
-/webinars/{webinarId}/polls/{pollId}
+</br>
+<br>Method: Delete</br>
+<br>OperationID: webinarPollDelete</br>
+<br>EndPoint:</br>
+<br>/webinars/{webinarId}/polls/{pollId}</br>

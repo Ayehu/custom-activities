@@ -1,16 +1,9 @@
-#     Zoom
-
-
-List IM Directory Groups
-
-List [IM directory groups](https://support.zoom.us/hc/en-us/articles/203749815-IM-Management).
+<br>#     Zoom</br>
+<br>List IM Directory Groups</br>
+<br>List [IM directory groups](https://support.zoom.us/hc/en-us/articles/203749815-IM-Management).
 **Scopes**: `imgroup:read:admin`
- 
-
-Method: Get
-
-OperationID: imGroups
-
-EndPoint:
-
-/im/groups
+ </br>
+<br>Method: Get</br>
+<br>OperationID: imGroups</br>
+<br>EndPoint:</br>
+<br>/im/groups</br>

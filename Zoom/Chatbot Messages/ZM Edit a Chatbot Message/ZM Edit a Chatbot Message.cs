@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Edit_a_Chatbot_Message : IActivityAsync
+    public class ZM_Edit_a_Chatbot_Message : IActivityAsync
     {
 
 
@@ -38,28 +38,74 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PUT";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/im/chat/messages/{0}",message_id);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/im/chat/messages/{0}",message_id);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"robot_jid\": \"{0}\",   \"account_id\": \"{1}\",   \"user_jid\": \"{2}\",   \"is_markdown_support\": \"{3}\" }}",robot_jid,account_id,user_jid,is_markdown_support);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"robot_jid\": \"{0}\",  \"account_id\": \"{1}\",  \"user_jid\": \"{2}\",  \"is_markdown_support\": \"{3}\" }}",robot_jid,account_id,user_jid,is_markdown_support);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Edit_a_Chatbot_Message() {
+    }
+    
+    public ZM_Edit_a_Chatbot_Message(string Jsonkeypath, string apikey, string password1, string message_id, string robot_jid, string account_id, string user_jid, string is_markdown_support) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.message_id = message_id;
+        this.robot_jid = robot_jid;
+        this.account_id = account_id;
+        this.user_jid = user_jid;
+        this.is_markdown_support = is_markdown_support;
     }
 
 
@@ -82,7 +128,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

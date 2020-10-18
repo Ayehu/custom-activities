@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "webinarId",
           "label": "WebinarId",
           "labelKey": "webinarId_l",
@@ -45,7 +45,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "email",
           "label": "Email",
           "labelKey": "email_l",
@@ -54,7 +54,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "first_name",
           "label": "First_name",
           "labelKey": "first_name_l",
@@ -63,7 +63,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "last_name",
           "label": "Last_name",
           "labelKey": "last_name_l",
@@ -190,8 +190,8 @@
         },
         {
           "required": false,
-          "key": "custom_questions____",
-          "label": "Custom_questions[][]",
+          "key": "custom_questions",
+          "label": "Custom_questions[]",
           "labelKey": "custom_questions_l",
           "baseType": "control",
           "controlType": "textbox",
@@ -199,18 +199,9 @@
         },
         {
           "required": false,
-          "key": "title",
-          "label": "Title",
-          "labelKey": "title_l",
-          "baseType": "control",
-          "controlType": "textbox",
-          "value": ""
-        },
-        {
-          "required": false,
-          "key": "value",
-          "label": "Value",
-          "labelKey": "value_l",
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
           "baseType": "control",
           "controlType": "textbox",
           "value": ""

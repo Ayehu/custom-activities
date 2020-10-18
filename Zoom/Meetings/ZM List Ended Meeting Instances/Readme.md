@@ -1,16 +1,9 @@
-#     Zoom
-
-
-List Ended Meeting Instances
-
-Get a list of ended meeting instances
+<br>#     Zoom</br>
+<br>List Ended Meeting Instances</br>
+<br>Get a list of ended meeting instances
 **Scopes:** `meeting:read:admin` `meeting:read`
- 
-
-Method: Get
-
-OperationID: pastMeetings
-
-EndPoint:
-
-/past_meetings/{meetingId}/instances
+ </br>
+<br>Method: Get</br>
+<br>OperationID: pastMeetings</br>
+<br>EndPoint:</br>
+<br>/past_meetings/{meetingId}/instances</br>

@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Create_an_IM_Directory_Group : IActivityAsync
+    public class ZM_Create_an_IM_Directory_Group : IActivityAsync
     {
 
 
@@ -22,7 +22,7 @@ namespace Ayehu.Sdk.ActivityCreation
     
     public string name_p = "";
     
-    public string type = "";
+    public string type_p = "";
     
     public string search_by_domain = "";
     
@@ -38,28 +38,74 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "POST";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return "v2/im/groups";
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = "v2/im/groups";
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"name\": \"{0}\",   \"type\": \"{1}\",   \"search_by_domain\": \"{2}\",   \"search_by_account\": \"{3}\",   \"search_by_ma_account\": \"{4}\" }}",name_p,type,search_by_domain,search_by_account,search_by_ma_account);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"name\": \"{0}\",  \"type\": \"{1}\",  \"search_by_domain\": \"{2}\",  \"search_by_account\": \"{3}\",  \"search_by_ma_account\": \"{4}\" }}",name_p,type_p,search_by_domain,search_by_account,search_by_ma_account);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Create_an_IM_Directory_Group() {
+    }
+    
+    public ZM_Create_an_IM_Directory_Group(string Jsonkeypath, string apikey, string password1, string name_p, string type_p, string search_by_domain, string search_by_account, string search_by_ma_account) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.name_p = name_p;
+        this.type_p = type_p;
+        this.search_by_domain = search_by_domain;
+        this.search_by_account = search_by_account;
+        this.search_by_ma_account = search_by_ma_account;
     }
 
 
@@ -82,7 +128,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

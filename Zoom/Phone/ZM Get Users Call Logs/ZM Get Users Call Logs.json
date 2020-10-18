@@ -9,7 +9,7 @@
       "isCollapse": false,
       "activitySettings": [
         {
-          "required": true,
+          "required": false,
           "key": "apikey",
           "label": "Apikey",
           "labelKey": "apikey_l",
@@ -18,7 +18,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "password1",
           "label": "Apisecret",
           "labelKey": "apisecret_l",
@@ -27,7 +27,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "userId",
           "label": "UserId",
           "labelKey": "userId_l",
@@ -54,7 +54,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "from",
           "label": "From",
           "labelKey": "from_l",
@@ -63,7 +63,7 @@
           "value": ""
         },
         {
-          "required": true,
+          "required": false,
           "key": "to_p",
           "label": "To",
           "labelKey": "to_l",
@@ -73,7 +73,7 @@
         },
         {
           "required": false,
-          "key": "type",
+          "key": "type_p",
           "label": "Type",
           "labelKey": "type_l",
           "baseType": "control",

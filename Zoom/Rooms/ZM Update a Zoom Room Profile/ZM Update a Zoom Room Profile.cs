@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Sdk.ActivityCreation
+namespace Ayehu.Zoom
 {
-    public class CustomActivity_ZM_Update_a_Zoom_Room_Profile : IActivityAsync
+    public class ZM_Update_a_Zoom_Room_Profile : IActivityAsync
     {
 
 
@@ -42,28 +42,76 @@ namespace Ayehu.Sdk.ActivityCreation
     
     private string httpMethod = "PATCH";
     
+    private string _uriBuilderPath;
+    
+    private string _postData;
+    
+    private System.Collections.Generic.Dictionary<string, string> _headers;
+    
+    private System.Collections.Generic.Dictionary<string, string> _queryStringArray;
+    
     private string uriBuilderPath {
         get {
-            return string.Format("v2/rooms/{0}",roomId);
+            if (string.IsNullOrEmpty(_uriBuilderPath)) {
+_uriBuilderPath = string.Format("v2/rooms/{0}",roomId);
+            }
+return _uriBuilderPath;
+        }
+        set {
+            this._uriBuilderPath = value;
         }
     }
     
     private string postData {
         get {
-            return string.Format("{{   \"basic\": {{     \"name\": \"{0}\",     \"support_email\": \"{1}\",     \"support_phone\": \"{2}\",     \"room_passcode\": \"{3}\",     \"required_code_to_ext\": \"{4}\",     \"hide_room_in_contacts\": \"{5}\"   }} }}",name_p,support_email,support_phone,room_passcode,required_code_to_ext,hide_room_in_contacts);
+            if (string.IsNullOrEmpty(_postData)) {
+_postData = string.Format("{{ \"basic\": {{   \"name\": \"{0}\",    \"support_email\": \"{1}\",    \"support_phone\": \"{2}\",    \"room_passcode\": \"{3}\",    \"required_code_to_ext\": \"{4}\",    \"hide_room_in_contacts\": \"{5}\"   }} }}",name_p,support_email,support_phone,room_passcode,required_code_to_ext,hide_room_in_contacts);
+            }
+return _postData;
+        }
+        set {
+            this._postData = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> headers {
         get {
-            return new Dictionary<string, string>() {{"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)}};
+            if (_headers == null) {
+_headers = new Dictionary<string, string>() { {"authorization","Bearer " + AyehuHelper.JWTToken(apikey,password1,"HS256","JWT", 120)} };
+            }
+return _headers;
+        }
+        set {
+            this._headers = value;
         }
     }
     
     private System.Collections.Generic.Dictionary<string, string> queryStringArray {
         get {
-            return new Dictionary<string, string>() {};
+            if (_queryStringArray == null) {
+_queryStringArray = new Dictionary<string, string>() {  };
+            }
+return _queryStringArray;
         }
+        set {
+            this._queryStringArray = value;
+        }
+    }
+    
+    public ZM_Update_a_Zoom_Room_Profile() {
+    }
+    
+    public ZM_Update_a_Zoom_Room_Profile(string Jsonkeypath, string apikey, string password1, string roomId, string name_p, string support_email, string support_phone, string room_passcode, string required_code_to_ext, string hide_room_in_contacts) {
+        this.Jsonkeypath = Jsonkeypath;
+        this.apikey = apikey;
+        this.password1 = password1;
+        this.roomId = roomId;
+        this.name_p = name_p;
+        this.support_email = support_email;
+        this.support_phone = support_phone;
+        this.room_passcode = room_passcode;
+        this.required_code_to_ext = required_code_to_ext;
+        this.hide_room_in_contacts = hide_room_in_contacts;
     }
 
 
@@ -86,7 +134,7 @@ namespace Ayehu.Sdk.ActivityCreation
                 if (omitJsonEmptyorNull)
                     myHttpRequestMessage.Content = new StringContent(AyehuHelper.omitJsonEmptyorNull(postData), Encoding.UTF8, "application/json");
                 else
-                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, "application/json");
+                    myHttpRequestMessage.Content = new StringContent(postData, Encoding.UTF8, contentType);
 
 
             foreach (KeyValuePair<string, string> headeritem in headers)

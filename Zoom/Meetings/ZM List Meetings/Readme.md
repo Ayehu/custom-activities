@@ -1,16 +1,9 @@
-#     Zoom
-
-
-List Meetings
-
-List all the meetings that were scheduled for a user (meeting host).
+<br>#     Zoom</br>
+<br>List Meetings</br>
+<br>List all the meetings that were scheduled for a user (meeting host).
 **Scopes:** `meeting:read:admin` `meeting:read`
- 
-
-Method: Get
-
-OperationID: meetings
-
-EndPoint:
-
-/users/{userId}/meetings
+ </br>
+<br>Method: Get</br>
+<br>OperationID: meetings</br>
+<br>EndPoint:</br>
+<br>/users/{userId}/meetings</br>

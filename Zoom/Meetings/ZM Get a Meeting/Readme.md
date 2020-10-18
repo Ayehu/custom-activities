@@ -1,18 +1,11 @@
-#     Zoom
-
-
-Get a Meeting
-
-Retrieve the details of a meeting.
+<br>#     Zoom</br>
+<br>Get a Meeting</br>
+<br>Retrieve the details of a meeting.
 **Scopes:** `meeting:read:admin` `meeting:read`
  
 
-
-
-Method: Get
-
-OperationID: meeting
-
-EndPoint:
-
-/meetings/{meetingId}
+</br>
+<br>Method: Get</br>
+<br>OperationID: meeting</br>
+<br>EndPoint:</br>
+<br>/meetings/{meetingId}</br>

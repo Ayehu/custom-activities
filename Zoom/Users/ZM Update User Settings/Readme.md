@@ -1,18 +1,11 @@
-#     Zoom
-
-
-Update User Settings
-
-Update a user's settings.
+<br>#     Zoom</br>
+<br>Update User Settings</br>
+<br>Update a user's settings.
 **Scopes:** `user:write:admin` `user:write`
  
 
-
-
-Method: Patch
-
-OperationID: userSettingsUpdate
-
-EndPoint:
-
-/users/{userId}/settings
+</br>
+<br>Method: Patch</br>
+<br>OperationID: userSettingsUpdate</br>
+<br>EndPoint:</br>
+<br>/users/{userId}/settings</br>
