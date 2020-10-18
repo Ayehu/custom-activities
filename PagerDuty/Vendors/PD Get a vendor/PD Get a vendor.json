@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Get a vendor",
+    "description": "Get details about one specific vendor.\n\nA PagerDuty Vendor represents a specific type of integration. AWS Cloudwatch, Splunk, Datadog are all examples of vendors\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#vendors)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,72 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Manage incidents",
+    "description": "Acknowledge, resolve, escalate or reassign one or more incidents.\n\nAn incident represents a problem or an issue that needs to be addressed and resolved.\n\nA maximum of 500 incidents may be updated at a time. If more than this number of incidents are given, the API will respond with status 413 (Request Entity Too Large).\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#incidents)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "From",
+          "label": "From",
+          "labelKey": "From_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "total",
+          "label": "Total",
+          "labelKey": "total_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "incidents",
+          "label": "Incidents[]",
+          "labelKey": "incidents_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "incidents",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

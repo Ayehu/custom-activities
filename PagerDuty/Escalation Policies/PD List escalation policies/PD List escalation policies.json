@@ -1,0 +1,113 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD List escalation policies",
+    "description": "List all of the existing escalation policies.\n\nEscalation policies define which user should be alerted at which time.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#escalation-policies)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "total",
+          "label": "Total",
+          "labelKey": "total_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "query",
+          "label": "Query",
+          "labelKey": "query_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "user_ids__",
+          "label": "User_ids[]",
+          "labelKey": "user_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "team_ids__",
+          "label": "Team_ids[]",
+          "labelKey": "team_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "include__",
+          "label": "Include[]",
+          "labelKey": "include_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sort_by",
+          "label": "Sort_by",
+          "labelKey": "sort_by_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "name",
+              "value": "name"
+            },
+            {
+              "key": "name:asc",
+              "value": "name:asc"
+            },
+            {
+              "key": "name:desc",
+              "value": "name:desc"
+            }
+          ],
+          "value": "name"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "escalation_policies",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

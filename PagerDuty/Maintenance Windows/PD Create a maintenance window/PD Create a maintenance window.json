@@ -1,0 +1,105 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Create a maintenance window",
+    "description": "Create a new maintenance window for the specified services. No new incidents will be created for a service that is in maintenance.\n\nA Maintenance Window is used to temporarily disable one or more Services for a set period of time.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#maintenance-windows)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "From",
+          "label": "From",
+          "labelKey": "From_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "maintenance_window",
+              "value": "maintenance_window"
+            }
+          ],
+          "value": "maintenance_window"
+        },
+        {
+          "required": false,
+          "key": "start_time",
+          "label": "Start_time",
+          "labelKey": "start_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "end_time",
+          "label": "End_time",
+          "labelKey": "end_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "services",
+          "label": "Services[]",
+          "labelKey": "services_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "maintenance_windows",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

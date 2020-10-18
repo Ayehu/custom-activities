@@ -1,0 +1,72 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Create an override",
+    "description": "Create an override for a specific user covering the specified time range. If you create an override on top of an existing one, the last created override will have priority.\n\nA Schedule determines the time periods that users are On-Call.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#schedules)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "start",
+          "label": "Start",
+          "labelKey": "start_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "end",
+          "label": "End",
+          "labelKey": "end_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "overrides",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,21 +1,25 @@
-# PagerDuty
+#     Ayehu NG 1.7
 
-**PagerDuty offers more than on-call management. Our platform can scale for
-a broad range of use cases or scenarios—fully meeting the needs of
-enterprises. Gain valuable insights into your team’s performance, the health
-of your operations, and more.**
+<br>The activities require an API key which can be obtain from your pagerduty instance.
 
-[PagerDuty website](https://www.pagerduty.com/)<br />
-[Api documentation](https://api-reference.pagerduty.com/)
+<br>To review the available function and usage, please refer to PagerDuty API Document https://developer.pagerduty.com/api-reference/</br>
+
+#     Ayehu NG Prerequisite:
+
+Ayehu NG v1.7+
+
+Ayehu.Sdk.ActivityCreation.dll v1.1.0+ <br>https://github.com/Ayehu/Custom-Activity-Helper</br>
 
 
-# PagerDuty Activities
+The following .NET Global Assemblies are used:
 
-## Remarks:
-1. Create an account in PagerDuty.<br />
-2. Create a team and add users there which will receive notifications.<br />
-3. Create a service.<br />
-4. Create an API User Token.<br />
+System.dll
 
-## Mandatory fields for using api :<br />
-1. AuthorizationToken(string) - Use your existing API token which you get on step 2. Or create new one.<br />
+System.XML.dll
+
+System.Data.dll
+
+System.Web.dll
+
+System.Net.Http.dll
+

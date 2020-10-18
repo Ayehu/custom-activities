@@ -1,0 +1,126 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD List all of the oncalls",
+    "description": "List the on-call entries during a given time range.\n\nAn on-call represents a contiguous unit of time for which a User will be on call for a given Escalation Policy and Escalation Rules.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#on-calls)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "time_zone",
+          "label": "Time_zone",
+          "labelKey": "time_zone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "total",
+          "label": "Total",
+          "labelKey": "total_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "include__",
+          "label": "Include[]",
+          "labelKey": "include_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "user_ids__",
+          "label": "User_ids[]",
+          "labelKey": "user_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalation_policy_ids__",
+          "label": "Escalation_policy_ids[]",
+          "labelKey": "escalation_policy_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "schedule_ids__",
+          "label": "Schedule_ids[]",
+          "labelKey": "schedule_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "since",
+          "label": "Since",
+          "labelKey": "since_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "until",
+          "label": "Until",
+          "labelKey": "until_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "earliest",
+          "label": "Earliest",
+          "labelKey": "earliest_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "oncalls",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

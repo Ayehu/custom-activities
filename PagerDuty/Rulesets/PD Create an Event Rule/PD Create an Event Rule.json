@@ -1,0 +1,163 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Create an Event Rule",
+    "description": "Create a new Event Rule.\n\nRulesets allow you to route events to an endpoint and create collections of Event Rules, which define sets of actions to take based on event content.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#rulesets)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "disabled_p",
+          "label": "Disabled",
+          "labelKey": "disabled_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "operator_p",
+          "label": "Operator",
+          "labelKey": "operator_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "and",
+              "value": "and"
+            },
+            {
+              "key": "or",
+              "value": "or"
+            }
+          ],
+          "value": "and"
+        },
+        {
+          "required": false,
+          "key": "subconditions",
+          "label": "Subconditions[]",
+          "labelKey": "subconditions_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "start_time",
+          "label": "Start_time",
+          "labelKey": "start_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "end_time",
+          "label": "End_time",
+          "labelKey": "end_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "scheduled_weekly_start_time",
+          "label": "Scheduled_weekly_start_time",
+          "labelKey": "scheduled_weekly_start_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "duration",
+          "label": "Duration",
+          "labelKey": "duration_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timezone",
+          "label": "Timezone",
+          "labelKey": "timezone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "weekdays",
+          "label": "Weekdays[]",
+          "labelKey": "weekdays_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "variables",
+          "label": "Variables[]",
+          "labelKey": "variables_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "position",
+          "label": "Position",
+          "labelKey": "position_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "rules",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

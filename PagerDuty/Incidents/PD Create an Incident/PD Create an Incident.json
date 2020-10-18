@@ -1,0 +1,229 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Create an Incident",
+    "description": "Create an incident synchronously without a corresponding event from a monitoring service.\n\nAn incident represents a problem or an issue that needs to be addressed and resolved.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#incidents)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "From",
+          "label": "From",
+          "labelKey": "From_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "incident",
+              "value": "incident"
+            }
+          ],
+          "value": "incident"
+        },
+        {
+          "required": true,
+          "key": "title",
+          "label": "Title",
+          "labelKey": "title_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "service_type",
+          "label": "Service_type",
+          "labelKey": "service_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "service_reference",
+              "value": "service_reference"
+            }
+          ],
+          "value": "service_reference"
+        },
+        {
+          "required": false,
+          "key": "priority_id",
+          "label": "Priority_id",
+          "labelKey": "priority_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "priority_type",
+          "label": "Priority_type",
+          "labelKey": "priority_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "priority_reference",
+              "value": "priority_reference"
+            }
+          ],
+          "value": "priority_reference"
+        },
+        {
+          "required": false,
+          "key": "urgency",
+          "label": "Urgency",
+          "labelKey": "urgency_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "high",
+              "value": "high"
+            },
+            {
+              "key": "low",
+              "value": "low"
+            }
+          ],
+          "value": "high"
+        },
+        {
+          "required": false,
+          "key": "body_type",
+          "label": "Body_type",
+          "labelKey": "body_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "incident_body",
+              "value": "incident_body"
+            }
+          ],
+          "value": "incident_body"
+        },
+        {
+          "required": false,
+          "key": "details",
+          "label": "Details",
+          "labelKey": "details_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "incident_key",
+          "label": "Incident_key",
+          "labelKey": "incident_key_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "assignments",
+          "label": "Assignments[]",
+          "labelKey": "assignments_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalation_policy_id",
+          "label": "Escalation_policy_id",
+          "labelKey": "escalation_policy_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalation_policy_type",
+          "label": "Escalation_policy_type",
+          "labelKey": "escalation_policy_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "escalation_policy_reference",
+              "value": "escalation_policy_reference"
+            }
+          ],
+          "value": "escalation_policy_reference"
+        },
+        {
+          "required": false,
+          "key": "conference_number",
+          "label": "Conference_number",
+          "labelKey": "conference_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "conference_url",
+          "label": "Conference_url",
+          "labelKey": "conference_url_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "incidents",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

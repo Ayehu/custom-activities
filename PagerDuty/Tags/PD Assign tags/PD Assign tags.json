@@ -1,0 +1,95 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Assign tags",
+    "description": "Assign existing or new tags.\n\nA Tag is applied to EScalation Policies, Teams or Users and can be used to filter them.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#tags)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "entity_type",
+          "label": "Entity_type",
+          "labelKey": "entity_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "users",
+              "value": "users"
+            },
+            {
+              "key": "teams",
+              "value": "teams"
+            },
+            {
+              "key": "escalation_policies",
+              "value": "escalation_policies"
+            }
+          ],
+          "value": "users"
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "add",
+          "label": "Add[]",
+          "labelKey": "add_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "remove",
+          "label": "Remove[]",
+          "labelKey": "remove_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "change_tags",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,63 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD List Response Plays",
+    "description": "List all of the existing Response Plays.\n\nResponse Plays allow you to create packages of Incident Actions that can be applied during an Incident's life cycle.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#response-plays)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "query",
+          "label": "Query",
+          "labelKey": "query_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filter_for_manual_run",
+          "label": "Filter_for_manual_run",
+          "labelKey": "filter_for_manual_run_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "response_plays",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

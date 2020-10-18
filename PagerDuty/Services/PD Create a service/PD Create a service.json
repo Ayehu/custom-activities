@@ -1,0 +1,225 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Create a service",
+    "description": "Create a new service.\n\nIf `status` is included in the request, it must have a value of `active` when creating a new service. If a different status is required, make a second request to update the service.\n\nA service may represent an application, component, or team you wish to open incidents against.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#services)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "service",
+              "value": "service"
+            }
+          ],
+          "value": "service"
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "auto_resolve_timeout",
+          "label": "Auto_resolve_timeout",
+          "labelKey": "auto_resolve_timeout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "acknowledgement_timeout",
+          "label": "Acknowledgement_timeout",
+          "labelKey": "acknowledgement_timeout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "labelKey": "status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "active",
+              "value": "active"
+            },
+            {
+              "key": "warning",
+              "value": "warning"
+            },
+            {
+              "key": "critical",
+              "value": "critical"
+            },
+            {
+              "key": "maintenance",
+              "value": "maintenance"
+            },
+            {
+              "key": "disabled",
+              "value": "disabled"
+            }
+          ],
+          "value": "active"
+        },
+        {
+          "required": false,
+          "key": "support_hours_type",
+          "label": "Support_hours_type",
+          "labelKey": "support_hours_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "fixed_time_per_day",
+              "value": "fixed_time_per_day"
+            }
+          ],
+          "value": "fixed_time_per_day"
+        },
+        {
+          "required": false,
+          "key": "time_zone",
+          "label": "Time_zone",
+          "labelKey": "time_zone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "start_time",
+          "label": "Start_time",
+          "labelKey": "start_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "end_time",
+          "label": "End_time",
+          "labelKey": "end_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "scheduled_actions",
+          "label": "Scheduled_actions[]",
+          "labelKey": "scheduled_actions_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "alert_creation",
+          "label": "Alert_creation",
+          "labelKey": "alert_creation_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "create_incidents",
+              "value": "create_incidents"
+            },
+            {
+              "key": "create_alerts_and_incidents",
+              "value": "create_alerts_and_incidents"
+            }
+          ],
+          "value": "create_incidents"
+        },
+        {
+          "required": false,
+          "key": "alert_grouping",
+          "label": "Alert_grouping",
+          "labelKey": "alert_grouping_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "time",
+              "value": "time"
+            },
+            {
+              "key": "intelligent",
+              "value": "intelligent"
+            }
+          ],
+          "value": "time"
+        },
+        {
+          "required": false,
+          "key": "alert_grouping_timeout",
+          "label": "Alert_grouping_timeout",
+          "labelKey": "alert_grouping_timeout_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "services",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

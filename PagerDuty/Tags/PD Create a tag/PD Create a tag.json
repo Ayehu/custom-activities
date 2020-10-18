@@ -1,0 +1,69 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Create a tag",
+    "description": "Create a Tag.\n\nA Tag is applied to EScalation Policies, Teams or Users and can be used to filter them.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#tags)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "tag",
+              "value": "tag"
+            }
+          ],
+          "value": "tag"
+        },
+        {
+          "required": false,
+          "key": "label_p",
+          "label": "Label",
+          "labelKey": "label_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "tags",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
