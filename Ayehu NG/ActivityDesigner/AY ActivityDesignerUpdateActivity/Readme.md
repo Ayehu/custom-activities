@@ -1,8 +1,5 @@
 <br>#     Ayehu</br>
-<br></br>
-<br></br>
 <br>AY ActivityDesignerUpdateActivity</br>
-<br></br>
 <br>Method: Put</br>
 <br></br>
 <br>OperationID: ActivityDesigner_UpdateActivity</br>
