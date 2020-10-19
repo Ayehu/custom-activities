@@ -1,4 +1,4 @@
-#     Ayehu NG 1.7
+#     PagerDuty
 
 <br>The activities require an API key which can be obtain from your pagerduty instance.
 
