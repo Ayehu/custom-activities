@@ -1,4 +1,8 @@
-In order to retrieve the attachment ID and attachment filename needed to execute this activity, use the default out-of-the-box Jira integration within Ayehu NG.  This is achieved by using the <b>JiraGetIssue</b> activity and then extracting the contents of the "Attachment" column.
+In order to retrieve the attachment ID and attachment filename needed to execute this activity, you have two options.
+<br><br>
+The first and easiest option is to use the <a href="https://github.com/Ayehu/custom-activities/tree/master/Jira/JiraListAttachments">JiraListAttachments</a> activity from this repository.
+<br><br>
+The second option is to use the default out-of-the-box Jira integration within Ayehu NG.  This is achieved by using the <b>JiraGetIssue</b> activity and then extracting the contents of the "Attachment" column.
 <br><br>
 Below is an example of the JSON contained within that cell:
 <br>
