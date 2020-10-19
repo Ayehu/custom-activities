@@ -1,0 +1,118 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "GH Get contextual information for a user",
+    "description": "Provides hovercard information when authenticated through basic auth or OAuth with the `repo` scope. You can find out more about someone in relation to their pull requests, issues, repositories, and organizations.\n\nThe `subject_type` and `subject_id` parameters provide context for the person's hovercard, which returns more information than without the parameters. For example, if you wanted to find out more about `octocat` who owns the `Spoon-Knife` repository via cURL, it would look like this:\n\n```shell\n curl -u username:token\n  https://api.github.com/users/octocat/hovercard?subject_type=repositorysubject_id=1300192\n```",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "Username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Accept",
+          "label": "Accept",
+          "labelKey": "Accept_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "application/vnd.github.v3+json",
+              "value": "application/vnd.github.v3+json"
+            },
+            {
+              "key": "application/vnd.github.inertia-preview+json",
+              "value": "application/vnd.github.inertia-preview+json"
+            }
+          ],
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "required": false,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "subject_type",
+          "label": "Subject_type",
+          "labelKey": "subject_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "organization",
+              "value": "organization"
+            },
+            {
+              "key": "repository",
+              "value": "repository"
+            },
+            {
+              "key": "issue",
+              "value": "issue"
+            },
+            {
+              "key": "pull_request",
+              "value": "pull_request"
+            }
+          ],
+          "value": "organization"
+        },
+        {
+          "required": false,
+          "key": "subject_id",
+          "label": "Subject_id",
+          "labelKey": "subject_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "hovercard",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

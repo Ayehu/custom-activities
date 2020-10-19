@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ActivityExportMetadata>
+  <ActivityMetadata>
+    <Name>GH Create a commit</Name>
+    <Label>GH Create a commit</Label>
+    <Color>#EF712F</Color>
+    <Description>Creates a new Git [commit object](https://git-scm.com/book/en/v1/Git-Internals-Git-Objects#Commit-Objects).
+
+**Signature verification object**
+
+The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+| `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+| `signature` | `string` | The signature that was extracted from the commit. |
+| `payload` | `string` | The value that was signed. |
+
+These are the possible values for `reason` in the `verification` object:
+
+| Value | Description |
+| ----- | ----------- |
+| `expired_key` | The key that made the signature is expired. |
+| `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+| `gpgverify_error` | There was an error communicating with the signature verification service. |
+| `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+| `unsigned` | The object does not include a signature. |
+| `unknown_signature_type` | A non-PGP signature was found in the commit. |
+| `no_user` | No user was associated with the `committer` email address in the commit. |
+| `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+| `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+| `unknown_key` | The key that made the signature h</Description>
+    <HelpHtml>&lt;p&gt;&lt;br&gt;#     Github&lt;/br&gt;
+&lt;br&gt;Create a commit&lt;/br&gt;
+&lt;br&gt;Creates a new Git [commit object](https://git-scm.com/book/en/v1/Git-Internals-Git-Objects#Commit-Objects).
+
+**Signature verification object**
+
+The response will include a `verification` object that describes the result of verifying the commit&#39;s signature. The following fields are included in the `verification` object:
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+| `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+| `signature` | `string` | The signature that was extracted from the commit. |
+| `payload` | `string` | The value that was signed. |
+
+These are the possible values for `reason` in the `verification` object:
+
+| Value | Description |
+| ----- | ----------- |
+| `expired_key` | The key that made the signature is expired. |
+| `not_signing_key` | The &quot;signing&quot; flag is not among the usage flags in the GPG key that made the signature. |
+| `gpgverify_error` | There was an error communicating with the signature verification service. |
+| `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+| `unsigned` | The object does not include a signature. |
+| `unknown_signature_type` | A non-PGP signature was found in the commit. |
+| `no_user` | No user was associated with the `committer` email address in the commit. |
+| `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+| `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+| `unknown_key` | The key that made the signature h&lt;/br&gt;
+&lt;br&gt;Method: Post&lt;/br&gt;
+&lt;br&gt;OperationID: git/create-commit&lt;/br&gt;
+&lt;br&gt;EndPoint:&lt;/br&gt;
+&lt;br&gt;/repos/{owner}/{repo}/git/commits&lt;/br&gt;
+ &lt;/p&gt;</HelpHtml>
+  </ActivityMetadata>
+  <ActivityGroupMetadata>
+    <Label>Github</Label>
+    <LabelKey>GITHUB</LabelKey>
+    <Icon>fa-wrench</Icon>
+    <Color>#EF712F</Color>
+    <Description>custom</Description>
+  </ActivityGroupMetadata>
+  <ActivitySourceMetadata>
+    <SourceCode>&lt;Activity&gt;
+  &lt;Name&gt;GH Create a commit&lt;/Name&gt;
+  &lt;Version&gt;1.0.0.88&lt;/Version&gt;
+  &lt;Platform&gt;Windows&lt;/Platform&gt;
+  &lt;SourceType&gt;Executor&lt;/SourceType&gt;
+  &lt;SourceCodeType&gt;CSHARP&lt;/SourceCodeType&gt;
+  &lt;Enc&gt;False&lt;/Enc&gt;
+  &lt;Remark /&gt;
+  &lt;RequiresMap&gt;False&lt;/RequiresMap&gt;
+  &lt;GlobalMemoryRequests /&gt;
+  &lt;Assemblies&gt;
+    &lt;Assembly type="0"&gt;System.XML.dll&lt;/Assembly&gt;
+&lt;Assembly type="0"&gt;System.Data.dll&lt;/Assembly&gt;
+&lt;Assembly type="0"&gt;System.dll&lt;/Assembly&gt;
+&lt;Assembly type="0"&gt;System.Web.dll&lt;/Assembly&gt;
+&lt;Assembly type="0"&gt;System.Net.Http.dll&lt;/Assembly&gt;
+
+  &lt;/Assemblies&gt;
+  &lt;SourceCode&gt;dXNpbmcgU3lzdGVtOw0KdXNpbmcgQXllaHUuU2RrLkFjdGl2aXR5Q3JlYXRpb24uSW50ZXJmYWNlczsNCnVzaW5nIEF5ZWh1LlNkay5BY3Rpdml0eUNyZWF0aW9uLkV4dGVuc2lvbjsNCnVzaW5nIEF5ZWh1LlNkay5BY3Rpdml0eUNyZWF0aW9uLkhlbHBlcnM7DQp1c2luZyBTeXN0ZW0uTmV0Ow0KdXNpbmcgU3lzdGVtLk5ldC5IdHRwOw0KdXNpbmcgU3lzdGVtLlRleHQ7DQp1c2luZyBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYzsNCg0KbmFtZXNwYWNlIEF5ZWh1LkdpdGh1Yg0Kew0KICAgIHB1YmxpYyBjbGFzcyBHSF9DcmVhdGVfYV9jb21taXQgOiBJQWN0aXZpdHlBc3luYw0KICAgIHsNCg0KDQogICAgDQogICAgcHVibGljIHN0cmluZyBKc29ua2V5cGF0aCA9ICJjb21taXRzIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIEFjY2VwdCA9ICIiOw0KICAgIA0KICAgIHB1YmxpYyBzdHJpbmcgcGFzc3dvcmQxID0gIiI7DQogICAgDQogICAgcHVibGljIHN0cmluZyBVc2VybmFtZSA9ICIiOw0KICAgIA0KICAgIHB1YmxpYyBzdHJpbmcgb3duZXIgPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIHJlcG8gPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIG1lc3NhZ2UgPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIHRyZWUgPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIG5hbWVfcCA9ICIiOw0KICAgIA0KICAgIHB1YmxpYyBzdHJpbmcgZW1haWwgPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIGRhdGUgPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIGNvbW1pdHRlcl9uYW1lID0gIiI7DQogICAgDQogICAgcHVibGljIHN0cmluZyBjb21taXR0ZXJfZW1haWwgPSAiIjsNCiAgICANCiAgICBwdWJsaWMgc3RyaW5nIGNvbW1pdHRlcl9kYXRlID0gIiI7DQogICAgDQogICAgcHVibGljIHN0cmluZyBzaWduYXR1cmUgPSAiIjsNCiAgICANCiAgICBwcml2YXRlIGJvb2wgb21pdEpzb25FbXB0eW9yTnVsbCA9IHRydWU7DQogICAgDQogICAgcHJpdmF0ZSBzdHJpbmcgY29udGVudFR5cGUgPSAiYXBwbGljYXRpb24vanNvbiI7DQogICAgDQogICAgcHJpdmF0ZSBzdHJpbmcgZW5kUG9pbnQgPSAiaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbSI7DQogICAgDQogICAgcHJpdmF0ZSBzdHJpbmcgaHR0cE1ldGhvZCA9ICJQT1NUIjsNCiAgICANCiAgICBwcml2YXRlIHN0cmluZyBfdXJpQnVpbGRlclBhdGg7DQogICAgDQogICAgcHJpdmF0ZSBzdHJpbmcgX3Bvc3REYXRhOw0KICAgIA0KICAgIHByaXZhdGUgU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeTxzdHJpbmcsIHN0cmluZz4gX2hlYWRlcnM7DQogICAgDQogICAgcHJpdmF0ZSBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5PHN0cmluZywgc3RyaW5nPiBfcXVlcnlTdHJpbmdBcnJheTsNCiAgICANCiAgICBwcml2YXRlIHN0cmluZyB1cmlCdWlsZGVyUGF0aCB7DQogICAgICAgIGdldCB7DQogICAgICAgICAgICBpZiAoc3RyaW5nLklzTnVsbE9yRW1wdHkoX3VyaUJ1aWxkZXJQYXRoKSkgew0KX3VyaUJ1aWxkZXJQYXRoID0gc3RyaW5nLkZvcm1hdCgiL3JlcG9zL3swfS97MX0vZ2l0L2NvbW1pdHMiLG93bmVyLHJlcG8pOw0KICAgICAgICAgICAgfQ0KcmV0dXJuIF91cmlCdWlsZGVyUGF0aDsNCiAgICAgICAgfQ0KICAgICAgICBzZXQgew0KICAgICAgICAgICAgdGhpcy5fdXJpQnVpbGRlclBhdGggPSB2YWx1ZTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICANCiAgICBwcml2YXRlIHN0cmluZyBwb3N0RGF0YSB7DQogICAgICAgIGdldCB7DQogICAgICAgICAgICBpZiAoc3RyaW5nLklzTnVsbE9yRW1wdHkoX3Bvc3REYXRhKSkgew0KX3Bvc3REYXRhID0gc3RyaW5nLkZvcm1hdCgie3sgXCJtZXNzYWdlXCI6IFwiezB9XCIsICBcInRyZWVcIjogXCJ7MX1cIiwgIFwiYXV0aG9yXCI6IHt7ICAgXCJuYW1lXCI6IFwiezJ9XCIsICAgIFwiZW1haWxcIjogXCJ7M31cIiwgICAgXCJkYXRlXCI6IFwiezR9XCIgICB9fSwgIFwiY29tbWl0dGVyXCI6IHt7ICAgXCJuYW1lXCI6IFwiezV9XCIsICAgIFwiZW1haWxcIjogXCJ7Nn1cIiwgICAgXCJkYXRlXCI6IFwiezd9XCIgICB9fSwgIFwic2lnbmF0dXJlXCI6IFwiezh9XCIgfX0iLG1lc3NhZ2UsdHJlZSxuYW1lX3AsZW1haWwsZGF0ZSxjb21taXR0ZXJfbmFtZSxjb21taXR0ZXJfZW1haWwsY29tbWl0dGVyX2RhdGUsc2lnbmF0dXJlKTsNCiAgICAgICAgICAgIH0NCnJldHVybiBfcG9zdERhdGE7DQogICAgICAgIH0NCiAgICAgICAgc2V0IHsNCiAgICAgICAgICAgIHRoaXMuX3Bvc3REYXRhID0gdmFsdWU7DQogICAgICAgIH0NCiAgICB9DQogICAgDQogICAgcHJpdmF0ZSBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5PHN0cmluZywgc3RyaW5nPiBoZWFkZXJzIHsNCiAgICAgICAgZ2V0IHsNCiAgICAgICAgICAgIGlmIChfaGVhZGVycyA9PSBudWxsKSB7DQpfaGVhZGVycyA9IG5ldyBEaWN0aW9uYXJ5PHN0cmluZywgc3RyaW5nPigpIHsgeyJVc2VyLUFnZW50IiwiIiArIFVzZXJuYW1lfSx7IkFjY2VwdCIsQWNjZXB0fSx7ImF1dGhvcml6YXRpb24iLCJ0b2tlbiAiICsgcGFzc3dvcmQxfSB9Ow0KICAgICAgICAgICAgfQ0KcmV0dXJuIF9oZWFkZXJzOw0KICAgICAgICB9DQogICAgICAgIHNldCB7DQogICAgICAgICAgICB0aGlzLl9oZWFkZXJzID0gdmFsdWU7DQogICAgICAgIH0NCiAgICB9DQogICAgDQogICAgcHJpdmF0ZSBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5PHN0cmluZywgc3RyaW5nPiBxdWVyeVN0cmluZ0FycmF5IHsNCiAgICAgICAgZ2V0IHsNCiAgICAgICAgICAgIGlmIChfcXVlcnlTdHJpbmdBcnJheSA9PSBudWxsKSB7DQpfcXVlcnlTdHJpbmdBcnJheSA9IG5ldyBEaWN0aW9uYXJ5PHN0cmluZywgc3RyaW5nPigpIHsgIH07DQogICAgICAgICAgICB9DQpyZXR1cm4gX3F1ZXJ5U3RyaW5nQXJyYXk7DQogICAgICAgIH0NCiAgICAgICAgc2V0IHsNCiAgICAgICAgICAgIHRoaXMuX3F1ZXJ5U3RyaW5nQXJyYXkgPSB2YWx1ZTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICANCiAgICBwdWJsaWMgR0hfQ3JlYXRlX2FfY29tbWl0KCkgew0KICAgIH0NCiAgICANCiAgICBwdWJsaWMgR0hfQ3JlYXRlX2FfY29tbWl0KHN0cmluZyBKc29ua2V5cGF0aCwgc3RyaW5nIEFjY2VwdCwgc3RyaW5nIHBhc3N3b3JkMSwgc3RyaW5nIFVzZXJuYW1lLCBzdHJpbmcgb3duZXIsIHN0cmluZyByZXBvLCBzdHJpbmcgbWVzc2FnZSwgc3RyaW5nIHRyZWUsIHN0cmluZyBuYW1lX3AsIHN0cmluZyBlbWFpbCwgc3RyaW5nIGRhdGUsIHN0cmluZyBjb21taXR0ZXJfbmFtZSwgc3RyaW5nIGNvbW1pdHRlcl9lbWFpbCwgc3RyaW5nIGNvbW1pdHRlcl9kYXRlLCBzdHJpbmcgc2lnbmF0dXJlKSB7DQogICAgICAgIHRoaXMuSnNvbmtleXBhdGggPSBKc29ua2V5cGF0aDsNCiAgICAgICAgdGhpcy5BY2NlcHQgPSBBY2NlcHQ7DQogICAgICAgIHRoaXMucGFzc3dvcmQxID0gcGFzc3dvcmQxOw0KICAgICAgICB0aGlzLlVzZXJuYW1lID0gVXNlcm5hbWU7DQogICAgICAgIHRoaXMub3duZXIgPSBvd25lcjsNCiAgICAgICAgdGhpcy5yZXBvID0gcmVwbzsNCiAgICAgICAgdGhpcy5tZXNzYWdlID0gbWVzc2FnZTsNCiAgICAgICAgdGhpcy50cmVlID0gdHJlZTsNCiAgICAgICAgdGhpcy5uYW1lX3AgPSBuYW1lX3A7DQogICAgICAgIHRoaXMuZW1haWwgPSBlbWFpbDsNCiAgICAgICAgdGhpcy5kYXRlID0gZGF0ZTsNCiAgICAgICAgdGhpcy5jb21taXR0ZXJfbmFtZSA9IGNvbW1pdHRlcl9uYW1lOw0KICAgICAgICB0aGlzLmNvbW1pdHRlcl9lbWFpbCA9IGNvbW1pdHRlcl9lbWFpbDsNCiAgICAgICAgdGhpcy5jb21taXR0ZXJfZGF0ZSA9IGNvbW1pdHRlcl9kYXRlOw0KICAgICAgICB0aGlzLnNpZ25hdHVyZSA9IHNpZ25hdHVyZTsNCiAgICB9DQoNCg0KICAgICAgICBwdWJsaWMgYXN5bmMgU3lzdGVtLlRocmVhZGluZy5UYXNrcy5UYXNrPElDdXN0b21BY3Rpdml0eVJlc3VsdD4gRXhlY3V0ZSgpDQogICAgICAgIHsNCg0KICAgICAgICAgICAgSHR0cENsaWVudCBjbGllbnQgPSBuZXcgSHR0cENsaWVudCgpOw0KICAgICAgICAgICAgU2VydmljZVBvaW50TWFuYWdlci5FeHBlY3QxMDBDb250aW51ZSA9IHRydWU7DQogICAgICAgICAgICBTZXJ2aWNlUG9pbnRNYW5hZ2VyLlNlY3VyaXR5UHJvdG9jb2wgPSBTZWN1cml0eVByb3RvY29sVHlwZS5UbHMxMjsNCiAgICAgICAgICAgIFNlcnZpY2VQb2ludE1hbmFnZXIuU2VydmVyQ2VydGlmaWNhdGVWYWxpZGF0aW9uQ2FsbGJhY2sgPSBuZXcgU3lzdGVtLk5ldC5TZWN1cml0eS5SZW1vdGVDZXJ0aWZpY2F0ZVZhbGlkYXRpb25DYWxsYmFjayhBY2NlcHRBbGxDZXJ0aWZpY2F0aW9ucyk7DQogICAgICAgICAgICBVcmlCdWlsZGVyIFVyaUJ1aWxkZXIgPSBuZXcgVXJpQnVpbGRlcihlbmRQb2ludCk7IA0KICAgICAgICAgICAgVXJpQnVpbGRlci5QYXRoID0gdXJpQnVpbGRlclBhdGg7DQogICAgICAgICAgICBVcmlCdWlsZGVyLlF1ZXJ5ID0gQXllaHVIZWxwZXIucXVlcnlTdHJpbmdCdWlsZGVyKHF1ZXJ5U3RyaW5nQXJyYXkpOw0KICAgICAgICAgICAgSHR0cFJlcXVlc3RNZXNzYWdlIG15SHR0cFJlcXVlc3RNZXNzYWdlID0gbmV3IEh0dHBSZXF1ZXN0TWVzc2FnZShuZXcgSHR0cE1ldGhvZChodHRwTWV0aG9kKSwgVXJpQnVpbGRlci5Ub1N0cmluZygpKTsNCiAgICAgICAgICAgDQogICAgICAgICAgICBpZiAoY29udGVudFR5cGUgPT0gImFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZCIpDQogICAgICAgICAgICAgICAgbXlIdHRwUmVxdWVzdE1lc3NhZ2UuQ29udGVudCA9IEF5ZWh1SGVscGVyLmZvcm1VcmxFbmNvZGVkQ29udGVudChwb3N0RGF0YSk7DQogICAgICAgICAgICBlbHNlDQogICAgICAgICAgICAgIGlmIChzdHJpbmcuSXNOdWxsT3JFbXB0eShwb3N0RGF0YSkgPT0gZmFsc2UpDQogICAgICAgICAgICAgICAgaWYgKG9taXRKc29uRW1wdHlvck51bGwpDQogICAgICAgICAgICAgICAgICAgIG15SHR0cFJlcXVlc3RNZXNzYWdlLkNvbnRlbnQgPSBuZXcgU3RyaW5nQ29udGVudChBeWVodUhlbHBlci5vbWl0SnNvbkVtcHR5b3JOdWxsKHBvc3REYXRhKSwgRW5jb2RpbmcuVVRGOCwgImFwcGxpY2F0aW9uL2pzb24iKTsNCiAgICAgICAgICAgICAgICBlbHNlDQogICAgICAgICAgICAgICAgICAgIG15SHR0cFJlcXVlc3RNZXNzYWdlLkNvbnRlbnQgPSBuZXcgU3RyaW5nQ29udGVudChwb3N0RGF0YSwgRW5jb2RpbmcuVVRGOCwgY29udGVudFR5cGUpOw0KDQoNCiAgICAgICAgICAgIGZvcmVhY2ggKEtleVZhbHVlUGFpcjxzdHJpbmcsIHN0cmluZz4gaGVhZGVyaXRlbSBpbiBoZWFkZXJzKQ0KICAgICAgICAgICAgICAgIGNsaWVudC5EZWZhdWx0UmVxdWVzdEhlYWRlcnMuQWRkKGhlYWRlcml0ZW0uS2V5LCBoZWFkZXJpdGVtLlZhbHVlKTsNCg0KICAgICAgICAgICAgSHR0cFJlc3BvbnNlTWVzc2FnZSByZXNwb25zZSA9IGNsaWVudC5TZW5kQXN5bmMobXlIdHRwUmVxdWVzdE1lc3NhZ2UpLlJlc3VsdDsNCg0KICAgICAgICAgICAgc3dpdGNoIChyZXNwb25zZS5TdGF0dXNDb2RlKQ0KICAgICAgICAgICAgew0KICAgICAgICAgICAgICAgIGNhc2UgSHR0cFN0YXR1c0NvZGUuTm9Db250ZW50Og0KICAgICAgICAgICAgICAgIGNhc2UgSHR0cFN0YXR1c0NvZGUuQ3JlYXRlZDoNCiAgICAgICAgICAgICAgICBjYXNlIEh0dHBTdGF0dXNDb2RlLkFjY2VwdGVkOg0KICAgICAgICAgICAgICAgIGNhc2UgSHR0cFN0YXR1c0NvZGUuT0s6DQogICAgICAgICAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChzdHJpbmcuSXNOdWxsT3JFbXB0eShyZXNwb25zZS5Db250ZW50LlJlYWRBc1N0cmluZ0FzeW5jKCkuUmVzdWx0KSA9PSBmYWxzZSkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gdGhpcy5HZW5lcmF0ZUFjdGl2aXR5UmVzdWx0KHJlc3BvbnNlLkNvbnRlbnQuUmVhZEFzU3RyaW5nQXN5bmMoKS5SZXN1bHQsIEpzb25rZXlwYXRoKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gdGhpcy5HZW5lcmF0ZUFjdGl2aXR5UmVzdWx0KCJTdWNjZXNzIik7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBkZWZhdWx0Og0KICAgICAgICAgICAgICAgICAgICB7DQogICAgICAgICAgICAgICAgICAgICAgICBpZiAoc3RyaW5nLklzTnVsbE9yRW1wdHkocmVzcG9uc2UuQ29udGVudC5SZWFkQXNTdHJpbmdBc3luYygpLlJlc3VsdCkgPT0gZmFsc2UpDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdGhyb3cgbmV3IEV4Y2VwdGlvbihyZXNwb25zZS5Db250ZW50LlJlYWRBc1N0cmluZ0FzeW5jKCkuUmVzdWx0KTsNCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYgKHN0cmluZy5Jc051bGxPckVtcHR5KHJlc3BvbnNlLlJlYXNvblBocmFzZSkgPT0gZmFsc2UpDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdGhyb3cgbmV3IEV4Y2VwdGlvbihyZXNwb25zZS5SZWFzb25QaHJhc2UpOw0KICAgICAgICAgICAgICAgICAgICAgICAgZWxzZQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRocm93IG5ldyBFeGNlcHRpb24ocmVzcG9uc2UuU3RhdHVzQ29kZS5Ub1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQoNCiAgICAgICAgcHVibGljIGJvb2wgQWNjZXB0QWxsQ2VydGlmaWNhdGlvbnMob2JqZWN0IHNlbmRlciwgU3lzdGVtLlNlY3VyaXR5LkNyeXB0b2dyYXBoeS5YNTA5Q2VydGlmaWNhdGVzLlg1MDlDZXJ0aWZpY2F0ZSBjZXJ0aWZpY2F0aW9uLCBTeXN0ZW0uU2VjdXJpdHkuQ3J5cHRvZ3JhcGh5Llg1MDlDZXJ0aWZpY2F0ZXMuWDUwOUNoYWluIGNoYWluLCBTeXN0ZW0uTmV0LlNlY3VyaXR5LlNzbFBvbGljeUVycm9ycyBzc2xQb2xpY3lFcnJvcnMpDQogICAgICAgIHsNCiAgICAgICAgICAgIHJldHVybiB0cnVlOw0KICAgICAgICB9DQogICAgfQ0KfQ==&lt;/SourceCode&gt;
+&lt;/Activity&gt;</SourceCode>
+  </ActivitySourceMetadata>
+</ActivityExportMetadata>

@@ -1,0 +1,155 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "GH Update a pull request",
+    "description": "Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://help.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.\n\nTo open or update a pull request in a public repository, you must have write access to the head or the source branch. For organization-owned repositories, you must be a member of the organization that owns the repository to open or update a pull request.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "Username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Accept",
+          "label": "Accept",
+          "labelKey": "Accept_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "application/vnd.github.v3+json",
+              "value": "application/vnd.github.v3+json"
+            },
+            {
+              "key": "application/vnd.github.inertia-preview+json",
+              "value": "application/vnd.github.inertia-preview+json"
+            }
+          ],
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "required": false,
+          "key": "owner",
+          "label": "Owner",
+          "labelKey": "owner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "repo",
+          "label": "Repo",
+          "labelKey": "repo_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "pull_number",
+          "label": "Pull_number",
+          "labelKey": "pull_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "title",
+          "label": "Title",
+          "labelKey": "title_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "state",
+          "label": "State",
+          "labelKey": "state_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "open",
+              "value": "open"
+            },
+            {
+              "key": "closed",
+              "value": "closed"
+            }
+          ],
+          "value": "open"
+        },
+        {
+          "required": false,
+          "key": "base",
+          "label": "Base",
+          "labelKey": "base_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "maintainer_can_modify",
+          "label": "Maintainer_can_modify",
+          "labelKey": "maintainer_can_modify_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

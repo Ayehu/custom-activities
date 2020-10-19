@@ -1,0 +1,207 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "GH Create a deployment status",
+    "description": "Users with `push` access can create deployment statuses for a given deployment.\n\nGitHub Apps require `read  write` access to \"Deployments\" and `read-only` access to \"Repo contents\" (for private repos). OAuth Apps require the `repo_deployment` scope.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "Username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Accept",
+          "label": "Accept",
+          "labelKey": "Accept_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "application/vnd.github.v3+json",
+              "value": "application/vnd.github.v3+json"
+            },
+            {
+              "key": "application/vnd.github.inertia-preview+json",
+              "value": "application/vnd.github.inertia-preview+json"
+            }
+          ],
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "required": false,
+          "key": "owner",
+          "label": "Owner",
+          "labelKey": "owner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "repo",
+          "label": "Repo",
+          "labelKey": "repo_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "deployment_id",
+          "label": "Deployment_id",
+          "labelKey": "deployment_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "state",
+          "label": "State",
+          "labelKey": "state_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "error",
+              "value": "error"
+            },
+            {
+              "key": "failure",
+              "value": "failure"
+            },
+            {
+              "key": "inactive",
+              "value": "inactive"
+            },
+            {
+              "key": "in_progress",
+              "value": "in_progress"
+            },
+            {
+              "key": "queued",
+              "value": "queued"
+            },
+            {
+              "key": "pending",
+              "value": "pending"
+            },
+            {
+              "key": "success",
+              "value": "success"
+            }
+          ],
+          "value": "error"
+        },
+        {
+          "required": false,
+          "key": "target_url",
+          "label": "Target_url",
+          "labelKey": "target_url_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "log_url",
+          "label": "Log_url",
+          "labelKey": "log_url_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "environment",
+          "label": "Environment",
+          "labelKey": "environment_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "production",
+              "value": "production"
+            },
+            {
+              "key": "staging",
+              "value": "staging"
+            },
+            {
+              "key": "qa",
+              "value": "qa"
+            }
+          ],
+          "value": "production"
+        },
+        {
+          "required": false,
+          "key": "environment_url",
+          "label": "Environment_url",
+          "labelKey": "environment_url_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "auto_inactive",
+          "label": "Auto_inactive",
+          "labelKey": "auto_inactive_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "statuses",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

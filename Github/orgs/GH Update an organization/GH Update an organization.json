@@ -1,0 +1,267 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "GH Update an organization",
+    "description": "**Parameter Deprecation Notice:** GitHub will replace and discontinue `members_allowed_repository_creation_type` in favor of more granular permissions. The new input parameters are `members_can_create_public_repositories`, `members_can_create_private_repositories` for all organizations and `members_can_create_internal_repositories` for organizations associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see the [blog post](https://developer.github.com/changes/2019-12-03-internal-visibility-changes).\n\nEnables an authenticated organization owner with the `admin:org` scope to update the organization's profile and member privileges.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "Username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Accept",
+          "label": "Accept",
+          "labelKey": "Accept_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "application/vnd.github.v3+json",
+              "value": "application/vnd.github.v3+json"
+            },
+            {
+              "key": "application/vnd.github.inertia-preview+json",
+              "value": "application/vnd.github.inertia-preview+json"
+            }
+          ],
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "required": false,
+          "key": "org",
+          "label": "Org",
+          "labelKey": "org_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "billing_email",
+          "label": "Billing_email",
+          "labelKey": "billing_email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "company",
+          "label": "Company",
+          "labelKey": "company_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "email",
+          "label": "Email",
+          "labelKey": "email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "twitter_username",
+          "label": "Twitter_username",
+          "labelKey": "twitter_username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "location",
+          "label": "Location",
+          "labelKey": "location_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "name_p",
+          "label": "Name",
+          "labelKey": "name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "has_organization_projects",
+          "label": "Has_organization_projects",
+          "labelKey": "has_organization_projects_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "has_repository_projects",
+          "label": "Has_repository_projects",
+          "labelKey": "has_repository_projects_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "default_repository_permission",
+          "label": "Default_repository_permission",
+          "labelKey": "default_repository_permission_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "read",
+              "value": "read"
+            },
+            {
+              "key": "write",
+              "value": "write"
+            },
+            {
+              "key": "admin",
+              "value": "admin"
+            },
+            {
+              "key": "none",
+              "value": "none"
+            }
+          ],
+          "value": "read"
+        },
+        {
+          "required": false,
+          "key": "members_can_create_repositories",
+          "label": "Members_can_create_repositories",
+          "labelKey": "members_can_create_repositories_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "members_can_create_internal_repositories",
+          "label": "Members_can_create_internal_repositories",
+          "labelKey": "members_can_create_internal_repositories_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "members_can_create_private_repositories",
+          "label": "Members_can_create_private_repositories",
+          "labelKey": "members_can_create_private_repositories_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "members_can_create_public_repositories",
+          "label": "Members_can_create_public_repositories",
+          "labelKey": "members_can_create_public_repositories_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "members_allowed_repository_creation_type",
+          "label": "Members_allowed_repository_creation_type",
+          "labelKey": "members_allowed_repository_creation_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "all",
+              "value": "all"
+            },
+            {
+              "key": "private",
+              "value": "private"
+            },
+            {
+              "key": "none",
+              "value": "none"
+            }
+          ],
+          "value": "all"
+        },
+        {
+          "required": false,
+          "key": "members_can_create_pages",
+          "label": "Members_can_create_pages",
+          "labelKey": "members_can_create_pages_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "blog",
+          "label": "Blog",
+          "labelKey": "blog_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
