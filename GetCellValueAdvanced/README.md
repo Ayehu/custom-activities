@@ -1,5 +1,5 @@
 <h1>GetCellValueAdvanced</h1>
-This activity is designed to extract a cell from a resultset table that is vertically-oriented and cannot be rotated efficiently with the <b>RotateTable</b> activity because it contains more than two (2) columns.  A series of activities (e.g. <b>ResultSetFilter</b> and <b>GetCellValue</b>) can be used to achieve what this single activity does.  However, this is the cleanest and simplest method.
+This activity is designed to extract a cell from a resultset table that is vertically-oriented and cannot be rotated efficiently with the <b>RotateTable</b> activity because it contains more than two (2) columns.  This single activity can achieve what normally must be achieved with a series of activities (e.g. <b>ResultSetFilter</b> and <b>GetCellValue</b>).
 <br><br>
 <h1>Example Usage</h1>
 Consider the following table...
