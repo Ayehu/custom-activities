@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"CleanTable",
+    "description": "Remove trailing and leading whitespace from all cells in a table.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"sourceTable",
+          "label": "Table Variable",
+          "labelKey": "SOURCETABLE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
