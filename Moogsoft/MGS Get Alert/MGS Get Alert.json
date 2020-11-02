@@ -1,0 +1,69 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MGS Get Alert",
+    "description": "Get Alert",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": false,
+          "key": "endPoint",
+          "label": "Endpoint",
+          "labelKey": "endpoint_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Auth token",
+          "labelKey": "authtoken_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "alertid",
+          "label": "Alert id",
+          "labelKey": "alertid_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

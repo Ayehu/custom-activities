@@ -1,0 +1,245 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MGS Create Alert",
+    "description": "Create new alert",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": false,
+          "key": "endPoint",
+          "label": "Endpoint",
+          "labelKey": "endpoint_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "signature",
+          "label": "Signature",
+          "labelKey": "signature_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "sourceid",
+          "label": "Source id",
+          "labelKey": "sourceid_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "externalid",
+          "label": "External id",
+          "labelKey": "externalid_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "source",
+          "label": "Source",
+          "labelKey": "source_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "manager",
+          "label": "Manager",
+          "labelKey": "manager_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "class1",
+          "label": "Class",
+          "labelKey": "class1_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "agent",
+          "label": "Agent",
+          "labelKey": "agent_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "agentlocation",
+          "label": "Agent location",
+          "labelKey": "agentlocation_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "type",
+          "label": "Type",
+          "labelKey": "type_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "severity",
+          "label": "Severity",
+          "labelKey": "severity_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "description",
+          "label": "Description",
+          "labelKey": "description_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "agenttime",
+          "label": "Agent time",
+          "labelKey": "agenttime_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "forPD",
+          "label": "ForPD",
+          "labelKey": "forPD_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "raiseTicket",
+          "label": "RaiseTicket",
+          "labelKey": "raiseTicket_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Region",
+          "label": "Region",
+          "labelKey": "Region_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Environment",
+          "label": "Environment",
+          "labelKey": "Environment_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "OSBuild",
+          "label": "OSBuild",
+          "labelKey": "OSBuild_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "OSPlatform",
+          "label": "OSPlatform",
+          "labelKey": "OSPlatform_l",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "Success",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
