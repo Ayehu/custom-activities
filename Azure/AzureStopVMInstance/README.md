@@ -13,7 +13,7 @@ System.Net.dll<br>
 System.Net.Http.dll<br>
 System.XML.dll<br>
 System.Data.dll<br>
-System.dll<br><br>
+System.dll
 
 ### Libraries to import
 using System;<br>
@@ -30,11 +30,10 @@ using Microsoft.Azure.Management.Compute.Fluent;<br>
 using Microsoft.Rest.ClientRuntime;<br>
 using Microsoft.Rest.ClientRuntime.Azure;
 
+### You'd need to store the API specific information from the portal.
 
-You'd need to store the API specific information from the portal.
-
-ApplicationId
-TenantId
+ApplicationId<br>
+TenantId<br>
 Secret
 
 ### Mandatory fields when stopping a VM:
