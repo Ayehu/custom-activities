@@ -2,7 +2,7 @@
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
-##### DLL's to reference
+### DLL's to reference
 Microsoft.Azure.Management.Compute.Fluent.dll<br>
 Microsoft.Azure.Management.Fluent.dll<br>
 Microsoft.Azure.Management.ResourceManager.Fluent.dll<br>
@@ -15,7 +15,7 @@ System.XML.dll<br>
 System.Data.dll<br>
 System.dll<br><br>
 
-##### Libraries to import
+### Libraries to import
 using System;<br>
 using System.Linq;<br>
 using System.Data;<br>
