@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "Azure Stop VM",
-    "description": "Stop an Azure Virtual Machine",
+    "description": "Stop an Azure virtual machine.",
     "Timeout": null,
     "class": [
 
