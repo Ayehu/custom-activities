@@ -2,11 +2,9 @@
   "innerCode": 200,
   "data": {
     "name": "Azure Start VM",
-    "description": "Start an Azure Virtual Machine",
+    "description": "Start an Azure virtual machine.",
     "Timeout": null,
-    "class": [
-
-    ],
+    "class": [],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [
