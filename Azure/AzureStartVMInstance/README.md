@@ -3,16 +3,32 @@
 Remark - The portal needs to be configured first. https://portal.azure.com
 
 ##### DLL's to reference
-Microsoft.Azure.Management.Compute.Fluent.dll
-Microsoft.Azure.Management.Fluent.dll
-Microsoft.Azure.Management.ResourceManager.Fluent.dll
-Microsoft.Azure.Management.Network.Fluent.dll
+Microsoft.Azure.Management.Compute.Fluent.dll<br>
+Microsoft.Azure.Management.Fluent.dll<br>
+Microsoft.Azure.Management.ResourceManager.Fluent.dll<br>
+Microsoft.Azure.Management.Network.Fluent.dll<br>
+Microsoft.Rest.ClientRuntime.Azure.dll<br>
+Microsoft.Rest.ClientRuntime.dll<br>
+System.Net.dll<br>
+System.Net.Http.dll<br>
+System.XML.dll<br>
+System.Data.dll<br>
+System.dll<br><br>
 
 ##### Libraries to import
-using Microsoft.Azure.Management.Compute.Fluent;
-using Microsoft.Azure.Management.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent.Core
+using System;<br>
+using System.Linq;<br>
+using System.Data;<br>
+using System.Net;<br>
+using System.Net.Http;<br>
+using Ayehu.Sdk.ActivityCreation.Interfaces;<br>
+using Ayehu.Sdk.ActivityCreation.Extension;<br>
+using Microsoft.Azure.Management.Fluent;<br>
+using Microsoft.Azure.Management.ResourceManager.Fluent;<br>
+using Microsoft.Azure.Management.ResourceManager.Fluent.Core;<br>
+using Microsoft.Azure.Management.Compute.Fluent;<br>
+using Microsoft.Rest.ClientRuntime;<br>
+using Microsoft.Rest.ClientRuntime.Azure;
 
 
 You'd need to store the API specific information from the portal.
