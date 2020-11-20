@@ -1,0 +1,101 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AZ Retrieve Access Token",
+    "description": "Retrieve an access token for use with other API requests",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "tenant_id",
+          "label": "Tenant_id",
+          "labelKey": "tenant_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "client_id",
+          "label": "Client_id",
+          "labelKey": "client_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Client_secret",
+          "labelKey": "client_secret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "grant_type",
+          "label": "Grant_type",
+          "labelKey": "grant_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "client_credentials",
+              "value": "client_credentials"
+            }
+          ],
+          "value": "client_credentials"
+        },
+        {
+          "required": false,
+          "key": "scope",
+          "label": "Scope",
+          "labelKey": "scope_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "https://graph.microsoft.com/.default",
+              "value": "https://graph.microsoft.com/.default"
+            },
+            {
+              "key": "https://management.azure.com/.default",
+              "value": "https://management.azure.com/.default"
+            },
+            {
+              "key": "https://management.core.windows.net/.default",
+              "value": "https://management.core.windows.net/.default"
+            }
+          ],
+          "value": "https://graph.microsoft.com/.default"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "token",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
