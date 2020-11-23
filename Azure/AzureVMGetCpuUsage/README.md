@@ -2,11 +2,11 @@
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
-##### DLL's to reference
+### DLL's to reference
 Newtonsoft.Json.dll
 
-##### Libraries to import
-using System.Web;
+### Libraries to import
+using System.Web;<br>
 using Newtonsoft.Json.Linq;
 
 You'd need to store the API specific information from the portal.
@@ -15,6 +15,6 @@ SubscriptionId
 
 ### Mandatory fields to delete StorageAccount 
 
-**token_password** 				- Authentication token received from another activity that does the authentication
-**resourceGroupName**			- Resource Group where the VM belongs to.
+**token_password** 				- Authentication token received from another activity that does the authentication<br>
+**resourceGroupName**			- Resource Group where the VM belongs to.<br>
 **vmName**						- The Virtual Machine name to retrieve the usage.
