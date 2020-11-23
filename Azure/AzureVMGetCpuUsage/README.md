@@ -9,8 +9,7 @@ Newtonsoft.Json.dll
 using System.Web;<br>
 using Newtonsoft.Json.Linq;
 
-You'd need to store the API specific information from the portal.
-
+### You'd need to store the API specific information from the portal.
 SubscriptionId
 
 ### Mandatory fields to delete StorageAccount 
