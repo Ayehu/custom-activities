@@ -1,0 +1,105 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "CountLogFileErrors",
+    "description": "Reads an Application Server log file.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "True",
+          "required": true,
+          "key": "RequiresMap",
+          "label": "File Path",
+          "labelKey": "FILE_PATH_KEY",
+          "baseType": "control",
+          "controlType": "hidden"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Path",
+          "label": "File Path",
+          "labelKey": "FILE_PATH_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "search",
+          "label": "Search",
+          "labelKey": "SEARCH_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "timeFrame",
+          "idFieldName": "timeFrameId",
+          "label": "Time Frame",
+          "labelKey": "VALUE_TYPE_KEY",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "Hours"
+            },
+            {
+              "key": "2",
+              "value": "Date"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "dtFrom",
+          "label": "Date From",
+          "labelKey": "DATE_FROM_KEY",
+          "baseType": "control",
+          "controlType": "datePicker"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "dtTo",
+          "label": "Date To",
+          "labelKey": "DATE_To_KEY",
+          "baseType": "control",
+          "controlType": "datePicker"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "timeBack",
+          "label": "Hours Back",
+          "labelKey": "HOURS_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
