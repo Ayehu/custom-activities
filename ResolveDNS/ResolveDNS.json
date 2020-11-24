@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ResolveDNS",
+    "description": "Performs a DNS name query resolution for a host.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "host",
+          "label": "Host",
+          "labelKey": "HOSTKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
