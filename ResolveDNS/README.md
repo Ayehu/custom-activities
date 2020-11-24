@@ -23,3 +23,7 @@ System.Data.dll<br>
 System.Data.Linq.dll<br>
 Newtonsoft.Json.dll<br>
 System.Management.Automation.dll
+
+### Input fields
+
+<b>Host:</b> The host on which to perform the DNS resolution (FQDN, IP address, hostname, etc.)
