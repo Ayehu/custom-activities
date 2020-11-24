@@ -16,6 +16,9 @@ using Newtonsoft.Json.Linq;
 **resourceGroupName**			- Resource Group where the VM belongs to.<br>
 **vmName**						- The Virtual Machine name to retrieve the usage.
 
+
+<hr style="width:100%;text-align:left;margin-left:0">
+<br>
 Note that in order to use this Custom Activity, you will need to replace the <b>Ayehu.Sdk.ActivityCreation.dll</b> file in the "eyeShare Executor Server" folder with the one found at the link below:
 <br><br>
 <a href="https://github.com/Ayehu/Custom-Activity-Helper/tree/master/1.1.0">https://github.com/Ayehu/Custom-Activity-Helper/tree/master/1.1.0</a>
