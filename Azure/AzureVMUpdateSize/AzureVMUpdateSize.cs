@@ -45,7 +45,6 @@ return _uriBuilderPath;
     private string postData {
         get {
             if (string.IsNullOrEmpty(_postData)) {
-                //_postData = "{ \"location\": \"" + disk_location + "\", \"properties\": { \"creationData\": { \"createOption\": \"Empty\" }, \"diskSizeGB\": " + disk_size + " } }";
                 _postData = "{ \"properties\": { \"hardwareProfile\": { \"vmSize\": \"" + vm_size + "\" } } }";
             }
 return _postData;
