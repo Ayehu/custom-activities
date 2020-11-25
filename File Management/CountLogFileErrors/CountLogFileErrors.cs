@@ -68,8 +68,7 @@ namespace Ayehu.Sdk.ActivityCreation
                         {
                             inputTime = DateTime.Now.AddHours(-timeBack).ToUniversalTime();
 
-                            if (eventUTCDate >= inputTime &&
-                            eventUTCDate.TimeOfDay >= inputTime.TimeOfDay && eventUTCDate.TimeOfDay <= DateTime.Now.TimeOfDay)
+                            if (eventUTCDate >= inputTime && eventUTCDate <= DateTime.Now.ToUniversalTime())
                             {
                                 if (groups["code"].Value.Trim() == search.Trim())
                                     occurrenceCount++;
