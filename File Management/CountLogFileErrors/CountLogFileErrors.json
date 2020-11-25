@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "CountLogFileErrors",
-    "description": "Reads an Application Server log file.",
+    "description": "Counts the number of errors in an IIS log file",
     "Timeout": null,
     "class": [],
     "rootSettings": {
