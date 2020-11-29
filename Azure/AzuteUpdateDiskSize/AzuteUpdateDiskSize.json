@@ -81,7 +81,7 @@
           "label": "Disk Location",
           "labelKey": "disk_location",
           "baseType": "control",
-          "controlType": "dropdown",
+          "controlType": "autocomplete",
           "controlOptions": [
             {
               "key": "Brazil South",
