@@ -1,4 +1,5 @@
 ## AzureADAddGroupMember - Activity to add a member to Azure AD security group.
+Please note that this version is using the soon-to-be deprecated Azure Active Directory Graph API.  For the equivalent activity using the Microsoft Graph API, <a href="https://github.com/Ayehu/custom-activities/tree/master/Azure%20Active%20Directory/AzureADAddUserToGroup">AzureADAddUserToGroup</a>.
 
 ##### DLL's to reference
 Microsoft.Azure.Management.Fluent.dll </br>
