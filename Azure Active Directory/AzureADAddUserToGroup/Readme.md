@@ -1,6 +1,6 @@
 <h1>AzureADAddUserToGroup</h1>
 <h3>Add an Azure AD user to a group.</h3>
-Please note that this version is using the Microsoft Graph API rather than the soon-to-be deprecated Azure Active Directory Graph API.
+Please note that this version is using the Microsoft Graph API rather than the soon-to-be deprecated Azure Active Directory Graph API.  The required permissions can be found here: <a href="https://docs.microsoft.com/en-us/graph/api/group-post-members?view=graph-rest-1.0&tabs=http">https://docs.microsoft.com/en-us/graph/api/group-post-members?view=graph-rest-1.0&tabs=http</a>.
 
 <h3>Libraries to Import</h3>
 using Ayehu.Sdk.ActivityCreation.Extension;<br>
