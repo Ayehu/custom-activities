@@ -31,7 +31,7 @@ Consider the following JSON body:
    "knowledge": "false",
    "order": "98234",
    "cmdb_ci": {
-      "link": "https://mindtreedemosvs1.service-now.com/api/now/table/cmdb_ci/46a7a696a9fe198100d5064bdc21cd56",
+      "link": "https://mycompany.service-now.com/api/now/table/cmdb_ci/46a7a696a9fe198100d5064bdc21cd56",
       "value": "46a7a696a9fe198100d5064bdc21cd56"
    }
 }</pre>
