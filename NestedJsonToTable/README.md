@@ -40,4 +40,4 @@ Using the standard out-of-the-box JSON activites in Ayehu NG, we can use the <b>
 <br><br>
 In order to create a result-set table from the above JSON, we can use the <b>NestedJsonToTable</b> activity to create this dynamic table going <u>two levels deep</u>.  See example output below:
 <br><br>
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/NestedJsonToTable/screenshots/output_example_1.png">
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/NestedJsonToTable/screenshots/output_example.png">
