@@ -48,7 +48,14 @@ namespace Ayehu.Sdk.ActivityCreation
 			}
 			else
 			{
-				outputStandard = "{ \"root\": " + outputStandard + " }";
+				if(outputStandard.Contains("[") && outputStandard.Contains("]"))
+				{
+					outputStandard = "{ \"root\": " + outputStandard + " }";
+				}
+				else
+				{
+					outputStandard = "{ \"root\": [ " + outputStandard + " ] }";
+				}
 
 				JObject jsonResults = JObject.Parse(outputStandard);
 				JArray resultArray = (JArray)jsonResults["root"];
