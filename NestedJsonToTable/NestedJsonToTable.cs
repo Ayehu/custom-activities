@@ -27,39 +27,39 @@ namespace Ayehu.Sdk.ActivityCreation
 		}
 
 		private IDictionary<string, string> ExposeJson(JObject jObject, string append = "")
-    	{
-		    var result = new Dictionary<string, string>();
+		{
+			var result = new Dictionary<string, string>();
 
-		    foreach (var jProperty in jObject.Properties())
-		    {
+			foreach (var jProperty in jObject.Properties())
+			{
 				var jToken = jProperty.Value;
 
 				if (jToken.Type == JTokenType.Object)
 				{
-				    var nested_result = ExposeJson(jToken as JObject, jProperty.Name + "_");
-				    result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
+					var nested_result = ExposeJson(jToken as JObject, jProperty.Name + "_");
+					result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
 				}
 				else if (jToken.Type != JTokenType.Array)
 				{
-				    result.Add(append + jProperty.Name, jProperty.Value.ToString());
+					result.Add(append + jProperty.Name, jProperty.Value.ToString());
 				}
-	    	}
+			}
 
-		    return result;
+			return result;
 		}
 
 		private DataTable GetDataTable(IReadOnlyDictionary<string, string> columns)
 		{
-		    DataTable dt = new DataTable("resultSet");
-		    dt.Rows.Add(dt.NewRow());
+			DataTable dt = new DataTable("resultSet");
+			dt.Rows.Add(dt.NewRow());
 
-		    foreach (var col in columns)
-		    {
+			foreach (var col in columns)
+			{
 				dt.Columns.Add(col.Key);
 				dt.Rows[0][col.Key] = col.Value;
-		    }
+			}
 
-		    return dt;
+			return dt;
 		}
 	}
 }
