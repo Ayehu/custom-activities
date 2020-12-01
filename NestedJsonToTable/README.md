@@ -35,3 +35,9 @@ Consider the following JSON body:
       "value": "46a7a696a9fe198100d5064bdc21cd56"
    }
 }</pre>
+<br>
+Using the standard out-of-the-box JSON activites in Ayehu NG, we can use the <b>ConvertJsonToTable</b> activity to convert this JSON to a result-set table.  However, the <b>cmdb_ci</b> key has two nested keys within it, and as a result, those nested keys will not appear as their own independent columns.
+<br><br>
+In order to create a result-set table from the above JSON, we can use the <b>NestedJsonToTable</b> activity to create this dynamic table going <u>two levels deep</u>.  See example output below:
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/NestedJsonToTable/screenshots/output_example_1.png">
