@@ -33,15 +33,15 @@ namespace Ayehu.Sdk.ActivityCreation
 			{
 				row = new Dictionary<string, object>();
 			
-            	foreach (DataColumn col in dt.Columns)
+				foreach (DataColumn col in dt.Columns)
 				{
 					row.Add(col.ColumnName, dr[col]);
 				}
 			
-            	rows.Add(row);
+				rows.Add(row);
 			}
 			
-            return this.GenerateActivityResult(serializer.Serialize(rows));
+			return this.GenerateActivityResult(serializer.Serialize(rows));
 		}
 	}
 }
