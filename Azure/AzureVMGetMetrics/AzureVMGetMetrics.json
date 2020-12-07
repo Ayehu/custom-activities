@@ -81,16 +81,16 @@
               "value": "Disk Read Bytes"
             },
             {
-              "key": "Disk Read Operations/Sec",
-              "value": "Disk Read Operations/Sec"
+              "key": "Disk Read Operations\/Sec",
+              "value": "Disk Read Operations\/Sec"
             },
             {
               "key": "Disk Write Bytes",
               "value": "Disk Write Bytes"
             },
             {
-              "key": "Disk Write Operations/Sec",
-              "value": "Disk Write Operations/Sec"
+              "key": "Disk Write Operations\/Sec",
+              "value": "Disk Write Operations\/Sec"
             },
             {
               "key": "Network In Total",
