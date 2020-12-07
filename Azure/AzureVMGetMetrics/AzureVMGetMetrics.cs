@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Ayehu.Azure_MySQL
+namespace Ayehu.Azure_VM
 {
-    public class AzureGetMySQLServerMetrics : IActivityAsync
+    public class AzureVMGetMetrics : IActivityAsync
     {
     
     public string Jsonkeypath = "";
