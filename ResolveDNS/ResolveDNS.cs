@@ -18,6 +18,7 @@ namespace Ayehu.Sdk.ActivityCreation
 	public class CustomActivity : IActivity
 	{
 		public string host;
+		public string recordType;
 
 		public ICustomActivityResult Execute()
 		{
@@ -25,7 +26,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 			processInfo.FileName = @"powershell.exe";
 			
-			processInfo.Arguments = string.Format("Resolve-DnsName -Name {0} | ConvertTo-Json", host);
+			processInfo.Arguments = string.Format("Resolve-DnsName -Name {0} -Type {1} | ConvertTo-Json", host, recordType);
 			
 			processInfo.RedirectStandardError = true;
 			processInfo.RedirectStandardOutput = true;

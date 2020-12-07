@@ -16,6 +16,157 @@
           "labelKey": "HOSTKEY_VALUE",
           "baseType": "control",
           "controlType": "textbox"
+        },
+        {
+          "value": "A",
+          "required": true,
+          "key": "recordType",
+          "label": "Record Type",
+          "labelKey": "RECORDTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "A_AAAA",
+              "value": "A_AAAA"
+            },
+            {
+              "key": "A",
+              "value": "A"
+            },
+            {
+              "key": "AAAA",
+              "value": "AAAA"
+            },
+            {
+              "key": "NS",
+              "value": "NS"
+            },
+            {
+              "key": "MX",
+              "value": "MX"
+            },
+            {
+              "key": "MD",
+              "value": "MD"
+            },
+            {
+              "key": "MF",
+              "value": "MF"
+            },
+            {
+              "key": "CNAME",
+              "value": "CNAME"
+            },
+            {
+              "key": "SOA",
+              "value": "SOA"
+            },
+            {
+              "key": "MB",
+              "value": "MB"
+            },
+            {
+              "key": "MG",
+              "value": "MG"
+            },
+            {
+              "key": "MR",
+              "value": "MR"
+            },
+            {
+              "key": "NULL",
+              "value": "NULL"
+            },
+            {
+              "key": "WKS",
+              "value": "WKS"
+            },
+            {
+              "key": "PTR",
+              "value": "PTR"
+            },
+            {
+              "key": "HINFO",
+              "value": "HINFO"
+            },
+            {
+              "key": "MINFO",
+              "value": "MINFO"
+            },
+            {
+              "key": "TXT",
+              "value": "TXT"
+            },
+            {
+              "key": "RP",
+              "value": "RP"
+            },
+            {
+              "key": "AFSDB",
+              "value": "AFSDB"
+            },
+            {
+              "key": "X25",
+              "value": "X25"
+            },
+            {
+              "key": "ISDN",
+              "value": "ISDN"
+            },
+            {
+              "key": "RT",
+              "value": "RT"
+            },
+            {
+              "key": "SRV",
+              "value": "SRV"
+            },
+            {
+              "key": "DNAME",
+              "value": "DNAME"
+            },
+            {
+              "key": "OPT",
+              "value": "OPT"
+            },
+            {
+              "key": "DS",
+              "value": "DS"
+            },
+            {
+              "key": "RRSIG",
+              "value": "RRSIG"
+            },
+            {
+              "key": "NSEC",
+              "value": "NSEC"
+            },
+            {
+              "key": "DNSKEY",
+              "value": "DNSKEY"
+            },
+            {
+              "key": "DHCID",
+              "value": "DHCID"
+            },
+            {
+              "key": "NSEC3",
+              "value": "NSEC3"
+            },
+            {
+              "key": "NSEC3PARAM",
+              "value": "NSEC3PARAM"
+            },
+            {
+              "key": "ANY",
+              "value": "ANY"
+            },
+            {
+              "key": "ALL",
+              "value": "ALL"
+            }
+          ]
         }
       ],
       "index": "1",
