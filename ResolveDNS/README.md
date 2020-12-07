@@ -26,12 +26,8 @@ System.Management.Automation.dll
 
 ### Input fields
 
-<b>Host:</b> The host on which to perform the DNS resolution (FQDN, IP address, hostname, etc.)
-
-### Example input
-
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/ResolveDNS/screenshots/activity_example_1.png">
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/ResolveDNS/screenshots/activity_example_2.png">
+<b>Host:</b> The host on which to perform the DNS resolution (FQDN, IP address, hostname, etc.)<br>
+<b>Record Type:</b> The DNS record type for which to filter (e.g. A, CNAME, MX, etc.)
 
 ### Example output
 
