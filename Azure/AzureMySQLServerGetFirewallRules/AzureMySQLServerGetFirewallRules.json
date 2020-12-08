@@ -1,0 +1,91 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AzureMySQLServerGetFirewallRules",
+    "description": "Retrieve firewall rules for an Azure MySQL Server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "authToken_password",
+          "label": "Auth token",
+          "labelKey": "authToken_password",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "resourceGroupName",
+          "label": "Resource Group",
+          "labelKey": "resourceGroupName",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "Subscription ID",
+          "labelKey": "subscriptionId",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "2017-12-01",
+          "required": true,
+          "key": "api_version",
+          "label": "Api-version",
+          "labelKey": "api_version",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "db_name",
+          "label": "MySQL DB Name",
+          "labelKey": "db_name",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "$",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
