@@ -9,4 +9,5 @@ These activities are:
   <li><b>CleanTable</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/CleanTable">https://github.com/Ayehu/custom-activities/tree/master/CleanTable</a>)</li>
   <li><b>GetCellValueAdvanced</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/GetCellValueAdvanced">https://github.com/Ayehu/custom-activities/tree/master/GetCellValueAdvanced</a>)</li>
   <li><b>ConvertTableToJSON</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/ConvertTableToJSON">https://github.com/Ayehu/custom-activities/tree/master/ConvertTableToJSON</a>)</li>
+  <li><b>NestedJsonToTable</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/NestedJsonToTable">https://github.com/Ayehu/custom-activities/tree/master/NestedJsonToTable</a>)</li>
 </ul>
