@@ -13,7 +13,8 @@ System.Net.dll<br>
 System.Net.Http.dll<br>
 System.XML.dll<br>
 System.Data.dll<br>
-System.dll
+System.dll<br>
+Newtonsoft.Json.dll
 
 ### Libraries to import
 using System;<br>
@@ -28,7 +29,9 @@ using Microsoft.Azure.Management.ResourceManager.Fluent;<br>
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;<br>
 using Microsoft.Azure.Management.Compute.Fluent;<br>
 using Microsoft.Rest.ClientRuntime;<br>
-using Microsoft.Rest.ClientRuntime.Azure;
+using Microsoft.Rest.ClientRuntime.Azure;<br>
+using Newtonsoft.Json;<br>
+using Newtonsoft.Json.Linq;
 
 
 ### You'd need to store the API specific information from the portal.
