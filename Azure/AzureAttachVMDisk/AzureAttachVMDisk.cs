@@ -11,6 +11,8 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 using Microsoft.Azure.Management.Compute.Fluent;
 using Microsoft.Rest.ClientRuntime;
 using Microsoft.Rest.ClientRuntime.Azure;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Ayehu.Sdk.ActivityCreation
 {

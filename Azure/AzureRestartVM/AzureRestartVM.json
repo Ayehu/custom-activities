@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureDetachVMDisk",
-    "description": "Detach a disk from a virtual machine in Azure.",
+    "name": "Azure Restart VM",
+    "description": "Restart an Azure Virtual Machine",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -11,27 +11,18 @@
         {
           "value": "",
           "required": true,
-          "key": "vmName",
-          "label": "VM Name",
-          "labelKey": "VM_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
-          "key": "diskName",
-          "label": "Disk Name",
-          "labelKey": "DISK_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
           "key": "subscriptionId",
           "label": "Subscription Id",
           "labelKey": "subscription_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "vmName",
+          "label": "VM Name",
+          "labelKey": "VM_NAME_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },

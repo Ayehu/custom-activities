@@ -16,9 +16,8 @@ using Newtonsoft.Json.Linq;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureDetachVMDisk : IActivity
+    public class AzureStopVMInstance : IActivity
     {
-        /// <summary>
         /// APPLICATION (CLIENT) ID
         /// </summary>
         public string appId;
@@ -36,41 +35,36 @@ namespace Ayehu.Sdk.ActivityCreation
         /// Also can be referred to as application password.
         /// </remarks>
         public string secret;
+
         /// <summary>
-        /// The azure portal subscription Id (Free Trial/Premium)
+        /// Account subscription ID
         /// </summary>
         public string subscriptionId;
-
+        
         /// <summary>
         /// Virtual Machine name
         /// </summary>
         public string vmName;
 
-        /// <summary>
-        /// The new disk name
-        /// </summary>
-        public string diskName;
-
-        public ICustomActivityResult Execute()
+        ICustomActivityResult IActivity.Execute()
         {
-            var azure = GetAzure();
-            var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
+            DataTable dt = new DataTable("resultSet");
+            dt.Columns.Add("Result");
 
+            var azure = this.GetAzure();
+            var subscription = azure.GetCurrentSubscription();
+            var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
+            
             if (vm == null)
                 throw new Exception(string.Format("The virtual machine {0} was not found", vmName));
+            
+            if (vm.PowerState == PowerState.Running)
+            {
+                vm.PowerOff();
+            }
 
-            if (string.IsNullOrEmpty(diskName.Trim()))
-                throw new Exception("The disk name can't be empty");
-
-            var disk = vm.StorageProfile.DataDisks.Where(d => d.Name.ToLower() == diskName.ToLower()).FirstOrDefault();
-
-            if (disk == null)
-                throw new Exception(string.Format("Disk '{0}' was not found.", diskName));
-
-            vm.StorageProfile.DataDisks.Remove(disk);
-            vm.StorageProfile.Validate();
-            vm.Update().Apply();
-            return this.GenerateActivityResult(GetActivityResult);
+            dt.Rows.Add("Success");
+            return this.GenerateActivityResult(dt);
         }
 
         private IAzure GetAzure()
@@ -83,18 +77,6 @@ namespace Ayehu.Sdk.ActivityCreation
                 .WithSubscription(subscriptionId);
 
             return azure;
-        }
-
-        private DataTable GetActivityResult
-        {
-            get
-            {
-                DataTable dt = new DataTable("resultSet");
-                dt.Columns.Add("Result");
-                dt.Rows.Add("Success");
-
-                return dt;
-            }
         }
     }
 }
