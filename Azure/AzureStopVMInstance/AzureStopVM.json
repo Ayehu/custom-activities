@@ -4,9 +4,7 @@
     "name": "Azure Stop VM",
     "description": "Stop an Azure virtual machine.",
     "Timeout": null,
-    "class": [
-
-    ],
+    "class": [],
     "rootSettings": {
       "isCollapse": false,
       "activitySettings": [

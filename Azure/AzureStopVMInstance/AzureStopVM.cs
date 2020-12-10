@@ -11,7 +11,9 @@ using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 using Microsoft.Azure.Management.Compute.Fluent;
 using Microsoft.Rest.ClientRuntime;
 using Microsoft.Rest.ClientRuntime.Azure;
-  
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace Ayehu.Sdk.ActivityCreation
 {
     public class AzureStopVMInstance : IActivity
@@ -38,8 +40,8 @@ namespace Ayehu.Sdk.ActivityCreation
         /// Account subscription ID
         /// </summary>
         public string subscriptionId;
-		
-		/// <summary>
+        
+        /// <summary>
         /// Virtual Machine name
         /// </summary>
         public string vmName;
@@ -52,10 +54,10 @@ namespace Ayehu.Sdk.ActivityCreation
             var azure = this.GetAzure();
             var subscription = azure.GetCurrentSubscription();
             var vm = azure.VirtualMachines.List().Where(x => x.Name.ToLower() == vmName.ToLower()).FirstOrDefault();
-			
-			if (vm == null)
+            
+            if (vm == null)
                 throw new Exception(string.Format("The virtual machine {0} was not found", vmName));
-			
+            
             if (vm.PowerState == PowerState.Running)
             {
                 vm.PowerOff();
