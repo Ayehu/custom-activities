@@ -1,4 +1,4 @@
-All input fields are either self-explanatory or explained in the root README file (<a href="https://github.com/Ayehu/custom-activities/blob/master/Zenvia/ZenviaSendSms/README.md">https://github.com/Ayehu/custom-activities/blob/master/Zenvia/ZenviaSendSms/README.md</a>).
+All input fields are either self-explanatory or explained in the root README file (<a href="https://github.com/fabricio-ssilva-capgemini/custom-activities/blob/master/Zenvia/ZenviaSendSms/README.md">https://github.com/fabricio-ssilva-capgemini/custom-activities/blob/master/Zenvia/ZenviaSendSms/README.md</a>).
 <br><br>
 See below for an example of the activity's configuration:
 <br><br>
