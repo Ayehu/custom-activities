@@ -2,7 +2,7 @@ All input fields are either self-explanatory or explained in the root README fil
 <br><br>
 See below for an example of the activity's configuration:
 <br><br>
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/Zenvia/ZenviaSendSms/Sample.jpg">
+<img src="https://github.com/fabricio-ssilva-capgemini/custom-activities/blob/master/Zenvia/ZenviaSendSms/Sample.png?raw=true">
 <br>
 <b>Parameters</b>:
 <br>
