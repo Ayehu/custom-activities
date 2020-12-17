@@ -14,7 +14,7 @@ See below for an example of the activity's configuration:
 <br>
 <b>From (Optional):</b> An initial text to message, It is used to pass a remetent name
 <br>
-<b>To<\b>: The phone number, pattern Country code + Area + phone number, only digits. Example: 5521991103472
+<b>To</b>: The phone number, pattern Country code + Area + phone number, only digits. Example: 5521991103472
 <br>
 <b>Schedule (Optional):</b> The SMS can be scheduled, use the pattern 2020-12-12T19:00:00.
 <br>
