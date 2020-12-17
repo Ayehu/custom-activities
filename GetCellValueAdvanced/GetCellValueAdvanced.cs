@@ -36,12 +36,9 @@ namespace Ayehu.Sdk.ActivityCreation
 			{
 				for(int i = 0; i < dt.Columns.Count; i++)
 				{
-					if(dt.Columns[i].ColumnName.ToString() == sourceColumn)
+					if(dt.Columns[i].ColumnName.ToString() == sourceColumn && dr.ItemArray[i].ToString() == sourceValue)
 					{
-						if(dr.ItemArray[i].ToString() == sourceValue)
-						{
-							result = dr.ItemArray[columnIndex].ToString();
-						}
+						result = dr.ItemArray[columnIndex].ToString();
 					}
 				}
 			}
