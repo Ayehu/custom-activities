@@ -24,6 +24,7 @@
           "styleClass": "one-line",
           "label": "Column Type",
           "labelKey": "COLUMN_TYPE_VALUE",
+          "styleClass": "one-line",
           "baseType": "control",
           "controlType": "radiobutton",
           "valueChangesActions": {
