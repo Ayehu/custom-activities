@@ -4,7 +4,7 @@
 
 SimpleImpersonation.dll
 
-##Fields to be set in the activity.
+## Fields to be set in the activity.
 
 Value: The string to write into the file.
 
