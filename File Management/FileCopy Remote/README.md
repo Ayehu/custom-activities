@@ -1,4 +1,4 @@
-## FileCopy Remote - Copied files to remote location supporting impersonation with credentials provided in the the activity
+## FileCopy Remote - Moves a file from a source location to a destination location supporting impersonation with credentials provided in the the activity
 
 ## DLL's to reference
 
