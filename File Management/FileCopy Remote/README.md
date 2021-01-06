@@ -1,10 +1,10 @@
-FileCopy Remote - Copied files to remote location supporting impersonation with credentials provided in the the activity
+## FileCopy Remote - Copied files to remote location supporting impersonation with credentials provided in the the activity
 
-DLL's to reference
+## DLL's to reference
 
 SimpleImpersonation.dll
 
-##Fields to be set in the activity.
+## Fields to be set in the activity.
 
 Source Path: The path of the source file (when accessing a remote machine or a shared location use UNC format).
 
