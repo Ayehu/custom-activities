@@ -5,3 +5,6 @@ This activity will return "True" or "False" if the current date falls between a 
 <b>Start Date:</b> Beginning of date range.
 <br>
 <b>End Date:</b> End of date range.
+<br><br>
+<h3>Output</h3>
+"True" or "False"
