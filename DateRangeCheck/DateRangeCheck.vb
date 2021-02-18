@@ -24,18 +24,18 @@ Namespace Ayehu.Sdk.ActivityCreation
  		Public Function Execute() As ICustomActivityResult Implements IActivity.Execute
 			'Insert your PowerShell script within the block below.
 			Dim ScriptCode as String = <![CDATA[
-        		$start = "dateStart"
-       			$end = "dateEnd"
-        		$d = get-date
+				$start = "dateStart"
+				$end = "dateEnd"
+				$d = get-date
 
-                if(($d -ge $start) -and ($d -le $end))
-                {
-                    Write-Output "True"
-                }
-                else
-                {
-                    Write-Output "False"
-                }
+				if(($d -ge $start) -and ($d -le $end))
+				{
+					Write-Output "True"
+				}
+				else
+				{
+					Write-Output "False"
+				}
 			]]>.Value()
 
 			'These lines must be used for each and every variable.
