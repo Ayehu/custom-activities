@@ -2,7 +2,6 @@
 Retrieve detailed information in an individual mobile number registered in Duo.
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/DUO%20Security/DuoGetPhoneInfo/screenshot.png">
-<br><br>
 <h3>Input Fields</h3>
 <b>Integration Key -</b> Integration key from Duo.
 <b>Secret Key -</b> Secret key from Duo.
