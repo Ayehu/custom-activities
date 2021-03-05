@@ -9,4 +9,4 @@ Retrieve detailed information in an individual mobile number registered in Duo.
 <b>Phone Number -</b> 10-digit mobile number.
 <br><br>
 <h3>Sample Output</h3>
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/DUO%20Security/DuoGetPhoneInfo/output.png">
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/DUO%20Security/DuoGetPhoneInfo/output_sample.png">
