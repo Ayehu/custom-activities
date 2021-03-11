@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MemoryTableGetUniqueRows",
+    "description": "Return a list of unique rows from two Memory Tables.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "table1",
+          "label": "Table 1 Variable",
+          "labelKey": "TABLE1_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "table2",
+          "label": "Table 2 Variable",
+          "labelKey": "TABLE2_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
