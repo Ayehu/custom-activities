@@ -10,4 +10,5 @@ These activities are:
   <li><b>GetCellValueAdvanced</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/GetCellValueAdvanced">https://github.com/Ayehu/custom-activities/tree/master/GetCellValueAdvanced</a>)</li>
   <li><b>ConvertTableToJSON</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/ConvertTableToJSON">https://github.com/Ayehu/custom-activities/tree/master/ConvertTableToJSON</a>)</li>
   <li><b>NestedJsonToTable</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/NestedJsonToTable">https://github.com/Ayehu/custom-activities/tree/master/NestedJsonToTable</a>)</li>
+  <li><b>MemoryTableGetUniqueRows</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/MemoryTableGetUniqueRows">https://github.com/Ayehu/custom-activities/tree/master/MemoryTableGetUniqueRows</a>)
 </ul>
