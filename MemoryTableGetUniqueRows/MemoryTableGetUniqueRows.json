@@ -25,6 +25,30 @@
           "labelKey": "TABLE2_VALUE",
           "baseType": "control",
           "controlType": "textbox"
+        },
+        {
+          "value": "all",
+          "required": true,
+          "label": "Show Unique",
+          "key": "mode",
+          "styleClass": "one-line",
+          "labelKey": "MODE_VALUE",
+          "baseType": "control",
+          "controlType": "radiobutton",
+          "controlOptions": [
+            {
+              "label": "Table 1",
+              "value": "table1"
+            },
+            {
+              "label": "Table 2",
+              "value": "table2"
+            },
+            {
+              "label": "Both Tables",
+              "value": "all"
+            }
+          ]
         }
       ],
       "index": "1",

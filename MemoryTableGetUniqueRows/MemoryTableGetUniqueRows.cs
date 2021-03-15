@@ -14,6 +14,7 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string table1;
 		public string table2;
+		public string mode;
 
 		public ICustomActivityResult Execute()
 		{
@@ -29,16 +30,33 @@ namespace Ayehu.Sdk.ActivityCreation
 			DataTable dt2 = new DataTable();
 			dt2 = ds2.Tables[0];
 
-			var tableUnique1 = dt1.AsEnumerable().Except(dt2.AsEnumerable(), DataRowComparer.Default);
-			DataTable tableResult1 = tableUnique1.CopyToDataTable<DataRow>();
+			if(mode == "table1")
+			{
+				var tableUnique1 = dt1.AsEnumerable().Except(dt2.AsEnumerable(), DataRowComparer.Default);
+				DataTable tableResult1 = tableUnique1.CopyToDataTable<DataRow>();
 
-			var tableUnique2 = dt2.AsEnumerable().Except(tableResult1.AsEnumerable(), DataRowComparer.Default);
-			DataTable tableResult2 = tableUnique2.CopyToDataTable<DataRow>();
+				return this.GenerateActivityResult(tableResult1);
+			}
+			else if(mode == "table2")
+			{
+				var tableUnique1 = dt2.AsEnumerable().Except(dt1.AsEnumerable(), DataRowComparer.Default);
+				DataTable tableResult1 = tableUnique1.CopyToDataTable<DataRow>();
 
-			DataTable tableResult3 = tableResult1;
-			tableResult3.Merge(tableResult2);
+				return this.GenerateActivityResult(tableResult1);
+			}
+			else
+			{
+				var tableUnique1 = dt1.AsEnumerable().Except(dt2.AsEnumerable(), DataRowComparer.Default);
+				DataTable tableResult1 = tableUnique1.CopyToDataTable<DataRow>();
 
-			return this.GenerateActivityResult(tableResult3);
+				var tableUnique2 = dt2.AsEnumerable().Except(tableResult1.AsEnumerable(), DataRowComparer.Default);
+				DataTable tableResult2 = tableUnique2.CopyToDataTable<DataRow>();
+
+				DataTable tableResult3 = tableResult1;
+				tableResult3.Merge(tableResult2);
+
+				return this.GenerateActivityResult(tableResult3);
+			}
 		}
 	}
 }
