@@ -10,7 +10,7 @@ This activity will take two Memory Tables and then output a new Memory Table con
 Let's consider the following examples.  Here are two separate Memory Tables defined in a workflow.
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/table1.png">
-<br><br>
+<br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/table2.png">
 <br><br><br>
 <h3>Example 1</h3>
