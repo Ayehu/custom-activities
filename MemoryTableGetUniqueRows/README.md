@@ -1,30 +1,41 @@
 <h1>MemoryTableGetUniqueRows</h1>
-This activity will take two Memory Tables and then output a new Memory Table containing only the unique rows found between the two.  Note that this activity supports tables with more than one column, however each row will be evaluated in its entirety when filtering out duplicates (i.e. the entire row must be identical in order for it to be considered a duplicate).
+This activity will take two Memory Tables and then output a new Memory Table containing either:
 <br><br>
-For example, Table 1 is a single-column Memory Table as follows:
+1) The unique rows from Table 1.
 <br>
-Jack
+2) The unique rows from Table 2.
 <br>
-Bob
-<br>
-Joe
+3) The unique rows from both tables.
+<br><br><br>
+Let's consider the following examples.  Here are two separate Memory Tables defined in a workflow.
 <br><br>
-Table 2 is a single-column Memory Table as follows:
-<br>
-Jack
-<br>
-Bill
-<br>
-Frank
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/table1.png">
 <br><br>
-This activity's output will be:
-<br>
-Jack
-<br>
-Bob
-<br>
-Joe
-<br>
-Bill
-<br>
-Frank
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/table2.png">
+<br><br><br>
+<h3>Example 1</h3>
+The <b>MemoryTableGetUniqueRows</b> activity is configured with the "Table 1" option for "Show Unique".
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/activity1.png">
+<br><br>
+The output is as follows:
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/output1.png">
+<br><br><br>
+<h3>Example 2</h3>
+The <b>MemoryTableGetUniqueRows</b> activity is configured with the "Table 2" option for "Show Unique".
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/activity2.png">
+<br><br>
+The output is as follows:
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/output2.png">
+<br><br><br>
+<h3>Example 3</h3>
+The <b>MemoryTableGetUniqueRows</b> activity is configured with the "Both Tables" option for "Show Unique".
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/activity3.png">
+<br><br>
+The output is as follows:
+<br><br>
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/output3.png">
