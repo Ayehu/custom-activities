@@ -12,30 +12,30 @@ Let's consider the following examples.  Here are two separate Memory Tables defi
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/table1.png">
 <br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/table2.png">
-<br><br><br>
+<br><br>
 <h3>Example 1</h3>
 The <b>MemoryTableGetUniqueRows</b> activity is configured with the "Table 1" option for "Show Unique".
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/activity1.png">
-<br><br>
+<br>
 The output is as follows:
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/output1.png">
-<br><br><br>
+<br><br>
 <h3>Example 2</h3>
 The <b>MemoryTableGetUniqueRows</b> activity is configured with the "Table 2" option for "Show Unique".
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/activity2.png">
-<br><br>
+<br>
 The output is as follows:
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/output2.png">
-<br><br><br>
+<br><br>
 <h3>Example 3</h3>
 The <b>MemoryTableGetUniqueRows</b> activity is configured with the "Both Tables" option for "Show Unique".
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/activity3.png">
-<br><br>
+<br>
 The output is as follows:
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/MemoryTableGetUniqueRows/screenshots/output3.png">
