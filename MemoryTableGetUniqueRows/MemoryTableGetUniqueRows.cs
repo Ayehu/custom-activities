@@ -23,12 +23,14 @@ namespace Ayehu.Sdk.ActivityCreation
 			ds1.ReadXml(sr1);
 			DataTable dt1 = new DataTable();
 			dt1 = ds1.Tables[0];
+			RemoveEmptyRows(dt1);
 
 			System.IO.StringReader sr2 = new System.IO.StringReader(table2);
 			DataSet ds2 = new DataSet();
 			ds2.ReadXml(sr2);
 			DataTable dt2 = new DataTable();
 			dt2 = ds2.Tables[0];
+			RemoveEmptyRows(dt2);
 
 			if(mode == "table1")
 			{
@@ -56,6 +58,24 @@ namespace Ayehu.Sdk.ActivityCreation
 				tableResult3.Merge(tableResult2);
 
 				return this.GenerateActivityResult(tableResult3);
+			}
+		}
+
+		private void RemoveEmptyRows(DataTable source)
+		{
+			for(int i = source.Rows.Count; i >= 1; i --)
+			{
+				DataRow currentRow = source.Rows[i - 1];
+			
+				foreach (var colValue in currentRow.ItemArray)
+				{
+					if(!string.IsNullOrEmpty(colValue.ToString()))
+					{
+						break;
+					}
+
+					source.Rows[i - 1].Delete();
+				}
 			}
 		}
 	}
