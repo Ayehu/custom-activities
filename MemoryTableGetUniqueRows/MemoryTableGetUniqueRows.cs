@@ -67,7 +67,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			{
 				DataRow currentRow = source.Rows[i - 1];
 			
-				foreach (var colValue in currentRow.ItemArray)
+				foreach(var colValue in currentRow.ItemArray)
 				{
 					if(!string.IsNullOrEmpty(colValue.ToString()))
 					{
