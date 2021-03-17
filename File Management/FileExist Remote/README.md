@@ -12,8 +12,6 @@ SimpleImpersonation.dll
 
 **Password:** The password of the account listed in the Username field.
 
-Result: True or False
+**Result:** True or False
 
-
-
-True if the caller has the required permissions and path contains the name of an existing file; otherwise, false. This method also returns false if path is null, an invalid path, or a zero-length string. If the caller does not have sufficient permissions to read the specified file, no exception is thrown and the method returns false regardless of the existence of path.
+True if the caller has the required permissions and path contains the name of an existing file; otherwise, false. Due to limit of FileExist command not returning exceptions if path is null, invalid or caller does not have sufficient sufficient permissions to directory of specified file, an additional check is completed when returning false.  The additional check validates if the designated file is readonly in order to return an appropriate exception if failed.
