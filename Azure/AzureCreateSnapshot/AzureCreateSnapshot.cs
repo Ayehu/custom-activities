@@ -1,4 +1,4 @@
-﻿using Ayehu.Sdk.ActivityCreation.Extension;
+using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System;
@@ -29,7 +29,7 @@ namespace AzureCreateSnapshot
                 return this.GenerateActivityResult(Message);
             }
             string token = result.AccessToken;
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("https://management.azure.com/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroupName + "/providers/Microsoft.Compute/snapshots/" + snapshotName + "?api-version=2018-06-01");
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("https://management.azure.com/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroupName + "/providers/Microsoft.Compute/snapshots/" + snapshotName + "?api-version=2020-06-30");
             request.Method = "PUT";
             request.Headers["Authorization"] = "Bearer " + token;
             request.ContentType = "application/json";
