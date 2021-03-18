@@ -35,3 +35,16 @@ After performing the above steps you will see Application (client) ID, Directory
 Inside (Name of registration) select: Certificates & secrets -> New client secret to get ClientSecret.
 
 2. SubscriptionID: If you do not have "Resource Group", please create an item in the Resource Group section in the interface. Clicking on the newly created item will display the SubscriptionID.
+
+---------------------------------------
+JSON Body Sample:
+
+{
+  "location": "East US",
+  "properties": {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/df4f6097-8fe7-4ff6-a847-7deec5a659d9/resourceGroups/ProfessionalServices/providers/Microsoft.Compute/disks/testjack",
+    }
+  }
+}
