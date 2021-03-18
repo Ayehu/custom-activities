@@ -39,6 +39,7 @@ Inside (Name of registration) select: Certificates & secrets -> New client secre
 ---------------------------------------
 JSON Body Sample:
 
+![image](https://user-images.githubusercontent.com/58769447/111696706-4b248800-883d-11eb-8349-3b115d48fb82.png)
 {
   "location": "East US",
   "properties": {
