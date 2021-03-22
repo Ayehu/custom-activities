@@ -25,3 +25,5 @@ Newtonsoft.JSON.dll<br>
 
 <h3>Output:</h3>
 A result-set table is returned containing the credential's key-value pair from your Vault item.
+<br><br>
+Note that this activity will <b>not</b> output the result-set table in plaintext within the Workflow Execution Log.  However, the table and its cells can be referenced as normal variables for use within workflow runtime execution.
