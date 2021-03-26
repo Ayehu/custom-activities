@@ -83,7 +83,7 @@
           "controlType": "hr"
         },
         {
-          "value": "token",
+          "value": "access_token",
           "required": false,
           "key": "Jsonkeypath",
           "label": "Json keypath",
