@@ -13,4 +13,4 @@ Newtonsoft.Json.dll
 
 **diskName**			- The name of the disk to attach
 
-**resourceGroupName**	- Resource Group where to create the disk. So this disk can be attached to a VM inside the same group.
+**resourceGroupName**	- The portal resource group Disk is assigned to.

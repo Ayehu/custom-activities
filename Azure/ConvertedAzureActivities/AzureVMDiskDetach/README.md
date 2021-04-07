@@ -15,4 +15,4 @@ Newtonsoft.Json.dll
 
 **diskName**			- The name of the disk to detach
 
-**resourceGroupName**   - The portal resource group VM is assigned to.
+**resourceGroupName**   - The portal resource group Disk is assigned to.
