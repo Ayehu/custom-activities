@@ -1,0 +1,72 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "SN Upload Attachment Standalone",
+    "description": "Upload an attachment to a ServiceNow ticket without the use of an integration module.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://xxxxxx.service-now.com",
+          "required": true,
+          "key": "instanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCEURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tableType",
+          "label": "Table Type",
+          "labelKey": "TABLETYPE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ticketNumber",
+          "label": "Ticket Number",
+          "labelKey": "TICKETNUMBER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "filePath",
+          "label": "File Path",
+          "labelKey": "FILEPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
