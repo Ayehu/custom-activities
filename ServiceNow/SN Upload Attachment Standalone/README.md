@@ -7,7 +7,7 @@ This activity allows for the uploading of file attachments to tickets entirely i
   <li>Having the requirement to upload a ticket attachment via Remote Executor when no method exists to copy a file from a remote host back to the core Ayehu NG server.</li>
 </ul>
 <br>
-<h3>Input Fields</h3>
+<h2>Input Fields</h2>
 <b>Instance URL:</b> https://xxxxxx.service-now.com
 <br>
 <b>Username:</b> Username to access ServiceNow instance.
