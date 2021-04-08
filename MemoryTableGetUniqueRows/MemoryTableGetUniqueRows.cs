@@ -25,12 +25,36 @@ namespace Ayehu.Sdk.ActivityCreation
 			dt1 = ds1.Tables[0];
 			RemoveEmptyRows(dt1);
 
+			int rowCount1 = 0;
+						
+			foreach(DataRow dr1 in dt1.Rows)
+			{
+				for(int i = 0; i < dt1.Columns.Count; i ++)
+				{
+					dt1.Rows[rowCount1][i] = Regex.Replace(dr1.ItemArray[i].ToString(), @"^\s+|\s+$|\s+(?=\s)", "");
+				}
+
+				rowCount1 ++;
+			}
+
 			System.IO.StringReader sr2 = new System.IO.StringReader(table2);
 			DataSet ds2 = new DataSet();
 			ds2.ReadXml(sr2);
 			DataTable dt2 = new DataTable();
 			dt2 = ds2.Tables[0];
 			RemoveEmptyRows(dt2);
+
+			int rowCount2 = 0;
+						
+			foreach(DataRow dr2 in dt2.Rows)
+			{
+				for(int j = 0; j < dt2.Columns.Count; j ++)
+				{
+					dt2.Rows[rowCount2][j] = Regex.Replace(dr2.ItemArray[j].ToString(), @"^\s+|\s+$|\s+(?=\s)", "");
+				}
+
+				rowCount2 ++;
+			}
 
 			if(mode == "table1")
 			{
