@@ -6,7 +6,7 @@ This activity allows for the uploading of file attachments to tickets entirely i
   <li>Having insufficient table permissions to use the native integration's attachment upload capabilities.</li>
   <li>Having the requirement to upload a ticket attachment via Remote Executor when no method exists to copy a file from a remote host back to the core Ayehu NG server.</li>
 </ul>
-<br><br>
+<br>
 <h3>Input Fields</h3>
 <b>Instance URL:</b> https://xxxxxx.service-now.com
 <br>
