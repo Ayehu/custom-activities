@@ -44,6 +44,15 @@
           "baseType": "control",
           "controlType": "textbox"
         },
+		{
+          "value": "2020-11-01",
+          "required": true,
+          "key": "api_version",
+          "label": "API Version",
+          "labelKey": "API_VERSION_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
         {
           "value": "",
           "required": true,

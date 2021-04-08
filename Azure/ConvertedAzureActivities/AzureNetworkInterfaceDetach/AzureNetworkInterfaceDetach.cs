@@ -30,7 +30,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public string resourceGroupName;
         public string authToken_password;
-        public string api_version = "2020-11-01";
+        public string api_version;
         public string Jsonkeypath = "";
 
 

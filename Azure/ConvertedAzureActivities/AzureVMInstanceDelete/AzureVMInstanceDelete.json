@@ -1,9 +1,9 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "AzureNetworkInterfaceAttach",
-    "description": "Azure Attach a secondary Network Interface to a Virtual Machine",
-    "Timeout": "00:15:00",
+    "name": "AzureVMInstanceDelete",
+    "description": "Delete an Azure Virtual Machine",
+    "Timeout": null,
     "class": [],
     "rootSettings": {
       "isCollapse": false,
@@ -20,18 +20,9 @@
         {
           "value": "",
           "required": true,
-          "key": "networkName",
-          "label": "Network Name",
-          "labelKey": "NETWORK_NAME_VALUE",
-          "baseType": "control",
-          "controlType": "textbox"
-        },
-        {
-          "value": "",
-          "required": true,
           "key": "resourceGroupName",
           "label": "Resource Group",
-          "labelKey": "RESOURCE_GROUP_NAME_VALUE",
+          "labelKey": "RES_GROUPNAME_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },
@@ -45,7 +36,7 @@
           "controlType": "textbox"
         },
         {
-          "value": "2020-11-01",
+          "value": "2020-12-01",
           "required": true,
           "key": "api_version",
           "label": "API Version",
