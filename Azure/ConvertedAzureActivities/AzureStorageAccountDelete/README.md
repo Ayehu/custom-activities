@@ -1,16 +1,15 @@
-## AzureVMInstanceDelete - Activity to delete an Azure Virtual Machine.
+## AzureStorageAccountDelete - Deletes an Azure Storage Account.
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
 ##### DLL's to reference
 System.Net.Http.dll
 
-
-### Mandatory fields when deleting a VM:
+### Mandatory fields to delete StorageAccount 
 
 **subscriptionId**		- The azure portal subscription Id
 
-**vmName**				- Virtual Machine name
+**storageName**			- The storage account name to delete.
 
 **resourceGroupName**   - The portal resource group Disk is assigned to.
 

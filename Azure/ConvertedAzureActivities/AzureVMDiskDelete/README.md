@@ -3,7 +3,7 @@
 Remark - The portal needs to be configured first. https://portal.azure.com
 
 ##### DLL's to reference
-System.Net.Http.dllnagement.ResourceManager.Fluent.Core
+System.Net.Http.dll
 
 
 ### Mandatory fields when deleting a VM disk:
@@ -13,3 +13,5 @@ System.Net.Http.dllnagement.ResourceManager.Fluent.Core
 **diskName**			- The name of the disk to delete
 
 **resourceGroupName**   - The portal resource group Disk is assigned to.
+
+**api_version**			- Version of the API

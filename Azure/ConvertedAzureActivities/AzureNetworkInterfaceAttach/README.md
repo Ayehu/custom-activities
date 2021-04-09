@@ -14,4 +14,6 @@ Newtonsoft.Json.dll
 
 **networkName**			- Network Interface name.
 
-**resourceGroupName**   - The portal resource group VM is assigned to.
+**resourceGroupName**   - The portal resource Network Interface is assigned to.
+
+**api_version**			- Version of the API

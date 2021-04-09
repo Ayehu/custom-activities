@@ -6,12 +6,12 @@ Remark - The portal needs to be configured first. https://portal.azure.com
 System.Net.Http.dll
 Newtonsoft.Json.dll
 
-You'd need to store the API specific information from the portal.
-
-SubscriptionId
-
 ### Mandatory fields when deleting a Network Interface 
 
+**subscriptionId**		- The azure portal subscription Id
+
 **networkName**			- Network Interface name.
+
 **resourceGroupName**   - The portal resource group Network Interface is assigned to.
-**api_version**			- Version of theq API
+
+**api_version**			- Version of the API

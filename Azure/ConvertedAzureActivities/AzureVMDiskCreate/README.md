@@ -16,3 +16,5 @@ Newtonsoft.Json.dll
 **diskName**			- The name of the new diskName
 
 **sizeGB**				- Size in GB for the new disk
+
+**api_version**			- Version of the API

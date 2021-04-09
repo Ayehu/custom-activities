@@ -14,3 +14,5 @@ Newtonsoft.Json.dll
 **diskName**			- The name of the disk to attach
 
 **resourceGroupName**	- The portal resource group Disk is assigned to.
+
+**api_version**			- Version of the API

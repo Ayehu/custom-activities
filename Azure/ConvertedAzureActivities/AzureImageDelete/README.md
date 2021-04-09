@@ -1,16 +1,15 @@
-## AzureVMInstanceDelete - Activity to delete an Azure Virtual Machine.
+## AzureImageDelete - Deletes an Azure image.
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
 ##### DLL's to reference
 System.Net.Http.dll
 
-
-### Mandatory fields when deleting a VM:
+### Mandatory fields to delete StorageAccount 
 
 **subscriptionId**		- The azure portal subscription Id
 
-**vmName**				- Virtual Machine name
+**imageName**			- The image name to delete.
 
 **resourceGroupName**   - The portal resource group Disk is assigned to.
 
