@@ -9,15 +9,12 @@ using System.Text;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureImageDelete : IActivity
+    public class AzureImageList : IActivity
     {
         /// <summary>
         /// The azure portal subscription Id
         /// </summary>
         public string subscriptionId;
-
-        public string imageName;
-
         public string resourceGroupName;
         public string authToken_password;
         public string api_version;
@@ -27,7 +24,7 @@ namespace Ayehu.Sdk.ActivityCreation
         private bool omitJsonEmptyorNull = false;
         private string contentType = "application/json";
         private string endPoint = "https://management.azure.com";
-        private string httpMethod = "DELETE";
+        private string httpMethod = "GET";
         private string _uriBuilderPath;
         private string _postData;
 
@@ -40,7 +37,7 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 if (string.IsNullOrEmpty(_uriBuilderPath))
                 {
-                    _uriBuilderPath = string.Format("/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.Compute/images/{2}", subscriptionId, resourceGroupName, imageName);
+                    _uriBuilderPath = string.Format("/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.Compute/images", subscriptionId, resourceGroupName);
                 }
                 return _uriBuilderPath;
             }

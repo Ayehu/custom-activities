@@ -9,15 +9,13 @@ using System.Text;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureImageDelete : IActivity
+    public class AzureSnapshotDelete : IActivity
     {
         /// <summary>
         /// The azure portal subscription Id
         /// </summary>
         public string subscriptionId;
-
-        public string imageName;
-
+        public string snapshotName;
         public string resourceGroupName;
         public string authToken_password;
         public string api_version;
@@ -40,7 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 if (string.IsNullOrEmpty(_uriBuilderPath))
                 {
-                    _uriBuilderPath = string.Format("/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.Compute/images/{2}", subscriptionId, resourceGroupName, imageName);
+                    _uriBuilderPath = string.Format("/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.Compute/snapshots/{2}", subscriptionId, resourceGroupName, snapshotName);
                 }
                 return _uriBuilderPath;
             }

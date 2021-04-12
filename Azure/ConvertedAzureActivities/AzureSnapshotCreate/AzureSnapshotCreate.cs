@@ -9,15 +9,14 @@ using System.Text;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureImageDelete : IActivity
+    public class AzureSnapshotCreate : IActivity
     {
         /// <summary>
         /// The azure portal subscription Id
         /// </summary>
         public string subscriptionId;
-
-        public string imageName;
-
+        public string snapshotName;
+        public string diskName;
         public string resourceGroupName;
         public string authToken_password;
         public string api_version;
@@ -27,7 +26,7 @@ namespace Ayehu.Sdk.ActivityCreation
         private bool omitJsonEmptyorNull = false;
         private string contentType = "application/json";
         private string endPoint = "https://management.azure.com";
-        private string httpMethod = "DELETE";
+        private string httpMethod = "PUT";
         private string _uriBuilderPath;
         private string _postData;
 
@@ -40,7 +39,7 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 if (string.IsNullOrEmpty(_uriBuilderPath))
                 {
-                    _uriBuilderPath = string.Format("/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.Compute/images/{2}", subscriptionId, resourceGroupName, imageName);
+                    _uriBuilderPath = string.Format("/subscriptions/{0}/resourceGroups/{1}/providers/Microsoft.Compute/snapshots/{2}", subscriptionId, resourceGroupName, snapshotName);
                 }
                 return _uriBuilderPath;
             }
@@ -100,7 +99,8 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            var response = ApiCAll();
+            postData = GetSnapshotBody();
+            var response = ApiCAll(uriBuilderPath);
 
             switch (response.StatusCode)
             {
@@ -126,14 +126,14 @@ namespace Ayehu.Sdk.ActivityCreation
             }
         }
 
-        private HttpResponseMessage ApiCAll()
+        private HttpResponseMessage ApiCAll(string uri)
         {
             HttpClient client = new HttpClient();
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
             UriBuilder UriBuilder = new UriBuilder(endPoint);
-            UriBuilder.Path = uriBuilderPath;
+            UriBuilder.Path = uri;
             UriBuilder.Query = AyehuHelper.queryStringBuilder(queryStringArray);
             HttpRequestMessage HttpRequestMessage = new HttpRequestMessage(new HttpMethod(httpMethod), UriBuilder.ToString());
 
@@ -160,6 +160,18 @@ namespace Ayehu.Sdk.ActivityCreation
         private bool AcceptAllCertifications(object sender, System.Security.Cryptography.X509Certificates.X509Certificate certification, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
         {
             return true;
+        }
+
+        private string GetSnapshotBody()
+        {
+            string resourceId = @"""/subscriptions/" + subscriptionId + @"/resourceGroups/" + resourceGroupName + @"/providers/Microsoft.Compute/disks/" + diskName + @"""";
+            string body = @"
+                            {
+            location: ""eastus"",
+                                properties: { creationData: { ""createOption"": ""Copy"", ""sourceResourceId"": " + resourceId + @"} }
+            }
+            ";
+            return body;
         }
     }
 }

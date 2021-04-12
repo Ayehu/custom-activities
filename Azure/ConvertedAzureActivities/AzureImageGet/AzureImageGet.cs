@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class AzureImageDelete : IActivity
+    public class AzureImageGet : IActivity
     {
         /// <summary>
         /// The azure portal subscription Id
@@ -27,7 +27,7 @@ namespace Ayehu.Sdk.ActivityCreation
         private bool omitJsonEmptyorNull = false;
         private string contentType = "application/json";
         private string endPoint = "https://management.azure.com";
-        private string httpMethod = "DELETE";
+        private string httpMethod = "GET";
         private string _uriBuilderPath;
         private string _postData;
 
@@ -98,9 +98,19 @@ namespace Ayehu.Sdk.ActivityCreation
             }
         }
 
+        public void Exec()
+        {
+            authToken_password = "";
+            api_version = "2020-12-01";
+            imageName = "NewImage";
+            subscriptionId = "8be4c531-8174-465b-a51e-74f080605af5";
+            resourceGroupName = "DEFAULTRESOURCEGROUP-EUS";
+            this.Execute();
+        }
+
         public ICustomActivityResult Execute()
         {
-            var response = ApiCAll();
+            var response = ApiCAll(uriBuilderPath);
 
             switch (response.StatusCode)
             {
@@ -126,14 +136,14 @@ namespace Ayehu.Sdk.ActivityCreation
             }
         }
 
-        private HttpResponseMessage ApiCAll()
+        private HttpResponseMessage ApiCAll(string uri)
         {
             HttpClient client = new HttpClient();
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
             UriBuilder UriBuilder = new UriBuilder(endPoint);
-            UriBuilder.Path = uriBuilderPath;
+            UriBuilder.Path = uri;
             UriBuilder.Query = AyehuHelper.queryStringBuilder(queryStringArray);
             HttpRequestMessage HttpRequestMessage = new HttpRequestMessage(new HttpMethod(httpMethod), UriBuilder.ToString());
 

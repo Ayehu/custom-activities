@@ -1,0 +1,83 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AzureImageGet",
+    "description": "Get information about a virtual machine image.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "imageName",
+          "label": "Image Name",
+          "labelKey": "IMAGE_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "resourceGroupName",
+          "label": "Resource Group",
+          "labelKey": "RES_GROUPNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "Subscription Id",
+          "labelKey": "subscription_ID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "2020-12-01",
+          "required": true,
+          "key": "api_version",
+          "label": "API Version",
+          "labelKey": "API_VERSION_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "authToken_password",
+          "label": "Auth token",
+          "labelKey": "authToken_password",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "$",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
