@@ -4,7 +4,7 @@ For the "Instance URL" field, the following are the default formats:
 <li>On-premise instance - http:// SERVER_NAME :8080/rest/api/latest/</li>
 <li>Cloud instance - https:// SITE_NAME .atlassian.net/rest/api/latest/</li>
 </ul>
-<br><br>
+<br>
 In order to retrieve the attachment ID and attachment filename needed to execute this activity, you have two options.
 <br><br>
 The first and easiest option is to use the <a href="https://github.com/Ayehu/custom-activities/tree/master/Jira/JiraListAttachments">JiraListAttachments</a> activity from this repository.
