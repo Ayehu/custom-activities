@@ -22,7 +22,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 		public ICustomActivityResult Execute()
 		{
-			string apiURL = instanceURL + "/rest/api/2/issue/" + ticketNumber + "?fields=attachment";
+			string apiURL = instanceURL + "/issue/" + ticketNumber + "?fields=attachment";
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "GET";
