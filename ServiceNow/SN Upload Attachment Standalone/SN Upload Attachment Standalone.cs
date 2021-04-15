@@ -32,9 +32,9 @@ namespace Ayehu.Sdk.ActivityCreation
 				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
 				System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
 				
-				var httpWebRequest = (HttpWebRequest)WebRequest.Create(instanceURL + "/api/now/table/incident?sysparm_query=number=" + ticketNumber);
+				var httpWebRequest = (HttpWebRequest)WebRequest.Create(instanceURL + "/api/now/table/" + tableType + "?sysparm_query=number=" + ticketNumber);
 				httpWebRequest.ContentType = "application/json";
-				httpWebRequest.Accept = "application/json";;
+				httpWebRequest.Accept = "application/json";
 				httpWebRequest.Headers.Add("Authorization", "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password)));
 				httpWebRequest.Method = "GET";
 
