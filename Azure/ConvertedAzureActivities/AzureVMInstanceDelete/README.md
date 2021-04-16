@@ -12,6 +12,6 @@ System.Net.Http.dll
 
 **vmName**				- Virtual Machine name
 
-**resourceGroupName**   - The portal resource group Disk is assigned to.
+**resourceGroupName**   - The portal resource group VM is assigned to.
 
 **api_version**			- Version of the API

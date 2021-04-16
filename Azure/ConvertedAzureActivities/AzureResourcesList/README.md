@@ -6,7 +6,7 @@ Remark - The portal needs to be configured first. https://portal.azure.com
 System.Net.Http.dll
 Newtonsoft.Json.dll
 
-### Mandatory fields to get Images
+### Mandatory fields to get Resources
 
 **subscriptionId**		- The azure portal subscription Id
 

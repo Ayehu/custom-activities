@@ -5,7 +5,7 @@ Remark - The portal needs to be configured first. https://portal.azure.com
 ##### DLL's to reference
 System.Net.Http.dll
 
-### Mandatory fields to get Image
+### Mandatory fields to delete a Snapshot
 
 **subscriptionId**		- The azure portal subscription Id
 
