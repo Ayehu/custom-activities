@@ -1,0 +1,64 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Get Table Rows By Range",
+    "description": "Retrieve rows from a Memory Table by range.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "sourceTable",
+          "label": "Table",
+          "labelKey": "SOURCETABLE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "startRow",
+          "label": "Start Row",
+          "labelKey": "STARTROW_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "intervalMode",
+          "label": "Interval Mode",
+          "labelKey": "MODE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "End Row",
+              "value": "End Row"
+            },
+            {
+              "key": "Length",
+              "value": "Length"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "interval",
+          "label": "Interval",
+          "labelKey": "INTERVAL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
