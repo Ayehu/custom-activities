@@ -1,12 +1,11 @@
 ## AzureADUserActivate - Activate an ActiveDirectory user
 
 ##### DLL's to reference
-Microsoft.Rest.ClientRuntime.dll </br>
 System.Net.Http.dll </br>
 
 You'd need to store the API specific information from the portal.
 
-ApplicationId </br>
+ClientId </br>
 TenantId </br>
 Secret </br>
 
