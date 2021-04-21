@@ -1,5 +1,5 @@
 <h1>GetTableRowsByRange</h1>
-Retrieve rows from a Memory Table by range or length.
+Retrieve rows from a Memory Table by range or length.  Note that if an out-of-bounds interval is specified while using "Length" mode, this activity will return the maximum number of rows possible.
 <br><br>
 <h2>Input Fields</h2>
 <b>Source Table:</b> The source table variable (e.g. %processList%).
