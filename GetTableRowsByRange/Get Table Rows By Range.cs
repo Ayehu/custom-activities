@@ -37,7 +37,18 @@ namespace Ayehu.Sdk.ActivityCreation
 
 			if(intervalMode == "Length")
 			{
-				length = interval;
+				if((startRow + interval) > sourceRowCount)
+				{
+					length = (interval - sourceRowCount);
+				} 
+				else if(sourceRowCount < interval)
+				{
+					length = sourceRowCount;
+				} 
+				else 
+				{
+					length = interval;
+				}
 			}
 			else if(intervalMode == "End Row")
 			{
