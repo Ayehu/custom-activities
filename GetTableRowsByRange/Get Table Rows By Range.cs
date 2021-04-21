@@ -1,5 +1,6 @@
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
@@ -20,6 +21,7 @@ namespace Ayehu.Sdk.ActivityCreation
 		{
 			int length = 0;
 			int rowCount = 0;
+			int rowCount_clean = 0;
 			int sourceRowCount = 0;
 
 			startRow --;
@@ -68,6 +70,16 @@ namespace Ayehu.Sdk.ActivityCreation
 				}
 
 				rowCount ++;
+			}
+						
+			foreach(DataRow dataRowClean in rt.Rows)
+			{
+				for(int i = 0; i < rt.Columns.Count; i ++)
+				{
+					rt.Rows[rowCount_clean][i] = Regex.Replace(dataRowClean.ItemArray[i].ToString(), @"^\s+|\s+$|\s+(?=\s)", "");
+				}
+
+				rowCount_clean ++;
 			}
 			
 			return this.GenerateActivityResult(rt);
