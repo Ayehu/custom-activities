@@ -32,8 +32,8 @@ namespace Ayehu.Sdk.ActivityCreation
 			try
 			{
 				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-
-				var tokenHttpWebRequest = (HttpWebRequest) WebRequest.Create(tokenURL);
+				
+				var tokenHttpWebRequest = (HttpWebRequest)WebRequest.Create(tokenURL);
 				tokenHttpWebRequest.ContentType = tokenContentType;
 				tokenHttpWebRequest.Accept = tokenAccept;
 				tokenHttpWebRequest.Method = tokenMethod;
@@ -44,7 +44,7 @@ namespace Ayehu.Sdk.ActivityCreation
 					tokenStreamWriter.Flush();
 					tokenStreamWriter.Close();
 
-					var tokenHttpResponse = (HttpWebResponse) tokenHttpWebRequest.GetResponse();
+					var tokenHttpResponse = (HttpWebResponse)tokenHttpWebRequest.GetResponse();
 
 					using(var tokenStreamReader = new StreamReader(tokenHttpResponse.GetResponseStream()))
 					{
@@ -52,7 +52,7 @@ namespace Ayehu.Sdk.ActivityCreation
 					}
 				}
 			}
-			catch (WebException e)
+			catch(WebException e)
 			{
 				throw new Exception(e.Message);
 			}
@@ -62,14 +62,14 @@ namespace Ayehu.Sdk.ActivityCreation
 			try
 			{
 				WebClient wc = new WebClient();
-
+				
 				wc.Headers["Cookie"] = "LWSSO_COOKIE_KEY=" + tokenResponseString;
 
 				wc.DownloadFile(downloadURL, savePath);
 
 				return this.GenerateActivityResult("Success");
 			}
-			catch (WebException we)
+			catch(WebException we)
 			{
 				throw new Exception(we.Message);
 			}

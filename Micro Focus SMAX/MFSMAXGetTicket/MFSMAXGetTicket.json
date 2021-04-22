@@ -51,7 +51,7 @@
           "label": "Record Type",
           "labelKey": "RECORDTYPE_VALUE",
           "baseType": "control",
-          "controlType": "dropdown",
+          "controlType": "autocomplete",
           "controlOptions": [
             {
               "key": "Request",
