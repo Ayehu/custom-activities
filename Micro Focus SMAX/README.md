@@ -16,4 +16,4 @@ For information on filter syntax, visit <a href="https://docs.microfocus.com/ito
 <br><br>
 Below is an example of the syntax for the "Fields" input:
 <br>
-<i>Id,Status,OwnedByPerson,OwnedByPerson.Name,DisplayLabel,ImpactScope,Urgency</i>
+<i>Id,Status,DisplayLabel,Description,ImpactScope,Urgency,OwnedByPerson,OwnedByPerson.Name</i>
