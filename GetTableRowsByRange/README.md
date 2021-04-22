@@ -8,4 +8,4 @@ Retrieve rows from a Memory Table by range or length.  Note that if an out-of-bo
 <br>
 <b>Interval Mode:</b> "End Row" will retrieve rows between, and including, a start and end row range, while "Length" will retrieve rows from, and including, the start row and X number of rows after it.
 <br>
-<b>Interval:</b> In "End Row" mode, this is the end row of the desired range to retrieve, while in "Length" mode this is the number of rows after the start row to retrieve.
+<b>Interval:</b> In "End Row" mode, this is the end row of the desired range to retrieve, while in "Length" mode this is the number of rows after, and including, the start row to retrieve.
