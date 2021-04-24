@@ -42,7 +42,7 @@
           "label": "Password",
           "labelKey": "PASSWORD_VALUE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         },
         {
           "value": "",
