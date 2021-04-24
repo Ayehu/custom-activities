@@ -87,15 +87,15 @@ namespace Ayehu.Sdk.ActivityCreation
 					JObject jsonAttachments = JObject.Parse(jsonEncoded);
 
 					JArray attachments = (JArray)jsonAttachments["complexTypeProperties"];
-            
-		            int attachmentCount = attachments.Count;
+			
+					int attachmentCount = attachments.Count;
 
-		            if(attachmentCount == 0)
-		            {
-		            	return this.GenerateActivityResult("No attachments found.");
-		            }
-		            else
-		            {
+					if(attachmentCount == 0)
+					{
+						return this.GenerateActivityResult("No attachments found.");
+					}
+					else
+					{
 						DataTable dt = new DataTable("resultSet");
 						
 						for(int i = 0; i < attachmentCount; i ++)
@@ -103,20 +103,20 @@ namespace Ayehu.Sdk.ActivityCreation
 							dt.Rows.Add(dt.NewRow());
 
 							JObject attachmentDetails = JObject.Parse(jsonAttachments["complexTypeProperties"][i]["properties"].ToString());
-			                
+							
 							foreach(JProperty property in attachmentDetails.Properties())
 							{
-			                    if(!dt.Columns.Contains(property.Name))
-                                {
-                                    dt.Columns.Add(property.Name);
-                                }
+								if(!dt.Columns.Contains(property.Name))
+								{
+									dt.Columns.Add(property.Name);
+								}
 
-                                dt.Rows[i][property.Name] = property.Value;
+								dt.Rows[i][property.Name] = property.Value;
 							}
 						}
 
 						return this.GenerateActivityResult(dt);
-			        }
+					}
 				}
 			}
 			catch(WebException e)
