@@ -73,7 +73,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "POST";
-			string jsonBody = "{ \"IsSystem\": false, \"Body\": \"" + commentBody + "\", \"AttachmentIds\": [],	\"PrivacyType\": \"" + privacyType + "\", \"ActualInterface\": \"" + actualInterface + "\", 	\"CommentFrom\": \"" + commentFrom + "\", \"CommentTo\": \"" + commentTo + "\", \"FunctionalPurpose\": \"" + functionalPurpose + "\", \"Media\": \"" + media + "\", \"PersonParticipant\": \"" + personParticipant + "\", \"CompanyVendor\": \"" + companyVendor + "\", \"Group\": \"" + group + "\" }";
+			string jsonBody = "{ \"IsSystem\": false, \"Body\": \"" + HttpUtility.JavaScriptStringEncode(commentBody) + "\", \"AttachmentIds\": [],	\"PrivacyType\": \"" + privacyType + "\", \"ActualInterface\": \"" + actualInterface + "\", 	\"CommentFrom\": \"" + commentFrom + "\", \"CommentTo\": \"" + commentTo + "\", \"FunctionalPurpose\": \"" + functionalPurpose + "\", \"Media\": \"" + media + "\", \"PersonParticipant\": \"" + personParticipant + "\", \"CompanyVendor\": \"" + companyVendor + "\", \"Group\": \"" + group + "\" }";
 
 			try
 			{
