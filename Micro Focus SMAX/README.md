@@ -17,3 +17,7 @@ For information on filter syntax, visit <a href="https://docs.microfocus.com/ito
 Below is an example of the syntax for the "Fields" input:
 <br>
 <i>Id,Status,DisplayLabel,Description,ImpactScope,Urgency,OwnedByPerson,OwnedByPerson.Name</i>
+<br><br>
+Below is an example of the syntax for the "Filter" input:
+<br>
+<i>LastUpdateTime > 1601321299000</i>
