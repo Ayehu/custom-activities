@@ -1,0 +1,320 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MFSMAXAddComment",
+    "description": "Add a comment to a ticket in Micro Focus SMAX.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://us1-smax.saas.microfocus.com",
+          "required": true,
+          "key": "instanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCEURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantID",
+          "label": "Tenant ID",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "Request",
+          "required": true,
+          "key": "recordType",
+          "label": "Record Type",
+          "labelKey": "RECORDTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Request",
+              "value": "Request"
+            },
+            {
+              "key": "Incident",
+              "value": "Incident"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "recordNumber",
+          "label": "Ticket Number",
+          "labelKey": "RECORDNUMBER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "PUBLIC",
+          "required": true,
+          "key": "privacyType",
+          "label": "Privacy Type",
+          "labelKey": "PRIVACYTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "PUBLIC",
+              "value": "PUBLIC"
+            },
+            {
+              "key": "INTERNAL",
+              "value": "INTERNAL"
+            },
+            {
+              "key": "AGENTPUBLIC",
+              "value": "AGENTPUBLIC"
+            }
+          ]
+        },
+        {
+          "value": "API",
+          "required": true,
+          "key": "actualInterface",
+          "label": "Actual Interface",
+          "labelKey": "INTERFACE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "API",
+              "value": "API"
+            },
+            {
+              "key": "SAW",
+              "value": "SAW"
+            },
+            {
+              "key": "ESS",
+              "value": "ESS"
+            },
+            {
+              "key": "EMAIL",
+              "value": "EMAIL"
+            },
+            {
+              "key": "SYSTEM",
+              "value": "SYSTEM"
+            }
+          ]
+        },
+        {
+          "value": "User",
+          "required": true,
+          "key": "commentFrom",
+          "label": "Comment From",
+          "labelKey": "COMMENTFROM_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "User",
+              "value": "User"
+            },
+            {
+              "key": "System",
+              "value": "System"
+            },
+            {
+              "key": "Agent",
+              "value": "Agent"
+            },
+            {
+              "key": "Vendor",
+              "value": "Vendor"
+            },
+            {
+              "key": "ExternalServiceDesk",
+              "value": "ExternalServiceDesk"
+            },
+            {
+              "key": "SocialUser",
+              "value": "SocialUser"
+            }
+          ]
+        },
+        {
+          "value": "User",
+          "required": true,
+          "key": "commentTo",
+          "label": "Comment To",
+          "labelKey": "COMMENTTO_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "User",
+              "value": "User"
+            },
+            {
+              "key": "Vendor",
+              "value": "Vendor"
+            },
+            {
+              "key": "Agent",
+              "value": "Agent"
+            },
+            {
+              "key": "ExternalServiceDesk",
+              "value": "ExternalServiceDesk"
+            },
+            {
+              "key": "Stakeholder",
+              "value": "Stakeholder"
+            }
+          ]
+        },
+        {
+          "value": "StatusUpdate",
+          "required": true,
+          "key": "functionalPurpose",
+          "label": "Funct. Purpose",
+          "labelKey": "FUNCTIONALPURPOSE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "StatusUpdate",
+              "value": "StatusUpdate"
+            },
+            {
+              "key": "RequestMoreInformation",
+              "value": "RequestMoreInformation"
+            },
+            {
+              "key": "ProvideInformation",
+              "value": "ProvideInformation"
+            },
+            {
+              "key": "EndUserComment",
+              "value": "EndUserComment"
+            },
+            {
+              "key": "Diagnosis",
+              "value": "Diagnosis"
+            },
+            {
+              "key": "Resolution",
+              "value": "Resolution"
+            },
+            {
+              "key": "ResolutionActivity",
+              "value": "ResolutionActivity"
+            },
+            {
+              "key": "FollowUp",
+              "value": "FollowUp"
+            }
+          ]
+        },
+        {
+          "value": "Unknown",
+          "required": true,
+          "key": "media",
+          "label": "Media",
+          "labelKey": "MEDIDA_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Unknown",
+              "value": "Unknown"
+            },
+            {
+              "key": "UI",
+              "value": "UI"
+            },
+            {
+              "key": "Email",
+              "value": "Email"
+            },
+            {
+              "key": "Phone",
+              "value": "Phone"
+            },
+            {
+              "key": "Fax",
+              "value": "Fax"
+            },
+            {
+              "key": "InstantMessage",
+              "value": "InstantMessage"
+            },
+            {
+              "key": "InternalChat",
+              "value": "InternalChat"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "personParticipant",
+          "label": "Person Participant",
+          "labelKey": "PERSONPARTICIPANT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "companyVendor",
+          "label": "Company Vendor",
+          "labelKey": "COMPANYVENDOR_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "group",
+          "label": "Group",
+          "labelKey": "GROUP_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "commentBody",
+          "label": "Comment",
+          "labelKey": "COMMENTBODY_VALUE",
+          "baseType": "control",
+          "controlType": "textarea"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
