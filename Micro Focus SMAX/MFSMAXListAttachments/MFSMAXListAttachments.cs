@@ -82,7 +82,9 @@ namespace Ayehu.Sdk.ActivityCreation
 
 					JObject jsonResults = JObject.Parse(response);
 
-					string jsonEncoded = jsonResults["entities"][0]["properties"]["RequestAttachments"].ToString();
+					string jsonAttachmentKey = recordType + "Attachments";
+
+					string jsonEncoded = jsonResults["entities"][0]["properties"][jsonAttachmentKey].ToString();
 
 					JObject jsonAttachments = JObject.Parse(jsonEncoded);
 
