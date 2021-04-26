@@ -84,13 +84,25 @@ namespace Ayehu.Sdk.ActivityCreation
 
 					string jsonAttachmentKey = recordType + "Attachments";
 
-					string jsonEncoded = jsonResults["entities"][0]["properties"][jsonAttachmentKey].ToString();
+					int attachmentCount = 0;
 
-					JObject jsonAttachments = JObject.Parse(jsonEncoded);
+					JObject jsonAttachments;
 
-					JArray attachments = (JArray)jsonAttachments["complexTypeProperties"];
+					try
+					{
+						string jsonEncoded = jsonResults["entities"][0]["properties"][jsonAttachmentKey].ToString();
+
+						jsonAttachments = JObject.Parse(jsonEncoded);
+
+						JArray attachments = (JArray)jsonAttachments["complexTypeProperties"];
 			
-					int attachmentCount = attachments.Count;
+						attachmentCount = attachments.Count;
+					}
+					catch
+					{
+						return this.GenerateActivityResult("No attachments found.");
+					}
+
 
 					if(attachmentCount == 0)
 					{
