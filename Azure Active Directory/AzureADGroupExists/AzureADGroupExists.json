@@ -1,0 +1,45 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Azure AD Is Group Exists",
+    "description": "Checks if Azure Active Directory group exist by id.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "accessToken",
+          "label": "Access token",
+          "labelKey": "access_token_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "groupId",
+          "label": "Group ID",
+          "labelKey": "group_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": "$"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
