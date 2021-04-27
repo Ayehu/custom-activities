@@ -16,4 +16,4 @@ These fields should be sent when calling the API.
 
 **Access token**      - Access token
 
-**User Id**           - User Id or Email
+**User Id**           - User Id
