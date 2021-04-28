@@ -50,15 +50,13 @@ namespace Ayehu.Sdk.ActivityCreation
 
 			var outputStandard = process.StandardOutput.ReadToEnd();
 
-			return this.GenerateActivityResult(outputStandard);
-
-			if(outputStandard == "Success")
+			if(String.IsNullOrEmpty(outputStandard))
 			{
-				return this.GenerateActivityResult("Success");
+				throw new Exception("Error encountered.");
 			}
 			else
 			{
-				throw new Exception(outputStandard);
+				return this.GenerateActivityResult("Success");
 			}
 		}
 	}
