@@ -18,10 +18,9 @@ Below is an example of the syntax for the "Fields" input:
 <br>
 <i>Id,Status,DisplayLabel,Description,ImpactScope,Urgency,OwnedByPerson,OwnedByPerson.Name</i>
 <br><br>
-Below is an example of the syntax for the "Filter" input:
-<br>
-<i>LastUpdateTime > 1601321299000</i>
-<br>
-<i>LastUpdateTime > 1601321299000 and RequestsOffering = '13263'</i>
-<br>
-<i>LastUpdateTime > 1601321299000 and RequestsOffering in(13263,13257)</i>
+Below are examples of the syntax for the "Filter" input:
+<ul>
+  <li><i>LastUpdateTime > 1601321299000</i></li>
+  <li><i>LastUpdateTime > 1601321299000 and RequestsOffering = '13263'</i></li>
+  <li><i>LastUpdateTime > 1601321299000 and RequestsOffering in(13263,13257)</i></li>
+</ul>
