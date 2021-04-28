@@ -20,4 +20,4 @@ Below is an example of the syntax for the "Fields" input:
 <br><br>
 Below is an example of the syntax for the "Filter" input:
 <br>
-<i>LastUpdateTime > 1601321299000</i>
+<i>LastUpdateTime > 1601321299000 and RequestsOffering = '13263'</i>
