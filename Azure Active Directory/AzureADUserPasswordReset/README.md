@@ -14,7 +14,7 @@ These fields should be sent when calling the API.
 
 **Access token**      - Access token
 
-**user ID**	    - User ID that identifies the account (Required) 	                    
+**User ID**	    - User ID that identifies the account (Required) 	                    
 
 **New password**		- New password. It must be a strong password.  At least 8 to 64 characters. It requires 3 out of 4 of lowercase, uppercase, numbers, or symbols.
 
