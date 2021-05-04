@@ -1,8 +1,8 @@
 {
   "innerCode": 200,
   "data": {
-    "name": "OfficeMailboxRuleDelete",
-    "description": "Activity to delete a mailbox rule in Azure AD for Office365.",
+    "name": "OfficeUserLicenseRemove",
+    "description": "Activity to remove Exchange Online license from a user in Azure AD for Office365.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
@@ -11,18 +11,18 @@
         {
           "value": "",
           "required": true,
-          "key": "ruleName",
-          "label": "Rule Name",
-          "labelKey": "RULE_NAME_VALUE",
+          "key": "userEmail",
+          "label": "User Email",
+          "labelKey": "USER_EMAIL_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },
         {
           "value": "",
           "required": true,
-          "key": "userEmail",
-          "label": "User Email",
-          "labelKey": "USER_EMAIL_VALUE",
+          "key": "licenseId",
+          "label": "License SKU",
+          "labelKey": "LICENSE_ID_VALUE",
           "baseType": "control",
           "controlType": "textbox"
         },

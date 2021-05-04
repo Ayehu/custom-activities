@@ -2,7 +2,6 @@
 
 ##### DLL's to reference
 System.Net.Http.dll
-Newtonsoft.Json.dll
 
 
 ### Mandatory fields when deleting a mailbox rule:

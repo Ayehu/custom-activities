@@ -1,7 +1,6 @@
 using Ayehu.Sdk.ActivityCreation.Extension;
 using Ayehu.Sdk.ActivityCreation.Helpers;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -10,27 +9,24 @@ using System.Text;
 
 namespace Ayehu.Sdk.ActivityCreation
 {
-    public class OfficeMailboxRuleDelete : IActivity
+    public class OfficeUserLicenseRemove : IActivity
     {
         /// <summary>
-        /// User's email to delete the rule
+        /// User's email to create the rule
         /// </summary>
         public string userEmail;
-        public string ruleName;
-
+        public string licenseId;
         public string authToken_password;
         public string Jsonkeypath = "";
 
         private bool omitJsonEmptyorNull = false;
         private string contentType = "application/json";
         private string endPoint = "https://graph.microsoft.com";
-        private string httpMethod = "DELETE";
+        private string httpMethod = "POST";
         private string _uriBuilderPath;
         private string _postData;
 
         private Dictionary<string, string> _headers;
-
-        private string ruleId;        
 
         private string uriBuilderPath
         {
@@ -38,7 +34,7 @@ namespace Ayehu.Sdk.ActivityCreation
             {
                 if (string.IsNullOrEmpty(_uriBuilderPath))
                 {
-                    _uriBuilderPath = "/v1.0/users/" + userEmail + "/mailFolders/inbox/messageRules/" + ruleId;
+                    _uriBuilderPath = "/v1.0/users/" + userEmail + "/assignLicense";
                 }
                 return _uriBuilderPath;
             }
@@ -82,8 +78,8 @@ namespace Ayehu.Sdk.ActivityCreation
 
         public ICustomActivityResult Execute()
         {
-            ruleId = GetRuleId();
-            var response = ApiCAll(uriBuilderPath, httpMethod);
+            postData = GetBody();
+            var response = ApiCAll();
             switch (response.StatusCode)
             {
                 case HttpStatusCode.NoContent:
@@ -108,15 +104,15 @@ namespace Ayehu.Sdk.ActivityCreation
             }
         }
 
-        private HttpResponseMessage ApiCAll(string uri, string method)
+        private HttpResponseMessage ApiCAll()
         {
             HttpClient client = new HttpClient();
             ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
             UriBuilder UriBuilder = new UriBuilder(endPoint);
-            UriBuilder.Path = uri;
-            HttpRequestMessage HttpRequestMessage = new HttpRequestMessage(new HttpMethod(method), UriBuilder.ToString());
+            UriBuilder.Path = uriBuilderPath;
+            HttpRequestMessage HttpRequestMessage = new HttpRequestMessage(new HttpMethod(httpMethod), UriBuilder.ToString());
 
             if (contentType == "application/x-www-form-urlencoded")
                 HttpRequestMessage.Content = AyehuHelper.formUrlEncodedContent(postData);
@@ -143,42 +139,14 @@ namespace Ayehu.Sdk.ActivityCreation
             return true;
         }
 
-        private string GetRuleId()
+        public string GetBody()
         {
-            string id = "";
-            string _uri = "/v1.0/users/" + userEmail + "/mailFolders/inbox/messageRules";
-            var response = ApiCAll(_uri, "GET");
-
-            switch (response.StatusCode)
-            {
-                case HttpStatusCode.OK:
-                    {
-                        JObject json = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-                        JArray values = (JArray)json["value"];
-
-                        foreach (var value in values)
-                        {
-                            if (value["displayName"].ToString() == ruleName.Trim())
-                            {
-                                id = value["id"].ToString();
-                                break;
-                            }
-                        }
-
-                        break;
-                    }
-                default:
-                    {
-                        if (string.IsNullOrEmpty(response.Content.ReadAsStringAsync().Result) == false)
-                            throw new Exception(response.Content.ReadAsStringAsync().Result);
-                        else if (string.IsNullOrEmpty(response.ReasonPhrase) == false)
-                            throw new Exception(response.ReasonPhrase);
-                        else
-                            throw new Exception(response.StatusCode.ToString());
-                    }
-            }
-
-            return id;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("{");
+            sb.AppendLine(@" ""addLicenses"": [], ");
+            sb.AppendLine(@" ""removeLicenses"": [""" + licenseId + @"""] ");
+            sb.AppendLine("}");
+            return sb.ToString();
         }
     }
 }
