@@ -12,11 +12,14 @@ namespace Ayehu.Sdk.ActivityCreation
     public class AzureADUserPasswordReset : IActivity
     {
         public string newPassword = "";
+
         public string userId = "";
 
         public string accessToken = "";
 
         public string Jsonkeypath = "";
+
+        public string forcePwdChange;
 
         private bool omitJsonEmptyorNull = false;
 
@@ -151,7 +154,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
         private string GetBodyData()
         {
-            return "{\r\n    \"passwordProfile\":\r\n   {\r\n    \"forceChangePasswordNextSignIn\": true,\r\n    \"forceChangePasswordNextSignInWithMfa\": false,\r\n    \"password\": \"" + newPassword + "\"\r\n    }\r\n}";
+            return "{\r\n    \"passwordProfile\":\r\n   {\r\n    \"forceChangePasswordNextSignIn\": " + forcePwdChange.ToLower() + ",\r\n    \"forceChangePasswordNextSignInWithMfa\": false,\r\n    \"password\": \"" + newPassword + "\"\r\n    }\r\n}";
         }
 
         private bool AcceptAllCertifications(object sender, System.Security.Cryptography.X509Certificates.X509Certificate certification, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
