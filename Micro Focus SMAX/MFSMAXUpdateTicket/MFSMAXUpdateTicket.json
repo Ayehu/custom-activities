@@ -42,7 +42,7 @@
           "label": "Password",
           "labelKey": "PASSWORD_VALUE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         },
         {
           "value": "Request",
@@ -88,7 +88,7 @@
           "label": "Field Value",
           "labelKey": "FIELDVALUE_VALUE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "textarea"
         }
       ],
       "index": "1",

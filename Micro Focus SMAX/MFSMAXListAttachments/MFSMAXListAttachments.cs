@@ -82,20 +82,34 @@ namespace Ayehu.Sdk.ActivityCreation
 
 					JObject jsonResults = JObject.Parse(response);
 
-					string jsonEncoded = jsonResults["entities"][0]["properties"]["RequestAttachments"].ToString();
+					string jsonAttachmentKey = recordType + "Attachments";
 
-					JObject jsonAttachments = JObject.Parse(jsonEncoded);
+					int attachmentCount = 0;
 
-					JArray attachments = (JArray)jsonAttachments["complexTypeProperties"];
-            
-		            int attachmentCount = attachments.Count;
+					JObject jsonAttachments;
 
-		            if(attachmentCount == 0)
-		            {
-		            	return this.GenerateActivityResult("No attachments found.");
-		            }
-		            else
-		            {
+					try
+					{
+						string jsonEncoded = jsonResults["entities"][0]["properties"][jsonAttachmentKey].ToString();
+
+						jsonAttachments = JObject.Parse(jsonEncoded);
+
+						JArray attachments = (JArray)jsonAttachments["complexTypeProperties"];
+			
+						attachmentCount = attachments.Count;
+					}
+					catch
+					{
+						return this.GenerateActivityResult("No attachments found.");
+					}
+
+
+					if(attachmentCount == 0)
+					{
+						return this.GenerateActivityResult("No attachments found.");
+					}
+					else
+					{
 						DataTable dt = new DataTable("resultSet");
 						
 						for(int i = 0; i < attachmentCount; i ++)
@@ -103,20 +117,20 @@ namespace Ayehu.Sdk.ActivityCreation
 							dt.Rows.Add(dt.NewRow());
 
 							JObject attachmentDetails = JObject.Parse(jsonAttachments["complexTypeProperties"][i]["properties"].ToString());
-			                
+							
 							foreach(JProperty property in attachmentDetails.Properties())
 							{
-			                    if(!dt.Columns.Contains(property.Name))
-                                {
-                                    dt.Columns.Add(property.Name);
-                                }
+								if(!dt.Columns.Contains(property.Name))
+								{
+									dt.Columns.Add(property.Name);
+								}
 
-                                dt.Rows[i][property.Name] = property.Value;
+								dt.Rows[i][property.Name] = property.Value;
 							}
 						}
 
 						return this.GenerateActivityResult(dt);
-			        }
+					}
 				}
 			}
 			catch(WebException e)

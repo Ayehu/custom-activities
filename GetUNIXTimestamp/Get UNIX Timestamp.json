@@ -1,0 +1,37 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Get UNIX Timestamp",
+    "description": "Retrieve UNIX timestamp.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "10 Digit",
+          "required": true,
+          "key": "digitLength",
+          "label": "Digit Length",
+          "labelKey": "DIGITLENGTH_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "10 Digit",
+              "value": "10 Digit"
+            },
+            {
+              "key": "13 Digit",
+              "value": "13 Digit"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

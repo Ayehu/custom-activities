@@ -92,34 +92,34 @@ namespace Ayehu.Sdk.ActivityCreation
 					for(int i = 0; i < recordCount; i ++)
 					{
 						var recordData = jsonResults["entities"][i]["properties"].ToString();
-	                    var res = ExposeJson(JObject.Parse(recordData))
-	                                .ToDictionary(q => q.Key, q => q.Value);
-	                    dt.Merge(GetDataTable(res));
+						var res = ExposeJson(JObject.Parse(recordData))
+									.ToDictionary(q => q.Key, q => q.Value);
+						dt.Merge(GetDataTable(res));
 
-	                    var recordData2 = jsonResults["entities"][i]["related_properties"].ToString();
-	                    var res2 = ExposeJson(JObject.Parse(recordData2))
-	                               .ToDictionary(q => q.Key, q => q.Value);
-                        dt2.Merge(GetDataTable(res2));
-	                }
+						var recordData2 = jsonResults["entities"][i]["related_properties"].ToString();
+						var res2 = ExposeJson(JObject.Parse(recordData2))
+								   .ToDictionary(q => q.Key, q => q.Value);
+						dt2.Merge(GetDataTable(res2));
+					}
 
-	                int rowCount = 0;
+					int rowCount = 0;
 
-	                foreach(DataRow row in dt2.Rows)
-                    {
-                    	foreach(DataColumn col in dt2.Columns)
-                    	{
-                    		if(!dt.Columns.Contains(col.ToString()))
-                    		{
-                    			dt.Columns.Add(col.ToString());
-                    		}
+					foreach(DataRow row in dt2.Rows)
+					{
+						foreach(DataColumn col in dt2.Columns)
+						{
+							if(!dt.Columns.Contains(col.ToString()))
+							{
+								dt.Columns.Add(col.ToString());
+							}
 
-                    		dt.Rows[rowCount][col.ToString()] = row[col].ToString();
-                    	}
+							dt.Rows[rowCount][col.ToString()] = row[col].ToString();
+						}
 
-                    	rowCount ++;
-                    }
+						rowCount ++;
+					}
 
-                    return this.GenerateActivityResult(dt);
+					return this.GenerateActivityResult(dt);
 				}
 			}
 			catch(WebException e)
@@ -129,39 +129,39 @@ namespace Ayehu.Sdk.ActivityCreation
 		}
 
 		private IDictionary<string, string> ExposeJson(JObject jObject, string append = "")
-        {
-            var result = new Dictionary<string, string>();
+		{
+			var result = new Dictionary<string, string>();
 
-            foreach (var jProperty in jObject.Properties())
-            {
-                var jToken = jProperty.Value;
+			foreach (var jProperty in jObject.Properties())
+			{
+				var jToken = jProperty.Value;
 
-                if (jToken.Type == JTokenType.Object)
-                {
-                    var nested_result = ExposeJson(jToken as JObject, jProperty.Name + "_");
-                    result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
-                }
-                else if (jToken.Type != JTokenType.Array)
-                {
-                    result.Add(append + jProperty.Name, jProperty.Value.ToString());
-                }
-            }
+				if (jToken.Type == JTokenType.Object)
+				{
+					var nested_result = ExposeJson(jToken as JObject, jProperty.Name + "_");
+					result = result.Concat(nested_result).ToDictionary(q => q.Key, q => q.Value);
+				}
+				else if (jToken.Type != JTokenType.Array)
+				{
+					result.Add(append + jProperty.Name, jProperty.Value.ToString());
+				}
+			}
 
-            return result;
-        }
+			return result;
+		}
 
-        private DataTable GetDataTable(IReadOnlyDictionary<string, string> columns)
-        {
-            DataTable dt = new DataTable("resultSet");
-            dt.Rows.Add(dt.NewRow());
+		private DataTable GetDataTable(IReadOnlyDictionary<string, string> columns)
+		{
+			DataTable dt = new DataTable("resultSet");
+			dt.Rows.Add(dt.NewRow());
 
-            foreach (var col in columns)
-            {
-                dt.Columns.Add(col.Key);
-                dt.Rows[0][col.Key] = col.Value;
-            }
+			foreach (var col in columns)
+			{
+				dt.Columns.Add(col.Key);
+				dt.Rows[0][col.Key] = col.Value;
+			}
 
-            return dt;
+			return dt;
 		}
 	}
 }
