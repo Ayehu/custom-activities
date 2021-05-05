@@ -1,8 +1,8 @@
 For the "Instance URL" field, the following are the default formats:
 <br>
 <ul>
-<li>On-premise instance - http:// SERVER_NAME :8080/rest/api/latest/</li>
-<li>Cloud instance - https:// SITE_NAME .atlassian.net/rest/api/latest/</li>
+<li>On-premise instance - http:// SERVER_NAME :8080</li>
+<li>Cloud instance - https:// SITE_NAME .atlassian.net</li>
 </ul>
 <br>
 In order to retrieve the attachment ID and attachment filename needed to execute this activity, you have two options.
