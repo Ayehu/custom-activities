@@ -17,12 +17,12 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string instanceURL;
 		public string username;
-		public string apiToken;
+		public string password;
 		public string ticketNumber;
 
 		public ICustomActivityResult Execute()
 		{
-			string apiURL = instanceURL + "/issue/" + ticketNumber + "?fields=attachment";
+			string apiURL = instanceURL + "/rest/api/2/issue/" + ticketNumber + "?fields=attachment";
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "GET";
@@ -34,7 +34,7 @@ namespace Ayehu.Sdk.ActivityCreation
 				var httpWebRequest = (HttpWebRequest)WebRequest.Create(apiURL);
 				httpWebRequest.ContentType = contentType;
 				httpWebRequest.Accept = accept;
-				httpWebRequest.Headers.Add("Authorization", "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + apiToken)));
+				httpWebRequest.Headers.Add("Authorization", "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password)));
 				httpWebRequest.Method = method;
 
 				var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();

@@ -15,7 +15,7 @@ namespace Ayehu.Sdk.ActivityCreation
 	{
 		public string instanceURL;
 		public string username;
-		public string apiToken;
+		public string password;
 		public string attachmentID;
 		public string attachmentFilename;
 		public string savePath;
@@ -28,7 +28,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			{
 				WebClient wc = new WebClient();
 
-				wc.Headers["Authorization"] = "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + apiToken));
+				wc.Headers["Authorization"] = "Basic " + System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
 				wc.Headers["X-Atlassian-Token"] = "nocheck";
 
 				string apiURL = instanceURL + "/secure/attachment/" + attachmentID + "/" + attachmentFilename;

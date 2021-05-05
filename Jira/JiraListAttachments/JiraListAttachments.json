@@ -29,11 +29,11 @@
         {
           "value": "",
           "required": true,
-          "key": "apiToken",
+          "key": "password",
           "label": "API Token",
           "labelKey": "APITOKEN_VALUE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         },
         {
           "value": "",
