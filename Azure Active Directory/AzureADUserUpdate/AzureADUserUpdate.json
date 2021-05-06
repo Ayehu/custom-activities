@@ -1,0 +1,94 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Azure AD User Update",
+    "description": "Updates a user in Azure AD",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "accessToken",
+          "label": "Access token",
+          "labelKey": "access_token_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "userId",
+          "label": "User ID",
+          "labelKey": "user_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "firstName",
+          "label": "First Name",
+          "labelKey": "FIRST_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "lastName",
+          "label": "Last Name",
+          "labelKey": "LAST_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "Yes",
+          "required": false,
+          "key": "pwdChange",
+          "idFieldName": "forcePwdChange",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Force Pwd Change",
+          "labelKey": "FORCE_PWDCHANGE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "Yes"
+            },
+            {
+              "key": "False",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "value": "$",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
