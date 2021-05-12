@@ -10,6 +10,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System;
 
 namespace Ayehu.Sdk.ActivityCreation
@@ -27,6 +28,11 @@ namespace Ayehu.Sdk.ActivityCreation
 
 		public ICustomActivityResult Execute()
 		{
+			if(!File.Exists(executablePath))
+			{
+				throw new Exception("Executable Path not found! Please correctly identify location of mfsmaxupload.exe and try again.");
+			}
+
 			string commandString = "\"" + executablePath + "\" '" + username + "' " +
 									"'" + password + "' '" + instanceURL + "' '" + tenantID + "' " +
 									"'" + recordNumber + "' '" + recordType + "' '" + filePath + "'";
