@@ -13,7 +13,12 @@ def execute(Resource,TenantID,ClientID,password,GrantType):
   client_secret = password
   grant_type = GrantType
 
-  auth_body_data = {'resource': resource, 'grant_type': grant_type, 'client_secret': client_secret, 'client_id' : client_id}
+  auth_body_data = {
+    'resource': resource,
+    'grant_type': grant_type,
+    'client_secret': client_secret,
+    'client_id' : client_id
+  }
 
   try:
       access_token_response = requests.post("https://login.microsoftonline.com/" + tenant_id + "/oauth2/token", data=auth_body_data, allow_redirects=False)
