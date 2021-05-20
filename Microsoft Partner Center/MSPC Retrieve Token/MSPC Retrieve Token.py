@@ -4,7 +4,7 @@ import json
 
 def execute(Resource,TenantID,ClientID,password,GrantType):
   headers = {
-    "Content-Type": "application/x-www-form-urlencoded"
+    'Content-Type': 'application/x-www-form-urlencoded'
   }
 
   resource = Resource
