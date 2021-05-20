@@ -1,0 +1,63 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MSPC Retrieve Token",
+    "description": "Retrieve an access token from the Microsoft Partner Center API.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "Resource",
+          "label": "Resource",
+          "labelKey": "RESOURCE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": "https://graph.windows.net"
+        },
+        {
+          "required": true,
+          "key": "TenantID",
+          "label": "Tenant ID",
+          "labelKey": "TENANTID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "ClientID",
+          "label": "Client ID",
+          "labelKey": "CLIENTID",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password",
+          "label": "Client Secret",
+          "labelKey": "CLIENTSECRET",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "GrantType",
+          "label": "Grant Type",
+          "labelKey": "GRANTTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": "client_credentials"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
