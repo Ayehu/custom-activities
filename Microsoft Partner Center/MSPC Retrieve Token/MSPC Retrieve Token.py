@@ -11,7 +11,7 @@ def execute(Resource,TenantID,ClientID,password,GrantType):
     'resource': Resource,
     'grant_type': GrantType,
     'client_secret': password,
-    'client_id' : ClientID
+    'client_id': ClientID
   }
 
   try:
