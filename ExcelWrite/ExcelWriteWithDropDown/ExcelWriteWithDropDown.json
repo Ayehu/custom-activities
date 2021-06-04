@@ -1,0 +1,106 @@
+{
+  "data": {
+    "name": "ExcelWriteWithDropdown",
+    "description": "Create an Excel spreadsheet with a dropdown list.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "key": "NewValue",
+          "label": "Table",
+          "styleClass": "",
+          "labelKey": "WRITE_XLS_RESULTSET",
+          "baseType": "control",
+          "required": true,
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "key": "Sname",
+          "label": "Sheet Name",
+          "styleClass": "",
+          "labelKey": "WRITE_XLS_RESULTSET",
+          "baseType": "control",
+          "required": false,
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "key": "DropdownList",
+          "label": "Dropdown List",
+          "styleClass": "",
+          "labelKey": "WRITE_XLS_RESULTSET",
+          "baseType": "control",
+          "required": true,
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "key": "ColumnLetter",
+          "label": "Column Letter",
+          "styleClass": "",
+          "labelKey": "WRITE_XLS_RESULTSET",
+          "baseType": "control",
+          "required": true,
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "2",
+          "key": "StartRow",
+          "label": "Start Row",
+          "styleClass": "",
+          "labelKey": "WRITE_XLS_RESULTSET",
+          "baseType": "control",
+          "required": true,
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "9999",
+          "key": "EndRow",
+          "label": "End Row",
+          "styleClass": "",
+          "labelKey": "WRITE_XLS_RESULTSET",
+          "baseType": "control",
+          "required": true,
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "Path",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Path",
+          "labelKey": "WRITE_XLS_PATH",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": 1,
+          "disabled": false,
+          "label": "new control01",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
