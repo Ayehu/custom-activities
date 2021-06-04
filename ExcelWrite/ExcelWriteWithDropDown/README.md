@@ -8,7 +8,7 @@ Create an Excel spreadsheet from a Memory Table with one column containing a cus
 <br>
 <b>Dropdown List:</b> A comma-separated list of items to include in the dropdown (e.g. <b>Yes,No</b>).
 <br>
-<b>Column Letter:</b> The letter value assigned to the column on which the dropdown list should be applied (e.g. columns 2 would be <b>B</b>).
+<b>Column Letter:</b> The letter value assigned to the column on which the dropdown list should be applied (e.g. column 2 would be <b>B</b>).
 <br>
 <b>Start Row:</b> The first row in the target column where dropdown list should appear, set to <b>2</b> by default as to skip the header row.
 <br>
