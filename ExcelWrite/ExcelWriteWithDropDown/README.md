@@ -4,3 +4,5 @@ Create an Excel spreadsheet from a Memory Table with one column containing a cus
 Example:
 <br>
 <img src="https://github.com/Ayehu/custom-activities/blob/master/ExcelWrite/ExcelWriteWithDropDown/screenshot.png?raw=true">
+<br>
+Note that all of the items from the dropdown list should be comma separated, as seen above.
