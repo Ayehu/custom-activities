@@ -3,4 +3,4 @@ Create an Excel spreadsheet from a Memory Table with one column containing a cus
 <br><br>
 Example:
 <br>
-https://github.com/Ayehu/custom-activities/blob/master/ExcelWrite/ExcelWriteWithDropDown/screenshot.png?raw=true
+<img src="https://github.com/Ayehu/custom-activities/blob/master/ExcelWrite/ExcelWriteWithDropDown/screenshot.png?raw=true">
