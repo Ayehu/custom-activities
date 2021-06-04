@@ -10,7 +10,7 @@ Create an Excel spreadsheet from a Memory Table with one column containing a cus
 <br>
 <b>Column Letter:</b> The letter value assigned to the column on which the dropdown list should be applied (e.g. column 2 would be <b>B</b>).
 <br>
-<b>Start Row:</b> The first row in the target column where dropdown list should appear, set to <b>2</b> by default as to skip the header row.
+<b>Start Row:</b> The first row in the target column where dropdown list should appear (set to <b>2</b> by default as to skip the header row).
 <br>
 <b>End Row:</b> The last row in the target column where dropdown list should appear, which would typically be the value of <b>GetRowsCount</b> minus 1.
 <br>
