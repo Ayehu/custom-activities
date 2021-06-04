@@ -1,7 +1,7 @@
 <h1>ExcelWriteWithDropdown</h1>
 Create an Excel spreadsheet from a Memory Table with one column containing a customizable dropdown list.
 <br><br>
-<h3>Input Fields</h3>
+<h2>Input Fields</h2>
 <b>Table:</b> Variable containing the Memory Table.
 <br>
 <b>Sheet Name:</b> Optional custom name to give to Excel sheet.
@@ -18,7 +18,7 @@ Create an Excel spreadsheet from a Memory Table with one column containing a cus
 <br>
 <b>Hostname/User Name/Password:</b> Target host on which to write the destination Excel spreadsheet file.
 <br><br>
-<h3>Example</h3>
+<h2>Example</h2>
 Consider the following table <b>%myTable%</b>:
 <br><br>
 <img src="https://github.com/Ayehu/custom-activities/blob/master/ExcelWrite/ExcelWriteWithDropDown/screenshots/table.png?raw=true">
