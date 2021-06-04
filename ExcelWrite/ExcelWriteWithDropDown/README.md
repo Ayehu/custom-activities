@@ -23,7 +23,7 @@ Consider the following table <b>%myTable%</b>:
 <br><br>
 <img src="https://github.com/Ayehu/custom-activities/blob/master/ExcelWrite/ExcelWriteWithDropDown/screenshots/table.png?raw=true">
 <br>
-Below, we pass that table to the <b>ExcelWriteWithDropdown</b> activity (note that <b>%excelEndRow%</b> is the value of <b>GetRowsCount</b> from the source table minus 1):
+Below, we pass that table to the <b>ExcelWriteWithDropdown</b> activity (note that <b>%excelEndRow%</b> is the value of <b>GetRowsCount</b> from the source table minus 1, calculated using the <b>FunctionCalculator</b> activity):
 <br><br>
 <img src="https://github.com/Ayehu/custom-activities/blob/master/ExcelWrite/ExcelWriteWithDropDown/screenshots/screenshot.png?raw=true">
 <br>
