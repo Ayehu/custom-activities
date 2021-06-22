@@ -1,0 +1,24 @@
+{
+  "data": {
+    "name": "Add Spaces",
+    "description": "Add a special charater between chars",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "^",
+          "key": "TheValue",
+          "label": "String",
+          "labelKey": "ADD_SPACES_STRING",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
