@@ -6,7 +6,7 @@ An activity to retrieve a standard OAuth 2.0 access token using a client ID and 
   <li><b>Token URL:</b> OAuth 2.0 access token endpoint.</li>
   <li><b>Grant Type:</b> Custom grant type, if required (default is <b>client_credentials</b>).</li>
   <li><b>Client ID:</b> The client ID value.</li>
-  <li><b>Client ID:</b> The client ID value.</li>
+  <li><b>Client Secret:</b> The client secret value.</li>
 </ul>
 <br>
 <h2>Example</h2>
