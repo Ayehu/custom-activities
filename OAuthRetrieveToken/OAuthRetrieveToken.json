@@ -38,11 +38,11 @@
         {
           "value": "",
           "required": true,
-          "key": "clientSecret",
+          "key": "password",
           "label": "Client Secret",
           "labelKey": "CLIENTSECRET_VALUE",
           "baseType": "control",
-          "controlType": "textbox"
+          "controlType": "password"
         }
       ],
       "index": "1",

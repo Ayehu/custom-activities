@@ -18,7 +18,7 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string tokenURL;
 		public string grantType;
 		public string clientID;
-		public string clientSecret;
+		public string password;
 
 		public ICustomActivityResult Execute()
 		{
@@ -38,7 +38,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 				using(var tokenStreamWriter = new StreamWriter(tokenHttpWebRequest.GetRequestStream()))
 				{
-					tokenStreamWriter.Write("grant_type=" + grantType + "&client_id=" + clientID + "&client_secret=" + clientSecret);
+					tokenStreamWriter.Write("grant_type=" + grantType + "&client_id=" + clientID + "&client_secret=" + password);
 					tokenStreamWriter.Flush();
 					tokenStreamWriter.Close();
 
