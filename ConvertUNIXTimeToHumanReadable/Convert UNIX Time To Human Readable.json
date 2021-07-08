@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Convert UNIX Time To Human Readable",
+    "description": "Convert a UNIX timestamp to human-readable format in UTC.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "unixTimestamp",
+          "label": "UNIX Timestamp",
+          "labelKey": "UNIXTIMESTAMP_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
