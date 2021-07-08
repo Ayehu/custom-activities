@@ -1,5 +1,7 @@
 ## ConvertTimeZone - Activity to convert date from one timezone to another.
 
+<b>Note:</b> This activity was contributed by a user and is currently non-functional.
+
 ##### Namespaces to import
 
 using System;
