@@ -1,4 +1,4 @@
-This activity will download a file from a URL to the local Ayehu NG server.
+A better version of this activity already exists out-of-the-box with Ayehu NG.  This activity is here for example purposes and will download a file from a URL to the local Ayehu NG server.
 <br><br>
 <b>Fields</b>
 <br>
