@@ -19,6 +19,7 @@ Namespace Ayehu.Sdk.ActivityCreation
 
 	  	'Define the activity's variables.
   		Public unixTimestamp As String
+  		Public dateFormat As String
 
  		Public Function Execute() As ICustomActivityResult Implements IActivity.Execute
 			'Insert your PowerShell script within the block below.
@@ -26,12 +27,13 @@ Namespace Ayehu.Sdk.ActivityCreation
         		$unixTime = 'unixTimestamp'
 				$unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
 				$utcTimeString = $unixEpochStart.AddSeconds($unixTime)
-				$utcTimestamp = Get-Date -Format 'dd/MM/yyyy HH:mm' $utcTimeString
+				$utcTimestamp = Get-Date -Format 'dateFormat' $utcTimeString
 				Write-Output $utcTimestamp
 			]]>.Value()
 
 			'These lines must be used for each and every variable.
 			ScriptCode = ScriptCode.Replace("unixTimestamp", unixTimestamp)
+			ScriptCode = ScriptCode.Replace("dateFormat", dateFormat)
 
 			Dim HasParams as Integer = 0
 			Dim TableAsString as String = ""

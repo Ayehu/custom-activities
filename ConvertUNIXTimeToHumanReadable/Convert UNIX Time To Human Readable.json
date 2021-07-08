@@ -16,6 +16,15 @@
           "labelKey": "UNIXTIMESTAMP_VALUE",
           "baseType": "control",
           "controlType": "textbox"
+        },
+		    {
+          "value": "yyyy/MM/dd HH:mm:ss",
+          "required": true,
+          "key": "dateFormat",
+          "label": "Date Format",
+          "labelKey": "DATEFORMAT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
         }
       ],
       "index": "1",
