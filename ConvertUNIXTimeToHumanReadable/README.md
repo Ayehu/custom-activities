@@ -1,5 +1,5 @@
 <h1>Convert UNIX Time to Human Readable</h1>
-This activity will convert UNIX/epoch time to a human-readable format (<b>yyyy/MM/dd HH:mm:ss</b> by default) in UTC.  Note that the output date format is customizable.
+This activity will convert 10-digit UNIX/epoch time to a human-readable format (<b>yyyy/MM/dd HH:mm:ss</b> by default) in UTC.  Note that the output date format is customizable.
 <br><br>
 <h2>Sample Input:</h2>
 <b>UNIX Timestamp:</b> 1625754732
