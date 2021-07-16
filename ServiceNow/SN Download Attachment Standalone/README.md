@@ -6,7 +6,8 @@ This activity allows for the downloading of file attachments from tickets entire
   <li>Having insufficient table permissions to use the native integration's attachment download capabilities.</li>
   <li>Having the requirement to download an attachment from a ticket via Remote Executor when no method exists to copy a file from the core Ayehu NG server to that remote host.</li>
 </ul>
-<br>
+For details on how to query the sys_attachment table to retrieve the SysID of attachment, refer to the following guide: <a href="https://support.ayehu.com/hc/en-us/articles/360050350674-How-to-Dynamically-Retrieve-and-Download-a-List-of-Attachments-from-a-ServiceNow-Ticket">https://support.ayehu.com/hc/en-us/articles/360050350674-How-to-Dynamically-Retrieve-and-Download-a-List-of-Attachments-from-a-ServiceNow-Ticket</a>.
+<br><br>
 <h2>Input Fields</h2>
 <b>Instance URL:</b> https://xxxxxx.service-now.com
 <br>
