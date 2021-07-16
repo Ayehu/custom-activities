@@ -14,7 +14,7 @@ This activity allows for the downloading of file attachments from tickets entire
 <br>
 <b>Password:</b> Password to access ServiceNow instance.
 <br>
-<b>Attach. SysID:</b> The SysID of the individual attachment (e.g. <b>2553985e1bc5301025db4377cc4bcbee</v>).
+<b>Attach. SysID:</b> The SysID of the individual attachment (e.g. <b>2553985e1bc5301025db4377cc4bcbee</b>).
 <br>
 <b>Save Folder:</b> The target folder in which to save the attachment (e.g. <b>C:\my\folder\here\</b>).
 <br>
