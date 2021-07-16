@@ -17,7 +17,6 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string username;
 		public string password;
 		public string attachmentID;
-		public string attachmentFilename;
 		public string savePath;
 		public string fileName;
 
