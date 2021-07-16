@@ -4,7 +4,7 @@ This activity allows for the downloading of file attachments from tickets entire
 <br>
 <ul>
   <li>Having insufficient table permissions to use the native integration's attachment download capabilities.</li>
-  <li>Having the requirement to download an attachment from a ticket via Remote Executor when no method exists to copy a file from a remote host back to the core Ayehu NG server.</li>
+  <li>Having the requirement to download an attachment from a ticket via Remote Executor when no method exists to copy a file from the core Ayehu NG server to that remote host.</li>
 </ul>
 <br>
 <h2>Input Fields</h2>
