@@ -1,0 +1,60 @@
+{
+  "data": {
+    "name": "Page File List",
+    "description": "Retrieve list of all Windows page file locations.",
+    "Timeout": "00:01:00",
+    "size": "",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "5985",
+          "required": true,
+          "key": "PsrPort",
+          "disabled": false,
+          "styleClass": "",
+          "label": "PowerShell Port",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "HTTP",
+          "required": true,
+          "key": "UriType",
+          "label": "URI Type",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "HTTP",
+              "value": "HTTP"
+            },
+            {
+              "key": "HTTPS",
+              "value": "HTTPS"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
