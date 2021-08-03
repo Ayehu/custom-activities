@@ -107,7 +107,7 @@
           "controlOptions": []
         },
         {
-          "value": "REG_SZ",
+          "value": "String",
           "required": true,
           "key": "itemType",
           "label": "Item Type",
