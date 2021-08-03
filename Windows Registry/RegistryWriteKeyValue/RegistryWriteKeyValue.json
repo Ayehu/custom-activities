@@ -1,0 +1,166 @@
+{
+  "data": {
+    "name": "Registry Write Key Value",
+    "description": "Write value to a specific key path in Windows Registry.",
+    "Timeout": "00:01:00",
+    "size": "",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "5985",
+          "required": true,
+          "key": "PsrPort",
+          "disabled": false,
+          "styleClass": "",
+          "label": "PowerShell Port",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "HTTP",
+          "required": true,
+          "key": "UriType",
+          "label": "URI Type",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "HTTP",
+              "value": "HTTP"
+            },
+            {
+              "key": "HTTPS",
+              "value": "HTTPS"
+            }
+          ]
+        },
+        {
+          "value": "HKEY_CLASSES_ROOT",
+          "required": true,
+          "key": "registryKey",
+          "label": "Registry Key",
+          "labelKey": "REGISTRY_KEY",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "HKEY_CLASSES_ROOT",
+              "value": "HKEY_CLASSES_ROOT"
+            },
+            {
+              "key": "HKEY_CURRENT_USER",
+              "value": "HKEY_CURRENT_USER"
+            },
+            {
+              "key": "HKEY_LOCAL_MACHINE",
+              "value": "HKEY_LOCAL_MACHINE"
+            },
+            {
+              "key": "HKEY_USERS",
+              "value": "HKEY_USERS"
+            },
+            {
+              "key": "HKEY_CURRENT_CONFIG",
+              "value": "HKEY_CURRENT_CONFIG"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "registryPath",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Path",
+          "labelKey": "REGISTRYPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "itemName",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Item Name",
+          "labelKey": "ITEMNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "REG_SZ",
+          "required": true,
+          "key": "itemType",
+          "label": "Item Type",
+          "labelKey": "ITEMTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "String",
+              "value": "String"
+            },
+            {
+              "key": "ExpandString",
+              "value": "ExpandString"
+            },
+            {
+              "key": "Binary",
+              "value": "Binary"
+            },
+            {
+              "key": "DWord",
+              "value": "DWord"
+            },
+            {
+              "key": "MultiString",
+              "value": "MultiString"
+            },
+            {
+              "key": "Qword",
+              "value": "Qword"
+            },
+            {
+              "key": "Unknown",
+              "value": "Unknown"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "itemValue",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Item Value",
+          "labelKey": "ITEMVALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
