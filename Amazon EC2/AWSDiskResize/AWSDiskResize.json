@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "AWS Disk Resize",
-    "description": "Resize an AWS EC2 volume.",
+    "description": "Resize an AWS EBS volume.",
     "Timeout": null,
     "class": [],
     "rootSettings": {
