@@ -1,0 +1,168 @@
+{
+  "data": {
+    "name": "Server Last Boot Time",
+    "description": "Retrieve last boot time of a Windows host.",
+    "Timeout": "00:01:00",
+    "size": "",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "5985",
+          "required": true,
+          "key": "PsrPort",
+          "disabled": false,
+          "styleClass": "",
+          "label": "PowerShell Port",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "HTTP",
+          "required": true,
+          "key": "UriType",
+          "label": "URI Type",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "HTTP",
+              "value": "HTTP"
+            },
+            {
+              "key": "HTTPS",
+              "value": "HTTPS"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "dateFormat",
+          "label": "Date Format",
+          "labelKey": "DATE_FORMAT",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "MM/dd/yyyy",
+              "value": "MM/dd/yyyy"
+            },
+            {
+              "key": "dddd, dd MMMM yyyy HH:mm",
+              "value": "dddd, dd MMMM yyyy HH:mm"
+            },
+            {
+              "key": "dddd, dd MMMM yyyy hh:mm tt",
+              "value": "dddd, dd MMMM yyyy hh:mm tt"
+            },
+            {
+              "key": "dddd, dd MMMM yyyy H:mm",
+              "value": "dddd, dd MMMM yyyy H:mm"
+            },
+            {
+              "key": "dddd, dd MMMM yyyy h:mm tt",
+              "value": "dddd, dd MMMM yyyy h:mm tt"
+            },
+            {
+              "key": "dddd, dd MMMM yyyy HH:mm:ss",
+              "value": "dddd, dd MMMM yyyy HH:mm:ss"
+            },
+            {
+              "key": "MM/dd/yyyy HH:mm",
+              "value": "MM/dd/yyyy HH:mm"
+            },
+            {
+              "key": "MM/dd/yyyy hh:mm tt",
+              "value": "MM/dd/yyyy hh:mm tt"
+            },
+            {
+              "key": "MM/dd/yyyy H:mm",
+              "value": "MM/dd/yyyy H:mm"
+            },
+            {
+              "key": "MM/dd/yyyy h:mm tt",
+              "value": "MM/dd/yyyy h:mm tt"
+            },
+            {
+              "key": "MM/dd/yyyy HH:mm:ss",
+              "value": "MM/dd/yyyy HH:mm:ss"
+            },
+            {
+              "key": "MMMM dd",
+              "value": "MMMM dd"
+            },
+            {
+              "key": "yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK",
+              "value": "yyyy'-'MM'-'dd'T'HH':'mm':'ss.fffffffK"
+            },
+            {
+              "key": "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'",
+              "value": "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'"
+            },
+            {
+              "key": "yyyy'-'MM'-'dd'T'HH':'mm':'ss",
+              "value": "yyyy'-'MM'-'dd'T'HH':'mm':'ss"
+            },
+            {
+              "key": "HH:mm",
+              "value": "HH:mm"
+            },
+            {
+              "key": "hh:mm tt",
+              "value": "hh:mm tt"
+            },
+            {
+              "key": "H:mm",
+              "value": "H:mm"
+            },
+            {
+              "key": "h:mm tt",
+              "value": "h:mm tt"
+            },
+            {
+              "key": "HH:mm:ss",
+              "value": "HH:mm:ss"
+            },
+            {
+              "key": "yyyy'-'MM'-'dd HH':'mm':'ss'Z'",
+              "value": "yyyy'-'MM'-'dd HH':'mm':'ss'Z'"
+            },
+            {
+              "key": "yyyy MMMM",
+              "value": "yyyy MMMM"
+            },
+            {
+              "key": "MM_dd_yyyy_HH_mm",
+              "value": "MM_dd_yyyy_HH_mm"
+            },
+            {
+              "key": "dddd",
+              "value": "dddd"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
