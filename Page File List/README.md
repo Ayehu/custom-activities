@@ -4,7 +4,7 @@ An activity to retrieve details on all page files on all disks of a Windows host
 <br><br>
 <h3>Input:</h3>
 <ul>
-  <li><b>Host Name:</b> Target host on which the Registry change should be made.</li>
+  <li><b>Host Name:</b> Target host to query for page file list.</li>
   <li><b>User Name:</b> Username with which to authenticate to target host.</li>
   <li><b>Password:</b> Username with which to authenticate to target host.</li>
   <li><b>PowerShell Port:</b> Port on which target host will accept a PowerShell Remote connection (default is <b>5985</b>).</li>
