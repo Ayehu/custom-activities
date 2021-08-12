@@ -1,0 +1,72 @@
+{
+  "data": {
+    "name": "Get Folder And File Permissions",
+    "description": "List all permissions on an individual folder or file.",
+    "Timeout": "00:01:00",
+    "size": "",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "5985",
+          "required": true,
+          "key": "PsrPort",
+          "disabled": false,
+          "styleClass": "",
+          "label": "PowerShell Port",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "HTTP",
+          "required": true,
+          "key": "UriType",
+          "label": "URI Type",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "HTTP",
+              "value": "HTTP"
+            },
+            {
+              "key": "HTTPS",
+              "value": "HTTPS"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "fullPath",
+          "disabled": false,
+          "styleClass": "",
+          "label": "File or Folder Path",
+          "labelKey": "FILEORFOLDERPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}
