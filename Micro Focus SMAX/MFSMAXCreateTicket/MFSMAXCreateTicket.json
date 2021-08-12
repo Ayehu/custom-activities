@@ -1,0 +1,95 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "MFSMAXCreateTicket",
+    "description": "Create a ticket in Micro Focus SMAX.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://us1-smax.saas.microfocus.com",
+          "required": true,
+          "key": "instanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCEURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "tenantID",
+          "label": "Tenant ID",
+          "labelKey": "TENANTID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "Request",
+          "required": true,
+          "key": "recordType",
+          "label": "Record Type",
+          "labelKey": "RECORDTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Request",
+              "value": "Request"
+            },
+            {
+              "key": "Incident",
+              "value": "Incident"
+            }
+          ]
+        },
+        {
+          "isCollapse": true,
+          "isVisible": true,
+          "styleClass": [
+            "formGroup"
+          ],
+          "key": "propertyGroup",
+          "label": "Properties",
+          "baseType": "group",
+          "activitySettings": [
+            {
+              "value": "[{\"key\":\"Description\",\"value\":\"This is a sample description.\"},{\"key\":\"Status\",\"value\":\"Ready\"},{\"key\":\"DisplayLabel\",\"value\":\"Automatically created ticket.\"},{\"key\":\"RegisteredForActualService\",\"value\":\"11602\"}]",
+              "key": "properties",
+              "nameLabel": "Property Name",
+              "valueLabel": "Property Value",
+              "label": "",
+              "baseType": "control",
+              "conversionType": 2,
+              "controlType": "nameValue"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
