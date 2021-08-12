@@ -24,3 +24,9 @@ Below are examples of the syntax for the "Filter" input:
   <li><i>LastUpdateTime > 1601321299000 and RequestsOffering = '13263'</i></li>
   <li><i>LastUpdateTime > 1601321299000 and RequestsOffering in(13263,13257)</i></li>
 </ul>
+<br>
+<b>Note:</b> To work with timestamps, use the following activities for conversion:
+<ul>
+  <li><a href="https://github.com/Ayehu/custom-activities/tree/master/ConvertUNIXTimeToHumanReadable">ConvertUNIXTimeToHumanReadable</a></li>
+  <li><a href="https://github.com/Ayehu/custom-activities/tree/master/GetUNIXTimestamp">GetUNIXTimestamp</a></li>
+</ul>
