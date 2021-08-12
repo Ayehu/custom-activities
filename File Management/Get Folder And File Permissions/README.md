@@ -16,4 +16,4 @@ An activity to retrieve permission details on a single file or folder of a Windo
 <br>
 <img src="https://github.com/Ayehu/custom-activities/blob/master/File%20Management/Get%20Folder%20And%20File%20Permissions/screenshot1.png?raw=true">
 <br><br>
-<img src="https://github.com/Ayehu/custom-activities/blob/master/File%20Management/Get%20Folder%20And%20File%20Permissions/screenshot2.png?raw=true">
+<img src="https://github.com/Ayehu/custom-activities/blob/master/File%20Management/Get%20Folder%20And%20File%20Permissions/screenshot.png?raw=true">
