@@ -1,0 +1,45 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "IP Address Range Check",
+    "description": "Determine if an IP address is within a specified range.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "ipAddress",
+          "label": "IP Address",
+          "labelKey": "IPADDRESS_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ipStart",
+          "label": "Start IP",
+          "labelKey": "IPSTART_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ipEnd",
+          "label": "End IP",
+          "labelKey": "IPEND_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
