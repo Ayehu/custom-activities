@@ -142,7 +142,7 @@ namespace Ayehu.Sdk.ActivityCreation
 					}
 					else
 					{
-						throw new Exception("No page files found.");
+						throw new Exception("No login sessions found.");
 					}
 				}
 			}
