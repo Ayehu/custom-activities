@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
 using Ayehu.Sdk.ActivityCreation.Interfaces;
 using Ayehu.Sdk.ActivityCreation.Extension;
 
@@ -87,7 +88,7 @@ namespace Ayehu.Sdk.ActivityCreation
 									dt.Columns.Add(property.Name);
 								}
 
-								dt.Rows[i][property.Name] = property.Value;
+								dt.Rows[i][property.Name] = Regex.Replace(property.Value.ToString(), @"^\s+|\s+$|\s+(?=\s)", "");
 							}
 						}
 
