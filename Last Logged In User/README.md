@@ -1,6 +1,6 @@
 <h1>Last Logged In User</h1>
 <br>
-This activity will retrieve the user to login to a target Windows host, as well as that login's timestamp in any custom datetime format.  This activity performs its tasks via PowerShell Remote, and as a result there must be connectivity with this protocol to the target host.
+This activity will retrieve the last user to login to a target Windows host, as well as that login's timestamp in any custom datetime format.  This activity performs its tasks via PowerShell Remote, and as a result there must be connectivity with this protocol to the target host.
 <br><br>
 <h3>Input:</h3>
 <ul>
