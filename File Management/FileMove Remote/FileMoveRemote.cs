@@ -12,11 +12,9 @@ namespace Ayehu.Sdk.ActivityCreation
         public string DestinationPath;
         public string Username;
         public string Password;
-        public string Overwrite = "yes";
 
         public ICustomActivityResult Execute()
         {
-          var overwrite = Overwrite.ToLower().Equals("yes");
             if (string.IsNullOrEmpty(Username))
             {
                 File.Move(SourcePath, DestinationPath);
