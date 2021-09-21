@@ -1,0 +1,3 @@
+The following is a Python 3.9.6 verified Activity which accepts input "Python" and returns "Hello to Python's World!!!" via invocation of the Python interpreter. 
+The user may modify the default value so that the result produced reads as "Hello to <user defined> World!!!". The activity is called SamplePythonActivity.
+This submission is in response to Ayehu Academy Dev Ayehu GitHub Community verification of a submission.
