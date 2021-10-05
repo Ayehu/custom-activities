@@ -74,22 +74,25 @@ namespace Ayehu.Sdk.ActivityCreation
 				tokenHttpWebRequest.Accept = tokenAccept;
 				tokenHttpWebRequest.Method = tokenMethod;
 
-				if(headers.Contains("[") && headers.Contains("]"))
+				if(!String.IsNullOrEmpty(headers))
 				{
-					headers = "{ \"root\": " + headers + " }";
-				}
-				else
-				{
-					headers = "{ \"root\": [ " + headers + " ] }";
-				}
+					if(headers.Contains("[") && headers.Contains("]"))
+					{
+						headers = "{ \"root\": " + headers + " }";
+					}
+					else
+					{
+						headers = "{ \"root\": [ " + headers + " ] }";
+					}
 
-				JObject jsonTableHeaders = JObject.Parse(headers);
-				string jsonTableArrayStringHeaders = jsonTableHeaders["root"].ToString();
-				JArray jsonTableArrayHeaders = JsonConvert.DeserializeObject<JArray>(jsonTableArrayStringHeaders);
+					JObject jsonTableHeaders = JObject.Parse(headers);
+					string jsonTableArrayStringHeaders = jsonTableHeaders["root"].ToString();
+					JArray jsonTableArrayHeaders = JsonConvert.DeserializeObject<JArray>(jsonTableArrayStringHeaders);
 
-				foreach(var itemHeaders in jsonTableArrayHeaders)
-				{
-					tokenHttpWebRequest.Headers.Add(itemHeaders["key"].ToString(), itemHeaders["value"].ToString());
+					foreach(var itemHeaders in jsonTableArrayHeaders)
+					{
+						tokenHttpWebRequest.Headers.Add(itemHeaders["key"].ToString(), itemHeaders["value"].ToString());
+					}
 				}
 
 				using(var tokenStreamWriter = new StreamWriter(tokenHttpWebRequest.GetRequestStream()))
