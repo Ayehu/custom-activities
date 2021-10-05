@@ -55,6 +55,8 @@ namespace Ayehu.Sdk.ActivityCreation
 				}
 
 				fieldBody += itemProperties["key"].ToString() + "=" + HttpUtility.UrlEncode(itemProperties["value"].ToString());
+
+				fieldCount ++;
 			}
 
 			if(useSecret == "Yes")
