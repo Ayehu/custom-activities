@@ -4,6 +4,8 @@ An activity to retrieve a standard OAuth 2.0 access token using any custom combi
 <h2>Input Fields</h2>
 <ul>
   <li><b>Endpoint URL:</b> OAuth 2.0 access token endpoint.</li>
+  <li><b>Content Type:</b> Content-type value to pass with the token request (default is <b>application/x-www-form-urlencoded</b>).</li>
+  <li><b>Accept:</b> Content-type to accept (default is <b>application/json</b>).</li>
   <li><b>Client Secret:</b> Ability to specify secret field (typically <b>client_secret</b>) with Yes/No.</li>
   <li><b>Secret Field Name:</b> Name for secret field (<b>client_secret</b> by default).</li>
   <li><b>Secret Field Value:</b> Value for secret field.</li>
@@ -12,6 +14,6 @@ An activity to retrieve a standard OAuth 2.0 access token using any custom combi
 </ul>
 <br>
 <h2>Example</h2>
-<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/OAuthRetrieveToken/screenshot.png">
+<img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/OAuthRetrieveToken/screenshot_1.png">
 <br><br>
 <img src="https://raw.githubusercontent.com/Ayehu/custom-activities/master/OAuthRetrieveToken/screenshot_2.png">
