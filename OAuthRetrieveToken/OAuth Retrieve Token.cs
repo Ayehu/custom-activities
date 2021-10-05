@@ -21,6 +21,8 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string properties;
 		public string headers;
 		public string useSecret;
+		public string contentType;
+		public string accept;
 
 		public ICustomActivityResult Execute()
 		{
@@ -60,8 +62,8 @@ namespace Ayehu.Sdk.ActivityCreation
 				fieldBody += "&" + secretName + "=" + password;
 			}
 
-			string tokenContentType = "application/x-www-form-urlencoded";
-			string tokenAccept = "application/json";
+			string tokenContentType = contentType;
+			string tokenAccept = accept;
 			string tokenMethod = "POST";
 			string tokenResponseString;
 

@@ -18,6 +18,24 @@
           "controlType": "textbox"
         },
         {
+          "value": "application\/x-www-form-urlencoded",
+          "required": true,
+          "key": "contentType",
+          "label": "Content Type",
+          "labelKey": "CONTENTTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "application\/json",
+          "required": true,
+          "key": "accept",
+          "label": "Accept",
+          "labelKey": "ACCEPT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
           "value": "Yes",
           "required": true,
           "key": "useSecret",
