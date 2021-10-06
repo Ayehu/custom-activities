@@ -1,6 +1,13 @@
 <h1>Find Files By Size</h1>
 <br>
-Retrieve list of files on a Windows host using size as a filter..  This activity performs its task via PowerShell Remote, and as a result there must be connectivity with this protocol to the target host.
+Retrieve list of files on a Windows host using size as a filter.  For example:
+<br>
+<ul>
+  <li>Recursively list of all files with a size greater than <b>500 MB</b> within <b>C:\Users\</b> and all of its subfolders.</li>
+  <li>List all files with a size less than <b>500 KB</b> with <b>C:\Temp\</b>.</li>
+</ul>
+<br>
+This activity performs its task via PowerShell Remote, and as a result there must be connectivity with this protocol to the target host.
 <br><br>
 <h3>Input:</h3>
 <ul>
