@@ -6,6 +6,7 @@ These activities are:
 <ul>
 <li><b>Server Last Boot Time</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/Server%20Last%20Boot%20Time">https://github.com/Ayehu/custom-activities/tree/master/Server%20Last%20Boot%20Time</a>)</li>
 <li><b>Last Logged In User</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/Last%20Logged%20In%20User">https://github.com/Ayehu/custom-activities/tree/master/Last%20Logged%20In%20User</a>)</li>
+<li><b>Find Files By Size</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/File%20Management/Find%20Files%20By%20Size">https://github.com/Ayehu/custom-activities/tree/master/File%20Management/Find%20Files%20By%20Size</a>)</li>
 <li><b>Get Folder And File Permissions</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/File%20Management/Get%20Folder%20And%20File%20Permissions">https://github.com/Ayehu/custom-activities/tree/master/File%20Management/Get%20Folder%20And%20File%20Permissions</a>)</li>
 <li><b>Page File List</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/Page%20File%20List">https://github.com/Ayehu/custom-activities/tree/master/Page%20File%20List</a>)</li>
 <li><b>File Copy Remote</b> (<a href="https://github.com/Ayehu/custom-activities/tree/master/File%20Management/FileCopy%20Remote">https://github.com/Ayehu/custom-activities/tree/master/File%20Management/FileCopy%20Remote</a>)</li>
