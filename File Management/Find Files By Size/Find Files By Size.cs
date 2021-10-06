@@ -114,7 +114,7 @@ namespace Ayehu.Sdk.ActivityCreation
 				{
 					output = ExecuteRemote(PowershellTimeOut, HostName, UserName, Password, PsrPort, UriType, ScriptCode, ScriptPath, HasParams.ToString(), TableAsString);
 
-                    if(output.Contains("<Result>"))
+					if(output.Contains("<Result>"))
 					{
 						output = ExtractString(output, "Result");
 
@@ -363,19 +363,19 @@ namespace Ayehu.Sdk.ActivityCreation
 			Result = Result.Trim();
 
 			if(Result.StartsWith("\r\n"))
-            {
+			{
 				Result = Result.Replace("\r\n", "");
-            }
+			}
 
 			if(Result.StartsWith("\t"))
-            {
+			{
 				Result = Result.Replace("\t", "");
-            }
+			}
 
 			if(Result.StartsWith("\n"))
-            {
+			{
 				Result = Result.Replace("\n", "");
-            }
+			}
 
 			return Result.Trim();
 		}
