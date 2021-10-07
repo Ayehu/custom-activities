@@ -33,6 +33,7 @@ namespace Ayehu.Sdk.ActivityCreation
 		public string filterMode;
 		public string filterSize;
 		public string searchPath;
+		public string sortBy;
 		public int recursiveMode;
 
 		public ICustomActivityResult Execute()
@@ -53,7 +54,7 @@ namespace Ayehu.Sdk.ActivityCreation
 				ScriptCode += " -recurse";
 			}
 
-			ScriptCode += " | where-object {$_.length -" + filterMode + " " + filterSize + "} | where { !$_.PSisContainer } | Sort-Object DirectoryName | Select Name,Length,DirectoryName,IsReadOnly,FullName,Extension,CreationTime,LastAccessTime,LastWriteTime | ConvertTo-Json";
+			ScriptCode += " | where-object {$_.length -" + filterMode + " " + filterSize + "} | where { !$_.PSisContainer } | Sort-Object " + sortBy + " | Select Name,Length,DirectoryName,IsReadOnly,FullName,Extension,CreationTime,LastAccessTime,LastWriteTime | ConvertTo-Json";
 
 			string output = String.Empty;
 

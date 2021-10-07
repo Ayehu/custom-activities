@@ -96,6 +96,54 @@
           "controlOptions": []
         },
         {
+          "value": "DirectoryName",
+          "required": true,
+          "key": "sortBy",
+          "label": "Sort By",
+          "labelKey": "SORTBY_VALUE",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "DirectoryName",
+              "value": "DirectoryName"
+            },
+            {
+              "key": "Name",
+              "value": "Name"
+            },
+            {
+              "key": "Length",
+              "value": "Length"
+            },
+            {
+              "key": "IsReadOnly",
+              "value": "IsReadOnly"
+            },
+            {
+              "key": "FullName",
+              "value": "FullName"
+            },
+            {
+              "key": "Extension",
+              "value": "Extension"
+            },
+            {
+              "key": "CreationTime",
+              "value": "CreationTime"
+            },
+            {
+              "key": "LastAccessTime",
+              "value": "LastAccessTime"
+            },
+            {
+              "key": "LastWriteTime",
+              "value": "LastWriteTime"
+            }
+          ]
+        },
+        {
           "key": "recursiveMode",
           "label": "Perform recursive file search.",
           "baseType": "control",
