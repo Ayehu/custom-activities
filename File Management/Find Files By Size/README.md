@@ -19,7 +19,7 @@ This activity performs its task via PowerShell Remote, and as a result there mus
   <li><b>Search Path:</b> The full path to the folder in which to perform the search (e.g. <b>C:\temp</b>).</li>
   <li><b>File Size Filter:</b> Find files greater than or less than a specific size.</li>
   <li><b>File Size (Bytes):</b> The filtered file size (in bytes).</li>
-  <li><b>Sort By:</b> Sort results by a particular property (e.g. <b>CreationTime</b> or <b>DirectoryName</a>).</li>
+  <li><b>Sort By:</b> Sort results by a particular property (e.g. <b>CreationTime</b> or <b>DirectoryName</b>).</li>
   <li><b>Perform recursive file search:</b> Yes/no option to search within the target folder recursively (i.e. all subfolders).</li>
 </ul>
 <br>
