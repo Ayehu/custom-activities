@@ -1,4 +1,4 @@
-***FileDelete Remote**
+**FileDelete Remote**
 
 Deletes a file from a source location supporting impersonation with credentials provided in the the activity.
 
