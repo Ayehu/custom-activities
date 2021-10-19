@@ -12,21 +12,28 @@ Imports System.Management.Automation
 Imports System.Management.Automation.Runspaces
 Imports System.Collections.Generic
 Imports Microsoft.VisualBasic
+Imports Microsoft.VisualBasic.Strings
 
 Namespace Ayehu.Sdk.ActivityCreation
 	Public Class CustomActivity
 	  Implements  IActivity
 
-	  	'Define the activity's variables.
-  		Public unixTimestamp As String
-  		Public dateFormat As String
+		'Define the activity's variables.
+		Public unixTimestamp As String
+		Public dateFormat As String
 
  		Public Function Execute() As ICustomActivityResult Implements IActivity.Execute
+			Dim timestampLength As Integer = Len(unixTimestamp)
+
+			If timestampLength = 10 Then
+				unixTimestamp = unixTimestamp & "000"
+			End If
+
 			'Insert your PowerShell script within the block below.
 			Dim ScriptCode as String = <![CDATA[
-        		$unixTime = 'unixTimestamp'
+				$unixTime = 'unixTimestamp'
 				$unixEpochStart = new-object DateTime 1970,1,1,0,0,0,([DateTimeKind]::Utc)
-				$utcTimeString = $unixEpochStart.AddSeconds($unixTime)
+				$utcTimeString = $unixEpochStart.AddMilliSeconds($unixTime)
 				$utcTimestamp = Get-Date -Format 'dateFormat' $utcTimeString
 				Write-Output $utcTimestamp
 			]]>.Value()
