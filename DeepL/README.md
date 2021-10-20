@@ -9,6 +9,7 @@ An activity to translate text into another language using the DeepL AI-powered m
   <li><b>Auto-Detect Source Language:</b> Toggle to allow DeepL to auto-detect the source language of the text to be translated.</li>
   <li><b>Source Language:</b> If auto-detect is turned off, this language will be used to tell DeepL the source language of the original text (<a href="https://www.deepl.com/docs-api/translating-text/">read more</a>).</li>
   <li><b>Target Language:</b> The target language in which to translate the text (<a href="https://www.deepl.com/docs-api/translating-text/">read more</a>).</li>
+  <li><b>Formality:</b> Level of formality for the translated text.</li>
   <li><b>Text:</b> The body of text to translate.</li>
 </ul>
 <br>
