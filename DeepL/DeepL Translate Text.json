@@ -1,0 +1,313 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "DeepL Translate Text",
+    "description": "Translate text into another language using DeepL.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://api-free.deepl.com/v2/translate",
+          "required": true,
+          "key": "apiURL",
+          "label": "API URL",
+          "labelKey": "APIURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "API Key",
+          "labelKey": "APIKEY_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "key": "detectLanguage",
+          "label": "Auto-Detect Source Language",
+          "baseType": "control",
+          "labelKey": "DETECTLANGUAGE_VALUE",
+          "controlType": "checkbox",
+          "value": "",
+          "checked": false,
+          "styleClass": "",
+          "convertBoolTo": "number",
+          "valueChangesActions": {
+            "true": {
+              "disable": [
+                "sourceLanguage"
+              ]
+            },
+            "false": {
+              "enable": [
+                "sourceLanguage"
+              ]
+            }
+          }
+        },
+        {
+          "value": "EN",
+          "required": true,
+          "key": "sourceLanguage",
+          "label": "Source Language",
+          "labelKey": "SOURCELANGUAGE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "BG",
+              "value": "BG"
+            },
+            {
+              "key": "CS",
+              "value": "CS"
+            },
+            {
+              "key": "DA",
+              "value": "DA"
+            },
+            {
+              "key": "DE",
+              "value": "DE"
+            },
+            {
+              "key": "EL",
+              "value": "EL"
+            },
+            {
+              "key": "EN",
+              "value": "EN"
+            },
+            {
+              "key": "ES",
+              "value": "ES"
+            },
+            {
+              "key": "ET",
+              "value": "ET"
+            },
+            {
+              "key": "FI",
+              "value": "FI"
+            },
+            {
+              "key": "FR",
+              "value": "FR"
+            },
+            {
+              "key": "HU",
+              "value": "HU"
+            },
+            {
+              "key": "IT",
+              "value": "IT"
+            },
+            {
+              "key": "JA",
+              "value": "JA"
+            },
+            {
+              "key": "LT",
+              "value": "LT"
+            },
+            {
+              "key": "LV",
+              "value": "LV"
+            },
+            {
+              "key": "NL",
+              "value": "NL"
+            },
+            {
+              "key": "PL",
+              "value": "PL"
+            },
+            {
+              "key": "PT",
+              "value": "PT"
+            },
+            {
+              "key": "RO",
+              "value": "RO"
+            },
+            {
+              "key": "RU",
+              "value": "RU"
+            },
+            {
+              "key": "SK",
+              "value": "SK"
+            },
+            {
+              "key": "SL",
+              "value": "SL"
+            },
+            {
+              "key": "SV",
+              "value": "SV"
+            },
+            {
+              "key": "ZH",
+              "value": "ZH"
+            }
+          ]
+        },
+        {
+          "value": "ES",
+          "required": true,
+          "key": "targetLanguage",
+          "label": "Target Language",
+          "labelKey": "TARGETLANGUAGE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "BG",
+              "value": "BG"
+            },
+            {
+              "key": "CS",
+              "value": "CS"
+            },
+            {
+              "key": "DA",
+              "value": "DA"
+            },
+            {
+              "key": "DE",
+              "value": "DE"
+            },
+            {
+              "key": "EL",
+              "value": "EL"
+            },
+            {
+              "key": "EN-GB",
+              "value": "EN-GB"
+            },
+            {
+              "key": "EN-US",
+              "value": "EN-US"
+            },
+            {
+              "key": "ES",
+              "value": "ES"
+            },
+            {
+              "key": "ET",
+              "value": "ET"
+            },
+            {
+              "key": "FI",
+              "value": "FI"
+            },
+            {
+              "key": "FR",
+              "value": "FR"
+            },
+            {
+              "key": "HU",
+              "value": "HU"
+            },
+            {
+              "key": "IT",
+              "value": "IT"
+            },
+            {
+              "key": "JA",
+              "value": "JA"
+            },
+            {
+              "key": "LT",
+              "value": "LT"
+            },
+            {
+              "key": "LV",
+              "value": "LV"
+            },
+            {
+              "key": "NL",
+              "value": "NL"
+            },
+            {
+              "key": "PL",
+              "value": "PL"
+            },
+            {
+              "key": "PT-PT",
+              "value": "PT-PT"
+            },
+            {
+              "key": "PT-BR",
+              "value": "PT-BR"
+            },
+            {
+              "key": "RO",
+              "value": "RO"
+            },
+            {
+              "key": "RU",
+              "value": "RU"
+            },
+            {
+              "key": "SK",
+              "value": "SK"
+            },
+            {
+              "key": "SL",
+              "value": "SL"
+            },
+            {
+              "key": "SV",
+              "value": "SV"
+            },
+            {
+              "key": "ZH",
+              "value": "ZH"
+            }
+          ]
+        },
+        {
+          "value": "default",
+          "required": true,
+          "key": "formality",
+          "label": "Formality",
+          "labelKey": "SOURCELANGUAGE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "default",
+              "value": "default"
+            },
+            {
+              "key": "more",
+              "value": "more"
+            },
+            {
+              "key": "less",
+              "value": "less"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "text",
+          "label": "Text",
+          "labelKey": "TEXT_VALUE",
+          "baseType": "control",
+          "controlType": "textarea"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
