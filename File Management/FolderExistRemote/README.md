@@ -1,14 +1,13 @@
-## Folder Exist Remote - Checks whether a folder exist or not supporting impersonation with credentials provided in the the activity for all path types.
+# Folder Exist Remote
+Checks whether a folder exist or not supporting impersonation with credentials provided in the the activity for all path types.
 
 ## DLLs to reference
-
 SimpleImpersonation.dll
 
 ## Fields to be set in the activity.
-
 **Path:** Path in which to search for folder. Permitted to specify relative or absolute path information. Relative path information is interpreted as relative to the current working directory.
 
-**Username:** A username (Domain\Username) that has access to both locations ( source and destination ), can be left empty if not required .
+**Username:** A username (Domain\Username) that has access to both locations ( source and destination ), can be left empty if not required.
 
 **Password:** The password of the account listed in the Username field.
 
