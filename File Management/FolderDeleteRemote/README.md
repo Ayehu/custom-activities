@@ -1,12 +1,12 @@
-**FileDelete Remote**
+# FileDelete Remote
 
 Deletes a folder from a source location supporting impersonation with credentials provided in the the activity.
 
-**DLLs to Reference**
+## DLLs to Reference
 
 SimpleImpersonation.dll
 
-**Input Fields**
+## Input Fields
 
 *Source Path:* The path of the source folder (when accessing a remote machine or a shared location use UNC format).
 
