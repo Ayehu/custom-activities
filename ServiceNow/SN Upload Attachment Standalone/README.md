@@ -14,7 +14,7 @@ This activity allows for the uploading of file attachments to tickets entirely i
 <br>
 <b>Password:</b> Password to access ServiceNow instance.
 <br>
-<b>Table Type:</b> Internal name of the target table (e.g. incident, sc_request, change_request, sc_task, etc.  See default names <a href="https://docs.servicenow.com/bundle/london-platform-administration/page/administer/reference-pages/reference/r_TablesAndClasses.html">here</a>).
+<b>Table Type:</b> Internal name of the target table (e.g. incident, sc_request, change_request, sc_task, etc.).
 <br>
 <b>Ticket Number:</b> Display number of the ticket (e.g. INC0069734), which will be used to look-up the Sys ID.
 <br>
