@@ -1,6 +1,6 @@
 ## Folder Exist Remote - Checks whether a folder exist or not supporting impersonation with credentials provided in the the activity for all path types.
 
-## DLL's to reference
+## DLLs to reference
 
 SimpleImpersonation.dll
 
