@@ -1,0 +1,56 @@
+{
+  "innerCode": 200,
+  "data": {
+    "size": "",
+    "name": "Folder Exist Remote",
+    "type": "module-table",
+    "description": "Determines whether the specified folder exists.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "Path",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Path",
+          "labelKey": "FOLDER_EXISTS_PATH",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Username",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Username",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Password",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Password",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "message": "SUCCESS"
+  }
+}
