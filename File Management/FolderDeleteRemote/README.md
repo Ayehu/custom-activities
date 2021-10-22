@@ -1,4 +1,4 @@
-# FileDelete Remote
+# FolderDelete Remote
 
 Deletes a folder from a source location supporting impersonation with credentials provided in the the activity.
 
