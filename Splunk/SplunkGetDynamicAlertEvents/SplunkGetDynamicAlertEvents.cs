@@ -22,7 +22,7 @@ namespace Ayehu.Sdk.ActivityCreation
 
 		public ICustomActivityResult Execute()
 		{
-			string apiURL = instanceURL + "/services/search/jobs/" + alertSID + "/results?output_mode=json";
+			string apiURL = instanceURL + "/services/search/jobs/" + alertSID + "/results?count=0&output_mode=json";
 			string contentType = "application/json";
 			string accept = "application/json";
 			string method = "GET";
