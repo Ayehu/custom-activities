@@ -12,6 +12,12 @@ An activity to translate text into another language using the DeepL AI-powered m
   <li><b>Formality:</b> Level of formality for the translated text.</li>
   <li><b>Text:</b> The body of text to translate.</li>
 </ul>
+<b>Note:</b> Only certain target languages support formality modes.  When attempting to translate to a target language with a formality mode other than "default", an error message like this will be returned if that target language does not support a formality mode other than "default".
+<br><br>
+<pre>
+Target language does not support formality mode "more". Please use "default" setting. Only the following languages support formality levels:
+DE, FR, IT, ES, NL, PL, PT-PT, PT-BR, RU
+</pre>
 <br>
 <h3>Example:</h3>
 <br>
