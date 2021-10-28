@@ -25,42 +25,51 @@ namespace Ayehu.Sdk.ActivityCreation
 
 		public ICustomActivityResult Execute()
 		{
-			apiURL += "?auth_key=" + password + "&target_lang=" + targetLanguage + "&formality=" + formality;
-
-			if(detectLanguage == 0)
+			if(formality != "default" && (targetLanguage != "DE" && targetLanguage != "FR" && targetLanguage != "IT" && targetLanguage != "ES"
+											&& targetLanguage != "NL" && targetLanguage != "PL" && targetLanguage != "PT-PT" && targetLanguage != "PT-BR"
+											&& targetLanguage != "RU"))
 			{
-				apiURL += "&source_lang=" + sourceLanguage;
+				throw new Exception("Target language does not support formality mode \"" + formality + "\". Please use \"default\" setting. Only the following languages are supported:\nDE, FR, IT, ES, NL, PL, PT-PT, PT-BR, RU");
 			}
-
-			apiURL += "&text=" + HttpUtility.UrlEncode(text);
-
-			string contentType = "application/x-www-form-urlencoded";
-			string accept = "application/json";
-			string method = "GET";
-
-			try
+			else
 			{
-				System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-				
-				var apiHttpWebRequest = (HttpWebRequest)WebRequest.Create(apiURL);
-				apiHttpWebRequest.ContentType = contentType;
-				apiHttpWebRequest.Accept = accept;
-				apiHttpWebRequest.Method = method;
+				apiURL += "?auth_key=" + password + "&target_lang=" + targetLanguage + "&formality=" + formality;
 
-				var httpResponse = (HttpWebResponse)apiHttpWebRequest.GetResponse();
-
-				using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+				if(detectLanguage == 0)
 				{
-					var responseBody = streamReader.ReadToEnd();
-
-					JObject jsonResults = JObject.Parse(responseBody);
-
-					return this.GenerateActivityResult(jsonResults["translations"][0]["text"].ToString());
+					apiURL += "&source_lang=" + sourceLanguage;
 				}
-			}
-			catch(WebException e)
-			{
-				throw new Exception(e.Message);
+
+				apiURL += "&text=" + HttpUtility.UrlEncode(text);
+
+				string contentType = "application/x-www-form-urlencoded";
+				string accept = "application/json";
+				string method = "GET";
+
+				try
+				{
+					System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+					
+					var apiHttpWebRequest = (HttpWebRequest)WebRequest.Create(apiURL);
+					apiHttpWebRequest.ContentType = contentType;
+					apiHttpWebRequest.Accept = accept;
+					apiHttpWebRequest.Method = method;
+
+					var httpResponse = (HttpWebResponse)apiHttpWebRequest.GetResponse();
+
+					using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+					{
+						var responseBody = streamReader.ReadToEnd();
+
+						JObject jsonResults = JObject.Parse(responseBody);
+
+						return this.GenerateActivityResult(jsonResults["translations"][0]["text"].ToString());
+					}
+				}
+				catch(WebException e)
+				{
+					throw new Exception(e.Message);
+				}
 			}
 		}
 	}
