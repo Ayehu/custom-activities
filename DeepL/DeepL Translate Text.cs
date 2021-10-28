@@ -26,8 +26,8 @@ namespace Ayehu.Sdk.ActivityCreation
 		public ICustomActivityResult Execute()
 		{
 			if(formality != "default" && (targetLanguage != "DE" && targetLanguage != "FR" && targetLanguage != "IT" && targetLanguage != "ES"
-											&& targetLanguage != "NL" && targetLanguage != "PL" && targetLanguage != "PT-PT" && targetLanguage != "PT-BR"
-											&& targetLanguage != "RU"))
+									&& targetLanguage != "NL" && targetLanguage != "PL" && targetLanguage != "PT-PT" && targetLanguage != "PT-BR"
+									&& targetLanguage != "RU"))
 			{
 				throw new Exception("Target language does not support formality mode \"" + formality + "\". Please use \"default\" setting. Only the following languages are supported:\nDE, FR, IT, ES, NL, PL, PT-PT, PT-BR, RU");
 			}
