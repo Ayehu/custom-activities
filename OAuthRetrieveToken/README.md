@@ -7,7 +7,7 @@ An activity to retrieve a standard OAuth 2.0 access token using any custom combi
   <li><b>Content Type:</b> Content-type value to pass with the token request (default is <b>application/x-www-form-urlencoded</b>).</li>
   <li><b>Accept:</b> Content-type to accept (default is <b>application/json</b>).</li>
   <li><b>Client Secret:</b> Ability to specify secret field (typically <b>client_secret</b>) with Yes/No.</li>
-  <li><b>Secret Field Name:</b> Name for secret field (<b>client_secret</b> by default).</li>
+  <li><b>Secret Field Name:</b> Name for secret field (<b>client_secret</b> by default, leave blank to omit).</li>
   <li><b>Secret Field Value:</b> Value for secret field.</li>
   <li><b>Fields:</b> Customizable table to specify any number of parameters to pass in the OAuth request.</li>
   <li><b>Headers:</b> Customizable table to specify any number of header values to pass in the OAuth request.</li>
