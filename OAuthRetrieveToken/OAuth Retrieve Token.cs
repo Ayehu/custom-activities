@@ -75,8 +75,12 @@ namespace Ayehu.Sdk.ActivityCreation
 				
 				var tokenHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
 				tokenHttpWebRequest.ContentType = tokenContentType;
-				tokenHttpWebRequest.Accept = tokenAccept;
 				tokenHttpWebRequest.Method = tokenMethod;
+				
+				if(!String.IsNullOrEmpty(tokenAccept))
+				{
+					tokenHttpWebRequest.Accept = tokenAccept;
+				}
 
 				if(!String.IsNullOrEmpty(headers))
 				{

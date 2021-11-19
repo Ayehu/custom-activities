@@ -28,7 +28,7 @@
         },
         {
           "value": "application\/json",
-          "required": true,
+          "required": false,
           "key": "accept",
           "label": "Accept",
           "labelKey": "ACCEPT_VALUE",
