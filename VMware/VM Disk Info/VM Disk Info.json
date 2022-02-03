@@ -1,0 +1,53 @@
+{
+  "data": {
+    "name": "VM Disk Info",
+    "description": "Retrieve details on an individual disk.",
+    "Timeout": "00:01:00",
+    "size": "",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "vmName",
+          "disabled": false,
+          "styleClass": "",
+          "label": "VM Name",
+          "labelKey": "VMNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "diskName",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Disk Name",
+          "labelKey": "DISKNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}

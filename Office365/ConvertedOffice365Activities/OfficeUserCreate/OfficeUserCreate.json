@@ -1,0 +1,136 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "OfficeUserCreate",
+    "description": "Creates a new user in Office365",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "firstName",
+          "label": "First Name",
+          "labelKey": "FIRST_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "lastName",
+          "label": "Last Name",
+          "labelKey": "LAST_AME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "displayName",
+          "label": "Display Name",
+          "labelKey": "DISPLAYNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "userPrincipalName",
+          "label": "User Principal",
+          "labelKey": "USER_PRINCIPAL_NAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "accountEnabled",
+          "idFieldName": "isAccountEnabled",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Is Acct Enabled",
+          "labelKey": "ACCT_ENABLED_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "Yes"
+            },
+            {
+              "key": "False",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "pwdChange",
+          "idFieldName": "forcePwdChange",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Force Pwd Change",
+          "labelKey": "FORCE_PWDCHANGE_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "True",
+              "value": "Yes"
+            },
+            {
+              "key": "False",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "authToken_password",
+          "label": "Auth token",
+          "labelKey": "authToken_password",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "$",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

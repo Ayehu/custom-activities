@@ -1,0 +1,109 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "GH Get repository content",
+    "description": "Gets the contents of a file or directory in a repository. Specify the file path or directory in `:path`. If you omit\n`:path`, you will receive the contents of all files in the repository.\n\nFiles and symlinks support [a custom media type](https://developer.github.com/v3/repos/contents/#custom-media-types) for\nretrieving the raw content or rendered HTML (when supported). All content types support [a custom media\ntype](https://developer.github.com/v3/repos/contents/#custom-media-types) to ensure the content is returned in a consistent\nobject format.\n\n**Note**:\n*   To get a repository's contents recursively, you can [recursively get the tree](https://developer.github.com/v3/git/trees/).\n*   This API has an upper limit of 1,000 files for a directory. If you need to retrieve more files, use the [Git Trees\nAPI](https://developer.github.com/v3/git/trees/#get-a-tree).\n*   This API supports files up to 1 megabyte in size.\n\n#### If the content is a directory\nThe response will be an array of objects, one object for each item in the directory.\nWhen listing the contents of a directory, submodules have their \"type\" specified as \"file\". Logically, the value\n_should_ be \"submodule\". This behavior exists in API v3 [for backwards compatibility purposes](https://git.io/v1YCW).\nIn the next major version of the API, the type will be returned as \"submodule\".\n\n#### If the content is a symlink \nIf the requested `:path` points to a symlink, and the symlink's target is a normal file in the repository, then the\nAPI responds with the content of the file (in the format shown in the example. Otherwise, the API responds with an object \ndescribing the symlink itself.\n\n#### If the content is a submodule\nThe `submodule_git_url` identifies the location of the submodule repository, and the `sha` identifies",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "Username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Accept",
+          "label": "Accept",
+          "labelKey": "Accept_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "application/vnd.github.v3+json",
+              "value": "application/vnd.github.v3+json"
+            },
+            {
+              "key": "application/vnd.github.inertia-preview+json",
+              "value": "application/vnd.github.inertia-preview+json"
+            }
+          ],
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "required": false,
+          "key": "owner",
+          "label": "Owner",
+          "labelKey": "owner_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "repo",
+          "label": "Repo",
+          "labelKey": "repo_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "path",
+          "label": "Path",
+          "labelKey": "path_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ref_p",
+          "label": "Ref",
+          "labelKey": "ref_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

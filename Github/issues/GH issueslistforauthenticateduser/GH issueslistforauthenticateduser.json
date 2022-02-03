@@ -1,0 +1,205 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "GH issueslistforauthenticateduser",
+    "description": "List issues across owned and member repositories assigned to the authenticated user.\n\n**Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this\nreason, \"Issues\" endpoints may return both issues and pull requests in the response. You can identify pull requests by\nthe `pull_request` key. Be aware that the `id` of a pull request returned from \"Issues\" endpoints will be an _issue id_. To find out the pull\nrequest id, use the \"[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)\" endpoint.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Username",
+          "label": "Username",
+          "labelKey": "Username_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "Accept",
+          "label": "Accept",
+          "labelKey": "Accept_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "application/vnd.github.v3+json",
+              "value": "application/vnd.github.v3+json"
+            },
+            {
+              "key": "application/vnd.github.inertia-preview+json",
+              "value": "application/vnd.github.inertia-preview+json"
+            }
+          ],
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "required": false,
+          "key": "filter",
+          "label": "Filter",
+          "labelKey": "filter_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "assigned",
+              "value": "assigned"
+            },
+            {
+              "key": "created",
+              "value": "created"
+            },
+            {
+              "key": "mentioned",
+              "value": "mentioned"
+            },
+            {
+              "key": "subscribed",
+              "value": "subscribed"
+            },
+            {
+              "key": "all",
+              "value": "all"
+            }
+          ],
+          "value": "assigned"
+        },
+        {
+          "required": false,
+          "key": "state",
+          "label": "State",
+          "labelKey": "state_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "open",
+              "value": "open"
+            },
+            {
+              "key": "closed",
+              "value": "closed"
+            },
+            {
+              "key": "all",
+              "value": "all"
+            }
+          ],
+          "value": "open"
+        },
+        {
+          "required": false,
+          "key": "labels",
+          "label": "Labels",
+          "labelKey": "labels_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "sort",
+          "label": "Sort",
+          "labelKey": "sort_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "created",
+              "value": "created"
+            },
+            {
+              "key": "updated",
+              "value": "updated"
+            },
+            {
+              "key": "comments",
+              "value": "comments"
+            }
+          ],
+          "value": "created"
+        },
+        {
+          "required": false,
+          "key": "direction",
+          "label": "Direction",
+          "labelKey": "direction_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "asc",
+              "value": "asc"
+            },
+            {
+              "key": "desc",
+              "value": "desc"
+            }
+          ],
+          "value": "asc"
+        },
+        {
+          "required": false,
+          "key": "since",
+          "label": "Since",
+          "labelKey": "since_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "per_page",
+          "label": "Per_page",
+          "labelKey": "per_page_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "page",
+          "label": "Page",
+          "labelKey": "page_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "issues",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

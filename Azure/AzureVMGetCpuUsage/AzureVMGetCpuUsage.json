@@ -1,0 +1,62 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AzureVMGetCpuUsage",
+    "description": "Get percentage of processor usage of VM",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "SubscriptionID",
+          "label key": "subscriptionId",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "token_password",
+          "label": "Token",
+          "label key": "TOKEN_VALUE",
+          "baseType": "control",
+          "controlType": "password",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "resourceGroupName",
+          "label": "Resource Group",
+          "label key": "resourceGroupName",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "vmName",
+          "label": "VM Name",
+          "label key": "VMNAME",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

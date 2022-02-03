@@ -1,0 +1,140 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM List Zoom Rooms",
+    "description": "Zoom Rooms is a software-based room system that provides an integrated experience for audio conferencing, wireless screen sharing and video conferencing. Use this API to list all the existing [Zoom Rooms](https://support.zoom.us/hc/en-us/articles/207483343-Getting-Started-with-Zoom-Rooms) in a Zoom account.\n**Prerequisites:**\n* Pro or a higher plan with [Zoom Room](https://zoom.us/zoomrooms) license.\n**Scopes**: `room:read:admin` ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "labelKey": "status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Offline",
+              "value": "Offline"
+            },
+            {
+              "key": "Available",
+              "value": "Available"
+            },
+            {
+              "key": "InMeeting",
+              "value": "InMeeting"
+            },
+            {
+              "key": "UnderConstruction",
+              "value": "UnderConstruction"
+            }
+          ],
+          "value": "Offline"
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "ZoomRoom",
+              "value": "ZoomRoom"
+            },
+            {
+              "key": "SchedulingDisplayOnly",
+              "value": "SchedulingDisplayOnly"
+            },
+            {
+              "key": "DigitalSignageOnly",
+              "value": "DigitalSignageOnly"
+            }
+          ],
+          "value": "ZoomRoom"
+        },
+        {
+          "required": false,
+          "key": "unassigned_rooms",
+          "label": "Unassigned_rooms",
+          "labelKey": "unassigned_rooms_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "page_size",
+          "label": "Page_size",
+          "labelKey": "page_size_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "next_page_token",
+          "label": "Next_page_token",
+          "labelKey": "next_page_token_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "location_id",
+          "label": "Location_id",
+          "labelKey": "location_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "rooms",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

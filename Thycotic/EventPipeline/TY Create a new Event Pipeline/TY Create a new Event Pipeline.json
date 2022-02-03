@@ -1,0 +1,180 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Create a new Event Pipeline",
+    "description": "Creates a new Event Pipeline with the provided object.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dirty",
+          "label": "Dirty",
+          "labelKey": "dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelineDescription_dirty",
+          "label": "EventPipelineDescription_dirty",
+          "labelKey": "eventPipelineDescription_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelineDescription_value",
+          "label": "EventPipelineDescription_value",
+          "labelKey": "eventPipelineDescription_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelineName_dirty",
+          "label": "EventPipelineName_dirty",
+          "labelKey": "eventPipelineName_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelineName_value",
+          "label": "EventPipelineName_value",
+          "labelKey": "eventPipelineName_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filters_dirty",
+          "label": "Filters_dirty",
+          "labelKey": "filters_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "filters_value",
+          "label": "Filters_value[]",
+          "labelKey": "filters_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tasks_dirty",
+          "label": "Tasks_dirty",
+          "labelKey": "tasks_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tasks_value",
+          "label": "Tasks_value[]",
+          "labelKey": "tasks_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "triggers_dirty",
+          "label": "Triggers_dirty",
+          "labelKey": "triggers_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "triggers_value",
+          "label": "Triggers_value[]",
+          "labelKey": "triggers_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicyId",
+          "label": "EventPipelinePolicyId",
+          "labelKey": "eventPipelinePolicyId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "event-pipeline",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

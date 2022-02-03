@@ -2,28 +2,41 @@
 
 Remark - The portal needs to be configured first. https://portal.azure.com
 
-##### DLL's to reference
-Microsoft.Azure.Management.Compute.Fluent.dll
-Microsoft.Azure.Management.Fluent.dll
-Microsoft.Azure.Management.ResourceManager.Fluent.dll
-Microsoft.Azure.Management.Network.Fluent.dll
-Microsoft.Azure.Management.Sql.Fluent.dll
-Microsoft.Rest.ClientRuntime.dll
-Microsoft.Rest.ClientRuntime.Azure.dll
-System.Net.Http.dll
+### DLL's to reference
+Microsoft.Azure.Management.Compute.Fluent.dll<br>
+Microsoft.Azure.Management.Fluent.dll<br>
+Microsoft.Azure.Management.ResourceManager.Fluent.dll<br>
+Microsoft.Azure.Management.Network.Fluent.dll<br>
+Microsoft.Rest.ClientRuntime.Azure.dll<br>
+Microsoft.Rest.ClientRuntime.dll<br>
+System.Net.dll<br>
+System.Net.Http.dll<br>
+System.XML.dll<br>
+System.Data.dll<br>
+System.dll<br>
 Newtonsoft.Json.dll
 
-##### Libraries to import
-using Microsoft.Azure.Management.Compute.Fluent;
-using Microsoft.Azure.Management.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent;
-using Microsoft.Azure.Management.ResourceManager.Fluent.Core
+### Libraries to import
+using System;<br>
+using System.Linq;<br>
+using System.Data;<br>
+using System.Net;<br>
+using System.Net.Http;<br>
+using Ayehu.Sdk.ActivityCreation.Interfaces;<br>
+using Ayehu.Sdk.ActivityCreation.Extension;<br>
+using Microsoft.Azure.Management.Fluent;<br>
+using Microsoft.Azure.Management.ResourceManager.Fluent;<br>
+using Microsoft.Azure.Management.ResourceManager.Fluent.Core;<br>
+using Microsoft.Azure.Management.Compute.Fluent;<br>
+using Microsoft.Rest.ClientRuntime;<br>
+using Microsoft.Rest.ClientRuntime.Azure;<br>
+using Newtonsoft.Json;<br>
+using Newtonsoft.Json.Linq;
 
+### You'd need to store the API specific information from the portal.
 
-You'd need to store the API specific information from the portal.
-
-ApplicationId
-TenantId
+ApplicationId<br>
+TenantId<br>
 Secret
 
 ### Mandatory fields when attaching a disk to VM:

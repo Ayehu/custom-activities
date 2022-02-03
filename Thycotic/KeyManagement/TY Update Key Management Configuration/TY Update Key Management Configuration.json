@@ -1,0 +1,153 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Update Key Management Configuration",
+    "description": "Update the Key Management configuration",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "awsKmsAccessKeyId",
+          "label": "AwsKmsAccessKeyId",
+          "labelKey": "awsKmsAccessKeyId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "awsKmsKeyArn",
+          "label": "AwsKmsKeyArn",
+          "labelKey": "awsKmsKeyArn_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "awsKmsKeyId",
+          "label": "AwsKmsKeyId",
+          "labelKey": "awsKmsKeyId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "awsKmsSecretAccessKey",
+          "label": "AwsKmsSecretAccessKey",
+          "labelKey": "awsKmsSecretAccessKey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "azureKeyVaultBaseUrl",
+          "label": "AzureKeyVaultBaseUrl",
+          "labelKey": "azureKeyVaultBaseUrl_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "azureKeyVaultKeyName",
+          "label": "AzureKeyVaultKeyName",
+          "labelKey": "azureKeyVaultKeyName_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "azureKeyVaultKeyVersion",
+          "label": "AzureKeyVaultKeyVersion",
+          "labelKey": "azureKeyVaultKeyVersion_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "azureKeyVaultPrincipalId",
+          "label": "AzureKeyVaultPrincipalId",
+          "labelKey": "azureKeyVaultPrincipalId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "azureKeyVaultPrincipalSecret",
+          "label": "AzureKeyVaultPrincipalSecret",
+          "labelKey": "azureKeyVaultPrincipalSecret_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "keyManagementTypeId",
+          "label": "KeyManagementTypeId",
+          "labelKey": "keyManagementTypeId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "key-management",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

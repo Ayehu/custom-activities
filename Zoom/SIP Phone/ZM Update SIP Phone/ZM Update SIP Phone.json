@@ -1,0 +1,261 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update SIP Phone",
+    "description": "Zoomâ€™s Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to update information of a specific SIP Phone on a Zoom account.\n**Prerequisites**:\n* Currently only supported on Cisco and Avaya PBX systems. \n* The account owner or account admin must first enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team. **Scope:** `sip_phone:write:admin`\n ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "phoneId",
+          "label": "PhoneId",
+          "labelKey": "phoneId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "domain",
+          "label": "Domain",
+          "labelKey": "domain_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "register_server",
+          "label": "Register_server",
+          "labelKey": "register_server_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "transport_protocol",
+          "label": "Transport_protocol",
+          "labelKey": "transport_protocol_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "UDP",
+              "value": "UDP"
+            },
+            {
+              "key": "TCP",
+              "value": "TCP"
+            },
+            {
+              "key": "TLS",
+              "value": "TLS"
+            },
+            {
+              "key": "AUTO",
+              "value": "AUTO"
+            }
+          ],
+          "value": "UDP"
+        },
+        {
+          "required": false,
+          "key": "proxy_server",
+          "label": "Proxy_server",
+          "labelKey": "proxy_server_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "register_server2",
+          "label": "Register_server2",
+          "labelKey": "register_server2_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "transport_protocol2",
+          "label": "Transport_protocol2",
+          "labelKey": "transport_protocol2_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "UDP",
+              "value": "UDP"
+            },
+            {
+              "key": "TCP",
+              "value": "TCP"
+            },
+            {
+              "key": "TLS",
+              "value": "TLS"
+            },
+            {
+              "key": "AUTO",
+              "value": "AUTO"
+            }
+          ],
+          "value": "UDP"
+        },
+        {
+          "required": false,
+          "key": "proxy_server2",
+          "label": "Proxy_server2",
+          "labelKey": "proxy_server2_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "register_server3",
+          "label": "Register_server3",
+          "labelKey": "register_server3_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "transport_protocol3",
+          "label": "Transport_protocol3",
+          "labelKey": "transport_protocol3_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "UDP",
+              "value": "UDP"
+            },
+            {
+              "key": "TCP",
+              "value": "TCP"
+            },
+            {
+              "key": "TLS",
+              "value": "TLS"
+            },
+            {
+              "key": "AUTO",
+              "value": "AUTO"
+            }
+          ],
+          "value": "UDP"
+        },
+        {
+          "required": false,
+          "key": "proxy_server3",
+          "label": "Proxy_server3",
+          "labelKey": "proxy_server3_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "registration_expire_time",
+          "label": "Registration_expire_time",
+          "labelKey": "registration_expire_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "user_name",
+          "label": "User_name",
+          "labelKey": "user_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "authorization_name",
+          "label": "Authorization_name",
+          "labelKey": "authorization_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "voice_mail",
+          "label": "Voice_mail",
+          "labelKey": "voice_mail_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

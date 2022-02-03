@@ -1,0 +1,110 @@
+{
+  "data": {
+    "name": "MongoDB Query",
+    "description": "Performs a database query on MongoDB Server.",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "MongoServer",
+          "label": "Server",
+          "labelKey": "MONGO_DB_HOSTNAME",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "No",
+          "required": false,
+          "key": "UseDNSSeedList",
+          "label": "Use DNS Seedlist",
+          "labelKey": "MONGO_DB_DNS_SEEDLIST",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "Yes"
+            },
+            {
+              "key": "2",
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Username",
+          "label": "User Name",
+          "labelKey": "MONGO_DB_QUERY_USER_NAME",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Password",
+          "label": "Password",
+          "labelKey": "MONGO_DB_QUERY_PASSWORD",
+          "baseType": "control",
+          "controlType": "password",
+          "disabled": false,
+          "styleClass": "",
+          "encrypt": true,
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "DBName",
+          "label": "Database Name",
+          "labelKey": "MONGO_DB_QUERY_DATABASE_NAME",
+          "baseType": "control",
+          "controlType": "textbox",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "MongoDBQuery",
+          "label": "JSON Query",
+          "labelKey": "MONGO_DB_QUERY",
+          "baseType": "control",
+          "controlType": "textarea",
+          "disabled": false,
+          "styleClass": "xl-textarea",
+          "controlOptions": []
+        },
+        {
+          "key": "SiteName",
+          "label": "Run from Site",
+          "labelKey": "MONGO_DB_QUERY_STATEMENT_RUN_FROM_SITE",
+          "baseType": "control",
+          "controlType": "hidden",
+          "value": "",
+          "disabled": false,
+          "styleClass": "",
+          "controlOptions": [],
+          "required": false
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "size": "l-size"
+  }
+}

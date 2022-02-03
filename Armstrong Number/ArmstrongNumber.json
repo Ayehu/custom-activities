@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "Display Value",
+    "description": "Display a value to the log",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "Python",
+          "required": true,
+          "key": "ValueToDisplay",
+          "label": "Value",
+          "labelKey": "DISPLAY_VALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

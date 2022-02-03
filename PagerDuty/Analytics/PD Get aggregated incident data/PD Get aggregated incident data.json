@@ -1,0 +1,177 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Get aggregated incident data",
+    "description": "Provides aggregated enriched metrics for incidents.\n\nThe provided metrics are aggregated by day, week, month using the aggregate_unit parameter, or for the entire period if no aggregate_unit is provided.\n\n\n> ### Early Access\n> This endpoint is in Early Access and may change at any time. You must pass in the X-EARLY-ACCESS header to access it.\n\n> A `team_ids` or `service_ids` filter is required for [user-level API keys](https://support.pagerduty.com/docs/using-the-api#section-generating-a-personal-rest-api-key) or keys generated through an OAuth flow. Account-level API keys do not have this requirement.\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "X_EARLY_ACCESS",
+          "label": "X-EARLY-ACCESS",
+          "labelKey": "X-EARLY-ACCESS_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "created_at_start",
+          "label": "Created_at_start",
+          "labelKey": "created_at_start_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "created_at_end",
+          "label": "Created_at_end",
+          "labelKey": "created_at_end_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "urgency",
+          "label": "Urgency",
+          "labelKey": "urgency_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "high",
+              "value": "high"
+            },
+            {
+              "key": "low",
+              "value": "low"
+            }
+          ],
+          "value": "high"
+        },
+        {
+          "required": false,
+          "key": "major",
+          "label": "Major",
+          "labelKey": "major_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "team_ids",
+          "label": "Team_ids[]",
+          "labelKey": "team_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "service_ids",
+          "label": "Service_ids[]",
+          "labelKey": "service_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "business_service_ids",
+          "label": "Business_service_ids[]",
+          "labelKey": "business_service_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "priority_ids",
+          "label": "Priority_ids[]",
+          "labelKey": "priority_ids_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "priority_names",
+          "label": "Priority_names[]",
+          "labelKey": "priority_names_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "time_zone",
+          "label": "Time_zone",
+          "labelKey": "time_zone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "aggregate_unit",
+          "label": "Aggregate_unit",
+          "labelKey": "aggregate_unit_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "day",
+              "value": "day"
+            },
+            {
+              "key": "week",
+              "value": "week"
+            },
+            {
+              "key": "month",
+              "value": "month"
+            }
+          ],
+          "value": "day"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "all",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

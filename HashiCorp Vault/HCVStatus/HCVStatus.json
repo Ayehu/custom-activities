@@ -1,0 +1,46 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "HCVStatus",
+    "description": "Retrive the status of HashiCorp Vault.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "vaultServer",
+          "label": "Server Hostname",
+          "labelKey": "VAULTSERVER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "http",
+          "required": true,
+          "key": "protocolType",
+          "label": "Protocol",
+          "labelKey": "PROTOCOLOTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "http",
+              "value": "http"
+            },
+            {
+              "key": "https",
+              "value": "https"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,12 @@
+<br>#     Zoom</br>
+<br>Update a User's Email</br>
+<br>Change a user's [email address](https://support.zoom.us/hc/en-us/articles/201362563-How-Do-I-Change-the-Email-on-My-Account-) on a Zoom account that has managed domain set up.If the Zoom Account in which the user belongs, has multiple [managed domains](https://support.zoom.us/hc/en-us/articles/203395207-What-is-Managed-Domain-), the email to be updated must match one of the managed domains.
+**Scopes:** `user:write:admin` `user:write`
+
+**Prerequisite:**
+* Managed domain must be enabled in the account.
+* The new email address should not already exist in Zoom.</br>
+<br>Method: Put</br>
+<br>OperationID: userEmailUpdate</br>
+<br>EndPoint:</br>
+<br>/users/{userId}/email</br>

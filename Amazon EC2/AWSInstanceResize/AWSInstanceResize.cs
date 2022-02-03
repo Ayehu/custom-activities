@@ -15,7 +15,7 @@ namespace Ayehu.Sdk.ActivityCreation
 	public class CustomActivity : IActivity
 	{
 		public string accessKey;
-		public string secretKey;
+		public string password;
 		public string region;
 		public string instanceID;
 		public string instanceType;
@@ -36,7 +36,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			processInfo.CreateNoWindow = true;
 			
 			processInfo.EnvironmentVariables.Add("AWS_ACCESS_KEY_ID", accessKey);
-			processInfo.EnvironmentVariables.Add("AWS_SECRET_ACCESS_KEY", secretKey);
+			processInfo.EnvironmentVariables.Add("AWS_SECRET_ACCESS_KEY", password);
 			processInfo.EnvironmentVariables.Add("AWS_DEFAULT_REGION", region);
 
 			Process process = new Process();
@@ -53,7 +53,7 @@ namespace Ayehu.Sdk.ActivityCreation
 			}
 			else
 			{
-				return this.GenerateActivityResult("Error (" + outputError + ")");
+				throw new Exception(outputError);
 			}
 		}
 	}

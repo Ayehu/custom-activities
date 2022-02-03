@@ -77,7 +77,7 @@ namespace Ayehu.Sdk.ActivityCreation
             }
 			
             if (adGroup == null)
-                throw new Exception(string.Format("Group with name '{0} not found'", groupName));
+                throw new Exception(string.Format("Group with name '{0}' not found", groupName));
 
             if (memberTypeId == "user" && !string.IsNullOrEmpty(userEmail))
             {

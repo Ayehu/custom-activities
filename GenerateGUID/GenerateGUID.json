@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"GenerateGUID",
+    "description": "Generate a new random GUID.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "ignore",
+          "required": true,
+          "key":"ValueToDisplay",
+          "label": "Value",
+          "labelKey": "DISPLAY_VALUE_VALUE",
+          "baseType": "control",
+          "controlType": "hidden"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

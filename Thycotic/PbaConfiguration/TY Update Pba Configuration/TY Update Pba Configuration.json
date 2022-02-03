@@ -1,0 +1,333 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Update Pba Configuration",
+    "description": "Update Pba Configuration",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dirty",
+          "label": "Dirty",
+          "labelKey": "dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "challengeLockoutIntegratedEnabled_dirty",
+          "label": "ChallengeLockoutIntegratedEnabled_dirty",
+          "labelKey": "challengeLockoutIntegratedEnabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "challengeLockoutIntegratedEnabled_value",
+          "label": "ChallengeLockoutIntegratedEnabled_value",
+          "labelKey": "challengeLockoutIntegratedEnabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "challengeLockoutSamlEnabled_dirty",
+          "label": "ChallengeLockoutSamlEnabled_dirty",
+          "labelKey": "challengeLockoutSamlEnabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "challengeLockoutSamlEnabled_value",
+          "label": "ChallengeLockoutSamlEnabled_value",
+          "labelKey": "challengeLockoutSamlEnabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enabled_dirty",
+          "label": "Enabled_dirty",
+          "labelKey": "enabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "enabled_value",
+          "label": "Enabled_value",
+          "labelKey": "enabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "encryptionEnabled_dirty",
+          "label": "EncryptionEnabled_dirty",
+          "labelKey": "encryptionEnabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "encryptionEnabled_value",
+          "label": "EncryptionEnabled_value",
+          "labelKey": "encryptionEnabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventDataUploadInterval_dirty",
+          "label": "EventDataUploadInterval_dirty",
+          "labelKey": "eventDataUploadInterval_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventDataUploadInterval_value",
+          "label": "EventDataUploadInterval_value",
+          "labelKey": "eventDataUploadInterval_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventDataUploadSizeThreshold_dirty",
+          "label": "EventDataUploadSizeThreshold_dirty",
+          "labelKey": "eventDataUploadSizeThreshold_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventDataUploadSizeThreshold_value",
+          "label": "EventDataUploadSizeThreshold_value",
+          "labelKey": "eventDataUploadSizeThreshold_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "externalPbaUrl_dirty",
+          "label": "ExternalPbaUrl_dirty",
+          "labelKey": "externalPbaUrl_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "externalPbaUrl_value",
+          "label": "ExternalPbaUrl_value",
+          "labelKey": "externalPbaUrl_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileUploadEnabled_dirty",
+          "label": "FileUploadEnabled_dirty",
+          "labelKey": "fileUploadEnabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "fileUploadEnabled_value",
+          "label": "FileUploadEnabled_value",
+          "labelKey": "fileUploadEnabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "metadataInterval_dirty",
+          "label": "MetadataInterval_dirty",
+          "labelKey": "metadataInterval_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "metadataInterval_value",
+          "label": "MetadataInterval_value",
+          "labelKey": "metadataInterval_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "pbaIntegrationKey_dirty",
+          "label": "PbaIntegrationKey_dirty",
+          "labelKey": "pbaIntegrationKey_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "pbaIntegrationKey_value",
+          "label": "PbaIntegrationKey_value",
+          "labelKey": "pbaIntegrationKey_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "respectOwnerEditorRequireApprovalEnabled_dirty",
+          "label": "RespectOwnerEditorRequireApprovalEnabled_dirty",
+          "labelKey": "respectOwnerEditorRequireApprovalEnabled_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "respectOwnerEditorRequireApprovalEnabled_value",
+          "label": "RespectOwnerEditorRequireApprovalEnabled_value",
+          "labelKey": "respectOwnerEditorRequireApprovalEnabled_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "retentionDays_dirty",
+          "label": "RetentionDays_dirty",
+          "labelKey": "retentionDays_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "retentionDays_value",
+          "label": "RetentionDays_value",
+          "labelKey": "retentionDays_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "siteId_dirty",
+          "label": "SiteId_dirty",
+          "labelKey": "siteId_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "siteId_value",
+          "label": "SiteId_value",
+          "labelKey": "siteId_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "storageDirectoryPath_dirty",
+          "label": "StorageDirectoryPath_dirty",
+          "labelKey": "storageDirectoryPath_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "storageDirectoryPath_value",
+          "label": "StorageDirectoryPath_value",
+          "labelKey": "storageDirectoryPath_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "pba-configuration",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

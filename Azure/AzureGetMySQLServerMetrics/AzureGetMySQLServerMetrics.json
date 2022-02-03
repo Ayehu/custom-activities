@@ -1,0 +1,162 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AzureGetMySQLServerMetrics",
+    "description": "Retrieve metrics for an Azure MySQL Server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "authToken_password",
+          "label": "Auth token",
+          "labelKey": "authToken_password",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "resourceGroupName",
+          "label": "Resource Group",
+          "labelKey": "resourceGroupName",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "Subscription ID",
+          "labelKey": "subscriptionId",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "2019-07-01",
+          "required": true,
+          "key": "api_version",
+          "label": "Api-version",
+          "labelKey": "api_version",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "db_name",
+          "label": "MySQL DB Name",
+          "labelKey": "db_name",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "cpu_percent",
+          "required": true,
+          "key": "metric_type",
+          "label": "Metric Type",
+          "labelKey": "metric_type",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "cpu_percent",
+              "value": "cpu_percent"
+            },
+            {
+              "key": "memory_percent",
+              "value": "memory_percent"
+            },
+            {
+              "key": "io_consumption_percent",
+              "value": "io_consumption_percent"
+            },
+            {
+              "key": "storage_percent",
+              "value": "storage_percent"
+            },
+            {
+              "key": "storage_used",
+              "value": "storage_used"
+            },
+            {
+              "key": "serverlog_storage_percent",
+              "value": "serverlog_storage_percent"
+            },
+            {
+              "key": "serverlog_storage_usage",
+              "value": "serverlog_storage_usage"
+            },
+            {
+              "key": "serverlog_storage_limit",
+              "value": "serverlog_storage_limit"
+            },
+            {
+              "key": "storage_limit",
+              "value": "storage_limit"
+            },
+            {
+              "key": "active_connections",
+              "value": "active_connections"
+            },
+            {
+              "key": "connections_failed",
+              "value": "connections_failed"
+            },
+            {
+              "key": "seconds_behind_master",
+              "value": "seconds_behind_master"
+            },
+            {
+              "key": "network_bytes_egress",
+              "value": "network_bytes_egress"
+            },
+            {
+              "key": "network_bytes_ingress",
+              "value": "network_bytes_ingress"
+            },
+            {
+              "key": "backup_storage_used",
+              "value": "backup_storage_used"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "value[0].timeseries[0].data",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

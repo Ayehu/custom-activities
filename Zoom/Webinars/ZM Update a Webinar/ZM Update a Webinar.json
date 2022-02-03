@@ -1,0 +1,335 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Update a Webinar",
+    "description": "Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees.\nUse this API to make updates to a scheduled Webinar.\n**Scopes:** `webinar:write:admin` `webinar:write`\n \n**Prerequisites:**\n* Pro or higher plan with a Webinar Add-on.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "webinarId",
+          "label": "WebinarId",
+          "labelKey": "webinarId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "occurrence_id",
+          "label": "Occurrence_id",
+          "labelKey": "occurrence_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "topic",
+          "label": "Topic",
+          "labelKey": "topic_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": 5,
+              "value": 5
+            },
+            {
+              "key": 6,
+              "value": 6
+            },
+            {
+              "key": 9,
+              "value": 9
+            }
+          ],
+          "value": "5"
+        },
+        {
+          "required": false,
+          "key": "start_time",
+          "label": "Start_time",
+          "labelKey": "start_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "duration",
+          "label": "Duration",
+          "labelKey": "duration_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timezone",
+          "label": "Timezone",
+          "labelKey": "timezone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password",
+          "label": "Password",
+          "labelKey": "password_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "agenda",
+          "label": "Agenda",
+          "labelKey": "agenda_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tracking_fields",
+          "label": "Tracking_fields[]",
+          "labelKey": "tracking_fields_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "recurrence_type",
+          "label": "Recurrence_type",
+          "labelKey": "recurrence_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": 1,
+              "value": 1
+            },
+            {
+              "key": 2,
+              "value": 2
+            },
+            {
+              "key": 3,
+              "value": 3
+            }
+          ],
+          "value": "1"
+        },
+        {
+          "required": false,
+          "key": "repeat_interval",
+          "label": "Repeat_interval",
+          "labelKey": "repeat_interval_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "weekly_days",
+          "label": "Weekly_days",
+          "labelKey": "weekly_days_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "1"
+            },
+            {
+              "key": "2",
+              "value": "2"
+            },
+            {
+              "key": "3",
+              "value": "3"
+            },
+            {
+              "key": "4",
+              "value": "4"
+            },
+            {
+              "key": "5",
+              "value": "5"
+            },
+            {
+              "key": "6",
+              "value": "6"
+            },
+            {
+              "key": "7",
+              "value": "7"
+            }
+          ],
+          "value": "1"
+        },
+        {
+          "required": false,
+          "key": "monthly_day",
+          "label": "Monthly_day",
+          "labelKey": "monthly_day_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "monthly_week",
+          "label": "Monthly_week",
+          "labelKey": "monthly_week_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": -1,
+              "value": -1
+            },
+            {
+              "key": 1,
+              "value": 1
+            },
+            {
+              "key": 2,
+              "value": 2
+            },
+            {
+              "key": 3,
+              "value": 3
+            },
+            {
+              "key": 4,
+              "value": 4
+            }
+          ],
+          "value": "-1"
+        },
+        {
+          "required": false,
+          "key": "monthly_week_day",
+          "label": "Monthly_week_day",
+          "labelKey": "monthly_week_day_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": 1,
+              "value": 1
+            },
+            {
+              "key": 2,
+              "value": 2
+            },
+            {
+              "key": 3,
+              "value": 3
+            },
+            {
+              "key": 4,
+              "value": 4
+            },
+            {
+              "key": 5,
+              "value": 5
+            },
+            {
+              "key": 6,
+              "value": 6
+            },
+            {
+              "key": 7,
+              "value": 7
+            }
+          ],
+          "value": "1"
+        },
+        {
+          "required": false,
+          "key": "end_times",
+          "label": "End_times",
+          "labelKey": "end_times_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "end_date_time",
+          "label": "End_date_time",
+          "labelKey": "end_date_time_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

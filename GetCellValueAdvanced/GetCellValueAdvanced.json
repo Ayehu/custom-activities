@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"GetCellValueAdvanced",
+    "description": "Retrieve a cell value based on the value of another cell in its row.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"sourceTable",
+          "label": "Source Table",
+          "labelKey": "SOURCETABLE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"sourceColumn",
+          "label": "Source Column",
+          "labelKey": "SOURCECOLUMN_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"sourceValue",
+          "label": "Source Value",
+          "labelKey": "SOURCEVALUE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"targetColumn",
+          "label": "Target Column",
+          "labelKey": "TARGETCOLUMN_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

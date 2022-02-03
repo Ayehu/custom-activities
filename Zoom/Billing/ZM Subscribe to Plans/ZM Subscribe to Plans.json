@@ -1,0 +1,324 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Subscribe to Plans",
+    "description": "Subscribe plans for a Sub Account under a Master Account.  The plans can only be subscribed for an existing free Sub Account and the subscriptions charge for these plans should be paid by a Master Account. Zoom only assigns this privilege to trusted partners and only approved partners can use this API. Contact the [**ISV team**](https://zoom.us/plan/api) for more details.\n**Scopes**: `billing:master`\n ",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "accountId",
+          "label": "AccountId",
+          "labelKey": "accountId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "first_name",
+          "label": "First_name",
+          "labelKey": "first_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "last_name",
+          "label": "Last_name",
+          "labelKey": "last_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "email",
+          "label": "Email",
+          "labelKey": "email_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "phone_number",
+          "label": "Phone_number",
+          "labelKey": "phone_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "address",
+          "label": "Address",
+          "labelKey": "address_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "apt",
+          "label": "Apt",
+          "labelKey": "apt_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "city",
+          "label": "City",
+          "labelKey": "city_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "state",
+          "label": "State",
+          "labelKey": "state_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "zip",
+          "label": "Zip",
+          "labelKey": "zip_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "country",
+          "label": "Country",
+          "labelKey": "country_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "hosts",
+          "label": "Hosts",
+          "labelKey": "hosts_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_zoom_rooms_type",
+          "label": "Plan_zoom_rooms_type",
+          "labelKey": "plan_zoom_rooms_type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_zoom_rooms_hosts",
+          "label": "Plan_zoom_rooms_hosts",
+          "labelKey": "plan_zoom_rooms_hosts_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_room_connector_type",
+          "label": "Plan_room_connector_type",
+          "labelKey": "plan_room_connector_type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_room_connector_hosts",
+          "label": "Plan_room_connector_hosts",
+          "labelKey": "plan_room_connector_hosts_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_large_meeting",
+          "label": "Plan_large_meeting[]",
+          "labelKey": "plan_large_meeting_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_webinar",
+          "label": "Plan_webinar[]",
+          "labelKey": "plan_webinar_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_recording",
+          "label": "Plan_recording",
+          "labelKey": "plan_recording_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_audio_type",
+          "label": "Plan_audio_type",
+          "labelKey": "plan_audio_type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "tollfree_countries",
+          "label": "Tollfree_countries",
+          "labelKey": "tollfree_countries_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "premium_countries",
+          "label": "Premium_countries",
+          "labelKey": "premium_countries_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "callout_countries",
+          "label": "Callout_countries",
+          "labelKey": "callout_countries_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ddi_numbers",
+          "label": "Ddi_numbers",
+          "labelKey": "ddi_numbers_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_base_type",
+          "label": "Plan_base_type",
+          "labelKey": "plan_base_type_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_base_callout_countries",
+          "label": "Plan_base_callout_countries",
+          "labelKey": "plan_base_callout_countries_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_calling",
+          "label": "Plan_calling[]",
+          "labelKey": "plan_calling_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "plan_number",
+          "label": "Plan_number[]",
+          "labelKey": "plan_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "plans",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

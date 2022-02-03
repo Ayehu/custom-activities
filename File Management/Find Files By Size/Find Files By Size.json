@@ -1,0 +1,163 @@
+{
+  "data": {
+    "name": "Find Files By Size",
+    "description": "Retrieve list of files on a Windows host using size as a filter.",
+    "Timeout": "00:10:00",
+    "size": "",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": false,
+          "key": "hostGroup1",
+          "disabled": false,
+          "label": "new control11",
+          "styleClass": "",
+          "labelKey": "",
+          "baseType": "hostGroup",
+          "controlType": "",
+          "controlOptions": []
+        },
+        {
+          "value": "5985",
+          "required": true,
+          "key": "PsrPort",
+          "disabled": false,
+          "styleClass": "",
+          "label": "PowerShell Port",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "HTTP",
+          "required": true,
+          "key": "UriType",
+          "label": "URI Type",
+          "labelKey": "POWER_SHELL_PORT",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "HTTP",
+              "value": "HTTP"
+            },
+            {
+              "key": "HTTPS",
+              "value": "HTTPS"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "searchPath",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Search Path",
+          "labelKey": "SEARCHPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "filterMode",
+          "label": "File Size Filter",
+          "labelKey": "FILTERMODE_VALUE",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Greater than",
+              "value": "Greater than"
+            },
+            {
+              "key": "Less than",
+              "value": "Less than"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "filterSize",
+          "disabled": false,
+          "styleClass": "",
+          "label": "File Size (Bytes)",
+          "labelKey": "SEARCHPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "DirectoryName",
+          "required": true,
+          "key": "sortBy",
+          "label": "Sort By",
+          "labelKey": "SORTBY_VALUE",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "DirectoryName",
+              "value": "DirectoryName"
+            },
+            {
+              "key": "Name",
+              "value": "Name"
+            },
+            {
+              "key": "Length",
+              "value": "Length"
+            },
+            {
+              "key": "IsReadOnly",
+              "value": "IsReadOnly"
+            },
+            {
+              "key": "FullName",
+              "value": "FullName"
+            },
+            {
+              "key": "Extension",
+              "value": "Extension"
+            },
+            {
+              "key": "CreationTime",
+              "value": "CreationTime"
+            },
+            {
+              "key": "LastAccessTime",
+              "value": "LastAccessTime"
+            },
+            {
+              "key": "LastWriteTime",
+              "value": "LastWriteTime"
+            }
+          ]
+        },
+        {
+          "key": "recursiveMode",
+          "label": "Perform recursive file search.",
+          "baseType": "control",
+          "labelKey": "RECURSIVEMODE_VALUE",
+          "controlType": "checkbox",
+          "value": "",
+          "checked": true,
+          "styleClass": "",
+          "convertBoolTo": "number"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  }
+}

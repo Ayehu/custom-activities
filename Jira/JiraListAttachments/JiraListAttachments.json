@@ -1,0 +1,54 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "JiraListAttachments",
+    "description": "Retrieve list of attachments from a Jira ticket.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://XXXX.atlassian.net",
+          "required": true,
+          "key": "instanceURL",
+          "label": "Instance URL",
+          "labelKey": "INSTANCEURL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "username",
+          "label": "Username",
+          "labelKey": "USERNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "API Token",
+          "labelKey": "APITOKEN_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "ticketNumber",
+          "label": "Ticket Number",
+          "labelKey": "TICKETNUMBER_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

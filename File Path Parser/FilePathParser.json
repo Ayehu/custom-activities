@@ -1,0 +1,65 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"File Path Parser",
+    "description": "Parse path and filename from a full path in both Windows and Linux/UNIX format.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"fullPath",
+          "label": "Full Path",
+          "labelKey": "FILEPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "Filename",
+          "required": true,
+          "key": "parseMode",
+          "label": "Extract",
+          "labelKey": "PARSEMODE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "Filename",
+              "value": "Filename"
+            },
+            {
+              "key": "Folder",
+              "value": "Folder"
+            }
+          ]
+        },
+        {
+          "value": "Windows",
+          "required": true,
+          "key": "osMode",
+          "label": "OS Format",
+          "labelKey": "OSMODE_VALUE",
+          "baseType": "control",
+          "controlType": "dropdown",
+          "controlOptions": [
+            {
+              "key": "Windows",
+              "value": "Windows"
+            },
+            {
+              "key": "Linux\/UNIX",
+              "value": "Linux\/UNIX"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,124 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AzureMySQLServerCreateFirewallRule",
+    "description": "Create a firewall rule for an Azure MySQL server.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "authToken_password",
+          "label": "Auth token",
+          "labelKey": "authToken_password",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "resourceGroupName",
+          "label": "Resource Group",
+          "labelKey": "resourceGroupName",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "subscriptionId",
+          "label": "Subscription ID",
+          "labelKey": "subscriptionId",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "2017-12-01",
+          "required": true,
+          "key": "api_version",
+          "label": "Api-version",
+          "labelKey": "api_version",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "db_name",
+          "label": "MySQL DB Name",
+          "labelKey": "db_name",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "rule_name",
+          "label": "Rule Name",
+          "labelKey": "rule_name",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "start_ip",
+          "label": "Start IP",
+          "label key": "start_ip",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "end_ip",
+          "label": "End IP",
+          "label key": "end_ip",
+          "styleClass": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": null
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "$",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

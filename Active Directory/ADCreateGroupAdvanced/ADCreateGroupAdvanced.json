@@ -1,0 +1,164 @@
+{
+    "data": {
+      "name": "AD Create Group Advanced",
+      "description": "Active Directory Create a Group",
+      "Timeout": "00:01:00",
+      "class": [],
+      "rootSettings": {
+        "isCollapse": false,
+        "activitySettings": [
+          {
+            "value": "",
+            "required": true,
+            "key": "Path",
+            "disabled": false,
+            "styleClass": "",
+            "label": "Path",
+            "labelKey": "AD_CREATE_GROUP_ADV_PATH",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": true,
+            "key": "GroupDescription",
+            "disabled": false,
+            "styleClass": "",
+            "label": "Description",
+            "labelKey": "AD_CREATE_GROUP_ADV_GROUP_DESCRIPTION",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": true,
+            "key": "Notes",
+            "disabled": false,
+            "styleClass": "xl-textarea",
+            "label": "Notes",
+            "labelKey": "AD_CREATE_GROUP_ADV_NOTES",
+            "baseType": "control",
+            "controlType": "textarea",
+            "controlOptions": []
+          },
+          {
+            "value": "Global",
+            "required": true,
+            "key": "Scope",
+            "disabled": false,
+            "label": "Scope",
+            "styleClass": "",
+            "labelKey": "AD_LIST_ADV_OU_SCOPE",
+            "baseType": "control",
+            "controlType": "autocomplete",
+            "controlOptions": [
+              {
+                "key": "Global",
+                "value": "Global"
+              },
+              {
+                "key": "Universal",
+                "value": "Universal"
+              }
+            ]
+          },
+          {
+            "value": "Security",
+            "required": true,
+            "key": "AdType",
+            "disabled": false,
+            "label": "Type",
+            "styleClass": "",
+            "labelKey": "AD_LIST_ADV_OU_TYPE",
+            "baseType": "control",
+            "controlType": "autocomplete",
+            "controlOptions": [
+              {
+                "key": "Security",
+                "value": "Security"
+              },
+              {
+                "key": "Distribution",
+                "value": "Distribution"
+              }
+            ]
+          },
+          {
+            "value": "",
+            "required": true,
+            "key": "ADGroupName",
+            "disabled": false,
+            "label": "Group Name",
+            "styleClass": "",
+            "labelKey": "AD_CREATE_GROUP_ADV_GROUP_NAME",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": true,
+            "key": "EmailAddress",
+            "disabled": false,
+            "label": "Email Address",
+            "styleClass": "",
+            "labelKey": "AD_CREATE_GROUP_ADV_EMAIL_ADDRESS",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": true,
+            "key": "ManagedByDN",
+            "disabled": false,
+            "label": "Owner Dist. Name",
+            "styleClass": "",
+            "labelKey": "AD_CREATE_GROUP_ADV_MANAGED_BY",
+            "baseType": "control",
+            "controlType": "textbox",
+            "controlOptions": []
+          },
+          {
+            "value": "",
+            "required": false,
+            "key": 2,
+            "disabled": false,
+            "label": "new control11",
+            "styleClass": "",
+            "labelKey": "",
+            "baseType": "hostGroup",
+            "controlType": "",
+            "controlOptions": []
+          },
+          {
+            "value": "389",
+            "required": true,
+            "key": "SecurePort",
+            "disabled": false,
+            "label": "Port",
+            "styleClass": "",
+            "labelKey": "AD_LIST_ADV_OU_SECUREPORT",
+            "baseType": "control",
+            "controlType": "autocomplete",
+            "controlOptions": [
+              {
+                "key": "389",
+                "value": "389"
+              },
+              {
+                "key": "636 (Secure)",
+                "value": "636"
+              }
+            ]
+          }
+        ],
+        "index": "1",
+        "label": "main",
+        "labelKey": null
+      },
+      "size": "l-size"
+    }
+  }

@@ -15,4 +15,23 @@ using NetApp.My;
 **IP**					- IP  
 **Username**			- Username to access API  
 **Password**			- Password to acces API  
-**ObjectRequestXml**	- XML containing filters types of search  
+**ObjectRequestXml**	- XML containing filters types of search. Bellow you can see an example:  
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>  
+<ObjectName>Export Policies</ObjectName>  
+<FilterItems>  
+	<FilterItem>  
+		<FilterName>name</FilterName>  
+		<Valueitems>  
+			<FilterValue>{PUT FILTER VALUE FOR `NAME` HERE}</FilterValue>  
+		</Valueitems>  
+	</FilterItem>  
+	<FilterItem>  
+		<FilterName>vserver</FilterName>  
+		<Valueitems>  
+			<FilterValue>{PUT FILTER VALUE FOR `VSERVER` HERE}</FilterValue>  
+		</Valueitems>  
+	</FilterItem>  
+</FilterItems>  
+```

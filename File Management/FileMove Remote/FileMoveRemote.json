@@ -1,0 +1,68 @@
+{
+  "innerCode": 200,
+  "data": {
+    "size": "",
+    "name": "File Move Remote",
+    "type": "module-table",
+    "description": "Move file to a remote location.",
+    "Timeout": "00:01:00",
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "SourcePath",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Source Path",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "DestinationPath",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Destination Path",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Username",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Username",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "textbox",
+          "controlOptions": []
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Password",
+          "disabled": false,
+          "styleClass": "",
+          "label": "Password",
+          "labelKey": "",
+          "baseType": "control",
+          "controlType": "password",
+          "controlOptions": []
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    },
+    "message": "SUCCESS"
+  }
+}

@@ -2,7 +2,7 @@
   "innerCode": 200,
   "data": {
     "name": "AzureAttachVMDisk",
-    "description": "Azure Attach a Data Disk to a Virtual Machine",
+    "description": "Attach a disk to a virtual machine in Azure.",
     "Timeout": "00:03:00",
     "class": [],
     "rootSettings": {

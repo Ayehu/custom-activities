@@ -1,0 +1,47 @@
+SamplePythonActivity.json
+
+{
+	  "innerCode": 200,
+	  "data": {
+	    "name": "Display Value",
+	    "description": "Display a value to the log",
+	    "Timeout": null,
+	    "class": [],
+	    "rootSettings": {
+	      "isCollapse": false,
+	      "activitySettings": [
+	        {
+	          "value": "Python",
+	          "required": true,
+	          "key": "ValueToDisplay",
+	          "label": "Value",
+	          "labelKey": "DISPLAY_VALUE_VALUE",
+	          "baseType": "control",
+	          "controlType": "textbox"
+	        }
+	      ],
+	      "index": "1",
+	      "label": "main",
+	      "labelKey": null
+	    }
+	  },
+	  "message": "SUCCESS"
+	}
+    
+    
+SamplePythonActivity.py
+
+
+Import sys
+	def execute(ValueToDisplay):
+	    ValueToDisplay="Hello to "+str(ValueToDisplay)+"'s World!!!"
+	    return ValueToDisplay
+
+
+README.txt
+
+Ayehu GitHub Community exercise.
+
+The following is a Python 3.9.6 verified Activity which accepts input "Python" and returns "Hello to Python's World!!!" via invocation of the Python interpreter. 
+The user may modify the default value so that the result produced reads as "Hello to <user defined> World!!!".
+The activity is called SamplePythonActivity and the category is HelloWorld. This submission is in response to Ayehu Academy Dev Ayehu GitHub Community verification of a submission.

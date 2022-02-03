@@ -1,0 +1,438 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY Process Pba Historical Import",
+    "description": "Process Pba Historical Import",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "date",
+          "label": "Date",
+          "labelKey": "date_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dateTime",
+          "label": "DateTime",
+          "labelKey": "dateTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "day",
+          "label": "Day",
+          "labelKey": "day_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dayOfWeek",
+          "label": "DayOfWeek",
+          "labelKey": "dayOfWeek_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Sunday",
+              "value": "Sunday"
+            },
+            {
+              "key": "Monday",
+              "value": "Monday"
+            },
+            {
+              "key": "Tuesday",
+              "value": "Tuesday"
+            },
+            {
+              "key": "Wednesday",
+              "value": "Wednesday"
+            },
+            {
+              "key": "Thursday",
+              "value": "Thursday"
+            },
+            {
+              "key": "Friday",
+              "value": "Friday"
+            },
+            {
+              "key": "Saturday",
+              "value": "Saturday"
+            }
+          ],
+          "value": "Sunday"
+        },
+        {
+          "required": false,
+          "key": "dayOfYear",
+          "label": "DayOfYear",
+          "labelKey": "dayOfYear_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "hour",
+          "label": "Hour",
+          "labelKey": "hour_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "localDateTime",
+          "label": "LocalDateTime",
+          "labelKey": "localDateTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "millisecond",
+          "label": "Millisecond",
+          "labelKey": "millisecond_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "minute",
+          "label": "Minute",
+          "labelKey": "minute_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "month",
+          "label": "Month",
+          "labelKey": "month_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "offset",
+          "label": "Offset",
+          "labelKey": "offset_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "second",
+          "label": "Second",
+          "labelKey": "second_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "ticks",
+          "label": "Ticks",
+          "labelKey": "ticks_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "timeOfDay",
+          "label": "TimeOfDay",
+          "labelKey": "timeOfDay_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "utcDateTime",
+          "label": "UtcDateTime",
+          "labelKey": "utcDateTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "utcTicks",
+          "label": "UtcTicks",
+          "labelKey": "utcTicks_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "year",
+          "label": "Year",
+          "labelKey": "year_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "processImport",
+          "label": "ProcessImport",
+          "labelKey": "processImport_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_date",
+          "label": "StartDate_date",
+          "labelKey": "startDate_date_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_dateTime",
+          "label": "StartDate_dateTime",
+          "labelKey": "startDate_dateTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_day",
+          "label": "StartDate_day",
+          "labelKey": "startDate_day_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_dayOfWeek",
+          "label": "StartDate_dayOfWeek",
+          "labelKey": "startDate_dayOfWeek_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Sunday",
+              "value": "Sunday"
+            },
+            {
+              "key": "Monday",
+              "value": "Monday"
+            },
+            {
+              "key": "Tuesday",
+              "value": "Tuesday"
+            },
+            {
+              "key": "Wednesday",
+              "value": "Wednesday"
+            },
+            {
+              "key": "Thursday",
+              "value": "Thursday"
+            },
+            {
+              "key": "Friday",
+              "value": "Friday"
+            },
+            {
+              "key": "Saturday",
+              "value": "Saturday"
+            }
+          ],
+          "value": "Sunday"
+        },
+        {
+          "required": false,
+          "key": "startDate_dayOfYear",
+          "label": "StartDate_dayOfYear",
+          "labelKey": "startDate_dayOfYear_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_hour",
+          "label": "StartDate_hour",
+          "labelKey": "startDate_hour_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_localDateTime",
+          "label": "StartDate_localDateTime",
+          "labelKey": "startDate_localDateTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_millisecond",
+          "label": "StartDate_millisecond",
+          "labelKey": "startDate_millisecond_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_minute",
+          "label": "StartDate_minute",
+          "labelKey": "startDate_minute_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_month",
+          "label": "StartDate_month",
+          "labelKey": "startDate_month_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_offset",
+          "label": "StartDate_offset",
+          "labelKey": "startDate_offset_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_second",
+          "label": "StartDate_second",
+          "labelKey": "startDate_second_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_ticks",
+          "label": "StartDate_ticks",
+          "labelKey": "startDate_ticks_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_timeOfDay",
+          "label": "StartDate_timeOfDay",
+          "labelKey": "startDate_timeOfDay_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_utcDateTime",
+          "label": "StartDate_utcDateTime",
+          "labelKey": "startDate_utcDateTime_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_utcTicks",
+          "label": "StartDate_utcTicks",
+          "labelKey": "startDate_utcTicks_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "startDate_year",
+          "label": "StartDate_year",
+          "labelKey": "startDate_year_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "args",
+          "label": "Args",
+          "labelKey": "args_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "pba-history-import",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

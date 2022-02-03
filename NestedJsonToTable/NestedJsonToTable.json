@@ -1,0 +1,27 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "NestedJsonToTable",
+    "description": "Convert JSON with up to two nested levels to a table.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "jsonVariable",
+          "label": "JSON Variable",
+          "labelKey": "JSON_VARIABLE_KEY",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

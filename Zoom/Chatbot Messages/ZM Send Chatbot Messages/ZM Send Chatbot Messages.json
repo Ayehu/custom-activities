@@ -1,0 +1,117 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Send Chatbot Messages",
+    "description": "Send chatbot messages from your marketplace chatbot app.\n**Scopes:** `imchat:bot`\n**Authorization Flow**: Client Credentials Flow\nTo get authorized, make a POST request to `/oauth/token` endpoint with grant type as `client_credentials`. Use `https://api.zoom.us/oauth/token?grant_type=client_credentials` as the endpoint for the request. \nYou will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})` Next, use the token recieved (access_token) as a bearer token while making the POST /im/chat/messages request to send chatbot messages.\nLearn more about how to authorize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "robot_jid",
+          "label": "Robot_jid",
+          "labelKey": "robot_jid_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "to_jid",
+          "label": "To_jid",
+          "labelKey": "to_jid_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "account_id",
+          "label": "Account_id",
+          "labelKey": "account_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "visible_to_user",
+          "label": "Visible_to_user",
+          "labelKey": "visible_to_user_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "user_jid",
+          "label": "User_jid",
+          "labelKey": "user_jid_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "is_markdown_support",
+          "label": "Is_markdown_support",
+          "labelKey": "is_markdown_support_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "body",
+          "label": "Body",
+          "labelKey": "body_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "messages",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

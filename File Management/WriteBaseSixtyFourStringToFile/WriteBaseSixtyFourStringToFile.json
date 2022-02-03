@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "WriteBaseSixtyFourStringToFile",
+    "description": "Write a Base64 encoded string to a file.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "base64String",
+          "label": "Base64 String",
+          "labelKey": "BASE64_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "savePath",
+          "label": "File Save Path",
+          "labelKey": "SAVEPATH_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

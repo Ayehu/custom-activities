@@ -11,19 +11,22 @@ Google.Apis.dll
 Google.Apis.PlatformServices.dll  
 Newtonsoft.Json.dll  
 
-You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Compute.v1).
+You can find the dll's at [nuget](https://www.nuget.org/packages/Google.Apis.Compute.v1) or in the root directory ([https://github.com/Ayehu/custom-activities/blob/master/Google%20Cloud/DLL.zip](https://github.com/Ayehu/custom-activities/blob/master/Google%20Cloud/DLL.zip)).
 
 ##### Libraries to import
-using Ayehu.Sdk.ActivityCreation.Interfaces;  
-using Ayehu.Sdk.ActivityCreation.Extension;  
-using System;  
-using System.Collections.Generic;  
-using Google.Apis.Services;  
-using Google.Apis.Compute.v1;  
-using Google.Apis.Auth.OAuth2;  
-using Google.Apis.Compute.v1.Data;  
-using System.Threading.Tasks;  
-using System.Text;  
+using Ayehu.Sdk.ActivityCreation.Interfaces;<br>
+using Ayehu.Sdk.ActivityCreation.Extension;<br>
+using Google.Apis.Services;<br>
+using Google.Apis.Compute.v1;<br>
+using Google.Apis.Auth.OAuth2;<br>
+using Google.Apis.Compute.v1.Data;<br>
+using System;<br>
+using System.Text;<br>
+using System.Data;<br>
+using System.Threading.Tasks;<br>
+using System.Collections.Generic;<br>
+using Newtonsoft.Json.Linq;<br>
+using Newtonsoft.Json;<br>
 
 ### Mandatory fields when creating a VM:
 **Project**				- The name of the Google Cloud Project you are working on (e.g.,  peak-equator-254518)  

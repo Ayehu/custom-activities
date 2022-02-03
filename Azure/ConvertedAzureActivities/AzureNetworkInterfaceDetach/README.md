@@ -1,0 +1,19 @@
+## AzureNetworkInterfaceDetach - Azure Detach a secondary Network Interface to a Virtual Machine.
+
+Remark - The portal needs to be configured first. https://portal.azure.com
+
+##### DLL's to reference
+System.Net.Http.dll
+Newtonsoft.Json.dll
+
+### Mandatory fields when dettaching a secondary Network Interface from a VM: 
+
+**subscriptionId**		- The azure portal subscription Id
+
+**vmName**				- Virtual Machine name where to attach existing network interface.
+
+**networkName**			- Network Interface name.
+
+**resourceGroupName**   - The portal resource Network Interface is assigned to.
+
+**api_version**			- Version of the API

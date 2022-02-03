@@ -1,0 +1,153 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "TY ServiceCreateEventPipelinePolicy",
+    "description": "TY ServiceCreateEventPipelinePolicy",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "https://{hostname}",
+          "required": true,
+          "key": "endPoint",
+          "label": "EndPoint",
+          "labelKey": "endPoint_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "dirty",
+          "label": "Dirty",
+          "labelKey": "dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "value",
+          "label": "Value",
+          "labelKey": "value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicyDescription_dirty",
+          "label": "EventPipelinePolicyDescription_dirty",
+          "labelKey": "eventPipelinePolicyDescription_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicyDescription_value",
+          "label": "EventPipelinePolicyDescription_value",
+          "labelKey": "eventPipelinePolicyDescription_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicyName_dirty",
+          "label": "EventPipelinePolicyName_dirty",
+          "labelKey": "eventPipelinePolicyName_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicyName_value",
+          "label": "EventPipelinePolicyName_value",
+          "labelKey": "eventPipelinePolicyName_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "externalInstanceId",
+          "label": "ExternalInstanceId",
+          "labelKey": "externalInstanceId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "pipelines_dirty",
+          "label": "Pipelines_dirty",
+          "labelKey": "pipelines_dirty_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "pipelines_value",
+          "label": "Pipelines_value[]",
+          "labelKey": "pipelines_value_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "reuseExistingPipelines",
+          "label": "ReuseExistingPipelines",
+          "labelKey": "reuseExistingPipelines_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "eventPipelinePolicy",
+          "label": "EventPipelinePolicy",
+          "labelKey": "eventPipelinePolicy_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "event-pipeline-policy",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

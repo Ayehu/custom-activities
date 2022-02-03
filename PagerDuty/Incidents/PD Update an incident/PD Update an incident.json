@@ -1,0 +1,222 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Update an incident",
+    "description": "Acknowledge, resolve, escalate or reassign an incident.\n\nAn incident represents a problem or an issue that needs to be addressed and resolved.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#incidents)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "From",
+          "label": "From",
+          "labelKey": "From_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "id_p",
+          "label": "Id",
+          "labelKey": "id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": true,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "incident",
+              "value": "incident"
+            },
+            {
+              "key": "incident_reference",
+              "value": "incident_reference"
+            }
+          ],
+          "value": "incident"
+        },
+        {
+          "required": false,
+          "key": "status",
+          "label": "Status",
+          "labelKey": "status_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "resolved",
+              "value": "resolved"
+            },
+            {
+              "key": "acknowledged",
+              "value": "acknowledged"
+            }
+          ],
+          "value": "resolved"
+        },
+        {
+          "required": false,
+          "key": "priority_id",
+          "label": "Priority_id",
+          "labelKey": "priority_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "priority_type",
+          "label": "Priority_type",
+          "labelKey": "priority_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "priority_reference",
+              "value": "priority_reference"
+            }
+          ],
+          "value": "priority_reference"
+        },
+        {
+          "required": false,
+          "key": "resolution",
+          "label": "Resolution",
+          "labelKey": "resolution_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "title",
+          "label": "Title",
+          "labelKey": "title_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalation_level",
+          "label": "Escalation_level",
+          "labelKey": "escalation_level_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "assignments",
+          "label": "Assignments[]",
+          "labelKey": "assignments_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalation_policy_id",
+          "label": "Escalation_policy_id",
+          "labelKey": "escalation_policy_id_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "escalation_policy_type",
+          "label": "Escalation_policy_type",
+          "labelKey": "escalation_policy_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "escalation_policy_reference",
+              "value": "escalation_policy_reference"
+            }
+          ],
+          "value": "escalation_policy_reference"
+        },
+        {
+          "required": false,
+          "key": "urgency",
+          "label": "Urgency",
+          "labelKey": "urgency_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "high",
+              "value": "high"
+            },
+            {
+              "key": "low",
+              "value": "low"
+            }
+          ],
+          "value": "high"
+        },
+        {
+          "required": false,
+          "key": "conference_number",
+          "label": "Conference_number",
+          "labelKey": "conference_number_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "conference_url",
+          "label": "Conference_url",
+          "labelKey": "conference_url_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

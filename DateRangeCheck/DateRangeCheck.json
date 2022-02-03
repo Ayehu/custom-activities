@@ -1,0 +1,36 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "DateRangeCheck",
+    "description": "Determine if the current date is within a specified range.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "YYYY-MM-DD 00:00:00",
+          "required": true,
+          "key": "dateStart",
+          "label": "Start Date",
+          "labelKey": "DATESTART_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "YYYY-MM-DD 00:00:00",
+          "required": true,
+          "key": "dateEnd",
+          "label": "End Date",
+          "labelKey": "DATEEND_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

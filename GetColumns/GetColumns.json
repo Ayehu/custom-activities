@@ -1,0 +1,56 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name":"GetColumns",
+    "description": "Retrieve one or more columns from a table, either by name or number.",
+    "Timeout": null,
+    "class":[],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key":"sourceTable",
+          "label": "Table Variable",
+          "labelKey": "SOURCETABLE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "Name",
+          "required": true,
+          "key": "columnType",
+          "styleClass": "one-line",
+          "label": "Column Type",
+          "labelKey": "COLUMN_TYPE_VALUE",
+          "baseType": "control",
+          "controlType": "radiobutton",
+          "controlOptions": [
+            {
+              "label": "Name",
+              "value": "Name"
+            },
+            {
+              "label": "Number",
+              "value": "Number"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key":"columnList",
+          "label": "Column(s)",
+          "labelKey": "COLUMNS_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

@@ -1,0 +1,157 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "AWS Disk Resize",
+    "description": "Resize an AWS EBS volume.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "accessKey",
+          "label": "Access Key",
+          "labelKey": "ACCESSKEY_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Secret Key",
+          "labelKey": "SECRETKEY_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "region",
+          "label": "Region",
+          "labelKey": "REGION_VALUE",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "1",
+              "value": "us-east-2"
+            },
+            {
+              "key": "2",
+              "value": "us-east-1"
+            },
+            {
+              "key": "3",
+              "value": "us-west-1"
+            },
+            {
+              "key": "4",
+              "value": "us-west-2"
+            },
+            {
+              "key": "5",
+              "value": "af-south-1"
+            },
+            {
+              "key": "6",
+              "value": "ap-east-1"
+            },
+            {
+              "key": "7",
+              "value": "ap-south-1"
+            },
+            {
+              "key": "8",
+              "value": "ap-northeast-3"
+            },
+            {
+              "key": "9",
+              "value": "ap-northeast-2"
+            },
+            {
+              "key": "10",
+              "value": "ap-southeast-1"
+            },
+            {
+              "key": "11",
+              "value": "ap-southeast-2"
+            },
+            {
+              "key": "12",
+              "value": "ap-northeast-1"
+            },
+            {
+              "key": "13",
+              "value": "ca-central-1"
+            },
+            {
+              "key": "14",
+              "value": "cn-north-1"
+            },
+            {
+              "key": "15",
+              "value": "cn-northwest-1"
+            },
+            {
+              "key": "16",
+              "value": "eu-central-1"
+            },
+            {
+              "key": "17",
+              "value": "eu-west-1"
+            },
+            {
+              "key": "18",
+              "value": "eu-west-2"
+            },
+            {
+              "key": "19",
+              "value": "eu-south-1"
+            },
+            {
+              "key": "20",
+              "value": "eu-west-3"
+            },
+            {
+              "key": "21",
+              "value": "eu-north-1"
+            },
+            {
+              "key": "22",
+              "value": "me-south-1"
+            },
+            {
+              "key": "23",
+              "value": "sa-east-1"
+            }
+          ]
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "volumeID",
+          "label": "Volume ID",
+          "labelKey": "VOLUMEID_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "diskSize",
+          "label": "Disk Size (GB)",
+          "labelKey": "DISKSIZE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

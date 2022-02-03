@@ -1,0 +1,113 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "ZM Get User Settings",
+    "description": "Retrieve a user's settings.\n**Scopes:** `user:read:admin` `user:read`\n \n\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": false,
+          "key": "apikey",
+          "label": "Apikey",
+          "labelKey": "apikey_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "password1",
+          "label": "Apisecret",
+          "labelKey": "apisecret_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "userId",
+          "label": "UserId",
+          "labelKey": "userId_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "login_type",
+          "label": "Login_type",
+          "labelKey": "login_type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "0",
+              "value": "0"
+            },
+            {
+              "key": "1",
+              "value": "1"
+            },
+            {
+              "key": "99",
+              "value": "99"
+            },
+            {
+              "key": "100",
+              "value": "100"
+            },
+            {
+              "key": "101",
+              "value": "101"
+            }
+          ],
+          "value": "0"
+        },
+        {
+          "required": false,
+          "key": "option",
+          "label": "Option",
+          "labelKey": "option_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "meeting_authentication",
+              "value": "meeting_authentication"
+            },
+            {
+              "key": "recording_authentication",
+              "value": "recording_authentication"
+            }
+          ],
+          "value": "meeting_authentication"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "settings",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

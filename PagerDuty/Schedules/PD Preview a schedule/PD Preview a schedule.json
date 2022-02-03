@@ -1,0 +1,161 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "PD Preview a schedule",
+    "description": "Preview what an on-call schedule would look like without saving it.\n\nA Schedule determines the time periods that users are On-Call.\n\nFor more information see the [API Concepts Document](../../docs/CONCEPTS.md#schedules)\n",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "required": true,
+          "key": "password1",
+          "label": "Authorization",
+          "labelKey": "Authorization_l",
+          "baseType": "control",
+          "controlType": "password",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "since",
+          "label": "Since",
+          "labelKey": "since_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "until",
+          "label": "Until",
+          "labelKey": "until_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "overflow",
+          "label": "Overflow",
+          "labelKey": "overflow_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "type_p",
+          "label": "Type",
+          "labelKey": "type_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "schedule",
+              "value": "schedule"
+            }
+          ],
+          "value": "schedule"
+        },
+        {
+          "required": false,
+          "key": "schedule_layers",
+          "label": "Schedule_layers[]",
+          "labelKey": "schedule_layers_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "time_zone",
+          "label": "Time_zone",
+          "labelKey": "time_zone_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "schedule_name",
+          "label": "Schedule_name",
+          "labelKey": "schedule_name_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "description_p",
+          "label": "Description",
+          "labelKey": "description_l",
+          "baseType": "control",
+          "controlType": "textbox",
+          "value": ""
+        },
+        {
+          "required": false,
+          "key": "final_schedule_name",
+          "label": "Final_schedule_name",
+          "labelKey": "final_schedule_name_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Final Schedule",
+              "value": "Final Schedule"
+            },
+            {
+              "key": "Overrides",
+              "value": "Overrides"
+            }
+          ],
+          "value": "Final Schedule"
+        },
+        {
+          "required": false,
+          "key": "overrides_subschedule_name",
+          "label": "Overrides_subschedule_name",
+          "labelKey": "overrides_subschedule_name_l",
+          "baseType": "control",
+          "controlType": "autocomplete",
+          "controlOptions": [
+            {
+              "key": "Final Schedule",
+              "value": "Final Schedule"
+            },
+            {
+              "key": "Overrides",
+              "value": "Overrides"
+            }
+          ],
+          "value": "Final Schedule"
+        },
+        {
+          "value": "",
+          "required": false,
+          "key": "linekey",
+          "label": "linekey",
+          "labelKey": "linekey_l",
+          "baseType": "control",
+          "controlType": "hr"
+        },
+        {
+          "value": "preview",
+          "required": false,
+          "key": "Jsonkeypath",
+          "label": "Json keypath",
+          "labelKey": "Jsonkeypath_l",
+          "baseType": "control",
+          "controlType": "textbox"
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}

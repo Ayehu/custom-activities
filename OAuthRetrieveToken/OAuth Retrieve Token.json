@@ -1,0 +1,139 @@
+{
+  "innerCode": 200,
+  "data": {
+    "name": "OAuth Retrieve Token",
+    "description": "Retrieve an OAuth 2.0 token.",
+    "Timeout": null,
+    "class": [],
+    "rootSettings": {
+      "isCollapse": false,
+      "activitySettings": [
+        {
+          "value": "",
+          "required": true,
+          "key": "url",
+          "label": "Endpoint URL",
+          "labelKey": "URL_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "application\/x-www-form-urlencoded",
+          "required": true,
+          "key": "contentType",
+          "label": "Content Type",
+          "labelKey": "CONTENTTYPE_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "application\/json",
+          "required": false,
+          "key": "accept",
+          "label": "Accept",
+          "labelKey": "ACCEPT_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "Yes",
+          "required": true,
+          "key": "useSecret",
+          "label": "Client Secret",
+          "labelKey": "USESECRET_VALUE",
+          "styleClass": "one-line",
+          "baseType": "control",
+          "controlType": "radiobutton",
+          "controlOptions": [
+            {
+              "label": "Yes",
+              "value": "Yes"
+            },
+            {
+              "label": "No",
+              "value": "No"
+            }
+          ],
+          "valueChangesActions": {
+            "Yes": {
+              "enable": [
+                "secretName", "password"
+              ]
+            },
+            "No": {
+              "disable": [
+                "secretName", "password"
+              ]
+            }
+          }
+        },
+        {
+          "value": "client_secret",
+          "required": true,
+          "key": "secretName",
+          "label": "Secret Field Name",
+          "labelKey": "SECRETNAME_VALUE",
+          "baseType": "control",
+          "controlType": "textbox"
+        },
+        {
+          "value": "",
+          "required": true,
+          "key": "password",
+          "label": "Secret Field Value",
+          "labelKey": "PASSWORD_VALUE",
+          "baseType": "control",
+          "controlType": "password"
+        },
+        {
+          "isCollapse": true,
+          "isVisible": true,
+          "styleClass": [
+            "formGroup"
+          ],
+          "key": "propertyGroup",
+          "label": "Fields",
+          "baseType": "group",
+          "activitySettings": [
+            {
+              "value": "[{\"key\":\"grant_type\",\"value\":\"client_credentials\"},{\"key\":\"client_id\",\"value\":\"\"}]",
+              "key": "properties",
+              "nameLabel": "Field Name",
+              "valueLabel": "Field Value",
+              "label": "",
+              "baseType": "control",
+              "conversionType": 2,
+              "controlType": "nameValue"
+            }
+          ]
+        },
+        {
+          "isCollapse": true,
+          "isVisible": true,
+          "styleClass": [
+            "formGroup"
+          ],
+          "key": "propertyGroup2",
+          "label": "Headers",
+          "baseType": "group",
+          "activitySettings": [
+            {
+              "value": "",
+              "key": "headers",
+              "nameLabel": "Header Name",
+              "valueLabel": "Header Value",
+              "label": "",
+              "baseType": "control",
+              "conversionType": 2,
+              "controlType": "nameValue"
+            }
+          ]
+        }
+      ],
+      "index": "1",
+      "label": "main",
+      "labelKey": null
+    }
+  },
+  "message": "SUCCESS"
+}
